@@ -22,8 +22,28 @@ uk/messages.po   # Ukrainian
 ## How to Contribute
 
 1. **Fork** this repository
-2. **Edit** the `.po` file for the language you want to translate, you can create new language folder if it doesn't exist
+2. **Edit** the `.po` file for the language you want to translate
 3. **Submit a Pull Request**
+
+
+### If you want to add a new language
+
+To add a new language, create a folder named with the language's **ISO 639-1** code and add a `messages.po` file inside it.
+
+For example, to add **Catalan** (language code `ca` according to the ISO 639-1 standard):
+
+1. Create a new folder named `ca/`
+2. Copy an existing `messages.po` file into it (e.g. from `en/messages.po`)
+3. Clear all the `msgstr` values and fill in your Catalan translations
+4. Submit a Pull Request
+
+The resulting structure should look like:
+
+```
+ca/messages.po   # Catalan
+```
+
+You can find the ISO 639-1 code for your language on [Wikipedia](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
 ### Editing `.po` files
 
