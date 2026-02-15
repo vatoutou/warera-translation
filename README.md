@@ -1,54 +1,54 @@
-# War Era Translations
+# Traducciones de War Era
 
-This repository contains the translation files for [War Era](https://app.warera.io). Community contributions are welcome!
+Este repositorio contiene los archivos de traducción para [War Era](https://app.warera.io). ¡Las traducciones de la comunidad son bienvenidas!
 
-## Structure
+## Estructura
 
-Each locale has its own directory with a `messages.po` file:
+Cada locale tiene su propio directorio con un archivo `messages.po`:
 
 ```
-en/messages.po   # English (source locale)
-es/messages.po   # Spanish
-fr/messages.po   # French
-it/messages.po   # Italian
-lv/messages.po   # Latvian
-pl/messages.po   # Polish
-pt/messages.po   # Portuguese
-ro/messages.po   # Romanian
-sr/messages.po   # Serbian
-tr/messages.po   # Turkish
-uk/messages.po   # Ukrainian
+en/messages.po   # Inglés (locale original)
+es/messages.po   # Español
+fr/messages.po   # Francés
+it/messages.po   # Italiano
+lv/messages.po   # Letón
+pl/messages.po   # Polaco
+pt/messages.po   # Portugués
+ro/messages.po   # Rumano
+sr/messages.po   # Serbio
+tr/messages.po   # Turco
+uk/messages.po   # Ucraniano
 ```
 
-## How to Contribute
+## Cómo contribuir
 
-1. **Fork** this repository
-2. **Edit** the `.po` file for the language you want to translate
-3. **Submit a Pull Request**
+1. Haz un **Fork** de este repositorio.
+2. **Edita** el archivo`.po` para el idioma al que quieres traducir.
+3. **Envia una Pull Request.**
 
 
-### If you want to add a new language
+### Si quieres añadir un nuevo idioma
 
-To add a new language, create a folder named with the language's **ISO 639-1** code and add a `messages.po` file inside it.
+Para añadir un nuevo idioma, crea una carpeta y nombrala con el código **ISO 639-1** del idioma y agrega un archivo `messages.po` dentro.
 
-For example, to add **Catalan** (language code `ca` according to the ISO 639-1 standard):
+Por ejemplo, para añadir **catalán** (código de idioma `ca` de acuerdo al estándar ISO 639-1):
 
-1. Create a new folder named `ca/`
-2. Copy an existing `messages.po` file into it (e.g. from `en/messages.po`)
-3. Clear all the `msgstr` values and fill in your Catalan translations
-4. Submit a Pull Request
+1. Crea una nueva carpeta y nombrala `ca/`
+2. Copia un archivo `messages.po` ya existente en ella (por ejemplo: `en/messages.po`)
+3. Borra los valores `msgstr` y llénalos con tus traducciones al catalán.
+4. Envía una Pull Request.
 
-The resulting structure should look like:
+La estructura resultante debería verse así:
 
 ```
 ca/messages.po   # Catalan
 ```
 
-You can find the ISO 639-1 code for your language on [Wikipedia](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
+Puedes encontrar el código ISO 639-1 para tu idioma en [Wikipedia](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
-### Editing `.po` files
+### Editando archivos `.po`
 
-Each `.po` file contains entries like this:
+Cada archivo`.po` contiene entradas así:
 
 ```po
 #: src/components/SomeComponent.tsx:42
@@ -56,44 +56,44 @@ msgid "Hello, world!"
 msgstr ""
 ```
 
-- `msgid` is the original English string (do **not** modify this)
-- `msgstr` is the translation — fill this in for your language
-- Lines starting with `#:` are source references (do not modify)
-- Lines starting with `#.` are developer comments providing context
+- `msgid` es la string original en inglés (**no** modifiques esto)
+- `msgstr` es la traducción — llena esto en tu idioma
+- Las lineas que empiezan con `#:` son las referencias originales (no las modifiques)
+- Las lineas que empiezan con `#.` son comentarios de desarrollador que proveen contexto
 
-An empty `msgstr ""` means the string is untranslated and will fall back to English.
+Un `msgstr ""` vacío significa que la string está sin traducir y quedará en inglés.
 
-### Tools
+### Herramientas
 
-You can edit `.po` files with:
-- Any text editor
-- [Poedit](https://poedit.net/) — a dedicated `.po` file editor with a nice UI
-- [Weblate](https://weblate.org/) or similar online tools
+Puedes editar archivos `.po` con:
+- Cualquier editor de texto
+- [Poedit](https://poedit.net/) — un editor de archivos `.po` dedicado con una buena IU
+- [Weblate](https://weblate.org/) o herramientas online similares
 
 ### Placeholders
 
-Some strings contain placeholders like `{0}`, `{username}`, or XML-like tags `<0>...</0>`. Make sure to **keep all placeholders intact** in your translation:
+Algunas strings contienen placeholders como `{0}`, `{username}`, o etiquetas tipo XML `<0>...</0>`. Asegúrate de  **mantener todos los placeholders intactos** en tu traducción:
 
 ```po
 msgid "Welcome, {0}!"
-msgstr "Bienvenue, {0} !"
+msgstr "Bienvenido, {0} !"
 ```
 
 ```po
 msgid "Click <0>here</0> to continue"
-msgstr "Cliquez <0>ici</0> pour continuer"
+msgstr "Clic <0>aquí</0> para continuar"
 ```
 
-## Guidelines
+## Lineamientos
 
-- Do not translate the `en/messages.po` file (it is the source locale, auto-generated)
-- Keep the tone consistent with the game's style
-- If you're unsure about a translation, leave a comment on your PR
+- No traduzcas el archivo `en/messages.po` (es el locale original, auto-generado)
+- Mantén el tono consistente con el estilo del juego
+- Si no estás seguro de una traducción, deja un comentario en tu PR
 
-## Adding a New Language
+## Añadir un idioma nuevo
 
-If you start translating a language, please open an issue to let people know you're working on it.
+Si comienzas a traducir en un idioma, por favor abre un issue para que la gente sepa que estás trabajando en él.
 
-## License
+## Licencia
 
-These translation files are part of the War Era project.
+Estos archivos de traducción son parte del proyecto War Era.
