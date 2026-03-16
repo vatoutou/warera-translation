@@ -42,7 +42,7 @@ msgstr "{0} & σύμμαχοι"
 msgid "{0} active citizens required"
 msgstr "Απαιτούνται {0} ενεργοί πολίτες"
 
-#. placeholder {0}: data.userId
+#. placeholder {0}: data.userId && ( <UserUsername userId={data.userId} withAvatar withFlag /> )
 #: src/components/_user/notification/notification.frontConfig.tsx:608
 msgid "{0} bought your item offer"
 msgstr "Ο/Η {0} αγόρασε την προσφορά αντικειμένου σου"
@@ -58,11 +58,13 @@ msgid "{0} Free"
 msgstr "{0} Δωρεάν"
 
 #. placeholder {0}: lawConfig?.coolDownInHours
+#. placeholder {0}: motionConfig.coolDownInHours
 #: src/components/_political/law/Law.tsx:111
+#: src/components/_political/partyMotion/PartyMotion.tsx:109
 msgid "{0} hours"
 msgstr "{0} ώρες"
 
-#. placeholder {0}: data.userId
+#. placeholder {0}: data.userId && ( <UserUsername userId={data.userId} withAvatar withFlag /> )
 #: src/components/_user/notification/notification.frontConfig.tsx:631
 msgid "{0} proposed a law, check it out!"
 msgstr "Ο/Η {0} πρότεινε έναν νόμο, ρίξτε μια ματιά!"
@@ -77,8 +79,8 @@ msgstr "Απαιτούνται {0} γύροι για να κερδηθεί η μ
 msgid "{0}'s Companies"
 msgstr "Οι εταιρείες του/της {0}"
 
-#. placeholder {0}: activeCompaniesCount
-#. placeholder {1}: companiesLimit
+#. placeholder {0}: activeCompaniesCount.data ?? 0
+#. placeholder {1}: companiesLimit ?? 1
 #: src/components/_economy/company/CompanyDropdown.tsx:182
 msgid "{0}/{1} active"
 msgstr "{0}/{1} ενεργές"
@@ -90,8 +92,8 @@ msgstr "Θα αφαιρείται φόρος εισοδήματος {0}% από 
 
 #. placeholder {0}: region.taxPercent
 #: src/components/_economy/company/RecommendedCompanyRegions.tsx:168
-msgid "{0}% income tax will be deducted from your workers' wages."
-msgstr "Θα αφαιρείται φόρος εισοδήματος {0}% από τους μισθούς των εργαζομένων σου."
+msgid "{0}% income tax will be deducted from your workers wages."
+msgstr "{0}% income tax will be deducted from your workers' wages."
 
 #. placeholder {0}: gameConfig.company.destructionValuePercent
 #: src/components/_economy/company/CompanyDropdown.tsx:243
@@ -140,750 +142,6950 @@ msgid "*May burn"
 msgstr "*Μπορεί να καεί"
 
 #: src/components/_user/notification/notification.frontConfig.tsx:394
+#: src/components/_user/notification/notification.frontConfig.tsx:1225
 msgid "<0/> applied to join <1/>"
 msgstr "<0/> έκανε αίτηση για να ενταχθεί στο <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:402
-msgid "<0/> canceled their application to join <1/>"
-msgstr "<0/> ακύρωσε την αίτησή του/της για να ενταχθεί στο <1/>"
+#. placeholder {0}: myWorker.data.wage
+#. placeholder {1}: incomeTax > 0 && ( <Typo as='span' opacity={0.7}> {' ('} <Money static precision={3} color='yellowText'> {wageAfterTax} </Money> {' after taxes)'} </Typo> )
+#: src/components/_economy/workOffer/WorkOfferList.tsx:113
+msgid "<0/> at <1>{0}</1> wage.{1}"
+msgstr "<0/> at <1>{0}</1> wage.{1}"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:410
-msgid "<0/> declined your application"
-msgstr "<0/> απέρριψε την αίτησή σου"
+#. placeholder {0}: law.data.amount ?? 0
+#: src/components/_political/law/law.frontConfig.tsx:294
+msgid "<0/> buys your region <1/> for <2>{0}</2>"
+msgstr "<0/> buys your region <1/> for <2>{0}</2>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:418
-msgid "<0/> accepted your application"
-msgstr "<0/> αποδέχτηκε την αίτησή σου"
+#: src/components/_user/notification/notification.frontConfig.tsx:918
+msgid "<0/> commented on your article <1/>"
+msgstr "<0/> commented on your article <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:426
-msgid "<0/> removed you from <1/>"
-msgstr "<0/> σε αφαίρεσε από το <1/>"
+#: src/components/_user/notification/notification.frontConfig.tsx:824
+msgid "<0/> conquered the region in <1/>"
+msgstr "<0/> conquered the region in <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:434
-msgid "<0/> invited you to join <1/>"
-msgstr "<0/> σε προσκάλεσε να ενταχθείς στο <1/>"
+#: src/components/_political/message/systemMessage.frontConfig.tsx:74
+msgid "<0/> created the conversation"
+msgstr "<0/> created the conversation"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:442
-msgid "<0/> accepted your invitation"
-msgstr "<0/> αποδέχτηκε την πρόσκλησή σου"
+#: src/components/_political/event/event.frontConfig.tsx:182
+msgid "<0/> declared war on <1/>"
+msgstr "<0/> declared war on <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:450
-msgid "<0/> declined your invitation"
-msgstr "<0/> απέρριψε την πρόσκλησή σου"
+#: src/components/_user/notification/notification.frontConfig.tsx:819
+msgid "<0/> defended in <1/>"
+msgstr "<0/> defended in <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:458
-msgid "<0/> left <1/>"
-msgstr "<0/> αποχώρησε από το <1/>"
+#. placeholder {0}: data.amount
+#: src/components/_user/notification/notification.frontConfig.tsx:408
+#: src/components/_user/notification/notification.frontConfig.tsx:1299
+msgid "<0/> donated <1>{0}</1> to <2/>"
+msgstr "<0/> donated <1>{0}</1> to <2/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:466
-msgid "<0/> joined <1/>"
-msgstr "<0/> εντάχθηκε στο <1/>"
+#: src/components/_political/event/event.frontConfig.tsx:142
+msgid "<0/> financed a resistance war for <1/> in <2/>"
+msgstr "<0/> financed a resistance war for <1/> in <2/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:474
-msgid "<0/> was promoted in <1/>"
-msgstr "<0/> προήχθη στο <1/>"
+#: src/components/_political/event/event.frontConfig.tsx:149
+msgid "<0/> financed a revolt in <1/>"
+msgstr "<0/> financed a revolt in <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:482
-msgid "<0/> was demoted in <1/>"
-msgstr "<0/> υποβιβάστηκε στο <1/>"
+#: src/components/_political/event/event.frontConfig.tsx:453
+msgid "<0/> financed a revolt in <1/> for <2/> against <3/>"
+msgstr "<0/> financed a revolt in <1/> for <2/> against <3/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:490
-msgid "<0/> sent you a message"
-msgstr "<0/> σου έστειλε μήνυμα"
+#. placeholder {0}: data.wage
+#: src/components/_user/notification/notification.frontConfig.tsx:548
+msgid "<0/> fired you from your <1>{0}</1> wage job in <2/>"
+msgstr "<0/> fired you from your <1>{0}</1> wage job in <2/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:498
-msgid "<0/> mentioned you in a message"
-msgstr "<0/> σε ανέφερε σε ένα μήνυμα"
+#: src/components/_political/message/systemMessage.frontConfig.tsx:45
+msgid "<0/> gifted a sub to <1/>"
+msgstr "<0/> gifted a sub to <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:506
-msgid "<0/> replied to your message"
-msgstr "<0/> απάντησε στο μήνυμά σου"
+#: src/components/_user/notification/notification.frontConfig.tsx:1162
+msgid "<0/> gifted you a premium subscription!"
+msgstr "<0/> gifted you a premium subscription!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:514
-msgid "<0/> reacted to your message"
-msgstr "<0/> αντέδρασε στο μήνυμά σου"
+#. placeholder {0}: data.bannerTitle
+#: src/components/_user/notification/notification.frontConfig.tsx:1602
+msgid "<0/> gifted you the banner \"{0}\"!"
+msgstr "<0/> gifted you the banner \"{0}\"!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:522
-msgid "<0/> started following you"
-msgstr "<0/> άρχισε να σε ακολουθεί"
+#: src/components/_user/notification/notification.frontConfig.tsx:1719
+msgid "<0/> gifted you the skin \"{skinTitle}\"!"
+msgstr "<0/> gifted you the skin \"{skinTitle}\"!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:530
-msgid "<0/> stopped following you"
-msgstr "<0/> σταμάτησε να σε ακολουθεί"
+#. placeholder {0}: data.skinPackTitle
+#: src/components/_user/notification/notification.frontConfig.tsx:1782
+msgid "<0/> gifted you the skin pack \"{0}\"!"
+msgstr "<0/> gifted you the skin pack \"{0}\"!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:538
-msgid "<0/> liked your post"
-msgstr "<0/> έκανε like στην ανάρτησή σου"
+#: src/components/_user/notification/notification.frontConfig.tsx:1432
+msgid "<0/> has been created, it gonna start soon!"
+msgstr "<0/> has been created, it gonna start soon!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:546
-msgid "<0/> commented on your post"
-msgstr "<0/> σχολίασε την ανάρτησή σου"
+#: src/components/_user/notification/notification.frontConfig.tsx:227
+msgid "<0/> has been elected president of <1/>"
+msgstr "<0/> has been elected president of <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:554
-msgid "<0/> shared your post"
-msgstr "<0/> κοινοποίησε την ανάρτησή σου"
+#. placeholder {0}: data.amount
+#: src/components/_political/event/event.frontConfig.tsx:218
+msgid "<0/> has bought <1/> from <2/> for <3>{0}</3>"
+msgstr "<0/> has bought <1/> from <2/> for <3>{0}</3>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:562
-msgid "<0/> reported your post"
-msgstr "<0/> ανέφερε την ανάρτησή σου"
+#: src/components/_political/event/event.frontConfig.tsx:334
+msgid "<0/> has broken their alliance with <1/>"
+msgstr "<0/> has broken their alliance with <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:570
-msgid "<0/> reported your message"
-msgstr "<0/> ανέφερε το μήνυμά σου"
+#: src/components/_political/event/event.frontConfig.tsx:97
+msgid "<0/> has conquered <1/> against <2/>"
+msgstr "<0/> has conquered <1/> against <2/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:578
-msgid "<0/> muted you"
-msgstr "<0/> σε έκανε σίγαση"
+#: src/components/_political/event/event.frontConfig.tsx:116
+msgid "<0/> has defended <1/> against <2/>"
+msgstr "<0/> has defended <1/> against <2/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:586
-msgid "<0/> unmuted you"
-msgstr "<0/> αφαίρεσε τη σίγαση από εσένα"
+#: src/components/_political/event/event.frontConfig.tsx:460
+msgid "<0/> has financed a revolt in <1/> for <2/> against <3/>"
+msgstr "<0/> has financed a revolt in <1/> for <2/> against <3/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:594
-msgid "<0/> banned you"
-msgstr "<0/> σε απέκλεισε"
+#: src/components/_political/event/event.frontConfig.tsx:377
+msgid "<0/> has financed resistance in <1/>"
+msgstr "<0/> has financed resistance in <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:602
-msgid "<0/> unbanned you"
-msgstr "<0/> άρση αποκλεισμού από <0/>"
+#: src/components/_political/event/event.frontConfig.tsx:319
+msgid "<0/> has formed an alliance with <1/>"
+msgstr "<0/> has formed an alliance with <1/>"
 
-#: src/components/_economy/company/CompanyActions.tsx:101
-msgid "Abandon company"
-msgstr "Εγκατάλειψη εταιρείας"
+#: src/components/_political/event/event.frontConfig.tsx:234
+msgid "<0/> has liberated <1/> and returned it to <2/>"
+msgstr "<0/> has liberated <1/> and returned it to <2/>"
 
-#: src/components/_economy/company/CompanyActions.tsx:112
+#: src/components/_user/notification/notification.frontConfig.tsx:1079
+msgid "<0/> has started a revolution in <1/>"
+msgstr "<0/> has started a revolution in <1/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1445
+msgid "<0/> has started! Let the battles begin!"
+msgstr "<0/> has started! Let the battles begin!"
+
+#: src/components/_political/event/event.frontConfig.tsx:391
+msgid "<0/> has suppressed resistance in <1/>"
+msgstr "<0/> has suppressed resistance in <1/>"
+
+#. placeholder {0}: data.money
+#: src/components/_political/event/event.frontConfig.tsx:261
+msgid "<0/> has transferred <1>{0}</1> to <2/>"
+msgstr "<0/> has transferred <1>{0}</1> to <2/>"
+
+#: src/components/_political/event/event.frontConfig.tsx:164
+msgid "<0/> is attacking <1/>"
+msgstr "<0/> is attacking <1/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1035
+msgid "<0/> is attacking <1/> in <2/>"
+msgstr "<0/> is attacking <1/> in <2/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1021
+msgid "<0/> is attacking your country in <1/>"
+msgstr "<0/> is attacking your country in <1/>"
+
+#: src/components/_political/event/event.frontConfig.tsx:306
+msgid "<0/> is in bankruptcy. Removing all alliances and disabling every region upgrades."
+msgstr "<0/> is in bankruptcy. Removing all alliances and disabling every region upgrades."
+
+#: src/components/_political/event/event.frontConfig.tsx:155
+msgid "<0/> is revolting <1/>"
+msgstr "<0/> is revolting <1/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1050
+msgid "<0/> is revolting in <1/> against your country"
+msgstr "<0/> is revolting in <1/> against your country"
+
+#: src/components/_political/message/systemMessage.frontConfig.tsx:16
+msgid "<0/> joined the conversation"
+msgstr "<0/> joined the conversation"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:688
+msgid "<0/> joined the game with your referral link!"
+msgstr "<0/> joined the game with your referral link!"
+
+#. placeholder {0}: data.wage
+#: src/components/_user/notification/notification.frontConfig.tsx:517
+msgid "<0/> joined your company <1/> for <2>{0}</2> wage"
+msgstr "<0/> joined your company <1/> for <2>{0}</2> wage"
+
+#: src/components/_political/message/systemMessage.frontConfig.tsx:34
+msgid "<0/> kicked <1/> from the conversation"
+msgstr "<0/> kicked <1/> from the conversation"
+
+#. placeholder {0}: data.company && <CompanyNameById companyId={data.company} />
+#: src/components/_user/notification/notification.frontConfig.tsx:533
+msgid "<0/> left his job in your company {0}"
+msgstr "<0/> left their job in your company {0}"
+
+#: src/components/_political/message/systemMessage.frontConfig.tsx:25
+msgid "<0/> left the conversation"
+msgstr "<0/> left the conversation"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:903
+msgid "<0/> liked your article <1/>"
+msgstr "<0/> liked your article <1/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:966
+msgid "<0/> liked your message <1/>"
+msgstr "<0/> liked your message <1/>"
+
+#: src/components/_political/event/event.frontConfig.tsx:249
+msgid "<0/> made peace with <1/>"
+msgstr "<0/> made peace with <1/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1313
+msgid "<0/> mentioned you in a message <1/>"
+msgstr "<0/> mentioned you in a message <1/>"
+
+#: src/components/_military/war/WarItem.tsx:115
+msgid "<0/> Priority ends in <1/>"
+msgstr "<0/> Priority ends in <1/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:887
+msgid "<0/> published a new article"
+msgstr "<0/> published a new article"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:699
+msgid "<0/> referred you to the game."
+msgstr "<0/> referred you to the game."
+
+#. placeholder {0}: data.messageId && <MessageItemById messageId={data.messageId} />
+#: src/components/_user/notification/notification.frontConfig.tsx:993
+msgid "<0/> responded to your message {0}"
+msgstr "<0/> responded to your message {0}"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:952
+msgid "<0/> subscribed to you on your article <1/>"
+msgstr "<0/> subscribed to you on your article <1/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:933
+msgid "<0/> tipped your article <1/>"
+msgstr "<0/> tipped your article <1/>"
+
+#: src/components/_political/event/event.frontConfig.tsx:204
+msgid "<0/> took control of <1/>"
+msgstr "<0/> took control of <1/>"
+
+#: src/components/_military/war/WarHeader.tsx:28
+msgid "<0/> vs <1/> war"
+msgstr "<0/> vs <1/> war"
+
+#: src/components/_political/law/law.frontConfig.tsx:83
+msgid "<0/> wants to make peace with your country"
+msgstr "<0/> wants to make peace with your country"
+
+#: src/components/_political/event/event.frontConfig.tsx:199
+msgid "<0/> was elected president of <1/>"
+msgstr "<0/> was elected president of <1/>"
+
+#. placeholder {0}: ts[data.governmentRole]
+#: src/components/_user/notification/notification.frontConfig.tsx:665
+msgid "<0/> was nominated as <1>{0}</1>"
+msgstr "<0/> was nominated as <1>{0}</1>"
+
+#. placeholder {0}: data.roundNumber
+#: src/components/_political/message/systemMessage.frontConfig.tsx:55
+msgid "<0/> won round {0}"
+msgstr "<0/> won round {0}"
+
+#. placeholder {0}: data.attackerWonRoundsCount
+#. placeholder {1}: data.defenderWonRoundsCount
+#: src/components/_political/message/systemMessage.frontConfig.tsx:64
+msgid "<0/> won the battle ({0}-{1})"
+msgstr "<0/> won the battle ({0}-{1})"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:351
+msgid "<0/> won the primary election in <1/> and can now run for president!"
+msgstr "<0/> won the primary election in <1/> and can now run for president!"
+
+#. placeholder {0}: data.roundNumber
+#: src/components/_user/notification/notification.frontConfig.tsx:783
+msgid "<0/> won the round <1>#{0}</1> in <2/>"
+msgstr "<0/> won the round <1>#{0}</1> in <2/>"
+
+#. placeholder {0}: data.roundNumber
+#: src/components/_user/notification/notification.frontConfig.tsx:789
+msgid "<0/> won the round <1>#{0}</1> in <2/>!"
+msgstr "<0/> won the round <1>#{0}</1> in <2/>!"
+
+#: src/components/_user/user/UserHeader.tsx:278
+msgid "<0/><1>Buff</1> ends <2/>"
+msgstr "<0/><1>Buff</1> ends <2/>"
+
+#: src/components/_user/user/UserHeader.tsx:287
+msgid "<0/><1>Debuff</1> ends <2/>"
+msgstr "<0/><1>Debuff</1> ends <2/>"
+
+#: src/components/_user/user/UserHeader.tsx:350
+msgid "<0/>Last connection was <1><2/></1>"
+msgstr "<0/>Last connection was <1><2/></1>"
+
+#: src/pages/war/[warId]/index.tsx:55
+msgid "<0/>Priority ends in <1/>"
+msgstr "<0/>Priority ends in <1/>"
+
+#. placeholder {0}: levelConfig.stats.resistanceGrowthReduction ?? 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:58
+msgid "<0>-{0}%</0> Resistance growth per hour"
+msgstr "<0>-{0}%</0> Resistance growth per hour"
+
+#. placeholder {0}: companiesIds?.length ?? 0
+#. placeholder {1}: companiesLimit ?? 99
+#: src/components/_economy/company/CompanyList.tsx:101
+msgid "<0>{0}/{1}</0> Companies"
+msgstr "<0>{0}/{1}</0> Companies"
+
+#. placeholder {0}: totalWorkersCount.data ?? 0
+#. placeholder {1}: managementLimit ?? 99
+#: src/components/_economy/company/CompanyList.tsx:117
+#: src/components/_economy/workOffer/WorkersLimit.tsx:24
+msgid "<0>{0}/{1}</0> Workers"
+msgstr "<0>{0}/{1}</0> Workers"
+
+#. placeholder {0}: sideBonus.muHqBonusPercent
+#: src/components/_military/battle/BattleDamageBonuses.tsx:118
+msgid "<0>{0}</0> <1/> in <2/>"
+msgstr "<0>{0}</0> <1/> in <2/>"
+
+#. placeholder {0}: sideBonus.muOrderBonusPercent
+#: src/components/_military/battle/BattleDamageBonuses.tsx:108
+msgid "<0>{0}</0> <1/> orders"
+msgstr "<0>{0}</0> <1/> orders"
+
+#. placeholder {0}: sideBonus.countryEnemyBonusPercent
+#: src/components/_military/battle/BattleDamageBonuses.tsx:86
+msgid "<0>{0}</0> against enemy of <1/>"
+msgstr "<0>{0}</0> against enemy of <1/>"
+
+#. placeholder {0}: levelConfig.stats.attackBonus || 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:46
+msgid "<0>{0}</0> Attack bonus"
+msgstr "<0>{0}</0> Attack bonus"
+
+#. placeholder {0}: sideBonus.regionNotLinkedToCapitalMalusPercent
+#: src/components/_military/battle/BattleDamageBonuses.tsx:160
+msgid "<0>{0}</0> because <1/> is not linked to the capital"
+msgstr "<0>{0}</0> because <1/> is not linked to the capital"
+
+#. placeholder {0}: sideBonus.lostAttackingRegionMalusPercent
+#: src/components/_military/battle/BattleDamageBonuses.tsx:176
+msgid "<0>{0}</0> because <1/> lost <2/>"
+msgstr "<0>{0}</0> because <1/> lost <2/>"
+
+#. placeholder {0}: sideBonus.occupyingYourRegionsMalusPercent
+#: src/components/_military/battle/BattleDamageBonuses.tsx:206
+msgid "<0>{0}</0> because <1/> occupies at least one of <2/> regions"
+msgstr "<0>{0}</0> because <1/> occupies at least one of <2/> regions"
+
+#. placeholder {0}: levelConfig.stats.defenseBonus || 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:34
+msgid "<0>{0}</0> Defense bonus"
+msgstr "<0>{0}</0> Defense bonus"
+
+#. placeholder {0}: sideBonus.regionAttackBonusPercent
+#. placeholder {0}: sideBonus.regionDefenseBonusPercent
+#: src/components/_military/battle/BattleDamageBonuses.tsx:129
+#: src/components/_military/battle/BattleDamageBonuses.tsx:145
+msgid "<0>{0}</0> from <1/> in <2/>"
+msgstr "<0>{0}</0> from <1/> in <2/>"
+
+#. placeholder {0}: sideBonus.resistanceBonusPercent
+#: src/components/_military/battle/BattleDamageBonuses.tsx:196
+msgid "<0>{0}</0> from <1>Resistance</1>"
+msgstr "<0>{0}</0> from <1>Resistance</1>"
+
+#. placeholder {0}: region.ethicDepositBonus
+#: src/components/_economy/company/RecommendedCompanyRegions.tsx:151
+msgid "<0>{0}</0> from agrarian ethics deposit bonus."
+msgstr "<0>{0}</0> from agrarian ethics deposit bonus."
+
+#. placeholder {0}: sideBonus.countryAlliesBonusPercent
+#: src/components/_military/battle/BattleDamageBonuses.tsx:75
+msgid "<0>{0}</0> from alliance with <1/>"
+msgstr "<0>{0}</0> from alliance with <1/>"
+
+#. placeholder {0}: region.depositBonus
+#: src/components/_economy/company/RecommendedCompanyRegions.tsx:141
+msgid "<0>{0}</0> from deposit resources."
+msgstr "<0>{0}</0> from deposit resources."
+
+#. placeholder {0}: sideBonus.allyEthicsBonusPercent
+#: src/components/_military/battle/BattleDamageBonuses.tsx:242
+msgid "<0>{0}</0> from Diplomatic ethics (fighting for ally)"
+msgstr "<0>{0}</0> from Diplomatic ethics (fighting for ally)"
+
+#. placeholder {0}: sideBonus.patrioticBonusPercent
+#: src/components/_military/battle/BattleDamageBonuses.tsx:65
+msgid "<0>{0}</0> from fighting for your country"
+msgstr "<0>{0}</0> from fighting for your country"
+
+#. placeholder {0}: region.ethicSpecializationBonus
+#: src/components/_economy/company/RecommendedCompanyRegions.tsx:131
+msgid "<0>{0}</0> from industrialist ethics specialization bonus."
+msgstr "<0>{0}</0> from industrialist ethics specialization bonus."
+
+#. placeholder {0}: sideBonus.enemyEthicsBonusPercent
+#: src/components/_military/battle/BattleDamageBonuses.tsx:252
+msgid "<0>{0}</0> from Isolationist ethics (fighting enemy)"
+msgstr "<0>{0}</0> from Isolationist ethics (fighting enemy)"
+
+#. placeholder {0}: sideBonus.militarismBonusPercent
+#: src/components/_military/battle/BattleDamageBonuses.tsx:222
+msgid "<0>{0}</0> from Militarist ethics (attacking)"
+msgstr "<0>{0}</0> from Militarist ethics (attacking)"
+
+#. placeholder {0}: sideBonus.countryOrderBonusPercent
+#: src/components/_military/battle/BattleDamageBonuses.tsx:97
+msgid "<0>{0}</0> from orders of <1/>"
+msgstr "<0>{0}</0> from orders of <1/>"
+
+#. placeholder {0}: sideBonus.pacifismBonusPercent
+#: src/components/_military/battle/BattleDamageBonuses.tsx:232
+msgid "<0>{0}</0> from Pacifist ethics (defending)"
+msgstr "<0>{0}</0> from Pacifist ethics (defending)"
+
+#. placeholder {0}: region.strategicBonus
+#: src/components/_economy/company/RecommendedCompanyRegions.tsx:121
+msgid "<0>{0}</0> from strategic resources production bonus."
+msgstr "<0>{0}</0> from strategic resources production bonus."
+
+#. placeholder {0}: gameConfig.battle.pointsToWinRound
+#: src/components/_common/RoundPoints.tsx:17
+msgid "<0>{0}</0> ground are required to win a round, points are gained every tick"
+msgstr "<0>{0}</0> ground are required to win a round, points are gained every tick"
+
+#. placeholder {0}: levelConfig.stats.maxProduction
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:81
+msgid "<0>{0}</0> Storage capacity"
+msgstr "<0>{0}</0> Storage capacity"
+
+#. placeholder {0}: -lawConfig.maintenanceCost
+#: src/components/_political/law/Law.tsx:99
+msgid "<0>{0}</0>/day"
+msgstr "<0>{0}</0>/day"
+
+#: src/components/_economy/company/CompanyProductionBonusTag.tsx:75
+msgid "<0>{depositBonus}</0> from deposit resources in <1/>."
+msgstr "<0>{depositBonus}</0> from deposit resources in <1/>."
+
+#: src/components/_economy/company/CompanyProductionBonusTag.tsx:86
+msgid "<0>{ethicDepositBonus}</0> from <1/> agrarian ethics deposit bonus."
+msgstr "<0>{ethicDepositBonus}</0> from <1/> agrarian ethics deposit bonus."
+
+#: src/components/_economy/company/CompanyProductionBonusTag.tsx:64
+msgid "<0>{ethicSpecializationBonus}</0> from <1/> industrialist ethics specialization bonus."
+msgstr "<0>{ethicSpecializationBonus}</0> from <1/> industrialist ethics specialization bonus."
+
+#: src/components/_economy/company/CompanyProductionBonusTag.tsx:53
+msgid "<0>{strategicBonus}</0> from <1/> strategic resources production bonus."
+msgstr "<0>{strategicBonus}</0> from <1/> strategic resources production bonus."
+
+#: src/pages/country/[countryId]/index.tsx:399
+#: src/pages/country/[countryId]/index.tsx:448
+msgid "<0>#{key}</0> resource of each type = <1>{value}</1>"
+msgstr "<0>#{key}</0> resource of each type = <1>{value}</1>"
+
+#: src/components/_user/user/UserTooltip.tsx:122
+msgid "<0>Buff</0> ends <1/>"
+msgstr "<0>Buff</0> ends <1/>"
+
+#: src/components/_user/user/UserTooltip.tsx:131
+msgid "<0>Debuff</0> ends <1/>"
+msgstr "<0>Debuff</0> ends <1/>"
+
+#: src/components/_user/premium/PremiumFeatureList.tsx:100
+msgid "<0>Emotes</0> in chat"
+msgstr "<0>Emotes</0> in chat"
+
+#. placeholder {0}: 1
+#. placeholder {1}: worker.fidelity
+#. placeholder {2}: 10
+#: src/components/_user/worker/WorkerItem.tsx:112
+msgid "<0>Everyday passed working for same employer, the fidelity bonus increases by <1>{0}</1>.</0><2>It increase by <3>{1}</3> the production bonus until <4>{2}</4>.</2><5>This bonus is applied after work. So it is not counted in wage.</5>"
+msgstr "<0>Every day you work for the same employer, the fidelity bonus increases by <1>{0}</1>.</0><2>It increases by <3>{1}</3> the production bonus until <4>{2}</4>.</2><5>This bonus is applied after work. So it is not counted in the wages.</5>"
+
+#: src/components/_economy/company/CompanyProduce.tsx:81
+msgid "<0>Filled with <1>Production Points</1> by employees working and from the automated engine.</0><2>Only the company owner can spend it to produce items.</2>"
+msgstr "<0>Filled with <1>Production Points</1> by employees working and from the automated engine.</0><2>Only the company owner can spend it to produce items.</2>"
+
+#. placeholder {0}: gameConfig?.unrest.contributionCost
+#. placeholder {1}: gameConfig?.unrest.contributionCost
+#. placeholder {2}: gameConfig?.unrest.contributionValue
+#. placeholder {3}: gameConfig?.unrest.battleCooldownHours
+#. placeholder {4}: gameConfig?.unrest.bordersOpenDays
+#. placeholder {5}: gameConfig?.unrest.contributionCooldownAfterRevolutionHours
+#: src/components/_political/unrest/UnrestBar.tsx:25
+msgid "<0>Unrest</0> represents internal tension in the country.<1/><2/>Citizens can <3>increase</3> or <4>decrease</4> unrest by spending <5>{0}</5> or <6>{1}</6> to change the bar by <7>{2}</7>.<8/><9/>When the bar is full, any party can vote via motion to start a <10>Civil war</10> (cost: <11>development × 10</11>, cooldown: {3}h). The battle takes place in the capital region, and <12>only citizens</12> can fight.<13/><14/>If revolutionaries win:<15/>- Government is impeached<16/>- Borders are opened for {4} days<17/>- Presidential elections begin<18/><19/>After a revolution, contributions are disabled for {5}h."
+msgstr "<0>Unrest</0> represents internal tension in the country.<1/><2/>Citizens can <3>increase</3> or <4>decrease</4> unrest by spending <5>{0}</5> or <6>{1}</6> to change the bar by <7>{2}</7>.<8/><9/>When the bar is full, any party can vote via motion to start a <10>Civil war</10> (cost: <11>development × 10</11>, cooldown: {3}h). The battle takes place in the capital region, and <12>only citizens</12> can fight.<13/><14/>If revolutionaries win:<15/>- Government is impeached<16/>- Borders are opened for {4} days<17/>- Presidential elections begin<18/><19/>After a revolution, contributions are disabled for {5}h."
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:86
+msgid "1 legendary down, 5 more to go for a full stuff, keep gambling!"
+msgstr "1 legendary down, 5 more to go for a full stuff, keep gambling!"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:137
+msgid "1★ Admiral"
+msgstr "1★ Admiral"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:112
+msgid "1★ Brigadier"
+msgstr "1★ Brigadier"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:27
+msgid "1★ Cadet"
+msgstr "1★ Cadet"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:92
+msgid "1★ Captain"
+msgstr "1★ Captain"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:72
+msgid "1★ Chief"
+msgstr "1★ Chief"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:107
+msgid "1★ Colonel"
+msgstr "1★ Colonel"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:117
+msgid "1★ Commodore"
+msgstr "1★ Commodore"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:47
+msgid "1★ Corporal"
+msgstr "1★ Corporal"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:82
+msgid "1★ Ensign"
+msgstr "1★ Ensign"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:149
+msgid "1★ General"
+msgstr "1★ General"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:12
+msgid "1★ Initiate"
+msgstr "1★ Initiate"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:87
+msgid "1★ Lieutenant"
+msgstr "1★ Lieutenant"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:102
+msgid "1★ Lt. Colonel"
+msgstr "1★ Lt. Colonel"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:142
+msgid "1★ Lt. General"
+msgstr "1★ Lt. General"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:97
+msgid "1★ Major"
+msgstr "1★ Major"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:122
+msgid "1★ Marshal"
+msgstr "1★ Marshal"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:62
+msgid "1★ Operative"
+msgstr "1★ Operative"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:67
+msgid "1★ Petty Officer"
+msgstr "1★ Petty Officer"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:32
+msgid "1★ Private"
+msgstr "1★ Private"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:127
+msgid "1★ Rear Admiral"
+msgstr "1★ Rear Admiral"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:22
+msgid "1★ Recruit"
+msgstr "1★ Recruit"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:52
+msgid "1★ Sergeant"
+msgstr "1★ Sergeant"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:42
+msgid "1★ Specialist"
+msgstr "1★ Specialist"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:17
+msgid "1★ Trainee"
+msgstr "1★ Trainee"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:37
+msgid "1★ Trooper"
+msgstr "1★ Trooper"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:57
+msgid "1★ Vanguard"
+msgstr "1★ Vanguard"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:132
+msgid "1★ Vice Admiral"
+msgstr "1★ Vice Admiral"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:77
+msgid "1★ Warrant Officer"
+msgstr "1★ Warrant Officer"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:138
+msgid "2★ Admiral"
+msgstr "2★ Admiral"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:113
+msgid "2★ Brigadier"
+msgstr "2★ Brigadier"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:28
+msgid "2★ Cadet"
+msgstr "2★ Cadet"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:93
+msgid "2★ Captain"
+msgstr "2★ Captain"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:73
+msgid "2★ Chief"
+msgstr "2★ Chief"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:108
+msgid "2★ Colonel"
+msgstr "2★ Colonel"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:118
+msgid "2★ Commodore"
+msgstr "2★ Commodore"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:48
+msgid "2★ Corporal"
+msgstr "2★ Corporal"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:83
+msgid "2★ Ensign"
+msgstr "2★ Ensign"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:150
+msgid "2★ General"
+msgstr "2★ General"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:13
+msgid "2★ Initiate"
+msgstr "2★ Initiate"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:88
+msgid "2★ Lieutenant"
+msgstr "2★ Lieutenant"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:103
+msgid "2★ Lt. Colonel"
+msgstr "2★ Lt. Colonel"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:143
+msgid "2★ Lt. General"
+msgstr "2★ Lt. General"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:98
+msgid "2★ Major"
+msgstr "2★ Major"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:123
+msgid "2★ Marshal"
+msgstr "2★ Marshal"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:63
+msgid "2★ Operative"
+msgstr "2★ Operative"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:68
+msgid "2★ Petty Officer"
+msgstr "2★ Petty Officer"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:33
+msgid "2★ Private"
+msgstr "2★ Private"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:128
+msgid "2★ Rear Admiral"
+msgstr "2★ Rear Admiral"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:23
+msgid "2★ Recruit"
+msgstr "2★ Recruit"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:53
+msgid "2★ Sergeant"
+msgstr "2★ Sergeant"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:43
+msgid "2★ Specialist"
+msgstr "2★ Specialist"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:18
+msgid "2★ Trainee"
+msgstr "2★ Trainee"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:38
+msgid "2★ Trooper"
+msgstr "2★ Trooper"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:58
+msgid "2★ Vanguard"
+msgstr "2★ Vanguard"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:133
+msgid "2★ Vice Admiral"
+msgstr "2★ Vice Admiral"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:78
+msgid "2★ Warrant Officer"
+msgstr "2★ Warrant Officer"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:139
+msgid "3★ Admiral"
+msgstr "3★ Admiral"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:114
+msgid "3★ Brigadier"
+msgstr "3★ Brigadier"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:29
+msgid "3★ Cadet"
+msgstr "3★ Cadet"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:94
+msgid "3★ Captain"
+msgstr "3★ Captain"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:74
+msgid "3★ Chief"
+msgstr "3★ Chief"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:109
+msgid "3★ Colonel"
+msgstr "3★ Colonel"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:119
+msgid "3★ Commodore"
+msgstr "3★ Commodore"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:49
+msgid "3★ Corporal"
+msgstr "3★ Corporal"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:84
+msgid "3★ Ensign"
+msgstr "3★ Ensign"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:151
+msgid "3★ General"
+msgstr "3★ General"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:14
+msgid "3★ Initiate"
+msgstr "3★ Initiate"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:89
+msgid "3★ Lieutenant"
+msgstr "3★ Lieutenant"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:104
+msgid "3★ Lt. Colonel"
+msgstr "3★ Lt. Colonel"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:144
+msgid "3★ Lt. General"
+msgstr "3★ Lt. General"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:99
+msgid "3★ Major"
+msgstr "3★ Major"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:124
+msgid "3★ Marshal"
+msgstr "3★ Marshal"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:64
+msgid "3★ Operative"
+msgstr "3★ Operative"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:69
+msgid "3★ Petty Officer"
+msgstr "3★ Petty Officer"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:34
+msgid "3★ Private"
+msgstr "3★ Private"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:129
+msgid "3★ Rear Admiral"
+msgstr "3★ Rear Admiral"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:24
+msgid "3★ Recruit"
+msgstr "3★ Recruit"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:54
+msgid "3★ Sergeant"
+msgstr "3★ Sergeant"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:44
+msgid "3★ Specialist"
+msgstr "3★ Specialist"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:19
+msgid "3★ Trainee"
+msgstr "3★ Trainee"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:39
+msgid "3★ Trooper"
+msgstr "3★ Trooper"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:59
+msgid "3★ Vanguard"
+msgstr "3★ Vanguard"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:134
+msgid "3★ Vice Admiral"
+msgstr "3★ Vice Admiral"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:79
+msgid "3★ Warrant Officer"
+msgstr "3★ Warrant Officer"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:152
+msgid "4★ General"
+msgstr "4★ General"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:145
+msgid "4★ Lt. General"
+msgstr "4★ Lt. General"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:153
+msgid "5★ General"
+msgstr "5★ General"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:146
+msgid "5★ Lt. General"
+msgstr "5★ Lt. General"
+
+#: src/components/_user/premium/PremiumFeatureList.tsx:59
+msgid "A <0>supporter badge</0>"
+msgstr "A <0>supporter badge</0>"
+
+#: src/components/_user/premium/PremiumFeatureList.tsx:64
+msgid "A beautiful colored username that will make you very popular"
+msgstr "A beautiful colored username that will make you very popular"
+
+#: src/components/_political/event/event.frontConfig.tsx:406
+msgid "A civil war has started by <0/> in <1/>"
+msgstr "A civil war has started by <0/> in <1/>"
+
+#: src/pages/region/[regionId]/index.tsx:57
+msgid "A deposit has been found in this region, it can be exploited by companies to produce raws."
+msgstr "A deposit has been found in this region, it can be exploited by companies to produce raw materials."
+
+#. placeholder {0}: ts[data.itemCode]
+#. placeholder {1}: data.bonusPercent
+#. placeholder {2}: data.durationDays
+#: src/components/_political/event/event.frontConfig.tsx:274
+msgid "A deposit of <0>{0}</0> <1>{1}</1> has been found in <2/> for {2} days"
+msgstr "A deposit of <0>{0}</0> <1>{1}</1> has been found in <2/> for {2} days"
+
+#. placeholder {0}: data.prize
+#: src/components/_user/notification/notification.frontConfig.tsx:1550
+msgid "A new giveaway for {0} cases has started! Join now!"
+msgstr "A new giveaway for {0} cases has started! Join now!"
+
+#: src/components/_political/event/event.frontConfig.tsx:137
+msgid "A revolution has started in <0/>"
+msgstr "A revolution has started in <0/>"
+
+#: src/pages/region/[regionId]/index.tsx:94
+msgid "A strategic resource has been found in this region, it gives its owner a production and development bonus."
+msgstr "A strategic resource has been found in this region, it gives its owner a production and development bonus."
+
+#: src/components/_user/modals/PhoneVerificationModal.tsx:135
+msgid "A verification code has been sent to {phoneNumber}"
+msgstr "A verification code has been sent to {phoneNumber}"
+
+#: src/components/_political/law/Law.tsx:170
+#: src/components/_political/partyMotion/PartyMotion.tsx:169
+msgid "Abstain"
+msgstr "Abstain"
+
+#: src/pages/country/[countryId]/index.tsx:126
+msgid "Abusing this power to advantage another country will lead to a <0>ban.</0>"
+msgstr "Abusing this power to advantage another country will lead to a <0>ban.</0>"
+
+#: src/components/_political/law/Law.tsx:159
+#: src/components/_political/partyMotion/PartyMotion.tsx:158
+#: src/components/_user/worker/WageReductionAlert.tsx:86
 msgid "Accept"
 msgstr "Αποδοχή"
 
-#: src/components/_political/law/LawVoteButtons.tsx:44
-msgid "Accept law"
-msgstr "Αποδοχή νόμου"
+#: src/components/_political/law/law.frontConfig.tsx:224
+msgid "Accept alliance"
+msgstr "Accept alliance"
 
-#: src/components/_user/settings/AccountSettings.tsx:88
+#. placeholder {0}: gameConfig?.battle.allianceDamagesBonusPercent
+#: src/components/_political/law/law.frontConfig.tsx:231
+msgid "Accept an alliance with <0/> increasing your citizens damages by <1>{0}</1> when fighting for them by and reciprocally"
+msgstr "Accept an alliance with <0/> increasing your citizens’ damage by <1>{0}</1> when fighting for them, and reciprocally"
+
+#: src/components/_political/law/law.frontConfig.tsx:289
+msgid "Accept or reject a region buy offer"
+msgstr "Accept or reject a region buy offer"
+
+#: src/components/_political/law/law.frontConfig.tsx:76
+msgid "Accept peace"
+msgstr "Accept peace"
+
+#: src/components/_political/law/law.frontConfig.tsx:77
+msgid "Accept to make peace with the other country"
+msgstr "Accept to make peace with the other country"
+
+#: src/components/_political/law/LawStatus.tsx:43
+#: src/components/_political/partyMotion/PartyMotionStatus.tsx:52
+msgid "Accepted"
+msgstr "Accepted"
+
+#: src/components/_military/battle/BattleHeader.tsx:161
+msgid "Access war"
+msgstr "Access war"
+
+#: src/components/_political/country/CountryHeader.tsx:70
+#: src/components/_user/user/UserHeader.tsx:164
+#: src/pages/country/[countryId]/account.tsx:36
+#: src/pages/country/[countryId]/index.tsx:328
+#: src/pages/user/[userId]/account.tsx:25
+#: src/pages/user/[userId]/index.tsx:142
 msgid "Account"
 msgstr "Λογαριασμός"
 
-#: src/components/_user/settings/AccountSettings.tsx:102
-msgid "Account settings"
-msgstr "Ρυθμίσεις λογαριασμού"
+#: src/pages/country/[countryId]/government.tsx:69
+msgid "Actions"
+msgstr "Actions"
 
-#: src/components/_economy/company/CompanyStats.tsx:61
+#: src/components/_military/battle/BattlesHeader.tsx:23
+#: src/pages/events/index.tsx:94
 msgid "Active"
 msgstr "Ενεργό"
 
-#: src/components/_economy/company/CompanyStats.tsx:75
-msgid "Active companies"
-msgstr "Ενεργές εταιρείες"
+#: src/pages/region/[regionId]/index.tsx:206
+msgid "Active battle"
+msgstr "Active battle"
 
-#: src/components/_political/party/PartyMembers.tsx:91
-msgid "Active members"
-msgstr "Ενεργά μέλη"
+#: src/pages/country/[countryId]/index.tsx:171
+msgid "Active battles"
+msgstr "Active battles"
 
-#: src/components/_military/battle/BattleActions.tsx:63
+#: src/pages/country/[countryId]/citizens.tsx:35
+msgid "Active Citizens"
+msgstr "Active Citizens"
+
+#: src/pages/region/[regionId]/index.tsx:212
+msgid "Active construction"
+msgstr "Active construction"
+
+#: src/pages/war/[warId]/index.tsx:45
+msgid "Active War"
+msgstr "Active War"
+
+#: src/pages/country/[countryId]/index.tsx:281
+msgid "Active wars"
+msgstr "Active wars"
+
+#: src/components/_user/user/FamilyGroup.tsx:70
+msgid "Add User"
+msgstr "Add User"
+
+#: src/components/_political/law/Law.tsx:87
+#: src/components/_political/law/LawFormModal.tsx:303
+#: src/components/_political/partyMotion/PartyMotion.tsx:97
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:172
+msgid "Additional cost"
+msgstr "Additional cost"
+
+#: src/components/_layout/LayoutRightIcons.tsx:227
+#: src/components/_layout/MoreButtonNav.tsx:65
+msgid "Admin"
+msgstr "Admin"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1100
+msgid "Admin notification"
+msgstr "Admin notification"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:136
+msgid "Admiral"
+msgstr "Admiral"
+
+#: src/utils/translations.tsx:183
+msgid "Advanced Boots"
+msgstr "Advanced Boots"
+
+#: src/utils/translations.tsx:174
+msgid "Advanced Chest"
+msgstr "Advanced Chest"
+
+#: src/utils/translations.tsx:192
+msgid "Advanced Gloves"
+msgstr "Advanced Gloves"
+
+#: src/utils/translations.tsx:165
+msgid "Advanced Helmet"
+msgstr "Advanced Helmet"
+
+#: src/utils/translations.tsx:201
+msgid "Advanced Pants"
+msgstr "Advanced Pants"
+
+#: src/components/_political/party/party.frontConfig.tsx:297
+#: src/components/_political/party/party.frontConfig.tsx:314
+msgid "Agrarian"
+msgstr "Agrarian"
+
+#: src/components/_military/battle/ActiveBattlesList.tsx:132
+#: src/components/_military/battle/EndedBattlesList.tsx:78
+msgid "All"
+msgstr "All"
+
+#: src/components/_social/ArticleList.tsx:130
+msgid "All categories"
+msgstr "All categories"
+
+#: src/components/_political/party/party.frontConfig.tsx:211
+msgid "All citizenship requests are accepted automatically."
+msgstr "All citizenship requests are accepted automatically."
+
+#. placeholder {0}: formatPercent(ethicsBonuses.industrialism['-1'].depositBonus)
+#. placeholder {0}: formatPercent(ethicsBonuses.industrialism['-2'].depositBonus)
+#: src/components/_political/party/party.frontConfig.tsx:280
+#: src/components/_political/party/party.frontConfig.tsx:301
+msgid "All coca, grain, livestock and fish deposits in your borders give <0>+{0}</0> more production bonus."
+msgstr "All coca, grain, livestock and fish deposits in your borders give <0>+{0}</0> more production bonus."
+
+#. placeholder {0}: formatPercent(ethicsBonuses.industrialism[1].specializationBonus)
+#. placeholder {0}: formatPercent(ethicsBonuses.industrialism[2].specializationBonus)
+#: src/components/_political/party/party.frontConfig.tsx:323
+#: src/components/_political/party/party.frontConfig.tsx:337
+msgid "All companies in your borders get <0>+{0}</0> bonus towards ammo or construction specialization good."
+msgstr "All companies in your borders get <0>+{0}</0> bonus towards ammo or construction specialization good."
+
+#: src/components/_political/event/EventList.tsx:134
+msgid "All event types"
+msgstr "All event types"
+
+#: src/components/_social/ArticleList.tsx:120
+msgid "All languages"
+msgstr "All languages"
+
+#. placeholder {0}: ethicsBonuses.imperialism[2].lawCostMultiplier
+#: src/components/_political/party/party.frontConfig.tsx:263
+msgid "All law enactment costs are multiplied by {0}."
+msgstr "All law enactment costs are multiplied by {0}."
+
+#: src/pages/party/[partyId]/index.tsx:112
+msgid "All Parties"
+msgstr "All Parties"
+
+#: src/components/_other/shop/SkinPackModal.tsx:285
+msgid "All skins owned"
+msgstr "All skins owned"
+
+#: src/components/_economy/transaction/TransactionList.tsx:70
+msgid "All types"
+msgstr "All types"
+
+#: src/components/_political/event/EventList.tsx:75
+msgid "Alliance broken"
+msgstr "Alliance broken"
+
+#: src/components/_political/event/EventList.tsx:74
+msgid "Alliance formed"
+msgstr "Alliance formed"
+
+#: src/pages/country/[countryId]/index.tsx:196
+msgid "Alliances"
+msgstr "Alliances"
+
+#: src/components/_military/battle/ActiveBattlesList.tsx:99
+#: src/components/_military/battle/ActiveBattlesList.tsx:153
+msgid "Allies"
+msgstr "Allies"
+
+#: src/components/_economy/workOffer/WageInfoAlert.tsx:48
+msgid "Allowed wage range:"
+msgstr "Allowed wage range:"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:73
+msgid "Almost feels like cheating"
+msgstr "Almost feels like cheating"
+
+#: src/components/_layout/LoadingScreenContent.tsx:36
+msgid "Almost ready..."
+msgstr "Almost ready..."
+
+#: src/components/_user/UserEquipments.tsx:116
+#: src/utils/translations.tsx:35
+msgid "Ammo"
+msgstr "Ammo"
+
+#: src/components/_user/user/SkillValue.tsx:88
+msgid "Ammo:"
+msgstr "Ammo:"
+
+#: src/components/_political/law/LawFormModal.tsx:251
+#: src/components/_political/law/LawFormModal.tsx:252
+msgid "Amount"
+msgstr "Amount"
+
+#: src/components/_economy/company/CompanyTags.tsx:110
+msgid "Amount of <0>Production Points</0> that can be stored inside the company before production stops."
+msgstr "Amount of <0>Production Points</0> that can be stored inside the company before production stops."
+
+#: src/components/_user/user/skills.frontConfig.tsx:175
+msgid "Amount of <0>Workers</0> you can manage. And daily hire limit."
+msgstr "Amount of <0>Workers</0> you can manage. And daily hire limit."
+
+#: src/components/_user/user/skills.frontConfig.tsx:107
+msgid "Amount of companies you can own"
+msgstr "Amount of companies you can own"
+
+#: src/components/_user/modals/PhoneVerificationModal.tsx:108
+msgid "An administrator has requested that you verify your mobile phone number."
+msgstr "An administrator has requested that you verify your mobile phone number."
+
+#: src/components/_political/event/event.frontConfig.tsx:339
+msgid "An alliance has been broken"
+msgstr "An alliance has been broken"
+
+#: src/components/_political/event/event.frontConfig.tsx:324
+msgid "An alliance has been formed"
+msgstr "An alliance has been formed"
+
+#: src/components/_user/auth/LoginFormModal.tsx:94
+msgid "An email with the verification code has been sent to {email}"
+msgstr "An email with the verification code has been sent to {email}"
+
+#: src/components/_user/premium/PremiumFeatureList.tsx:92
+msgid "Animated <0>GIF</0> as avatar"
+msgstr "Animated <0>GIF</0> as avatar"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:40
+msgid "API token created"
+msgstr "API token created"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:65
+msgid "API token regenerated"
+msgstr "API token regenerated"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:56
+msgid "API token revoked"
+msgstr "API token revoked"
+
+#: src/pages/user/[userId]/settings.tsx:77
+msgid "API Tokens"
+msgstr "API Tokens"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:101
+msgid "API tokens allow external applications to access the API on your behalf. Use the token in the <0>X-API-Key</0> header. Each token has a rate limit of 200 requests per minute."
+msgstr "API tokens allow external applications to access the API on your behalf. Use the token in the <0>X-API-Key</0> header. Each token has a rate limit of 200 requests per minute."
+
+#: src/components/_layout/LayoutMapOptions.tsx:316
+msgid "App pattern"
+msgstr "App pattern"
+
+#: src/components/_economy/transaction/TransactionList.tsx:76
+msgid "Application fee"
+msgstr "Application fee"
+
+#: src/components/_political/citizenshipApplication/CitizenshipApplicationForm.tsx:60
+#: src/pages/country/[countryId]/citizenship.tsx:44
+msgid "Apply"
+msgstr "Apply"
+
+#: src/components/_user/worker/WorkerEditFormModal.tsx:102
+msgid "Are you sure you want to fire this worker?"
+msgstr "Are you sure you want to fire this worker?"
+
+#: src/pages/country/[countryId]/government.tsx:93
+msgid "Are you sure you want to leave the congress?"
+msgstr "Are you sure you want to leave the congress?"
+
+#: src/pages/country/[countryId]/government.tsx:78
+msgid "Are you sure you want to leave the government?"
+msgstr "Are you sure you want to leave the government?"
+
+#: src/pages/market/index.tsx:170
+msgid "Are you sure you want to remove all buy orders?"
+msgstr "Are you sure you want to remove all buy orders?"
+
+#: src/pages/market/index.tsx:230
+msgid "Are you sure you want to remove all sell orders?"
+msgstr "Are you sure you want to remove all sell orders?"
+
+#: src/components/_user/mission/MissionItem.tsx:114
+msgid "Are you sure you want to reroll this mission? Your current progress will be lost."
+msgstr "Are you sure you want to reroll this mission? Your current progress will be lost."
+
+#. placeholder {0}: token.name
+#: src/components/_user/apiToken/ApiTokenList.tsx:218
+msgid "Are you sure you want to revoke \"{0}\"? This action cannot be undone."
+msgstr "Are you sure you want to revoke \"{0}\"? This action cannot be undone."
+
+#: src/components/_other/tour/TutorialStep.tsx:175
+msgid "Are you sure you want to skip this tutorial?"
+msgstr "Are you sure you want to skip this tutorial?"
+
+#: src/components/_user/user/skills.frontConfig.tsx:69
+#: src/components/_user/user/skills.frontConfig.tsx:70
+msgid "Armor"
+msgstr "Armor"
+
+#: src/components/_political/law/LawFormModal.tsx:218
+msgid "Article ID"
+msgstr "Article ID"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:901
+msgid "Article liked"
+msgstr "Article liked"
+
+#: src/components/_economy/transaction/TransactionList.tsx:80
+msgid "Article Tip"
+msgstr "Article Tip"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:931
+msgid "Article tipped"
+msgstr "Article tipped"
+
+#: src/components/_user/user/UserHeader.tsx:204
+#: src/pages/user/[userId]/index.tsx:200
+msgid "Articles"
+msgstr "Articles"
+
+#: src/pages/user/[userId]/articles.tsx:25
+msgid "Articles by <0/>"
+msgstr "Articles by <0/>"
+
+#: src/components/_military/damageRanking/DamageRankingList.tsx:253
+msgid "At end of battle/rounds, <0>Top 30%</0> of the ranking, get <1>Loot chance</1> to get cases depending on total <2>Damages</2> of the side. "
+msgstr "At end of battle/rounds, <0>Top 30%</0> of the ranking, get <1>Loot chance</1> to get cases depending on total <2>Damages</2> of the side. "
+
+#: src/components/_military/hit/BattleLootChanceCard.tsx:41
+msgid "At every hit, increases your chance to loot a case when the battle ends. You can stack cases."
+msgstr "At every hit, increases your chance to loot a case when the battle ends. You can stack cases."
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:8
+msgid "At least you tried"
+msgstr "At least you tried"
+
+#: src/components/_military/battle/BattleSystem.tsx:466
+msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
+msgstr "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
+
+#: src/components/_military/hit/HitButton.tsx:286
+#: src/components/_user/user/skills.frontConfig.tsx:42
+#: src/components/_user/user/skills.frontConfig.tsx:43
 msgid "Attack"
 msgstr "Επίθεση"
 
-#: src/components/_military/battle/BattleActions.tsx:71
-msgid "Attack again"
-msgstr "Επίθεση ξανά"
-
-#: src/components/_military/battle/BattleTimeline.tsx:112
+#: src/components/_military/war/WarComparison.tsx:41
 msgid "Attacker"
 msgstr "Επιτιθέμενος"
 
-#: src/components/_military/battle/BattleTimeline.tsx:118
-msgid "Defender"
-msgstr "Αμυνόμενος"
+#: src/components/_military/damageRanking/DamageRankingSides.tsx:165
+msgid "Attackers"
+msgstr "Attackers"
 
-#: src/components/_military/battle/BattleTimeline.tsx:124
+#: src/pages/country/[countryId]/citizenship.tsx:47
+msgid "Auto approval"
+msgstr "Auto approval"
+
+#: src/components/_economy/company/CompanyTags.tsx:89
+msgid "Auto-generates <0>Production Points</0> over time, without the need to work."
+msgstr "Auto-generates <0>Production Points</0> over time, without the need to work."
+
+#: src/components/_economy/company/CompanyTags.tsx:87
+msgid "Automated engine"
+msgstr "Automated engine"
+
+#: src/components/_economy/work/WorkChart.tsx:234
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:69
+msgid "Automated Engine"
+msgstr "Automated Engine"
+
+#: src/components/_user/user/UserDropdown.tsx:150
+msgid "Avatar removed"
+msgstr "Avatar removed"
+
+#: src/components/_user/referral/ReferralList.tsx:110
+msgid "Badge won"
+msgstr "Badge won"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:108
+msgid "Badge Won"
+msgstr "Badge Won"
+
+#: src/pages/user/[userId]/index.tsx:127
+msgid "Badges"
+msgstr "Badges"
+
+#: src/components/_political/party/party.frontConfig.tsx:352
+msgid "Balanced"
+msgstr "Balanced"
+
+#: src/components/_political/party/party.frontConfig.tsx:353
+msgid "Balanced - No modifiers"
+msgstr "Balanced - No modifiers"
+
+#: src/components/_political/event/EventList.tsx:73
+msgid "Bankruptcy"
+msgstr "Bankruptcy"
+
+#: src/components/_user/user/UserHeader.tsx:399
+msgid "Banned"
+msgstr "Banned"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1646
+msgid "Banner Accepted!"
+msgstr "Banner Accepted!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1599
+msgid "Banner gift received"
+msgstr "Banner gift received"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1568
+msgid "Banner gift sent"
+msgstr "Banner gift sent"
+
+#: src/components/_other/shop/ShopHeader.tsx:36
+msgid "Banners"
+msgstr "Banners"
+
+#: src/components/_user/user/UserHeader.tsx:182
+#: src/components/_user/user/UserHeader.tsx:223
+msgid "Bans"
+msgstr "Bans"
+
+#: src/utils/translations.tsx:181
+msgid "Basic Boots"
+msgstr "Basic Boots"
+
+#: src/utils/translations.tsx:172
+msgid "Basic Chest"
+msgstr "Basic Chest"
+
+#: src/utils/translations.tsx:190
+msgid "Basic Gloves"
+msgstr "Basic Gloves"
+
+#: src/utils/translations.tsx:163
+msgid "Basic Helmet"
+msgstr "Basic Helmet"
+
+#: src/utils/translations.tsx:199
+msgid "Basic Pants"
+msgstr "Basic Pants"
+
+#: src/components/_military/damageRanking/DamageRankingSides.tsx:84
+#: src/components/_military/war/WarHeader.tsx:56
 msgid "Battle"
 msgstr "Μάχη"
 
-#: src/components/_military/battle/BattleList.tsx:61
+#: src/components/_political/event/EventList.tsx:65
+#: src/components/_user/notification/notification.frontConfig.tsx:816
+msgid "Battle ended"
+msgstr "Battle ended"
+
+#: src/components/_political/event/EventList.tsx:64
+msgid "Battle opened"
+msgstr "Battle opened"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1359
+msgid "Battle Ranking Reward"
+msgstr "Battle Ranking Reward"
+
+#: src/components/_layout/LayoutMenu.tsx:152
+#: src/components/_military/battle/BattlesHeader.tsx:19
+#: src/components/_military/war/WarHeader.tsx:83
+#: src/pages/region/[regionId]/index.tsx:132
+#: src/pages/war/[warId]/index.tsx:75
 msgid "Battles"
 msgstr "Μάχες"
 
-#: src/components/_military/battle/BattleDetails.tsx:82
-msgid "Battle details"
-msgstr "Λεπτομέρειες μάχης"
+#: src/components/_layout/LayoutMapOptions.tsx:253
+msgid "Battles on layout"
+msgstr "Battles on layout"
 
-#: src/components/_military/battle/BattleRewards.tsx:43
-msgid "Battle rewards"
-msgstr "Ανταμοιβές μάχης"
+#: src/components/_layout/LayoutMapOptions.tsx:246
+msgid "Battles on map"
+msgstr "Battles on map"
 
-#: src/components/_military/battle/BattleActions.tsx:90
-msgid "Battle finished"
-msgstr "Η μάχη ολοκληρώθηκε"
+#: src/components/_military/war/WarItem.tsx:46
+#: src/components/_military/war/WarItem.tsx:80
+msgid "Battles won"
+msgstr "Battles won"
 
-#: src/components/_military/battle/BattleActions.tsx:95
-msgid "Battle ongoing"
-msgstr "Η μάχη είναι σε εξέλιξη"
+#: src/components/_military/war/WarComparison.tsx:66
+msgid "Battles Won"
+msgstr "Battles Won"
 
-#: src/components/_military/battle/BattleTimeline.tsx:131
-msgid "Battle round"
-msgstr "Γύρος μάχης"
+#: src/components/_political/election/CandidateFormModal.tsx:55
+msgid "Become a Candidate"
+msgstr "Become a Candidate"
 
-#: src/components/_military/battle/BattleTimeline.tsx:139
-msgid "Battle score"
-msgstr "Σκορ μάχης"
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:37
+msgid "Better than nothing, right?"
+msgstr "Better than nothing, right?"
 
-#: src/components/_military/battle/BattleTimeline.tsx:147
-msgid "Battle started"
-msgstr "Η μάχη ξεκίνησε"
+#: src/components/_user/user/UserDropdown.tsx:277
+msgid "Block (hide content)"
+msgstr "Block (hide content)"
 
-#: src/components/_economy/company/CompanyCreate.tsx:73
-msgid "Build company"
-msgstr "Ίδρυση εταιρείας"
+#: src/components/_military/battle/BattleDamageBonuses.tsx:54
+#: src/components/_political/law/law.frontConfig.tsx:189
+msgid "Bonus damages"
+msgstr "Bonus damages"
 
-#: src/components/_economy/company/CompanyCreate.tsx:82
-msgid "Build"
-msgstr "Κατασκευή"
+#: src/components/_other/tour/tuto.frontConfig.tsx:114
+msgid "Boost your production!"
+msgstr "Boost your production!"
 
-#: src/components/_economy/company/CompanyCreate.tsx:94
-msgid "Building cost"
-msgstr "Κόστος κατασκευής"
+#: src/components/_user/UserEquipments.tsx:180
+#: src/utils/translations.tsx:180
+msgid "Boots"
+msgstr "Boots"
 
-#: src/components/_economy/company/CompanyStats.tsx:110
-msgid "Business"
-msgstr "Επιχείρηση"
+#: src/utils/translations.tsx:31
+msgid "Bread"
+msgstr "Bread"
 
-#: src/components/_economy/company/CompanyStats.tsx:118
-msgid "Business overview"
-msgstr "Επισκόπηση επιχείρησης"
+#: src/components/_political/law/law.frontConfig.tsx:246
+msgid "Break alliance"
+msgstr "Break alliance"
 
-#: src/components/_economy/company/CompanyStats.tsx:127
-msgid "Business profit"
-msgstr "Κέρδος επιχείρησης"
+#: src/components/_political/law/law.frontConfig.tsx:247
+msgid "Break an alliance with another country"
+msgstr "Break an alliance with another country"
 
-#: src/components/_economy/company/CompanyStats.tsx:136
-msgid "Business tax"
-msgstr "Φόρος επιχείρησης"
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:114
+msgid "Break room"
+msgstr "Break room"
 
-#: src/components/_economy/company/CompanyStats.tsx:144
-msgid "Business value"
-msgstr "Αξία επιχείρησης"
+#: src/components/_political/law/law.frontConfig.tsx:252
+msgid "Break the alliance with <0/>"
+msgstr "Break the alliance with <0/>"
 
-#: src/components/_user/settings/ProfileSettings.tsx:51
-msgid "Change avatar"
-msgstr "Αλλαγή avatar"
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:111
+msgid "Brigadier"
+msgstr "Brigadier"
 
-#: src/components/_user/settings/ProfileSettings.tsx:63
-msgid "Change password"
-msgstr "Αλλαγή κωδικού πρόσβασης"
+#: src/components/_other/shop/SkinCollectionModal.tsx:103
+msgid "Browse Packs"
+msgstr "Browse Packs"
 
-#: src/components/_user/settings/ProfileSettings.tsx:75
-msgid "Change username"
-msgstr "Αλλαγή ονόματος χρήστη"
+#: src/components/_user/notification/notification.frontConfig.tsx:858
+msgid "Buff ended"
+msgstr "Buff ended"
 
-#: src/components/_user/settings/ProfileSettings.tsx:87
-msgid "Character"
-msgstr "Χαρακτήρας"
+#: src/components/_user/notification/notification.frontConfig.tsx:839
+msgid "Buff started"
+msgstr "Buff started"
 
-#: src/components/_user/settings/ProfileSettings.tsx:96
-msgid "Character customization"
-msgstr "Προσαρμογή χαρακτήρα"
+#: src/components/_user/user/SkillValue.tsx:124
+msgid "Buffs:"
+msgstr "Buffs:"
 
-#: src/components/_user/settings/ProfileSettings.tsx:104
-msgid "Character appearance"
-msgstr "Εμφάνιση χαρακτήρα"
+#: src/components/_economy/company/CompanyList.tsx:152
+msgid "Build a company"
+msgstr "Build a company"
 
-#: src/components/_user/settings/ProfileSettings.tsx:113
-msgid "Character items"
-msgstr "Αντικείμενα χαρακτήρα"
+#: src/components/_military/mu/MuList.tsx:80
+msgid "Build a military unit"
+msgstr "Build a military unit"
 
-#: src/components/_economy/company/CompanyList.tsx:72
+#: src/components/_military/mu/MuFormModal.tsx:136
+msgid "Build the military unit"
+msgstr "Build the military unit"
+
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:31
+msgid "Bunker"
+msgstr "Bunker"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:166
+msgid "Buy for <0>{count}</0> money on market"
+msgstr "Buy for <0>{count}</0> money on market"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:164
+msgid "Buy Items"
+msgstr "Buy Items"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:744
+msgid "Buy order match!"
+msgstr "Buy order match!"
+
+#: src/pages/market/index.tsx:135
+msgid "Buy orders"
+msgstr "Buy orders"
+
+#: src/components/_user/auth/ConnectFromModal.tsx:349
+msgid "By continuing, you agree to our <0>Terms of Service</0>."
+msgstr "By continuing, you agree to our <0>Terms of Service</0>."
+
+#. placeholder {0}: worker.fidelity ?? 0
+#: src/components/_user/worker/WageReductionAlert.tsx:56
+msgid "By rejecting the wage reduction, you will leave the company and lose your fidelity bonus of +{0}%."
+msgstr "By rejecting the wage reduction, you will leave the company and lose your fidelity bonus of +{0}%."
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:26
+msgid "Cadet"
+msgstr "Cadet"
+
+#: src/components/_political/election/CandidateFormModal.tsx:66
+msgid "Campaign Article Link (optional)"
+msgstr "Campaign Article Link (optional)"
+
+#: src/components/_political/election/CandidateFormModal.tsx:83
+msgid "Cancel"
+msgstr "Cancel"
+
+#: src/components/_user/premium/PremiumFeatureList.tsx:150
+msgid "Cancel at any time"
+msgstr "Cancel at any time"
+
+#: src/components/_political/election/CandidateFormModal.tsx:86
+msgid "Candidate"
+msgstr "Candidate"
+
+#: src/components/_political/party/party.frontConfig.tsx:262
+msgid "Cannot have a vice president or ministers."
+msgstr "Cannot have a vice president or ministers."
+
+#: src/components/_political/party/party.frontConfig.tsx:134
+msgid "Cannot have allies."
+msgstr "Cannot have allies."
+
+#: src/components/_political/party/party.frontConfig.tsx:181
+msgid "Cannot have sworn enemies."
+msgstr "Cannot have sworn enemies."
+
+#: src/components/_political/party/party.frontConfig.tsx:291
+msgid "Cannot pick a specialization good / no benefit from specialization."
+msgstr "Cannot pick a specialization good / no benefit from specialization."
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:91
+msgid "Captain"
+msgstr "Captain"
+
+#: src/components/_user/auth/ConnectFromModal.tsx:252
+msgid "CAPTCHA challenge expired. Please try again."
+msgstr "CAPTCHA challenge expired. Please try again."
+
+#: src/components/_user/auth/ConnectFromModal.tsx:248
+msgid "CAPTCHA challenge failed. Resetting..."
+msgstr "CAPTCHA challenge failed. Resetting..."
+
+#: src/components/_user/auth/ConnectFromModal.tsx:256
+msgid "CAPTCHA timed out. Resetting..."
+msgstr "CAPTCHA timed out. Resetting..."
+
+#: src/components/_user/auth/ConnectFromModal.tsx:76
+msgid "CAPTCHA verification timed out. Resetting..."
+msgstr "CAPTCHA verification timed out. Resetting..."
+
+#: src/utils/translations.tsx:94
+msgid "Case"
+msgstr "Case"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:94
+msgid "Cases contain random items. Click to open it!"
+msgstr "Cases contain random items. Click to open it!"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:89
+msgid "Catapult"
+msgstr "Catapult"
+
+#: src/components/_user/user/skills.frontConfig.tsx:136
+msgid "Chance to dodge all incoming damage when fighting in battles.<0/>Dodging also prevents equipment durability from being consumed."
+msgstr "Chance to dodge all incoming damage when fighting in battles.<0/>Dodging also prevents equipment durability from being consumed."
+
+#: src/components/_user/user/skills.frontConfig.tsx:122
+msgid "Chance to hit the target.<0/>Misses cannot crit, and deal half damage."
+msgstr "Chance to hit the target.<0/>Misses cannot crit, and deal half damage."
+
+#: src/components/_political/law/law.frontConfig.tsx:57
+msgid "Change a country tax"
+msgstr "Change a country tax"
+
+#: src/components/_economy/company/CompanyChangeItemFormModal.tsx:67
+#: src/components/_economy/company/CompanyChangeItemFormModal.tsx:82
+msgid "Change produced item"
+msgstr "Change produced item"
+
+#: src/components/_economy/company/CompanyDropdown.tsx:159
+msgid "Change production"
+msgstr "Change production"
+
+#: src/components/_political/law/law.frontConfig.tsx:56
+msgid "Change tax"
+msgstr "Change tax"
+
+#: src/components/_political/law/law.frontConfig.tsx:356
+msgid "Change the country color scheme"
+msgstr "Change the country color scheme"
+
+#. placeholder {0}: law.data.scheme
+#. placeholder {1}: law.data.mapAccent
+#: src/components/_political/law/law.frontConfig.tsx:362
+msgid "Change the country color scheme to <0>{0}</0> with a <1>{1}</1> map accent"
+msgstr "Change the country color scheme to <0>{0}</0> with a <1>{1}</1> map accent"
+
+#. placeholder {0}: law.data.taxType
+#: src/components/_political/law/law.frontConfig.tsx:63
+msgid "Change the tax of {0} to"
+msgstr "Change the tax of {0} to"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:83
+msgid "Check your loot!"
+msgstr "Check your loot!"
+
+#: src/components/_user/UserEquipments.tsx:146
+#: src/utils/translations.tsx:171
+msgid "Chest"
+msgstr "Chest"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:71
+msgid "Chief"
+msgstr "Chief"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:159
+msgid "Chief Commander"
+msgstr "Chief Commander"
+
+#: src/components/_user/auth/WelcomeModal.tsx:124
+msgid "Choose your country"
+msgstr "Choose your country"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:146
+msgid "Choose your side and click to deal <0>Damages</0>! Keep hitting to help your team win."
+msgstr "Choose your side and click to deal <0>Damages</0>! Keep hitting to help your team win."
+
+#: src/components/_user/user/UserHeader.tsx:271
+msgid "Citizen since <0><1/></0>"
+msgstr "Citizen since <0><1/></0>"
+
+#: src/components/_political/country/CountryHeader.tsx:120
+msgid "Citizens"
+msgstr "Citizens"
+
+#: src/pages/country/[countryId]/index.tsx:186
+msgid "Citizens get a bonus when fighting for allies, or against the sworn enemy"
+msgstr "Citizens get a bonus when fighting for allies, or against the sworn enemy"
+
+#. placeholder {0}: formatPercent(ethicsBonuses.militarism[1].attackBattleBonus)
+#. placeholder {0}: formatPercent(ethicsBonuses.militarism[2].attackBattleBonus)
+#: src/components/_political/party/party.frontConfig.tsx:86
+#: src/components/_political/party/party.frontConfig.tsx:100
+msgid "Citizens get an additional <0>{0}</0> attacking battle bonus."
+msgstr "Citizens get an additional <0>{0}</0> attacking battle bonus."
+
+#. placeholder {0}: formatPercent(ethicsBonuses.isolationism['-1'].enemyBattleBonus)
+#. placeholder {0}: formatPercent(ethicsBonuses.isolationism['-2'].enemyBattleBonus)
+#: src/components/_political/party/party.frontConfig.tsx:127
+#: src/components/_political/party/party.frontConfig.tsx:142
+msgid "Citizens get an additional <0>{0}</0> battle bonus against sworn enemies."
+msgstr "Citizens get an additional <0>{0}</0> battle bonus against sworn enemies."
+
+#. placeholder {0}: formatPercent(ethicsBonuses.isolationism[1].allyBattleBonus)
+#. placeholder {0}: formatPercent(ethicsBonuses.isolationism[2].allyBattleBonus)
+#: src/components/_political/party/party.frontConfig.tsx:160
+#: src/components/_political/party/party.frontConfig.tsx:174
+msgid "Citizens get an additional <0>{0}</0> battle bonus fighting for allies."
+msgstr "Citizens get an additional <0>{0}</0> battle bonus fighting for allies."
+
+#. placeholder {0}: formatPercent(ethicsBonuses.militarism['-1'].defenseBattleBonus)
+#. placeholder {0}: formatPercent(ethicsBonuses.militarism['-2'].defenseBattleBonus)
+#: src/components/_political/party/party.frontConfig.tsx:51
+#: src/components/_political/party/party.frontConfig.tsx:68
+msgid "Citizens get an additional <0>{0}</0> defensive battle bonus."
+msgstr "Citizens get an additional <0>{0}</0> defensive battle bonus."
+
+#: src/components/_political/country/CountryHeader.tsx:107
+msgid "Citizenship"
+msgstr "Citizenship"
+
+#: src/pages/country/[countryId]/citizenship.tsx:72
+msgid "Citizenship Applications"
+msgstr "Citizenship Applications"
+
+#: src/components/_military/battle/BattleSystem.tsx:250
+msgid "Civil war"
+msgstr "Civil war"
+
+#: src/components/_user/mission/MissionItem.tsx:234
+#: src/components/_user/mission/MissionsFinishedProgress.tsx:128
+msgid "Claim"
+msgstr "Claim"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:183
+msgid "Claim your rewards!"
+msgstr "Claim your rewards!"
+
+#: src/components/_user/mission/MissionItem.tsx:234
+#: src/components/_user/mission/MissionsFinishedProgress.tsx:105
+msgid "Claimed"
+msgstr "Claimed"
+
+#: src/components/_political/country/CountrySelectV2.tsx:225
+msgid "Clear selection"
+msgstr "Clear selection"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:116
+msgid "Click multiple times to increase this skill. Higher skills = more power!"
+msgstr "Click multiple times to increase this skill. Higher skills = more power!"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:139
+msgid "Click on a battle to see what's happening and join in."
+msgstr "Click on a battle to see what's happening and join in."
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:213
+msgid "Click on your country's conversation to chat with fellow citizens."
+msgstr "Click on your country's conversation to chat with fellow citizens."
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:67
+msgid "Click to apply and start earning money right away."
+msgstr "Click to apply and start earning money right away."
+
+#: src/components/_military/battle/BattleTimeline.tsx:57
+msgid "Click to change round."
+msgstr "Click to change round."
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:100
+msgid "Click to reveal what's inside. You might get something valuable!"
+msgstr "Click to reveal what's inside. You might get something valuable!"
+
+#: src/components/_political/law/LawTypeSelect.tsx:57
+msgid "Click to select law"
+msgstr "Click to select law"
+
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:50
+msgid "Click to select motion"
+msgstr "Click to select motion"
+
+#: src/components/_layout/LayoutMapOptions.tsx:201
+msgid "Climate"
+msgstr "Climate"
+
+#: ../__ui/src/components/Modal/Modal.tsx:254
+msgid "Close"
+msgstr "Close"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:106
+msgid "Colonel"
+msgstr "Colonel"
+
+#: src/components/_user/user/UserDropdown.tsx:217
+msgid "Color scheme"
+msgstr "Color scheme"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:155
+msgid "Commander"
+msgstr "Commander"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1630
+#: src/components/_user/notification/notification.frontConfig.tsx:1821
+msgid "Commission earned"
+msgstr "Commission earned"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:116
+msgid "Commodore"
+msgstr "Commodore"
+
+#: src/components/_layout/LayoutMenu.tsx:182
+#: src/components/_user/user/MyAvatar.tsx:48
+#: src/components/_user/user/UserHeader.tsx:196
+#: src/pages/companies.tsx:96
 msgid "Companies"
 msgstr "Εταιρείες"
 
-#: src/components/_economy/company/CompanyList.tsx:80
-msgid "Company"
-msgstr "Εταιρεία"
-
-#: src/components/_economy/company/CompanyStats.tsx:151
-msgid "Company employees"
-msgstr "Εργαζόμενοι εταιρείας"
-
-#: src/components/_economy/company/CompanyStats.tsx:160
-msgid "Company income"
-msgstr "Έσοδα εταιρείας"
-
-#: src/components/_economy/company/CompanyStats.tsx:169
-msgid "Company management"
-msgstr "Διαχείριση εταιρείας"
-
-#: src/components/_economy/company/CompanyStats.tsx:178
-msgid "Company production"
-msgstr "Παραγωγή εταιρείας"
-
-#: src/components/_economy/company/CompanyStats.tsx:187
-msgid "Company statistics"
-msgstr "Στατιστικά εταιρείας"
-
-#: src/components/_user/dashboard/Dashboard.tsx:41
-msgid "Dashboard"
-msgstr "Πίνακας ελέγχου"
-
-#: src/components/_user/dashboard/Dashboard.tsx:56
-msgid "Daily bonus"
-msgstr "Ημερήσιο μπόνους"
-
-#: src/components/_user/dashboard/Dashboard.tsx:64
-msgid "Daily mission"
-msgstr "Ημερήσια αποστολή"
-
-#: src/components/_user/dashboard/Dashboard.tsx:73
-msgid "Daily reward"
-msgstr "Ημερήσια ανταμοιβή"
-
-#: src/components/_user/dashboard/Dashboard.tsx:81
-msgid "Daily tasks"
-msgstr "Ημερήσιες αποστολές"
-
-#: src/components/_user/dashboard/Dashboard.tsx:92
-msgid "Daily progress"
-msgstr "Ημερήσια πρόοδος"
-
-#: src/components/_economy/company/CompanyStats.tsx:195
-msgid "Company workers"
-msgstr "Εργαζόμενοι της εταιρείας"
-
-#: src/components/_economy/company/CompanyStats.tsx:203
-msgid "Company wages"
-msgstr "Μισθοί εταιρείας"
-
-#: src/components/_economy/company/CompanyStats.tsx:212
-msgid "Company profit"
-msgstr "Κέρδος εταιρείας"
-
-#: src/components/_economy/company/CompanyStats.tsx:220
-msgid "Company expenses"
-msgstr "Έξοδα εταιρείας"
-
-#: src/components/_economy/company/CompanyStats.tsx:228
-msgid "Company balance"
-msgstr "Υπόλοιπο εταιρείας"
-
-#: src/components/_economy/company/CompanyStats.tsx:236
-msgid "Company level"
-msgstr "Επίπεδο εταιρείας"
-
-#: src/components/_economy/company/CompanyStats.tsx:244
-msgid "Company upgrade"
-msgstr "Αναβάθμιση εταιρείας"
-
-#: src/components/_economy/company/CompanyStats.tsx:252
-msgid "Company market"
-msgstr "Αγορά εταιρείας"
-
-#: src/components/_military/battle/BattleStats.tsx:61
-msgid "Damage"
-msgstr "Ζημιά"
-
-#: src/components/_military/battle/BattleStats.tsx:69
-msgid "Damage dealt"
-msgstr "Ζημιά που προκλήθηκε"
-
-#: src/components/_military/battle/BattleStats.tsx:77
-msgid "Damage received"
-msgstr "Ζημιά που δέχτηκες"
-
-#: src/components/_military/battle/BattleStats.tsx:85
-msgid "Damage per hit"
-msgstr "Ζημιά ανά χτύπημα"
-
-#: src/components/_military/battle/BattleStats.tsx:93
-msgid "Damage bonus"
-msgstr "Μπόνους ζημιάς"
-
-#: src/components/_military/battle/BattleStats.tsx:101
-msgid "Damage reduction"
-msgstr "Μείωση ζημιάς"
-
-#: src/components/_military/battle/BattleStats.tsx:110
-msgid "Damage multiplier"
-msgstr "Πολλαπλασιαστής ζημιάς"
-
-#: src/components/_user/dashboard/Dashboard.tsx:110
-msgid "Economy"
-msgstr "Οικονομία"
-
-#: src/components/_user/dashboard/Dashboard.tsx:118
-msgid "Earnings"
-msgstr "Κέρδη"
-
-#: src/components/_user/dashboard/Dashboard.tsx:126
-msgid "Energy"
-msgstr "Ενέργεια"
-
-#: src/components/_user/dashboard/Dashboard.tsx:134
-msgid "Energy refill"
-msgstr "Αναπλήρωση ενέργειας"
-
-#: src/components/_user/dashboard/Dashboard.tsx:142
-msgid "Energy used"
-msgstr "Ενέργεια που χρησιμοποιήθηκε"
-
-#: src/components/_user/dashboard/Dashboard.tsx:150
-msgid "Energy limit"
-msgstr "Όριο ενέργειας"
-
-#: src/components/_military/equipment/EquipmentStats.tsx:48
-msgid "Equipment"
-msgstr "Εξοπλισμός"
-
-#: src/components/_military/equipment/EquipmentStats.tsx:57
-msgid "Equipment durability"
-msgstr "Αντοχή εξοπλισμού"
-
-#: src/components/_military/equipment/EquipmentStats.tsx:66
-msgid "Equipment level"
-msgstr "Επίπεδο εξοπλισμού"
-
-#: src/components/_military/equipment/EquipmentStats.tsx:74
-msgid "Equipment bonus"
-msgstr "Μπόνους εξοπλισμού"
-
-#: src/components/_military/equipment/EquipmentStats.tsx:83
-msgid "Equipment repair"
-msgstr "Επισκευή εξοπλισμού"
-
-#: src/components/_military/equipment/EquipmentStats.tsx:92
-msgid "Equipment upgrade"
-msgstr "Αναβάθμιση εξοπλισμού"
-
-#: src/components/_military/equipment/EquipmentActions.tsx:61
-msgid "Equip item"
-msgstr "Εξοπλισμός αντικειμένου"
-
-#: src/components/_military/equipment/EquipmentActions.tsx:70
-msgid "Unequip item"
-msgstr "Αφαίρεση εξοπλισμού"
-
-#: src/components/_military/equipment/EquipmentActions.tsx:79
-msgid "Repair item"
-msgstr "Επισκευή αντικειμένου"
-
-#: src/components/_military/equipment/EquipmentActions.tsx:88
-msgid "Upgrade item"
-msgstr "Αναβάθμιση αντικειμένου"
-
-#: src/components/_military/equipment/EquipmentActions.tsx:97
-msgid "Sell item"
-msgstr "Πώληση αντικειμένου"
-
-#: src/components/_military/equipment/EquipmentActions.tsx:106
-msgid "Buy item"
-msgstr "Αγορά αντικειμένου"
-
-#: src/components/_economy/market/Market.tsx:61
-msgid "Market"
-msgstr "Αγορά"
-
-#: src/components/_economy/market/Market.tsx:70
-msgid "Market price"
-msgstr "Τιμή αγοράς"
-
-#: src/components/_economy/market/Market.tsx:78
-msgid "Market history"
-msgstr "Ιστορικό αγοράς"
-
-#: src/components/_economy/market/Market.tsx:86
-msgid "Market demand"
-msgstr "Ζήτηση αγοράς"
-
-#: src/components/_economy/market/Market.tsx:94
-msgid "Market supply"
-msgstr "Προσφορά αγοράς"
-
-#: src/components/_economy/market/Market.tsx:102
-msgid "Market tax"
-msgstr "Φόρος αγοράς"
-
-#: src/components/_military/battle/BattleActions.tsx:122
-msgid "Fight"
-msgstr "Μάχη"
-
-#: src/components/_military/battle/BattleActions.tsx:130
-msgid "Fight again"
-msgstr "Πολέμησε ξανά"
-
-#: src/components/_military/battle/BattleActions.tsx:138
-msgid "Join battle"
-msgstr "Συμμετοχή στη μάχη"
-
-#: src/components/_military/battle/BattleActions.tsx:146
-msgid "Leave battle"
-msgstr "Αποχώρηση από τη μάχη"
-
-#: src/components/_military/battle/BattleActions.tsx:154
-msgid "Battle preparation"
-msgstr "Προετοιμασία μάχης"
-
-#: src/components/_military/battle/BattleActions.tsx:162
-msgid "Battle strategy"
-msgstr "Στρατηγική μάχης"
-
-#: src/components/_political/law/LawActions.tsx:52
-msgid "Propose law"
-msgstr "Πρόταση νόμου"
-
-#: src/components/_political/law/LawActions.tsx:61
-msgid "Vote for law"
-msgstr "Ψήφος υπέρ του νόμου"
-
-#: src/components/_political/law/LawActions.tsx:70
-msgid "Vote against law"
-msgstr "Ψήφος κατά του νόμου"
-
-#: src/components/_political/law/LawActions.tsx:79
-msgid "Law passed"
-msgstr "Ο νόμος εγκρίθηκε"
-
-#: src/components/_political/law/LawActions.tsx:88
-msgid "Law rejected"
-msgstr "Ο νόμος απορρίφθηκε"
-
-#: src/components/_political/law/LawActions.tsx:97
-msgid "Law voting"
-msgstr "Ψηφοφορία νόμου"
-
-#: src/components/_user/profile/Profile.tsx:61
-msgid "Profile"
-msgstr "Προφίλ"
-
-#: src/components/_user/profile/Profile.tsx:69
-msgid "Profile statistics"
-msgstr "Στατιστικά προφίλ"
-
-#: src/components/_user/profile/Profile.tsx:77
-msgid "Profile achievements"
-msgstr "Επιτεύγματα προφίλ"
-
-#: src/components/_user/profile/Profile.tsx:86
-msgid "Profile inventory"
-msgstr "Αποθήκη προφίλ"
-
-#: src/components/_user/profile/Profile.tsx:95
-msgid "Profile missions"
-msgstr "Αποστολές προφίλ"
-
-#: src/components/_user/profile/Profile.tsx:103
-msgid "Profile activity"
-msgstr "Δραστηριότητα προφίλ"
-
-#: src/components/_user/profile/ProfileActions.tsx:44
-msgid "Edit profile"
-msgstr "Επεξεργασία προφίλ"
-
-#: src/components/_user/profile/ProfileActions.tsx:52
-msgid "View profile"
-msgstr "Προβολή προφίλ"
-
-#: src/components/_user/profile/ProfileActions.tsx:60
-msgid "Follow user"
-msgstr "Ακολούθησε τον χρήστη"
-
-#: src/components/_user/profile/ProfileActions.tsx:68
-msgid "Unfollow user"
-msgstr "Σταμάτα να ακολουθείς τον χρήστη"
-
-#: src/components/_user/profile/ProfileActions.tsx:76
-msgid "Send message"
-msgstr "Αποστολή μηνύματος"
-
-#: src/components/_user/profile/ProfileActions.tsx:84
-msgid "Report user"
-msgstr "Αναφορά χρήστη"
-
-#: src/components/_user/messages/Messages.tsx:52
-msgid "Messages"
-msgstr "Μηνύματα"
-
-#: src/components/_user/messages/Messages.tsx:61
-msgid "Inbox"
-msgstr "Εισερχόμενα"
-
-#: src/components/_user/messages/Messages.tsx:69
-msgid "Sent messages"
-msgstr "Απεσταλμένα μηνύματα"
-
-#: src/components/_user/messages/Messages.tsx:77
-msgid "New message"
-msgstr "Νέο μήνυμα"
-
-#: src/components/_user/messages/Messages.tsx:86
-msgid "Delete message"
-msgstr "Διαγραφή μηνύματος"
-
-#: src/components/_user/messages/Messages.tsx:94
-msgid "Mark as read"
-msgstr "Σήμανση ως αναγνωσμένο"
-
-#: src/components/_economy/inventory/Inventory.tsx:48
-msgid "Inventory"
-msgstr "Αποθήκη"
-
-#: src/components/_economy/inventory/Inventory.tsx:57
-msgid "Inventory items"
-msgstr "Αντικείμενα αποθήκης"
-
-#: src/components/_economy/inventory/Inventory.tsx:65
-msgid "Inventory capacity"
-msgstr "Χωρητικότητα αποθήκης"
-
-#: src/components/_economy/inventory/Inventory.tsx:73
-msgid "Inventory value"
-msgstr "Αξία αποθήκης"
-
-#: src/components/_economy/inventory/Inventory.tsx:81
-msgid "Inventory management"
-msgstr "Διαχείριση αποθήκης"
-
-#: src/components/_economy/inventory/Inventory.tsx:89
-msgid "Inventory slots"
-msgstr "Θέσεις αποθήκης"
-
-#: src/components/_military/training/Training.tsx:42
-msgid "Training"
-msgstr "Εκπαίδευση"
-
-#: src/components/_military/training/Training.tsx:50
-msgid "Training points"
-msgstr "Πόντοι εκπαίδευσης"
-
-#: src/components/_military/training/Training.tsx:58
-msgid "Training level"
-msgstr "Επίπεδο εκπαίδευσης"
-
-#: src/components/_military/training/Training.tsx:66
-msgid "Training progress"
-msgstr "Πρόοδος εκπαίδευσης"
-
-#: src/components/_military/training/Training.tsx:74
-msgid "Training bonus"
-msgstr "Μπόνους εκπαίδευσης"
-
-#: src/components/_military/training/Training.tsx:82
-msgid "Training completed"
-msgstr "Η εκπαίδευση ολοκληρώθηκε"
-
-#: src/components/_military/army/Army.tsx:41
-msgid "Army"
-msgstr "Στρατός"
-
-#: src/components/_military/army/Army.tsx:49
-msgid "Army strength"
-msgstr "Δύναμη στρατού"
-
-#: src/components/_military/army/Army.tsx:57
-msgid "Army units"
-msgstr "Μονάδες στρατού"
-
-#: src/components/_military/army/Army.tsx:65
-msgid "Army equipment"
-msgstr "Εξοπλισμός στρατού"
-
-#: src/components/_military/army/Army.tsx:73
-msgid "Army commander"
-msgstr "Διοικητής στρατού"
-
-#: src/components/_military/army/Army.tsx:81
-msgid "Army deployment"
-msgstr "Ανάπτυξη στρατού"
-
-#: src/components/_military/army/ArmyActions.tsx:46
-msgid "Deploy army"
-msgstr "Ανάπτυξη στρατού"
-
-#: src/components/_military/army/ArmyActions.tsx:55
-msgid "Recall army"
-msgstr "Ανάκληση στρατού"
-
-#: src/components/_military/army/ArmyActions.tsx:64
-msgid "Reinforce army"
-msgstr "Ενίσχυση στρατού"
-
-#: src/components/_military/army/ArmyActions.tsx:73
-msgid "Army training"
-msgstr "Εκπαίδευση στρατού"
-
-#: src/components/_military/army/ArmyActions.tsx:82
-msgid "Army mission"
-msgstr "Αποστολή στρατού"
-
-#: src/components/_military/army/ArmyActions.tsx:91
-msgid "Army retreat"
-msgstr "Υποχώρηση στρατού"
-
-#: src/components/_economy/resources/Resources.tsx:41
-msgid "Resources"
-msgstr "Πόροι"
-
-#: src/components/_economy/resources/Resources.tsx:49
-msgid "Resource production"
-msgstr "Παραγωγή πόρων"
-
-#: src/components/_economy/resources/Resources.tsx:57
-msgid "Resource storage"
-msgstr "Αποθήκευση πόρων"
-
-#: src/components/_economy/resources/Resources.tsx:65
-msgid "Resource consumption"
-msgstr "Κατανάλωση πόρων"
-
-#: src/components/_economy/resources/Resources.tsx:73
-msgid "Resource market"
-msgstr "Αγορά πόρων"
-
-#: src/components/_economy/resources/Resources.tsx:81
-msgid "Resource trade"
-msgstr "Εμπόριο πόρων"
-
-#: src/components/_political/government/Government.tsx:42
-msgid "Government"
-msgstr "Κυβέρνηση"
-
-#: src/components/_political/government/Government.tsx:50
-msgid "Government members"
-msgstr "Μέλη κυβέρνησης"
-
-#: src/components/_political/government/Government.tsx:58
-msgid "Government policies"
-msgstr "Πολιτικές κυβέρνησης"
-
-#: src/components/_political/government/Government.tsx:66
-msgid "Government stability"
-msgstr "Σταθερότητα κυβέρνησης"
-
-#: src/components/_political/government/Government.tsx:74
-msgid "Government approval"
-msgstr "Αποδοχή κυβέρνησης"
-
-#: src/components/_political/government/Government.tsx:82
-msgid "Government reforms"
-msgstr "Μεταρρυθμίσεις κυβέρνησης"
-
-#: src/components/_political/elections/Elections.tsx:39
+#: src/components/_user/user/skills.frontConfig.tsx:108
+#: src/components/_user/user/skills.frontConfig.tsx:109
+msgid "Companies limit"
+msgstr "Companies limit"
+
+#: src/components/_economy/company/CompanyList.tsx:74
+msgid "Companies limit reached"
+msgstr "Companies limit reached"
+
+#: src/components/_economy/company/CompanyDropdown.tsx:89
+msgid "Company destroyed!"
+msgstr "Company destroyed!"
+
+#: src/components/_economy/company/CompanyTags.tsx:62
+msgid "Company disabled"
+msgstr "Company disabled"
+
+#: src/components/_economy/company/CompanyDropdown.tsx:116
+msgid "Company disabled!"
+msgstr "Company disabled!"
+
+#: src/components/_economy/company/CompanyDropdown.tsx:115
+msgid "Company enabled!"
+msgstr "Company enabled!"
+
+#: src/components/_economy/company/MoveCompanyForm.tsx:54
+msgid "Company moved"
+msgstr "Company moved"
+
+#: src/components/_economy/company/CompanyProduce.tsx:79
+msgid "Company production storage"
+msgstr "Company production storage"
+
+#: src/components/_economy/company/CompanyRenameFormModal.tsx:44
+msgid "Company renamed!"
+msgstr "Company renamed!"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:194
+msgid "Complete missions daily to earn XP and level up faster. Click to claim!"
+msgstr "Complete missions daily to earn XP and level up faster. Click to claim!"
+
+#: src/utils/translations.tsx:29
+msgid "Concrete"
+msgstr "Concrete"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:41
+msgid "Congrats"
+msgstr "Congrats"
+
+#. placeholder {0}: data.level
+#: src/components/_user/notification/notification.frontConfig.tsx:425
+msgid "Congratulations, you leveled up to level {0}!"
+msgstr "Congratulations, you leveled up to level {0}!"
+
+#. placeholder {0}: data.countryName
+#: src/components/_user/notification/notification.frontConfig.tsx:214
+msgid "Congratulations! You have been elected as the new congress member of {0}"
+msgstr "Congratulations! You have been elected as the new congress member of {0}"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:318
+msgid "Congratulations! You have been elected as the new leader of <0/>"
+msgstr "Congratulations! You have been elected as the new leader of <0/>"
+
+#. placeholder {0}: data.countryName
+#: src/components/_user/notification/notification.frontConfig.tsx:209
+msgid "Congratulations! You have been elected as the new president of {0}"
+msgstr "Congratulations! You have been elected as the new president of {0}"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:323
+msgid "Congratulations! You have been elected to the council of <0/>"
+msgstr "Congratulations! You have been elected to the council of <0/>"
+
+#. placeholder {0}: militaryRankingConfig[data.rank].percentDamages
+#: src/components/_user/notification/notification.frontConfig.tsx:1338
+msgid "Congratulations! You have been promoted to <0/> with an attack bonus of <1>{0}</1>"
+msgstr "Congratulations! You have been promoted to <0/> with an attack bonus of <1>{0}</1>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1534
+msgid "Congratulations! You won the giveaway and received cases!"
+msgstr "Congratulations! You won the giveaway and received cases!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:367
+#: src/components/_user/notification/notification.frontConfig.tsx:1211
+msgid "Congratulations! Your application to <0/> has been accepted"
+msgstr "Congratulations! Your application to <0/> has been accepted"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1413
+msgid "Congratulations! Your team <0/> won the tournament <1/>!"
+msgstr "Congratulations! Your team <0/> won the tournament <1/>!"
+
+#: src/components/_political/election/election.frontConfig.tsx:28
+msgid "Congress election"
+msgstr "Congress election"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:144
+msgid "Congress election candidacy is now open in <0/>"
+msgstr "Congress election candidacy is now open in <0/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:135
+msgid "Congress election candidate open"
+msgstr "Congress election candidate open"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:185
+msgid "Congress election ended"
+msgstr "Congress election ended"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:194
+msgid "Congress election has ended in <0/>. Check the results!"
+msgstr "Congress election has ended in <0/>. Check the results!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:160
+msgid "Congress election vote open"
+msgstr "Congress election vote open"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:169
+msgid "Congress election voting is now open in <0/>"
+msgstr "Congress election voting is now open in <0/>"
+
+#: src/pages/country/[countryId]/elections.tsx:65
+msgid "Congress elections"
+msgstr "Congress elections"
+
+#. placeholder {0}: ethicsBonuses.imperialism['-2'].minCongressSeats
+#: src/components/_political/party/party.frontConfig.tsx:204
+msgid "Congress has a minimum of <0>{0} seats</0>."
+msgstr "Congress has a minimum of <0>{0} seats</0>."
+
+#: src/pages/country/[countryId]/government.tsx:64
+msgid "Congress members"
+msgstr "Congress members"
+
+#: src/components/_user/auth/ConnectFromModal.tsx:314
+msgid "Connect with Discord"
+msgstr "Connect with Discord"
+
+#: src/components/_user/auth/ConnectFromModal.tsx:295
+msgid "Connect with email code"
+msgstr "Connect with email code"
+
+#: src/components/_user/auth/ConnectFromModal.tsx:333
+msgid "Connect with Google"
+msgstr "Connect with Google"
+
+#: src/pages/country/[countryId]/regions.tsx:43
+msgid "Conquered regions"
+msgstr "Conquered regions"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:69
+msgid "Consider giving it to your local moderator"
+msgstr "Consider giving it to your local moderator"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:645
+msgid "Construction started"
+msgstr "Construction started"
+
+#: src/components/_user/user/skills.frontConfig.tsx:76
+msgid "Consumed when fighting in battles"
+msgstr "Consumed when fighting in battles"
+
+#. placeholder {0}: staticGameConfig.items.cocain.flatStats?.buffDurationHours
+#. placeholder {1}: staticGameConfig.items.cocain.flatStats?.debuffDurationHours
+#: src/utils/translations.tsx:101
+msgid "Consuming it increases your <0>Attack</0> during {0}h.<1/> Then decrease the same amount during {1}h"
+msgstr "Consuming it increases your <0>Attack</0> during {0}h.<1/> Then decrease the same amount during {1}h"
+
+#: src/components/_layout/LayoutMapOptions.tsx:260
+msgid "Contextual borders"
+msgstr "Contextual borders"
+
+#: src/utils/translations.tsx:39
+msgid "Cooked Fish"
+msgstr "Cooked Fish"
+
+#: src/components/_political/law/Law.tsx:108
+#: src/components/_political/partyMotion/PartyMotion.tsx:106
+msgid "Cool down"
+msgstr "Cool down"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:90
+msgid "Copied to clipboard"
+msgstr "Copied to clipboard"
+
+#: src/pages/user/[userId]/referrals.tsx:112
+msgid "Copy"
+msgstr "Copy"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:125
+msgid "Copy this token now. You won't be able to see it again! Use it in the <0>X-API-Key</0> header."
+msgstr "Copy this token now. You won't be able to see it again! Use it in the <0>X-API-Key</0> header."
+
+#: src/pages/country/[countryId]/regions.tsx:28
+msgid "Core regions"
+msgstr "Core regions"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:46
+msgid "Corporal"
+msgstr "Corporal"
+
+#: src/components/_political/law/law.frontConfig.tsx:180
+msgid "Cost"
+msgstr "Cost"
+
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:134
+msgid "Council member to remove"
+msgstr "Council member to remove"
+
+#: src/components/_layout/LoadingScreenContent.tsx:19
+msgid "countries"
+msgstr "countries"
+
+#: src/components/_military/damageRanking/DamageRankingSides.tsx:95
+msgid "Countries"
+msgstr "Countries"
+
+#: src/components/_layout/LayoutRightIcons.tsx:295
+#: src/components/_layout/MoreButtonNav.tsx:131
+#: src/components/_military/tournament/TournamentRegisterButton.tsx:133
+#: src/components/_political/country/CountryHeader.tsx:50
+msgid "Country"
+msgstr "Country"
+
+#: src/pages/country/[countryId]/index.tsx:442
+msgid "Country development income bonus"
+msgstr "Country development income bonus"
+
+#: src/pages/country/[countryId]/index.tsx:393
+msgid "Country production bonus"
+msgstr "Country production bonus"
+
+#: src/pages/country/[countryId]/wars.tsx:29
+msgid "Country wars"
+msgstr "Country wars"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:184
+#: src/pages/user/[userId]/inventory.tsx:40
+msgid "Craft"
+msgstr "Craft"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:186
+msgid "Craft <0>{count}</0> items"
+msgstr "Craft <0>{count}</0> items"
+
+#: src/components/_economy/transaction/TransactionList.tsx:82
+msgid "Craft Item"
+msgstr "Craft Item"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:264
+msgid "Create"
+msgstr "Create"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:342
+msgid "Create a Company"
+msgstr "Create a Company"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:343
+msgid "Create a new company"
+msgstr "Create a new company"
+
+#: src/components/_political/party/PartyFormModal.tsx:80
+#: src/components/_political/party/PartyList.tsx:88
+msgid "Create a party"
+msgstr "Create a party"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:240
+msgid "Create API Token"
+msgstr "Create API Token"
+
+#: src/components/_political/party/PartyFormModal.tsx:130
+msgid "Create party"
+msgstr "Create party"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:113
+msgid "Create Token"
+msgstr "Create Token"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:187
+msgid "Created:"
+msgstr "Created:"
+
+#: src/components/_user/user/skills.frontConfig.tsx:49
+#: src/components/_user/user/skills.frontConfig.tsx:50
+msgid "Crit. chance"
+msgstr "Crit. chance"
+
+#: src/components/_user/user/skills.frontConfig.tsx:61
+#: src/components/_user/user/skills.frontConfig.tsx:62
+msgid "Crit. damages"
+msgstr "Crit. damages"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:258
+msgid "Critical Hit"
+msgstr "Critical Hit"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:86
+msgid "Crossbow"
+msgstr "Crossbow"
+
+#: src/pages/user/[userId]/index.tsx:155
+msgid "Current Military Unit"
+msgstr "Current Military Unit"
+
+#: src/components/_military/battle/BattleSystem.tsx:485
+msgid "Current tick:"
+msgstr "Current tick:"
+
+#: src/components/_military/battle/BattleSystem.tsx:475
+msgid "Current total:"
+msgstr "Current total:"
+
+#: src/components/_user/premium/PremiumFeatureList.tsx:82
+msgid "Custom username font"
+msgstr "Custom username font"
+
+#: src/components/_user/mission/MissionsList.tsx:189
+msgid "Daily"
+msgstr "Daily"
+
+#: src/components/_political/law/LawTypeSelect.tsx:170
+msgid "Daily maintenance"
+msgstr "Daily maintenance"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1659
+msgid "Daily Missions Reset"
+msgstr "Daily Missions Reset"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:438
+msgid "Daily XP available!"
+msgstr "Daily XP available!"
+
+#: src/components/_military/damageRanking/DamageRankingSides.tsx:112
+msgid "Damage ranking"
+msgstr "Damage ranking"
+
+#: src/components/_military/war/WarComparison.tsx:90
+msgid "Damages"
+msgstr "Damages"
+
+#: src/components/_military/hit/HitButton.tsx:240
+msgid "Damages you did for this side in this round"
+msgstr "Damages you did for this side in this round"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:17
+msgid "Damn looks good"
+msgstr "Damn looks good"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:67
+msgid "Damn you lucky"
+msgstr "Damn you lucky"
+
+#: src/pages/user/[userId]/settings.tsx:83
+msgid "Danger zone"
+msgstr "Danger zone"
+
+#: src/components/_political/law/LawFormModal.tsx:272
+msgid "Dark"
+msgstr "Dark"
+
+#: src/components/_layout/LayoutMapOptions.tsx:283
+msgid "Dark map"
+msgstr "Dark map"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:120
+msgid "Deal <0>{count}</0> for allies or your country"
+msgstr "Deal <0>{count}</0> for allies or your country"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:100
+msgid "Deal <0>{count}</0> in battles"
+msgstr "Deal <0>{count}</0> in battles"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:110
+msgid "Deal <0>{count}</0> on country/mu orders"
+msgstr "Deal <0>{count}</0> on country/mu orders"
+
+#: src/components/_user/user/MilitaryRanksInfoModal.tsx:88
+msgid "Deal damage in battles to increase your military rank and unlock attack bonuses."
+msgstr "Deal damage in battles to increase your military rank and unlock attack bonuses."
+
+#: src/components/_user/mission/mission.frontConfig.tsx:98
+msgid "Deal Damages"
+msgstr "Deal Damages"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:118
+msgid "Deal Damages for Allies or Country"
+msgstr "Deal Damages for Allies or Country"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:108
+msgid "Deal Damages on Orders"
+msgstr "Deal Damages on Orders"
+
+#: src/utils/translations.tsx:55
+msgid "Deals a fucking big lot of damages"
+msgstr "Deals a fucking big lot of damages"
+
+#: src/utils/translations.tsx:54
+msgid "Deals a lot of damages"
+msgstr "Deals a lot of damages"
+
+#: src/utils/translations.tsx:51
+msgid "Deals damages"
+msgstr "Deals damages"
+
+#: src/utils/translations.tsx:53
+msgid "Deals more damages"
+msgstr "Deals more damages"
+
+#: src/utils/translations.tsx:52
+msgid "Deals some damages"
+msgstr "Deals some damages"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:872
+msgid "Debuff ended"
+msgstr "Debuff ended"
+
+#: src/components/_user/user/SkillValue.tsx:156
+msgid "Debuffs:"
+msgstr "Debuffs:"
+
+#: src/components/_political/law/law.frontConfig.tsx:93
+msgid "Declare war"
+msgstr "Declare war"
+
+#: src/components/_political/law/law.frontConfig.tsx:99
+msgid "Declare war to <0/>"
+msgstr "Declare war to <0/>"
+
+#: src/components/_political/law/law.frontConfig.tsx:94
+msgid "Declare war to another country"
+msgstr "Declare war to another country"
+
+#: src/components/_user/worker/WageReductionAlert.tsx:94
+msgid "Decline & Leave"
+msgstr "Decline & Leave"
+
+#: src/components/_political/unrest/UnrestPanel.tsx:143
+#: src/components/_political/unrest/UnrestPanel.tsx:179
+msgid "Decrease"
+msgstr "Decrease"
+
+#: src/components/_political/unrest/UnrestPanel.tsx:110
+msgid "Decrease unrest"
+msgstr "Decrease unrest"
+
+#: src/components/_military/hit/HitButton.tsx:289
+msgid "Defend"
+msgstr "Defend"
+
+#: src/components/_military/war/WarComparison.tsx:49
+msgid "Defender"
+msgstr "Αμυνόμενος"
+
+#: src/components/_military/damageRanking/DamageRankingSides.tsx:157
+msgid "Defenders"
+msgstr "Defenders"
+
+#: src/components/_political/law/law.frontConfig.tsx:173
+msgid "Define <0/> as an enemy, increasing damages when fighting against them"
+msgstr "Define <0/> as an enemy, increasing damages when fighting against them"
+
+#: src/components/_political/law/law.frontConfig.tsx:167
+msgid "Define a country as an enemy to get bonus against"
+msgstr "Define a country as an enemy to get bonus against"
+
+#: src/components/_political/law/law.frontConfig.tsx:166
+msgid "Define a sworn enemy"
+msgstr "Define a sworn enemy"
+
+#: src/pages/user/[userId]/settings.tsx:86
+msgid "Delete account"
+msgstr "Delete account"
+
+#: src/pages/index.tsx:146
+#: src/pages/rules.tsx:40
+msgid "Delete your account"
+msgstr "Delete your account"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1265
+msgid "Demoted from Commander"
+msgstr "Demoted from Commander"
+
+#: src/pages/region/[regionId]/index.tsx:60
+msgid "Deposit"
+msgstr "Deposit"
+
+#: src/components/_political/event/EventList.tsx:71
+msgid "Deposit depleted"
+msgstr "Deposit depleted"
+
+#: src/components/_political/event/EventList.tsx:70
+msgid "Deposit discovered"
+msgstr "Deposit discovered"
+
+#. placeholder {0}: ts[data.itemCode]
+#: src/components/_political/event/event.frontConfig.tsx:292
+msgid "Deposit of <0>{0}</0> has been depleted in <1/>"
+msgstr "Deposit of <0>{0}</0> has been depleted in <1/>"
+
+#: src/pages/region/[regionId]/index.tsx:56
+msgid "Deposit resource"
+msgstr "Deposit resource"
+
+#: src/components/_layout/LayoutMapOptions.tsx:162
+msgid "Deposit resources"
+msgstr "Deposit resources"
+
+#: src/components/_economy/company/RecommendedCompanyRegions.tsx:103
+msgid "Deposit will be depleted in"
+msgstr "Deposit will be depleted in"
+
+#: src/components/_political/party/party.frontConfig.tsx:344
+msgid "Deposits cannot spawn within your borders."
+msgstr "Deposits cannot spawn within your borders."
+
+#: src/components/_political/party/PartyDescriptionModal.tsx:59
+#: src/components/_political/party/PartyFormModal.tsx:103
+msgid "Describe your party's goals and values"
+msgstr "Describe your party's goals and values"
+
+#: src/components/_political/party/PartyDescriptionModal.tsx:58
+#: src/components/_political/party/PartyFormModal.tsx:104
+#: src/pages/party/[partyId]/index.tsx:41
+msgid "Description"
+msgstr "Description"
+
+#: src/components/_user/user/UserDropdown.tsx:164
+msgid "Description removed"
+msgstr "Description removed"
+
+#: src/components/_political/party/PartyDescriptionModal.tsx:34
+msgid "Description updated!"
+msgstr "Description updated!"
+
+#: src/components/_economy/company/CompanyDropdown.tsx:233
+msgid "Destruct"
+msgstr "Destruct"
+
+#: src/components/_layout/LayoutMapOptions.tsx:149
+msgid "Development"
+msgstr "Development"
+
+#: src/pages/country/[countryId]/index.tsx:192
+msgid "Diplomacy"
+msgstr "Diplomacy"
+
+#: src/components/_political/party/party.frontConfig.tsx:156
+#: src/components/_political/party/party.frontConfig.tsx:184
+msgid "Diplomatic"
+msgstr "Diplomatic"
+
+#: src/components/_economy/company/CompanyDropdown.tsx:189
+msgid "Disable company"
+msgstr "Disable company"
+
+#: src/components/_layout/LayoutMapOptions.tsx:290
+msgid "Disable transparency"
+msgstr "Disable transparency"
+
+#: src/components/_economy/company/CompanyTags.tsx:81
+msgid "Disabled"
+msgstr "Disabled"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:174
+#: src/pages/user/[userId]/inventory.tsx:49
+msgid "Dismantle"
+msgstr "Dismantle"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:176
+msgid "Dismantle <0>{count}</0> items"
+msgstr "Dismantle <0>{count}</0> items"
+
+#: src/components/_economy/transaction/TransactionList.tsx:85
+msgid "Dismantle Item"
+msgstr "Dismantle Item"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:153
+msgid "Dismiss"
+msgstr "Dismiss"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:10
+msgid "Do you even know what luck is?"
+msgstr "Do you even know what luck is?"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:272
+#: src/components/_user/user/skills.frontConfig.tsx:142
+#: src/components/_user/user/skills.frontConfig.tsx:143
+msgid "Dodge"
+msgstr "Dodge"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:274
+msgid "Dodge <0>{count}</0> attacks"
+msgstr "Dodge <0>{count}</0> attacks"
+
+#: src/components/_political/party/party.frontConfig.tsx:58
+msgid "Does not gain development from non-core regions."
+msgstr "Does not gain development from non-core regions."
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:55
+msgid "Don't forget to drink water"
+msgstr "Don't forget to drink water"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:125
+msgid "Don't forget to save your skill upgrades."
+msgstr "Don't forget to save your skill upgrades."
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:13
+msgid "Don't quit now, your luck is buffering"
+msgstr "Don't quit now, your luck is buffering"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:448
+msgid "Donate"
+msgstr "Donate"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:450
+msgid "Donate <0>{count}</0> to MU or Country"
+msgstr "Donate <0>{count}</0> to MU or Country"
+
+#: src/components/_economy/transaction/TransactionList.tsx:79
+msgid "Donation"
+msgstr "Donation"
+
+#: src/components/_economy/donation/DonationList.tsx:60
+msgid "Donation Summary"
+msgstr "Donation Summary"
+
+#: src/components/_political/country/CountryHeader.tsx:82
+#: src/pages/country/[countryId]/donations.tsx:17
+#: src/pages/mu/[muId]/donations.tsx:17
+#: src/pages/party/[partyId]/donations.tsx:17
+msgid "Donations"
+msgstr "Donations"
+
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:101
+msgid "Dormitories"
+msgstr "Dormitories"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:461
+msgid "Double XP Ended"
+msgstr "Double XP Ended"
+
+#. placeholder {0}: data.duration
+#: src/components/_user/notification/notification.frontConfig.tsx:454
+msgid "Double XP event has started for {0} hours!"
+msgstr "Double XP event has started for {0} hours!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:452
+msgid "Double XP Started"
+msgstr "Double XP Started"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:128
+msgid "Eat"
+msgstr "Eat"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:140
+#: src/components/_user/mission/mission.frontConfig.tsx:153
+msgid "Eat <0>{count}</0>"
+msgstr "Eat <0>{count}</0>"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:130
+msgid "Eat <0>{count}</0> food items"
+msgstr "Eat <0>{count}</0> food items"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:138
+msgid "Eat Cooked Fish"
+msgstr "Eat Cooked Fish"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:151
+msgid "Eat Steak"
+msgstr "Eat Steak"
+
+#: src/components/_political/law/LawTypeSelect.tsx:108
+msgid "Economic laws"
+msgstr "Economic laws"
+
+#: src/components/_user/user/skills.frontConfig.tsx:205
+msgid "Economic skills"
+msgstr "Economic skills"
+
+#: src/components/_user/user/UserDropdown.tsx:208
+msgid "Edit description"
+msgstr "Edit description"
+
+#: src/components/_political/party/PartyDescriptionModal.tsx:54
+msgid "Edit Description"
+msgstr "Edit Description"
+
+#: src/components/_user/worker/WorkerEditFormModal.tsx:143
+msgid "Edit worker"
+msgstr "Edit worker"
+
+#: src/components/_user/user/SkillValue.tsx:201
+msgid "Effective:"
+msgstr "Effective:"
+
+#: src/components/_political/country/CountryHeader.tsx:101
+#: src/pages/country/[countryId]/elections.tsx:28
+#: src/pages/country/[countryId]/index.tsx:356
+#: src/pages/party/[partyId]/index.tsx:100
 msgid "Elections"
 msgstr "Εκλογές"
 
-#: src/components/_political/elections/Elections.tsx:47
-msgid "Election results"
-msgstr "Αποτελέσματα εκλογών"
+#: src/utils/translations.tsx:184
+msgid "Elite Boots"
+msgstr "Elite Boots"
 
-#: src/components/_political/elections/Elections.tsx:55
-msgid "Election candidates"
-msgstr "Υποψήφιοι εκλογών"
+#: src/utils/translations.tsx:95
+msgid "Elite Case"
+msgstr "Elite Case"
 
-#: src/components/_political/elections/Elections.tsx:63
-msgid "Election campaign"
-msgstr "Εκλογική εκστρατεία"
+#: src/utils/translations.tsx:175
+msgid "Elite Chest"
+msgstr "Elite Chest"
 
-#: src/components/_political/elections/Elections.tsx:71
-msgid "Election votes"
-msgstr "Ψήφοι εκλογών"
+#: src/utils/translations.tsx:193
+msgid "Elite Gloves"
+msgstr "Elite Gloves"
 
-#: src/components/_political/elections/Elections.tsx:79
-msgid "Election winner"
-msgstr "Νικητής εκλογών"
+#: src/utils/translations.tsx:166
+msgid "Elite Helmet"
+msgstr "Elite Helmet"
 
+#: src/utils/translations.tsx:202
+msgid "Elite Pants"
+msgstr "Elite Pants"
+
+#: src/components/_economy/work/WorkChart.tsx:213
+msgid "Employee Production"
+msgstr "Employee Production"
+
+#: src/pages/region/[regionId]/index.tsx:166
+msgid "Empty"
+msgstr "Empty"
+
+#: src/components/_economy/company/CompanyDropdown.tsx:179
+msgid "Enable company"
+msgstr "Enable company"
+
+#: src/components/_political/law/Law.tsx:79
+#: src/components/_political/law/LawTypeSelect.tsx:162
+#: src/components/_political/partyMotion/PartyMotion.tsx:89
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:132
+msgid "Enacting cost"
+msgstr "Enacting cost"
+
+#: src/components/_military/battle/BattleSystem.tsx:594
+msgid "Ended"
+msgstr "Ended"
+
+#: src/components/_military/war/WarHeader.tsx:67
+#: src/components/_military/war/WarItem.tsx:102
+msgid "Ended <0/>"
+msgstr "Ended <0/>"
+
+#: src/components/_military/battle/ActiveBattlesList.tsx:105
+#: src/components/_military/battle/ActiveBattlesList.tsx:160
+msgid "Enemies"
+msgstr "Enemies"
+
+#: src/components/_economy/workOffer/WorkOfferList.tsx:145
+#: src/components/_user/user/skills.frontConfig.tsx:88
+#: src/components/_user/user/skills.frontConfig.tsx:89
+msgid "Energy"
+msgstr "Ενέργεια"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:81
+msgid "Ensign"
+msgstr "Ensign"
+
+#: src/components/_political/law/LawFormModal.tsx:219
+msgid "Enter article ID"
+msgstr "Enter article ID"
+
+#: src/components/_user/auth/ConnectFromModal.tsx:153
+#: src/components/_user/auth/ConnectFromModal.tsx:158
+msgid "Enter the code we sent to your email."
+msgstr "Enter the code we sent to your email."
+
+#: src/components/_user/user/skills.frontConfig.tsx:168
+#: src/components/_user/user/skills.frontConfig.tsx:169
+msgid "Entrepreneurship"
+msgstr "Entrepreneurship"
+
+#: src/pages/market/index.tsx:71
+#: src/pages/user/[userId]/index.tsx:90
+#: src/pages/user/[userId]/inventory.tsx:58
+msgid "Equipment"
+msgstr "Εξοπλισμός"
+
+#: src/components/_user/user/SkillValue.tsx:73
+msgid "Equipment:"
+msgstr "Equipment:"
+
+#: src/components/_economy/market/MarketHeader.tsx:26
+msgid "Equipments"
+msgstr "Equipments"
+
+#: src/components/_political/law/LawStatus.tsx:47
+#: src/components/_political/partyMotion/PartyMotionStatus.tsx:56
+msgid "Error"
+msgstr "Error"
+
+#: src/components/_economy/workOffer/EstimatedCompanyBenefit.tsx:103
+msgid "Estimated benefit per"
+msgstr "Estimated benefit per"
+
+#: src/pages/party/[partyId]/index.tsx:57
+msgid "Ethics"
+msgstr "Ethics"
+
+#: src/pages/party/[partyId]/index.tsx:51
+msgid "Ethics are bonuses from the party, applied when the president is a member of this party."
+msgstr "Ethics are bonuses from the party, applied when the president is a member of this party."
+
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:83
+msgid "Ethics motions"
+msgstr "Ethics motions"
+
+#: src/components/_political/government/PoliticalEthics.tsx:495
+msgid "Ethics Points:"
+msgstr "Ethics Points:"
+
+#: src/components/_layout/LayoutRightIcons.tsx:325
+#: src/components/_layout/MoreButtonNav.tsx:94
+#: src/pages/country/[countryId]/index.tsx:341
+msgid "Events"
+msgstr "Events"
+
+#: src/pages/tournament/[tournamentId]/index.tsx:42
+msgid "Everyone participates automatically"
+msgstr "Everyone participates automatically"
+
+#: src/pages/region/[regionId]/index.tsx:79
+msgid "Expires in"
+msgstr "Expires in"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:92
+msgid "Failed to copy"
+msgstr "Failed to copy"
+
+#: src/pages/user/[userId]/referrals.tsx:90
+msgid "Failed to copy text: "
+msgstr "Failed to copy text: "
+
+#: src/components/_user/auth/ConnectFromModal.tsx:106
+msgid "Failed to start Discord login."
+msgstr "Failed to start Discord login."
+
+#: src/components/_user/auth/ConnectFromModal.tsx:104
+msgid "Failed to start Discord login. Please retry the CAPTCHA."
+msgstr "Failed to start Discord login. Please retry the CAPTCHA."
+
+#: src/components/_user/auth/ConnectFromModal.tsx:126
+msgid "Failed to start Google login."
+msgstr "Failed to start Google login."
+
+#: src/components/_user/auth/ConnectFromModal.tsx:124
+msgid "Failed to start Google login. Please retry the CAPTCHA."
+msgstr "Failed to start Google login. Please retry the CAPTCHA."
+
+#: src/components/_user/user/FamilyGroup.tsx:60
+msgid "Family Group"
+msgstr "Family Group"
+
+#: src/components/_political/party/party.frontConfig.tsx:276
+msgid "Fanatic Agrarian"
+msgstr "Fanatic Agrarian"
+
+#: src/components/_political/party/party.frontConfig.tsx:170
+msgid "Fanatic Diplomatic"
+msgstr "Fanatic Diplomatic"
+
+#: src/components/_political/party/party.frontConfig.tsx:251
+msgid "Fanatic Imperialist"
+msgstr "Fanatic Imperialist"
+
+#: src/components/_political/party/party.frontConfig.tsx:333
+msgid "Fanatic Industrialist"
+msgstr "Fanatic Industrialist"
+
+#: src/components/_political/party/party.frontConfig.tsx:123
+msgid "Fanatic Isolationist"
+msgstr "Fanatic Isolationist"
+
+#: src/components/_political/party/party.frontConfig.tsx:96
+msgid "Fanatic Militarist"
+msgstr "Fanatic Militarist"
+
+#: src/components/_political/party/party.frontConfig.tsx:47
+msgid "Fanatic Pacifist"
+msgstr "Fanatic Pacifist"
+
+#: src/components/_political/party/party.frontConfig.tsx:191
+msgid "Fanatic Republican"
+msgstr "Fanatic Republican"
+
+#: src/components/_military/battle/ActiveBattlesList.tsx:87
+#: src/components/_military/battle/ActiveBattlesList.tsx:167
+msgid "Favorites"
+msgstr "Favorites"
+
+#: src/components/_layout/LayoutRightIcons.tsx:335
+#: src/components/_layout/MoreButtonNav.tsx:86
+msgid "Feed"
+msgstr "Feed"
+
+#: src/components/_user/worker/WorkerItem.tsx:110
+msgid "Fidelity Bonus"
+msgstr "Fidelity Bonus"
+
+#: src/components/_economy/workOffer/EstimatedCompanyBenefit.tsx:164
+msgid "Fidelity bonus:"
+msgstr "Fidelity bonus:"
+
+#: src/components/_user/user/skills.frontConfig.tsx:190
+msgid "Fight skills"
+msgstr "Fight skills"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:144
+msgid "Fight!"
+msgstr "Fight!"
+
+#: src/utils/translations.tsx:27
+msgid "Fighter Jet"
+msgstr "Fighter Jet"
+
+#: src/components/_economy/transaction/TransactionList.tsx:104
+msgid "Filter by transaction type"
+msgstr "Filter by transaction type"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:35
+msgid "Finally above average!"
+msgstr "Finally above average!"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:128
+msgid "Finance a resistance battle in <0/>"
+msgstr "Finance a resistance battle in <0/>"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:122
+msgid "Finance a resistance battle in an occupied region of your country"
+msgstr "Finance a resistance battle in an occupied region of your country"
+
+#: src/components/_political/law/law.frontConfig.tsx:425
+msgid "Finance a resistance to liberate an occupied region"
+msgstr "Finance a resistance to liberate an occupied region"
+
+#: src/components/_political/law/law.frontConfig.tsx:430
+msgid "Finance a revolt to liberate <0/>"
+msgstr "Finance a revolt to liberate <0/>"
+
+#: src/components/_political/law/law.frontConfig.tsx:424
+msgid "Finance foreign resistance"
+msgstr "Finance foreign resistance"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:121
+msgid "Finance local resistance"
+msgstr "Finance local resistance"
+
+#: src/pages/companies.tsx:59
+#: src/pages/user/[userId]/companies.tsx:73
+msgid "Find a job"
+msgstr "Find a job"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:416
+msgid "Find a Job"
+msgstr "Find a Job"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:417
+msgid "Find a job at a company"
+msgstr "Find a job at a company"
+
+#: src/components/_military/mu/MuJobItem.tsx:26
+msgid "Find a military unit"
+msgstr "Find a military unit"
+
+#: src/components/_economy/company/CompanyProduce.tsx:116
+msgid "Find another job"
+msgstr "Find another job"
+
+#: src/components/_user/worker/WorkerEditFormModal.tsx:202
+msgid "Fire"
+msgstr "Fire"
+
+#: src/components/_political/government/Government.tsx:162
+msgid "Fire government member"
+msgstr "Fire government member"
+
+#: src/components/_user/worker/WorkerEditFormModal.tsx:101
+msgid "Fire worker?"
+msgstr "Fire worker?"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:546
+msgid "Fired from company"
+msgstr "Fired from company"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:675
+msgid "Fired from government"
+msgstr "Fired from government"
+
+#: src/utils/translations.tsx:36
+msgid "Fish"
+msgstr "Fish"
+
+#: src/components/_layout/LayoutMapOptions.tsx:276
+msgid "Flags"
+msgstr "Flags"
+
+#: src/components/_layout/LayoutMapOptions.tsx:339
+msgid "Font"
+msgstr "Font"
+
+#: src/components/_layout/LayoutMapOptions.tsx:348
+msgid "Font size"
+msgstr "Font size"
+
+#: src/components/_user/user/UserDropdown.tsx:226
+msgid "Font style"
+msgstr "Font style"
+
+#. placeholder {0}: ts[country.specializedItem]
+#: src/pages/country/[countryId]/index.tsx:416
+msgid "for companies producing <0>{0}</0> located in <1/>."
+msgstr "for companies producing <0>{0}</0> located in <1/>."
+
+#: src/pages/shop/index.tsx:129
+msgid "Free daily reward"
+msgstr "Free daily reward"
+
+#: src/components/_military/hit/BattleLootChanceCard.tsx:98
+msgid "from battle ranking"
+msgstr "from battle ranking"
+
+#: src/components/_military/hit/BattleLootChanceCard.tsx:78
+msgid "from hits"
+msgstr "from hits"
+
+#: src/components/_military/hit/BattleLootChanceCard.tsx:87
+msgid "from round rankings"
+msgstr "from round rankings"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:27
+msgid "Fun fact: The house always wins"
+msgstr "Fun fact: The house always wins"
+
+#: src/components/_user/user/Level.tsx:88
+msgid "Gain <0>Xp</0> by finishing your missions!"
+msgstr "Gain <0>Xp</0> by finishing your missions!"
+
+#: src/pages/shop/index.tsx:139
+msgid "Gems"
+msgstr "Gems"
+
+#: src/pages/shop/index.tsx:136
+msgid "Gems are used to buy assets in the shop and to gift supporter months to other players"
+msgstr "Gems are used to buy assets in the shop and to gift supporter months to other players"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:148
+msgid "General"
+msgstr "General"
+
+#: src/components/_user/mission/MissionsList.tsx:241
+msgid "Generate Missions"
+msgstr "Generate Missions"
+
+#. placeholder {0}: levelConfig.stats.dailyProd
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:72
+msgid "Generates <0>{0}</0>/day"
+msgstr "Generates <0>{0}</0>/day"
+
+#: src/components/_other/shop/SkinCollectionModal.tsx:94
+msgid "Get multiple skins at once with a 30% discount!"
+msgstr "Get multiple skins at once with a 30% discount!"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:220
+msgid "Get supporter plan"
+msgstr "Get supporter plan"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:94
+msgid "Gift from Vatou, don't tell anyone"
+msgstr "Gift from Vatou, don't tell anyone"
+
+#: src/components/_other/shop/SkinPackModal.tsx:98
+msgid "Gift sent! Skin pack unlocked for recipient!"
+msgstr "Gift sent! Skin pack unlocked for recipient!"
+
+#: src/pages/shop/index.tsx:55
+msgid "Gift sent! Thanks for supporting the game <3"
+msgstr "Gift sent! Thanks for supporting the game <3"
+
+#: src/components/_user/user/UserDropdown.tsx:260
+msgid "Gift Supporter Plan"
+msgstr "Gift Supporter Plan"
+
+#: src/components/_other/shop/SkinPackModal.tsx:225
+msgid "Gift this pack to someone"
+msgstr "Gift this pack to someone"
+
+#: src/pages/shop/index.tsx:101
+msgid "gifted"
+msgstr "gifted"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:251
+msgid "Give your token a descriptive name so you can identify it later."
+msgstr "Give your token a descriptive name so you can identify it later."
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1560
+msgid "Giveaway Ended"
+msgstr "Giveaway Ended"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1548
+msgid "Giveaway Started"
+msgstr "Giveaway Started"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1532
+msgid "Giveaway Won!"
+msgstr "Giveaway Won!"
+
+#. placeholder {0}: levelConfig.stats.attackBonus
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:92
+msgid "Gives <0>{0}</0>"
+msgstr "Gives <0>{0}</0>"
+
+#: src/components/_layout/LayoutMapOptions.tsx:220
+msgid "Globe (experimental)"
+msgstr "Globe (experimental)"
+
+#: src/components/_user/UserEquipments.tsx:196
+#: src/utils/translations.tsx:189
+msgid "Gloves"
+msgstr "Gloves"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:95
+msgid "Go play lottery right now"
+msgstr "Go play lottery right now"
+
+#: src/components/_economy/company/CompanyProduce.tsx:117
+msgid "Go to job market"
+msgstr "Go to job market"
+
+#: src/components/_economy/company/CompanyList.tsx:88
+msgid "Go to skills"
+msgstr "Go to skills"
+
+#: src/utils/translations.tsx:34
+msgid "Gold"
+msgstr "Gold"
+
+#: src/components/_political/country/CountryHeader.tsx:88
+msgid "Government"
+msgstr "Κυβέρνηση"
+
+#: src/utils/translations.tsx:28
+msgid "Grain"
+msgstr "Grain"
+
+#: src/components/_layout/LayoutMapOptions.tsx:231
+msgid "Graticule"
+msgstr "Graticule"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:176
+msgid "Great job! Hit a few more times to help your side win the battle."
+msgstr "Great job! Hit a few more times to help your side win the battle."
+
+#: src/components/_user/user/UserRankingsPanel.tsx:33
+msgid "Ground"
+msgstr "Ground"
+
+#: src/components/_military/battle/BattleSystem.tsx:524
+msgid "ground per tick"
+msgstr "ground per tick"
+
+#: src/components/_military/damageRanking/DamageRankingSides.tsx:121
+msgid "Ground points"
+msgstr "Ground points"
+
+#: src/utils/translations.tsx:23
+msgid "Gun"
+msgstr "Gun"
+
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:89
+msgid "Headquarters"
+msgstr "Headquarters"
+
+#: src/components/_user/user/skills.frontConfig.tsx:77
+#: src/components/_user/user/skills.frontConfig.tsx:78
+msgid "Health"
+msgstr "Health"
+
+#: src/utils/translations.tsx:82
+msgid "Heavy Ammo"
+msgstr "Heavy Ammo"
+
+#: src/components/_user/UserEquipments.tsx:131
+#: src/utils/translations.tsx:162
+msgid "Helmet"
+msgstr "Helmet"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:250
+msgid "Help <0>{count}</0> MU members"
+msgstr "Help <0>{count}</0> MU members"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:248
+msgid "Help MU Members"
+msgstr "Help MU Members"
+
+#: src/components/_user/premium/PremiumFeatureList.tsx:41
+msgid "Help the game to grow"
+msgstr "Help the game to grow"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:157
+msgid "High Commander"
+msgstr "High Commander"
+
+#: src/components/_military/battle/BattlesHeader.tsx:29
+msgid "History"
+msgstr "History"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:88
+msgid "Hit"
+msgstr "Hit"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:90
+msgid "Hit <0>{count}</0> times in battles"
+msgstr "Hit <0>{count}</0> times in battles"
+
+#: src/components/_other/shop/ShopHeader.tsx:16
+#: src/components/_political/country/CountryHeader.tsx:57
+#: src/components/_user/user/UserHeader.tsx:150
+msgid "Home"
+msgstr "Home"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:30
+msgid "How many times have you seen this message already?"
+msgstr "How many times have you seen this message already?"
+
+#: src/components/_user/user/skills.frontConfig.tsx:150
+msgid "How much each hit increases the chance to loot a case when the battle ends"
+msgstr "How much each hit increases the chance to loot a case when the battle ends"
+
+#: src/components/_user/user/skills.frontConfig.tsx:115
+#: src/components/_user/user/skills.frontConfig.tsx:116
+msgid "Hunger"
+msgstr "Hunger"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:29
+msgid "I can feel it, the next one is a mythic!"
+msgstr "I can feel it, the next one is a mythic!"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:28
+msgid "I heard buying premium boost your chances :3"
+msgstr "I heard buying premium boost your chances :3"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:81
+msgid "I'm proud of you"
+msgstr "I'm proud of you"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:51
+msgid "Imagine if you stop right before the Mythic"
+msgstr "Imagine if you stop right before the Mythic"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:7
+msgid "Imagine wasting your click on this"
+msgstr "Imagine wasting your click on this"
+
+#: src/components/_political/law/law.frontConfig.tsx:147
+msgid "Impeach congress member"
+msgstr "Impeach congress member"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:59
+msgid "Impeach party leader"
+msgstr "Impeach party leader"
+
+#: src/components/_political/law/law.frontConfig.tsx:139
+msgid "Impeach president"
+msgstr "Impeach president"
+
+#: src/components/_political/law/law.frontConfig.tsx:140
+#: src/components/_political/law/law.frontConfig.tsx:142
+msgid "Impeach the current president"
+msgstr "Impeach the current president"
+
+#: src/components/_political/party/party.frontConfig.tsx:234
+msgid "Imperialism vs Republicanism"
+msgstr "Imperialism vs Republicanism"
+
+#: src/components/_political/party/party.frontConfig.tsx:237
+#: src/components/_political/party/party.frontConfig.tsx:269
+msgid "Imperialist"
+msgstr "Imperialist"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:52
+msgid "Impressive"
+msgstr "Impressive"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:174
+msgid "Inactive"
+msgstr "Inactive"
+
+#: src/components/_economy/inventoryAccount/InventoryAccount.tsx:100
+msgid "Income"
+msgstr "Income"
+
+#: src/pages/country/[countryId]/index.tsx:465
+msgid "income from <0>Development</0> in <1/>."
+msgstr "income from <0>Development</0> in <1/>."
+
+#. placeholder {0}: formatPercent( ethicsBonuses.imperialism['-1'].developmentIncomeBonus, )
+#. placeholder {0}: formatPercent( ethicsBonuses.imperialism['-2'].developmentIncomeBonus, )
+#: src/components/_political/party/party.frontConfig.tsx:195
+#: src/components/_political/party/party.frontConfig.tsx:221
+msgid "Income from development increases by <0>{0}</0>."
+msgstr "Income from development increases by <0>{0}</0>."
+
+#. placeholder {0}: formatPercent(ethicsBonuses.imperialism[1].taxIncomeBonus)
+#. placeholder {0}: formatPercent(ethicsBonuses.imperialism[2].taxIncomeBonus)
+#: src/components/_political/party/party.frontConfig.tsx:241
+#: src/components/_political/party/party.frontConfig.tsx:255
+msgid "Income from taxes increases by <0>{0}</0>."
+msgstr "Income from taxes increases by <0>{0}</0>."
+
+#: src/components/_political/country/CountryTaxes.tsx:21
+#: src/components/_political/law/LawFormModal.tsx:229
+msgid "Income tax"
+msgstr "Income tax"
+
+#: src/components/_economy/company/CompanyTags.tsx:49
+#: src/components/_economy/company/RecommendedCompanyRegions.tsx:167
+msgid "Income Tax"
+msgstr "Income Tax"
+
+#: src/components/_political/unrest/UnrestPanel.tsx:143
+#: src/components/_political/unrest/UnrestPanel.tsx:179
+msgid "Increase"
+msgstr "Increase"
+
+#: src/components/_political/unrest/UnrestPanel.tsx:109
+msgid "Increase unrest"
+msgstr "Increase unrest"
+
+#: src/components/_political/party/party.frontConfig.tsx:316
+msgid "Industrialism vs Agrarianism"
+msgstr "Industrialism vs Agrarianism"
+
+#: src/components/_political/party/party.frontConfig.tsx:319
+#: src/components/_political/party/party.frontConfig.tsx:347
+msgid "Industrialist"
+msgstr "Industrialist"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:11
+msgid "Initiate"
+msgstr "Initiate"
+
+#: src/components/_layout/LayoutMenu.tsx:123
+#: src/components/_user/user/MyAvatar.tsx:35
+#: src/components/_user/user/UserHeader.tsx:156
+#: src/pages/companies.tsx:83
+#: src/pages/country/[countryId]/account.tsx:24
+#: src/pages/market/index.tsx:49
+#: src/pages/user/[userId]/account.tsx:19
+#: src/pages/user/[userId]/companies.tsx:46
+#: src/pages/user/[userId]/index.tsx:193
+#: src/pages/user/[userId]/inventory.tsx:30
+msgid "Inventory"
+msgstr "Αποθήκη"
+
+#: src/utils/translations.tsx:49
+msgid "Iron"
+msgstr "Iron"
+
+#: src/components/_political/party/party.frontConfig.tsx:153
+msgid "Isolationism vs Diplomacy"
+msgstr "Isolationism vs Diplomacy"
+
+#: src/components/_political/party/party.frontConfig.tsx:138
+#: src/components/_political/party/party.frontConfig.tsx:151
+msgid "Isolationist"
+msgstr "Isolationist"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:9
+msgid "It only gets better… maybe"
+msgstr "It only gets better… maybe"
+
+#: src/components/_economy/company/CompanyTags.tsx:72
+msgid "It will not gain any production and its workers will not be able to work."
+msgstr "It will not gain any production and its workers will not be able to work."
+
+#: src/components/_user/notification/notification.frontConfig.tsx:606
+msgid "Item bought"
+msgstr "Item bought"
+
+#: src/components/_economy/transaction/TransactionList.tsx:72
+msgid "Item Market"
+msgstr "Item Market"
+
+#: src/pages/companies.tsx:32
+#: src/pages/user/[userId]/companies.tsx:56
+msgid "Job"
+msgstr "Job"
+
+#: src/components/_economy/company/CompanyDropdown.tsx:202
+#: src/components/_economy/workOffer/WageInfoAlert.tsx:42
+msgid "Job market"
+msgstr "Job market"
+
+#: src/pages/company/[companyId]/index.tsx:62
+msgid "Job offer"
+msgstr "Job offer"
+
+#: src/pages/market/index.tsx:77
+msgid "Job offers"
+msgstr "Job offers"
+
+#: src/components/_economy/market/MarketHeader.tsx:32
+msgid "Jobs"
+msgstr "Jobs"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:355
+msgid "Join a Military Unit"
+msgstr "Join a Military Unit"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:354
+msgid "Join MU"
+msgstr "Join MU"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:65
+msgid "Join this company!"
+msgstr "Join this company!"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:211
+msgid "Join your country chat!"
+msgstr "Join your country chat!"
+
+#: src/components/_user/worker/WorkerItem.tsx:150
+msgid "Joined"
+msgstr "Joined"
+
+#: src/components/_economy/workOffer/WorkOfferList.tsx:130
+msgid "Joining a new job will make you leave your current one!"
+msgstr "Joining a new job will make you leave your current one!"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:22
+msgid "Just 1 more..."
+msgstr "Just 1 more..."
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:50
+msgid "Just one more… what could go wrong?"
+msgstr "Just one more… what could go wrong?"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:63
+msgid "Keep chasing that Mythic"
+msgstr "Keep chasing that Mythic"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:174
+msgid "Keep fighting!"
+msgstr "Keep fighting!"
+
+#: src/components/_user/worker/WorkerEditFormModal.tsx:189
+msgid "Keep in current company"
+msgstr "Keep in current company"
+
+#: src/utils/translations.tsx:22
+msgid "Knife"
+msgstr "Knife"
+
+#: src/components/_user/UserEquipments.tsx:119
+msgid "Knives do not accept ammo"
+msgstr "Knives do not accept ammo"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:260
+msgid "Land <0>{count}</0> critical hits"
+msgstr "Land <0>{count}</0> critical hits"
+
+#: src/components/_layout/LayoutMapOptions.tsx:363
+#: src/components/_user/auth/WelcomeModal.tsx:131
+msgid "Language"
+msgstr "Language"
+
+#: src/pages/shop/index.tsx:89
+msgid "Last gifts"
+msgstr "Last gifts"
+
+#: src/components/_user/auth/ConnectFromModal.tsx:298
+#: src/components/_user/auth/ConnectFromModal.tsx:317
+#: src/components/_user/auth/ConnectFromModal.tsx:336
+msgid "Last used"
+msgstr "Last used"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:192
+msgid "Last used:"
+msgstr "Last used:"
+
+#: src/components/_user/auth/WelcomeModal.tsx:158
+msgid "Later"
+msgstr "Later"
+
+#: src/pages/shop/index.tsx:149
+msgid "Latest Pack"
+msgstr "Latest Pack"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:50
+msgid "Launch council election"
+msgstr "Launch council election"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:70
+msgid "Launch leader election"
+msgstr "Launch leader election"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:103
+msgid "Launch primary election"
+msgstr "Launch primary election"
+
+#: src/components/_political/law/Law.tsx:57
+msgid "Law failed"
+msgstr "Law failed"
+
+#: src/components/_political/law/LawFormModal.tsx:76
+#: src/components/_user/notification/notification.frontConfig.tsx:629
+msgid "Law proposed"
+msgstr "Law proposed"
+
+#: src/components/_political/country/CountryHeader.tsx:63
+#: src/pages/country/[countryId]/index.tsx:335
+#: src/pages/country/[countryId]/laws.tsx:24
+msgid "Laws"
+msgstr "Laws"
+
+#: src/utils/translations.tsx:38
+msgid "Lead"
+msgstr "Lead"
+
+#: src/components/_economy/company/CompanyDropdown.tsx:221
+msgid "Leave"
+msgstr "Leave"
+
+#: src/components/_user/worker/WageReductionAlert.tsx:55
+msgid "Leave company?"
+msgstr "Leave company?"
+
+#: src/pages/country/[countryId]/government.tsx:92
+#: src/pages/country/[countryId]/government.tsx:97
+msgid "Leave congress"
+msgstr "Leave congress"
+
+#: src/pages/country/[countryId]/government.tsx:77
+#: src/pages/country/[countryId]/government.tsx:82
+msgid "Leave government"
+msgstr "Leave government"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:78
+msgid "Legend spotted!"
+msgstr "Legend spotted!"
+
+#: src/utils/translations.tsx:185
+msgid "Legendary Boots"
+msgstr "Legendary Boots"
+
+#: src/utils/translations.tsx:176
+msgid "Legendary Chest"
+msgstr "Legendary Chest"
+
+#: src/utils/translations.tsx:194
+msgid "Legendary Gloves"
+msgstr "Legendary Gloves"
+
+#: src/utils/translations.tsx:167
+msgid "Legendary Helmet"
+msgstr "Legendary Helmet"
+
+#: src/utils/translations.tsx:203
+msgid "Legendary Pants"
+msgstr "Legendary Pants"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:107
+msgid "Level up your skills!"
+msgstr "Level up your skills!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:422
+msgid "Level up!"
+msgstr "Level up!"
+
+#: src/components/_political/law/law.frontConfig.tsx:329
+msgid "Liberate <0/> and return it to its original country"
+msgstr "Liberate <0/> and return it to its original country"
+
+#: src/components/_political/law/law.frontConfig.tsx:323
+msgid "Liberate a region"
+msgstr "Liberate a region"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:86
+msgid "Lieutenant"
+msgstr "Lieutenant"
+
+#: src/components/_political/law/LawFormModal.tsx:270
+msgid "Light"
+msgstr "Light"
+
+#: src/utils/translations.tsx:76
+msgid "Light Ammo"
+msgstr "Light Ammo"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:316
+msgid "Like <0>{count}</0> articles"
+msgstr "Like <0>{count}</0> articles"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:387
+msgid "Like <0>{count}</0> messages"
+msgstr "Like <0>{count}</0> messages"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:314
+msgid "Like Article"
+msgstr "Like Article"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:385
+msgid "Like Message"
+msgstr "Like Message"
+
+#: src/utils/translations.tsx:30
+msgid "Limestone"
+msgstr "Limestone"
+
+#: src/components/_user/user/skills.frontConfig.tsx:114
+msgid "Limit of food consumption"
+msgstr "Limit of food consumption"
+
+#: src/components/_layout/LayoutMapOptions.tsx:326
+msgid "Line"
+msgstr "Line"
+
+#: src/utils/translations.tsx:64
+msgid "Little cuties used to make steaks :("
+msgstr "Little cuties used to make steaks :("
+
+#: src/utils/translations.tsx:32
+msgid "Livestock"
+msgstr "Livestock"
+
+#: ../__ui/src/components/LoadMoreButton/LoadMoreButton.tsx:33
+msgid "Load more"
+msgstr "Load more"
+
+#: src/components/_military/mu/MuList.tsx:120
+msgid "Load More Military Units"
+msgstr "Load More Military Units"
+
+#: src/components/_political/party/PartyList.tsx:122
+msgid "Load more parties"
+msgstr "Load more parties"
+
+#: src/components/_layout/LoadingScreenContent.tsx:34
+msgid "Loading {status}..."
+msgstr "Loading {status}..."
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:162
+msgid "Loading..."
+msgstr "Loading..."
+
+#: src/components/_military/mu/MuFormModal.tsx:116
+msgid "Location"
+msgstr "Location"
+
+#: src/components/_user/user/MyAvatar.tsx:60
+msgid "Logout"
+msgstr "Logout"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:83
+msgid "Long Sword"
+msgstr "Long Sword"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:302
+msgid "Loot <0>{count}</0> from battles"
+msgstr "Loot <0>{count}</0> from battles"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:300
+msgid "Loot Cases"
+msgstr "Loot Cases"
+
+#: src/components/_military/hit/BattleLootChanceCard.tsx:38
+#: src/components/_user/user/skills.frontConfig.tsx:155
+#: src/components/_user/user/skills.frontConfig.tsx:156
+msgid "Loot chance"
+msgstr "Loot chance"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:493
+msgid "Looted case"
+msgstr "Looted case"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:491
+msgid "Looted cases"
+msgstr "Looted cases"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:728
+msgid "Looted money"
+msgstr "Looted money"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:20
+msgid "Love Paper Jet"
+msgstr "Love Paper Jet"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:101
+msgid "Lt. Colonel"
+msgstr "Lt. Colonel"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:141
+msgid "Lt. General"
+msgstr "Lt. General"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:59
+msgid "Luck is finally on payroll"
+msgstr "Luck is finally on payroll"
+
+#: src/components/_political/law/Law.tsx:96
+msgid "Maintenance cost"
+msgstr "Maintenance cost"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:96
+msgid "Major"
+msgstr "Major"
+
+#: src/components/_user/premium/PremiumActions.tsx:81
+msgid "Manage Subscription"
+msgstr "Manage Subscription"
+
+#: src/components/_user/user/skills.frontConfig.tsx:183
+#: src/components/_user/user/skills.frontConfig.tsx:184
+msgid "Management"
+msgstr "Management"
+
+#: src/components/_layout/LoadingScreenContent.tsx:21
+msgid "map"
+msgstr "map"
+
+#: src/components/_political/law/LawFormModal.tsx:267
+msgid "Map Accent"
+msgstr "Map Accent"
+
+#: src/components/_layout/LayoutMapOptions.tsx:123
+msgid "Map options"
+msgstr "Map options"
+
+#: src/components/_economy/market/MarketHeader.tsx:43
+#: src/components/_layout/LayoutMenu.tsx:163
+msgid "Market"
+msgstr "Αγορά"
+
+#: src/components/_political/country/CountryTaxes.tsx:24
+#: src/components/_political/law/LawFormModal.tsx:233
+msgid "Market tax"
+msgstr "Φόρος αγοράς"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:121
+msgid "Marshal"
+msgstr "Marshal"
+
+#. placeholder {0}: levelConfig.stats.members
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:104
+msgid "Maximum of <0>{0}</0> members."
+msgstr "Maximum of <0>{0}</0> members."
+
+#. placeholder {0}: levelConfig.stats.maxWorkers
+#. placeholder {1}: typeof levelConfig.stats.dailyHires !== 'undefined' && ( <> <br /> Daily hiring limit of{' '} <EntityValue IconComponent={WorkerIcon}> {levelConfig.stats.dailyHires} </EntityValue>{' '} per day. </> )
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:117
+msgid "Maximum of <0>{0}</0> workers.{1}"
+msgstr "Maximum of <0>{0}</0> workers.{1}"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:32
+msgid "Maybe epic music would help?"
+msgstr "Maybe epic music would help?"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:15
+msgid "Maybe next time ^^"
+msgstr "Maybe next time ^^"
+
+#: src/components/_other/shop/skinPack.frontConfig.tsx:13
+msgid "Medieval"
+msgstr "Medieval"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:65
+msgid "Medieval Boots"
+msgstr "Medieval Boots"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:59
+msgid "Medieval Chest"
+msgstr "Medieval Chest"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:68
+msgid "Medieval Gloves"
+msgstr "Medieval Gloves"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:56
+msgid "Medieval Helmet"
+msgstr "Medieval Helmet"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:74
+msgid "Medieval Iron Arrow"
+msgstr "Medieval Iron Arrow"
+
+#: src/components/_other/shop/skinPack.frontConfig.tsx:12
+msgid "Medieval Pack"
+msgstr "Medieval Pack"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:62
+msgid "Medieval Pants"
+msgstr "Medieval Pants"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:80
+msgid "Medieval Spear"
+msgstr "Medieval Spear"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:77
+msgid "Medieval Steel Arrow"
+msgstr "Medieval Steel Arrow"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:71
+msgid "Medieval Stone Arrow"
+msgstr "Medieval Stone Arrow"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:204
+msgid "Meet other players in the chat. Don't be shy, introduce yourself!"
+msgstr "Meet other players in the chat. Don't be shy, introduce yourself!"
+
+#: src/pages/party/[partyId]/applications.tsx:39
+msgid "Member Applications"
+msgstr "Member Applications"
+
+#: src/pages/party/[partyId]/index.tsx:75
+#: src/pages/party/[partyId]/members.tsx:21
+msgid "Members"
+msgstr "Members"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1311
+msgid "Mentioned in message"
+msgstr "Mentioned in message"
+
+#: src/components/_other/shop/SkinPackModal.tsx:237
+msgid "Message (Optional)"
+msgstr "Message (Optional)"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:964
+msgid "Message liked"
+msgstr "Message liked"
+
+#: src/components/_political/party/party.frontConfig.tsx:79
+msgid "Militarism vs Pacifism"
+msgstr "Militarism vs Pacifism"
+
+#: src/components/_political/party/party.frontConfig.tsx:82
+#: src/components/_political/party/party.frontConfig.tsx:116
+msgid "Militarist"
+msgstr "Militarist"
+
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:43
+msgid "Military base"
+msgstr "Military base"
+
+#: src/components/_political/law/LawTypeSelect.tsx:73
+msgid "Military laws"
+msgstr "Military laws"
+
+#: src/pages/user/[userId]/index.tsx:134
+msgid "Military Rank"
+msgstr "Military Rank"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1336
+msgid "Military Rank Up!"
+msgstr "Military Rank Up!"
+
+#: src/components/_user/user/SkillValue.tsx:140
+msgid "Military rank:"
+msgstr "Military rank:"
+
+#: src/components/_user/user/MilitaryRanksInfoModal.tsx:82
+msgid "Military Ranks"
+msgstr "Military Ranks"
+
+#: src/components/_layout/MoreButtonNav.tsx:150
+msgid "Military Unit"
+msgstr "Military Unit"
+
+#: src/components/_military/mu/MuFormModal.tsx:49
+msgid "Military unit created"
+msgstr "Military unit created"
+
+#: src/components/_military/damageRanking/DamageRankingSides.tsx:103
+msgid "Military units"
+msgstr "Military units"
+
+#: src/components/_political/law/Law.tsx:118
+msgid "Min. active citizens"
+msgstr "Min. active citizens"
+
+#: src/components/_political/government/Government.tsx:68
+msgid "Minister of Defense"
+msgstr "Minister of Defense"
+
+#: src/components/_political/government/Government.tsx:76
+msgid "Minister of Economy"
+msgstr "Minister of Economy"
+
+#: src/components/_political/government/Government.tsx:84
+msgid "Minister of Foreign Affairs"
+msgstr "Minister of Foreign Affairs"
+
+#: src/components/_layout/LayoutRightIcons.tsx:254
+#: src/components/_layout/MoreButtonNav.tsx:103
+#: src/components/_user/mission/MissionsList.tsx:168
+msgid "Missions"
+msgstr "Missions"
+
+#: src/components/_user/modals/PhoneVerificationModal.tsx:114
+msgid "Mobile phone number"
+msgstr "Mobile phone number"
+
+#: src/components/_military/damageRanking/DamageRankingSides.tsx:133
+msgid "Money earned from mercenary contracts."
+msgstr "Money earned from mercenary contracts."
+
+#: src/components/_military/damageRanking/DamageRankingSides.tsx:132
+msgid "Money ranking"
+msgstr "Money ranking"
+
+#: src/components/_political/event/EventList.tsx:69
+msgid "Money transfer"
+msgstr "Money transfer"
+
+#: src/components/_user/referral/ReferralList.tsx:115
+msgid "Money won"
+msgstr "Money won"
+
+#: src/components/_user/referral/ReferralList.tsx:79
+msgid "Money Won"
+msgstr "Money Won"
+
+#: src/components/_layout/MoreButtonNav.tsx:194
+msgid "More"
+msgstr "More"
+
+#: src/components/_user/premium/PremiumFeatureList.tsx:147
+msgid "More premium features coming soon!"
+msgstr "More premium features coming soon!"
+
+#: src/components/_political/partyMotion/PartyMotion.tsx:74
+msgid "Motion failed"
+msgstr "Motion failed"
+
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:51
+msgid "Motion proposed"
+msgstr "Motion proposed"
+
+#: src/pages/party/[partyId]/index.tsx:93
+#: src/pages/party/[partyId]/motions.tsx:19
+msgid "Motions"
+msgstr "Motions"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:433
+msgid "Move a company to another region"
+msgstr "Move a company to another region"
+
+#: src/components/_economy/company/CompanyDropdown.tsx:144
+#: src/components/_economy/company/MoveCompanyForm.tsx:63
+msgid "Move company"
+msgstr "Move company"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:432
+msgid "Move Company"
+msgstr "Move Company"
+
+#: src/components/_economy/company/MoveCompanyForm.tsx:88
+msgid "Move the company"
+msgstr "Move the company"
+
+#: src/components/_economy/company/CompanyDropdown.tsx:170
+msgid "Move to top"
+msgstr "Move to top"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:561
+msgid "Moved to a new company"
+msgstr "Moved to a new company"
+
+#: src/components/_layout/LayoutMenu.tsx:135
+#: src/components/_military/tournament/TournamentRegisterButton.tsx:135
+msgid "MU"
+msgstr "MU"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1209
+msgid "MU Application Accepted"
+msgstr "MU Application Accepted"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1196
+msgid "MU Application Rejected"
+msgstr "MU Application Rejected"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1297
+msgid "MU Donation Received"
+msgstr "MU Donation Received"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1279
+msgid "MU Ownership Transferred"
+msgstr "MU Ownership Transferred"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:247
+msgid "My Bot, Script, etc."
+msgstr "My Bot, Script, etc."
+
+#: src/pages/user/[userId]/companies.tsx:84
+msgid "My Companies"
+msgstr "My Companies"
+
+#: src/utils/translations.tsx:98
+msgid "Mysterious Plant"
+msgstr "Mysterious Plant"
+
+#: src/utils/translations.tsx:186
+msgid "Mythic Boots"
+msgstr "Mythic Boots"
+
+#: src/utils/translations.tsx:177
+msgid "Mythic Chest"
+msgstr "Mythic Chest"
+
+#: src/utils/translations.tsx:195
+msgid "Mythic Gloves"
+msgstr "Mythic Gloves"
+
+#: src/utils/translations.tsx:168
+msgid "Mythic Helmet"
+msgstr "Mythic Helmet"
+
+#: src/utils/translations.tsx:204
+msgid "Mythic Pants"
+msgstr "Mythic Pants"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:91
+msgid "Mythic?! Your account is blessed"
+msgstr "Mythic?! Your account is blessed"
+
+#: src/components/_military/mu/MuFormModal.tsx:112
+#: src/components/_political/party/PartyFormModal.tsx:99
+msgid "Name"
+msgstr "Name"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:56
+msgid "Need a job?"
+msgstr "Need a job?"
+
+#: src/components/_economy/workOffer/EstimatedCompanyBenefit.tsx:173
+msgid "Net benefit:"
+msgstr "Net benefit:"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:26
+msgid "Never give up!"
+msgstr "Never give up!"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:16
+msgid "Never stop gambling"
+msgstr "Never stop gambling"
+
+#: src/components/_other/shop/SkinItem.tsx:119
+#: src/components/_other/shop/SkinPackItem.tsx:83
+#: src/components/_social/ArticleList.tsx:161
+msgid "New"
+msgstr "New"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:122
+msgid "New API Token Created"
+msgstr "New API Token Created"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:884
+msgid "New article"
+msgstr "New article"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:916
+msgid "New comment"
+msgstr "New comment"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:477
+msgid "New equipment"
+msgstr "New equipment"
+
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:157
+msgid "New ethics configuration"
+msgstr "New ethics configuration"
+
+#: src/components/_economy/itemOffer/ItemOfferList.tsx:69
+msgid "New item offer"
+msgstr "New item offer"
+
+#: src/components/_economy/company/CompanyDropdown.tsx:151
+#: src/components/_economy/workOffer/WorkOfferList.tsx:169
+#: src/pages/company/[companyId]/index.tsx:67
+msgid "New job offer"
+msgstr "New job offer"
+
+#: src/components/_economy/company/MoveCompanyForm.tsx:77
+msgid "New location"
+msgstr "New location"
+
+#: src/components/_military/mu/MuFormModal.tsx:92
+msgid "New military unit"
+msgstr "New military unit"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1223
+msgid "New MU Application"
+msgstr "New MU Application"
+
+#: src/components/_economy/company/CompanyRenameFormModal.tsx:71
+msgid "New name"
+msgstr "New name"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:392
+msgid "New Party Application"
+msgstr "New Party Application"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:335
+msgid "New Party Leader"
+msgstr "New Party Leader"
+
+#: src/components/_political/event/EventList.tsx:66
+#: src/components/_user/notification/notification.frontConfig.tsx:225
+msgid "New president"
+msgstr "New president"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:686
+msgid "New referred user"
+msgstr "New referred user"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:697
+msgid "New referrer"
+msgstr "New referrer"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:950
+msgid "New subscriber"
+msgstr "New subscriber"
+
+#: src/pages/shop/index.tsx:112
+msgid "New supporters"
+msgstr "New supporters"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:469
+msgid "New weapon"
+msgstr "New weapon"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:515
+msgid "New worker"
+msgstr "New worker"
+
+#: src/components/_user/referral/ReferralList.tsx:72
+msgid "Newest"
+msgstr "Newest"
+
+#: src/components/_layout/LayoutRightIcons.tsx:280
+#: src/components/_layout/MoreButtonNav.tsx:112
+msgid "News"
+msgstr "News"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:18
+msgid "Next one will be a tank"
+msgstr "Next one will be a tank"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:23
+msgid "Next one will be tank"
+msgstr "Next one will be tank"
+
+#: src/components/_military/battle/BattleSystem.tsx:461
+msgid "Next tick"
+msgstr "Next tick"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:39
+msgid "Nice"
+msgstr "Nice"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:66
+msgid "Nice one"
+msgstr "Nice one"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:192
+msgid "Nice work!"
+msgstr "Nice work!"
+
+#: src/components/_military/battle/ActiveBattlesList.tsx:193
+msgid "No active battles"
+msgstr "No active battles"
+
+#: src/components/_political/government/PoliticalEthics.tsx:519
+msgid "No active ethics - Balanced"
+msgstr "No active ethics - Balanced"
+
+#: src/pages/company/[companyId]/index.tsx:78
+msgid "No active job offer"
+msgstr "No active job offer"
+
+#: src/pages/country/[countryId]/index.tsx:285
+msgid "No active wars"
+msgstr "No active wars"
+
+#: src/pages/country/[countryId]/index.tsx:230
+msgid "No allies"
+msgstr "No allies"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:231
+msgid "No API tokens yet. Create one to get started."
+msgstr "No API tokens yet. Create one to get started."
+
+#: src/components/_military/battle/EndedBattlesList.tsx:115
+msgid "No battles yet"
+msgstr "No battles yet"
+
+#: src/pages/country/[countryId]/citizens.tsx:39
+msgid "No citizens"
+msgstr "No citizens"
+
+#: src/pages/country/[countryId]/government.tsx:118
+msgid "No congress members"
+msgstr "No congress members"
+
+#: src/components/_political/contribution/ContributionList.tsx:225
+msgid "No contributions yet"
+msgstr "No contributions yet"
+
+#: src/components/_military/damageRanking/DamageRankingList.tsx:125
+msgid "No damages ranking yet."
+msgstr "No damages ranking yet."
+
+#: src/components/_economy/donation/DonationList.tsx:81
+msgid "No donations yet"
+msgstr "No donations yet"
+
+#: src/components/_military/damageRanking/DamageRankingList.tsx:127
+msgid "No ground ranking yet."
+msgstr "No ground ranking yet."
+
+#: src/components/_user/user/UserEquippedSkins.tsx:192
+msgid "No items equipped"
+msgstr "No items equipped"
+
+#: src/components/_political/law/LawList.tsx:72
+msgid "No laws yet"
+msgstr "No laws yet"
+
+#: src/components/_military/mu/MuList.tsx:93
+msgid "No military units found"
+msgstr "No military units found"
+
+#: src/components/_user/mission/MissionsList.tsx:231
+msgid "No missions available"
+msgstr "No missions available"
+
+#: src/components/_military/damageRanking/DamageRankingList.tsx:128
+msgid "No money ranking yet."
+msgstr "No money ranking yet."
+
+#: src/components/_political/partyMotion/PartyMotionList.tsx:62
+msgid "No motions yet"
+msgstr "No motions yet"
+
+#: src/components/_economy/itemOffer/ItemOfferList.tsx:76
+msgid "No offers found"
+msgstr "No offers found"
+
+#: src/components/_political/government/Government.tsx:177
+msgid "No one nominated yet."
+msgstr "No one nominated yet."
+
+#: src/components/_political/party/PartyList.tsx:95
+msgid "No parties found"
+msgstr "No parties found"
+
+#: src/components/_political/government/Government.tsx:55
+msgid "No president"
+msgstr "No president"
+
+#: src/pages/country/[countryId]/index.tsx:429
+msgid "No production bonus from resources. This country has no specialization."
+msgstr "No production bonus from resources. This country has no specialization."
+
+#: src/components/_user/referral/ReferralList.tsx:88
+msgid "No referrals yet"
+msgstr "No referrals yet"
+
+#: src/pages/user/[userId]/referrals.tsx:60
+msgid "No referrer yet"
+msgstr "No referrer yet"
+
+#: src/components/_user/user/UserEquippedSkins.tsx:113
+msgid "No skins equipped"
+msgstr "No skins equipped"
+
+#: src/pages/country/[countryId]/index.tsx:276
+msgid "No sworn enemy"
+msgstr "No sworn enemy"
+
+#: src/pages/market/index.tsx:127
+msgid "No trading orders"
+msgstr "No trading orders"
+
+#: src/components/_economy/transaction/TransactionList.tsx:114
+msgid "No transactions found"
+msgstr "No transactions found"
+
+#: src/pages/country/[countryId]/wars.tsx:32
+msgid "No wars found"
+msgstr "No wars found"
+
+#: src/components/_economy/workOffer/WorkOfferList.tsx:179
+msgid "No work offers"
+msgstr "No work offers"
+
+#: src/components/_political/government/Government.tsx:185
+#: src/components/_political/government/NominateForm.tsx:59
+msgid "Nominate"
+msgstr "Nominate"
+
+#: src/components/_political/government/Government.tsx:196
+msgid "Nominate a {title}"
+msgstr "Nominate a {title}"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:663
+msgid "Nominated at government"
+msgstr "Nominated at government"
+
+#: src/components/_political/law/LawFormModal.tsx:271
+msgid "Normal"
+msgstr "Normal"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:40
+msgid "Not bad!"
+msgstr "Not bad!"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:36
+msgid "Not impressive, but not shameful"
+msgstr "Not impressive, but not shameful"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:61
+msgid "Now we're talking!"
+msgstr "Now we're talking!"
+
+#: src/components/_economy/donation/DonationList.tsx:71
+msgid "Number of Donors:"
+msgstr "Number of Donors:"
+
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:142
+msgid "Occupied region"
+msgstr "Occupied region"
+
+#: src/utils/translations.tsx:75
+msgid "Oil"
+msgstr "Oil"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:58
+msgid "Okay hacker, chill"
+msgstr "Okay hacker, chill"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:45
+msgid "Okay okay, not bad"
+msgstr "Okay okay, not bad"
+
+#: src/utils/translations.tsx:42
+msgid "Omg, so OP"
+msgstr "Omg, so OP"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:70
+msgid "One step away from legendary..."
+msgstr "One step away from legendary..."
+
+#: src/components/_political/party/party.frontConfig.tsx:287
+#: src/components/_political/party/party.frontConfig.tsx:308
+msgid "Only buffs and food deposits spawn in your borders (coca, grain, livestock and fish)."
+msgstr "Only buffs and food deposits spawn in your borders (coca, grain, livestock and fish)."
+
+#: src/components/_military/tournament/TournamentRegisterButton.tsx:156
+msgid "Only MU owners/commanders can register their MU"
+msgstr "Only MU owners/commanders can register their MU"
+
+#: src/components/_military/tournament/TournamentRegisterButton.tsx:148
+msgid "Only presidents can register their country"
+msgstr "Only presidents can register their country"
+
+#: src/components/_economy/inventoryAccount/InventoryAccount.tsx:55
+msgid "Only supporters can see their spending and income breakdown."
+msgstr "Only supporters can see their spending and income breakdown."
+
+#: src/components/_economy/inventory/case/OpenCaseModal.tsx:451
+msgid "Open"
+msgstr "Open"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:206
+msgid "Open <0>{count}</0>"
+msgstr "Open <0>{count}</0>"
+
+#: src/components/_economy/inventory/case/OpenCaseModal.tsx:471
+msgid "Open case"
+msgstr "Open case"
+
+#: src/components/_economy/transaction/TransactionList.tsx:81
+msgid "Open Case"
+msgstr "Open Case"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:204
+msgid "Open Cases"
+msgstr "Open Cases"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:348
+msgid "Open Chat"
+msgstr "Open Chat"
+
+#: src/components/_user/auth/LoginFormModal.tsx:111
+msgid "Open Email"
+msgstr "Open Email"
+
+#: src/utils/translations.tsx:96
+msgid "Open it to get a better random item"
+msgstr "Open it to get a better random item"
+
+#: src/utils/translations.tsx:93
+msgid "Open it to get a random item"
+msgstr "Open it to get a random item"
+
+#: src/components/_user/premium/PremiumFeatureList.tsx:47
+msgid "Open multiple <0>Cases</0> at same time"
+msgstr "Open multiple <0>Cases</0> at same time"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:349
+msgid "Open the chat"
+msgstr "Open the chat"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:98
+msgid "Open your case!"
+msgstr "Open your case!"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:61
+msgid "Operative"
+msgstr "Operative"
+
+#: src/components/_layout/LayoutLeftIcons.tsx:81
+msgid "Options"
+msgstr "Options"
+
+#: src/components/_military/battle/BattleItem.tsx:347
+msgid "Order"
+msgstr "Order"
+
+#: src/components/_military/battle/ActiveBattlesList.tsx:81
+#: src/components/_military/battle/BattleCountrySide.tsx:69
+msgid "Orders"
+msgstr "Orders"
+
+#: src/pages/market/index.tsx:122
+msgid "Orders cancelled"
+msgstr "Orders cancelled"
+
+#: src/components/_military/battle/ActiveBattlesList.tsx:117
+msgid "Other"
+msgstr "Other"
+
+#: src/components/_political/law/Law.tsx:64
+#: src/components/_political/partyMotion/PartyMotion.tsx:81
+msgid "Outcome"
+msgstr "Outcome"
+
+#: src/components/_military/war/WarHeader.tsx:77
+msgid "Overview"
+msgstr "Overview"
+
+#: src/components/_other/shop/SkinPackItem.tsx:136
+#: src/components/_other/shop/SkinPackModal.tsx:264
+msgid "Owned"
+msgstr "Owned"
+
+#: src/pages/user/[userId]/index.tsx:161
+msgid "Owned Military Units"
+msgstr "Owned Military Units"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1281
+msgid "Ownership of <0/> has been transferred from <1/> to <2/>"
+msgstr "Ownership of <0/> has been transferred from <1/> to <2/>"
+
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:55
+msgid "Pacification Center"
+msgstr "Pacification Center"
+
+#: src/components/_political/party/party.frontConfig.tsx:64
+#: src/components/_political/party/party.frontConfig.tsx:77
+msgid "Pacifist"
+msgstr "Pacifist"
+
+#: src/components/_other/shop/ShopHeader.tsx:29
+msgid "Packs"
+msgstr "Packs"
+
+#: src/components/_user/UserEquipments.tsx:163
+#: src/utils/translations.tsx:198
+msgid "Pants"
+msgstr "Pants"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:220
+msgid "Participate in <0>{count}</0> battles"
+msgstr "Participate in <0>{count}</0> battles"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:218
+msgid "Participate in Battle"
+msgstr "Participate in Battle"
+
+#: src/pages/parties.tsx:13
+msgid "Parties"
+msgstr "Parties"
+
+#: src/components/_layout/LayoutRightIcons.tsx:303
+#: src/components/_layout/MoreButtonNav.tsx:140
+#: src/pages/user/[userId]/index.tsx:168
+msgid "Party"
+msgstr "Party"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:365
+msgid "Party Application Accepted"
+msgstr "Party Application Accepted"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:379
+msgid "Party Application Rejected"
+msgstr "Party Application Rejected"
+
+#: src/components/_political/election/election.frontConfig.tsx:38
+msgid "Party Council election"
+msgstr "Party Council election"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:253
+msgid "Party Council election candidacy is now open in <0/>"
+msgstr "Party Council election candidacy is now open in <0/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:244
+msgid "Party Council election candidate open"
+msgstr "Party Council election candidate open"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:294
+msgid "Party Council election ended"
+msgstr "Party Council election ended"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:303
+msgid "Party Council election has ended in <0/>. Check the results!"
+msgstr "Party Council election has ended in <0/>. Check the results!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:269
+msgid "Party Council election vote open"
+msgstr "Party Council election vote open"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:278
+msgid "Party Council election voting is now open in <0/>"
+msgstr "Party Council election voting is now open in <0/>"
+
+#: src/components/_political/party/PartyFormModal.tsx:36
+msgid "Party created"
+msgstr "Party created"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:406
+msgid "Party Donation Received"
+msgstr "Party Donation Received"
+
+#: src/components/_political/election/election.frontConfig.tsx:33
+msgid "Party Leader election"
+msgstr "Party Leader election"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:248
+msgid "Party Leader election candidacy is now open in <0/>"
+msgstr "Party Leader election candidacy is now open in <0/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:242
+msgid "Party Leader election candidate open"
+msgstr "Party Leader election candidate open"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:292
+msgid "Party Leader election ended"
+msgstr "Party Leader election ended"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:298
+msgid "Party Leader election has ended in <0/>. Check the results!"
+msgstr "Party Leader election has ended in <0/>. Check the results!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:267
+msgid "Party Leader election vote open"
+msgstr "Party Leader election vote open"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:273
+msgid "Party Leader election voting is now open in <0/>"
+msgstr "Party Leader election voting is now open in <0/>"
+
+#: src/components/_political/election/CandidateFormModal.tsx:71
+msgid "Paste a link to your campaign article, or leave empty."
+msgstr "Paste a link to your campaign article, or leave empty."
+
+#: src/pages/shop/index.tsx:43
+msgid "Payment successful! Thanks for supporting the game <3"
+msgstr "Payment successful! Thanks for supporting the game <3"
+
+#: src/components/_political/event/EventList.tsx:63
+msgid "Peace made"
+msgstr "Peace made"
+
+#: src/components/_user/worker/WorkerEditFormModal.tsx:154
+msgid "Pending wage reduction"
+msgstr "Pending wage reduction"
+
+#: src/components/_political/event/event.frontConfig.tsx:350
+msgid "People are angry, an auto revolt has started in <0/>"
+msgstr "People are angry, an auto revolt has started in <0/>"
+
+#: src/utils/translations.tsx:74
+msgid "Petroleum"
+msgstr "Petroleum"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:66
+msgid "Petty Officer"
+msgstr "Petty Officer"
+
+#: src/components/_user/modals/PhoneVerificationModal.tsx:60
+msgid "Phone number verified!"
+msgstr "Phone number verified!"
+
+#: src/components/_user/modals/PhoneVerificationModal.tsx:99
+msgid "Phone Verification"
+msgstr "Phone Verification"
+
+#: src/components/_user/user/UserDropdown.tsx:186
+msgid "Phone verification requested"
+msgstr "Phone verification requested"
+
+#: src/components/_user/modals/PhoneVerificationModal.tsx:105
+msgid "Phone verification required"
+msgstr "Phone verification required"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:137
+msgid "Pick a fight!"
+msgstr "Pick a fight!"
+
+#: src/utils/translations.tsx:97
+msgid "Pill"
+msgstr "Pill"
+
+#: src/components/_user/premium/PremiumFeatureList.tsx:140
+msgid "Plant a tree in the data center"
+msgstr "Plant a tree in the data center"
+
+#: src/components/_user/auth/ConnectFromModal.tsx:93
+#: src/components/_user/auth/ConnectFromModal.tsx:113
+#: src/components/_user/auth/ConnectFromModal.tsx:180
+msgid "Please complete the CAPTCHA."
+msgstr "Please complete the CAPTCHA."
+
+#: src/components/_military/mu/MuFormModal.tsx:68
+#: src/components/_political/party/PartyFormModal.tsx:61
+msgid "Please select a region"
+msgstr "Please select a region"
+
+#: src/components/_layout/LayoutMapOptions.tsx:136
+msgid "Political"
+msgstr "Political"
+
+#: src/components/_political/law/LawTypeSelect.tsx:90
+msgid "Political laws"
+msgstr "Political laws"
+
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:66
+msgid "Political motions"
+msgstr "Political motions"
+
+#: src/components/_user/user/skills.frontConfig.tsx:128
+#: src/components/_user/user/skills.frontConfig.tsx:129
+msgid "Precision"
+msgstr "Precision"
+
+#: src/pages/shop/index.tsx:165
+msgid "Premium"
+msgstr "Premium"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1128
+msgid "Premium activated"
+msgstr "Premium activated"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1138
+msgid "Premium expired"
+msgstr "Premium expired"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1181
+msgid "Premium gift expired"
+msgstr "Premium gift expired"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1159
+msgid "Premium gift received"
+msgstr "Premium gift received"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1146
+msgid "Premium gift sent"
+msgstr "Premium gift sent"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:46
+msgid "Premium has started working"
+msgstr "Premium has started working"
+
+#: src/components/_political/government/Government.tsx:51
+msgid "President"
+msgstr "President"
+
+#: src/components/_political/election/election.frontConfig.tsx:23
+msgid "Presidential election"
+msgstr "Presidential election"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:139
+msgid "Presidential election candidacy is now open in <0/>"
+msgstr "Presidential election candidacy is now open in <0/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:133
+msgid "Presidential election candidate open"
+msgstr "Presidential election candidate open"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:183
+msgid "Presidential election ended"
+msgstr "Presidential election ended"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:189
+msgid "Presidential election has ended in <0/>. Check the results!"
+msgstr "Presidential election has ended in <0/>. Check the results!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:158
+msgid "Presidential election vote open"
+msgstr "Presidential election vote open"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:164
+msgid "Presidential election voting is now open in <0/>"
+msgstr "Presidential election voting is now open in <0/>"
+
+#: src/pages/country/[countryId]/elections.tsx:56
+msgid "Presidential elections"
+msgstr "Presidential elections"
+
+#: src/components/_political/election/election.frontConfig.tsx:43
+msgid "Primary election"
+msgstr "Primary election"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:349
+msgid "Primary Election Ended"
+msgstr "Primary Election Ended"
+
+#. placeholder {0}: ethicsBonuses.militarism[2].warPriorityHours
+#: src/components/_political/party/party.frontConfig.tsx:107
+msgid "Priority from declaring wars or winning battles is <0>{0} hours</0> instead of 24."
+msgstr "Priority from declaring wars or winning battles is <0>{0} hours</0> instead of 24."
+
+#: src/pages/index.tsx:142
+#: src/pages/rules.tsx:36
+msgid "Privacy"
+msgstr "Privacy"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:31
+msgid "Private"
+msgstr "Private"
+
+#: src/components/_user/user/skills.frontConfig.tsx:48
+msgid "Probability of landing a critical hit"
+msgstr "Probability of landing a critical hit"
+
+#: src/components/_economy/company/ProduceButton.tsx:102
+#: src/components/_user/mission/mission.frontConfig.tsx:422
+msgid "Produce"
+msgstr "Produce"
+
+#: src/components/_economy/company/ProduceAllButton.tsx:90
+msgid "Produce All"
+msgstr "Produce All"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:424
+msgid "Produce items <0>{count}</0> times"
+msgstr "Produce items <0>{count}</0> times"
+
+#: src/components/_economy/company/CompanyChangeItemFormModal.tsx:71
+msgid "Produced item"
+msgstr "Produced item"
+
+#: src/components/_economy/company/CompanyChangeItemFormModal.tsx:59
+msgid "Produced item changed!"
+msgstr "Produced item changed!"
+
+#: src/components/_economy/workOffer/WorkOfferList.tsx:159
+#: src/components/_user/user/skills.frontConfig.tsx:101
+#: src/components/_user/user/skills.frontConfig.tsx:102
+#: src/pages/company/[companyId]/index.tsx:49
+msgid "Production"
+msgstr "Production"
+
+#: src/components/_economy/company/CompanyProductionBonusTag.tsx:48
+#: src/components/_economy/company/RecommendedCompanyRegions.tsx:116
+#: src/pages/region/[regionId]/index.tsx:69
+msgid "Production bonus"
+msgstr "Production bonus"
+
+#: src/components/_economy/workOffer/EstimatedCompanyBenefit.tsx:156
+msgid "Production bonus:"
+msgstr "Production bonus:"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:716
+msgid "Production in<0/> is full, you should start production!"
+msgstr "Production in<0/> is full, you should start production!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:714
+msgid "Production is full"
+msgstr "Production is full"
+
+#: src/components/_user/user/MyAvatar.tsx:29
+msgid "Profile"
+msgstr "Προφίλ"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1251
+msgid "Promoted to Commander"
+msgstr "Promoted to Commander"
+
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:125
+#: src/components/_political/partyMotion/PartyMotionList.tsx:48
+msgid "Propose a motion"
+msgstr "Propose a motion"
+
+#: src/components/_political/law/law.frontConfig.tsx:203
+msgid "Propose alliance"
+msgstr "Propose alliance"
+
+#. placeholder {0}: gameConfig?.battle.allianceDamagesBonusPercent
+#: src/components/_political/law/law.frontConfig.tsx:209
+msgid "Propose an alliance to <0/>, increasing your citizens damages when fighting for them by <1>{0}</1> and reciprocally"
+msgstr "Propose an alliance to <0/>, increasing your citizens damages when fighting for them by <1>{0}</1> and reciprocally"
+
+#: src/components/_political/law/law.frontConfig.tsx:204
+msgid "Propose an alliance to another country"
+msgstr "Propose an alliance to another country"
+
+#: src/components/_political/law/LawFormModal.tsx:318
+msgid "Propose law"
+msgstr "Πρόταση νόμου"
+
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:187
+msgid "Propose motion"
+msgstr "Propose motion"
+
+#: src/components/_political/law/law.frontConfig.tsx:108
+msgid "Propose peace"
+msgstr "Propose peace"
+
+#: src/components/_political/law/law.frontConfig.tsx:114
+msgid "Propose peace to <0/>"
+msgstr "Propose peace to <0/>"
+
+#: src/components/_political/law/law.frontConfig.tsx:109
+msgid "Propose peace to another country"
+msgstr "Propose peace to another country"
+
+#. placeholder {0}: law.data.amount ?? 0
+#: src/components/_political/law/law.frontConfig.tsx:312
+msgid "Propose to buy <0/> from <1/> for <2>{0}</2>"
+msgstr "Propose to buy <0/> from <1/> for <2>{0}</2>"
+
+#: src/components/_political/law/law.frontConfig.tsx:306
+msgid "Propose to buy a region"
+msgstr "Propose to buy a region"
+
+#: src/components/_political/law/law.frontConfig.tsx:307
+msgid "Propose to buy a region from another country"
+msgstr "Propose to buy a region from another country"
+
+#: src/components/_user/worker/WorkerEditFormModal.tsx:211
+msgid "Propose wage reduction"
+msgstr "Propose wage reduction"
+
+#: src/components/_other/shop/ShopHeader.tsx:43
+msgid "Propositions"
+msgstr "Propositions"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:35
+msgid "Put yourself to work!"
+msgstr "Put yourself to work!"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:197
+#: src/components/_economy/inventory/DismantleModal.tsx:287
+msgid "Quick dismantle"
+msgstr "Quick dismantle"
+
+#: src/components/_user/premium/PremiumFeatureList.tsx:56
+msgid "Quickly dismantle items"
+msgstr "Quickly dismantle items"
+
+#: src/components/_military/damageRanking/DamageRankingList.tsx:251
+msgid "Ranking loot chance"
+msgstr "Ranking loot chance"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1491
+msgid "Ranking Reward"
+msgstr "Ranking Reward"
+
+#: src/components/_layout/MoreButtonNav.tsx:120
+#: src/pages/country/[countryId]/index.tsx:165
+#: src/pages/user/[userId]/index.tsx:121
+msgid "Rankings"
+msgstr "Rankings"
+
+#: src/components/_layout/LayoutRightIcons.tsx:313
+msgid "Ranks"
+msgstr "Ranks"
+
+#: src/components/_economy/workOffer/EstimatedCompanyBenefit.tsx:128
+msgid "Raw materials:"
+msgstr "Raw materials:"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:381
+msgid "Reach level 10"
+msgstr "Reach level 10"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:380
+msgid "Reach Level 10"
+msgstr "Reach Level 10"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:376
+msgid "Reach level 5"
+msgstr "Reach level 5"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:375
+msgid "Reach Level 5"
+msgstr "Reach Level 5"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:412
+msgid "Reach military rank 10"
+msgstr "Reach military rank 10"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:411
+msgid "Reach Military Rank 10"
+msgstr "Reach Military Rank 10"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:407
+msgid "Reach military rank 5"
+msgstr "Reach military rank 5"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:406
+msgid "Reach Military Rank 5"
+msgstr "Reach Military Rank 5"
+
+#: src/components/_user/user/SkillValue.tsx:171
+msgid "Reached limit:"
+msgstr "Reached limit:"
+
+#. placeholder {0}: leveling.level + 1
+#: src/components/_user/user/Level.tsx:108
+msgid "Reaching level {0} will give you <0>{nextLevelSkillPoints} Skill Points</0>."
+msgstr "Reaching level {0} will give you <0>{nextLevelSkillPoints} Skill Points</0>."
+
+#: src/components/_user/mission/mission.frontConfig.tsx:330
+msgid "Read <0>{count}</0> articles"
+msgstr "Read <0>{count}</0> articles"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:328
+msgid "Read Article"
+msgstr "Read Article"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:130
+msgid "Ready for battle!"
+msgstr "Ready for battle!"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:126
+msgid "Rear Admiral"
+msgstr "Rear Admiral"
+
+#: src/components/_political/law/Law.tsx:71
+#: src/components/_political/law/LawFormModal.tsx:179
+msgid "Reason"
+msgstr "Reason"
+
+#: src/pages/party/[partyId]/index.tsx:85
+msgid "Recent Applications"
+msgstr "Recent Applications"
+
+#: src/pages/company/[companyId]/index.tsx:101
+msgid "Recipe"
+msgstr "Recipe"
+
+#: src/components/_other/shop/SkinPackModal.tsx:232
+msgid "Recipient"
+msgstr "Recipient"
+
+#: src/components/_economy/company/RecommendedCompanyRegions.tsx:84
+msgid "Recommended regions"
+msgstr "Recommended regions"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:21
+msgid "Recruit"
+msgstr "Recruit"
+
+#: src/components/_user/user/skills.frontConfig.tsx:68
+msgid "Reduces health lost when fighting in battles"
+msgstr "Reduces health lost when fighting in battles"
+
+#: src/pages/user/[userId]/referrals.tsx:87
+msgid "Referral link copied to clipboard"
+msgstr "Referral link copied to clipboard"
+
+#: src/components/_user/user/UserHeader.tsx:210
+#: src/components/_user/user/UserRankingsPanel.tsx:50
+#: src/pages/user/[userId]/index.tsx:211
+#: src/pages/user/[userId]/referrals.tsx:67
+msgid "Referrals"
+msgstr "Referrals"
+
+#: src/pages/user/[userId]/referrals.tsx:42
+msgid "Referrer"
+msgstr "Referrer"
+
+#: src/pages/user/[userId]/referrals.tsx:127
+msgid "Referrer has been set"
+msgstr "Referrer has been set"
+
+#: src/pages/user/[userId]/referrals.tsx:146
+msgid "Referrer username"
+msgstr "Referrer username"
+
+#: src/pages/user/[userId]/index.tsx:120
+msgid "Refresh every hour"
+msgstr "Refresh every hour"
+
+#: src/components/_layout/LayoutUserMenu.tsx:189
+msgid "Regen in..."
+msgstr "Regen in..."
+
+#: src/utils/translations.tsx:57
+msgid "Regens <0>10</0> when consumed"
+msgstr "Regens <0>10</0> when consumed"
+
+#: src/utils/translations.tsx:66
+msgid "Regens <0>20</0> when consumed"
+msgstr "Regens <0>20</0> when consumed"
+
+#: src/utils/translations.tsx:45
+msgid "Regens <0>30</0> when consumed"
+msgstr "Regens <0>30</0> when consumed"
+
+#: src/components/_political/party/PartyFormModal.tsx:109
+msgid "Region"
+msgstr "Region"
+
+#: src/components/_political/law/law.frontConfig.tsx:288
+msgid "Region buy offer"
+msgstr "Region buy offer"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1048
+msgid "Region is revolting!"
+msgstr "Region is revolting!"
+
+#: src/components/_political/event/EventList.tsx:68
+msgid "Region liberated"
+msgstr "Region liberated"
+
+#: src/components/_political/event/EventList.tsx:67
+msgid "Region transfer"
+msgstr "Region transfer"
+
+#: src/components/_layout/LoadingScreenContent.tsx:20
+msgid "regions"
+msgstr "regions"
+
+#: src/components/_political/country/CountryHeader.tsx:114
+msgid "Regions"
+msgstr "Regions"
+
+#: src/components/_military/tournament/TournamentRegisterButton.tsx:131
+msgid "Register"
+msgstr "Register"
+
+#: src/utils/translations.tsx:182
+msgid "Reinforced Boots"
+msgstr "Reinforced Boots"
+
+#: src/utils/translations.tsx:173
+msgid "Reinforced Chest"
+msgstr "Reinforced Chest"
+
+#: src/utils/translations.tsx:191
+msgid "Reinforced Gloves"
+msgstr "Reinforced Gloves"
+
+#: src/utils/translations.tsx:164
+msgid "Reinforced Helmet"
+msgstr "Reinforced Helmet"
+
+#: src/utils/translations.tsx:200
+msgid "Reinforced Pants"
+msgstr "Reinforced Pants"
+
+#: src/components/_political/law/Law.tsx:181
+#: src/components/_political/partyMotion/PartyMotion.tsx:180
+msgid "Reject"
+msgstr "Reject"
+
+#: src/components/_political/law/LawStatus.tsx:45
+#: src/components/_political/partyMotion/PartyMotionStatus.tsx:54
+msgid "Rejected"
+msgstr "Rejected"
+
+#: src/components/_layout/LayoutUserMenu.tsx:215
+msgid "Remaining buff duration"
+msgstr "Remaining buff duration"
+
+#: src/components/_layout/LayoutUserMenu.tsx:228
+msgid "Remaining debuff duration"
+msgstr "Remaining debuff duration"
+
+#: src/components/_political/law/law.frontConfig.tsx:154
+msgid "Remove <0/> from congress due to inactivity"
+msgstr "Remove <0/> from congress due to inactivity"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:38
+msgid "Remove <0/> from the party council"
+msgstr "Remove <0/> from the party council"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:32
+msgid "Remove a member from the party council"
+msgstr "Remove a member from the party council"
+
+#: src/pages/market/index.tsx:174
+#: src/pages/market/index.tsx:234
+msgid "Remove all"
+msgstr "Remove all"
+
+#: src/components/_political/law/law.frontConfig.tsx:148
+msgid "Remove an inactive congress member from its position"
+msgstr "Remove an inactive congress member from its position"
+
+#: src/components/_user/user/UserDropdown.tsx:394
+msgid "Remove Avatar"
+msgstr "Remove Avatar"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:31
+msgid "Remove council member"
+msgstr "Remove council member"
+
+#: src/components/_user/user/UserDropdown.tsx:416
+msgid "Remove Description"
+msgstr "Remove Description"
+
+#: src/components/_political/law/law.frontConfig.tsx:278
+msgid "Remove enemy"
+msgstr "Remove enemy"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:60
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:63
+msgid "Remove the current party leader from their position"
+msgstr "Remove the current party leader from their position"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1237
+msgid "Removed from Military Unit"
+msgstr "Removed from Military Unit"
+
+#: src/components/_economy/company/CompanyDropdown.tsx:211
+msgid "Rename"
+msgstr "Rename"
+
+#: src/components/_economy/company/CompanyRenameFormModal.tsx:66
+#: src/components/_economy/company/CompanyRenameFormModal.tsx:82
+msgid "Rename company"
+msgstr "Rename company"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:80
+msgid "Replace all party ethics with a new configuration"
+msgstr "Replace all party ethics with a new configuration"
+
+#: src/components/_user/user/UserDropdown.tsx:267
+msgid "Report user"
+msgstr "Αναφορά χρήστη"
+
+#: src/components/_political/party/party.frontConfig.tsx:217
+#: src/components/_political/party/party.frontConfig.tsx:232
+msgid "Republican"
+msgstr "Republican"
+
+#: src/components/_user/user/UserDropdown.tsx:334
+msgid "Request Phone Verification"
+msgstr "Request Phone Verification"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:197
+msgid "Requests:"
+msgstr "Requests:"
+
+#: src/components/_user/mission/MissionItem.tsx:113
+msgid "Reroll Mission"
+msgstr "Reroll Mission"
+
+#: src/pages/user/[userId]/skills.tsx:161
+msgid "Reset"
+msgstr "Reset"
+
+#: src/components/_user/auth/ConnectFromModal.tsx:280
+msgid "Reset CAPTCHA"
+msgstr "Reset CAPTCHA"
+
+#: src/pages/user/[userId]/settings.tsx:72
+msgid "Reset tutorials"
+msgstr "Reset tutorials"
+
+#: src/components/_user/user/UserDropdown.tsx:405
+msgid "Reset Username"
+msgstr "Reset Username"
+
+#: src/pages/region/[regionId]/index.tsx:109
+msgid "Reshuffle in"
+msgstr "Reshuffle in"
+
+#: src/components/_military/hit/HitButton.tsx:284
+msgid "Resist"
+msgstr "Resist"
+
+#: src/pages/region/[regionId]/index.tsx:125
+msgid "Resistance"
+msgstr "Resistance"
+
+#: src/components/_political/contribution/ContributionList.tsx:198
+msgid "Resistance Contributors"
+msgstr "Resistance Contributors"
+
+#: src/pages/country/[countryId]/index.tsx:302
+#: src/pages/region/[regionId]/index.tsx:49
+msgid "Resources"
+msgstr "Πόροι"
+
+#: src/components/_political/event/EventList.tsx:80
+msgid "Resources reshuffled"
+msgstr "Resources reshuffled"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:991
+msgid "Response to message"
+msgstr "Response to message"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:164
+msgid "Restore your health!"
+msgstr "Restore your health!"
+
+#: src/components/_political/law/law.frontConfig.tsx:324
+msgid "Return a region to its original country"
+msgstr "Return a region to its original country"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:217
+msgid "Revoke API token?"
+msgstr "Revoke API token?"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1062
+msgid "Revolt started!"
+msgstr "Revolt started!"
+
+#: src/components/_political/event/EventList.tsx:77
+msgid "Revolution ended"
+msgstr "Revolution ended"
+
+#: src/components/_political/event/EventList.tsx:76
+msgid "Revolution started"
+msgstr "Revolution started"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1077
+msgid "Revolution started!"
+msgstr "Revolution started!"
+
+#: src/utils/translations.tsx:24
+msgid "Rifle"
+msgstr "Rifle"
+
+#: src/components/_political/government/Government.tsx:136
+msgid "Rights"
+msgstr "Rights"
+
+#. placeholder {0}: (roundIndex ?? 0) + 1
+#. placeholder {0}: i + 1
+#: src/components/_military/battle/BattleTimelineRound.tsx:88
+#: src/components/_military/damageRanking/DamageRankingSides.tsx:73
+msgid "Round #{0}"
+msgstr "Round #{0}"
+
+#. placeholder {0}: data.roundNumber
+#: src/components/_user/notification/notification.frontConfig.tsx:804
+msgid "Round <0>#{0}</0> in <1/> is about to end!"
+msgstr "Round <0>#{0}</0> in <1/> is about to end!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:802
+msgid "Round about to end"
+msgstr "Round about to end"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:781
+msgid "Round ended"
+msgstr "Round ended"
+
+#: src/components/_military/battle/BattleTimeline.tsx:57
+msgid "Rounds timeline"
+msgstr "Rounds timeline"
+
+#: src/components/_military/war/WarItem.tsx:56
+#: src/components/_military/war/WarItem.tsx:90
+msgid "Rounds won"
+msgstr "Rounds won"
+
+#: src/components/_military/war/WarComparison.tsx:78
+msgid "Rounds Won"
+msgstr "Rounds Won"
+
+#: src/components/_layout/LayoutLeftIcons.tsx:91
+#: src/components/_user/auth/WelcomeModal.tsx:149
+msgid "Rules"
+msgstr "Rules"
+
+#: src/pages/country/[countryId]/index.tsx:310
+msgid "Ruling Party"
+msgstr "Ruling Party"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:154
+msgid "Running low on health?"
+msgstr "Running low on health?"
+
+#: src/components/_political/party/PartyDescriptionModal.tsx:69
+#: src/components/_user/auth/WelcomeModal.tsx:161
+#: src/pages/user/[userId]/skills.tsx:205
+msgid "Save"
+msgstr "Save"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:124
+msgid "Save your progress!"
+msgstr "Save your progress!"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:202
+msgid "Say hello!"
+msgstr "Say hello!"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:14
+msgid "Scammed"
+msgstr "Scammed"
+
+#: src/utils/translations.tsx:40
+msgid "Scraps"
+msgstr "Scraps"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:75
+msgid "Screenshot or it didn't happen"
+msgstr "Screenshot or it didn't happen"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:64
+msgid "Screenshot this or no one will believe you"
+msgstr "Screenshot this or no one will believe you"
+
+#: src/components/_political/country/CountrySelectV2.tsx:210
+msgid "Search countries..."
+msgstr "Search countries..."
+
+#: src/components/_other/shop/SkinPackModal.tsx:234
+msgid "Search recipient username..."
+msgstr "Search recipient username..."
+
+#: src/components/_political/government/NominateForm.tsx:47
+msgid "Search username to nominate..."
+msgstr "Search username to nominate..."
+
+#: src/components/_user/premium/PremiumFeatureList.tsx:44
+msgid "See all your workers and companies stats"
+msgstr "See all your workers and companies stats"
+
+#: src/components/_user/premium/PremiumFeatureList.tsx:116
+msgid "See your spending and income breakdown"
+msgstr "See your spending and income breakdown"
+
+#: src/components/_military/mu/MuFormModal.tsx:117
+msgid "Select a location"
+msgstr "Select a location"
+
+#: src/components/_political/party/PartyFormModal.tsx:110
+msgid "Select a region"
+msgstr "Select a region"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:246
+msgid "Select all"
+msgstr "Select all"
+
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:143
+msgid "Select an occupied region"
+msgstr "Select an occupied region"
+
+#: src/components/_user/user/UserDropdown.tsx:240
+msgid "Select banner"
+msgstr "Select banner"
+
+#: src/components/_political/law/LawTypeSelect.tsx:66
+msgid "Select law type"
+msgstr "Select law type"
+
+#: src/components/_political/law/LawFormModal.tsx:268
+msgid "Select map accent"
+msgstr "Select map accent"
+
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:59
+msgid "Select motion type"
+msgstr "Select motion type"
+
+#: src/components/_user/user/UserDropdown.tsx:247
+msgid "Select skin"
+msgstr "Select skin"
+
+#: src/components/_economy/work/WorkChart.tsx:223
+#: src/components/_user/mission/mission.frontConfig.tsx:60
+msgid "Self Work"
+msgstr "Self Work"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:62
+msgid "Self work <0>{count}</0> times in your companies"
+msgstr "Self work <0>{count}</0> times in your companies"
+
+#: src/components/_economy/company/CompanyDropdown.tsx:253
+msgid "Sell company?"
+msgstr "Sell company?"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:196
+msgid "Sell for <0>{count}</0> money on market"
+msgstr "Sell for <0>{count}</0> money on market"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:54
+msgid "Sell it, you need to buy more cases to gamble!"
+msgstr "Sell it, you need to buy more cases to gamble!"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:194
+msgid "Sell Items"
+msgstr "Sell Items"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:746
+msgid "Sell order match!"
+msgstr "Sell order match!"
+
+#: src/pages/market/index.tsx:183
+msgid "Sell orders"
+msgstr "Sell orders"
+
+#: src/components/_economy/workOffer/EstimatedCompanyBenefit.tsx:111
+msgid "Sell price:"
+msgstr "Sell price:"
+
+#: src/components/_economy/itemTrading/ItemTradingOrderItem.tsx:147
+msgid "sells"
+msgstr "sells"
+
+#. placeholder {0}: law.data.amount
+#: src/components/_political/law/law.frontConfig.tsx:268
+msgid "Send <0>{0}</0> to <1/>"
+msgstr "Send <0>{0}</0> to <1/>"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:362
+msgid "Send <0>{count}</0> messages"
+msgstr "Send <0>{count}</0> messages"
+
+#: src/components/_user/user/UserDropdown.tsx:424
+msgid "Send a message"
+msgstr "Send a message"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:222
+msgid "Send a message to complete the tutorial. Welcome to the community!"
+msgstr "Send a message to complete the tutorial. Welcome to the community!"
+
+#: src/components/_user/modals/PhoneVerificationModal.tsx:126
+msgid "Send Code"
+msgstr "Send Code"
+
+#: src/components/_other/shop/SkinPackModal.tsx:300
+msgid "Send Gift"
+msgstr "Send Gift"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:360
+msgid "Send Message"
+msgstr "Send Message"
+
+#: src/components/_political/law/law.frontConfig.tsx:263
+msgid "Send money to another country"
+msgstr "Send money to another country"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:51
+msgid "Sergeant"
+msgstr "Sergeant"
+
+#: src/components/_user/premium/PremiumFeatureList.tsx:131
+msgid "Set a <0>description</0>"
+msgstr "Set a <0>description</0>"
+
+#: src/pages/user/[userId]/referrals.tsx:153
+msgid "Set a referrer"
+msgstr "Set a referrer"
+
+#: src/components/_political/law/law.frontConfig.tsx:340
+msgid "Set a welcome article for your country"
+msgstr "Set a welcome article for your country"
+
+#: src/components/_political/law/law.frontConfig.tsx:345
+msgid "Set a welcome article for your country<0/>"
+msgstr "Set a welcome article for your country<0/>"
+
+#: src/components/_political/law/law.frontConfig.tsx:355
+msgid "Set country color"
+msgstr "Set country color"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:88
+msgid "Set new party ethics configuration:"
+msgstr "Set new party ethics configuration:"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:79
+msgid "Set party ethics"
+msgstr "Set party ethics"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:400
+msgid "Set Profile Picture"
+msgstr "Set Profile Picture"
+
+#: src/components/_political/law/law.frontConfig.tsx:401
+msgid "Set specialization item"
+msgstr "Set specialization item"
+
+#. placeholder {0}: ts[law.data.itemCode]
+#: src/components/_political/law/law.frontConfig.tsx:407
+msgid "Set the country's specialized item to <0>{0}</0>.<1/>The country strategic resources <2>Production Bonus</2> will be available for local companies producing this item."
+msgstr "Set the country's specialized item to <0>{0}</0>.<1/>The country strategic resources <2>Production Bonus</2> will be available for local companies producing this item."
+
+#: src/components/_political/law/law.frontConfig.tsx:402
+msgid "Set the country's specialized production item"
+msgstr "Set the country's specialized production item"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:394
+msgid "Set Username"
+msgstr "Set Username"
+
+#: src/components/_political/law/law.frontConfig.tsx:339
+msgid "Set welcome article"
+msgstr "Set welcome article"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:401
+msgid "Set your profile picture"
+msgstr "Set your profile picture"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:395
+msgid "Set your username"
+msgstr "Set your username"
+
+#: src/components/_user/user/MyAvatar.tsx:54
+#: src/components/_user/user/UserHeader.tsx:216
+msgid "Settings"
+msgstr "Settings"
+
+#: src/components/_layout/LayoutRightIcons.tsx:267
+#: src/components/_layout/MoreButtonNav.tsx:73
+#: src/components/_other/shop/ShopHeader.tsx:52
+msgid "Shop"
+msgstr "Shop"
+
+#: src/components/_military/damageRanking/DamageRankingList.tsx:216
+#: src/components/_social/ArticleTags.tsx:268
+#: src/components/_social/ArticleTags.tsx:319
+#: src/components/_social/ArticleTags.tsx:427
+msgid "Show more"
+msgstr "Show more"
+
+#: src/components/_social/ArticleList.tsx:140
+msgid "Show only articles with positive score (score >= -5)"
+msgstr "Show only articles with positive score (score >= -5)"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:19
+msgid "Skill issue?"
+msgstr "Skill issue?"
+
+#: src/components/_user/user/SkillValue.tsx:45
+msgid "Skill upgrade:"
+msgstr "Skill upgrade:"
+
+#: src/components/_user/user/MyAvatar.tsx:41
+#: src/components/_user/user/UserHeader.tsx:171
+#: src/pages/user/[userId]/index.tsx:149
+msgid "Skills"
+msgstr "Skills"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:109
+msgid "Skills make you stronger. Let's boost your abilities!"
+msgstr "Skills make you stronger. Let's boost your abilities!"
+
+#: src/pages/user/[userId]/skills.tsx:53
+msgid "Skills saved!"
+msgstr "Skills saved!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1716
+msgid "Skin gift received"
+msgstr "Skin gift received"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1684
+msgid "Skin gift sent"
+msgstr "Skin gift sent"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1748
+msgid "Skin pack gift sent"
+msgstr "Skin pack gift sent"
+
+#: src/components/_other/shop/SkinPackModal.tsx:85
+msgid "Skin pack unlocked! All skins equipped!"
+msgstr "Skin pack unlocked! All skins equipped!"
+
+#: src/components/_other/shop/SkinCollectionModal.tsx:91
+msgid "Skin Packs"
+msgstr "Skin Packs"
+
+#: src/components/_other/shop/ShopHeader.tsx:22
+#: src/pages/user/[userId]/index.tsx:91
+msgid "Skins"
+msgstr "Skins"
+
+#: src/components/_other/shop/SkinPackModal.tsx:250
+msgid "Skins in this pack"
+msgstr "Skins in this pack"
+
+#: src/components/_other/tour/TutorialStep.tsx:174
+msgid "Skip Tutorial"
+msgstr "Skip Tutorial"
+
+#: src/utils/translations.tsx:25
+msgid "Sniper"
+msgstr "Sniper"
+
+#: src/components/_economy/company/CompanyList.tsx:79
+msgid "Some of your companies are disabled."
+msgstr "Some of your companies are disabled."
+
+#: src/components/_layout/LayoutMapOptions.tsx:306
+msgid "Sound"
+msgstr "Sound"
+
+#: src/components/_layout/LayoutMapOptions.tsx:309
+msgid "Sound effects"
+msgstr "Sound effects"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:41
+msgid "Specialist"
+msgstr "Specialist"
+
+#: src/components/_layout/LayoutMapOptions.tsx:177
+msgid "Specialization"
+msgstr "Specialization"
+
+#: src/components/_political/law/LawFormModal.tsx:294
+msgid "Specialization item"
+msgstr "Specialization item"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:74
+msgid "Spend your <0>Energy</0> working here to earn <1>Money</1>. Keep clicking to work more!"
+msgstr "Spend your <0>Energy</0> working here to earn <1>Money</1>. Keep clicking to work more!"
+
+#: src/components/_economy/inventoryAccount/InventoryAccount.tsx:137
+msgid "Spendings"
+msgstr "Spendings"
+
+#: src/components/_political/law/law.frontConfig.tsx:132
+#: src/components/_political/law/law.frontConfig.tsx:134
+msgid "Start a congress election, now"
+msgstr "Start a congress election, now"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:51
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:53
+msgid "Start a party council election immediately"
+msgstr "Start a party council election immediately"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:71
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:73
+msgid "Start a party leader election immediately"
+msgstr "Start a party leader election immediately"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:104
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:106
+msgid "Start a party primary election immediately"
+msgstr "Start a party primary election immediately"
+
+#: src/components/_political/law/law.frontConfig.tsx:124
+#: src/components/_political/law/law.frontConfig.tsx:126
+msgid "Start a presidential election, now"
+msgstr "Start a presidential election, now"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:113
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:115
+msgid "Start a revolution to overthrow the government"
+msgstr "Start a revolution to overthrow the government"
+
+#: src/components/_political/law/law.frontConfig.tsx:131
+msgid "Start congress election"
+msgstr "Start congress election"
+
+#: src/components/_political/law/law.frontConfig.tsx:123
+msgid "Start presidential election"
+msgstr "Start presidential election"
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:112
+msgid "Start revolution"
+msgstr "Start revolution"
+
+#: src/components/_military/battle/BattleHeader.tsx:185
+#: src/components/_military/war/WarHeader.tsx:61
+#: src/components/_military/war/WarItem.tsx:108
+msgid "Started <0/>"
+msgstr "Started <0/>"
+
+#: src/components/_user/mission/MissionsList.tsx:214
+msgid "Starting"
+msgstr "Starting"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:31
+msgid "Starting from the bottom..."
+msgstr "Starting from the bottom..."
+
+#: src/pages/events/index.tsx:117
+msgid "Starts soon..."
+msgstr "Starts soon..."
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:11
+msgid "Statistically impossible to stay this unlucky"
+msgstr "Statistically impossible to stay this unlucky"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:92
+msgid "Statistically rigged"
+msgstr "Statistically rigged"
+
+#: src/pages/company/[companyId]/index.tsx:56
+#: src/pages/war/[warId]/index.tsx:65
+msgid "Stats"
+msgstr "Stats"
+
+#: src/components/_layout/LayoutUserMenu.tsx:190
+msgid "Stats regenerate every hour"
+msgstr "Stats regenerate every hour"
+
+#: src/pages/war/[warId]/index.tsx:40
+msgid "Status"
+msgstr "Status"
+
+#: src/utils/translations.tsx:33
+msgid "Steak"
+msgstr "Steak"
+
+#: src/utils/translations.tsx:37
+msgid "Steel"
+msgstr "Steel"
+
+#: src/components/_economy/company/CompanyTags.tsx:107
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:78
+msgid "Storage"
+msgstr "Storage"
+
+#: src/pages/region/[regionId]/index.tsx:97
+msgid "Strategic"
+msgstr "Strategic"
+
+#: src/pages/region/[regionId]/index.tsx:93
+msgid "Strategic resource"
+msgstr "Strategic resource"
+
+#: src/components/_layout/LayoutMapOptions.tsx:189
+msgid "Strategic resources"
+msgstr "Strategic resources"
+
+#: src/components/_political/event/event.frontConfig.tsx:364
+msgid "Strategic resources have been reshuffled across the whole map."
+msgstr "Strategic resources have been reshuffled across the whole map."
+
+#: src/components/_social/ArticleList.tsx:189
+msgid "Subscribed"
+msgstr "Subscribed"
+
+#: src/components/_user/user/UserRankingsPanel.tsx:56
+msgid "Subscribers"
+msgstr "Subscribers"
+
+#: src/components/_user/auth/ConnectFromModal.tsx:138
+msgid "Successfully logged in!"
+msgstr "Successfully logged in!"
+
+#: src/components/_user/premium/PremiumActions.tsx:57
+msgid "Support the game"
+msgstr "Support the game"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:208
+msgid "Support the game and quickly dismantle items!"
+msgstr "Support the game and quickly dismantle items!"
+
+#: src/components/_economy/inventoryAccount/InventoryAccount.tsx:60
+msgid "Support us"
+msgstr "Support us"
+
+#: src/components/_economy/work/WorkChart.tsx:271
+#: src/components/_ui/PremiumButtonTag.tsx:22
+msgid "Supporter"
+msgstr "Supporter"
+
+#: src/components/_economy/inventoryAccount/InventoryAccount.tsx:51
+#: src/components/_user/user/UserDropdown.tsx:211
+#: src/components/_user/user/UserDropdown.tsx:220
+#: src/components/_user/user/UserDropdown.tsx:229
+msgid "Supporter feature"
+msgstr "Supporter feature"
+
+#: src/components/_user/user/UserRankingsPanel.tsx:68
+msgid "Supporter gifts"
+msgstr "Supporter gifts"
+
+#: src/components/_user/user/UserRankingsPanel.tsx:62
+msgid "Supporter months"
+msgstr "Supporter months"
+
+#: src/components/_user/premium/PremiumCard.tsx:60
+msgid "Supporter plan"
+msgstr "Supporter plan"
+
+#: src/components/_user/modals/PremiumModal.tsx:31
+msgid "Supporter Plan"
+msgstr "Supporter Plan"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:161
+msgid "Supreme Commander"
+msgstr "Supreme Commander"
+
+#: src/pages/country/[countryId]/index.tsx:235
+msgid "Sworn enemy"
+msgstr "Sworn enemy"
+
+#: src/components/_political/event/EventList.tsx:72
+msgid "System revolt"
+msgstr "System revolt"
+
+#: src/pages/tournament/[tournamentId]/index.tsx:56
+msgid "Table"
+msgstr "Table"
+
+#: src/pages/country/[countryId]/index.tsx:115
+#: src/pages/country/[countryId]/index.tsx:139
+#: src/pages/country/[countryId]/index.tsx:144
+msgid "Take control"
+msgstr "Take control"
+
+#: src/components/_economy/company/RecommendedCompanyRegions.tsx:79
+msgid "Take deposits into account"
+msgstr "Take deposits into account"
+
+#: src/utils/translations.tsx:26
+msgid "Tank"
+msgstr "Tank"
+
+#: src/components/_political/law/LawFormModal.tsx:193
+msgid "Target country"
+msgstr "Target country"
+
+#: src/components/_political/law/LawFormModal.tsx:206
+msgid "Target region"
+msgstr "Target region"
+
+#: src/components/_political/law/LawFormModal.tsx:281
+msgid "Target user"
+msgstr "Target user"
+
+#: src/components/_political/law/LawFormModal.tsx:226
+msgid "Tax type"
+msgstr "Tax type"
+
+#: src/pages/country/[countryId]/account.tsx:30
+msgid "Taxes"
+msgstr "Taxes"
+
+#: src/pages/index.tsx:138
+#: src/pages/rules.tsx:32
+msgid "Terms"
+msgstr "Terms"
+
+#: src/components/_user/auth/ConnectFromModal.tsx:376
+msgid "Terms of Service"
+msgstr "Terms of Service"
+
+#: src/components/_layout/LayoutMapOptions.tsx:335
+msgid "Texture"
+msgstr "Texture"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:76
+msgid "That dopamine hit is free"
+msgstr "That dopamine hit is free"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:68
+msgid "That's epic!"
+msgstr "That's epic!"
+
+#: src/components/_user/user/skills.frontConfig.tsx:96
+msgid "The <0>Production Points</0> you generate each time you work"
+msgstr "The <0>Production Points</0> you generate each time you work"
+
+#: src/components/_user/user/skills.frontConfig.tsx:38
+msgid "The base value for <0>Damages</0> calculation."
+msgstr "The base value for <0>Damages</0> calculation."
+
+#: src/components/_political/event/event.frontConfig.tsx:438
+msgid "The civil war started by <0/> in <1/> has been suppressed"
+msgstr "The civil war started by <0/> in <1/> has been suppressed"
+
+#: src/components/_political/event/event.frontConfig.tsx:422
+msgid "The civil war started by <0/> in <1/> has succeeded of <2/> and the government has been overthrown."
+msgstr "The civil war started by <0/> in <1/> has succeeded of <2/> and the government has been overthrown."
+
+#: src/components/_user/user/skills.frontConfig.tsx:57
+msgid "The damage factor increase of critical hits over normal hits"
+msgstr "The damage factor increase of critical hits over normal hits"
+
+#: src/pages/region/[regionId]/index.tsx:70
+msgid "The deposit gives a production bonus of the following percentage."
+msgstr "The deposit gives a production bonus of the following percentage."
+
+#: src/pages/region/[regionId]/index.tsx:80
+msgid "The deposit will expire in the following amount of time."
+msgstr "The deposit will expire in the following amount of time."
+
+#: src/components/_user/notification/notification.frontConfig.tsx:462
+msgid "The double XP event has ended."
+msgstr "The double XP event has ended."
+
+#: src/components/_user/notification/notification.frontConfig.tsx:860
+msgid "The effect of your consumed buffs has ended. The debuff phase has begun and will last <0>{debuffDuration}h</0>."
+msgstr "The effect of your consumed buffs has ended. The debuff phase has begun and will last <0>{debuffDuration}h</0>."
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1561
+msgid "The giveaway has ended. Check if you won!"
+msgstr "The giveaway has ended. Check if you won!"
+
+#: src/components/_political/event/event.frontConfig.tsx:82
+msgid "The revolution in <0/> has been suppressed. The government remains in power."
+msgstr "The revolution in <0/> has been suppressed. The government remains in power."
+
+#: src/components/_political/event/event.frontConfig.tsx:68
+msgid "The revolution in <0/> has succeeded! The government has been overthrown."
+msgstr "The revolution in <0/> has succeeded! The government has been overthrown."
+
+#: src/pages/region/[regionId]/index.tsx:110
+msgid "The strategic resource will be reshuffled in the following amount of time."
+msgstr "The strategic resource will be reshuffled in the following amount of time."
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1458
+msgid "The tournament has ended for your team <0/>. Check the results!"
+msgstr "The tournament has ended for your team <0/>. Check the results!"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:12
+msgid "The universe owes you something big"
+msgstr "The universe owes you something big"
+
+#: src/components/_economy/company/CompanyTags.tsx:66
+msgid "This company is disabled because the owner reached the company limit."
+msgstr "This company is disabled because the owner reached the company limit."
+
+#: src/pages/country/[countryId]/index.tsx:119
+msgid "This country has no president or active congress member, you can take control of it."
+msgstr "This country has no president or active congress member, you can take control of it."
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:42
+msgid "This equipment is green and so is grass"
+msgstr "This equipment is green and so is grass"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:62
+msgid "This feels good, huh?"
+msgstr "This feels good, huh?"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:27
+msgid "This is your company hub. Here you can produce items and build your empire."
+msgstr "This is your company hub. Here you can produce items and build your empire."
+
+#: src/components/_political/law/LawTypeSelect.tsx:182
+msgid "This law can be abusive and requires 5+ possible voters in the country."
+msgstr "This law can be abusive and requires 5+ possible voters in the country."
+
+#: src/components/_political/law/LawTypeSelect.tsx:176
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:138
+msgid "This law has an additional variable cost"
+msgstr "This law has an additional variable cost"
+
+#: src/components/_political/law/LawTypeSelect.tsx:191
+msgid "This law requires at least {minActiveCitizen} active citizens (level 10+) in the country."
+msgstr "This law requires at least {minActiveCitizen} active citizens (level 10+) in the country."
+
+#: src/pages/region/[regionId]/index.tsx:177
+msgid "This region is not linked to it's owner's capital."
+msgstr "This region is not linked to its owner's capital."
+
+#: src/components/_user/user/FamilyGroup.tsx:75
+msgid "This user is not part of any family group"
+msgstr "This user is not part of any family group"
+
+#: src/components/_user/user/UserDropdown.tsx:335
+msgid "This will require the user to verify their mobile phone number."
+msgstr "This will require the user to verify their mobile phone number."
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:132
+msgid "Time to fight for your country! Let's join the action."
+msgstr "Time to fight for your country! Let's join the action."
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:45
+msgid "Time to produce!"
+msgstr "Time to produce!"
+
+#: src/components/_other/shop/skinPack.frontConfig.tsx:17
+msgid "Tiny Pixel"
+msgstr "Tiny Pixel"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:95
+msgid "Tiny Pixel Ammo"
+msgstr "Tiny Pixel Ammo"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:107
+msgid "Tiny Pixel Boots"
+msgstr "Tiny Pixel Boots"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:104
+msgid "Tiny Pixel Chest"
+msgstr "Tiny Pixel Chest"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:113
+msgid "Tiny Pixel Gloves"
+msgstr "Tiny Pixel Gloves"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:116
+msgid "Tiny Pixel Gun"
+msgstr "Tiny Pixel Gun"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:98
+msgid "Tiny Pixel Heavy Ammo"
+msgstr "Tiny Pixel Heavy Ammo"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:101
+msgid "Tiny Pixel Helmet"
+msgstr "Tiny Pixel Helmet"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:128
+msgid "Tiny Pixel Jet"
+msgstr "Tiny Pixel Jet"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:131
+msgid "Tiny Pixel Light Ammo"
+msgstr "Tiny Pixel Light Ammo"
+
+#: src/components/_other/shop/skinPack.frontConfig.tsx:16
+msgid "Tiny Pixel Pack"
+msgstr "Tiny Pixel Pack"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:110
+msgid "Tiny Pixel Pants"
+msgstr "Tiny Pixel Pants"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:119
+msgid "Tiny Pixel Rifle"
+msgstr "Tiny Pixel Rifle"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:122
+msgid "Tiny Pixel Sniper"
+msgstr "Tiny Pixel Sniper"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:125
+msgid "Tiny Pixel Tank"
+msgstr "Tiny Pixel Tank"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:288
+msgid "Tip <0>{count}</0> articles"
+msgstr "Tip <0>{count}</0> articles"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:286
+msgid "Tip Article"
+msgstr "Tip Article"
+
+#: src/components/_user/apiToken/ApiTokenList.tsx:246
+msgid "Token Name"
+msgstr "Token Name"
+
+#: src/components/_social/ArticleList.tsx:181
+msgid "Top"
+msgstr "Top"
+
+#: src/components/_social/ArticleList.tsx:168
+msgid "Top (1d)"
+msgstr "Top (1d)"
+
+#: src/components/_social/ArticleList.tsx:175
+msgid "Top (1w)"
+msgstr "Top (1w)"
+
+#: src/components/_economy/workOffer/WageInfoAlert.tsx:84
+msgid "Top 3 offers"
+msgstr "Top 3 offers"
+
+#: src/pages/index.tsx:131
+msgid "Top countries"
+msgstr "Top countries"
+
+#: src/components/_economy/donation/DonationList.tsx:87
+msgid "Top Donors"
+msgstr "Top Donors"
+
+#: src/components/_economy/workOffer/WageInfoAlert.tsx:66
+msgid "Top eligible offer:"
+msgstr "Top eligible offer:"
+
+#: src/pages/shop/index.tsx:85
+msgid "Top gift givers of the month"
+msgstr "Top gift givers of the month"
+
+#: src/components/_military/battle/BattleSystem.tsx:515
+msgid "total"
+msgstr "total"
+
+#: src/components/_economy/inventoryAccount/InventoryAccount.tsx:116
+#: src/components/_economy/inventoryAccount/InventoryAccount.tsx:153
+#: src/components/_economy/inventoryAccount/InventoryAccount.tsx:180
+#: src/components/_economy/work/WorkChart.tsx:198
+#: src/pages/market/index.tsx:153
+#: src/pages/market/index.tsx:202
+msgid "Total"
+msgstr "Total"
+
+#: src/components/_economy/inventory/case/OpenCaseModal.tsx:436
+msgid "Total cases opened:"
+msgstr "Total cases opened:"
+
+#: src/components/_user/user/UserRankingsPanel.tsx:27
+msgid "Total damages"
+msgstr "Total damages"
+
+#: src/components/_economy/donation/DonationList.tsx:65
+msgid "Total Donated:"
+msgstr "Total Donated:"
+
+#: src/components/_user/user/SkillValue.tsx:186
+msgid "Total:"
+msgstr "Total:"
+
+#: src/components/_military/battle/ActiveBattlesList.tsx:75
+#: src/components/_military/battle/ActiveBattlesList.tsx:139
+#: src/pages/events/index.tsx:89
+msgid "Tournament"
+msgstr "Tournament"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1430
+msgid "Tournament Created"
+msgstr "Tournament Created"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1470
+msgid "Tournament Eliminated"
+msgstr "Tournament Eliminated"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1456
+msgid "Tournament Ended"
+msgstr "Tournament Ended"
+
+#: src/components/_user/user/SkillValue.tsx:104
+msgid "Tournament reward:"
+msgstr "Tournament reward:"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1381
+msgid "Tournament Round Won"
+msgstr "Tournament Round Won"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1443
+msgid "Tournament Started"
+msgstr "Tournament Started"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1411
+msgid "Tournament Won!"
+msgstr "Tournament Won!"
+
+#: src/components/_economy/market/MarketHeader.tsx:20
+msgid "Trade"
+msgstr "Trade"
+
+#: src/components/_economy/transaction/TransactionList.tsx:71
+#: src/pages/market/index.tsx:56
+msgid "Trading"
+msgstr "Trading"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:16
+msgid "Trainee"
+msgstr "Trainee"
+
+#: src/components/_user/user/UserHeader.tsx:190
+msgid "Transac."
+msgstr "Transac."
+
+#: src/components/_political/country/CountryHeader.tsx:76
+#: src/pages/market/index.tsx:83
+#: src/pages/user/[userId]/index.tsx:222
+msgid "Transactions"
+msgstr "Transactions"
+
+#: src/components/_political/law/law.frontConfig.tsx:262
+msgid "Transfer money"
+msgstr "Transfer money"
+
+#: src/components/_user/worker/WorkerEditFormModal.tsx:187
+msgid "Transfer to company (optional)"
+msgstr "Transfer to company (optional)"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:92
+msgid "Trebuchet"
+msgstr "Trebuchet"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:36
+msgid "Trooper"
+msgstr "Trooper"
+
+#: src/pages/user/[userId]/settings.tsx:65
+msgid "Tutorials"
+msgstr "Tutorials"
+
+#: src/pages/user/[userId]/settings.tsx:31
+msgid "Tutorials reseted"
+msgstr "Tutorials have been reset"
+
+#: src/components/_user/user/UserDropdown.tsx:276
+msgid "Unblock (show content)"
+msgstr "Unblock (show content)"
+
+#: src/components/_user/UserEquipments.tsx:90
+msgid "Unequip all"
+msgstr "Unequip all"
+
+#: src/pages/region/[regionId]/index.tsx:200
+msgid "Unlinked"
+msgstr "Unlinked"
+
+#: src/pages/region/[regionId]/index.tsx:173
+msgid "Unlinked to capital"
+msgstr "Unlinked to capital"
+
+#: src/components/_other/shop/SkinPackModal.tsx:307
+msgid "Unlock"
+msgstr "Unlock"
+
+#. placeholder {0}: estimate.notOwnedCount
+#. placeholder {1}: estimate.notOwnedCount > 1 ? 's' : ''
+#: src/components/_other/shop/SkinPackModal.tsx:302
+msgid "Unlock {0} skin{1}"
+msgstr "Unlock {0} skin{1}"
+
+#: src/components/_user/premium/PremiumFeatureList.tsx:89
+msgid "Unlock Help all button"
+msgstr "Unlock Help all button"
+
+#: src/components/_user/premium/PremiumFeatureList.tsx:86
+msgid "Unlock Produce all button"
+msgstr "Unlock Produce all button"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1779
+msgid "Unlocked pack"
+msgstr "Unlocked pack"
+
+#: src/components/_user/user/UserHeader.tsx:407
+msgid "Unmuted <0/>"
+msgstr "Unmuted <0/>"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:93
+msgid "Unreal. This doesn't happen"
+msgstr "Unreal. This doesn't happen"
+
+#: src/components/_military/tournament/TournamentRegisterButton.tsx:122
+msgid "Unregister"
+msgstr "Unregister"
+
+#: src/pages/country/[countryId]/index.tsx:293
+msgid "Unrest"
+msgstr "Unrest"
+
+#: src/components/_political/contribution/ContributionList.tsx:200
+msgid "Unrest Contributors"
+msgstr "Unrest Contributors"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:246
+msgid "Unselect all"
+msgstr "Unselect all"
+
+#: src/components/_political/law/law.frontConfig.tsx:279
+#: src/components/_political/law/law.frontConfig.tsx:281
+msgid "Unset the sworn enemy country"
+msgstr "Unset the sworn enemy country"
+
+#. placeholder {0}: gameConfig?.user.equipmentSets.premiumMax
+#: src/components/_user/premium/PremiumFeatureList.tsx:122
+msgid "Up to {0} equipment sets"
+msgstr "Up to {0} equipment sets"
+
+#: src/pages/tournament/[tournamentId]/index.tsx:31
+msgid "Upcoming Tournament"
+msgstr "Upcoming Tournament"
+
+#: src/components/_user/user/UserForm.tsx:52
+msgid "Update"
+msgstr "Update"
+
+#: src/pages/user/[userId]/settings.tsx:57
+msgid "Update infos"
+msgstr "Update infos"
+
+#: src/components/_user/worker/WorkerEditFormModal.tsx:213
+msgid "Update worker"
+msgstr "Update worker"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:370
+msgid "Upgrade a company"
+msgstr "Upgrade a company"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:369
+msgid "Upgrade Company"
+msgstr "Upgrade Company"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:438
+msgid "Upgrade Skills"
+msgstr "Upgrade Skills"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:204
+msgid "Upgrade to supporter"
+msgstr "Upgrade to supporter"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:440
+msgid "Upgrade your skills <0>{count}</0> times"
+msgstr "Upgrade your skills <0>{count}</0> times"
+
+#: src/pages/user/[userId]/skills.tsx:143
+msgid "Upgrade your skills!"
+msgstr "Upgrade your skills!"
+
+#: src/pages/company/[companyId]/index.tsx:94
+#: src/pages/region/[regionId]/index.tsx:144
+msgid "Upgrades"
+msgstr "Upgrades"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:37
+msgid "Use your <0>Entrepreneurship</0> to work in your own company and fill its production bar."
+msgstr "Use your <0>Entrepreneurship</0> to work in your own company and fill its production bar."
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:166
+msgid "Use your <0>Hunger</0> to eat food and refill your <1>Health</1>. Then get back to fighting!"
+msgstr "Use your <0>Hunger</0> to eat food and refill your <1>Health</1>. Then get back to fighting!"
+
+#: src/utils/translations.tsx:78
+#: src/utils/translations.tsx:84
+#: src/utils/translations.tsx:89
+msgid "Used for shooting guns. Increases your <0>Attack</0>"
+msgstr "Used for shooting guns. Increases your <0>Attack</0>"
+
+#: src/components/_user/user/skills.frontConfig.tsx:163
+msgid "Used to <0>Self Work</0> in your own companies"
+msgstr "Used to <0>Self Work</0> in your own companies"
+
+#: src/components/_user/user/skills.frontConfig.tsx:84
+msgid "Used to <0>Work</0>"
+msgstr "Used to <0>Work</0>"
+
+#: src/utils/translations.tsx:63
+msgid "Used to build companies and MUs"
+msgstr "Used to build companies and MUs"
+
+#: src/utils/translations.tsx:41
+msgid "Used to craft items"
+msgstr "Used to craft items"
+
+#: src/utils/translations.tsx:72
+msgid "Used to maintain upgrades"
+msgstr "Used to maintain upgrades"
+
+#: src/utils/translations.tsx:111
+msgid "Used to produce ammunition"
+msgstr "Used to produce ammunition"
+
+#: src/utils/translations.tsx:61
+msgid "Used to produce Bread"
+msgstr "Used to produce Bread"
+
+#: src/utils/translations.tsx:62
+msgid "Used to produce Concrete"
+msgstr "Used to produce Concrete"
+
+#: src/utils/translations.tsx:43
+msgid "Used to produce Cooked Fish"
+msgstr "Used to produce Cooked Fish"
+
+#: src/utils/translations.tsx:73
+msgid "Used to produce Oil"
+msgstr "Used to produce Oil"
+
+#: src/utils/translations.tsx:99
+msgid "Used to produce Pills"
+msgstr "Used to produce Pills"
+
+#: src/utils/translations.tsx:50
+msgid "Used to produce Steel"
+msgstr "Used to produce Steel"
+
+#: src/utils/translations.tsx:109
+msgid "Used to upgrade companies, MUs and fortifications"
+msgstr "Used to upgrade companies, MUs and fortifications"
+
+#: src/components/_layout/LoadingScreenContent.tsx:22
+msgid "user"
+msgstr "user"
+
+#: src/components/_other/shop/SkinPackModal.tsx:283
+msgid "User already owns all skins"
+msgstr "User already owns all skins"
+
+#: src/components/_user/user/UserDropdown.tsx:131
+msgid "User blocked"
+msgstr "User blocked"
+
+#: src/components/_military/damageRanking/DamageRankingSides.tsx:122
+msgid "User participation to the ground points."
+msgstr "User participation to the ground points."
+
+#: src/components/_user/user/FamilyGroup.tsx:43
+msgid "User removed from family group"
+msgstr "User removed from family group"
+
+#: src/components/_user/user/UserDropdown.tsx:135
+msgid "User unblocked"
+msgstr "User unblocked"
+
+#: src/components/_political/government/NominateForm.tsx:44
+#: src/components/_user/auth/WelcomeModal.tsx:142
+#: src/components/_user/user/UserForm.tsx:45
+#: src/components/_user/user/UserForm.tsx:46
+#: src/pages/user/[userId]/referrals.tsx:147
+msgid "Username"
+msgstr "Username"
+
+#: src/components/_user/user/UserDropdown.tsx:157
+msgid "Username removed"
+msgstr "Username removed"
+
+#: src/components/_military/damageRanking/DamageRankingSides.tsx:88
+msgid "Users"
+msgstr "Users"
+
+#: src/components/_other/shop/skinPack.frontConfig.tsx:9
+msgid "UwU"
+msgstr "UwU"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:8
+msgid "Valentine Ammo"
+msgstr "Valentine Ammo"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:47
+msgid "Valentine Boots"
+msgstr "Valentine Boots"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:26
+msgid "Valentine Cat Ears"
+msgstr "Valentine Cat Ears"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:29
+msgid "Valentine Chest"
+msgstr "Valentine Chest"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:53
+msgid "Valentine Gloves"
+msgstr "Valentine Gloves"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:41
+msgid "Valentine Gun"
+msgstr "Valentine Gun"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:14
+msgid "Valentine Heavy Ammo"
+msgstr "Valentine Heavy Ammo"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:35
+msgid "Valentine Knife"
+msgstr "Valentine Knife"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:11
+msgid "Valentine Light Ammo"
+msgstr "Valentine Light Ammo"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:38
+msgid "Valentine Lollipop"
+msgstr "Valentine Lollipop"
+
+#: src/components/_other/shop/skinPack.frontConfig.tsx:8
+msgid "Valentine Pack"
+msgstr "Valentine Pack"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:32
+msgid "Valentine Pants"
+msgstr "Valentine Pants"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:44
+msgid "Valentine Rifle"
+msgstr "Valentine Rifle"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:23
+msgid "Valentine Skirt"
+msgstr "Valentine Skirt"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:50
+msgid "Valentine Sniper"
+msgstr "Valentine Sniper"
+
+#: src/components/_other/shop/skin.frontConfig.tsx:17
+msgid "Valentine Tank"
+msgstr "Valentine Tank"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:56
+msgid "Vanguard"
+msgstr "Vanguard"
+
+#: src/components/_user/auth/LoginFormModal.tsx:89
+msgid "Verification code"
+msgstr "Verification code"
+
+#: src/components/_user/modals/PhoneVerificationModal.tsx:50
+msgid "Verification code sent!"
+msgstr "Verification code sent!"
+
+#: src/components/_user/auth/LoginFormModal.tsx:149
+#: src/components/_user/modals/PhoneVerificationModal.tsx:172
+msgid "Verify"
+msgstr "Verify"
+
+#: src/components/_user/auth/ConnectFromModal.tsx:268
+msgid "Verifying CAPTCHA..."
+msgstr "Verifying CAPTCHA..."
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:131
+msgid "Vice Admiral"
+msgstr "Vice Admiral"
+
+#: src/components/_political/government/Government.tsx:60
+msgid "Vice President"
+msgstr "Vice President"
+
+#: src/components/_military/battle/BattleHeader.tsx:168
+msgid "View on map"
+msgstr "View on map"
+
+#: src/components/_military/war/WarComparison.tsx:45
+msgid "VS"
+msgstr "VS"
+
+#: src/components/_economy/transaction/TransactionList.tsx:73
+#: src/components/_economy/work/WorkChart.tsx:244
+msgid "Wage"
+msgstr "Wage"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:576
+msgid "Wage changed"
+msgstr "Wage changed"
+
+#: src/components/_economy/workOffer/EstimatedCompanyBenefit.tsx:119
+msgid "Wage cost ({productionPoints} pts):"
+msgstr "Wage cost ({productionPoints} pts):"
+
+#: src/components/_user/worker/WorkerEditFormModal.tsx:175
+msgid "Wage per production"
+msgstr "Wage per production"
+
+#: src/components/_user/worker/WageReductionAlert.tsx:35
+msgid "Wage reduction accepted."
+msgstr "Wage reduction accepted."
+
+#: src/components/_user/notification/notification.frontConfig.tsx:591
+#: src/components/_user/worker/WageReductionAlert.tsx:66
+msgid "Wage reduction proposed"
+msgstr "Wage reduction proposed"
+
+#: src/components/_user/worker/WorkerEditFormModal.tsx:75
+msgid "Wage reduction proposed! Waiting for worker to accept or reject."
+msgstr "Wage reduction proposed! Waiting for worker to accept or reject."
+
+#. placeholder {0}: gameConfig?.referral.levelNeededForBadge
+#: src/components/_user/referral/ReferralList.tsx:111
+msgid "Waiting for level {0}"
+msgstr "Waiting for level {0}"
+
+#: src/components/_user/worker/WorkerEditFormModal.tsx:157
+msgid "Waiting for the worker to accept or reject the wage reduction. You cannot change the wage until they respond."
+msgstr "Waiting for the worker to accept or reject the wage reduction. You cannot change the wage until they respond."
+
+#: src/components/_economy/itemTrading/ItemTradingOrderItem.tsx:147
+msgid "wants"
+msgstr "wants"
+
+#: src/components/_political/event/EventList.tsx:62
+msgid "War declared"
+msgstr "War declared"
+
+#: src/pages/war/[warId]/index.tsx:49
+msgid "War Ended"
+msgstr "War Ended"
+
+#: src/components/_user/modals/PremiumModal.tsx:39
+msgid "War Era is 100% free to play and has no <0>ads</0> or <1>pay-to-win</1>, If you enjoy the game, you can support its development by subscribing to the Supporter Plan <3"
+msgstr "War Era is 100% free to play and has no <0>ads</0> or <1>pay-to-win</1>, If you enjoy the game, you can support its development by subscribing to the Supporter Plan <3"
+
+#: src/components/_user/user/militaryRankings.frontConfig.tsx:76
+msgid "Warrant Officer"
+msgstr "Warrant Officer"
+
+#: src/components/_political/country/CountryHeader.tsx:94
+msgid "Wars"
+msgstr "Wars"
+
+#: src/components/_user/user/UserRankingsPanel.tsx:38
+msgid "Wealth"
+msgstr "Wealth"
+
+#: src/components/_user/UserEquipments.tsx:106
+msgid "Weapon"
+msgstr "Weapon"
+
+#: src/components/_user/user/SkillValue.tsx:58
+msgid "Weapon:"
+msgstr "Weapon:"
+
+#: src/components/_user/mission/MissionsList.tsx:202
+msgid "Weekly"
+msgstr "Weekly"
+
+#: src/components/_economy/inventoryAccount/InventoryAccount.tsx:172
+msgid "Weekly balance"
+msgstr "Weekly balance"
+
+#: src/components/_user/user/UserRankingsPanel.tsx:21
+msgid "Weekly damages"
+msgstr "Weekly damages"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1671
+msgid "Weekly Missions Reset"
+msgstr "Weekly Missions Reset"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1091
+msgid "Welcome"
+msgstr "Welcome"
+
+#: src/components/_user/auth/LoginFormModal.tsx:59
+msgid "Welcome back {username}!"
+msgstr "Welcome back {username}!"
+
+#: src/components/_user/auth/WelcomeModal.tsx:113
+#: src/components/_user/notification/notification.frontConfig.tsx:1092
+msgid "Welcome to War Era!"
+msgstr "Welcome to War Era!"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:25
+msgid "Welcome to your economy!"
+msgstr "Welcome to your economy!"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:156
+msgid "When your <0>Health</0> runs out, open this menu to restore it with food."
+msgstr "When your <0>Health</0> runs out, open this menu to restore it with food."
+
+#: src/pages/companies.tsx:102
+msgid "Whole Production"
+msgstr "Whole Production"
+
+#: src/components/_political/law/LawFormModal.tsx:180
+msgid "Why do you want to propose this law?"
+msgstr "Why do you want to propose this law?"
+
+#: src/components/_economy/workOffer/EstimatedCompanyBenefit.tsx:185
+msgid "with bonus"
+msgstr "with bonus"
+
+#: src/components/_economy/workOffer/EstimatedCompanyBenefit.tsx:195
+msgid "with bonus + fidelity"
+msgstr "with bonus + fidelity"
+
+#: src/components/_military/battle/ActiveBattlesList.tsx:111
+#: src/components/_military/battle/ActiveBattlesList.tsx:174
+msgid "With contracts"
+msgstr "With contracts"
+
+#: src/pages/events/index.tsx:139
+msgid "Won by"
+msgstr "Won by"
+
+#: src/components/_economy/company/WorkButton.tsx:173
+#: src/components/_user/mission/mission.frontConfig.tsx:74
+msgid "Work"
+msgstr "Work"
+
+#: src/components/_user/mission/mission.frontConfig.tsx:76
+msgid "Work <0>{count}</0> times for an employer"
+msgstr "Work <0>{count}</0> times for an employer"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:72
+msgid "Work and earn!"
+msgstr "Work and earn!"
+
+#: src/components/_user/worker/WorkerEditFormModal.tsx:86
+msgid "Worker fired!"
+msgstr "Worker fired!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:531
+msgid "Worker left"
+msgstr "Worker left"
+
+#: src/components/_user/worker/WorkerEditFormModal.tsx:63
+msgid "Worker updated!"
+msgstr "Worker updated!"
+
+#: src/pages/company/[companyId]/index.tsx:87
+#: src/pages/company/[companyId]/workers.tsx:37
+msgid "Workers"
+msgstr "Workers"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:58
+msgid "Working for others is a great way to earn money when starting out."
+msgstr "Working for others is a great way to earn money when starting out."
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:82
+msgid "Wow congratulations! Anyway have you considered buying premium?"
+msgstr "Wow congratulations! Anyway have you considered buying premium?"
+
+#: src/components/_political/law/LawFormModal.tsx:169
+#: src/components/_political/law/LawList.tsx:58
+msgid "Write a law"
+msgstr "Write a law"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:65
+msgid "Wtf"
+msgstr "Wtf"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:79
+msgid "Wtf is this possible?"
+msgstr "Wtf is this possible?"
+
+#: src/components/_user/user/UserRankingsPanel.tsx:44
+msgid "XP"
+msgstr "XP"
+
+#. placeholder {0}: companiesLimit ?? 1
+#: src/components/_economy/company/CompanyDropdown.tsx:197
+msgid "You already have {0} active companies. Disable one first."
+msgstr "You already have {0} active companies. Disable one first."
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:25
+msgid "You are a beautiful person"
+msgstr "You are a beautiful person"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:80
+msgid "You are a lucky bastard"
+msgstr "You are a lucky bastard"
+
+#: src/pages/country/[countryId]/index.tsx:109
+msgid "You are already congress member of another country. Resign first."
+msgstr "You are already congress member of another country. Resign first."
+
+#: src/pages/country/[countryId]/index.tsx:105
+msgid "You are already president of another country. Resign first."
+msgstr "You are already president of another country. Resign first."
+
+#: src/pages/country/[countryId]/index.tsx:107
+msgid "You are already vice president of another country. Resign first."
+msgstr "You are already vice president of another country. Resign first."
+
+#: src/pages/companies.tsx:45
+#: src/pages/user/[userId]/companies.tsx:64
+msgid "You are jobless"
+msgstr "You are jobless"
+
+#: src/components/_political/law/LawList.tsx:48
+msgid "You are not a congress member of this country"
+msgstr "You are not a congress member of this country"
+
+#: src/components/_political/partyMotion/PartyMotionList.tsx:44
+msgid "You are not a council member of this party"
+msgstr "You are not a council member of this party"
+
+#: src/pages/events/index.tsx:133
+msgid "You are not participating"
+msgstr "You are not participating"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:53
+msgid "You are very skilled!"
+msgstr "You are very skilled!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:751
+msgid "You bought items."
+msgstr "You bought items."
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:77
+msgid "You broke the rng"
+msgstr "You broke the rng"
+
+#: src/components/_economy/inventory/DismantleModal.tsx:210
+msgid "You can dismantle items from your inventory by selecting an item."
+msgstr "You can dismantle items from your inventory by selecting an item."
+
+#: src/components/_political/election/CandidateFormModal.tsx:61
+msgid "You can optionally link a campaign article to your candidacy."
+msgstr "You can optionally link a campaign article to your candidacy."
+
+#: src/components/_user/user/Level.tsx:82
+msgid "You can upgrade your skills!"
+msgstr "You can upgrade your skills!"
+
+#: src/pages/country/[countryId]/citizenship.tsx:61
+msgid "You cannot apply for citizenship if you have a government/congress role"
+msgstr "You cannot apply for citizenship if you have a government/congress role"
+
+#: src/pages/party/[partyId]/applications.tsx:28
+msgid "You don't have permission to view applications."
+msgstr "You don't have permission to view applications."
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1632
+msgid "You earned gems from a banner sale!"
+msgstr "You earned gems from a banner sale!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1823
+msgid "You earned gems from a sale of \"{skinTitle}\"!"
+msgstr "You earned gems from a sale of \"{skinTitle}\"!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1827
+msgid "You earned gems from a skin pack sale!"
+msgstr "You earned gems from a skin pack sale!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:874
+msgid "You feel healthy, the debuff effect no longer affects you."
+msgstr "You feel healthy, the debuff effect no longer affects you."
+
+#: src/pages/country/[countryId]/citizenship.tsx:48
+msgid "You gonna be automatically approved because the country population is below"
+msgstr "You will be automatically approved because the country population is below"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:93
+msgid "You have a case!"
+msgstr "You have a case!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1267
+msgid "You have been demoted from commander in <0/> by <1/>"
+msgstr "You have been demoted from commander in <0/> by <1/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:337
+msgid "You have been elected as the new leader of <0/>"
+msgstr "You have been elected as the new leader of <0/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1253
+msgid "You have been promoted to commander in <0/> by <1/>"
+msgstr "You have been promoted to commander in <0/> by <1/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1239
+msgid "You have been removed from <0/> by <1/>"
+msgstr "You have been removed from <0/> by <1/>"
+
+#. placeholder {0}: data.money
+#: src/components/_user/notification/notification.frontConfig.tsx:1361
+msgid "You have been rewarded <0>{0}</0> for your contribution to the battle in <1/>"
+msgstr "You have been rewarded <0>{0}</0> for your contribution to the battle in <1/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:563
+msgid "You have been transferred from <0/> to <1/>"
+msgstr "You have been transferred from <0/> to <1/>"
+
+#. placeholder {0}: 1
+#: src/components/_user/notification/notification.frontConfig.tsx:841
+msgid "You have consumed <0>{0}</0>, it's effect starts now and ends in <1>{buffDuration}h</1>."
+msgstr "You have consumed <0>{0}</0>, its effect starts now and ends in <1>{buffDuration}h</1>."
+
+#: src/pages/country/[countryId]/government.tsx:36
+msgid "You have resigned from the congress"
+msgstr "You have resigned from the congress"
+
+#: src/pages/country/[countryId]/government.tsx:28
+msgid "You have resigned from the government"
+msgstr "You have resigned from the government"
+
+#. placeholder {0}: gameConfig?.user.canTakeControlAtLevel
+#: src/pages/country/[countryId]/index.tsx:101
+msgid "You have to be level {0} to take control of a country."
+msgstr "You have to be level {0} to take control of a country."
+
+#. placeholder {0}: gameConfig?.user.takeControlCooldownInDays
+#: src/pages/country/[countryId]/index.tsx:103
+msgid "You have to wait {0} days before taking control of a country again."
+msgstr "You have to wait {0} days before taking control of a country again."
+
+#: src/components/_user/worker/WageReductionAlert.tsx:44
+msgid "You left the company."
+msgstr "You left the company."
+
+#: src/components/_economy/company/CompanyDropdown.tsx:56
+msgid "You left your job!"
+msgstr "You left your job!"
+
+#. placeholder {0}: data.quantity
+#. placeholder {1}: data.lootChance
+#: src/components/_user/notification/notification.frontConfig.tsx:496
+msgid "You looted <0>{0}</0> with a loot chance of <1>{1}</1> in <2/>"
+msgstr "You looted <0>{0}</0> with a loot chance of <1>{1}</1> in <2/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:478
+msgid "You looted a new equipment!"
+msgstr "You looted a new equipment!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:470
+msgid "You looted a new weapon!"
+msgstr "You looted a new weapon!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:729
+msgid "You looted money on the battlefield."
+msgstr "You looted money on the battlefield."
+
+#. placeholder {0}: gameConfig.region.resistanceContributionMinLevel
+#. placeholder {0}: gameConfig.unrest.contributionMinLevel
+#: src/components/_political/region/RegionResistance.tsx:120
+#: src/components/_political/unrest/UnrestPanel.tsx:101
+msgid "You must be at least level {0} to contribute."
+msgstr "You must be at least level {0} to contribute."
+
+#: src/components/_user/premium/PremiumActions.tsx:42
+msgid "You must be on web to subscribe"
+msgstr "You must be on web to subscribe"
+
+#: src/components/_political/government/PoliticalEthicsSelect.tsx:92
+msgid "You must spend all 3 ethics points ({pointsRemaining} remaining)"
+msgstr "You must spend all 3 ethics points ({pointsRemaining} remaining)"
+
+#: src/components/_user/UserEquipments.tsx:121
+msgid "You need to equip a weapon first"
+msgstr "You need to equip a weapon first"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1183
+msgid "You premium gift from <0/> has expired! Would you consider subscribing and supporting the game? 👉👈"
+msgstr "Your premium gift from <0/> has expired! Would you consider subscribing and supporting the game? 👉👈"
+
+#. placeholder {0}: data.muId ? ( <MuName muId={data.muId} /> ) : data.countryId ? ( <CountryName countryId={data.countryId} /> ) : ( 'your' )
+#. placeholder {1}: data.rank && ( <> position{' '} <Typo fw='bold' color='text1'> #{data.rank} </Typo> </> )
+#: src/components/_user/notification/notification.frontConfig.tsx:1493
+msgid "You received a reward for {0} {1} in<0/> tier in the ranking <1/>"
+msgstr "You received a reward for {0} {1} in<0/> tier in the ranking <1/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:753
+msgid "You sold items."
+msgstr "You sold items."
+
+#. placeholder {0}: data.bannerTitle
+#: src/components/_user/notification/notification.frontConfig.tsx:1571
+msgid "You successfully gifted \"{0}\" to <0/>!"
+msgstr "You successfully gifted \"{0}\" to <0/>!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1687
+msgid "You successfully gifted \"{skinTitle}\" to <0/>!"
+msgstr "You successfully gifted \"{skinTitle}\" to <0/>!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1148
+msgid "You successfully gifted a premium subscription to <0/>!"
+msgstr "You successfully gifted a premium subscription to <0/>!"
+
+#. placeholder {0}: data.skinPackTitle
+#: src/components/_user/notification/notification.frontConfig.tsx:1751
+msgid "You successfully gifted the skin pack \"{0}\" to <0/>!"
+msgstr "You successfully gifted the skin pack \"{0}\" to <0/>!"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:20
+msgid "You very lucky"
+msgstr "You’re very lucky"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:677
+msgid "You was fired from the government by <0/>"
+msgstr "You were fired from the government by <0/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:206
+#: src/components/_user/notification/notification.frontConfig.tsx:315
+msgid "You were elected"
+msgstr "You were elected"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:21
+msgid "You were so close"
+msgstr "You were so close"
+
+#. placeholder {0}: gameConfig?.referral.lifeTimeBadgeMoneySharePercent
+#: src/components/_user/referral/ReferralList.tsx:116
+msgid "You win money for the badge + {0}% of the badge income of all your referrals"
+msgstr "You win money for the badge + {0}% of the badge income of all your referrals"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:220
+msgid "You're all set!"
+msgstr "You're all set!"
+
+#: src/components/_user/premium/PremiumCard.tsx:55
+msgid "You're already a supporter <0/>"
+msgstr "You're already a supporter <0/>"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:38
+msgid "You're climbing, don't stop now"
+msgstr "You're climbing, don't stop now"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:85
+msgid "You're going to be a legend for, like, 100 hits!"
+msgstr "You're going to be a legend for, like, 100 hits!"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:49
+msgid "You're literally one case away from greatness"
+msgstr "You're literally one case away from greatness"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:47
+msgid "You're officially better than 80% of players"
+msgstr "You're officially better than 80% of players"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:60
+msgid "You're peaking"
+msgstr "You're peaking"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:185
+msgid "You've completed some missions! Let's collect your XP rewards."
+msgstr "You've completed some missions! Let's collect your XP rewards."
+
+#: src/components/_user/user/Level.tsx:122
+msgid "You've reached max level!"
+msgstr "You've reached max level!"
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:47
+msgid "Your <0>Production</0> bar is full! Click to produce items and add them to your inventory."
+msgstr "Your <0>Production</0> bar is full! Click to produce items and add them to your inventory."
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:96
+msgid "Your account has been automatically reported for cheating"
+msgstr "Your account has been automatically reported for cheating"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:74
+msgid "Your ancestors are proud"
+msgstr "Your ancestors are proud"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:381
+#: src/components/_user/notification/notification.frontConfig.tsx:1198
+msgid "Your application to <0/> has been rejected"
+msgstr "Your application to <0/> has been rejected"
+
+#. placeholder {0}: data.bannerTitle
+#: src/components/_user/notification/notification.frontConfig.tsx:1648
+msgid "Your banner \"{0}\" has been accepted and is now available in the shop! It has been automatically unlocked for you."
+msgstr "Your banner \"{0}\" has been accepted and is now available in the shop! It has been automatically unlocked for you."
+
+#: src/pages/country/[countryId]/index.tsx:140
+msgid "Your citizenship is going to change"
+msgstr "Your citizenship is going to change"
+
+#: src/components/_military/battle/ActiveBattlesList.tsx:146
+msgid "Your country"
+msgstr "Your country"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1019
+msgid "Your country is under attack!"
+msgstr "Your country is under attack!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1033
+msgid "Your country launched an attack!"
+msgstr "Your country launched an attack!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1064
+msgid "Your country started a revolt in <0/> against <1/>"
+msgstr "Your country started a revolt in <0/> against <1/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:647
+msgid "Your country started the construction of <0/> in <1/>"
+msgstr "Your country started the construction of <0/> in <1/>"
+
+#: src/components/_economy/workOffer/WorkOfferList.tsx:106
+msgid "Your current job"
+msgstr "Your current job"
+
+#: src/components/_economy/itemTrading/ItemTradingOrderItem.tsx:138
+msgid "Your current order"
+msgstr "Your current order"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1661
+msgid "Your daily missions have been reset! Complete them to earn rewards."
+msgstr "Your daily missions have been reset! Complete them to earn rewards."
+
+#: src/components/_user/notification/notification.frontConfig.tsx:440
+msgid "Your daily XP limit has been reset, you can now gain XP and get your daily reward!"
+msgstr "Your daily XP limit has been reset, you can now gain XP and get your daily reward!"
+
+#: src/components/_military/hit/HitButton.tsx:239
+msgid "Your damages"
+msgstr "Your damages"
+
+#: src/pages/user/[userId]/settings.tsx:47
+msgid "Your email"
+msgstr "Your email"
+
+#. placeholder {0}: worker.previousWage
+#. placeholder {1}: worker.wage
+#: src/components/_user/worker/WageReductionAlert.tsx:68
+msgid "Your employer wants to reduce your wage from <0>{0}</0> to <1>{1}</1>."
+msgstr "Your employer wants to reduce your wage from <0>{0}</0> to <1>{1}</1>."
+
+#. placeholder {0}: data.oldWage
+#. placeholder {1}: data.newWage
+#: src/components/_user/notification/notification.frontConfig.tsx:593
+msgid "Your employer wants to reduce your wage in <0/> from <1>{0}</1> to <2>{1}</2>. Accept or reject this change."
+msgstr "Your employer wants to reduce your wage in <0/> from <1>{0}</1> to <2>{1}</2>. Accept or reject this change."
+
+#: src/components/_military/battle/EndedBattlesList.tsx:84
+msgid "Your enemies"
+msgstr "Your enemies"
+
+#: src/components/_user/auth/WelcomeModal.tsx:60
+msgid "Your infos have been saved."
+msgstr "Your infos have been saved."
+
+#: src/components/_other/tour/tuto.frontConfig.tsx:85
+msgid "Your inventory holds all your items. Let's see what you've got!"
+msgstr "Your inventory holds all your items. Let's see what you've got!"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:48
+msgid "Your luck is just warming up, don't quit"
+msgstr "Your luck is just warming up, don't quit"
+
+#: src/components/_economy/inventory/case/cases.frontConfig.tsx:24
+msgid "Your luck is on vacation"
+msgstr "Your luck is on vacation"
+
+#: src/components/_military/mu/MuFormModal.tsx:111
+msgid "Your military unit name"
+msgstr "Your military unit name"
+
+#: src/components/_economy/market/MarketHeader.tsx:14
+msgid "Your offers"
+msgstr "Your offers"
+
+#: src/components/_political/party/PartyFormModal.tsx:98
+msgid "Your party name"
+msgstr "Your party name"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1130
+msgid "Your premium subscription has been activated!"
+msgstr "Your premium subscription has been activated!"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1139
+msgid "Your premium subscription has expired!"
+msgstr "Your premium subscription has expired!"
+
+#: src/components/_military/damageRanking/DamageRankingList.tsx:222
+msgid "Your rank"
+msgstr "Your rank"
+
+#: src/pages/user/[userId]/referrals.tsx:94
+msgid "Your referral link"
+msgstr "Your referral link"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1472
+msgid "Your team <0/> has been eliminated from the <1/>"
+msgstr "Your team <0/> has been eliminated from the <1/>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1383
+msgid "Your team <0/> won a round in <1/>!"
+msgstr "Your team <0/> won a round in <1/>!"
+
+#: src/pages/events/index.tsx:124
+msgid "Your team:"
+msgstr "Your team:"
+
+#. placeholder {0}: data.oldWage
+#. placeholder {1}: data.newWage
+#: src/components/_user/notification/notification.frontConfig.tsx:578
+msgid "Your wage in <0/> changed from <1>{0}</1> to <2>{1}</2>"
+msgstr "Your wage in <0/> changed from <1>{0}</1> to <2>{1}</2>"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1673
+msgid "Your weekly missions have been reset! Complete them to earn rewards."
+msgstr "Your weekly missions have been reset! Complete them to earn rewards."
+
+#: src/components/_user/auth/ConnectFromModal.tsx:217
+msgid "your@email.com"
+msgstr "your@email.com"
+
+#: src/components/_social/ArticleList.tsx:195
+msgid "Yours"
+msgstr "Yours"
