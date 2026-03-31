@@ -75,7 +75,7 @@ msgid "{0} proposed a law, check it out!"
 msgstr "¡{0} propuso una ley, échale un vistazo!"
 
 #. placeholder {0}: staticGameConfig.battle.roundsToWin
-#: src/components/_military/battle/RoundScore.tsx:54
+#: src/components/_military/battle/RoundScore.tsx:55
 msgid "{0} rounds are needed to win the battle."
 msgstr "Se necesitan {0} rondas para ganar la batalla."
 
@@ -134,7 +134,7 @@ msgid "{roundsToWin} Rounds to win"
 msgstr "{roundsToWin} rondas para ganar"
 
 #. placeholder {0}: staticGameConfig.battle.roundsToWin
-#: src/components/_military/battle/RoundScore.tsx:49
+#: src/components/_military/battle/RoundScore.tsx:50
 msgid "{score}/{0} Rounds"
 msgstr "{score}/{0} rondas"
 
@@ -146,7 +146,7 @@ msgstr "*Si el usuario ya posee algunas piezas del set, el precio se reducirá"
 msgid "*May burn"
 msgstr "*Puede arder"
 
-#: src/components/_political/government/Government.tsx:154
+#: src/components/_political/government/Government.tsx:197
 msgid "/day"
 msgstr "/día"
 
@@ -632,6 +632,16 @@ msgstr "<0>Penalización</0> termina <1/>"
 msgid "<0>Emotes</0> in chat"
 msgstr "<0>Emotes</0> en el chat"
 
+#. placeholder {0}: ts.case2
+#: src/components/_military/damageRanking/BattleLoot.tsx:55
+msgid "<0>Every <1/> damage dealt in this round across both sides rolls an <2>{0}</2> into the round loot pool.</0><3>Round loot are distributed at the end of the round, top 1 damage dealer get top 1 item and so on...</3>"
+msgstr "<0>Cada <1/> de daño infligido en esta ronda entre ambos bandos añade un <2>{0}</2> al botín de la ronda.</0><3>El botín de la ronda se distribuye al final de la ronda, el mayor causante de daño recibe el mejor objeto y así sucesivamente...</3>"
+
+#. placeholder {0}: ts.case2
+#: src/components/_military/damageRanking/BattleLoot.tsx:68
+msgid "<0>Every <1/> total damage dealt across both sides rolls an <2>{0}</2> into the battle loot pool.</0><3>Battle loot are distributed at the end of the battle, top 1 damage dealer get top 1 item and so on...</3>"
+msgstr "<0>Cada <1/> de daño total infligido entre ambos bandos añade un <2>{0}</2> al botín de la batalla.</0><3>El botín de la batalla se distribuye al final de la batalla, el mayor causante de daño recibe el mejor objeto y así sucesivamente...</3>"
+
 #. placeholder {0}: 1
 #. placeholder {1}: worker.fidelity
 #. placeholder {2}: 10
@@ -1109,7 +1119,7 @@ msgstr "Aceptar hacer la paz con el otro país"
 msgid "Accepted"
 msgstr "Aceptada"
 
-#: src/components/_military/battle/BattleHeader.tsx:95
+#: src/components/_military/battle/BattleHeader.tsx:96
 msgid "Access war"
 msgstr "Acceder a las batallas"
 
@@ -1477,11 +1487,11 @@ msgstr "Artículos de <0/>"
 msgid "At least you tried"
 msgstr "Al menos lo intentaste"
 
-#: src/components/_military/battle/BattleSystem.tsx:485
+#: src/components/_military/battle/BattleSystem.tsx:490
 msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
 msgstr "Al final del temporizador, <0>{actualTickPoints}</0> se asignarán al bando con más daño."
 
-#: src/components/_military/hit/HitButton.tsx:380
+#: src/components/_military/hit/HitButton.tsx:408
 #: src/components/_user/user/skills.frontConfig.tsx:44
 #: src/components/_user/user/skills.frontConfig.tsx:45
 msgid "Attack"
@@ -1491,7 +1501,7 @@ msgstr "Ataque"
 msgid "Attacker"
 msgstr "Atacante"
 
-#: src/components/_military/damageRanking/DamageRankingSides.tsx:182
+#: src/components/_military/damageRanking/DamageRankingSides.tsx:190
 msgid "Attackers"
 msgstr "Atacantes"
 
@@ -1616,9 +1626,13 @@ msgstr "Batalla terminada"
 msgid "Battle Hero"
 msgstr "Héroe de batalla"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:54
-msgid "Battle loots"
+#: src/components/_military/damageRanking/BattleLoot.tsx:53
+msgid "Battle loot"
 msgstr "Botín de batalla"
+
+#: src/components/_military/damageRanking/BattleLoot.tsx:83
+msgid "Battle loot pool"
+msgstr "Bote de botín de batalla"
 
 #: src/components/_political/event/EventList.tsx:64
 msgid "Battle opened"
@@ -1696,11 +1710,11 @@ msgstr "¡Aumenta tu producción!"
 msgid "Boots"
 msgstr "Botas"
 
-#: src/components/_military/battle/BattleSystem.tsx:667
+#: src/components/_military/battle/BattleSystem.tsx:699
 msgid "Bounty cooldown"
 msgstr "Tiempo de espera de recompensa"
 
-#: src/components/_military/battle/BattleSystem.tsx:668
+#: src/components/_military/battle/BattleSystem.tsx:700
 msgid "Bounty will be available at the end of the timer."
 msgstr "La recompensa estará disponible al finalizar el temporizador."
 
@@ -1891,8 +1905,8 @@ msgid "Catapult"
 msgstr "Catapulta"
 
 #: src/components/_user/user/skills.frontConfig.tsx:152
-msgid "Chance per hit to instantly loot:<0/><1>1%</1> gives<2>1%</2> and <3>0.01%</3> to loot cases per hit."
-msgstr "Probabilidad por golpe de saquear instantáneamente:<0/><1>1%</1> otorga<2>1%</2> y <3>0.01%</3> de probabilidad de obtener cajas por golpe."
+msgid "Chance per hit to instantly loot:<0/>Each <1>1%</1> gives<2>1%</2> and <3>0.01%</3> to loot cases per hit."
+msgstr "Probabilidad por golpe de saquear al instante:<0/>Cada <1>1%</1> da <2>1%</2> y <3>0,01%</3> para saquear cajas por golpe."
 
 #: src/components/_user/user/skills.frontConfig.tsx:138
 msgid "Chance to dodge all incoming damage when fighting in battles.<0/>Dodging also prevents equipment durability from being consumed."
@@ -2011,7 +2025,7 @@ msgstr "Ciudadanía"
 msgid "Citizenship Applications"
 msgstr "Solicitudes de ciudadanía"
 
-#: src/components/_military/battle/BattleSystem.tsx:249
+#: src/components/_military/battle/BattleSystem.tsx:250
 msgid "Civil war"
 msgstr "Guerra civil"
 
@@ -2494,11 +2508,11 @@ msgstr "Unidad militar actual"
 msgid "Current round only"
 msgstr "Solo ronda actual"
 
-#: src/components/_military/battle/BattleSystem.tsx:504
+#: src/components/_military/battle/BattleSystem.tsx:509
 msgid "Current tick:"
 msgstr "Tic actual:"
 
-#: src/components/_military/battle/BattleSystem.tsx:494
+#: src/components/_military/battle/BattleSystem.tsx:499
 msgid "Current total:"
 msgstr "Total actual:"
 
@@ -2518,7 +2532,7 @@ msgstr "Mantenimiento diario"
 msgid "Daily Missions Reset"
 msgstr "Reinicio de Misiones Diarias"
 
-#: src/components/_political/government/Government.tsx:139
+#: src/components/_political/government/Government.tsx:174
 msgid "Daily wage paid from the country treasury."
 msgstr "Salario diario pagado desde el tesoro del país."
 
@@ -2551,7 +2565,7 @@ msgstr "Daño"
 msgid "Damages for Mu"
 msgstr "Daños para la MU"
 
-#: src/components/_military/hit/HitButton.tsx:334
+#: src/components/_military/hit/HitButton.tsx:362
 msgid "Damages you did for this side in this round"
 msgstr "Daño que infligiste para este bando en esta ronda"
 
@@ -2668,7 +2682,7 @@ msgstr "Disminuir"
 msgid "Decrease unrest"
 msgstr "Disminuir el malestar"
 
-#: src/components/_military/hit/HitButton.tsx:383
+#: src/components/_military/hit/HitButton.tsx:411
 msgid "Defend"
 msgstr "Defender"
 
@@ -2676,7 +2690,7 @@ msgstr "Defender"
 msgid "Defender"
 msgstr "Defensor"
 
-#: src/components/_military/damageRanking/DamageRankingSides.tsx:179
+#: src/components/_military/damageRanking/DamageRankingSides.tsx:187
 msgid "Defenders"
 msgstr "Defensores"
 
@@ -2822,6 +2836,10 @@ msgstr "Desmontar objeto"
 #: src/components/_user/apiToken/ApiTokenList.tsx:153
 msgid "Dismiss"
 msgstr "Cerrar"
+
+#: src/components/_military/damageRanking/BattleLoot.tsx:90
+msgid "Distributed"
+msgstr "Distribuido"
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:10
 msgid "Do you even know what luck is?"
@@ -3009,7 +3027,7 @@ msgstr "Coste de promulgación"
 msgid "Enchanted Trousers"
 msgstr "Pantalones encantados"
 
-#: src/components/_military/battle/BattleSystem.tsx:613
+#: src/components/_military/battle/BattleSystem.tsx:618
 msgid "Ended"
 msgstr "Finalizada"
 
@@ -3093,11 +3111,6 @@ msgstr "Puntos de ideología:"
 #: src/pages/country/[countryId]/index.tsx:349
 msgid "Events"
 msgstr "Eventos"
-
-#. placeholder {0}: ts.case2
-#: src/components/_military/damageRanking/BattleLoot.tsx:58
-msgid "Every <0/> total damage dealt across both sides rolls an <1>{0}</1> into the round loot pool.<2>Additionally, every <3/> total battle damage rolls an item into the battle-wide pool.</2><4>On round end, the loot pools are distributed by overall damage rank: rank 1 receives the most valuable item, rank 2 the next, and so on.</4>"
-msgstr "Cada <0/> de daño total infligido entre ambos bandos añade un <1>{0}</1> al botín de la ronda.<2>Además, cada <3/> de daño total de la batalla añade un objeto al botín global de la batalla.</2><4>Al finalizar la ronda, los botines se distribuyen según el ranking de daño total: el puesto 1 recibe el objeto más valioso, el puesto 2 el siguiente, y así sucesivamente.</4>"
 
 #: src/pages/tournament/[tournamentId]/index.tsx:42
 msgid "Everyone participates automatically"
@@ -3291,12 +3304,12 @@ msgstr "Buscar una unidad militar"
 msgid "Find another job"
 msgstr "Buscar otro trabajo"
 
-#: src/components/_political/government/Government.tsx:216
+#: src/components/_political/government/Government.tsx:228
 #: src/components/_user/worker/WorkerEditFormModal.tsx:202
 msgid "Fire"
 msgstr "Despedir"
 
-#: src/components/_political/government/Government.tsx:225
+#: src/components/_political/government/Government.tsx:240
 msgid "Fire government member"
 msgstr "Destituir a un miembro del gobierno"
 
@@ -3476,7 +3489,7 @@ msgstr "Gobierno"
 msgid "Government Member"
 msgstr "Miembro del gobierno"
 
-#: src/components/_military/battle/BattleSystem.tsx:648
+#: src/components/_military/battle/BattleSystem.tsx:680
 msgid "Government penalty"
 msgstr "Penalización del gobierno"
 
@@ -3484,7 +3497,7 @@ msgstr "Penalización del gobierno"
 msgid "Government Proposals"
 msgstr "Propuestas de gobierno"
 
-#: src/components/_political/government/Government.tsx:150
+#: src/components/_political/government/Government.tsx:185
 msgid "Government wage"
 msgstr "Salario del gobierno"
 
@@ -3508,7 +3521,7 @@ msgstr "Báculo verde"
 msgid "Ground"
 msgstr "Tierra"
 
-#: src/components/_military/battle/BattleSystem.tsx:543
+#: src/components/_military/battle/BattleSystem.tsx:548
 msgid "ground per tick"
 msgstr "terreno por tic"
 
@@ -3575,7 +3588,7 @@ msgid "Hit <0>{count}</0> times in battles"
 msgstr "Golpea <0>{count}</0> veces en batallas"
 
 #. placeholder {0}: staticGameConfig.battle.govMemberBountyRewardPercent
-#: src/components/_military/battle/BattleSystem.tsx:650
+#: src/components/_military/battle/BattleSystem.tsx:682
 msgid "Hitting for your own country while in government gives {0}% bounty efficiency."
 msgstr "Atacar por tu propio país mientras estás en el gobierno otorga {0}% de eficiencia de recompensa."
 
@@ -3702,7 +3715,7 @@ msgstr "Industrialismo vs Agrarismo"
 msgid "Industrialist"
 msgstr "Industrialismo"
 
-#: src/components/_political/government/Government.tsx:146
+#: src/components/_political/government/Government.tsx:181
 msgid "Initial development"
 msgstr "Desarrollo inicial"
 
@@ -4080,7 +4093,7 @@ msgstr "Cajas obtenidas"
 msgid "Looted money"
 msgstr "Dinero obtenido"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:97
+#: src/components/_military/damageRanking/BattleLoot.tsx:110
 msgid "Loots"
 msgstr "Recompensas"
 
@@ -4317,15 +4330,15 @@ msgstr "Mínimo de ciudadanos activos"
 msgid "Minimum reputation to accept"
 msgstr "Reputación mínima para aceptar"
 
-#: src/components/_political/government/Government.tsx:87
+#: src/components/_political/government/Government.tsx:82
 msgid "Minister of Defense"
 msgstr "Ministro de Defensa"
 
-#: src/components/_political/government/Government.tsx:95
+#: src/components/_political/government/Government.tsx:91
 msgid "Minister of Economy"
 msgstr "Ministro de Economía"
 
-#: src/components/_political/government/Government.tsx:103
+#: src/components/_political/government/Government.tsx:100
 msgid "Minister of Foreign Affairs"
 msgstr "Ministro de Asuntos Exteriores"
 
@@ -4484,6 +4497,10 @@ msgstr "Tesoro de UM"
 msgid "Must be at least {MIN_EFFECTIVE_RATE} money per 1k damage"
 msgstr "Debe ser al menos {MIN_EFFECTIVE_RATE} de dinero por 1k de daño"
 
+#: src/components/_military/battle/LootSummaryCard.tsx:66
+msgid "My battle loot"
+msgstr "Mi botín de batalla"
+
 #: src/components/_user/apiToken/ApiTokenList.tsx:247
 msgid "My Bot, Script, etc."
 msgstr "Mi Bot, Script, etc."
@@ -4524,6 +4541,10 @@ msgstr "¿¡Mítico?! Tu cuenta está bendecida"
 #: src/components/_political/party/PartyFormModal.tsx:99
 msgid "Name"
 msgstr "Nombre"
+
+#: src/components/_military/battle/BattleSystem.tsx:669
+msgid "National bounty"
+msgstr "Recompensa nacional"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:56
 msgid "Need a job?"
@@ -4648,11 +4669,6 @@ msgstr "Más recientes"
 msgid "News"
 msgstr "Noticias"
 
-#. placeholder {0}: roundId ? 'round' : 'battle'
-#: src/components/_military/damageRanking/BattleLoot.tsx:77
-msgid "Next {0} case"
-msgstr "Siguiente {0} caja"
-
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:18
 msgid "Next one will be a tank"
 msgstr "La próxima será un tanque"
@@ -4665,7 +4681,7 @@ msgstr "La próxima será un tanque"
 msgid "Next reward"
 msgstr "Siguiente recompensa"
 
-#: src/components/_military/battle/BattleSystem.tsx:480
+#: src/components/_military/battle/BattleSystem.tsx:485
 msgid "Next tick"
 msgstr "Siguiente tic"
 
@@ -4777,7 +4793,7 @@ msgstr "Aún no hay mociones"
 msgid "No offers found"
 msgstr "No se encontraron ofertas"
 
-#: src/components/_political/government/Government.tsx:160
+#: src/components/_political/government/Government.tsx:205
 msgid "No one nominated yet"
 msgstr "Nadie nominado aún"
 
@@ -4825,12 +4841,12 @@ msgstr "Ninguna guerra"
 msgid "No work offers"
 msgstr "Sin ofertas de trabajo"
 
-#: src/components/_political/government/Government.tsx:209
+#: src/components/_political/government/Government.tsx:219
 #: src/components/_political/government/NominateForm.tsx:74
 msgid "Nominate"
 msgstr "Nombrar"
 
-#: src/components/_political/government/Government.tsx:237
+#: src/components/_political/government/Government.tsx:257
 msgid "Nominate a {title}"
 msgstr "Nombrar a {title}"
 
@@ -4870,7 +4886,7 @@ msgstr "Número de donantes:"
 msgid "Occupied region"
 msgstr "Region ocupada"
 
-#: src/components/_political/government/Government.tsx:144
+#: src/components/_political/government/Government.tsx:179
 msgid "of"
 msgstr "de"
 
@@ -5290,7 +5306,7 @@ msgstr "Regalo premium enviado"
 msgid "Premium has started working"
 msgstr "El premium empezó a funcionar"
 
-#: src/components/_political/government/Government.tsx:71
+#: src/components/_political/government/Government.tsx:64
 msgid "President"
 msgstr "Presidente"
 
@@ -5780,11 +5796,11 @@ msgstr "Renombrar"
 msgid "Rename company"
 msgstr "Renombrar empresa"
 
-#: src/components/_political/government/Government.tsx:209
+#: src/components/_political/government/Government.tsx:219
 msgid "Replace"
 msgstr "Reemplazar"
 
-#: src/components/_political/government/Government.tsx:237
+#: src/components/_political/government/Government.tsx:257
 msgid "Replace {title}"
 msgstr "Reemplazar {title}"
 
@@ -5857,7 +5873,7 @@ msgstr "Restablecer nombre de usuario"
 msgid "Reshuffle in"
 msgstr "Redistribución en"
 
-#: src/components/_military/hit/HitButton.tsx:378
+#: src/components/_military/hit/HitButton.tsx:406
 msgid "Resist"
 msgstr "Resistir"
 
@@ -5918,7 +5934,7 @@ msgstr "Recompensa"
 msgid "Rifle"
 msgstr "Rifle"
 
-#: src/components/_political/government/Government.tsx:123
+#: src/components/_political/government/Government.tsx:154
 msgid "Rights"
 msgstr "Derechos"
 
@@ -5946,6 +5962,10 @@ msgstr "Ronda"
 msgid "Round {0}"
 msgstr "Ronda {0}"
 
+#: src/components/_military/damageRanking/BattleLoot.tsx:83
+msgid "Round {roundNumber} loot pool"
+msgstr "Botín de la ronda {roundNumber}"
+
 #. placeholder {0}: (roundIndex ?? 0) + 1
 #. placeholder {0}: i + 1
 #: src/components/_military/battle/BattleTimelineRound.tsx:88
@@ -5969,6 +5989,10 @@ msgstr "Ronda terminada"
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:79
 msgid "Round Hero"
 msgstr "Héroe de la ronda"
+
+#: src/components/_military/damageRanking/BattleLoot.tsx:53
+msgid "Round loot"
+msgstr "Botín de la ronda"
 
 #: src/components/_military/battle/BattleTimeline.tsx:57
 msgid "Rounds timeline"
@@ -6404,7 +6428,7 @@ msgstr "Convocar elecciones presidenciales"
 msgid "Start revolution"
 msgstr "Iniciar una revuelta"
 
-#: src/components/_military/battle/BattleHeader.tsx:171
+#: src/components/_military/battle/BattleHeader.tsx:172
 #: src/components/_military/war/WarHeader.tsx:61
 #: src/components/_military/war/WarItem.tsx:108
 msgid "Started <0/>"
@@ -6684,6 +6708,10 @@ msgstr "El torneo ha terminado para tu equipo <0/>. ¡Revisa los resultados!"
 msgid "The universe owes you something big"
 msgstr "El universo te debe algo grande"
 
+#: src/components/_military/battle/BattleSystem.tsx:670
+msgid "This bounty is reserved for nationals only."
+msgstr "Esta recompensa está reservada solo para ciudadanos nacionales."
+
 #: src/components/_economy/company/CompanyTags.tsx:66
 msgid "This company is disabled because the owner reached the company limit."
 msgstr "Esta empresa está desactivada porque el dueño alcanzó el límite de empresas."
@@ -6699,6 +6727,10 @@ msgstr "Este equipo es verde y el césped también"
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:62
 msgid "This feels good, huh?"
 msgstr "Se siente bien, ¿no?"
+
+#: src/components/_military/battle/LootSummaryCard.tsx:43
+msgid "This is a summary of the loot you received from this battle. It includes any cases you got as well as the most valuable items from the shared loot pool."
+msgstr "Este es un resumen del botín que recibiste de esta batalla. Incluye cualquier caja que hayas obtenido, así como los objetos más valiosos del botín compartido."
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:27
 msgid "This is your company hub. Here you can produce items and build your empire."
@@ -6717,7 +6749,7 @@ msgstr "Esta ley tiene un costo variable adicional"
 msgid "This law requires at least {minActiveCitizen} active citizens (level 10+) in the country."
 msgstr "Esta ley requirere al menos {minActiveCitizen} ciudadnos activos (de nivel 10+) en el país."
 
-#: src/components/_political/government/Government.tsx:226
+#: src/components/_political/government/Government.tsx:241
 msgid "This member won't be able to be nominated again for {cooldownDays} days."
 msgstr "Este miembro no podrá ser nominado nuevamente durante {cooldownDays} días."
 
@@ -6877,7 +6909,7 @@ msgstr "Top regaladores del mes"
 msgid "Top of the hill"
 msgstr "En la cima de la colina"
 
-#: src/components/_military/battle/BattleSystem.tsx:534
+#: src/components/_military/battle/BattleSystem.tsx:539
 msgid "total"
 msgstr "total"
 
@@ -7323,7 +7355,7 @@ msgstr "Verificando CAPTCHA..."
 msgid "Vice Admiral"
 msgstr "Vicealmirante"
 
-#: src/components/_political/government/Government.tsx:79
+#: src/components/_political/government/Government.tsx:73
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:65
 msgid "Vice President"
 msgstr "Vicepresidente"
@@ -7332,7 +7364,7 @@ msgstr "Vicepresidente"
 msgid "View details"
 msgstr "Ver detalles"
 
-#: src/components/_military/battle/BattleHeader.tsx:102
+#: src/components/_military/battle/BattleHeader.tsx:103
 msgid "View on map"
 msgstr "Ver en el mapa"
 
@@ -7999,7 +8031,7 @@ msgstr "¡Tus misiones diarias han sido reiniciadas! Completa las misiones para 
 msgid "Your daily XP limit has been reset, you can now gain XP and get your daily reward!"
 msgstr "¡Tu límite de XP diario se ha reiniciado, ahora puedes ganar XP y obtener tu recompensa diaria!"
 
-#: src/components/_military/hit/HitButton.tsx:333
+#: src/components/_military/hit/HitButton.tsx:361
 msgid "Your damages"
 msgstr "Tu daño"
 
@@ -8030,6 +8062,11 @@ msgstr "Tu información se ha guardado."
 #: src/components/_other/tour/tuto.frontConfig.tsx:85
 msgid "Your inventory holds all your items. Let's see what you've got!"
 msgstr "Tu inventario contiene todos tus objetos. ¡Veamos qué tienes!"
+
+#: src/components/_military/battle/LootSummaryCard.tsx:42
+#: src/components/_military/battle/LootSummaryCard.tsx:46
+msgid "Your loot"
+msgstr "Tu botín"
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:48
 msgid "Your luck is just warming up, don't quit"
