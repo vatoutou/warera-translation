@@ -47,11 +47,6 @@ msgstr "{0} aktív állampolgár szükséges"
 msgid "{0} bought your item offer"
 msgstr "{0} megvette a tárgy ajánlatodat"
 
-#. placeholder {0}: data.countryName
-#: src/components/_user/notification/notification.frontConfig.tsx:1601
-msgid "{0} created a mercenary contract proposal targeting <0/> in <1/>"
-msgstr ""
-
 #. placeholder {0}: Math.floor(cooldownHours / 24)
 #: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:144
 msgid "{0} days cooldown"
@@ -68,6 +63,12 @@ msgstr "{0} ingyenes"
 #: src/components/_political/partyMotion/PartyMotion.tsx:109
 msgid "{0} hours"
 msgstr "{0} óra"
+
+#. placeholder {0}: data.outbidByMuName
+#. placeholder {1}: data.newPerK
+#: src/components/_user/notification/notification.frontConfig.tsx:1621
+msgid "{0} outbid you at ${1}/K"
+msgstr ""
 
 #. placeholder {0}: data.userId && ( <UserUsername userId={data.userId} withAvatar withFlag /> )
 #: src/components/_user/notification/notification.frontConfig.tsx:507
@@ -106,20 +107,20 @@ msgid "{0}% of invested"
 msgstr "{0}% a befektetésből"
 
 #: src/components/_military/battle/BattleName.tsx:141
-msgid "{battleIcon}Resistance battle for {regionName} {score}"
-msgstr "{battleIcon}Ellenállási csata {regionName} területéért {score}"
+msgid "{battleIcon}Battle for {regionName} {score}"
+msgstr ""
 
 #: src/components/_military/battle/BattleName.tsx:146
-msgid "{battleIcon}Revolution battle {score}"
-msgstr "{battleIcon}Forradalmi csata {score}"
+msgid "{battleIcon}Resistance for {regionName} {score}"
+msgstr ""
 
 #: src/components/_military/battle/BattleName.tsx:151
+msgid "{battleIcon}Revolution {score}"
+msgstr ""
+
+#: src/components/_military/battle/BattleName.tsx:156
 msgid "{battleIcon}Tournament battle for {tournamentName} {score}"
 msgstr "{battleIcon}Bajnoksági csata: {tournamentName} {score}"
-
-#: src/components/_military/battle/BattleName.tsx:136
-msgid "{battleIcon}War battle for {regionName} {score}"
-msgstr "{battleIcon}Háborús csata {regionName} területéért {score}"
 
 #: src/components/_user/mission/MissionsList.tsx:172
 msgid "{completedCount}/{totalCount} completed"
@@ -129,9 +130,9 @@ msgstr "{completedCount}/{totalCount} teljesítve"
 msgid "{registeredCount} {entityLabel} registered"
 msgstr "{registeredCount} {entityLabel} regisztrálva"
 
-#: src/components/_military/battle/BattleTimeline.tsx:61
-msgid "{roundsToWin} Rounds to win"
-msgstr "{roundsToWin} kör a győzelemhez"
+#: src/components/_military/battle/BattleTimeline.tsx:79
+msgid "{roundsToWin} Rounds to win "
+msgstr ""
 
 #. placeholder {0}: staticGameConfig.battle.roundsToWin
 #: src/components/_military/battle/RoundScore.tsx:50
@@ -150,10 +151,6 @@ msgstr "*Eléghet"
 msgid "/day"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1499
-msgid "<0/> accepted a contract"
-msgstr ""
-
 #: src/components/_user/notification/notification.frontConfig.tsx:377
 #: src/components/_user/notification/notification.frontConfig.tsx:1068
 msgid "<0/> applied to join <1/>"
@@ -170,16 +167,16 @@ msgstr "<0/> <1>{0}</1> fizetéssel.{1}"
 msgid "<0/> buys your region <1/> for <2>{0}</2>"
 msgstr "<0/> megvásárolja a régiódat, <1/>, <2>{0}</2> összegért"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1542
-msgid "<0/> cancelled the contract"
+#: src/components/_user/notification/notification.frontConfig.tsx:1541
+msgid "<0/> cancelled the contract."
 msgstr ""
 
 #: src/components/_user/notification/notification.frontConfig.tsx:770
 msgid "<0/> commented on your article <1/>"
 msgstr "<0/> hozzászólt a cikkedhez: <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1520
-msgid "<0/> completed a contract"
+#: src/components/_user/notification/notification.frontConfig.tsx:1516
+msgid "<0/> completed a contract, you earned <1/>"
 msgstr ""
 
 #: src/components/_user/notification/notification.frontConfig.tsx:663
@@ -228,14 +225,18 @@ msgstr "<0/> prémium előfizetést ajándékozott neked!"
 msgid "<0/> gifted you the banner \"{0}\"!"
 msgstr "<0/> ajándékba adta neked a(z) \"{0}\" bannert!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1677
+#: src/components/_user/notification/notification.frontConfig.tsx:1692
 msgid "<0/> gifted you the skin \"{skinTitle}\"!"
 msgstr "<0/> ajándékba adta neked a(z) \"{skinTitle}\" skint!"
 
 #. placeholder {0}: data.skinPackTitle
-#: src/components/_user/notification/notification.frontConfig.tsx:1740
+#: src/components/_user/notification/notification.frontConfig.tsx:1755
 msgid "<0/> gifted you the skin pack \"{0}\"!"
 msgstr "<0/> ajándékba adta neked a(z) \"{0}\" skincsomagot!"
+
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:227
+msgid "<0/> got fee back"
+msgstr ""
 
 #: src/components/_user/notification/notification.frontConfig.tsx:1296
 msgid "<0/> has been created, it gonna start soon!"
@@ -361,6 +362,10 @@ msgstr ""
 msgid "<0/> mentioned you in a message <1/>"
 msgstr "<0/> megemlített egy üzenetben <1/>"
 
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:221
+msgid "<0/> paid fee"
+msgstr ""
+
 #: src/components/_military/war/WarItem.tsx:115
 msgid "<0/> Priority ends in <1/>"
 msgstr "<0/> Prioritás lejár <1/>"
@@ -417,6 +422,10 @@ msgstr "<0/> jelölték mint <1>{0}</1>"
 msgid "<0/> won round {0}"
 msgstr "<0/> megnyerte a(z) {0}. kört"
 
+#: src/components/_user/notification/notification.frontConfig.tsx:1499
+msgid "<0/> won the auction on a contract with <1/>"
+msgstr ""
+
 #. placeholder {0}: data.attackerWonRoundsCount
 #. placeholder {1}: data.defenderWonRoundsCount
 #: src/components/_political/message/systemMessage.frontConfig.tsx:67
@@ -472,17 +481,17 @@ msgid "<0>{0}/{1}</0> Workers"
 msgstr "<0>{0}/{1}</0> Dolgozók"
 
 #. placeholder {0}: sideBonus.muHqBonusPercent
-#: src/components/_military/battle/BattleDamageBonuses.tsx:114
+#: src/components/_military/battle/BattleDamageBonuses.tsx:111
 msgid "<0>{0}</0> <1/> in <2/>"
 msgstr "<0>{0}</0> <1/> itt <2/>"
 
 #. placeholder {0}: sideBonus.muOrderBonusPercent
-#: src/components/_military/battle/BattleDamageBonuses.tsx:104
+#: src/components/_military/battle/BattleDamageBonuses.tsx:101
 msgid "<0>{0}</0> <1/> orders"
 msgstr "<0>{0}</0> <1/> parancsok"
 
 #. placeholder {0}: sideBonus.countryEnemyBonusPercent
-#: src/components/_military/battle/BattleDamageBonuses.tsx:82
+#: src/components/_military/battle/BattleDamageBonuses.tsx:79
 msgid "<0>{0}</0> against enemy of <1/>"
 msgstr "<0>{0}</0> <1/> ellensége ellen"
 
@@ -492,17 +501,17 @@ msgid "<0>{0}</0> Attack bonus"
 msgstr ""
 
 #. placeholder {0}: sideBonus.regionNotLinkedToCapitalMalusPercent
-#: src/components/_military/battle/BattleDamageBonuses.tsx:166
+#: src/components/_military/battle/BattleDamageBonuses.tsx:163
 msgid "<0>{0}</0> because <1/> is not linked to the capital"
 msgstr "<0>{0}</0> mert <1/> nincs összekötve a fővárossal"
 
 #. placeholder {0}: sideBonus.lostAttackingRegionMalusPercent
-#: src/components/_military/battle/BattleDamageBonuses.tsx:182
+#: src/components/_military/battle/BattleDamageBonuses.tsx:179
 msgid "<0>{0}</0> because <1/> lost <2/>"
 msgstr "<0>{0}</0> mert <1/> elvesztette <2/>"
 
 #. placeholder {0}: sideBonus.occupyingYourRegionsMalusPercent
-#: src/components/_military/battle/BattleDamageBonuses.tsx:212
+#: src/components/_military/battle/BattleDamageBonuses.tsx:205
 msgid "<0>{0}</0> because <1/> occupies at least one of <2/> regions"
 msgstr "<0>{0}</0> mert <1/> megszállja <2/> legalább egy régióját"
 
@@ -511,15 +520,20 @@ msgstr "<0>{0}</0> mert <1/> megszállja <2/> legalább egy régióját"
 msgid "<0>{0}</0> Defense bonus"
 msgstr ""
 
+#. placeholder {0}: data.acceptanceFeeReturned
+#: src/components/_user/notification/notification.frontConfig.tsx:1562
+msgid "<0>{0}</0> fee returned to MU."
+msgstr ""
+
 #. placeholder {0}: sideBonus.regionAttackBonusPercent
 #. placeholder {0}: sideBonus.regionDefenseBonusPercent
-#: src/components/_military/battle/BattleDamageBonuses.tsx:135
-#: src/components/_military/battle/BattleDamageBonuses.tsx:151
+#: src/components/_military/battle/BattleDamageBonuses.tsx:132
+#: src/components/_military/battle/BattleDamageBonuses.tsx:148
 msgid "<0>{0}</0> from <1/> in <2/>"
 msgstr "<0>{0}</0> innen: <1/> itt: <2/>"
 
 #. placeholder {0}: sideBonus.resistanceBonusPercent
-#: src/components/_military/battle/BattleDamageBonuses.tsx:202
+#: src/components/_military/battle/BattleDamageBonuses.tsx:195
 msgid "<0>{0}</0> from <1>Resistance</1>"
 msgstr "<0>{0}</0> az <1>Ellenállásból</1>"
 
@@ -529,7 +543,7 @@ msgid "<0>{0}</0> from agrarian ethics deposit bonus."
 msgstr "<0>{0}</0> az Agrár etika lelőhely bónuszából."
 
 #. placeholder {0}: sideBonus.countryAlliesBonusPercent
-#: src/components/_military/battle/BattleDamageBonuses.tsx:71
+#: src/components/_military/battle/BattleDamageBonuses.tsx:68
 msgid "<0>{0}</0> from alliance with <1/>"
 msgstr "<0>{0}</0> a(z) <1/> szövetségből"
 
@@ -539,12 +553,12 @@ msgid "<0>{0}</0> from deposit resources."
 msgstr "<0>{0}</0> a lelőhely erőforrásokból."
 
 #. placeholder {0}: sideBonus.allyEthicsBonusPercent
-#: src/components/_military/battle/BattleDamageBonuses.tsx:248
+#: src/components/_military/battle/BattleDamageBonuses.tsx:237
 msgid "<0>{0}</0> from Diplomatic ethics (fighting for ally)"
 msgstr "<0>{0}</0> a Diplomata etikából (szövetségesért való harc)"
 
 #. placeholder {0}: sideBonus.patrioticBonusPercent
-#: src/components/_military/battle/BattleDamageBonuses.tsx:61
+#: src/components/_military/battle/BattleDamageBonuses.tsx:58
 msgid "<0>{0}</0> from fighting for your country"
 msgstr "<0>{0}</0> az országodért való harcból"
 
@@ -554,22 +568,22 @@ msgid "<0>{0}</0> from industrialist ethics specialization bonus."
 msgstr "<0>{0}</0> az Iparos etika specializációs bónuszából."
 
 #. placeholder {0}: sideBonus.enemyEthicsBonusPercent
-#: src/components/_military/battle/BattleDamageBonuses.tsx:258
+#: src/components/_military/battle/BattleDamageBonuses.tsx:247
 msgid "<0>{0}</0> from Isolationist ethics (fighting enemy)"
 msgstr "<0>{0}</0> az Elszigetelő etikából (ellenséggel való harc)"
 
 #. placeholder {0}: sideBonus.militarismBonusPercent
-#: src/components/_military/battle/BattleDamageBonuses.tsx:228
+#: src/components/_military/battle/BattleDamageBonuses.tsx:217
 msgid "<0>{0}</0> from Militarist ethics (attacking)"
 msgstr "<0>{0}</0> a Militarista etikából (támadás)"
 
 #. placeholder {0}: sideBonus.countryOrderBonusPercent
-#: src/components/_military/battle/BattleDamageBonuses.tsx:93
+#: src/components/_military/battle/BattleDamageBonuses.tsx:90
 msgid "<0>{0}</0> from orders of <1/>"
 msgstr "<0>{0}</0> a(z) <1/> parancsaiból"
 
 #. placeholder {0}: sideBonus.pacifismBonusPercent
-#: src/components/_military/battle/BattleDamageBonuses.tsx:238
+#: src/components/_military/battle/BattleDamageBonuses.tsx:227
 msgid "<0>{0}</0> from Pacifist ethics (defending)"
 msgstr "<0>{0}</0> a Pacifista etikából (védelem)"
 
@@ -582,6 +596,11 @@ msgstr "<0>{0}</0> a stratégiai erőforrások termelési bónuszából."
 #: src/components/_common/RoundPoints.tsx:17
 msgid "<0>{0}</0> ground are required to win a round, points are gained every tick"
 msgstr "<0>{0}</0> terület szükséges egy kör megnyeréséhez, a pontok minden tikben gyűlnek"
+
+#. placeholder {0}: data.refund
+#: src/components/_user/notification/notification.frontConfig.tsx:1554
+msgid "<0>{0}</0> returned to <1/>."
+msgstr ""
 
 #. placeholder {0}: levelConfig.stats.maxProduction
 #: src/components/_other/upgrade/upgrade.frontConfig.tsx:81
@@ -609,8 +628,8 @@ msgstr "<0>{ethicSpecializationBonus}</0> az <1/> Iparos etika specializációs 
 msgid "<0>{strategicBonus}</0> from <1/> strategic resources production bonus."
 msgstr "<0>{strategicBonus}</0> az <1/> stratégiai erőforrások termelési bónuszából."
 
-#: src/pages/country/[countryId]/index.tsx:407
-#: src/pages/country/[countryId]/index.tsx:456
+#: src/pages/country/[countryId]/index.tsx:439
+#: src/pages/country/[countryId]/index.tsx:488
 msgid "<0>#{key}</0> resource of each type = <1>{value}</1>"
 msgstr "<0>#{key}</0> erőforrás minden típusból = <1>{value}</1>"
 
@@ -627,12 +646,12 @@ msgid "<0>Emotes</0> in chat"
 msgstr "<0>Emotok</0> a chatben"
 
 #. placeholder {0}: ts.case2
-#: src/components/_military/damageRanking/BattleLoot.tsx:55
+#: src/components/_military/damageRanking/BattleLoot.tsx:62
 msgid "<0>Every <1/> damage dealt in this round across both sides rolls an <2>{0}</2> into the round loot pool.</0><3>Round loot are distributed at the end of the round, top 1 damage dealer get top 1 item and so on...</3>"
 msgstr ""
 
 #. placeholder {0}: ts.case2
-#: src/components/_military/damageRanking/BattleLoot.tsx:68
+#: src/components/_military/damageRanking/BattleLoot.tsx:75
 msgid "<0>Every <1/> total damage dealt across both sides rolls an <2>{0}</2> into the battle loot pool.</0><3>Battle loot are distributed at the end of the battle, top 1 damage dealer get top 1 item and so on...</3>"
 msgstr ""
 
@@ -1040,6 +1059,16 @@ msgstr "Ebben a régióban lelőhelyet találtak, amelyet a vállalatok kihaszn�
 msgid "A deposit of <0>{0}</0> <1>{1}</1> has been found in <2/> for {2} days"
 msgstr ""
 
+#. placeholder {0}: contract.acceptanceFee
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:97
+msgid "A fee of <0>{0}</0> is required to accept this contract. The fee is returned once you complete the minimum damage of <1/>. If you fail to complete the contract or the country cancels it, the fee is lost."
+msgstr ""
+
+#. placeholder {0}: contract.acceptanceFee
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:91
+msgid "A fee of <0>{0}</0> was required to accept this contract. The fee has been returned after completing the minimum damage."
+msgstr ""
+
 #: src/components/_political/event/event.frontConfig.tsx:137
 msgid "A revolution has started in <0/>"
 msgstr ""
@@ -1057,19 +1086,14 @@ msgstr ""
 msgid "Abstain"
 msgstr "Tartózkodás"
 
-#: src/components/_military/mercenaryContract/AcceptMercenaryContractModal.tsx:70
-msgid "Abusing mercenary contracts to funnel money is against the rules and may lead to a ban."
-msgstr ""
-
 #: src/components/_user/userReports/ReportFormModal.tsx:84
 msgid "Abusing or spamming the report system may lead to sanctions."
 msgstr ""
 
-#: src/pages/country/[countryId]/index.tsx:128
+#: src/pages/country/[countryId]/index.tsx:132
 msgid "Abusing this power to advantage another country will lead to a <0>ban.</0>"
 msgstr "Ezen hatalom visszaélésszerű használata egy másik ország előnyére <0>kitiltáshoz</0> vezet."
 
-#: src/components/_military/mercenaryContract/MercenaryProposalItem.tsx:140
 #: src/components/_political/law/Law.tsx:159
 #: src/components/_political/partyMotion/PartyMotion.tsx:158
 #: src/components/_user/worker/WageReductionAlert.tsx:86
@@ -1085,11 +1109,6 @@ msgstr "Szövetség elfogadása"
 msgid "Accept an alliance with <0/> increasing your citizens damages by <1>{0}</1> when fighting for them by and reciprocally"
 msgstr "Szövetség elfogadása <0/> országgal, amely <1>{0}</1>-kal növeli a polgáraid által okozott sebzést, amikor értük harcolnak, és fordítva"
 
-#: src/components/_military/mercenaryContract/AcceptMercenaryContractModal.tsx:59
-#: src/components/_military/mercenaryContract/AcceptMercenaryContractModal.tsx:91
-msgid "Accept Mercenary Contract"
-msgstr ""
-
 #: src/components/_political/law/law.frontConfig.tsx:289
 msgid "Accept or reject a region buy offer"
 msgstr "Régió vételi ajánlatának elfogadása vagy elutasítása"
@@ -1102,21 +1121,20 @@ msgstr "Békekötés elfogadása"
 msgid "Accept to make peace with the other country"
 msgstr "Békekötés elfogadása a másik országgal"
 
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:303
 #: src/components/_political/law/LawStatus.tsx:43
 #: src/components/_political/partyMotion/PartyMotionStatus.tsx:52
 msgid "Accepted"
 msgstr "Elfogadva"
 
-#: src/components/_military/battle/BattleHeader.tsx:99
+#: src/components/_military/battle/BattleHeader.tsx:110
 msgid "Access war"
 msgstr "Háború megtekintése"
 
-#: src/components/_political/country/CountryHeader.tsx:71
+#: src/components/_political/country/CountryHeader.tsx:74
 #: src/components/_user/user/UserHeader.tsx:165
-#: src/pages/country/[countryId]/account.tsx:36
-#: src/pages/country/[countryId]/index.tsx:336
-#: src/pages/user/[userId]/account.tsx:25
+#: src/pages/country/[countryId]/account.tsx:43
+#: src/pages/country/[countryId]/index.tsx:340
+#: src/pages/user/[userId]/account.tsx:32
 #: src/pages/user/[userId]/index.tsx:150
 msgid "Account"
 msgstr "Fiók"
@@ -1125,7 +1143,9 @@ msgstr "Fiók"
 msgid "Actions"
 msgstr "Műveletek"
 
-#: src/components/_military/battle/BattlesHeader.tsx:24
+#: src/components/_military/battle/BattlesHeader.tsx:25
+#: src/components/_military/mercenaryContract/MercenaryAuctionList.tsx:126
+#: src/components/_military/mercenaryContract/MercenaryContractList.tsx:83
 #: src/pages/events/index.tsx:94
 #: src/utils/translations.tsx:258
 msgid "Active"
@@ -1135,7 +1155,7 @@ msgstr "Aktív"
 msgid "Active battle"
 msgstr "Aktív csata"
 
-#: src/pages/country/[countryId]/index.tsx:179
+#: src/pages/country/[countryId]/index.tsx:183
 msgid "Active battles"
 msgstr "Aktív csaták"
 
@@ -1147,19 +1167,15 @@ msgstr "Aktív polgárok"
 msgid "Active construction"
 msgstr "Aktív építkezés"
 
-#: src/pages/country/[countryId]/contracts.tsx:34
-msgid "Active Contracts"
-msgstr ""
-
 #: src/pages/war/[warId]/index.tsx:45
 msgid "Active War"
 msgstr "Aktív háború"
 
-#: src/pages/country/[countryId]/index.tsx:289
+#: src/pages/country/[countryId]/index.tsx:293
 msgid "Active wars"
 msgstr "Aktív háborúk"
 
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:213
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:179
 msgid "Activity"
 msgstr ""
 
@@ -1168,18 +1184,18 @@ msgid "Add User"
 msgstr "Felhasználó hozzáadása"
 
 #: src/components/_political/law/Law.tsx:87
-#: src/components/_political/law/LawFormModal.tsx:303
+#: src/components/_political/law/LawFormModal.tsx:302
 #: src/components/_political/partyMotion/PartyMotion.tsx:97
 #: src/components/_political/partyMotion/PartyMotionFormModal.tsx:172
 msgid "Additional cost"
 msgstr "További költség"
 
-#: src/components/_layout/LayoutRightIcons.tsx:230
+#: src/components/_layout/LayoutRightIcons.tsx:227
 #: src/components/_layout/MoreButtonNav.tsx:65
 msgid "Admin"
 msgstr "Admin"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2024
+#: src/components/_user/notification/notification.frontConfig.tsx:2037
 msgid "Admin notification"
 msgstr "Admin értesítés"
 
@@ -1214,6 +1230,7 @@ msgstr "Agrár"
 
 #: src/components/_military/battle/ActiveBattlesList.tsx:132
 #: src/components/_military/battle/EndedBattlesList.tsx:78
+#: src/components/_military/mercenaryContract/MercenaryContractList.tsx:77
 msgid "All"
 msgstr "Összes"
 
@@ -1264,7 +1281,7 @@ msgstr ""
 msgid "All Parties"
 msgstr "Minden párt"
 
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:200
+#: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:218
 msgid "All rounds"
 msgstr ""
 
@@ -1284,7 +1301,7 @@ msgstr "Szövetség megszakadt"
 msgid "Alliance formed"
 msgstr "Szövetség létrejött"
 
-#: src/pages/country/[countryId]/index.tsx:204
+#: src/pages/country/[countryId]/index.tsx:208
 msgid "Alliances"
 msgstr "Szövetségek"
 
@@ -1318,8 +1335,8 @@ msgstr "Lőszer"
 msgid "Ammo:"
 msgstr ""
 
+#: src/components/_political/law/LawFormModal.tsx:250
 #: src/components/_political/law/LawFormModal.tsx:251
-#: src/components/_political/law/LawFormModal.tsx:252
 msgid "Amount"
 msgstr "Összeg"
 
@@ -1335,8 +1352,9 @@ msgstr "Kezelhető <0>Munkások</0> száma. És a napi felvételi korlát."
 msgid "Amount of companies you can own"
 msgstr "A tulajdonodban lévő cégek száma"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1540
-msgid "An admin cancelled the contract"
+#. placeholder {0}: data.refund
+#: src/components/_user/notification/notification.frontConfig.tsx:1534
+msgid "An admin cancelled the contract. <0>{0}</0> returned to <1/>."
 msgstr ""
 
 #: src/components/_political/event/event.frontConfig.tsx:331
@@ -1354,11 +1372,6 @@ msgstr "Az ellenőrző kódot tartalmazó e-mailt elküldtük a következő cím
 #: src/components/_user/premium/PremiumFeatureList.tsx:108
 msgid "Animated <0>GIF</0> as avatar"
 msgstr "Animált <0>GIF</0> profilképként"
-
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:200
-#: src/components/_military/mercenaryContract/MercenaryProposalItem.tsx:114
-msgid "Any battle involving this country"
-msgstr ""
 
 #: src/components/_user/apiToken/ApiTokenList.tsx:40
 msgid "API token created"
@@ -1388,7 +1401,7 @@ msgstr "Alkalmazás minta"
 msgid "Application fee"
 msgstr "Jelentkezési díj"
 
-#: src/components/_political/citizenshipApplication/CitizenshipApplicationForm.tsx:60
+#: src/components/_political/citizenshipApplication/CitizenshipApplicationForm.tsx:56
 #: src/pages/country/[countryId]/citizenship.tsx:44
 msgid "Apply"
 msgstr "Jelentkezés"
@@ -1405,7 +1418,7 @@ msgstr ""
 msgid "Are you sure you want to demote this commander?"
 msgstr ""
 
-#: src/components/_user/worker/WorkerEditFormModal.tsx:102
+#: src/components/_user/worker/WorkerEditFormModal.tsx:113
 msgid "Are you sure you want to fire this worker?"
 msgstr "Biztosan el akarod bocsátani ezt a dolgozót?"
 
@@ -1455,11 +1468,11 @@ msgstr ""
 msgid "Armor"
 msgstr "Páncél"
 
-#: src/components/_political/law/LawFormModal.tsx:218
+#: src/components/_political/law/LawFormModal.tsx:217
 msgid "Article ID"
 msgstr "Cikk azonosító"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1883
+#: src/components/_user/notification/notification.frontConfig.tsx:1898
 msgid "Article liked"
 msgstr "Cikk lájkolva"
 
@@ -1467,8 +1480,8 @@ msgstr "Cikk lájkolva"
 msgid "Article Tip"
 msgstr "Cikk borravaló"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1885
-#: src/components/_user/notification/notification.frontConfig.tsx:1886
+#: src/components/_user/notification/notification.frontConfig.tsx:1900
+#: src/components/_user/notification/notification.frontConfig.tsx:1901
 msgid "Article tipped"
 msgstr "Cikk borravalót kapott"
 
@@ -1485,16 +1498,17 @@ msgstr "Cikkek írója: <0/>"
 msgid "At least you tried"
 msgstr "Legalább megpróbáltad"
 
-#: src/components/_military/battle/BattleSystem.tsx:491
+#: src/components/_military/battle/BattleSystem.tsx:586
 msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
 msgstr "Az időzítő végén <0>{actualTickPoints}</0> kerül kiosztásra a legtöbb sebzéssel rendelkező oldalnak."
 
-#: src/components/_military/hit/HitButton.tsx:408
+#: src/components/_military/hit/HitButton.tsx:444
 #: src/components/_user/user/skills.frontConfig.tsx:44
 #: src/components/_user/user/skills.frontConfig.tsx:45
 msgid "Attack"
 msgstr "Támadás"
 
+#: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:209
 #: src/components/_military/war/WarComparison.tsx:41
 msgid "Attacker"
 msgstr "Támadó"
@@ -1502,6 +1516,24 @@ msgstr "Támadó"
 #: src/components/_military/damageRanking/DamageRankingSides.tsx:190
 msgid "Attackers"
 msgstr "Támadók"
+
+#: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:191
+msgid "Auction Duration (minutes)"
+msgstr ""
+
+#: src/components/_user/notification/notification.frontConfig.tsx:2021
+msgid "Auction Outbid"
+msgstr ""
+
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:218
+msgid "Auction Won"
+msgstr ""
+
+#: src/components/_military/battle/BattleHeader.tsx:282
+#: src/components/_military/battle/BattlesHeader.tsx:37
+#: src/components/_military/battle/BattleSideContractsModal.tsx:37
+msgid "Auctions"
+msgstr ""
 
 #: src/components/_user/auth/ConnectFromModal.tsx:141
 msgid "Authentication failed. Please try again."
@@ -1524,10 +1556,6 @@ msgstr "Automatizált motor"
 msgid "Automated Engine"
 msgstr "Automatizált Motor"
 
-#: src/pages/battles/contracts.tsx:51
-msgid "Available Proposals"
-msgstr ""
-
 #: src/components/_user/user/UserDropdown.tsx:151
 msgid "Avatar removed"
 msgstr "Avatar eltávolítva"
@@ -1540,11 +1568,11 @@ msgstr ""
 msgid "Badge won"
 msgstr "Jelvény megszerzve"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1834
+#: src/components/_user/notification/notification.frontConfig.tsx:1849
 msgid "Badge Won"
 msgstr "Jelvény Megszerzve"
 
-#: src/pages/country/[countryId]/index.tsx:173
+#: src/pages/country/[countryId]/index.tsx:177
 #: src/pages/user/[userId]/index.tsx:135
 msgid "Badges"
 msgstr "Jelvények"
@@ -1565,15 +1593,15 @@ msgstr "Csőd"
 msgid "Banned"
 msgstr "Tiltva"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1850
+#: src/components/_user/notification/notification.frontConfig.tsx:1865
 msgid "Banner Accepted!"
 msgstr "Banner elfogadva!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1847
+#: src/components/_user/notification/notification.frontConfig.tsx:1862
 msgid "Banner gift received"
 msgstr "Banner ajándék érkezett"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1845
+#: src/components/_user/notification/notification.frontConfig.tsx:1860
 msgid "Banner gift sent"
 msgstr "Banner ajándék elküldve"
 
@@ -1607,15 +1635,13 @@ msgid "Basic Pants"
 msgstr "Alap nadrág"
 
 #: src/components/_military/damageRanking/DamageRankingSides.tsx:86
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:188
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:194
-#: src/components/_military/mercenaryContract/MercenaryProposalItem.tsx:108
+#: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:201
 #: src/components/_military/war/WarHeader.tsx:56
 msgid "Battle"
 msgstr "Csata"
 
 #: src/components/_political/event/EventList.tsx:65
-#: src/components/_user/notification/notification.frontConfig.tsx:1931
+#: src/components/_user/notification/notification.frontConfig.tsx:1946
 msgid "Battle ended"
 msgstr "Csata véget ért"
 
@@ -1623,11 +1649,11 @@ msgstr "Csata véget ért"
 msgid "Battle Hero"
 msgstr ""
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:53
+#: src/components/_military/damageRanking/BattleLoot.tsx:60
 msgid "Battle loot"
 msgstr ""
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:83
+#: src/components/_military/damageRanking/BattleLoot.tsx:90
 msgid "Battle loot pool"
 msgstr ""
 
@@ -1640,7 +1666,7 @@ msgid "Battle Orders"
 msgstr ""
 
 #: src/components/_layout/LayoutMenu.tsx:154
-#: src/components/_military/battle/BattlesHeader.tsx:20
+#: src/components/_military/battle/BattlesHeader.tsx:21
 #: src/components/_military/war/WarHeader.tsx:83
 #: src/pages/region/[regionId]/index.tsx:132
 #: src/pages/war/[warId]/index.tsx:75
@@ -1672,6 +1698,10 @@ msgstr "Jelöltté válás"
 msgid "Better than nothing, right?"
 msgstr "Jobb, mint a semmi, nem?"
 
+#: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:259
+msgid "Bid"
+msgstr ""
+
 #: src/components/_user/user/UserDropdown.tsx:278
 msgid "Block (hide content)"
 msgstr "Blokkolás (tartalom elrejtése)"
@@ -1680,19 +1710,10 @@ msgstr "Blokkolás (tartalom elrejtése)"
 msgid "Blue Staff"
 msgstr ""
 
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:116
-#: src/components/_military/mercenaryContract/MercenaryProposalItem.tsx:71
-msgid "Bonus"
-msgstr ""
-
-#: src/components/_military/battle/BattleDamageBonuses.tsx:50
+#: src/components/_military/battle/BattleDamageBonuses.tsx:47
 #: src/components/_political/law/law.frontConfig.tsx:189
 msgid "Bonus damages"
 msgstr "Bónusz sebzés"
-
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:166
-msgid "Bonus on completion"
-msgstr ""
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:114
 msgid "Boost your production!"
@@ -1703,12 +1724,12 @@ msgstr "Növeld a termelésed!"
 msgid "Boots"
 msgstr "Csizma"
 
-#: src/components/_military/battle/BattleSystem.tsx:730
-#: src/components/_military/battle/BattleSystem.tsx:741
+#: src/components/_military/battle/BattleSystem.tsx:821
+#: src/components/_military/battle/BattleSystem.tsx:831
 msgid "Bounty cooldown"
 msgstr ""
 
-#: src/components/_military/battle/BattleSystem.tsx:716
+#: src/components/_military/battle/BattleSystem.tsx:807
 msgid "Bounty will be available in"
 msgstr ""
 
@@ -1740,15 +1761,19 @@ msgstr "Dandártábornok"
 msgid "Browse Packs"
 msgstr "Csomagok böngészése"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2013
+#: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:151
+msgid "Budget"
+msgstr ""
+
+#: src/components/_user/notification/notification.frontConfig.tsx:2026
 msgid "Buff ended"
 msgstr "Buff véget ért"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2011
+#: src/components/_user/notification/notification.frontConfig.tsx:2024
 msgid "Buff expiring soon"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2009
+#: src/components/_user/notification/notification.frontConfig.tsx:2022
 msgid "Buff started"
 msgstr "Buff elkezdődött"
 
@@ -1768,7 +1793,7 @@ msgstr "Cég létrehozása"
 msgid "Build a military unit"
 msgstr "Katonai egység létrehozása"
 
-#: src/components/_military/mu/MuFormModal.tsx:136
+#: src/components/_military/mu/MuFormModal.tsx:133
 msgid "Build the military unit"
 msgstr "A katonai egység létrehozása"
 
@@ -1784,6 +1809,7 @@ msgstr "Vásárolj <0>{count}</0> pénzért a piacon"
 msgid "Buy Items"
 msgstr "Tárgyak vásárlása"
 
+#: src/components/_economy/itemTrading/TradingOrders.tsx:50
 #: src/pages/market/index.tsx:135
 msgid "Buy orders"
 msgstr "Vételi ajánlatok"
@@ -1809,10 +1835,13 @@ msgstr "Kadét"
 msgid "Campaign Article Link (optional)"
 msgstr "Kampánycikk link (opcionális)"
 
-#: src/components/_military/mercenaryContract/MercenaryProposalItem.tsx:135
 #: src/components/_political/election/CandidateFormModal.tsx:83
 msgid "Cancel"
 msgstr "Mégse"
+
+#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:77
+msgid "Cancel as gov"
+msgstr ""
 
 #: src/components/_user/premium/PremiumFeatureList.tsx:166
 msgid "Cancel at any time"
@@ -1823,12 +1852,13 @@ msgstr "Bármikor lemondható"
 msgid "Cancel Contract"
 msgstr ""
 
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:283
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:290
+#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:84
+#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:63
+#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:75
 msgid "Cancel Mercenary Contract"
 msgstr ""
 
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:305
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:232
 #: src/utils/translations.tsx:253
 msgid "Cancelled"
 msgstr ""
@@ -1837,18 +1867,13 @@ msgstr ""
 msgid "Cancelled by admin"
 msgstr ""
 
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:311
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:238
 msgid "Cancelled by Admin"
 msgstr ""
 
 #: src/components/_political/election/CandidateFormModal.tsx:86
 msgid "Candidate"
 msgstr "Jelölt"
-
-#. placeholder {0}: maxEffectiveRate.toFixed(2)
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:241
-msgid "Cannot exceed {0} money per 1k damage"
-msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:262
 msgid "Cannot have a vice president or ministers."
@@ -1959,7 +1984,7 @@ msgstr "Főnök"
 msgid "Chief Commander"
 msgstr "Főparancsnok"
 
-#: src/components/_user/auth/WelcomeModal.tsx:125
+#: src/components/_user/auth/WelcomeModal.tsx:127
 msgid "Choose your country"
 msgstr "Válaszd ki az országod"
 
@@ -1971,11 +1996,11 @@ msgstr "Válaszd ki az oldaladat és kattints, hogy <0>Sebzést</0> okozz! Táma
 msgid "Citizen since <0><1/></0>"
 msgstr "Állampolgár <0><1/></0> óta"
 
-#: src/components/_political/country/CountryHeader.tsx:121
+#: src/components/_political/country/CountryHeader.tsx:124
 msgid "Citizens"
 msgstr "Állampolgárok"
 
-#: src/pages/country/[countryId]/index.tsx:194
+#: src/pages/country/[countryId]/index.tsx:198
 msgid "Citizens get a bonus when fighting for allies, or against the sworn enemy"
 msgstr "Az állampolgárok bónuszt kapnak, amikor szövetségesekért harcolnak, vagy az esküdt ellenség ellen"
 
@@ -2007,11 +2032,7 @@ msgstr "Az állampolgárok további <0>{0}</0> csatabónuszt kapnak, amikor szö
 msgid "Citizens get an additional <0>{0}</0> defensive battle bonus."
 msgstr "Az állampolgárok további <0>{0}</0> védelmi csatabónuszt kapnak."
 
-#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:108
-msgid "Citizens of the hiring country are not counted in the damage and do not receive any contract money."
-msgstr ""
-
-#: src/components/_political/country/CountryHeader.tsx:108
+#: src/components/_political/country/CountryHeader.tsx:111
 msgid "Citizenship"
 msgstr "Állampolgárság"
 
@@ -2019,7 +2040,7 @@ msgstr "Állampolgárság"
 msgid "Citizenship Applications"
 msgstr "Állampolgársági kérelmek"
 
-#: src/components/_military/battle/BattleSystem.tsx:251
+#: src/components/_military/battle/BattleSystem.tsx:324
 msgid "Civil war"
 msgstr "Polgárháború"
 
@@ -2057,10 +2078,6 @@ msgstr "Kattints az országod beszélgetésére, hogy csevegj a többi állampol
 msgid "Click to apply and start earning money right away."
 msgstr "Kattints a jelentkezéshez, és kezdj el azonnal pénzt keresni."
 
-#: src/components/_military/battle/BattleTimeline.tsx:57
-msgid "Click to change round."
-msgstr "Kattints a kör váltásához."
-
 #: src/components/_other/tour/tuto.frontConfig.tsx:100
 msgid "Click to reveal what's inside. You might get something valuable!"
 msgstr "Kattints a kinyitáshoz! Lehet, hogy valami értékeset kapsz!"
@@ -2094,8 +2111,8 @@ msgstr "Színséma"
 msgid "Commander"
 msgstr "Parancsnok"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1853
-#: src/components/_user/notification/notification.frontConfig.tsx:1866
+#: src/components/_user/notification/notification.frontConfig.tsx:1868
+#: src/components/_user/notification/notification.frontConfig.tsx:1881
 msgid "Commission earned"
 msgstr ""
 
@@ -2156,13 +2173,9 @@ msgstr "Vállalat átnevezve!"
 msgid "Complete missions daily to earn XP and level up faster. Click to claim!"
 msgstr "Teljesíts napi küldetéseket, hogy XP-t szerezz és gyorsabban szintet lépj. Kattints az igényléshez!"
 
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:307
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:234
 #: src/utils/translations.tsx:256
 msgid "Completed"
-msgstr ""
-
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:167
-msgid "Completion Bonus (optional)"
 msgstr ""
 
 #: src/utils/translations.tsx:29
@@ -2285,35 +2298,31 @@ msgstr "Fogyasztása növeli a <0>Támadásod</0> {0} órán át.<1/> Utána ugy
 msgid "Contextual borders"
 msgstr "Kontextuális határok"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1998
+#: src/components/_user/notification/notification.frontConfig.tsx:2013
 msgid "Contract cancelled"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1995
+#: src/components/_user/notification/notification.frontConfig.tsx:2010
 msgid "Contract completed"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2001
+#: src/components/_user/notification/notification.frontConfig.tsx:2016
 msgid "Contract expired"
 msgstr ""
 
-#: src/pages/country/[countryId]/contracts.tsx:27
-msgid "Contract Proposals"
-msgstr ""
-
-#: src/components/_user/notification/notification.frontConfig.tsx:2004
+#: src/components/_user/notification/notification.frontConfig.tsx:2019
 msgid "Contract rolled back"
 msgstr ""
 
-#: src/components/_military/battle/BattlesHeader.tsx:36
-#: src/components/_military/battle/BattleSideContractsModal.tsx:36
-#: src/components/_political/country/CountryHeader.tsx:127
-#: src/pages/battle/[battleId]/contracts.tsx:47
+#: src/components/_military/battle/BattleHeader.tsx:289
+#: src/components/_military/battle/BattlesHeader.tsx:43
+#: src/components/_military/battle/BattleSideContractsModal.tsx:47
+#: src/components/_political/country/CountryHeader.tsx:132
 msgid "Contracts"
 msgstr ""
 
-#: src/components/_military/battle/BattleSideContractsModal.tsx:28
-msgid "Contracts & Proposals"
+#: src/components/_military/battle/BattleSideContractsModal.tsx:29
+msgid "Contracts & Auctions"
 msgstr ""
 
 #: src/utils/translations.tsx:39
@@ -2353,7 +2362,7 @@ msgstr "Tizedes"
 msgid "Cost"
 msgstr "Költség"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:220
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:223
 msgid "Council Member"
 msgstr ""
 
@@ -2369,19 +2378,15 @@ msgstr "országok"
 msgid "Countries"
 msgstr "Országok"
 
-#: src/components/_layout/LayoutRightIcons.tsx:298
+#: src/components/_layout/LayoutRightIcons.tsx:295
 #: src/components/_layout/MoreButtonNav.tsx:131
-#: src/components/_military/battle/BattleCountrySide.tsx:80
+#: src/components/_military/battle/BattleCountrySide.tsx:72
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:133
-#: src/components/_political/country/CountryHeader.tsx:51
+#: src/components/_political/country/CountryHeader.tsx:54
 msgid "Country"
 msgstr "Ország"
 
-#: src/pages/battles/contracts.tsx:69
-msgid "Country Contracts"
-msgstr ""
-
-#: src/pages/country/[countryId]/index.tsx:450
+#: src/pages/country/[countryId]/index.tsx:482
 msgid "Country development income bonus"
 msgstr "Országfejlesztési jövedelem bónusz"
 
@@ -2389,15 +2394,20 @@ msgstr "Országfejlesztési jövedelem bónusz"
 msgid "Country Orders"
 msgstr ""
 
+#. placeholder {0}: data.partialPayout
+#: src/components/_user/notification/notification.frontConfig.tsx:1548
+msgid "Country paid <0>{0}</0> for damages done."
+msgstr ""
+
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:51
 msgid "Country President"
 msgstr ""
 
-#: src/pages/country/[countryId]/index.tsx:401
+#: src/pages/country/[countryId]/index.tsx:433
 msgid "Country production bonus"
 msgstr "Országos termelési bónusz"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:178
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:181
 msgid "Country Tournament Winner"
 msgstr ""
 
@@ -2439,13 +2449,16 @@ msgstr "Párt létrehozása"
 msgid "Create API Token"
 msgstr "API Token létrehozása"
 
-#: src/components/_military/battle/BattleOrderActionsDropdown.tsx:105
-msgid "Create contract"
+#: src/components/_military/battle/BattleOrderActionsDropdown.tsx:106
+msgid "Create auction"
 msgstr ""
 
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:143
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:261
-msgid "Create Mercenary Proposal"
+#: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:247
+msgid "Create Auction"
+msgstr ""
+
+#: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:132
+msgid "Create Mercenary Auction"
 msgstr ""
 
 #: src/components/_political/party/PartyFormModal.tsx:130
@@ -2482,15 +2495,11 @@ msgstr "Számszeríj"
 msgid "Current Military Unit"
 msgstr "Jelenlegi katonai egység"
 
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:201
-msgid "Current round only"
-msgstr ""
-
-#: src/components/_military/battle/BattleSystem.tsx:510
+#: src/components/_military/battle/BattleSystem.tsx:605
 msgid "Current tick:"
 msgstr "Jelenlegi tik:"
 
-#: src/components/_military/battle/BattleSystem.tsx:500
+#: src/components/_military/battle/BattleSystem.tsx:595
 msgid "Current total:"
 msgstr "Jelenlegi összeg:"
 
@@ -2506,7 +2515,7 @@ msgstr "Napi"
 msgid "Daily maintenance"
 msgstr "Napi karbantartás"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2028
+#: src/components/_user/notification/notification.frontConfig.tsx:2041
 msgid "Daily Missions Reset"
 msgstr "Napi küldetések visszaállítva"
 
@@ -2514,23 +2523,16 @@ msgstr "Napi küldetések visszaállítva"
 msgid "Daily wage paid from the country treasury."
 msgstr ""
 
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:246
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:156
 msgid "Damage by user"
-msgstr ""
-
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:160
-msgid "Damage limit"
-msgstr ""
-
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:161
-msgid "Damage Limit"
 msgstr ""
 
 #: src/components/_military/damageRanking/DamageRankingSides.tsx:114
 msgid "Damage ranking"
 msgstr "Sebzés ranglista"
 
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:180
+#: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:174
+#: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:136
 #: src/components/_military/war/WarComparison.tsx:90
 msgid "Damages"
 msgstr "Sebzés"
@@ -2538,10 +2540,6 @@ msgstr "Sebzés"
 #: src/components/_military/mu/MuMemberList.tsx:345
 msgid "Damages for Mu"
 msgstr ""
-
-#: src/components/_military/hit/HitButton.tsx:362
-msgid "Damages you did for this side in this round"
-msgstr "Sebzés, amit ebben a körben ennek az oldalnak okoztál"
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:17
 msgid "Damn looks good"
@@ -2555,7 +2553,7 @@ msgstr "Rohadt szerencsés vagy"
 msgid "Danger zone"
 msgstr "Veszélyzóna"
 
-#: src/components/_political/law/LawFormModal.tsx:272
+#: src/components/_political/law/LawFormModal.tsx:271
 msgid "Dark"
 msgstr "Sötét"
 
@@ -2583,7 +2581,7 @@ msgstr "Okozz <0>{count}</0> sebzést csatákban"
 msgid "Deal <0>{count}</0> on country/mu orders"
 msgstr "Okozz <0>{count}</0> sebzést ország/katonai egység parancsain"
 
-#: src/components/_user/user/MilitaryRanksInfoModal.tsx:88
+#: src/components/_user/user/MilitaryRanksInfoModal.tsx:94
 msgid "Deal damage in battles to increase your military rank and unlock attack bonuses."
 msgstr "Okozz sebzést csatákban, hogy növeld katonai rangodat és feloldd a támadási bónuszokat."
 
@@ -2623,7 +2621,7 @@ msgstr "Több sebzést okoz"
 msgid "Deals some damages"
 msgstr "Némi sebzést okoz"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2014
+#: src/components/_user/notification/notification.frontConfig.tsx:2027
 msgid "Debuff ended"
 msgstr "Debuff lejárt"
 
@@ -2656,10 +2654,11 @@ msgstr ""
 msgid "Decrease unrest"
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:411
+#: src/components/_military/hit/HitButton.tsx:447
 msgid "Defend"
 msgstr "Védelem"
 
+#: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:208
 #: src/components/_military/war/WarComparison.tsx:49
 msgid "Defender"
 msgstr "Védő"
@@ -2684,7 +2683,7 @@ msgstr "Esküdt ellenség meghatározása"
 msgid "Delete account"
 msgstr "Fiók törlése"
 
-#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:80
+#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:100
 msgid "Delete contract"
 msgstr ""
 
@@ -2701,7 +2700,7 @@ msgstr ""
 msgid "Demote from Commander"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1983
+#: src/components/_user/notification/notification.frontConfig.tsx:1998
 msgid "Demoted from Commander"
 msgstr "Parancsnokból lefokozva"
 
@@ -2738,12 +2737,12 @@ msgstr "A lelőhely kimerül"
 msgid "Deposits cannot spawn within your borders."
 msgstr "Lelőhelyek nem jelenhetnek meg a határaidon belül."
 
-#: src/components/_political/party/PartyDescriptionModal.tsx:59
+#: src/components/_political/party/PartyDescriptionModal.tsx:62
 #: src/components/_political/party/PartyFormModal.tsx:103
 msgid "Describe your party's goals and values"
 msgstr "Írd le a pártod céljait és értékeit"
 
-#: src/components/_political/party/PartyDescriptionModal.tsx:58
+#: src/components/_political/party/PartyDescriptionModal.tsx:61
 #: src/components/_political/party/PartyFormModal.tsx:104
 #: src/pages/party/[partyId]/index.tsx:41
 msgid "Description"
@@ -2753,7 +2752,7 @@ msgstr "Leírás"
 msgid "Description removed"
 msgstr "Leírás eltávolítva"
 
-#: src/components/_political/party/PartyDescriptionModal.tsx:34
+#: src/components/_political/party/PartyDescriptionModal.tsx:32
 msgid "Description updated!"
 msgstr "Leírás frissítve!"
 
@@ -2773,7 +2772,7 @@ msgstr ""
 msgid "Diminish Received Damages"
 msgstr ""
 
-#: src/pages/country/[countryId]/index.tsx:200
+#: src/pages/country/[countryId]/index.tsx:204
 msgid "Diplomacy"
 msgstr "Diplomácia"
 
@@ -2811,7 +2810,7 @@ msgstr "Tárgy szétszerelése"
 msgid "Dismiss"
 msgstr "Bezár"
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:90
+#: src/components/_military/damageRanking/BattleLoot.tsx:97
 msgid "Distributed"
 msgstr ""
 
@@ -2861,7 +2860,7 @@ msgstr "Adomány"
 msgid "Donation Summary"
 msgstr "Adományok összesítése"
 
-#: src/components/_political/country/CountryHeader.tsx:83
+#: src/components/_political/country/CountryHeader.tsx:86
 #: src/pages/country/[countryId]/donations.tsx:17
 #: src/pages/mu/[muId]/donations.tsx:17
 #: src/pages/party/[partyId]/donations.tsx:17
@@ -2917,42 +2916,33 @@ msgstr ""
 msgid "Edit description"
 msgstr "Leírás szerkesztése"
 
-#: src/components/_political/party/PartyDescriptionModal.tsx:54
+#: src/components/_political/party/PartyDescriptionModal.tsx:55
 msgid "Edit Description"
 msgstr "Leírás szerkesztése"
 
-#: src/components/_user/worker/WorkerEditFormModal.tsx:143
+#: src/components/_user/worker/WorkerEditFormModal.tsx:154
 msgid "Edit worker"
 msgstr "Munkás szerkesztése"
-
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:225
-msgid "Effective cost: <0/> for <1/>"
-msgstr ""
-
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:157
-#: src/components/_military/mercenaryContract/MercenaryProposalItem.tsx:99
-msgid "Effective reward"
-msgstr ""
 
 #: src/components/_user/user/SkillValue.tsx:230
 msgid "Effective:"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1890
+#: src/components/_user/notification/notification.frontConfig.tsx:1905
 msgid "Election candidacy open"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1895
+#: src/components/_user/notification/notification.frontConfig.tsx:1910
 msgid "Election ended"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1893
+#: src/components/_user/notification/notification.frontConfig.tsx:1908
 msgid "Election vote open"
 msgstr ""
 
-#: src/components/_political/country/CountryHeader.tsx:102
+#: src/components/_political/country/CountryHeader.tsx:105
 #: src/pages/country/[countryId]/elections.tsx:28
-#: src/pages/country/[countryId]/index.tsx:364
+#: src/pages/country/[countryId]/index.tsx:368
 #: src/pages/party/[partyId]/index.tsx:100
 msgid "Elections"
 msgstr "Választások"
@@ -3004,7 +2994,7 @@ msgstr "Elfogadás költsége"
 msgid "Enchanted Trousers"
 msgstr ""
 
-#: src/components/_military/battle/BattleSystem.tsx:619
+#: src/components/_military/battle/BattleSystem.tsx:714
 msgid "Ended"
 msgstr "Véget ért"
 
@@ -3028,7 +3018,7 @@ msgstr "Energia"
 msgid "Ensign"
 msgstr "Zászlós"
 
-#: src/components/_political/law/LawFormModal.tsx:219
+#: src/components/_political/law/LawFormModal.tsx:218
 msgid "Enter article ID"
 msgstr "Add meg a cikk azonosítóját"
 
@@ -3067,6 +3057,11 @@ msgstr "Hiba"
 msgid "Estimated benefit per"
 msgstr "Becsült haszon per"
 
+#: src/components/_military/battle/BattleSystem.tsx:443
+#: src/components/_military/battle/BattleSystem.tsx:480
+msgid "Estimated minimum time for this side to win the current round if all ticks are won."
+msgstr ""
+
 #: src/pages/party/[partyId]/index.tsx:57
 msgid "Ethics"
 msgstr "Etika"
@@ -3083,9 +3078,9 @@ msgstr "Etika indítványok"
 msgid "Ethics Points:"
 msgstr "Etika pontok:"
 
-#: src/components/_layout/LayoutRightIcons.tsx:328
+#: src/components/_layout/LayoutRightIcons.tsx:325
 #: src/components/_layout/MoreButtonNav.tsx:94
-#: src/pages/country/[countryId]/index.tsx:349
+#: src/pages/country/[countryId]/index.tsx:353
 msgid "Events"
 msgstr "Események"
 
@@ -3093,11 +3088,7 @@ msgstr "Események"
 msgid "Everyone participates automatically"
 msgstr "Mindenki automatikusan részt vesz"
 
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:222
-msgid "Expected Damages:"
-msgstr ""
-
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:309
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:236
 #: src/utils/translations.tsx:257
 msgid "Expired"
 msgstr ""
@@ -3106,7 +3097,7 @@ msgstr ""
 msgid "Expires in"
 msgstr "Lejár"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:214
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:217
 msgid "Exploit Finder"
 msgstr ""
 
@@ -3203,7 +3194,12 @@ msgstr ""
 msgid "Favorites"
 msgstr "Kedvencek"
 
-#: src/components/_layout/LayoutRightIcons.tsx:338
+#: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:201
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:108
+msgid "Fee"
+msgstr ""
+
+#: src/components/_layout/LayoutRightIcons.tsx:335
 #: src/components/_layout/MoreButtonNav.tsx:86
 msgid "Feed"
 msgstr "Hírfolyam"
@@ -3215,6 +3211,14 @@ msgstr "Hűségbónusz"
 #: src/components/_economy/workOffer/EstimatedCompanyBenefit.tsx:164
 msgid "Fidelity bonus:"
 msgstr "Hűségbónusz:"
+
+#: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:127
+msgid "Fight for <0/> in <1/>"
+msgstr ""
+
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:62
+msgid "Fight for <0/> in<1/><2/>"
+msgstr ""
 
 #: src/components/_user/user/skills.frontConfig.tsx:201
 msgid "Fight skills"
@@ -3282,7 +3286,7 @@ msgid "Find another job"
 msgstr "Másik állás keresése"
 
 #: src/components/_political/government/Government.tsx:228
-#: src/components/_user/worker/WorkerEditFormModal.tsx:202
+#: src/components/_user/worker/WorkerEditFormModal.tsx:214
 msgid "Fire"
 msgstr "Elbocsát"
 
@@ -3290,11 +3294,11 @@ msgstr "Elbocsát"
 msgid "Fire government member"
 msgstr "Kormánytag elbocsátása"
 
-#: src/components/_user/worker/WorkerEditFormModal.tsx:101
+#: src/components/_user/worker/WorkerEditFormModal.tsx:112
 msgid "Fire worker?"
 msgstr "Elbocsátod a dolgozót?"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1902
+#: src/components/_user/notification/notification.frontConfig.tsx:1917
 msgid "Fired from government"
 msgstr "Elbocsátva a kormányból"
 
@@ -3323,7 +3327,7 @@ msgid "Font style"
 msgstr "Betűstílus"
 
 #. placeholder {0}: ts[country.specializedItem]
-#: src/pages/country/[countryId]/index.tsx:424
+#: src/pages/country/[countryId]/index.tsx:456
 msgid "for companies producing <0>{0}</0> located in <1/>."
 msgstr "a <1/>-ban/ben található, <0>{0}</0> termelő cégek számára."
 
@@ -3412,11 +3416,11 @@ msgstr ""
 msgid "Give your token a descriptive name so you can identify it later."
 msgstr "Adj a tokenednek egy leíró nevet, hogy később azonosítani tudd."
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:190
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:193
 msgid "Giveaway Winner"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2026
+#: src/components/_user/notification/notification.frontConfig.tsx:2039
 msgid "Giveaway Won!"
 msgstr "Nyereményjátékot nyertél!"
 
@@ -3450,20 +3454,16 @@ msgstr "Menj a képességekhez"
 msgid "Gold"
 msgstr "Arany"
 
-#: src/components/_political/country/CountryHeader.tsx:89
+#: src/components/_political/country/CountryHeader.tsx:92
 msgid "Government"
 msgstr "Kormány"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:231
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:234
 msgid "Government Member"
 msgstr ""
 
-#: src/components/_military/battle/BattleSystem.tsx:690
+#: src/components/_military/battle/BattleSystem.tsx:781
 msgid "Government penalty"
-msgstr ""
-
-#: src/pages/battles/contracts.tsx:39
-msgid "Government Proposals"
 msgstr ""
 
 #: src/components/_political/government/Government.tsx:185
@@ -3554,7 +3554,7 @@ msgstr ""
 msgid "Ground"
 msgstr "Terep"
 
-#: src/components/_military/battle/BattleSystem.tsx:549
+#: src/components/_military/battle/BattleSystem.tsx:644
 msgid "ground per tick"
 msgstr "terep körönként"
 
@@ -3608,7 +3608,7 @@ msgstr "Segíts a játék növekedésében"
 msgid "High Commander"
 msgstr "Magasrangú parancsnok"
 
-#: src/components/_military/battle/BattlesHeader.tsx:30
+#: src/components/_military/battle/BattlesHeader.tsx:31
 msgid "History"
 msgstr "Előzmények"
 
@@ -3621,12 +3621,12 @@ msgid "Hit <0>{count}</0> times in battles"
 msgstr "Támadj <0>{count}</0> alkalommal csatákban"
 
 #. placeholder {0}: staticGameConfig.battle.govMemberBountyRewardPercent
-#: src/components/_military/battle/BattleSystem.tsx:692
+#: src/components/_military/battle/BattleSystem.tsx:783
 msgid "Hitting for your own country while in government gives {0}% bounty efficiency."
 msgstr ""
 
 #: src/components/_other/shop/ShopHeader.tsx:16
-#: src/components/_political/country/CountryHeader.tsx:58
+#: src/components/_political/country/CountryHeader.tsx:61
 #: src/components/_user/user/UserHeader.tsx:151
 msgid "Home"
 msgstr "Kezdőlap"
@@ -3651,6 +3651,10 @@ msgstr "Hallottam, hogy a prémium növeli az esélyeidet :3"
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:81
 msgid "I'm proud of you"
 msgstr "Büszke vagyok rád"
+
+#: src/components/_military/mercenaryContract/MercenaryReputationTooltip.tsx:39
+msgid "If negative, pay <0/> for <1/> (once per day)."
+msgstr ""
 
 #: src/components/_political/government/NominateForm.tsx:58
 msgid "If the new nominee is already in government, their positions will be swapped. Otherwise the current member will be fired and won't be able to be nominated again for {cooldownDays} days."
@@ -3702,7 +3706,7 @@ msgstr "Inaktív"
 msgid "Income"
 msgstr "Bevétel"
 
-#: src/pages/country/[countryId]/index.tsx:473
+#: src/pages/country/[countryId]/index.tsx:505
 msgid "income from <0>Development</0> in <1/>."
 msgstr "bevétel a(z) <1/> <0>Fejlesztéséből</0>."
 
@@ -3721,7 +3725,7 @@ msgid "Income from taxes increases by <0>{0}</0>."
 msgstr "Az adókból származó bevétel <0>{0}</0>-kal növekszik."
 
 #: src/components/_political/country/CountryTaxes.tsx:21
-#: src/components/_political/law/LawFormModal.tsx:229
+#: src/components/_political/law/LawFormModal.tsx:228
 msgid "Income tax"
 msgstr "Jövedelemadó"
 
@@ -3760,9 +3764,9 @@ msgstr "Kezdő"
 #: src/components/_user/user/MyAvatar.tsx:35
 #: src/components/_user/user/UserHeader.tsx:157
 #: src/pages/companies.tsx:83
-#: src/pages/country/[countryId]/account.tsx:24
+#: src/pages/country/[countryId]/account.tsx:25
 #: src/pages/market/index.tsx:49
-#: src/pages/user/[userId]/account.tsx:19
+#: src/pages/user/[userId]/account.tsx:20
 #: src/pages/user/[userId]/companies.tsx:46
 #: src/pages/user/[userId]/index.tsx:201
 #: src/pages/user/[userId]/inventory.tsx:30
@@ -3790,7 +3794,7 @@ msgstr "Csak jobb lehet… talán"
 msgid "It will not gain any production and its workers will not be able to work."
 msgstr "Nem termel semmit, és a dolgozók nem tudnak dolgozni."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1875
+#: src/components/_user/notification/notification.frontConfig.tsx:1890
 msgid "Item bought"
 msgstr "Tárgy megvásárolva"
 
@@ -3864,7 +3868,7 @@ msgstr "Vadászd tovább a Mitikust"
 msgid "Keep fighting!"
 msgstr "Harcolj tovább!"
 
-#: src/components/_user/worker/WorkerEditFormModal.tsx:189
+#: src/components/_user/worker/WorkerEditFormModal.tsx:201
 msgid "Keep in current company"
 msgstr "Maradjon a jelenlegi cégnél"
 
@@ -3889,9 +3893,13 @@ msgid "Land <0>{count}</0> critical hits"
 msgstr "Mérj <0>{count}</0> kritikus találatot"
 
 #: src/components/_layout/LayoutMapOptions.tsx:361
-#: src/components/_user/auth/WelcomeModal.tsx:132
+#: src/components/_user/auth/WelcomeModal.tsx:134
 msgid "Language"
 msgstr "Nyelv"
+
+#: src/components/_military/damageRanking/BattleLoot.tsx:116
+msgid "Last"
+msgstr ""
 
 #: src/components/_user/badgeCollection/Badge.tsx:63
 msgid "Last earned: <0/>"
@@ -3911,7 +3919,7 @@ msgstr ""
 msgid "Last used:"
 msgstr "Utoljára használva:"
 
-#: src/components/_user/auth/WelcomeModal.tsx:159
+#: src/components/_user/auth/WelcomeModal.tsx:161
 msgid "Later"
 msgstr "Később"
 
@@ -3936,12 +3944,12 @@ msgid "Law failed"
 msgstr "Törvény elutasítva"
 
 #: src/components/_political/law/LawFormModal.tsx:76
-#: src/components/_user/notification/notification.frontConfig.tsx:1888
+#: src/components/_user/notification/notification.frontConfig.tsx:1903
 msgid "Law proposed"
 msgstr "Törvényjavaslatot benyújtottak"
 
-#: src/components/_political/country/CountryHeader.tsx:64
-#: src/pages/country/[countryId]/index.tsx:343
+#: src/components/_political/country/CountryHeader.tsx:67
+#: src/pages/country/[countryId]/index.tsx:347
 #: src/pages/country/[countryId]/laws.tsx:24
 msgid "Laws"
 msgstr "Törvények"
@@ -4001,7 +4009,7 @@ msgstr ""
 msgid "Level up your skills!"
 msgstr "Fejleszd a képességeidet!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1835
+#: src/components/_user/notification/notification.frontConfig.tsx:1850
 msgid "Level up!"
 msgstr "Szintlépés!"
 
@@ -4017,7 +4025,7 @@ msgstr "Szabadíts fel egy régiót"
 msgid "Lieutenant"
 msgstr "Hadnagy"
 
-#: src/components/_political/law/LawFormModal.tsx:270
+#: src/components/_political/law/LawFormModal.tsx:269
 msgid "Light"
 msgstr "Világos"
 
@@ -4065,7 +4073,7 @@ msgstr "Kis cukik, akikből steak lesz :("
 msgid "Livestock"
 msgstr "Haszonállat"
 
-#: ../__ui/src/components/LoadMoreButton/LoadMoreButton.tsx:33
+#: ../__ui/src/components/LoadMoreButton/LoadMoreButton.tsx:29
 msgid "Load more"
 msgstr "Továbbiak betöltése"
 
@@ -4085,7 +4093,7 @@ msgstr "Betöltés: {status}..."
 msgid "Loading..."
 msgstr "Betöltés..."
 
-#: src/components/_military/mu/MuFormModal.tsx:116
+#: src/components/_military/mu/MuFormModal.tsx:113
 msgid "Location"
 msgstr "Helyszín"
 
@@ -4110,11 +4118,11 @@ msgstr "Zsákmányolj ládákat"
 msgid "Loot chance"
 msgstr "Zsákmányolás esélye"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1951
+#: src/components/_user/notification/notification.frontConfig.tsx:1966
 msgid "Loot reward"
 msgstr ""
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:110
+#: src/components/_military/damageRanking/BattleLoot.tsx:130
 msgid "Loots"
 msgstr ""
 
@@ -4159,7 +4167,7 @@ msgstr "Menedzsment"
 msgid "map"
 msgstr "térkép"
 
-#: src/components/_political/law/LawFormModal.tsx:267
+#: src/components/_political/law/LawFormModal.tsx:266
 msgid "Map Accent"
 msgstr "Térkép kiemelés"
 
@@ -4169,11 +4177,14 @@ msgstr "Térkép beállítások"
 
 #: src/components/_economy/market/MarketHeader.tsx:43
 #: src/components/_layout/LayoutMenu.tsx:165
+#: src/pages/country/[countryId]/account.tsx:31
+#: src/pages/party/[partyId]/account.tsx:24
+#: src/pages/user/[userId]/account.tsx:26
 msgid "Market"
 msgstr "Piac"
 
 #: src/components/_political/country/CountryTaxes.tsx:24
-#: src/components/_political/law/LawFormModal.tsx:233
+#: src/components/_political/law/LawFormModal.tsx:232
 msgid "Market tax"
 msgstr "Piaci adó"
 
@@ -4268,16 +4279,22 @@ msgstr ""
 msgid "Member promoted to commander"
 msgstr ""
 
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:150
 #: src/pages/party/[partyId]/index.tsx:75
 #: src/pages/party/[partyId]/members.tsx:21
 msgid "Members"
 msgstr "Tagok"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2021
+#: src/components/_user/notification/notification.frontConfig.tsx:2034
 msgid "Mentioned in message"
 msgstr "Üzenetben említve"
 
+#: src/pages/country/[countryId]/auctions.tsx:25
+#: src/pages/country/[countryId]/index.tsx:391
+msgid "Mercenary Auctions"
+msgstr ""
+
+#: src/pages/country/[countryId]/contracts.tsx:25
+#: src/pages/country/[countryId]/index.tsx:379
 #: src/pages/mu/[muId]/contracts.tsx:24
 msgid "Mercenary Contracts"
 msgstr ""
@@ -4286,7 +4303,7 @@ msgstr ""
 msgid "Mercenary contracts are currently disabled."
 msgstr ""
 
-#: src/components/_military/mercenaryContract/MercenaryReputationTooltip.tsx:14
+#: src/components/_military/mercenaryContract/MercenaryReputationTooltip.tsx:15
 msgid "Mercenary Reputation"
 msgstr ""
 
@@ -4294,7 +4311,7 @@ msgstr ""
 msgid "Message (Optional)"
 msgstr "Üzenet (opcionális)"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2019
+#: src/components/_user/notification/notification.frontConfig.tsx:2032
 msgid "Message liked"
 msgstr "Kedvelt üzenet"
 
@@ -4323,7 +4340,7 @@ msgstr "Katonai törvények"
 msgid "Military Rank"
 msgstr "Katonai rang"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1930
+#: src/components/_user/notification/notification.frontConfig.tsx:1945
 msgid "Military Rank Up!"
 msgstr "Katonai előléptetés!"
 
@@ -4331,7 +4348,7 @@ msgstr "Katonai előléptetés!"
 msgid "Military rank:"
 msgstr ""
 
-#: src/components/_user/user/MilitaryRanksInfoModal.tsx:82
+#: src/components/_user/user/MilitaryRanksInfoModal.tsx:88
 msgid "Military Ranks"
 msgstr "Katonai rangok"
 
@@ -4340,7 +4357,7 @@ msgstr "Katonai rangok"
 msgid "Military Unit"
 msgstr "Katonai egység"
 
-#: src/components/_military/mu/MuFormModal.tsx:49
+#: src/components/_military/mu/MuFormModal.tsx:46
 msgid "Military unit created"
 msgstr "Katonai egység létrehozva"
 
@@ -4348,17 +4365,17 @@ msgstr "Katonai egység létrehozva"
 msgid "Military units"
 msgstr "Katonai egységek"
 
-#: src/components/_military/battle/BattleCountrySide.tsx:100
+#: src/components/_military/battle/BattleCountrySide.tsx:92
 msgid "Military Units"
+msgstr ""
+
+#: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:256
+msgid "Min reached"
 msgstr ""
 
 #: src/components/_political/law/Law.tsx:118
 msgid "Min. active citizens"
 msgstr "Min. aktív állampolgár"
-
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:181
-msgid "Minimum reputation to accept"
-msgstr ""
 
 #: src/components/_political/government/Government.tsx:82
 msgid "Minister of Defense"
@@ -4372,7 +4389,7 @@ msgstr "Gazdasági miniszter"
 msgid "Minister of Foreign Affairs"
 msgstr "Külügyminiszter"
 
-#: src/components/_layout/LayoutRightIcons.tsx:257
+#: src/components/_layout/LayoutRightIcons.tsx:254
 #: src/components/_layout/MoreButtonNav.tsx:103
 #: src/components/_user/mission/MissionsList.tsx:169
 msgid "Missions"
@@ -4389,14 +4406,6 @@ msgstr ""
 #: src/components/_military/damageRanking/DamageRankingSides.tsx:135
 msgid "Money earned from mercenary contracts."
 msgstr "Zsoldosszerződésekből származó pénz."
-
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:153
-msgid "Money per 1000 damages"
-msgstr ""
-
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:154
-msgid "Money per 1k Damages"
-msgstr ""
 
 #: src/components/_military/damageRanking/DamageRankingSides.tsx:134
 msgid "Money ranking"
@@ -4469,7 +4478,7 @@ msgstr "A vállalat áthelyezése"
 msgid "Move to top"
 msgstr "Felülre helyezés"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1871
+#: src/components/_user/notification/notification.frontConfig.tsx:1886
 msgid "Moved to a new company"
 msgstr "Új vállalathoz költözött"
 
@@ -4478,23 +4487,19 @@ msgstr "Új vállalathoz költözött"
 msgid "MU"
 msgstr "KE"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1970
+#: src/components/_user/notification/notification.frontConfig.tsx:1985
 msgid "MU Application Accepted"
 msgstr "KE jelentkezés elfogadva"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1967
+#: src/components/_user/notification/notification.frontConfig.tsx:1982
 msgid "MU Application Rejected"
 msgstr "KE jelentkezés elutasítva"
 
-#: src/pages/battles/contracts.tsx:60
-msgid "MU Contracts"
-msgstr ""
-
-#: src/components/_user/notification/notification.frontConfig.tsx:1989
+#: src/components/_user/notification/notification.frontConfig.tsx:2004
 msgid "MU Donation Received"
 msgstr "KE adomány megérkezett"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1975
+#: src/components/_user/notification/notification.frontConfig.tsx:1990
 msgid "MU Level Up!"
 msgstr ""
 
@@ -4506,7 +4511,7 @@ msgstr ""
 msgid "MU Orders"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1986
+#: src/components/_user/notification/notification.frontConfig.tsx:2001
 msgid "MU Ownership Transferred"
 msgstr "KE tulajdonjog átruházva"
 
@@ -4515,19 +4520,11 @@ msgstr "KE tulajdonjog átruházva"
 msgid "MU reached level {0}! Reward: {rewardDisplay}"
 msgstr ""
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:184
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:187
 msgid "MU Tournament Winner"
 msgstr ""
 
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:149
-msgid "MU treasury"
-msgstr ""
-
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:233
-msgid "Must be at least {MIN_EFFECTIVE_RATE} money per 1k damage"
-msgstr ""
-
-#: src/components/_military/battle/LootSummaryCard.tsx:66
+#: src/components/_military/battle/LootSummaryCard.tsx:78
 msgid "My battle loot"
 msgstr ""
 
@@ -4567,12 +4564,12 @@ msgstr "Mitikus nadrág"
 msgid "Mythic?! Your account is blessed"
 msgstr "Mitikus?! A fiókod áldott"
 
-#: src/components/_military/mu/MuFormModal.tsx:112
+#: src/components/_military/mu/MuFormModal.tsx:109
 #: src/components/_political/party/PartyFormModal.tsx:99
 msgid "Name"
 msgstr "Név"
 
-#: src/components/_military/battle/BattleSystem.tsx:676
+#: src/components/_military/battle/BattleSystem.tsx:769
 msgid "National bounty"
 msgstr ""
 
@@ -4602,15 +4599,15 @@ msgstr "Új"
 msgid "New API Token Created"
 msgstr "Új API Token létrehozva"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1882
+#: src/components/_user/notification/notification.frontConfig.tsx:1897
 msgid "New article"
 msgstr "Új cikk"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1884
+#: src/components/_user/notification/notification.frontConfig.tsx:1899
 msgid "New comment"
 msgstr "Új hozzászólás"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1992
+#: src/components/_user/notification/notification.frontConfig.tsx:2007
 msgid "New contract accepted"
 msgstr ""
 
@@ -4632,20 +4629,19 @@ msgstr "Új állásajánlat"
 msgid "New location"
 msgstr "Új helyszín"
 
-#: src/components/_military/mercenaryContract/MercenaryProposalList.tsx:88
-#: src/components/_user/notification/notification.frontConfig.tsx:2007
-msgid "New Mercenary Proposal"
+#: src/components/_military/mercenaryContract/MercenaryAuctionList.tsx:115
+msgid "New Mercenary Auction"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2015
+#: src/components/_user/notification/notification.frontConfig.tsx:2028
 msgid "New message"
 msgstr ""
 
-#: src/components/_military/mu/MuFormModal.tsx:92
+#: src/components/_military/mu/MuFormModal.tsx:89
 msgid "New military unit"
 msgstr "Új katonai egység"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1973
+#: src/components/_user/notification/notification.frontConfig.tsx:1988
 msgid "New MU Application"
 msgstr "Új KE jelentkezés"
 
@@ -4653,28 +4649,28 @@ msgstr "Új KE jelentkezés"
 msgid "New name"
 msgstr "Új név"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1925
+#: src/components/_user/notification/notification.frontConfig.tsx:1940
 msgid "New Party Application"
 msgstr "Új pártjelentkezés"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1914
+#: src/components/_user/notification/notification.frontConfig.tsx:1929
 msgid "New Party Leader"
 msgstr "Új pártvezető"
 
 #: src/components/_political/event/EventList.tsx:66
-#: src/components/_user/notification/notification.frontConfig.tsx:1897
+#: src/components/_user/notification/notification.frontConfig.tsx:1912
 msgid "New president"
 msgstr "Új elnök"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1928
+#: src/components/_user/notification/notification.frontConfig.tsx:1943
 msgid "New referred user"
 msgstr "Új ajánlott felhasználó"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1929
+#: src/components/_user/notification/notification.frontConfig.tsx:1944
 msgid "New referrer"
 msgstr "Új ajánló"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1887
+#: src/components/_user/notification/notification.frontConfig.tsx:1902
 msgid "New subscriber"
 msgstr "Új feliratkozó"
 
@@ -4682,7 +4678,7 @@ msgstr "Új feliratkozó"
 msgid "New supporters"
 msgstr "Új támogatók"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1868
+#: src/components/_user/notification/notification.frontConfig.tsx:1883
 msgid "New worker"
 msgstr "Új munkás"
 
@@ -4690,7 +4686,7 @@ msgstr "Új munkás"
 msgid "Newest"
 msgstr "Legújabb"
 
-#: src/components/_layout/LayoutRightIcons.tsx:283
+#: src/components/_layout/LayoutRightIcons.tsx:280
 #: src/components/_layout/MoreButtonNav.tsx:112
 msgid "News"
 msgstr "Hírek"
@@ -4707,7 +4703,7 @@ msgstr "A következő tank lesz"
 msgid "Next reward"
 msgstr ""
 
-#: src/components/_military/battle/BattleSystem.tsx:486
+#: src/components/_military/battle/BattleSystem.tsx:581
 msgid "Next tick"
 msgstr "Következő tick"
 
@@ -4735,15 +4731,11 @@ msgstr "Nincs aktív etika - Kiegyensúlyozott"
 msgid "No active job offer"
 msgstr "Nincs aktív állásajánlat"
 
-#: src/components/_military/mercenaryContract/MercenaryProposalList.tsx:96
-msgid "No active mercenary proposals"
-msgstr ""
-
-#: src/pages/country/[countryId]/index.tsx:293
+#: src/pages/country/[countryId]/index.tsx:297
 msgid "No active wars"
 msgstr "Nincsenek aktív háborúk"
 
-#: src/pages/country/[countryId]/index.tsx:238
+#: src/pages/country/[countryId]/index.tsx:242
 msgid "No allies"
 msgstr "Nincsenek szövetségesek"
 
@@ -4759,6 +4751,10 @@ msgstr ""
 msgid "No battles yet"
 msgstr "Még nincsenek csaták"
 
+#: src/components/_military/mercenaryContract/AuctionBidsModal.tsx:28
+msgid "No bids yet"
+msgstr ""
+
 #: src/pages/country/[countryId]/citizens.tsx:39
 msgid "No citizens"
 msgstr "Nincsenek állampolgárok"
@@ -4771,7 +4767,7 @@ msgstr "Nincsenek kongresszusi tagok"
 msgid "No contributions yet"
 msgstr "Még nincsenek hozzájárulások"
 
-#: src/components/_military/damageRanking/DamageRankingList.tsx:180
+#: src/components/_military/damageRanking/DamageRankingList.tsx:178
 msgid "No damages ranking yet."
 msgstr "Még nincs sebzési rangsor."
 
@@ -4779,7 +4775,7 @@ msgstr "Még nincs sebzési rangsor."
 msgid "No donations yet"
 msgstr "Még nincsenek adományok"
 
-#: src/components/_military/damageRanking/DamageRankingList.tsx:182
+#: src/components/_military/damageRanking/DamageRankingList.tsx:180
 msgid "No ground ranking yet."
 msgstr "Még nincs földi rangsor."
 
@@ -4791,7 +4787,11 @@ msgstr "Még nincsenek törvények"
 msgid "No members in this military unit."
 msgstr ""
 
-#: src/components/_military/mercenaryContract/MercenaryContractList.tsx:46
+#: src/components/_military/mercenaryContract/MercenaryAuctionList.tsx:138
+msgid "No mercenary auctions"
+msgstr ""
+
+#: src/components/_military/mercenaryContract/MercenaryContractList.tsx:96
 msgid "No mercenary contracts"
 msgstr ""
 
@@ -4803,13 +4803,9 @@ msgstr "Nem található katonai egység"
 msgid "No missions available"
 msgstr "Nincs elérhető küldetés"
 
-#: src/components/_military/damageRanking/DamageRankingList.tsx:183
+#: src/components/_military/damageRanking/DamageRankingList.tsx:181
 msgid "No money ranking yet."
 msgstr "Még nincs pénz rangsor."
-
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:286
-msgid "No money will be refunded."
-msgstr ""
 
 #: src/components/_political/partyMotion/PartyMotionList.tsx:62
 msgid "No motions yet"
@@ -4831,7 +4827,7 @@ msgstr ""
 msgid "No parties found"
 msgstr "Nem található párt"
 
-#: src/pages/country/[countryId]/index.tsx:437
+#: src/pages/country/[countryId]/index.tsx:469
 msgid "No production bonus from resources. This country has no specialization."
 msgstr "Nincs termelési bónusz az erőforrásokból. Ennek az országnak nincs specializációja."
 
@@ -4847,10 +4843,11 @@ msgstr "Még nincs ajánló"
 msgid "No skins equipped"
 msgstr "Nincs felszerelt kinézet"
 
-#: src/pages/country/[countryId]/index.tsx:284
+#: src/pages/country/[countryId]/index.tsx:288
 msgid "No sworn enemy"
 msgstr "Nincs esküdt ellenség"
 
+#: src/components/_economy/itemTrading/TradingOrders.tsx:43
 #: src/pages/market/index.tsx:127
 msgid "No trading orders"
 msgstr "Nincs kereskedelmi megbízás"
@@ -4876,21 +4873,17 @@ msgstr "Jelölés"
 msgid "Nominate a {title}"
 msgstr "{title} jelölése"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1899
+#: src/components/_user/notification/notification.frontConfig.tsx:1914
 msgid "Nominated at government"
 msgstr "Kormányba jelölve"
 
-#: src/components/_political/law/LawFormModal.tsx:271
+#: src/components/_political/law/LawFormModal.tsx:270
 msgid "Normal"
 msgstr "Normál"
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:40
 msgid "Not bad!"
 msgstr "Nem rossz!"
-
-#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:105
-msgid "Not eligible for contract rewards"
-msgstr ""
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:36
 msgid "Not impressive, but not shameful"
@@ -4908,10 +4901,6 @@ msgstr ""
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:61
 msgid "Now we're talking!"
 msgstr "Na ez már valami!"
-
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:174
-msgid "Number of contracts"
-msgstr ""
 
 #: src/components/_economy/donation/DonationList.tsx:71
 msgid "Number of Donors:"
@@ -4940,6 +4929,14 @@ msgstr "Oké oké, nem rossz"
 #: src/utils/translations.tsx:42
 msgid "Omg, so OP"
 msgstr "Azta, mennyire OP"
+
+#: src/components/_military/mercenaryContract/MercenaryReputationTooltip.tsx:20
+msgid "On contract completion: +1 rep per <0/> paid out."
+msgstr ""
+
+#: src/components/_military/mercenaryContract/MercenaryReputationTooltip.tsx:26
+msgid "On contract failure: -1 rep per <0/> in budget, and -1 rep per <1/> short of completing the contract."
+msgstr ""
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:70
 msgid "One step away from legendary..."
@@ -5007,6 +5004,10 @@ msgstr "Több <0>Láda</0> megnyitása egyszerre"
 msgid "Open the chat"
 msgstr "Nyisd meg a csevegést"
 
+#: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:230
+msgid "Open to all"
+msgstr ""
+
 #: src/components/_other/tour/tuto.frontConfig.tsx:98
 msgid "Open your case!"
 msgstr "Nyisd ki a ládádat!"
@@ -5027,7 +5028,7 @@ msgstr "Parancs"
 msgid "Orders"
 msgstr "Parancsok"
 
-#: src/components/_military/battle/BattleOrderActionsDropdown.tsx:137
+#: src/components/_military/battle/BattleOrderActionsDropdown.tsx:142
 msgid "Orders & actions"
 msgstr ""
 
@@ -5108,18 +5109,18 @@ msgstr "Vegyél részt csatában"
 msgid "Parties"
 msgstr "Pártok"
 
-#: src/components/_layout/LayoutRightIcons.tsx:306
+#: src/components/_layout/LayoutRightIcons.tsx:303
 #: src/components/_layout/MoreButtonNav.tsx:140
 #: src/components/_user/notification/notificationPrefs.categories.ts:157
 #: src/pages/user/[userId]/index.tsx:176
 msgid "Party"
 msgstr "Párt"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1919
+#: src/components/_user/notification/notification.frontConfig.tsx:1934
 msgid "Party Application Accepted"
 msgstr "Párttagsági kérelem elfogadva"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1922
+#: src/components/_user/notification/notification.frontConfig.tsx:1937
 msgid "Party Application Rejected"
 msgstr "Párttagsági kérelem elutasítva"
 
@@ -5143,15 +5144,15 @@ msgstr "A párttanács választáson a szavazás most nyitva van itt: <0/>"
 msgid "Party created"
 msgstr "Párt létrehozva"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1905
+#: src/components/_user/notification/notification.frontConfig.tsx:1920
 msgid "Party election candidacy open"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1911
+#: src/components/_user/notification/notification.frontConfig.tsx:1926
 msgid "Party election ended"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1908
+#: src/components/_user/notification/notification.frontConfig.tsx:1923
 msgid "Party election vote open"
 msgstr ""
 
@@ -5187,21 +5188,13 @@ msgstr ""
 msgid "Paste a link to your campaign article, or leave empty."
 msgstr "Illeszd be a kampánycikked linkjét, vagy hagyd üresen."
 
-#: src/components/_military/mercenaryContract/AcceptMercenaryContractModal.tsx:82
-msgid "Pay members directly"
-msgstr ""
-
-#: src/components/_military/mercenaryContract/AcceptMercenaryContractModal.tsx:83
-msgid "Pay to MU treasury"
-msgstr ""
-
-#: src/components/_military/mercenaryContract/AcceptMercenaryContractModal.tsx:78
-msgid "Payment mode"
-msgstr ""
-
 #: src/pages/shop/index.tsx:43
 msgid "Payment successful! Thanks for supporting the game <3"
 msgstr "Sikeres fizetés! Köszönjük, hogy támogatod a játékot <3"
+
+#: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:154
+msgid "Payout"
+msgstr ""
 
 #: src/components/_political/event/EventList.tsx:63
 msgid "Peace made"
@@ -5211,7 +5204,7 @@ msgstr "Béke kötve"
 msgid "Pending"
 msgstr ""
 
-#: src/components/_user/worker/WorkerEditFormModal.tsx:154
+#: src/components/_user/worker/WorkerEditFormModal.tsx:165
 msgid "Pending wage reduction"
 msgstr "Függőben lévő bércsökkentés"
 
@@ -5261,7 +5254,7 @@ msgstr "Ültess egy fát az adatközpontban"
 msgid "Please complete the CAPTCHA."
 msgstr "Kérjük, töltsd ki a CAPTCHA-t."
 
-#: src/components/_military/mu/MuFormModal.tsx:68
+#: src/components/_military/mu/MuFormModal.tsx:65
 #: src/components/_political/party/PartyFormModal.tsx:61
 msgid "Please select a region"
 msgstr "Kérjük, válassz régiót"
@@ -5282,7 +5275,7 @@ msgstr "Politikai indítványok"
 msgid "Politics & Government"
 msgstr ""
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:196
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:199
 msgid "Popular Article"
 msgstr ""
 
@@ -5299,23 +5292,23 @@ msgstr "Prémium"
 msgid "Premium & Gifts"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1836
+#: src/components/_user/notification/notification.frontConfig.tsx:1851
 msgid "Premium activated"
 msgstr "Prémium aktiválva"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1837
+#: src/components/_user/notification/notification.frontConfig.tsx:1852
 msgid "Premium expired"
 msgstr "Prémium lejárt"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1843
+#: src/components/_user/notification/notification.frontConfig.tsx:1858
 msgid "Premium gift expired"
 msgstr "Prémium ajándék lejárt"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1840
+#: src/components/_user/notification/notification.frontConfig.tsx:1855
 msgid "Premium gift received"
 msgstr "Prémium ajándék megérkezett"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1838
+#: src/components/_user/notification/notification.frontConfig.tsx:1853
 msgid "Premium gift sent"
 msgstr "Prémium ajándék elküldve"
 
@@ -5351,7 +5344,7 @@ msgstr "Elnökválasztások"
 msgid "Primary election"
 msgstr "Előválasztás"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1916
+#: src/components/_user/notification/notification.frontConfig.tsx:1931
 msgid "Primary Election Ended"
 msgstr "Előválasztás befejeződött"
 
@@ -5368,6 +5361,10 @@ msgstr "Adatvédelem"
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:31
 msgid "Private"
 msgstr "Közlegény"
+
+#: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:175
+msgid "Pro Only"
+msgstr ""
 
 #: src/components/_user/user/skills.frontConfig.tsx:50
 msgid "Probability of landing a critical hit"
@@ -5415,9 +5412,17 @@ msgstr "Termelési bónusz:"
 msgid "Production in<0/> is full, you should start production!"
 msgstr "A termelés <0/> régióban megtelt, indítsd el a termelést!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1877
+#: src/components/_user/notification/notification.frontConfig.tsx:1892
 msgid "Production is full"
 msgstr "A termelés megtelt"
+
+#: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:224
+msgid "Professionals Only"
+msgstr ""
+
+#: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:233
+msgid "Professionals only (5+ rep)"
+msgstr ""
 
 #: src/components/_user/user/MyAvatar.tsx:29
 msgid "Profile"
@@ -5428,14 +5433,9 @@ msgstr "Profil"
 msgid "Promote to Commander"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1980
+#: src/components/_user/notification/notification.frontConfig.tsx:1995
 msgid "Promoted to Commander"
 msgstr "Parancsnokká előléptetve"
-
-#: src/components/_military/battle/BattleSideContractsModal.tsx:45
-#: src/pages/battle/[battleId]/contracts.tsx:36
-msgid "Proposals"
-msgstr ""
 
 #: src/components/_political/partyMotion/PartyMotionFormModal.tsx:125
 #: src/components/_political/partyMotion/PartyMotionList.tsx:48
@@ -5455,7 +5455,7 @@ msgstr "Szövetség javaslata <0/> országgal, növelve a polgáraidáltalokozot
 msgid "Propose an alliance to another country"
 msgstr "Szövetség javaslata egy másik országgal"
 
-#: src/components/_political/law/LawFormModal.tsx:318
+#: src/components/_political/law/LawFormModal.tsx:317
 msgid "Propose law"
 msgstr "Törvény benyújtása"
 
@@ -5488,13 +5488,9 @@ msgstr "Régió megvásárlásának javaslata"
 msgid "Propose to buy a region from another country"
 msgstr "Régió megvásárlásának javaslata egy másik országtól"
 
-#: src/components/_user/worker/WorkerEditFormModal.tsx:211
+#: src/components/_user/worker/WorkerEditFormModal.tsx:223
 msgid "Propose wage reduction"
 msgstr "Bércsökkentés javaslata"
-
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:301
-msgid "Proposed"
-msgstr ""
 
 #: src/components/_other/shop/ShopHeader.tsx:43
 msgid "Propositions"
@@ -5508,10 +5504,6 @@ msgstr ""
 msgid "Put yourself to work!"
 msgstr "Lássál munkához!"
 
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:175
-msgid "Quantity"
-msgstr ""
-
 #: src/components/_economy/inventory/DismantleModal.tsx:197
 #: src/components/_economy/inventory/DismantleModal.tsx:287
 msgid "Quick dismantle"
@@ -5521,19 +5513,31 @@ msgstr "Gyors szétszerelés"
 msgid "Quickly dismantle items"
 msgstr "Tárgyak gyors szétszerelése"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1927
+#: src/components/_military/battle/BattleHeader.tsx:276
+msgid "Ranking"
+msgstr ""
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1942
 msgid "Ranking reward"
 msgstr ""
 
 #: src/components/_layout/MoreButtonNav.tsx:120
-#: src/pages/country/[countryId]/index.tsx:167
+#: src/pages/country/[countryId]/index.tsx:171
 #: src/pages/user/[userId]/index.tsx:123
 msgid "Rankings"
 msgstr "Ranglisták"
 
-#: src/components/_layout/LayoutRightIcons.tsx:316
+#: src/components/_layout/LayoutRightIcons.tsx:313
 msgid "Ranks"
 msgstr "Rangok"
+
+#: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:143
+msgid "Rate"
+msgstr ""
+
+#: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:141
+msgid "Rate per 1K damage"
+msgstr ""
 
 #: src/components/_economy/workOffer/EstimatedCompanyBenefit.tsx:128
 msgid "Raw materials:"
@@ -5593,7 +5597,7 @@ msgid "Rear Admiral"
 msgstr "Ellentengernagy"
 
 #: src/components/_political/law/Law.tsx:71
-#: src/components/_political/law/LawFormModal.tsx:179
+#: src/components/_political/law/LawFormModal.tsx:178
 msgid "Reason"
 msgstr "Indoklás"
 
@@ -5653,11 +5657,6 @@ msgstr "Ajánló felhasználóneve"
 msgid "Refresh every hour"
 msgstr "Frissítés óránként"
 
-#. placeholder {0}: cancelRefund.toLocaleString()
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:285
-msgid "Refund: {0} money will be returned to the country treasury."
-msgstr ""
-
 #: src/components/_layout/LayoutUserMenu.tsx:193
 msgid "Regen in..."
 msgstr "Reg. ..."
@@ -5679,7 +5678,7 @@ msgstr "Régió"
 msgid "Region buy offer"
 msgstr "Régió vételi ajánlat"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1943
+#: src/components/_user/notification/notification.frontConfig.tsx:1958
 msgid "Region is revolting!"
 msgstr "A régió fellázad!"
 
@@ -5695,7 +5694,7 @@ msgstr "Régió átvitel"
 msgid "regions"
 msgstr "régiók"
 
-#: src/components/_political/country/CountryHeader.tsx:115
+#: src/components/_political/country/CountryHeader.tsx:118
 msgid "Regions"
 msgstr "Régiók"
 
@@ -5767,7 +5766,7 @@ msgstr "Inaktív kongresszusi tag eltávolítása posztjáról"
 msgid "Remove Avatar"
 msgstr "Avatár eltávolítása"
 
-#: src/components/_military/battle/BattleOrderActionsDropdown.tsx:115
+#: src/components/_military/battle/BattleOrderActionsDropdown.tsx:116
 msgid "Remove bounty"
 msgstr ""
 
@@ -5788,7 +5787,7 @@ msgstr "Ellenség eltávolítása"
 msgid "Remove the current party leader from their position"
 msgstr "A jelenlegi pártvezető eltávolítása posztjáról"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1977
+#: src/components/_user/notification/notification.frontConfig.tsx:1992
 msgid "Removed from Military Unit"
 msgstr "Eltávolítva a katonai egységből"
 
@@ -5817,7 +5816,7 @@ msgstr "Összes pártérték lecserélése új konfigurációra"
 msgid "Replacing a member"
 msgstr ""
 
-#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:69
+#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:66
 msgid "Report"
 msgstr ""
 
@@ -5830,12 +5829,8 @@ msgstr "Felhasználó jelentése"
 msgid "Republican"
 msgstr "Republikánus"
 
-#: src/components/_military/mercenaryContract/MercenaryReputationTooltip.tsx:19
-msgid "Reputation earned by the military unit for fulfilling mercenary contracts. For every <0/> dealt, the MU earns <1/>. For every <2/> not dealt before a contract expires, the MU loses <3/>."
-msgstr ""
-
-#: src/components/_military/mercenaryContract/MercenaryReputationTooltip.tsx:38
-msgid "Reputation naturally decays by 10% every week."
+#: src/components/_military/mercenaryContract/MercenaryReputationTooltip.tsx:34
+msgid "Reputation decays 20% toward 0 every week (minimum 1 point)."
 msgstr ""
 
 #: src/components/_user/user/UserDropdown.tsx:335
@@ -5845,10 +5840,6 @@ msgstr ""
 #: src/components/_user/apiToken/ApiTokenList.tsx:197
 msgid "Requests:"
 msgstr "Kérések:"
-
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:182
-msgid "Required Reputation (optional)"
-msgstr ""
 
 #: src/components/_user/mission/MissionItem.tsx:114
 msgid "Reroll Mission"
@@ -5878,7 +5869,7 @@ msgstr "Felhasználónév visszaállítása"
 msgid "Reshuffle in"
 msgstr "Újraosztás"
 
-#: src/components/_military/hit/HitButton.tsx:406
+#: src/components/_military/hit/HitButton.tsx:442
 msgid "Resist"
 msgstr "Ellenállj"
 
@@ -5890,7 +5881,7 @@ msgstr "Ellenállás"
 msgid "Resistance Contributors"
 msgstr "Ellenállás támogatói"
 
-#: src/pages/country/[countryId]/index.tsx:310
+#: src/pages/country/[countryId]/index.tsx:314
 #: src/pages/region/[regionId]/index.tsx:49
 msgid "Resources"
 msgstr "Erőforrások"
@@ -5899,7 +5890,7 @@ msgstr "Erőforrások"
 msgid "Resources reshuffled"
 msgstr "Erőforrások újraosztva"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2017
+#: src/components/_user/notification/notification.frontConfig.tsx:2030
 msgid "Response to message"
 msgstr "Válasz az üzenetre"
 
@@ -5915,7 +5906,7 @@ msgstr "Régió visszaadása az eredeti országának"
 msgid "Revoke API token?"
 msgstr "API token visszavonása?"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1946
+#: src/components/_user/notification/notification.frontConfig.tsx:1961
 msgid "Revolt started!"
 msgstr "Lázadás elkezdődött!"
 
@@ -5927,7 +5918,7 @@ msgstr "Forradalom véget ért"
 msgid "Revolution started"
 msgstr "Forradalom elkezdődött"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1949
+#: src/components/_user/notification/notification.frontConfig.tsx:1964
 msgid "Revolution started!"
 msgstr "Forradalom elkezdődött!"
 
@@ -5951,29 +5942,26 @@ msgstr ""
 msgid "Rolled back by admin"
 msgstr ""
 
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:313
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:240
 msgid "Rolled back by Admin"
 msgstr ""
 
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:196
+#: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:214
 msgid "Round"
 msgstr ""
 
+#. placeholder {0}: auction.roundNumber
 #. placeholder {0}: contract.roundNumber
-#. placeholder {0}: proposal.roundNumber
-#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:172
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:205
-#: src/components/_military/mercenaryContract/MercenaryProposalItem.tsx:91
+#: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:184
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:132
 msgid "Round {0}"
 msgstr ""
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:83
+#: src/components/_military/damageRanking/BattleLoot.tsx:90
 msgid "Round {roundNumber} loot pool"
 msgstr ""
 
-#. placeholder {0}: (roundIndex ?? 0) + 1
 #. placeholder {0}: i + 1
-#: src/components/_military/battle/BattleTimelineRound.tsx:88
 #: src/components/_military/damageRanking/DamageRankingSides.tsx:76
 msgid "Round #{0}"
 msgstr "#{0}. kör"
@@ -5983,23 +5971,28 @@ msgstr "#{0}. kör"
 msgid "Round <0>#{0}</0> in <1/> is about to end!"
 msgstr "A(z) <0>#{0}</0> kör hamarosan véget ér itt: <1/>!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1934
+#: src/components/_user/notification/notification.frontConfig.tsx:1949
 msgid "Round about to end"
 msgstr "A kör hamarosan véget ér"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1932
+#: src/components/_user/notification/notification.frontConfig.tsx:1947
 msgid "Round ended"
 msgstr "A kör véget ért"
+
+#: src/components/_military/battle/BattleSystem.tsx:441
+#: src/components/_military/battle/BattleSystem.tsx:478
+msgid "Round ETA"
+msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:79
 msgid "Round Hero"
 msgstr ""
 
-#: src/components/_military/damageRanking/BattleLoot.tsx:53
+#: src/components/_military/damageRanking/BattleLoot.tsx:60
 msgid "Round loot"
 msgstr ""
 
-#: src/components/_military/battle/BattleTimeline.tsx:57
+#: src/components/_military/battle/BattleTimeline.tsx:78
 msgid "Rounds timeline"
 msgstr "Körök időrendje"
 
@@ -6013,11 +6006,11 @@ msgid "Rounds Won"
 msgstr "Megnyert körök"
 
 #: src/components/_layout/LayoutLeftIcons.tsx:92
-#: src/components/_user/auth/WelcomeModal.tsx:150
+#: src/components/_user/auth/WelcomeModal.tsx:152
 msgid "Rules"
 msgstr "Szabályok"
 
-#: src/pages/country/[countryId]/index.tsx:318
+#: src/pages/country/[countryId]/index.tsx:322
 msgid "Ruling Party"
 msgstr "Kormányzó párt"
 
@@ -6025,8 +6018,8 @@ msgstr "Kormányzó párt"
 msgid "Running low on health?"
 msgstr "Kevés az életerőd?"
 
-#: src/components/_political/party/PartyDescriptionModal.tsx:69
-#: src/components/_user/auth/WelcomeModal.tsx:162
+#: src/components/_political/party/PartyDescriptionModal.tsx:72
+#: src/components/_user/auth/WelcomeModal.tsx:164
 #: src/pages/user/[userId]/skills.tsx:210
 msgid "Save"
 msgstr "Mentés"
@@ -6075,7 +6068,7 @@ msgstr "Nézd meg dolgozóid és vállalataid statisztikáit"
 msgid "See your spending and income breakdown"
 msgstr "Nézd meg kiadásaid és bevételeid lebontását"
 
-#: src/components/_military/mu/MuFormModal.tsx:117
+#: src/components/_military/mu/MuFormModal.tsx:114
 msgid "Select a location"
 msgstr "Válassz helyszínt"
 
@@ -6099,7 +6092,7 @@ msgstr "Banner kiválasztása"
 msgid "Select law type"
 msgstr "Törvénytípus kiválasztása"
 
-#: src/components/_political/law/LawFormModal.tsx:268
+#: src/components/_political/law/LawFormModal.tsx:267
 msgid "Select map accent"
 msgstr "Térkép szín kiválasztása"
 
@@ -6136,6 +6129,7 @@ msgstr "Add el, több ládát kell venned a játékhoz!"
 msgid "Sell Items"
 msgstr "Tárgyak eladása"
 
+#: src/components/_economy/itemTrading/TradingOrders.tsx:77
 #: src/pages/market/index.tsx:183
 msgid "Sell orders"
 msgstr "Eladási megbízások"
@@ -6144,7 +6138,7 @@ msgstr "Eladási megbízások"
 msgid "Sell price:"
 msgstr "Eladási ár:"
 
-#: src/components/_economy/itemTrading/ItemTradingOrderItem.tsx:147
+#: src/components/_economy/itemTrading/ItemTradingOrderItem.tsx:150
 msgid "sells"
 msgstr "elad"
 
@@ -6201,7 +6195,7 @@ msgstr "Állíts be üdvözlő cikket az országodnak"
 msgid "Set a welcome article for your country<0/>"
 msgstr "Állíts be üdvözlő cikket az országodnak<0/>"
 
-#: src/components/_military/battle/BattleOrderActionsDropdown.tsx:124
+#: src/components/_military/battle/BattleOrderActionsDropdown.tsx:129
 msgid "Set bounty"
 msgstr ""
 
@@ -6213,7 +6207,7 @@ msgstr "Ország színének beállítása"
 msgid "Set new party ethics configuration:"
 msgstr "Új párt etikai konfiguráció beállítása:"
 
-#: src/components/_military/battle/BattleOrderActionsDropdown.tsx:96
+#: src/components/_military/battle/BattleOrderActionsDropdown.tsx:97
 msgid "Set order"
 msgstr ""
 
@@ -6259,16 +6253,22 @@ msgstr "Állítsd be a felhasználóneved"
 msgid "Settings"
 msgstr "Beállítások"
 
-#: src/components/_layout/LayoutRightIcons.tsx:270
+#: src/components/_layout/LayoutRightIcons.tsx:267
 #: src/components/_layout/MoreButtonNav.tsx:73
 #: src/components/_other/shop/ShopHeader.tsx:52
 msgid "Shop"
 msgstr "Bolt"
 
-#: src/components/_military/damageRanking/DamageRankingList.tsx:199
-#: src/components/_social/ArticleTags.tsx:268
-#: src/components/_social/ArticleTags.tsx:319
-#: src/components/_social/ArticleTags.tsx:427
+#. placeholder {0}: auction.bids.length
+#: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:240
+msgid "Show all {0} bids"
+msgstr ""
+
+#: src/components/_military/damageRanking/DamageRankingList.tsx:198
+#: src/components/_social/ArticleTags.tsx:265
+#: src/components/_social/ArticleTags.tsx:312
+#: src/components/_social/ArticleTags.tsx:370
+#: src/components/_social/ArticleTags.tsx:420
 msgid "Show more"
 msgstr "Több megjelenítése"
 
@@ -6293,6 +6293,10 @@ msgstr ""
 msgid "Showing weekly"
 msgstr ""
 
+#: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:206
+msgid "Side"
+msgstr ""
+
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:19
 msgid "Skill issue?"
 msgstr "Skill probléma?"
@@ -6315,15 +6319,15 @@ msgstr "A képességek erősebbé tesznek. Fejleszd az képességeidet!"
 msgid "Skills saved!"
 msgstr "Képességek elmentve!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1857
+#: src/components/_user/notification/notification.frontConfig.tsx:1872
 msgid "Skin gift received"
 msgstr "Skin ajándék megérkezett"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1855
+#: src/components/_user/notification/notification.frontConfig.tsx:1870
 msgid "Skin gift sent"
 msgstr "Skin ajándék elküldve"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1860
+#: src/components/_user/notification/notification.frontConfig.tsx:1875
 msgid "Skin pack gift sent"
 msgstr "Skin csomag ajándék elküldve"
 
@@ -6335,7 +6339,7 @@ msgstr "Skin csomag feloldva! Minden skin felszerelve!"
 msgid "Skin Packs"
 msgstr "Skin csomagok"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2033
+#: src/components/_user/notification/notification.frontConfig.tsx:2046
 msgid "Skin Reward"
 msgstr ""
 
@@ -6380,7 +6384,7 @@ msgstr "Specialista"
 msgid "Specialization"
 msgstr "Specializáció"
 
-#: src/components/_political/law/LawFormModal.tsx:294
+#: src/components/_political/law/LawFormModal.tsx:293
 msgid "Specialization item"
 msgstr "Specializációs tárgy"
 
@@ -6395,10 +6399,6 @@ msgstr "Költsd el az <0>Energiádat</0> itt dolgozva, hogy <1>Pénzt</1> keress
 #: src/components/_economy/inventoryAccount/InventoryAccount.tsx:137
 msgid "Spendings"
 msgstr "Kiadások"
-
-#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:166
-msgid "Spent"
-msgstr ""
 
 #: src/components/_political/law/law.frontConfig.tsx:132
 #: src/components/_political/law/law.frontConfig.tsx:134
@@ -6442,11 +6442,14 @@ msgstr "Elnökválasztás indítása"
 msgid "Start revolution"
 msgstr "Forradalom indítása"
 
-#: src/components/_military/battle/BattleHeader.tsx:175
 #: src/components/_military/war/WarHeader.tsx:61
 #: src/components/_military/war/WarItem.tsx:108
 msgid "Started <0/>"
 msgstr "Elindítva <0/>"
+
+#: src/components/_military/battle/BattleHeader.tsx:186
+msgid "Started<0/><1/>"
+msgstr ""
 
 #: src/components/_user/mission/MissionsList.tsx:215
 msgid "Starting"
@@ -6579,7 +6582,7 @@ msgstr "Támogató Terv"
 msgid "Supreme Commander"
 msgstr "Legfelsőbb Parancsnok"
 
-#: src/pages/country/[countryId]/index.tsx:243
+#: src/pages/country/[countryId]/index.tsx:247
 msgid "Sworn enemy"
 msgstr "Esküdt ellenség"
 
@@ -6591,9 +6594,9 @@ msgstr "Rendszer lázadás"
 msgid "Table"
 msgstr "Táblázat"
 
-#: src/pages/country/[countryId]/index.tsx:117
-#: src/pages/country/[countryId]/index.tsx:141
-#: src/pages/country/[countryId]/index.tsx:146
+#: src/pages/country/[countryId]/index.tsx:121
+#: src/pages/country/[countryId]/index.tsx:145
+#: src/pages/country/[countryId]/index.tsx:150
 msgid "Take control"
 msgstr "Vedd át az irányítást"
 
@@ -6605,33 +6608,30 @@ msgstr "Vedd figyelembe a lelőhelyeket"
 msgid "Tank"
 msgstr "Harckocsi"
 
-#: src/components/_political/law/LawFormModal.tsx:193
+#: src/components/_political/law/LawFormModal.tsx:192
 msgid "Target country"
 msgstr "Célország"
 
-#: src/components/_military/mercenaryContract/MercenaryProposalItem.tsx:121
-msgid "Target MU"
-msgstr ""
-
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:205
-msgid "Target MU (optional)"
-msgstr ""
-
-#: src/components/_political/law/LawFormModal.tsx:206
+#: src/components/_political/law/LawFormModal.tsx:205
 msgid "Target region"
 msgstr "Célrégió"
 
-#: src/components/_political/law/LawFormModal.tsx:281
+#: src/components/_political/law/LawFormModal.tsx:280
 msgid "Target user"
 msgstr "Céljátékos"
 
-#: src/components/_political/law/LawFormModal.tsx:226
+#: src/components/_political/law/LawFormModal.tsx:225
 msgid "Tax type"
 msgstr "Adótípus"
 
-#: src/pages/country/[countryId]/account.tsx:30
+#: src/pages/country/[countryId]/account.tsx:37
 msgid "Taxes"
 msgstr "Adók"
+
+#: src/components/_military/mercenaryContract/MercenaryAuctionList.tsx:132
+#: src/components/_military/mercenaryContract/MercenaryContractList.tsx:89
+msgid "Terminated"
+msgstr ""
 
 #: src/pages/index.tsx:138
 #: src/pages/rules.tsx:32
@@ -6670,12 +6670,14 @@ msgstr ""
 msgid "The civil war started by <0/> in <1/> has succeeded of <2/> and the government has been overthrown."
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1563
-msgid "The contract for <0/> has expired"
+#. placeholder {0}: data.refund
+#: src/components/_user/notification/notification.frontConfig.tsx:1586
+msgid "The contract for <0/> has expired. <1>{0}</1> returned to <2/>."
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1582
-msgid "The contract has been rolled back. All money sent back to <0/>"
+#. placeholder {0}: data.moneyRolledBack
+#: src/components/_user/notification/notification.frontConfig.tsx:1604
+msgid "The contract has been rolled back. <0>{0}</0> sent back to <1/>."
 msgstr ""
 
 #: src/components/_user/user/skills.frontConfig.tsx:59
@@ -6693,6 +6695,12 @@ msgstr "A lelőhely a következő idő múlva jár le."
 #: src/components/_user/notification/notification.frontConfig.tsx:712
 msgid "The effect of your consumed buffs has ended. The debuff phase has begun and will last <0>{debuffDuration}h</0>."
 msgstr "Az elfogyasztott buffaid hatása véget ért. A debuff fázis elkezdődött és <0>{debuffDuration}h</0> ideig fog tartani."
+
+#. placeholder {0}: Math.round(contract.moneyPool * 10) / 100
+#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:85
+#: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:64
+msgid "The MU will receive the acceptance fee back, partial payout for damage done, and a 10% penalty fee of <0>{0}</0>. Are you sure?"
+msgstr ""
 
 #: src/components/_political/event/event.frontConfig.tsx:82
 msgid "The revolution in <0/> has been suppressed. The government remains in power."
@@ -6714,7 +6722,7 @@ msgstr "A torna véget ért a csapatodnak <0/>. Nézd meg az eredményeket!"
 msgid "The universe owes you something big"
 msgstr "Az univerzum tartozik neked valami nagyval"
 
-#: src/components/_military/battle/BattleSystem.tsx:677
+#: src/components/_military/battle/BattleSystem.tsx:770
 msgid "This bounty is reserved for nationals only."
 msgstr ""
 
@@ -6722,7 +6730,7 @@ msgstr ""
 msgid "This company is disabled because the owner reached the company limit."
 msgstr "Ez a vállalat letiltva van, mert a tulajdonos elérte a vállalati limitet."
 
-#: src/pages/country/[countryId]/index.tsx:121
+#: src/pages/country/[countryId]/index.tsx:125
 msgid "This country has no president or active congress member, you can take control of it."
 msgstr "Ennek az országnak nincs elnöke vagy aktív kongresszusi tagja, átveheted felette az irányítást."
 
@@ -6734,7 +6742,7 @@ msgstr "Ez a felszerelés zöld, akárcsak a fű"
 msgid "This feels good, huh?"
 msgstr "Ez jó érzés, mi?"
 
-#: src/components/_military/battle/LootSummaryCard.tsx:43
+#: src/components/_military/battle/LootSummaryCard.tsx:50
 msgid "This is a summary of the loot you received from this battle. It includes any cases you got as well as the most valuable items from the shared loot pool."
 msgstr ""
 
@@ -6762,6 +6770,10 @@ msgstr ""
 #: src/pages/region/[regionId]/index.tsx:177
 msgid "This region is not linked to it's owner's capital."
 msgstr "Ez a régió nincs összekötve a tulajdonos fővárosával."
+
+#: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:219
+msgid "This round only"
+msgstr ""
 
 #: src/components/_user/user/FamilyGroup.tsx:75
 msgid "This user is not part of any family group"
@@ -6863,6 +6875,7 @@ msgstr ""
 msgid "Tome of Tides"
 msgstr ""
 
+#: src/components/_military/damageRanking/BattleLoot.tsx:124
 #: src/components/_social/ArticleList.tsx:181
 msgid "Top"
 msgstr "Top"
@@ -6915,13 +6928,15 @@ msgstr "A hónap legjobb ajándékozói"
 msgid "Top of the hill"
 msgstr ""
 
-#: src/components/_military/battle/BattleSystem.tsx:540
+#: src/components/_military/battle/BattleSystem.tsx:635
 msgid "total"
 msgstr "összesen"
 
 #: src/components/_economy/inventoryAccount/InventoryAccount.tsx:116
 #: src/components/_economy/inventoryAccount/InventoryAccount.tsx:153
 #: src/components/_economy/inventoryAccount/InventoryAccount.tsx:180
+#: src/components/_economy/itemTrading/TradingOrders.tsx:66
+#: src/components/_economy/itemTrading/TradingOrders.tsx:93
 #: src/components/_economy/work/WorkChart.tsx:198
 #: src/components/_military/mu/MuMemberList.tsx:190
 #: src/components/_user/user/WealthPanel.tsx:28
@@ -6932,10 +6947,6 @@ msgstr "Összesen"
 
 #: src/components/_economy/inventory/case/OpenCaseModal.tsx:470
 msgid "Total cases opened"
-msgstr ""
-
-#: src/components/_military/mercenaryContract/CreateMercenaryProposalModal.tsx:212
-msgid "Total cost:"
 msgstr ""
 
 #: src/components/_user/user/UserRankingsPanel.tsx:27
@@ -6962,15 +6973,15 @@ msgstr ""
 msgid "Tournament"
 msgstr "Torna"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1957
+#: src/components/_user/notification/notification.frontConfig.tsx:1972
 msgid "Tournament Created"
 msgstr "Torna létrehozva"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1964
+#: src/components/_user/notification/notification.frontConfig.tsx:1979
 msgid "Tournament Eliminated"
 msgstr "Kiesés a tornáról"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1962
+#: src/components/_user/notification/notification.frontConfig.tsx:1977
 msgid "Tournament Ended"
 msgstr "Torna befejeződött"
 
@@ -6978,15 +6989,15 @@ msgstr "Torna befejeződött"
 msgid "Tournament reward:"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1953
+#: src/components/_user/notification/notification.frontConfig.tsx:1968
 msgid "Tournament round won!"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1960
+#: src/components/_user/notification/notification.frontConfig.tsx:1975
 msgid "Tournament Started"
 msgstr "Torna elkezdődött"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1955
+#: src/components/_user/notification/notification.frontConfig.tsx:1970
 msgid "Tournament Won!"
 msgstr "Torna megnyerve!"
 
@@ -6999,7 +7010,7 @@ msgstr "Kereskedés"
 msgid "Trading"
 msgstr "Kereskedelem"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1880
+#: src/components/_user/notification/notification.frontConfig.tsx:1895
 msgid "Trading transaction"
 msgstr ""
 
@@ -7011,7 +7022,7 @@ msgstr "Újonc"
 msgid "Transac."
 msgstr "Tranzak."
 
-#: src/components/_political/country/CountryHeader.tsx:77
+#: src/components/_political/country/CountryHeader.tsx:80
 #: src/pages/market/index.tsx:83
 #: src/pages/user/[userId]/index.tsx:230
 msgid "Transactions"
@@ -7025,11 +7036,11 @@ msgstr "Pénz átutalása"
 msgid "Transfer Ownership"
 msgstr ""
 
-#: src/components/_user/worker/WorkerEditFormModal.tsx:187
+#: src/components/_user/worker/WorkerEditFormModal.tsx:199
 msgid "Transfer to company (optional)"
 msgstr "Áthelyezés vállalathoz (opcionális)"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:206
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:209
 msgid "Translator"
 msgstr ""
 
@@ -7083,7 +7094,7 @@ msgstr "Mindenkinek segít gomb feloldása"
 msgid "Unlock Produce all button"
 msgstr "Mindent előállít gomb feloldása"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1863
+#: src/components/_user/notification/notification.frontConfig.tsx:1878
 msgid "Unlocked pack"
 msgstr "Csomag feloldva"
 
@@ -7099,7 +7110,7 @@ msgstr "Hihetetlen. Ez nem szokott megtörténni"
 msgid "Unregister"
 msgstr "Leiratkozás"
 
-#: src/pages/country/[countryId]/index.tsx:301
+#: src/pages/country/[countryId]/index.tsx:305
 msgid "Unrest"
 msgstr "Zavargás"
 
@@ -7133,7 +7144,7 @@ msgstr "Frissítés"
 msgid "Update infos"
 msgstr "Információk frissítése"
 
-#: src/components/_user/worker/WorkerEditFormModal.tsx:213
+#: src/components/_user/worker/WorkerEditFormModal.tsx:225
 msgid "Update worker"
 msgstr "Munkás frissítése"
 
@@ -7261,7 +7272,7 @@ msgid "User unblocked"
 msgstr "Felhasználó feloldva"
 
 #: src/components/_political/government/NominateForm.tsx:50
-#: src/components/_user/auth/WelcomeModal.tsx:143
+#: src/components/_user/auth/WelcomeModal.tsx:145
 #: src/components/_user/user/UserForm.tsx:45
 #: src/components/_user/user/UserForm.tsx:46
 #: src/pages/user/[userId]/referrals.tsx:147
@@ -7378,11 +7389,11 @@ msgstr "Altengernagy"
 msgid "Vice President"
 msgstr "Alelnök"
 
-#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:63
+#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:60
 msgid "View details"
 msgstr ""
 
-#: src/components/_military/battle/BattleHeader.tsx:106
+#: src/components/_military/battle/BattleHeader.tsx:117
 msgid "View on map"
 msgstr "Megtekintés a térképen"
 
@@ -7399,7 +7410,7 @@ msgstr "VS"
 msgid "Wage"
 msgstr "Bér"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1873
+#: src/components/_user/notification/notification.frontConfig.tsx:1888
 msgid "Wage changed"
 msgstr "Bér megváltozott"
 
@@ -7407,7 +7418,7 @@ msgstr "Bér megváltozott"
 msgid "Wage cost ({productionPoints} pts):"
 msgstr "Bérköltség ({productionPoints} pt):"
 
-#: src/components/_user/worker/WorkerEditFormModal.tsx:175
+#: src/components/_user/worker/WorkerEditFormModal.tsx:183
 msgid "Wage per production"
 msgstr "Bér termelésenként"
 
@@ -7415,12 +7426,12 @@ msgstr "Bér termelésenként"
 msgid "Wage reduction accepted."
 msgstr "Bércsökkentés elfogadva."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1874
+#: src/components/_user/notification/notification.frontConfig.tsx:1889
 #: src/components/_user/worker/WageReductionAlert.tsx:66
 msgid "Wage reduction proposed"
 msgstr "Bércsökkentés javasolva"
 
-#: src/components/_user/worker/WorkerEditFormModal.tsx:75
+#: src/components/_user/worker/WorkerEditFormModal.tsx:86
 msgid "Wage reduction proposed! Waiting for worker to accept or reject."
 msgstr "Bércsökkentés javasolva! Várakozás a munkás elfogadására vagy elutasítására."
 
@@ -7429,11 +7440,11 @@ msgstr "Bércsökkentés javasolva! Várakozás a munkás elfogadására vagy el
 msgid "Waiting for level {0}"
 msgstr "Várakozás a(z) {0}. szintre"
 
-#: src/components/_user/worker/WorkerEditFormModal.tsx:157
+#: src/components/_user/worker/WorkerEditFormModal.tsx:168
 msgid "Waiting for the worker to accept or reject the wage reduction. You cannot change the wage until they respond."
 msgstr "Várakozás arra, hogy a munkás elfogadja vagy elutasítsa a bércsökkentést. Nem változtathatod meg a bért, amíg nem válaszol."
 
-#: src/components/_economy/itemTrading/ItemTradingOrderItem.tsx:147
+#: src/components/_economy/itemTrading/ItemTradingOrderItem.tsx:150
 msgid "wants"
 msgstr "szeretne"
 
@@ -7449,7 +7460,6 @@ msgstr "Háború véget ért"
 msgid "War Era is 100% free to play and has no <0>ads</0> or <1>pay-to-win</1>, If you enjoy the game, you can support its development by subscribing to the Supporter Plan <3"
 msgstr "A War Era 100%-ban ingyenes, nincs benne <0>hirdetés</0> vagy <1>pay-to-win</1>. Ha tetszik a játék, támogathatod a fejlesztését a Támogatói Csomag előfizetésével <3"
 
-#: src/components/_military/mercenaryContract/AcceptMercenaryContractModal.tsx:69
 #: src/components/_user/userReports/ReportFormModal.tsx:83
 msgid "Warning"
 msgstr ""
@@ -7458,7 +7468,7 @@ msgstr ""
 msgid "Warrant Officer"
 msgstr "Zászlós"
 
-#: src/components/_political/country/CountryHeader.tsx:95
+#: src/components/_political/country/CountryHeader.tsx:98
 msgid "Wars"
 msgstr "Háborúk"
 
@@ -7493,7 +7503,7 @@ msgstr "Heti egyenleg"
 msgid "Weekly damages"
 msgstr "Heti sebzés"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2031
+#: src/components/_user/notification/notification.frontConfig.tsx:2044
 msgid "Weekly Missions Reset"
 msgstr "Heti küldetések visszaállítása"
 
@@ -7506,7 +7516,7 @@ msgstr ""
 msgid "Welcome back {username}!"
 msgstr "Üdvözlünk vissza {username}!"
 
-#: src/components/_user/auth/WelcomeModal.tsx:114
+#: src/components/_user/auth/WelcomeModal.tsx:116
 msgid "Welcome to War Era!"
 msgstr "Üdvözlünk a War Era-ban!"
 
@@ -7522,7 +7532,7 @@ msgstr "Amikor az <0>Életerőd</0> elfogy, nyisd meg ezt a menüt, hogy feltöl
 msgid "Whole Production"
 msgstr "Teljes termelés"
 
-#: src/components/_political/law/LawFormModal.tsx:180
+#: src/components/_political/law/LawFormModal.tsx:179
 msgid "Why do you want to propose this law?"
 msgstr "Miért szeretnéd javasolni ezt a törvényt?"
 
@@ -7560,15 +7570,15 @@ msgstr "Dolgozz <0>{count}</0> alkalommal egy munkáltatónak"
 msgid "Work and earn!"
 msgstr "Dolgozz és keress!"
 
-#: src/components/_user/worker/WorkerEditFormModal.tsx:86
+#: src/components/_user/worker/WorkerEditFormModal.tsx:97
 msgid "Worker fired!"
 msgstr "Munkás elbocsátva!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1869
+#: src/components/_user/notification/notification.frontConfig.tsx:1884
 msgid "Worker left"
 msgstr "Munkás kilépett"
 
-#: src/components/_user/worker/WorkerEditFormModal.tsx:63
+#: src/components/_user/worker/WorkerEditFormModal.tsx:74
 msgid "Worker updated!"
 msgstr "Munkás frissítve!"
 
@@ -7585,7 +7595,7 @@ msgstr "Másoknak dolgozni remek módja a pénzkeresésnek kezdéskor."
 msgid "Wow congratulations! Anyway have you considered buying premium?"
 msgstr "Hú gratulálok! Egyébként gondolkodtál a prémium megvásárlásán?"
 
-#: src/components/_political/law/LawFormModal.tsx:169
+#: src/components/_political/law/LawFormModal.tsx:168
 #: src/components/_political/law/LawList.tsx:58
 msgid "Write a law"
 msgstr "Törvény írása"
@@ -7615,15 +7625,15 @@ msgstr "Te egy csodálatos ember vagy"
 msgid "You are a lucky bastard"
 msgstr "Te egy szerencsés fickó vagy"
 
-#: src/pages/country/[countryId]/index.tsx:111
+#: src/pages/country/[countryId]/index.tsx:115
 msgid "You are already congress member of another country. Resign first."
 msgstr "Már egy másik ország kongresszusi tagja vagy. Először lépj vissza."
 
-#: src/pages/country/[countryId]/index.tsx:107
+#: src/pages/country/[countryId]/index.tsx:111
 msgid "You are already president of another country. Resign first."
 msgstr "Már egy másik ország elnöke vagy. Először lépj vissza."
 
-#: src/pages/country/[countryId]/index.tsx:109
+#: src/pages/country/[countryId]/index.tsx:113
 msgid "You are already vice president of another country. Resign first."
 msgstr "Már egy másik ország alelnöke vagy. Először lépj vissza."
 
@@ -7648,7 +7658,7 @@ msgstr "Nem veszel részt"
 msgid "You are very skilled!"
 msgstr "Nagyon ügyes vagy!"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:222
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:225
 msgid "You are/were a council member, sharing ideas and feedback to improve the game <3"
 msgstr ""
 
@@ -7668,8 +7678,9 @@ msgstr "Tárgyakat vásároltál."
 msgid "You broke the rng"
 msgstr "Összetörted az rng-t"
 
+#. placeholder {0}: staticGameConfig.referral.levelNeededForBadge
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:172
-msgid "You brought 10 babies to the world (>= lvl 10)"
+msgid "You brought 10 babies to the world (>= lvl {0})"
 msgstr ""
 
 #: src/components/_economy/inventory/DismantleModal.tsx:210
@@ -7696,11 +7707,11 @@ msgstr "Nincs jogosultságod a jelentkezések megtekintéséhez."
 msgid "You earned gems from a banner sale!"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1781
+#: src/components/_user/notification/notification.frontConfig.tsx:1796
 msgid "You earned gems from a sale of \"{skinTitle}\"!"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1783
+#: src/components/_user/notification/notification.frontConfig.tsx:1798
 msgid "You earned gems from a skin pack sale!"
 msgstr ""
 
@@ -7754,12 +7765,12 @@ msgid "You have resigned from the government"
 msgstr "Lemondtál a kormányzati pozícióról"
 
 #. placeholder {0}: gameConfig?.user.canTakeControlAtLevel
-#: src/pages/country/[countryId]/index.tsx:103
+#: src/pages/country/[countryId]/index.tsx:107
 msgid "You have to be level {0} to take control of a country."
 msgstr "{0} szintűnek kell lenned, hogy átvedd egy ország irányítását."
 
 #. placeholder {0}: gameConfig?.user.takeControlCooldownInDays
-#: src/pages/country/[countryId]/index.tsx:105
+#: src/pages/country/[countryId]/index.tsx:109
 msgid "You have to wait {0} days before taking control of a country again."
 msgstr "{0} napot kell várnod, mielőtt újra átvehetsz egy ország irányítását."
 
@@ -7767,11 +7778,11 @@ msgstr "{0} napot kell várnod, mielőtt újra átvehetsz egy ország irányít�
 msgid "You helped the dev find a bug, ty <3"
 msgstr ""
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:215
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:218
 msgid "You helped the dev find an exploit, ty <3"
 msgstr ""
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:208
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:211
 msgid "You helped translate the game into another language"
 msgstr ""
 
@@ -7827,7 +7838,7 @@ msgstr ""
 msgid "You received a reward for {0} {1} in<0/> tier in the ranking <1/>"
 msgstr "Jutalmat kaptál {0} {1} az<0/> szintért a ranglistán: <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1801
+#: src/components/_user/notification/notification.frontConfig.tsx:1816
 msgid "You received the skin \"{skinTitle}\"!"
 msgstr ""
 
@@ -7840,7 +7851,7 @@ msgstr "Eladtál tárgyakat."
 msgid "You successfully gifted \"{0}\" to <0/>!"
 msgstr "Sikeresen ajándékoztad \"{0}\"-t <0/> számára!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1645
+#: src/components/_user/notification/notification.frontConfig.tsx:1660
 msgid "You successfully gifted \"{skinTitle}\" to <0/>!"
 msgstr "Sikeresen ajándékoztad \"{skinTitle}\"-t <0/> számára!"
 
@@ -7849,7 +7860,7 @@ msgid "You successfully gifted a premium subscription to <0/>!"
 msgstr "Sikeresen ajándékoztál premium előfizetést <0/> számára!"
 
 #. placeholder {0}: data.skinPackTitle
-#: src/components/_user/notification/notification.frontConfig.tsx:1709
+#: src/components/_user/notification/notification.frontConfig.tsx:1724
 msgid "You successfully gifted the skin pack \"{0}\" to <0/>!"
 msgstr "Sikeresen ajándékoztad a(z) \"{0}\" skin csomagot <0/> számára!"
 
@@ -7873,8 +7884,8 @@ msgstr "Kirúgtak a kormányból: <0/>"
 msgid "You were an alpha tester (user before 20 march 2025)"
 msgstr ""
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1896
-#: src/components/_user/notification/notification.frontConfig.tsx:1913
+#: src/components/_user/notification/notification.frontConfig.tsx:1911
+#: src/components/_user/notification/notification.frontConfig.tsx:1928
 msgid "You were elected"
 msgstr "Megválasztottak"
 
@@ -7890,7 +7901,7 @@ msgstr ""
 msgid "You were here at the beginning of War Era"
 msgstr ""
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:233
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:236
 msgid "You were nominated as a government member of a country"
 msgstr ""
 
@@ -7907,15 +7918,15 @@ msgstr "Olyan közel voltál"
 msgid "You win money for the badge + {0}% of the badge income of all your referrals"
 msgstr "Pénzt nyersz a jelvényért + {0}%-ot az összes ajánlott játékosod jelvénybevételéből"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:179
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:182
 msgid "You won a country tournament"
 msgstr ""
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:191
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:194
 msgid "You won a giveaway"
 msgstr ""
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:185
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:188
 msgid "You won a MU tournament"
 msgstr ""
 
@@ -7976,7 +7987,7 @@ msgstr "Őseided büszkék"
 msgid "Your application to <0/> has been rejected"
 msgstr "A jelentkezésed a(z) <0/> szervezethez elutasításra került"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:198
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:201
 msgid "Your article reached 2% of the active population in score (min 10)"
 msgstr ""
 
@@ -7989,7 +8000,7 @@ msgstr "A bannered (\"{0}\") elfogadásra került és most elérhető a boltban!
 msgid "Your buff(s) will expire in less than 1 hour. The debuff phase will begin soon."
 msgstr ""
 
-#: src/pages/country/[countryId]/index.tsx:142
+#: src/pages/country/[countryId]/index.tsx:146
 msgid "Your citizenship is going to change"
 msgstr "Az állampolgárságod meg fog változni"
 
@@ -7997,11 +8008,11 @@ msgstr "Az állampolgárságod meg fog változni"
 msgid "Your country"
 msgstr "Országod"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1937
+#: src/components/_user/notification/notification.frontConfig.tsx:1952
 msgid "Your country is under attack!"
 msgstr "Az országod támadás alatt áll!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1940
+#: src/components/_user/notification/notification.frontConfig.tsx:1955
 msgid "Your country launched an attack!"
 msgstr "Az országod támadást indított!"
 
@@ -8013,17 +8024,13 @@ msgstr "Az országod felkelést kezdett <0/> területén <1/> ellen"
 msgid "Your current job"
 msgstr "Jelenlegi munkád"
 
-#: src/components/_economy/itemTrading/ItemTradingOrderItem.tsx:138
+#: src/components/_economy/itemTrading/ItemTradingOrderItem.tsx:141
 msgid "Your current order"
 msgstr "Jelenlegi megrendelésed"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1619
+#: src/components/_user/notification/notification.frontConfig.tsx:1634
 msgid "Your daily missions have been reset! Complete them to earn rewards."
 msgstr "Napi küldetéseid újraindultak! Teljesítsd őket a jutalmak megszerzéséhez."
-
-#: src/components/_military/hit/HitButton.tsx:361
-msgid "Your damages"
-msgstr "Sebzésed"
 
 #: src/pages/user/[userId]/settings.tsx:49
 msgid "Your email"
@@ -8045,7 +8052,7 @@ msgstr "A munkáltatód csökkenteni szeretné a béredet a(z) <0/> vállalatban
 msgid "Your enemies"
 msgstr "Ellenségeid"
 
-#: src/components/_user/auth/WelcomeModal.tsx:61
+#: src/components/_user/auth/WelcomeModal.tsx:63
 msgid "Your infos have been saved."
 msgstr "Adataid elmentve!"
 
@@ -8053,8 +8060,8 @@ msgstr "Adataid elmentve!"
 msgid "Your inventory holds all your items. Let's see what you've got!"
 msgstr "A leltárad tartalmazza az összes tárgyadat. Nézzük, mid van!"
 
-#: src/components/_military/battle/LootSummaryCard.tsx:42
-#: src/components/_military/battle/LootSummaryCard.tsx:46
+#: src/components/_military/battle/LootSummaryCard.tsx:49
+#: src/components/_military/battle/LootSummaryCard.tsx:53
 msgid "Your loot"
 msgstr ""
 
@@ -8066,9 +8073,13 @@ msgstr "A szerencséd csak most melegszik, ne add fel"
 msgid "Your luck is on vacation"
 msgstr "A szerencséd nyaralni ment"
 
-#: src/components/_military/mu/MuFormModal.tsx:111
+#: src/components/_military/mu/MuFormModal.tsx:108
 msgid "Your military unit name"
 msgstr "A katonai egységed neve"
+
+#: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:193
+msgid "Your MU must have enough money to cover the acceptance fee to bid. Payment is only deducted if you win, and refunded on contract completion."
+msgstr ""
 
 #: src/components/_economy/market/MarketHeader.tsx:14
 msgid "Your offers"
@@ -8086,7 +8097,7 @@ msgstr "Prémium előfizetésed aktiválva lett!"
 msgid "Your premium subscription has expired!"
 msgstr "Prémium előfizetésed lejárt!"
 
-#: src/components/_military/damageRanking/DamageRankingList.tsx:205
+#: src/components/_military/damageRanking/DamageRankingList.tsx:204
 msgid "Your rank"
 msgstr "Rangod"
 
@@ -8112,7 +8123,7 @@ msgstr "Csapatod:"
 msgid "Your wage in <0/> changed from <1>{0}</1> to <2>{1}</2>"
 msgstr "A béred a <0/> cégnél <1>{0}</1> értékről <2>{1}</2> értékre változott"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1631
+#: src/components/_user/notification/notification.frontConfig.tsx:1646
 msgid "Your weekly missions have been reset! Complete them to earn rewards."
 msgstr "A heti küldetéseid újraindultak! Teljesítsd őket, hogy jutalmakat szerezz."
 
