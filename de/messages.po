@@ -37,6 +37,13 @@ msgstr "- Das Entwicklungseinkommen ist um 50% reduziert: <0>{0}</0>."
 msgid "{0} & allies"
 msgstr "{0} & Verbündete"
 
+#. placeholder {0}: law.data.taxType
+#. placeholder {1}: law.data.amount
+#. placeholder {2}: law.data.taxType === 'selfWork' ? '' : '%'
+#: src/components/_political/law/law.frontConfig.tsx:62
+msgid "{0} → <0>{1}{2}</0>"
+msgstr ""
+
 #. placeholder {0}: lawConfig.minActiveCitizen
 #: src/components/_political/law/Law.tsx:120
 msgid "{0} active citizens required"
@@ -163,7 +170,12 @@ msgid "<0/> at <1>{0}</1> wage.{1}"
 msgstr "<0/> bei <1>{0}</1> Lohn.{1}"
 
 #. placeholder {0}: law.data.amount ?? 0
-#: src/components/_political/law/law.frontConfig.tsx:294
+#: src/components/_political/law/law.frontConfig.tsx:383
+msgid "<0/> buys <1/> for <2>{0}</2>"
+msgstr ""
+
+#. placeholder {0}: law.data.amount ?? 0
+#: src/components/_political/law/law.frontConfig.tsx:394
 msgid "<0/> buys your region <1/> for <2>{0}</2>"
 msgstr "<0/> kauft deine Region <1/> für <2>{0}</2>"
 
@@ -413,7 +425,11 @@ msgstr "<0/> hat die Kontrolle über <1/> übernommen"
 msgid "<0/> vs <1/> war"
 msgstr "<0/> vs <1/> Krieg"
 
-#: src/components/_political/law/law.frontConfig.tsx:83
+#: src/components/_political/law/law.frontConfig.tsx:94
+msgid "<0/> wants peace"
+msgstr ""
+
+#: src/components/_political/law/law.frontConfig.tsx:104
 msgid "<0/> wants to make peace with your country"
 msgstr "<0/> möchte Frieden mit deinem Land schließen"
 
@@ -1109,26 +1125,30 @@ msgstr "Der Missbrauch dieser Macht zum Vorteil eines anderen Landes führt zu e
 msgid "Accept"
 msgstr "Akzeptieren"
 
-#: src/components/_political/law/law.frontConfig.tsx:224
+#: src/components/_political/law/law.frontConfig.tsx:287
 #: src/components/_political/law/lawNames.tsx:26
 msgid "Accept alliance"
 msgstr "Allianz akzeptieren"
 
+#: src/components/_political/law/law.frontConfig.tsx:292
+msgid "Accept alliance with <0/>"
+msgstr ""
+
 #. placeholder {0}: gameConfig?.battle.allianceDamagesBonusPercent
-#: src/components/_political/law/law.frontConfig.tsx:231
+#: src/components/_political/law/law.frontConfig.tsx:303
 msgid "Accept an alliance with <0/> increasing your citizens damages by <1>{0}</1> when fighting for them by and reciprocally"
 msgstr "Akzeptiere eine Allianz mit <0/>, wodurch der Schaden deiner Bürger um <1>{0}</1> erhöht wird, wenn sie für sie kämpfen, und umgekehrt"
 
-#: src/components/_political/law/law.frontConfig.tsx:289
+#: src/components/_political/law/law.frontConfig.tsx:379
 msgid "Accept or reject a region buy offer"
 msgstr "Akzeptiere oder lehne ein Kaufangebot für eine Region ab"
 
-#: src/components/_political/law/law.frontConfig.tsx:76
+#: src/components/_political/law/law.frontConfig.tsx:89
 #: src/components/_political/law/lawNames.tsx:13
 msgid "Accept peace"
 msgstr "Frieden akzeptieren"
 
-#: src/components/_political/law/law.frontConfig.tsx:77
+#: src/components/_political/law/law.frontConfig.tsx:90
 msgid "Accept to make peace with the other country"
 msgstr "Zustimmen, mit dem anderen Land Frieden zu schließen"
 
@@ -1726,7 +1746,7 @@ msgid "Blue Staff"
 msgstr "Blauer Stab"
 
 #: src/components/_military/battle/BattleDamageBonuses.tsx:47
-#: src/components/_political/law/law.frontConfig.tsx:189
+#: src/components/_political/law/law.frontConfig.tsx:244
 msgid "Bonus damages"
 msgstr "Bonusschaden"
 
@@ -1752,12 +1772,16 @@ msgstr "Kopfgeld verfügbar in"
 msgid "Bread"
 msgstr "Brot"
 
-#: src/components/_political/law/law.frontConfig.tsx:246
+#: src/components/_political/law/law.frontConfig.tsx:318
 #: src/components/_political/law/lawNames.tsx:27
 msgid "Break alliance"
 msgstr "Allianz brechen"
 
-#: src/components/_political/law/law.frontConfig.tsx:247
+#: src/components/_political/law/law.frontConfig.tsx:323
+msgid "Break alliance with <0/>"
+msgstr ""
+
+#: src/components/_political/law/law.frontConfig.tsx:319
 msgid "Break an alliance with another country"
 msgstr "Eine Allianz mit einem anderen Land brechen"
 
@@ -1765,7 +1789,7 @@ msgstr "Eine Allianz mit einem anderen Land brechen"
 msgid "Break room"
 msgstr "Pausenraum"
 
-#: src/components/_political/law/law.frontConfig.tsx:252
+#: src/components/_political/law/law.frontConfig.tsx:332
 msgid "Break the alliance with <0/>"
 msgstr "Die Allianz mit <0/> brechen"
 
@@ -1816,6 +1840,11 @@ msgstr "Die Militäreinheit gründen"
 #: src/components/_other/upgrade/upgrade.frontConfig.tsx:31
 msgid "Bunker"
 msgstr "Bunker"
+
+#. placeholder {0}: law.data.amount ?? 0
+#: src/components/_political/law/law.frontConfig.tsx:411
+msgid "Buy <0/> from <1/> for <2>{0}</2>"
+msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:168
 msgid "Buy for <0>{count}</0> money on market"
@@ -1951,7 +1980,7 @@ msgstr "Chance, bei Kämpfen in Schlachten allem eingehenden Schaden auszuweiche
 msgid "Chance to hit the target.<0/>Misses cannot crit, and deal half damage."
 msgstr "Chance, das Ziel zu treffen.<0/>Fehlschüsse können nicht kritisch treffen und verursachen halben Schaden."
 
-#: src/components/_political/law/law.frontConfig.tsx:57
+#: src/components/_political/law/law.frontConfig.tsx:58
 msgid "Change a country tax"
 msgstr "Eine Landessteuer ändern"
 
@@ -1964,23 +1993,23 @@ msgstr "Produzierten Gegenstand ändern"
 msgid "Change production"
 msgstr "Produktion ändern"
 
-#: src/components/_political/law/law.frontConfig.tsx:56
+#: src/components/_political/law/law.frontConfig.tsx:57
 #: src/components/_political/law/lawNames.tsx:12
 msgid "Change tax"
 msgstr "Steuer ändern"
 
-#: src/components/_political/law/law.frontConfig.tsx:356
+#: src/components/_political/law/law.frontConfig.tsx:485
 msgid "Change the country color scheme"
 msgstr "Das Farbschema des Landes ändern"
 
 #. placeholder {0}: law.data.scheme
 #. placeholder {1}: law.data.mapAccent
-#: src/components/_political/law/law.frontConfig.tsx:362
+#: src/components/_political/law/law.frontConfig.tsx:491
 msgid "Change the country color scheme to <0>{0}</0> with a <1>{1}</1> map accent"
 msgstr "Das Farbschema des Landes auf <0>{0}</0> mit einem <1>{1}</1> Karten-Akzent ändern"
 
 #. placeholder {0}: law.data.taxType
-#: src/components/_political/law/law.frontConfig.tsx:63
+#: src/components/_political/law/law.frontConfig.tsx:76
 msgid "Change the tax of {0} to"
 msgstr "Die Steuer von {0} ändern auf"
 
@@ -2375,7 +2404,7 @@ msgstr "Kernregionen"
 msgid "Corporal"
 msgstr "Unteroffizier"
 
-#: src/components/_political/law/law.frontConfig.tsx:180
+#: src/components/_political/law/law.frontConfig.tsx:235
 msgid "Cost"
 msgstr "Kosten"
 
@@ -2646,16 +2675,17 @@ msgstr "Debuff beendet"
 msgid "Debuffs:"
 msgstr "Debuffs:"
 
-#: src/components/_political/law/law.frontConfig.tsx:93
+#: src/components/_political/law/law.frontConfig.tsx:114
 #: src/components/_political/law/lawNames.tsx:14
 msgid "Declare war"
 msgstr "Krieg erklären"
 
-#: src/components/_political/law/law.frontConfig.tsx:99
+#: src/components/_political/law/law.frontConfig.tsx:119
+#: src/components/_political/law/law.frontConfig.tsx:128
 msgid "Declare war to <0/>"
 msgstr "Krieg gegen <0/> erklären"
 
-#: src/components/_political/law/law.frontConfig.tsx:94
+#: src/components/_political/law/law.frontConfig.tsx:115
 msgid "Declare war to another country"
 msgstr "Einem anderen Land den Krieg erklären"
 
@@ -2685,15 +2715,19 @@ msgstr "Verteidiger"
 msgid "Defenders"
 msgstr "Verteidiger"
 
-#: src/components/_political/law/law.frontConfig.tsx:173
+#: src/components/_political/law/law.frontConfig.tsx:228
 msgid "Define <0/> as an enemy, increasing damages when fighting against them"
 msgstr "Definiere <0/> als Feind, was den Schaden beim Kampf gegen sie erhöht"
 
-#: src/components/_political/law/law.frontConfig.tsx:167
+#: src/components/_political/law/law.frontConfig.tsx:218
+msgid "Define <0/> as enemy"
+msgstr ""
+
+#: src/components/_political/law/law.frontConfig.tsx:214
 msgid "Define a country as an enemy to get bonus against"
 msgstr "Ein Land als Feind definieren, um einen Bonus gegen es zu erhalten"
 
-#: src/components/_political/law/law.frontConfig.tsx:166
+#: src/components/_political/law/law.frontConfig.tsx:213
 #: src/components/_political/law/lawNames.tsx:24
 msgid "Define a sworn enemy"
 msgstr "Einen Erzfeind definieren"
@@ -3280,15 +3314,15 @@ msgstr "Finanziere einen Widerstandskampf in <0/>"
 msgid "Finance a resistance battle in an occupied region of your country"
 msgstr "Finanziere einen Widerstandskampf in einer besetzten Region deines Landes"
 
-#: src/components/_political/law/law.frontConfig.tsx:425
+#: src/components/_political/law/law.frontConfig.tsx:554
 msgid "Finance a resistance to liberate an occupied region"
 msgstr "Finanziere einen Widerstand, um eine besetzte Region zu befreien"
 
-#: src/components/_political/law/law.frontConfig.tsx:430
+#: src/components/_political/law/law.frontConfig.tsx:567
 msgid "Finance a revolt to liberate <0/>"
 msgstr "Finanziere eine Revolte, um <0/> zu befreien"
 
-#: src/components/_political/law/law.frontConfig.tsx:424
+#: src/components/_political/law/law.frontConfig.tsx:553
 #: src/components/_political/law/lawNames.tsx:38
 msgid "Finance foreign resistance"
 msgstr "Finanziere ausländischen Widerstand"
@@ -3296,6 +3330,10 @@ msgstr "Finanziere ausländischen Widerstand"
 #: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:121
 msgid "Finance local resistance"
 msgstr "Finanziere lokalen Widerstand"
+
+#: src/components/_political/law/law.frontConfig.tsx:558
+msgid "Finance resistance in <0/>"
+msgstr ""
 
 #: src/pages/companies.tsx:59
 #: src/pages/user/[userId]/companies.tsx:73
@@ -3705,7 +3743,11 @@ msgstr "Stell dir vor, du hörst direkt vor der Mythischen auf"
 msgid "Imagine wasting your click on this"
 msgstr "Stell dir vor, du verschwendest deinen Klick dafür"
 
-#: src/components/_political/law/law.frontConfig.tsx:147
+#: src/components/_political/law/law.frontConfig.tsx:190
+msgid "Impeach <0/>"
+msgstr ""
+
+#: src/components/_political/law/law.frontConfig.tsx:184
 #: src/components/_political/law/lawNames.tsx:22
 msgid "Impeach congress member"
 msgstr "Kongressmitglied absetzen"
@@ -3714,13 +3756,13 @@ msgstr "Kongressmitglied absetzen"
 msgid "Impeach party leader"
 msgstr "Parteivorsitzenden absetzen"
 
-#: src/components/_political/law/law.frontConfig.tsx:139
+#: src/components/_political/law/law.frontConfig.tsx:176
 #: src/components/_political/law/lawNames.tsx:20
 msgid "Impeach president"
 msgstr "Präsidenten absetzen"
 
-#: src/components/_political/law/law.frontConfig.tsx:140
-#: src/components/_political/law/law.frontConfig.tsx:142
+#: src/components/_political/law/law.frontConfig.tsx:177
+#: src/components/_political/law/law.frontConfig.tsx:179
 msgid "Impeach the current president"
 msgstr "Den aktuellen Präsidenten absetzen"
 
@@ -4052,11 +4094,15 @@ msgstr "Verbessere deine Fertigkeiten!"
 msgid "Level up!"
 msgstr "Levelaufstieg!"
 
-#: src/components/_political/law/law.frontConfig.tsx:329
+#: src/components/_political/law/law.frontConfig.tsx:438
+msgid "Liberate <0/>"
+msgstr ""
+
+#: src/components/_political/law/law.frontConfig.tsx:447
 msgid "Liberate <0/> and return it to its original country"
 msgstr "Befreie <0/> und gib es an das ursprüngliche Land zurück"
 
-#: src/components/_political/law/law.frontConfig.tsx:323
+#: src/components/_political/law/law.frontConfig.tsx:433
 #: src/components/_political/law/lawNames.tsx:32
 msgid "Liberate a region"
 msgstr "Region befreien"
@@ -4819,7 +4865,7 @@ msgstr "Noch keine Spenden"
 msgid "No ground ranking yet."
 msgstr "Noch keine Boden-Rangliste."
 
-#: src/components/_political/law/LawList.tsx:72
+#: src/components/_political/law/LawList.tsx:65
 msgid "No laws yet"
 msgstr "Noch keine Gesetze"
 
@@ -5482,17 +5528,21 @@ msgstr "Zum Kommandeur befördert"
 msgid "Propose a motion"
 msgstr "Einen Antrag stellen"
 
-#: src/components/_political/law/law.frontConfig.tsx:203
+#: src/components/_political/law/law.frontConfig.tsx:258
 #: src/components/_political/law/lawNames.tsx:25
 msgid "Propose alliance"
 msgstr "Bündnis vorschlagen"
 
+#: src/components/_political/law/law.frontConfig.tsx:263
+msgid "Propose alliance to <0/>"
+msgstr ""
+
 #. placeholder {0}: gameConfig?.battle.allianceDamagesBonusPercent
-#: src/components/_political/law/law.frontConfig.tsx:209
+#: src/components/_political/law/law.frontConfig.tsx:272
 msgid "Propose an alliance to <0/>, increasing your citizens damages when fighting for them by <1>{0}</1> and reciprocally"
 msgstr "Schlage ein Bündnis mit <0/> vor, das den Schaden deiner Bürger beim Kampf für sie um <1>{0}</1> erhöht und umgekehrt"
 
-#: src/components/_political/law/law.frontConfig.tsx:204
+#: src/components/_political/law/law.frontConfig.tsx:259
 msgid "Propose an alliance to another country"
 msgstr "Schlage ein Bündnis mit einem anderen Land vor"
 
@@ -5504,30 +5554,31 @@ msgstr "Gesetz vorschlagen"
 msgid "Propose motion"
 msgstr "Antrag stellen"
 
-#: src/components/_political/law/law.frontConfig.tsx:108
+#: src/components/_political/law/law.frontConfig.tsx:137
 #: src/components/_political/law/lawNames.tsx:15
 msgid "Propose peace"
 msgstr "Frieden vorschlagen"
 
-#: src/components/_political/law/law.frontConfig.tsx:114
+#: src/components/_political/law/law.frontConfig.tsx:142
+#: src/components/_political/law/law.frontConfig.tsx:151
 msgid "Propose peace to <0/>"
 msgstr "Frieden mit <0/> vorschlagen"
 
-#: src/components/_political/law/law.frontConfig.tsx:109
+#: src/components/_political/law/law.frontConfig.tsx:138
 msgid "Propose peace to another country"
 msgstr "Frieden mit einem anderen Land vorschlagen"
 
 #. placeholder {0}: law.data.amount ?? 0
-#: src/components/_political/law/law.frontConfig.tsx:312
+#: src/components/_political/law/law.frontConfig.tsx:422
 msgid "Propose to buy <0/> from <1/> for <2>{0}</2>"
 msgstr "Vorschlagen, <0/> von <1/> für <2>{0}</2> zu kaufen"
 
-#: src/components/_political/law/law.frontConfig.tsx:306
+#: src/components/_political/law/law.frontConfig.tsx:406
 #: src/components/_political/law/lawNames.tsx:31
 msgid "Propose to buy a region"
 msgstr "Kauf einer Region vorschlagen"
 
-#: src/components/_political/law/law.frontConfig.tsx:307
+#: src/components/_political/law/law.frontConfig.tsx:407
 msgid "Propose to buy a region from another country"
 msgstr "Kauf einer Region von einem anderen Land vorschlagen"
 
@@ -5717,7 +5768,7 @@ msgstr "Regeneriert <0>{0}</0> beim Verzehr"
 msgid "Region"
 msgstr "Region"
 
-#: src/components/_political/law/law.frontConfig.tsx:288
+#: src/components/_political/law/law.frontConfig.tsx:378
 #: src/components/_political/law/lawNames.tsx:30
 msgid "Region buy offer"
 msgstr "Kaufangebot für Region"
@@ -5785,7 +5836,7 @@ msgstr "Verbleibende Buff-Dauer"
 msgid "Remaining debuff duration"
 msgstr "Verbleibende Debuff-Dauer"
 
-#: src/components/_political/law/law.frontConfig.tsx:154
+#: src/components/_political/law/law.frontConfig.tsx:201
 msgid "Remove <0/> from congress due to inactivity"
 msgstr "<0/> wegen Inaktivität aus dem Kongress entfernen"
 
@@ -5802,7 +5853,7 @@ msgstr "Ein Mitglied aus dem Parteirat entfernen"
 msgid "Remove all"
 msgstr "Alle entfernen"
 
-#: src/components/_political/law/law.frontConfig.tsx:148
+#: src/components/_political/law/law.frontConfig.tsx:185
 msgid "Remove an inactive congress member from its position"
 msgstr "Ein inaktives Kongressmitglied von seiner Position entfernen"
 
@@ -5822,7 +5873,7 @@ msgstr "Ratsmitglied entfernen"
 msgid "Remove Description"
 msgstr "Beschreibung entfernen"
 
-#: src/components/_political/law/law.frontConfig.tsx:278
+#: src/components/_political/law/law.frontConfig.tsx:368
 #: src/components/_political/law/lawNames.tsx:29
 msgid "Remove enemy"
 msgstr "Feind entfernen"
@@ -5943,7 +5994,7 @@ msgstr "Antwort auf Nachricht"
 msgid "Restore your health!"
 msgstr "Stelle deine Gesundheit wieder her!"
 
-#: src/components/_political/law/law.frontConfig.tsx:324
+#: src/components/_political/law/law.frontConfig.tsx:434
 msgid "Return a region to its original country"
 msgstr "Eine Region an ihr ursprüngliches Land zurückgeben"
 
@@ -6188,7 +6239,7 @@ msgid "sells"
 msgstr "verkauft"
 
 #. placeholder {0}: law.data.amount
-#: src/components/_political/law/law.frontConfig.tsx:268
+#: src/components/_political/law/law.frontConfig.tsx:358
 msgid "Send <0>{0}</0> to <1/>"
 msgstr "<0>{0}</0> an <1/> senden"
 
@@ -6216,7 +6267,7 @@ msgstr "Geschenk senden"
 msgid "Send Message"
 msgstr "Nachricht senden"
 
-#: src/components/_political/law/law.frontConfig.tsx:263
+#: src/components/_political/law/law.frontConfig.tsx:343
 msgid "Send money to another country"
 msgstr "Geld an ein anderes Land senden"
 
@@ -6232,11 +6283,11 @@ msgstr "Eine <0>Beschreibung</0> festlegen"
 msgid "Set a referrer"
 msgstr "Einen Werber festlegen"
 
-#: src/components/_political/law/law.frontConfig.tsx:340
+#: src/components/_political/law/law.frontConfig.tsx:458
 msgid "Set a welcome article for your country"
 msgstr "Einen Willkommensartikel für dein Land festlegen"
 
-#: src/components/_political/law/law.frontConfig.tsx:345
+#: src/components/_political/law/law.frontConfig.tsx:463
 msgid "Set a welcome article for your country<0/>"
 msgstr "Einen Willkommensartikel für dein Land festlegen <0/>"
 
@@ -6244,10 +6295,15 @@ msgstr "Einen Willkommensartikel für dein Land festlegen <0/>"
 msgid "Set bounty"
 msgstr "Kopfgeld festlegen"
 
-#: src/components/_political/law/law.frontConfig.tsx:355
+#: src/components/_political/law/law.frontConfig.tsx:484
 #: src/components/_political/law/lawNames.tsx:34
 msgid "Set country color"
 msgstr "Landesfarbe festlegen"
+
+#. placeholder {0}: law.data.scheme
+#: src/components/_political/law/law.frontConfig.tsx:476
+msgid "Set country color to <0>{0}</0> "
+msgstr ""
 
 #: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:88
 msgid "Set new party ethics configuration:"
@@ -6265,17 +6321,17 @@ msgstr "Parteiethik festlegen"
 msgid "Set Profile Picture"
 msgstr "Profilbild festlegen"
 
-#: src/components/_political/law/law.frontConfig.tsx:401
+#: src/components/_political/law/law.frontConfig.tsx:530
 #: src/components/_political/law/lawNames.tsx:36
 msgid "Set specialization item"
 msgstr "Spezialisierungsgegenstand festlegen"
 
 #. placeholder {0}: ts[law.data.itemCode]
-#: src/components/_political/law/law.frontConfig.tsx:407
+#: src/components/_political/law/law.frontConfig.tsx:536
 msgid "Set the country's specialized item to <0>{0}</0>.<1/>The country strategic resources <2>Production Bonus</2> will be available for local companies producing this item."
 msgstr "Lege den spezialisierten Gegenstand des Landes auf <0>{0}</0> fest.<1/>Der <2>Produktionsbonus</2> der strategischen Ressourcen des Landes wird für lokale Unternehmen verfügbar sein, die diesen Gegenstand herstellen."
 
-#: src/components/_political/law/law.frontConfig.tsx:402
+#: src/components/_political/law/law.frontConfig.tsx:531
 msgid "Set the country's specialized production item"
 msgstr "Den spezialisierten Produktionsgegenstand des Landes festlegen"
 
@@ -6283,7 +6339,7 @@ msgstr "Den spezialisierten Produktionsgegenstand des Landes festlegen"
 msgid "Set Username"
 msgstr "Benutzernamen festlegen"
 
-#: src/components/_political/law/law.frontConfig.tsx:339
+#: src/components/_political/law/law.frontConfig.tsx:457
 #: src/components/_political/law/lawNames.tsx:33
 msgid "Set welcome article"
 msgstr "Willkommensartikel festlegen"
@@ -6448,8 +6504,8 @@ msgstr "Verbrauche deine <0>Energie</0> beim Arbeiten hier, um <1>Geld</1> zu ve
 msgid "Spendings"
 msgstr "Ausgaben"
 
-#: src/components/_political/law/law.frontConfig.tsx:132
-#: src/components/_political/law/law.frontConfig.tsx:134
+#: src/components/_political/law/law.frontConfig.tsx:169
+#: src/components/_political/law/law.frontConfig.tsx:171
 msgid "Start a congress election, now"
 msgstr "Jetzt eine Kongresswahl starten"
 
@@ -6468,8 +6524,8 @@ msgstr "Sofort eine Parteivorsitzendenwahl starten"
 msgid "Start a party primary election immediately"
 msgstr "Sofort eine Parteivorwahl starten"
 
-#: src/components/_political/law/law.frontConfig.tsx:124
-#: src/components/_political/law/law.frontConfig.tsx:126
+#: src/components/_political/law/law.frontConfig.tsx:161
+#: src/components/_political/law/law.frontConfig.tsx:163
 msgid "Start a presidential election, now"
 msgstr "Jetzt eine Präsidentschaftswahl starten"
 
@@ -6478,12 +6534,12 @@ msgstr "Jetzt eine Präsidentschaftswahl starten"
 msgid "Start a revolution to overthrow the government"
 msgstr "Eine Revolution starten, um die Regierung zu stürzen"
 
-#: src/components/_political/law/law.frontConfig.tsx:131
+#: src/components/_political/law/law.frontConfig.tsx:168
 #: src/components/_political/law/lawNames.tsx:19
 msgid "Start congress election"
 msgstr "Kongresswahl starten"
 
-#: src/components/_political/law/law.frontConfig.tsx:123
+#: src/components/_political/law/law.frontConfig.tsx:160
 #: src/components/_political/law/lawNames.tsx:17
 msgid "Start presidential election"
 msgstr "Präsidentschaftswahl starten"
@@ -7082,7 +7138,7 @@ msgstr "Transak."
 msgid "Transactions"
 msgstr "Transaktionen"
 
-#: src/components/_political/law/law.frontConfig.tsx:262
+#: src/components/_political/law/law.frontConfig.tsx:342
 #: src/components/_political/law/lawNames.tsx:28
 msgid "Transfer money"
 msgstr "Geld überweisen"
@@ -7094,6 +7150,10 @@ msgstr "Besitzrechte übertragen"
 #: src/components/_user/worker/WorkerEditFormModal.tsx:199
 msgid "Transfer to company (optional)"
 msgstr "In Unternehmen versetzen (optional)"
+
+#: src/components/_political/law/law.frontConfig.tsx:347
+msgid "Transfer<0/> to <1/>"
+msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:209
 msgid "Translator"
@@ -7177,8 +7237,8 @@ msgstr "Unruhe-Unterstützer"
 msgid "Unselect all"
 msgstr "Alle abwählen"
 
-#: src/components/_political/law/law.frontConfig.tsx:279
-#: src/components/_political/law/law.frontConfig.tsx:281
+#: src/components/_political/law/law.frontConfig.tsx:369
+#: src/components/_political/law/law.frontConfig.tsx:371
 msgid "Unset the sworn enemy country"
 msgstr "Erzfeind-Land entfernen"
 
@@ -7651,7 +7711,7 @@ msgid "Wow congratulations! Anyway have you considered buying premium?"
 msgstr "Wow, herzlichen Glückwunsch! Hast du eigentlich schon mal über Premium nachgedacht?"
 
 #: src/components/_political/law/LawFormModal.tsx:168
-#: src/components/_political/law/LawList.tsx:58
+#: src/components/_political/law/LawList.tsx:51
 msgid "Write a law"
 msgstr "Ein Gesetz verfassen"
 
@@ -7696,10 +7756,6 @@ msgstr "Du bist bereits Vizepräsident eines anderen Landes. Tritt zuerst zurüc
 #: src/pages/user/[userId]/companies.tsx:64
 msgid "You are jobless"
 msgstr "Du bist arbeitslos"
-
-#: src/components/_political/law/LawList.tsx:48
-msgid "You are not a congress member of this country"
-msgstr "Du bist kein Kongressmitglied dieses Landes"
 
 #: src/components/_political/partyMotion/PartyMotionList.tsx:44
 msgid "You are not a council member of this party"

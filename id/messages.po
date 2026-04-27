@@ -37,6 +37,13 @@ msgstr "- Pendapatan pembangunan berkurang 50%:<0>{0}</0>."
 msgid "{0} & allies"
 msgstr "{0} & sekutu"
 
+#. placeholder {0}: law.data.taxType
+#. placeholder {1}: law.data.amount
+#. placeholder {2}: law.data.taxType === 'selfWork' ? '' : '%'
+#: src/components/_political/law/law.frontConfig.tsx:62
+msgid "{0} → <0>{1}{2}</0>"
+msgstr ""
+
 #. placeholder {0}: lawConfig.minActiveCitizen
 #: src/components/_political/law/Law.tsx:120
 msgid "{0} active citizens required"
@@ -163,7 +170,12 @@ msgid "<0/> at <1>{0}</1> wage.{1}"
 msgstr "<0/> dengan upah <1>{0}</1>.{1}"
 
 #. placeholder {0}: law.data.amount ?? 0
-#: src/components/_political/law/law.frontConfig.tsx:294
+#: src/components/_political/law/law.frontConfig.tsx:383
+msgid "<0/> buys <1/> for <2>{0}</2>"
+msgstr ""
+
+#. placeholder {0}: law.data.amount ?? 0
+#: src/components/_political/law/law.frontConfig.tsx:394
 msgid "<0/> buys your region <1/> for <2>{0}</2>"
 msgstr "<0/> membeli wilayahmu <1/> seharga <2>{0}</2>"
 
@@ -413,7 +425,11 @@ msgstr "<0/> mengambil alih <1/>"
 msgid "<0/> vs <1/> war"
 msgstr "Perang <0/> vs <1/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:83
+#: src/components/_political/law/law.frontConfig.tsx:94
+msgid "<0/> wants peace"
+msgstr ""
+
+#: src/components/_political/law/law.frontConfig.tsx:104
 msgid "<0/> wants to make peace with your country"
 msgstr "<0/> ingin berdamai dengan negaramu"
 
@@ -1109,26 +1125,30 @@ msgstr "Menyalahgunakan kekuasaan ini untuk menguntungkan negara lain akan beruj
 msgid "Accept"
 msgstr "Terima"
 
-#: src/components/_political/law/law.frontConfig.tsx:224
+#: src/components/_political/law/law.frontConfig.tsx:287
 #: src/components/_political/law/lawNames.tsx:26
 msgid "Accept alliance"
 msgstr "Terima aliansi"
 
+#: src/components/_political/law/law.frontConfig.tsx:292
+msgid "Accept alliance with <0/>"
+msgstr ""
+
 #. placeholder {0}: gameConfig?.battle.allianceDamagesBonusPercent
-#: src/components/_political/law/law.frontConfig.tsx:231
+#: src/components/_political/law/law.frontConfig.tsx:303
 msgid "Accept an alliance with <0/> increasing your citizens damages by <1>{0}</1> when fighting for them by and reciprocally"
 msgstr "Terima aliansi dengan <0/> yang meningkatkan damage warga negaramu sebesar <1>{0}</1> saat bertempur untuk mereka, dan sebaliknya."
 
-#: src/components/_political/law/law.frontConfig.tsx:289
+#: src/components/_political/law/law.frontConfig.tsx:379
 msgid "Accept or reject a region buy offer"
 msgstr "Terima atau tolak penawaran pembelian wilayah"
 
-#: src/components/_political/law/law.frontConfig.tsx:76
+#: src/components/_political/law/law.frontConfig.tsx:89
 #: src/components/_political/law/lawNames.tsx:13
 msgid "Accept peace"
 msgstr "Terima perdamaian"
 
-#: src/components/_political/law/law.frontConfig.tsx:77
+#: src/components/_political/law/law.frontConfig.tsx:90
 msgid "Accept to make peace with the other country"
 msgstr "Terima untuk berdamai dengan negara lain"
 
@@ -1726,7 +1746,7 @@ msgid "Blue Staff"
 msgstr "Tongkat Biru"
 
 #: src/components/_military/battle/BattleDamageBonuses.tsx:47
-#: src/components/_political/law/law.frontConfig.tsx:189
+#: src/components/_political/law/law.frontConfig.tsx:244
 msgid "Bonus damages"
 msgstr "Bonus damage"
 
@@ -1752,12 +1772,16 @@ msgstr "Bounty akan tersedia dalam"
 msgid "Bread"
 msgstr "Roti"
 
-#: src/components/_political/law/law.frontConfig.tsx:246
+#: src/components/_political/law/law.frontConfig.tsx:318
 #: src/components/_political/law/lawNames.tsx:27
 msgid "Break alliance"
 msgstr "Putuskan aliansi"
 
-#: src/components/_political/law/law.frontConfig.tsx:247
+#: src/components/_political/law/law.frontConfig.tsx:323
+msgid "Break alliance with <0/>"
+msgstr ""
+
+#: src/components/_political/law/law.frontConfig.tsx:319
 msgid "Break an alliance with another country"
 msgstr "Putuskan aliansi dengan negara lain"
 
@@ -1765,7 +1789,7 @@ msgstr "Putuskan aliansi dengan negara lain"
 msgid "Break room"
 msgstr "Ruang istirahat"
 
-#: src/components/_political/law/law.frontConfig.tsx:252
+#: src/components/_political/law/law.frontConfig.tsx:332
 msgid "Break the alliance with <0/>"
 msgstr "Putuskan aliansi dengan <0/>"
 
@@ -1816,6 +1840,11 @@ msgstr "Buat unit militer"
 #: src/components/_other/upgrade/upgrade.frontConfig.tsx:31
 msgid "Bunker"
 msgstr "Bungker"
+
+#. placeholder {0}: law.data.amount ?? 0
+#: src/components/_political/law/law.frontConfig.tsx:411
+msgid "Buy <0/> from <1/> for <2>{0}</2>"
+msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:168
 msgid "Buy for <0>{count}</0> money on market"
@@ -1951,7 +1980,7 @@ msgstr "Peluang untuk menghindari semua damage masuk saat bertarung di pertempur
 msgid "Chance to hit the target.<0/>Misses cannot crit, and deal half damage."
 msgstr "Peluang untuk mengenai target.<0/>Serangan yang meleset tidak bisa crit, dan hanya memberi setengah damage."
 
-#: src/components/_political/law/law.frontConfig.tsx:57
+#: src/components/_political/law/law.frontConfig.tsx:58
 msgid "Change a country tax"
 msgstr "Ubah pajak negara"
 
@@ -1964,23 +1993,23 @@ msgstr "Ubah item produksi"
 msgid "Change production"
 msgstr "Ubah produksi"
 
-#: src/components/_political/law/law.frontConfig.tsx:56
+#: src/components/_political/law/law.frontConfig.tsx:57
 #: src/components/_political/law/lawNames.tsx:12
 msgid "Change tax"
 msgstr "Ubah pajak"
 
-#: src/components/_political/law/law.frontConfig.tsx:356
+#: src/components/_political/law/law.frontConfig.tsx:485
 msgid "Change the country color scheme"
 msgstr "Ubah skema warna negara"
 
 #. placeholder {0}: law.data.scheme
 #. placeholder {1}: law.data.mapAccent
-#: src/components/_political/law/law.frontConfig.tsx:362
+#: src/components/_political/law/law.frontConfig.tsx:491
 msgid "Change the country color scheme to <0>{0}</0> with a <1>{1}</1> map accent"
 msgstr "Ubah skema warna negara menjadi <0>{0}</0> dengan aksen peta <1>{1}</1>"
 
 #. placeholder {0}: law.data.taxType
-#: src/components/_political/law/law.frontConfig.tsx:63
+#: src/components/_political/law/law.frontConfig.tsx:76
 msgid "Change the tax of {0} to"
 msgstr "Ubah pajak {0} menjadi"
 
@@ -2375,7 +2404,7 @@ msgstr "Wilayah inti"
 msgid "Corporal"
 msgstr "Corporal"
 
-#: src/components/_political/law/law.frontConfig.tsx:180
+#: src/components/_political/law/law.frontConfig.tsx:235
 msgid "Cost"
 msgstr "Biaya"
 
@@ -2646,16 +2675,17 @@ msgstr "Debuff berakhir"
 msgid "Debuffs:"
 msgstr "Debuff:"
 
-#: src/components/_political/law/law.frontConfig.tsx:93
+#: src/components/_political/law/law.frontConfig.tsx:114
 #: src/components/_political/law/lawNames.tsx:14
 msgid "Declare war"
 msgstr "Nyatakan perang"
 
-#: src/components/_political/law/law.frontConfig.tsx:99
+#: src/components/_political/law/law.frontConfig.tsx:119
+#: src/components/_political/law/law.frontConfig.tsx:128
 msgid "Declare war to <0/>"
 msgstr "Nyatakan perang terhadap <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:94
+#: src/components/_political/law/law.frontConfig.tsx:115
 msgid "Declare war to another country"
 msgstr "Nyatakan perang terhadap negara lain"
 
@@ -2685,15 +2715,19 @@ msgstr "Pembela"
 msgid "Defenders"
 msgstr "Para pembela"
 
-#: src/components/_political/law/law.frontConfig.tsx:173
+#: src/components/_political/law/law.frontConfig.tsx:228
 msgid "Define <0/> as an enemy, increasing damages when fighting against them"
 msgstr "Tetapkan <0/> sebagai musuh, meningkatkan damage saat melawan mereka"
 
-#: src/components/_political/law/law.frontConfig.tsx:167
+#: src/components/_political/law/law.frontConfig.tsx:218
+msgid "Define <0/> as enemy"
+msgstr ""
+
+#: src/components/_political/law/law.frontConfig.tsx:214
 msgid "Define a country as an enemy to get bonus against"
 msgstr "Tetapkan sebuah negara sebagai musuh untuk mendapat bonus saat melawannya"
 
-#: src/components/_political/law/law.frontConfig.tsx:166
+#: src/components/_political/law/law.frontConfig.tsx:213
 #: src/components/_political/law/lawNames.tsx:24
 msgid "Define a sworn enemy"
 msgstr "Tetapkan musuh bebuyutan"
@@ -3280,15 +3314,15 @@ msgstr "Danai pertempuran perlawanan di <0/>"
 msgid "Finance a resistance battle in an occupied region of your country"
 msgstr "Danai pertempuran perlawanan di wilayah negaramu yang diduduki"
 
-#: src/components/_political/law/law.frontConfig.tsx:425
+#: src/components/_political/law/law.frontConfig.tsx:554
 msgid "Finance a resistance to liberate an occupied region"
 msgstr "Danai perlawanan untuk membebaskan wilayah yang diduduki"
 
-#: src/components/_political/law/law.frontConfig.tsx:430
+#: src/components/_political/law/law.frontConfig.tsx:567
 msgid "Finance a revolt to liberate <0/>"
 msgstr "Danai pemberontakan untuk membebaskan <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:424
+#: src/components/_political/law/law.frontConfig.tsx:553
 #: src/components/_political/law/lawNames.tsx:38
 msgid "Finance foreign resistance"
 msgstr "Danai perlawanan luar negeri"
@@ -3296,6 +3330,10 @@ msgstr "Danai perlawanan luar negeri"
 #: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:121
 msgid "Finance local resistance"
 msgstr "Danai perlawanan lokal"
+
+#: src/components/_political/law/law.frontConfig.tsx:558
+msgid "Finance resistance in <0/>"
+msgstr ""
 
 #: src/pages/companies.tsx:59
 #: src/pages/user/[userId]/companies.tsx:73
@@ -3705,7 +3743,11 @@ msgstr "Bayangin kalau kamu berhenti tepat sebelum Mythic"
 msgid "Imagine wasting your click on this"
 msgstr "Bayangin buang klik buat ini"
 
-#: src/components/_political/law/law.frontConfig.tsx:147
+#: src/components/_political/law/law.frontConfig.tsx:190
+msgid "Impeach <0/>"
+msgstr ""
+
+#: src/components/_political/law/law.frontConfig.tsx:184
 #: src/components/_political/law/lawNames.tsx:22
 msgid "Impeach congress member"
 msgstr "Makzulkan anggota kongres"
@@ -3714,13 +3756,13 @@ msgstr "Makzulkan anggota kongres"
 msgid "Impeach party leader"
 msgstr "Makzulkan pemimpin partai"
 
-#: src/components/_political/law/law.frontConfig.tsx:139
+#: src/components/_political/law/law.frontConfig.tsx:176
 #: src/components/_political/law/lawNames.tsx:20
 msgid "Impeach president"
 msgstr "Makzulkan presiden"
 
-#: src/components/_political/law/law.frontConfig.tsx:140
-#: src/components/_political/law/law.frontConfig.tsx:142
+#: src/components/_political/law/law.frontConfig.tsx:177
+#: src/components/_political/law/law.frontConfig.tsx:179
 msgid "Impeach the current president"
 msgstr "Makzulkan presiden saat ini"
 
@@ -4052,11 +4094,15 @@ msgstr "Naikkan level skill-mu!"
 msgid "Level up!"
 msgstr "Naik level!"
 
-#: src/components/_political/law/law.frontConfig.tsx:329
+#: src/components/_political/law/law.frontConfig.tsx:438
+msgid "Liberate <0/>"
+msgstr ""
+
+#: src/components/_political/law/law.frontConfig.tsx:447
 msgid "Liberate <0/> and return it to its original country"
 msgstr "Bebaskan <0/> dan kembalikan ke negara asalnya"
 
-#: src/components/_political/law/law.frontConfig.tsx:323
+#: src/components/_political/law/law.frontConfig.tsx:433
 #: src/components/_political/law/lawNames.tsx:32
 msgid "Liberate a region"
 msgstr "Bebaskan wilayah"
@@ -4819,7 +4865,7 @@ msgstr "Belum ada donasi"
 msgid "No ground ranking yet."
 msgstr "Belum ada peringkat darat."
 
-#: src/components/_political/law/LawList.tsx:72
+#: src/components/_political/law/LawList.tsx:65
 msgid "No laws yet"
 msgstr "Belum ada UU"
 
@@ -5482,17 +5528,21 @@ msgstr "Dipromosikan jadi komandan"
 msgid "Propose a motion"
 msgstr "Ajukan mosi"
 
-#: src/components/_political/law/law.frontConfig.tsx:203
+#: src/components/_political/law/law.frontConfig.tsx:258
 #: src/components/_political/law/lawNames.tsx:25
 msgid "Propose alliance"
 msgstr "Ajukan aliansi"
 
+#: src/components/_political/law/law.frontConfig.tsx:263
+msgid "Propose alliance to <0/>"
+msgstr ""
+
 #. placeholder {0}: gameConfig?.battle.allianceDamagesBonusPercent
-#: src/components/_political/law/law.frontConfig.tsx:209
+#: src/components/_political/law/law.frontConfig.tsx:272
 msgid "Propose an alliance to <0/>, increasing your citizens damages when fighting for them by <1>{0}</1> and reciprocally"
 msgstr "Ajukan aliansi ke <0/>, meningkatkan damage warga kamu saat bertarung untuk mereka sebesar <1>{0}</1> dan sebaliknya"
 
-#: src/components/_political/law/law.frontConfig.tsx:204
+#: src/components/_political/law/law.frontConfig.tsx:259
 msgid "Propose an alliance to another country"
 msgstr "Ajukan aliansi ke negara lain"
 
@@ -5504,30 +5554,31 @@ msgstr "Ajukan UU"
 msgid "Propose motion"
 msgstr "Ajukan mosi"
 
-#: src/components/_political/law/law.frontConfig.tsx:108
+#: src/components/_political/law/law.frontConfig.tsx:137
 #: src/components/_political/law/lawNames.tsx:15
 msgid "Propose peace"
 msgstr "Ajukan perdamaian"
 
-#: src/components/_political/law/law.frontConfig.tsx:114
+#: src/components/_political/law/law.frontConfig.tsx:142
+#: src/components/_political/law/law.frontConfig.tsx:151
 msgid "Propose peace to <0/>"
 msgstr "Ajukan perdamaian ke <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:109
+#: src/components/_political/law/law.frontConfig.tsx:138
 msgid "Propose peace to another country"
 msgstr "Ajukan perdamaian ke negara lain"
 
 #. placeholder {0}: law.data.amount ?? 0
-#: src/components/_political/law/law.frontConfig.tsx:312
+#: src/components/_political/law/law.frontConfig.tsx:422
 msgid "Propose to buy <0/> from <1/> for <2>{0}</2>"
 msgstr "Ajukan untuk membeli <0/> dari <1/> seharga <2>{0}</2>"
 
-#: src/components/_political/law/law.frontConfig.tsx:306
+#: src/components/_political/law/law.frontConfig.tsx:406
 #: src/components/_political/law/lawNames.tsx:31
 msgid "Propose to buy a region"
 msgstr "Ajukan pembelian wilayah"
 
-#: src/components/_political/law/law.frontConfig.tsx:307
+#: src/components/_political/law/law.frontConfig.tsx:407
 msgid "Propose to buy a region from another country"
 msgstr "Ajukan pembelian wilayah dari negara lain"
 
@@ -5717,7 +5768,7 @@ msgstr "Memulihkan <0>{0}</0> saat dikonsumsi"
 msgid "Region"
 msgstr "Wilayah"
 
-#: src/components/_political/law/law.frontConfig.tsx:288
+#: src/components/_political/law/law.frontConfig.tsx:378
 #: src/components/_political/law/lawNames.tsx:30
 msgid "Region buy offer"
 msgstr "Penawaran pembelian wilayah"
@@ -5785,7 +5836,7 @@ msgstr "Sisa durasi buff"
 msgid "Remaining debuff duration"
 msgstr "Sisa durasi debuff"
 
-#: src/components/_political/law/law.frontConfig.tsx:154
+#: src/components/_political/law/law.frontConfig.tsx:201
 msgid "Remove <0/> from congress due to inactivity"
 msgstr "Hapus <0/> dari kongres karena tidak aktif"
 
@@ -5802,7 +5853,7 @@ msgstr "Hapus anggota dari dewan partai"
 msgid "Remove all"
 msgstr "Hapus semua"
 
-#: src/components/_political/law/law.frontConfig.tsx:148
+#: src/components/_political/law/law.frontConfig.tsx:185
 msgid "Remove an inactive congress member from its position"
 msgstr "Copot anggota kongres yang tidak aktif dari jabatannya"
 
@@ -5822,7 +5873,7 @@ msgstr "Hapus anggota dewan"
 msgid "Remove Description"
 msgstr "Hapus deskripsi"
 
-#: src/components/_political/law/law.frontConfig.tsx:278
+#: src/components/_political/law/law.frontConfig.tsx:368
 #: src/components/_political/law/lawNames.tsx:29
 msgid "Remove enemy"
 msgstr "Hapus musuh"
@@ -5943,7 +5994,7 @@ msgstr "Balasan pesan"
 msgid "Restore your health!"
 msgstr "Pulihkan nyawamu!"
 
-#: src/components/_political/law/law.frontConfig.tsx:324
+#: src/components/_political/law/law.frontConfig.tsx:434
 msgid "Return a region to its original country"
 msgstr "Kembalikan wilayah ke negara asalnya"
 
@@ -6188,7 +6239,7 @@ msgid "sells"
 msgstr "menjual"
 
 #. placeholder {0}: law.data.amount
-#: src/components/_political/law/law.frontConfig.tsx:268
+#: src/components/_political/law/law.frontConfig.tsx:358
 msgid "Send <0>{0}</0> to <1/>"
 msgstr "Kirim <0>{0}</0> ke <1/>"
 
@@ -6216,7 +6267,7 @@ msgstr "Kirim hadiah"
 msgid "Send Message"
 msgstr "Kirim pesan"
 
-#: src/components/_political/law/law.frontConfig.tsx:263
+#: src/components/_political/law/law.frontConfig.tsx:343
 msgid "Send money to another country"
 msgstr "Kirim uang ke negara lain"
 
@@ -6232,11 +6283,11 @@ msgstr "Atur <0>deskripsi</0>"
 msgid "Set a referrer"
 msgstr "Atur referrer"
 
-#: src/components/_political/law/law.frontConfig.tsx:340
+#: src/components/_political/law/law.frontConfig.tsx:458
 msgid "Set a welcome article for your country"
 msgstr "Atur artikel sambutan untuk negaramu"
 
-#: src/components/_political/law/law.frontConfig.tsx:345
+#: src/components/_political/law/law.frontConfig.tsx:463
 msgid "Set a welcome article for your country<0/>"
 msgstr "Atur artikel sambutan untuk negaramu<0/>"
 
@@ -6244,10 +6295,15 @@ msgstr "Atur artikel sambutan untuk negaramu<0/>"
 msgid "Set bounty"
 msgstr "Pasang bounty"
 
-#: src/components/_political/law/law.frontConfig.tsx:355
+#: src/components/_political/law/law.frontConfig.tsx:484
 #: src/components/_political/law/lawNames.tsx:34
 msgid "Set country color"
 msgstr "Atur warna negara"
+
+#. placeholder {0}: law.data.scheme
+#: src/components/_political/law/law.frontConfig.tsx:476
+msgid "Set country color to <0>{0}</0> "
+msgstr ""
 
 #: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:88
 msgid "Set new party ethics configuration:"
@@ -6265,17 +6321,17 @@ msgstr "Atur etika partai"
 msgid "Set Profile Picture"
 msgstr "Atur Foto Profil"
 
-#: src/components/_political/law/law.frontConfig.tsx:401
+#: src/components/_political/law/law.frontConfig.tsx:530
 #: src/components/_political/law/lawNames.tsx:36
 msgid "Set specialization item"
 msgstr "Atur item spesialisasi"
 
 #. placeholder {0}: ts[law.data.itemCode]
-#: src/components/_political/law/law.frontConfig.tsx:407
+#: src/components/_political/law/law.frontConfig.tsx:536
 msgid "Set the country's specialized item to <0>{0}</0>.<1/>The country strategic resources <2>Production Bonus</2> will be available for local companies producing this item."
 msgstr "Atur item spesialisasi negara menjadi <0>{0}</0>.<1/>Bonus <2>Produksi</2> dari sumber daya strategis negara akan tersedia untuk perusahaan lokal yang memproduksi item ini."
 
-#: src/components/_political/law/law.frontConfig.tsx:402
+#: src/components/_political/law/law.frontConfig.tsx:531
 msgid "Set the country's specialized production item"
 msgstr "Atur item produksi spesialis negara"
 
@@ -6283,7 +6339,7 @@ msgstr "Atur item produksi spesialis negara"
 msgid "Set Username"
 msgstr "Atur Nama Pengguna"
 
-#: src/components/_political/law/law.frontConfig.tsx:339
+#: src/components/_political/law/law.frontConfig.tsx:457
 #: src/components/_political/law/lawNames.tsx:33
 msgid "Set welcome article"
 msgstr "Atur artikel sambutan"
@@ -6448,8 +6504,8 @@ msgstr "Gunakan <0>Energi</0> untuk bekerja di sini dan dapatkan <1>Uang</1>. Te
 msgid "Spendings"
 msgstr "Pengeluaran"
 
-#: src/components/_political/law/law.frontConfig.tsx:132
-#: src/components/_political/law/law.frontConfig.tsx:134
+#: src/components/_political/law/law.frontConfig.tsx:169
+#: src/components/_political/law/law.frontConfig.tsx:171
 msgid "Start a congress election, now"
 msgstr "Mulai pemilu kongres sekarang"
 
@@ -6468,8 +6524,8 @@ msgstr "Mulai pemilu ketua partai sekarang"
 msgid "Start a party primary election immediately"
 msgstr "Mulai pemilu pendahuluan partai sekarang"
 
-#: src/components/_political/law/law.frontConfig.tsx:124
-#: src/components/_political/law/law.frontConfig.tsx:126
+#: src/components/_political/law/law.frontConfig.tsx:161
+#: src/components/_political/law/law.frontConfig.tsx:163
 msgid "Start a presidential election, now"
 msgstr "Mulai pemilu presiden sekarang"
 
@@ -6478,12 +6534,12 @@ msgstr "Mulai pemilu presiden sekarang"
 msgid "Start a revolution to overthrow the government"
 msgstr "Mulai revolusi untuk menggulingkan pemerintahan"
 
-#: src/components/_political/law/law.frontConfig.tsx:131
+#: src/components/_political/law/law.frontConfig.tsx:168
 #: src/components/_political/law/lawNames.tsx:19
 msgid "Start congress election"
 msgstr "Mulai pemilu kongres"
 
-#: src/components/_political/law/law.frontConfig.tsx:123
+#: src/components/_political/law/law.frontConfig.tsx:160
 #: src/components/_political/law/lawNames.tsx:17
 msgid "Start presidential election"
 msgstr "Mulai pemilu presiden"
@@ -7082,7 +7138,7 @@ msgstr "Transak."
 msgid "Transactions"
 msgstr "Transaksi"
 
-#: src/components/_political/law/law.frontConfig.tsx:262
+#: src/components/_political/law/law.frontConfig.tsx:342
 #: src/components/_political/law/lawNames.tsx:28
 msgid "Transfer money"
 msgstr "Transfer uang"
@@ -7094,6 +7150,10 @@ msgstr "Alihkan kepemilikan"
 #: src/components/_user/worker/WorkerEditFormModal.tsx:199
 msgid "Transfer to company (optional)"
 msgstr "Transfer ke perusahaan (opsional)"
+
+#: src/components/_political/law/law.frontConfig.tsx:347
+msgid "Transfer<0/> to <1/>"
+msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:209
 msgid "Translator"
@@ -7177,8 +7237,8 @@ msgstr "Kontributor Kerusuhan"
 msgid "Unselect all"
 msgstr "Batal pilih semua"
 
-#: src/components/_political/law/law.frontConfig.tsx:279
-#: src/components/_political/law/law.frontConfig.tsx:281
+#: src/components/_political/law/law.frontConfig.tsx:369
+#: src/components/_political/law/law.frontConfig.tsx:371
 msgid "Unset the sworn enemy country"
 msgstr "Hapus negara musuh bebuyutan"
 
@@ -7651,7 +7711,7 @@ msgid "Wow congratulations! Anyway have you considered buying premium?"
 msgstr "Wah, selamat! Ngomong-ngomong, sudah kepikiran buat beli premium?"
 
 #: src/components/_political/law/LawFormModal.tsx:168
-#: src/components/_political/law/LawList.tsx:58
+#: src/components/_political/law/LawList.tsx:51
 msgid "Write a law"
 msgstr "Tulis undang-undang"
 
@@ -7696,10 +7756,6 @@ msgstr "Kamu sudah menjadi wakil presiden di negara lain. Mundur dulu."
 #: src/pages/user/[userId]/companies.tsx:64
 msgid "You are jobless"
 msgstr "Kamu sedang menganggur"
-
-#: src/components/_political/law/LawList.tsx:48
-msgid "You are not a congress member of this country"
-msgstr "Kamu bukan anggota kongres negara ini"
 
 #: src/components/_political/partyMotion/PartyMotionList.tsx:44
 msgid "You are not a council member of this party"
