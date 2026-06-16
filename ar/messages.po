@@ -64,6 +64,16 @@ msgstr "- الدفاع عن هذه المنطقة سيكون له تأثير س�
 msgid "- Development income is reduced by 50%:<0>{0}</0>."
 msgstr "- تم تقليل دخل التطوير بنسبة 50%:<0>{0}</0>."
 
+#. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:95
+msgid "-{0}% oil cost for anyone moving into your country.<0/>Adds up across your country's military airports (max -25%)."
+msgstr ""
+
+#. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:82
+msgid "-{0}% oil cost for your citizens when they move.<0/>Adds up across your country's airports (max -25%)."
+msgstr ""
+
 #: src/components/_political/alliance/AllianceMemberRow.tsx:71
 #: src/components/_political/country/CountryDiplomacyGrid.tsx:236
 msgid "(average member development)"
@@ -588,7 +598,7 @@ msgid "<0/>Priority ends in <1/>"
 msgstr "تنتهي أولوية <0/> في <1/>"
 
 #. placeholder {0}: levelConfig.stats.resistanceGrowthReduction ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:63
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:68
 msgid "<0>-{0}%</0> Resistance growth per hour"
 msgstr "<0>-{0}%</0> نمو المقاومة في الساعة"
 
@@ -621,7 +631,7 @@ msgid "<0>{0}</0> against enemy of <1/>"
 msgstr "<0>{0}</0> ضد عدو <1/>"
 
 #. placeholder {0}: levelConfig.stats.attackBonus || 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:49
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:54
 msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/>Citizens get the full bonus, allied countries get half."
 msgstr "مكافأة هجوم بنسبة <0>{0}</0> عند الهجوم من هذه المنطقة,<1/>يحصل المواطنون على الاضرار الاضافية كاملة، بينما تحصل الدول المتحالفة على نصفها."
 
@@ -641,7 +651,7 @@ msgid "<0>{0}</0> because <1/> occupies at least one of <2/> regions"
 msgstr "<0>{0}</0> لأن <1/> يحتل منطقة واحدة على الأقل من مناطق <2/>"
 
 #. placeholder {0}: levelConfig.stats.defenseBonus || 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:34
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:39
 msgid "<0>{0}</0> Defense bonus when defending this region.<1/>Citizens get the full bonus, allied countries get half. Defensive pact partners don't benefit."
 msgstr "اضرار اضافية عند الدفاع بنسبة <0>{0}</0> عند الدفاع عن هذه المنطقة,<1/>يحصل المواطنون على الاضرار الاضافية كاملة، بينما تحصل الدول المتحالفة على نصفها. ولا يستفيد شركاء ميثاق الدفاع منها"
 
@@ -723,7 +733,7 @@ msgid "<0>{0}</0> returned to <1/>."
 msgstr "تمت إعادة <0>{0}</0> إلى <1/>."
 
 #. placeholder {0}: levelConfig.stats.maxProduction
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:86
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:118
 msgid "<0>{0}</0> Storage capacity"
 msgstr "<0>{0}</0> سعة التخزين"
 
@@ -1426,6 +1436,10 @@ msgstr "سراويل متطورة"
 msgid "Agrarian"
 msgstr "زراعي"
 
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:78
+msgid "Airport"
+msgstr ""
+
 #: src/components/_military/battle/ActiveBattlesList.tsx:132
 #: src/components/_military/battle/EndedBattlesList.tsx:78
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:79
@@ -1493,6 +1507,7 @@ msgstr "جميع الأنواع"
 
 #: src/components/_layout/map.frontConfig.tsx:32
 #: src/components/_political/country/CountryDiplomacyGrid.tsx:193
+#: src/components/_political/map/MapMenu.tsx:227
 msgid "Alliance"
 msgstr "التحالف"
 
@@ -1816,6 +1831,7 @@ msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the
 msgstr "في نهاية المؤقت، سيتم تخصيص <0>{actualTickPoints}</0> للجانب الأكثر إحداثاً للأضرار."
 
 #: src/components/_military/hit/HitButton.tsx:467
+#: src/components/_political/map/MapMenu.tsx:248
 #: src/components/_user/user/skills.frontConfig.tsx:44
 #: src/components/_user/user/skills.frontConfig.tsx:45
 msgid "Attack"
@@ -1874,7 +1890,7 @@ msgid "Automated engine"
 msgstr "محرك آلي"
 
 #: src/components/_economy/work/WorkChart.tsx:235
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:74
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:106
 msgid "Automated Engine"
 msgstr "محرك آلي"
 
@@ -2129,7 +2145,7 @@ msgstr "خبز"
 msgid "Break defensive pact"
 msgstr "إنهاء ميثاق الدفاع المشترك"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:119
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:151
 msgid "Break room"
 msgstr "غرفة الاستراحة"
 
@@ -2182,7 +2198,7 @@ msgstr "بناء وحدة عسكرية"
 msgid "Build the military unit"
 msgstr "بناء الوحدة العسكرية"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:31
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:36
 msgid "Bunker"
 msgstr "مخبأ"
 
@@ -2824,6 +2840,7 @@ msgstr "الدول"
 #: src/components/_military/battle/BattleCountrySide.tsx:73
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:133
 #: src/components/_political/country/CountryHeader.tsx:55
+#: src/components/_political/map/MapMenu.tsx:211
 msgid "Country"
 msgstr "الدولة"
 
@@ -3404,7 +3421,7 @@ msgstr "ملخص التبرعات"
 msgid "Donations"
 msgstr "التبرعات"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:106
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:138
 msgid "Dormitories"
 msgstr "مساكن"
 
@@ -4010,7 +4027,7 @@ msgid "Generate Missions"
 msgstr "توليد المهام"
 
 #. placeholder {0}: levelConfig.stats.dailyProd
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:77
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:109
 msgid "Generates <0>{0}</0>/day"
 msgstr "ينتج <0>{0}</0>/يوم"
 
@@ -4067,7 +4084,7 @@ msgid "Giveaway Won!"
 msgstr "فزت في السحب!"
 
 #. placeholder {0}: levelConfig.stats.attackBonus
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:97
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
 msgid "Gives <0>{0}</0>"
 msgstr "يعطي <0>{0}</0>"
 
@@ -4273,7 +4290,7 @@ msgstr "دبابة سنجاب"
 msgid "Hard Worker"
 msgstr "عامل مجتهد"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:94
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:126
 msgid "Headquarters"
 msgstr "المقر الرئيسي"
 
@@ -4468,6 +4485,10 @@ msgstr "الصناعية ضد الزراعية"
 #: src/components/_political/party/party.frontConfig.tsx:405
 msgid "Industrialist"
 msgstr "صناعي"
+
+#: src/components/_political/map/MapMenu.tsx:218
+msgid "Initial country"
+msgstr ""
 
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:11
 msgid "Initiate"
@@ -4911,7 +4932,7 @@ msgstr "جارِ التحميل..."
 msgid "Location"
 msgstr "الموقع"
 
-#: src/components/_political/region/UpgradesGrid.tsx:79
+#: src/components/_political/region/UpgradesGrid.tsx:81
 msgid "Locked slot"
 msgstr ""
 
@@ -5030,13 +5051,13 @@ msgid "Maxed!"
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.members
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:109
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:141
 msgid "Maximum of <0>{0}</0> members."
 msgstr "حد أقصى <0>{0}</0> من الأعضاء."
 
 #. placeholder {0}: levelConfig.stats.maxWorkers
 #. placeholder {1}: typeof levelConfig.stats.dailyHires !== 'undefined' && ( <> <br /> Daily hiring limit of{' '} <EntityValue IconComponent={WorkerIcon}> {levelConfig.stats.dailyHires} </EntityValue>{' '} per day. </> )
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:122
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:154
 msgid "Maximum of <0>{0}</0> workers.{1}"
 msgstr "حد أقصى <0>{0}</0> من العمال.{1}"
 
@@ -5173,7 +5194,11 @@ msgstr "تم الإعجاب بالرسالة"
 msgid "Military & Battles"
 msgstr "الجيش والمعارك"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:46
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:91
+msgid "Military airport"
+msgstr ""
+
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:51
 msgid "Military base"
 msgstr "قاعدة عسكرية"
 
@@ -6028,7 +6053,7 @@ msgstr "تم نقل ملكية <0/> من <1/> إلى <2/>"
 msgid "Ownership transferred successfully"
 msgstr "تم نقل الملكية بنجاح"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:60
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:65
 msgid "Pacification Center"
 msgstr "مركز التهدئة"
 
@@ -6685,6 +6710,7 @@ msgstr "تجديد في..."
 msgid "Regens <0>{0}</0> when consumed"
 msgstr "يجدد <0>{0}</0> عند الاستهلاك"
 
+#: src/components/_political/map/MapMenu.tsx:205
 #: src/components/_political/party/PartyFormModal.tsx:109
 msgid "Region"
 msgstr "منطقة"
@@ -7599,7 +7625,7 @@ msgid "Stone Maul"
 msgstr "مطرقة حجرية"
 
 #: src/components/_economy/company/CompanyTags.tsx:107
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:83
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:115
 msgid "Storage"
 msgstr "التخزين"
 
@@ -8216,6 +8242,10 @@ msgstr "تحويل إلى الشركة (اختياري)"
 msgid "Translator"
 msgstr "مترجم"
 
+#: src/components/_political/map/MapMenu.tsx:235
+msgid "Travel here"
+msgstr ""
+
 #: src/components/_other/shop/skin.frontConfig.tsx:95
 msgid "Trebuchet"
 msgstr "منجنيق"
@@ -8296,7 +8326,7 @@ msgstr "فتح زر إنتاج الكل"
 msgid "Unlocked pack"
 msgstr "حزمة مفتوحة"
 
-#: src/components/_political/region/UpgradesGrid.tsx:80
+#: src/components/_political/region/UpgradesGrid.tsx:82
 msgid "Unlocks at {dev} development."
 msgstr ""
 
