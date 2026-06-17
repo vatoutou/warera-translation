@@ -65,13 +65,13 @@ msgid "- Development income is reduced by 50%:<0>{0}</0>."
 msgstr "- 发展收入减少50%: <0>{0}</0> "
 
 #. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:95
-msgid "-{0}% oil cost for anyone moving into your country.<0/>Adds up across your country's military airports (max -25%)."
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:96
+msgid "-{0}% move cost for anyone moving into your country."
 msgstr ""
 
 #. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:82
-msgid "-{0}% oil cost for your citizens when they move.<0/>Adds up across your country's airports (max -25%)."
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:86
+msgid "-{0}% move cost for your citizens when they move."
 msgstr ""
 
 #: src/components/_political/alliance/AllianceMemberRow.tsx:71
@@ -598,7 +598,7 @@ msgid "<0/>Priority ends in <1/>"
 msgstr "<0/> 优先权于 <1/> 结束"
 
 #. placeholder {0}: levelConfig.stats.resistanceGrowthReduction ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:68
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:73
 msgid "<0>-{0}%</0> Resistance growth per hour"
 msgstr "反抗度每小时增长 <0>-{0}%</0>"
 
@@ -631,8 +631,9 @@ msgid "<0>{0}</0> against enemy of <1/>"
 msgstr "<0>{0}</0> 对抗 <1/> 的死敌"
 
 #. placeholder {0}: levelConfig.stats.attackBonus || 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:54
-msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/>Citizens get the full bonus, allied countries get half."
+#. placeholder {1}: (levelConfig.stats.attackBonus || 0) / 2
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:56
+msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/><2>{1}</2> Attack bonus when allied country attack in this region."
 msgstr ""
 
 #. placeholder {0}: sideBonus.regionNotLinkedToCapitalMalusPercent
@@ -651,8 +652,9 @@ msgid "<0>{0}</0> because <1/> occupies at least one of <2/> regions"
 msgstr "<0>{0}</0> 因为 <1/> 占领了至少一块 <2/> 地区"
 
 #. placeholder {0}: levelConfig.stats.defenseBonus || 0
+#. placeholder {1}: (levelConfig.stats.defenseBonus || 0) / 2
 #: src/components/_other/upgrade/upgrade.frontConfig.tsx:39
-msgid "<0>{0}</0> Defense bonus when defending this region.<1/>Citizens get the full bonus, allied countries get half. Defensive pact partners don't benefit."
+msgid "<0>{0}</0> Defense bonus when citizen defend this region.<1/><2>{1}</2> Defense bonus when allied country defend this region."
 msgstr ""
 
 #. placeholder {0}: data.acceptanceFeeReturned
@@ -733,7 +735,7 @@ msgid "<0>{0}</0> returned to <1/>."
 msgstr "<0>{0}</0> 已退还给 <1/>。"
 
 #. placeholder {0}: levelConfig.stats.maxProduction
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:118
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:117
 msgid "<0>{0}</0> Storage capacity"
 msgstr "<0>{0}</0> 容量"
 
@@ -1436,7 +1438,7 @@ msgstr "高级裤子"
 msgid "Agrarian"
 msgstr "农业主义"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:78
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:93
 msgid "Airport"
 msgstr ""
 
@@ -1830,7 +1832,7 @@ msgstr ""
 msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
 msgstr "在倒计时结束时，伤害较多的一边获得 <0>{actualTickPoints}</0>。"
 
-#: src/components/_military/hit/HitButton.tsx:488
+#: src/components/_military/hit/HitButton.tsx:471
 #: src/components/_political/map/MapMenu.tsx:256
 #: src/components/_user/user/skills.frontConfig.tsx:45
 #: src/components/_user/user/skills.frontConfig.tsx:46
@@ -1890,7 +1892,7 @@ msgid "Automated engine"
 msgstr "自动化机械"
 
 #: src/components/_economy/work/WorkChart.tsx:235
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:106
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:105
 msgid "Automated Engine"
 msgstr "自动化机械"
 
@@ -2145,7 +2147,7 @@ msgstr "面包"
 msgid "Break defensive pact"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:151
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:150
 msgid "Break room"
 msgstr "休息室"
 
@@ -3173,7 +3175,7 @@ msgstr "减少"
 msgid "Decrease unrest"
 msgstr "减少动荡值"
 
-#: src/components/_military/hit/HitButton.tsx:491
+#: src/components/_military/hit/HitButton.tsx:474
 msgid "Defend"
 msgstr "防御"
 
@@ -3425,7 +3427,7 @@ msgstr "捐款概要"
 msgid "Donations"
 msgstr "捐款"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:138
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:137
 msgid "Dormitories"
 msgstr "宿舍"
 
@@ -4031,7 +4033,7 @@ msgid "Generate Missions"
 msgstr "产生任务"
 
 #. placeholder {0}: levelConfig.stats.dailyProd
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:109
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:108
 msgid "Generates <0>{0}</0>/day"
 msgstr "产生 <0>{0}</0>/日"
 
@@ -4088,7 +4090,7 @@ msgid "Giveaway Won!"
 msgstr "赢得了抽奖！"
 
 #. placeholder {0}: levelConfig.stats.attackBonus
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:128
 msgid "Gives <0>{0}</0>"
 msgstr "给予 <0>{0}</0>"
 
@@ -4294,7 +4296,7 @@ msgstr "Hamster Tank"
 msgid "Hard Worker"
 msgstr "勤劳者"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:126
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:125
 msgid "Headquarters"
 msgstr "总部"
 
@@ -5055,13 +5057,13 @@ msgid "Maxed!"
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.members
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:141
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:140
 msgid "Maximum of <0>{0}</0> members."
 msgstr "最多可容纳 <0>{0}</0> 位成员。"
 
 #. placeholder {0}: levelConfig.stats.maxWorkers
 #. placeholder {1}: typeof levelConfig.stats.dailyHires !== 'undefined' && ( <> <br /> Daily hiring limit of{' '} <EntityValue IconComponent={WorkerIcon}> {levelConfig.stats.dailyHires} </EntityValue>{' '} per day. </> )
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:154
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:153
 msgid "Maximum of <0>{0}</0> workers.{1}"
 msgstr "最多可容纳 <0>{0}</0> 位员工。{1}"
 
@@ -5198,11 +5200,7 @@ msgstr "已赞消息"
 msgid "Military & Battles"
 msgstr "军事与战斗"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:91
-msgid "Military airport"
-msgstr ""
-
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:51
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:53
 msgid "Military base"
 msgstr "军事基地"
 
@@ -5345,6 +5343,10 @@ msgstr "提案已提出"
 msgid "Motions"
 msgstr "提案"
 
+#: src/components/_military/hit/HitMoveButton.tsx:82
+msgid "Move"
+msgstr ""
+
 #: src/components/_user/mission/mission.frontConfig.tsx:458
 msgid "Move a company to another region"
 msgstr "公司搬迁到另一个地区"
@@ -5361,10 +5363,6 @@ msgstr "公司搬迁"
 #: src/components/_economy/company/MoveCompanyForm.tsx:92
 msgid "Move the company"
 msgstr "搬迁公司"
-
-#: src/components/_military/hit/HitMoveButton.tsx:71
-msgid "Move to"
-msgstr ""
 
 #: src/components/_economy/company/CompanyDropdown.tsx:248
 msgid "Move to top"
@@ -6061,7 +6059,7 @@ msgstr "<0/> 的拥有权已从 <1/> 转移至 <2/>"
 msgid "Ownership transferred successfully"
 msgstr "所有权转移成功"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:65
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:70
 msgid "Pacification Center"
 msgstr "安抚中心"
 
@@ -6533,6 +6531,10 @@ msgstr "提议减薪"
 msgid "Propositions"
 msgstr "提案"
 
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:83
+msgid "Public transport"
+msgstr ""
+
 #: src/components/_common/GameRules.tsx:286
 msgid "Punishments, along with their reasoning, are visible on user profiles. Players may appeal through the official Discord server, where detailed explanations and evidence will be provided. Rule violations can be reported with supporting evidence."
 msgstr "处罚及其原因会显示在用户资料中。玩家可在官方 Discord 申诉，我们会提供详细解释与证据。可附带证据进行举报。"
@@ -6965,7 +6967,7 @@ msgstr "重置用户名称"
 msgid "Reshuffle in"
 msgstr "重置于"
 
-#: src/components/_military/hit/HitButton.tsx:486
+#: src/components/_military/hit/HitButton.tsx:469
 msgid "Resist"
 msgstr "抵抗"
 
@@ -7638,7 +7640,7 @@ msgid "Stone Maul"
 msgstr "Stone Maul"
 
 #: src/components/_economy/company/CompanyTags.tsx:107
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:115
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:114
 msgid "Storage"
 msgstr "储藏区"
 

@@ -65,13 +65,13 @@ msgid "- Development income is reduced by 50%:<0>{0}</0>."
 msgstr "- Pendapatan pembangunan berkurang 50%:<0>{0}</0>."
 
 #. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:95
-msgid "-{0}% oil cost for anyone moving into your country.<0/>Adds up across your country's military airports (max -25%)."
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:96
+msgid "-{0}% move cost for anyone moving into your country."
 msgstr ""
 
 #. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:82
-msgid "-{0}% oil cost for your citizens when they move.<0/>Adds up across your country's airports (max -25%)."
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:86
+msgid "-{0}% move cost for your citizens when they move."
 msgstr ""
 
 #: src/components/_political/alliance/AllianceMemberRow.tsx:71
@@ -598,7 +598,7 @@ msgid "<0/>Priority ends in <1/>"
 msgstr "<0/> Prioritas berakhir <1/>"
 
 #. placeholder {0}: levelConfig.stats.resistanceGrowthReduction ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:68
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:73
 msgid "<0>-{0}%</0> Resistance growth per hour"
 msgstr "<0>-{0}%</0> pertumbuhan perlawanan per jam"
 
@@ -631,8 +631,9 @@ msgid "<0>{0}</0> against enemy of <1/>"
 msgstr "<0>{0}</0> melawan musuh dari <1/>"
 
 #. placeholder {0}: levelConfig.stats.attackBonus || 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:54
-msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/>Citizens get the full bonus, allied countries get half."
+#. placeholder {1}: (levelConfig.stats.attackBonus || 0) / 2
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:56
+msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/><2>{1}</2> Attack bonus when allied country attack in this region."
 msgstr ""
 
 #. placeholder {0}: sideBonus.regionNotLinkedToCapitalMalusPercent
@@ -651,8 +652,9 @@ msgid "<0>{0}</0> because <1/> occupies at least one of <2/> regions"
 msgstr "<0>{0}</0> karena <1/> menduduki setidaknya satu dari <2/> wilayah"
 
 #. placeholder {0}: levelConfig.stats.defenseBonus || 0
+#. placeholder {1}: (levelConfig.stats.defenseBonus || 0) / 2
 #: src/components/_other/upgrade/upgrade.frontConfig.tsx:39
-msgid "<0>{0}</0> Defense bonus when defending this region.<1/>Citizens get the full bonus, allied countries get half. Defensive pact partners don't benefit."
+msgid "<0>{0}</0> Defense bonus when citizen defend this region.<1/><2>{1}</2> Defense bonus when allied country defend this region."
 msgstr ""
 
 #. placeholder {0}: data.acceptanceFeeReturned
@@ -733,7 +735,7 @@ msgid "<0>{0}</0> returned to <1/>."
 msgstr "<0>{0}</0> dikembalikan ke <1/>."
 
 #. placeholder {0}: levelConfig.stats.maxProduction
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:118
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:117
 msgid "<0>{0}</0> Storage capacity"
 msgstr "<0>{0}</0> kapasitas penyimpanan"
 
@@ -1436,7 +1438,7 @@ msgstr "Celana Tingkat Lanjut"
 msgid "Agrarian"
 msgstr "Agraris"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:78
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:93
 msgid "Airport"
 msgstr ""
 
@@ -1830,7 +1832,7 @@ msgstr ""
 msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
 msgstr "Di akhir timer, <0>{actualTickPoints}</0> akan diberikan kepada pihak dengan total damage terbanyak."
 
-#: src/components/_military/hit/HitButton.tsx:488
+#: src/components/_military/hit/HitButton.tsx:471
 #: src/components/_political/map/MapMenu.tsx:256
 #: src/components/_user/user/skills.frontConfig.tsx:45
 #: src/components/_user/user/skills.frontConfig.tsx:46
@@ -1890,7 +1892,7 @@ msgid "Automated engine"
 msgstr "Mesin otomatis"
 
 #: src/components/_economy/work/WorkChart.tsx:235
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:106
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:105
 msgid "Automated Engine"
 msgstr "Mesin Otomatis"
 
@@ -2145,7 +2147,7 @@ msgstr "Roti"
 msgid "Break defensive pact"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:151
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:150
 msgid "Break room"
 msgstr "Ruang istirahat"
 
@@ -3173,7 +3175,7 @@ msgstr "Kurangi"
 msgid "Decrease unrest"
 msgstr "Kurangi ketidakstabilan"
 
-#: src/components/_military/hit/HitButton.tsx:491
+#: src/components/_military/hit/HitButton.tsx:474
 msgid "Defend"
 msgstr "Bertahan"
 
@@ -3425,7 +3427,7 @@ msgstr "Ringkasan Donasi"
 msgid "Donations"
 msgstr "Donasi"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:138
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:137
 msgid "Dormitories"
 msgstr "Asrama"
 
@@ -4031,7 +4033,7 @@ msgid "Generate Missions"
 msgstr "Buat misi"
 
 #. placeholder {0}: levelConfig.stats.dailyProd
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:109
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:108
 msgid "Generates <0>{0}</0>/day"
 msgstr "Menghasilkan <0>{0}</0>/hari"
 
@@ -4088,7 +4090,7 @@ msgid "Giveaway Won!"
 msgstr "Giveaway Dimenangkan!"
 
 #. placeholder {0}: levelConfig.stats.attackBonus
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:128
 msgid "Gives <0>{0}</0>"
 msgstr "Memberi <0>{0}</0>"
 
@@ -4294,7 +4296,7 @@ msgstr "Tank Hamster"
 msgid "Hard Worker"
 msgstr "Pekerja Keras"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:126
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:125
 msgid "Headquarters"
 msgstr "Markas"
 
@@ -5055,13 +5057,13 @@ msgid "Maxed!"
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.members
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:141
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:140
 msgid "Maximum of <0>{0}</0> members."
 msgstr "Maksimal <0>{0}</0> anggota."
 
 #. placeholder {0}: levelConfig.stats.maxWorkers
 #. placeholder {1}: typeof levelConfig.stats.dailyHires !== 'undefined' && ( <> <br /> Daily hiring limit of{' '} <EntityValue IconComponent={WorkerIcon}> {levelConfig.stats.dailyHires} </EntityValue>{' '} per day. </> )
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:154
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:153
 msgid "Maximum of <0>{0}</0> workers.{1}"
 msgstr "Maksimal <0>{0}</0> pekerja.{1}"
 
@@ -5198,11 +5200,7 @@ msgstr "Pesan disukai"
 msgid "Military & Battles"
 msgstr "Militer & Pertempuran"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:91
-msgid "Military airport"
-msgstr ""
-
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:51
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:53
 msgid "Military base"
 msgstr "Pangkalan militer"
 
@@ -5345,6 +5343,10 @@ msgstr "Mosi diajukan"
 msgid "Motions"
 msgstr "Mosi"
 
+#: src/components/_military/hit/HitMoveButton.tsx:82
+msgid "Move"
+msgstr ""
+
 #: src/components/_user/mission/mission.frontConfig.tsx:458
 msgid "Move a company to another region"
 msgstr "Pindahkan perusahaan ke wilayah lain"
@@ -5361,10 +5363,6 @@ msgstr "Pindahkan perusahaan"
 #: src/components/_economy/company/MoveCompanyForm.tsx:92
 msgid "Move the company"
 msgstr "Pindahkan perusahaan"
-
-#: src/components/_military/hit/HitMoveButton.tsx:71
-msgid "Move to"
-msgstr ""
 
 #: src/components/_economy/company/CompanyDropdown.tsx:248
 msgid "Move to top"
@@ -6061,7 +6059,7 @@ msgstr "Kepemilikan <0/> telah dipindahkan dari <1/> ke <2/>"
 msgid "Ownership transferred successfully"
 msgstr "Kepemilikan berhasil dipindahkan"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:65
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:70
 msgid "Pacification Center"
 msgstr "Pusat Pasifikasi"
 
@@ -6533,6 +6531,10 @@ msgstr "Ajukan pemotongan upah"
 msgid "Propositions"
 msgstr "Penawaran"
 
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:83
+msgid "Public transport"
+msgstr ""
+
 #: src/components/_common/GameRules.tsx:286
 msgid "Punishments, along with their reasoning, are visible on user profiles. Players may appeal through the official Discord server, where detailed explanations and evidence will be provided. Rule violations can be reported with supporting evidence."
 msgstr ""
@@ -6965,7 +6967,7 @@ msgstr "Atur ulang nama pengguna"
 msgid "Reshuffle in"
 msgstr "Diacak ulang dalam"
 
-#: src/components/_military/hit/HitButton.tsx:486
+#: src/components/_military/hit/HitButton.tsx:469
 msgid "Resist"
 msgstr "Lawan"
 
@@ -7638,7 +7640,7 @@ msgid "Stone Maul"
 msgstr ""
 
 #: src/components/_economy/company/CompanyTags.tsx:107
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:115
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:114
 msgid "Storage"
 msgstr "Penyimpanan"
 

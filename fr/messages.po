@@ -65,13 +65,13 @@ msgid "- Development income is reduced by 50%:<0>{0}</0>."
 msgstr "- Les revenus de développement sont réduits de 50% :<0>{0}</0>."
 
 #. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:95
-msgid "-{0}% oil cost for anyone moving into your country.<0/>Adds up across your country's military airports (max -25%)."
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:96
+msgid "-{0}% move cost for anyone moving into your country."
 msgstr ""
 
 #. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:82
-msgid "-{0}% oil cost for your citizens when they move.<0/>Adds up across your country's airports (max -25%)."
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:86
+msgid "-{0}% move cost for your citizens when they move."
 msgstr ""
 
 #: src/components/_political/alliance/AllianceMemberRow.tsx:71
@@ -598,7 +598,7 @@ msgid "<0/>Priority ends in <1/>"
 msgstr "La priorité pour <0/> se termine dans <1/>"
 
 #. placeholder {0}: levelConfig.stats.resistanceGrowthReduction ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:68
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:73
 msgid "<0>-{0}%</0> Resistance growth per hour"
 msgstr "<0>-{0}%</0> Croissance de résistance par heure"
 
@@ -631,9 +631,10 @@ msgid "<0>{0}</0> against enemy of <1/>"
 msgstr "<0>{0}</0> contre l'ennemi de <1/>"
 
 #. placeholder {0}: levelConfig.stats.attackBonus || 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:54
-msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/>Citizens get the full bonus, allied countries get half."
-msgstr "<0>{0}</0> Bonus d'attaque lorsque vous attaquez depuis cette région.<1/>Les citoyens bénéficient du bonus complet, les pays alliés en reçoivent la moitié."
+#. placeholder {1}: (levelConfig.stats.attackBonus || 0) / 2
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:56
+msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/><2>{1}</2> Attack bonus when allied country attack in this region."
+msgstr ""
 
 #. placeholder {0}: sideBonus.regionNotLinkedToCapitalMalusPercent
 #: src/components/_military/battle/BattleDamageBonuses.tsx:209
@@ -651,9 +652,10 @@ msgid "<0>{0}</0> because <1/> occupies at least one of <2/> regions"
 msgstr "<0>{0}</0> car <1/> occupe au moins une des régions de <2/>"
 
 #. placeholder {0}: levelConfig.stats.defenseBonus || 0
+#. placeholder {1}: (levelConfig.stats.defenseBonus || 0) / 2
 #: src/components/_other/upgrade/upgrade.frontConfig.tsx:39
-msgid "<0>{0}</0> Defense bonus when defending this region.<1/>Citizens get the full bonus, allied countries get half. Defensive pact partners don't benefit."
-msgstr "<0>{0}</0> Bonus de défense lors de la défense de cette région.<1/>Les citoyens reçoivent le bonus complet, les pays alliés reçoivent la moitié. Les partenaires du pacte défensif n'en bénéficient pas."
+msgid "<0>{0}</0> Defense bonus when citizen defend this region.<1/><2>{1}</2> Defense bonus when allied country defend this region."
+msgstr ""
 
 #. placeholder {0}: data.acceptanceFeeReturned
 #: src/components/_user/notification/notification.frontConfig.tsx:1615
@@ -733,7 +735,7 @@ msgid "<0>{0}</0> returned to <1/>."
 msgstr "<0>{0}</0> est retourné à <1/>."
 
 #. placeholder {0}: levelConfig.stats.maxProduction
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:118
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:117
 msgid "<0>{0}</0> Storage capacity"
 msgstr "<0>{0}</0> Capacité de stockage"
 
@@ -1436,7 +1438,7 @@ msgstr "Pantalon Avancé"
 msgid "Agrarian"
 msgstr "Agraire"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:78
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:93
 msgid "Airport"
 msgstr ""
 
@@ -1830,7 +1832,7 @@ msgstr "Gilet Tactique AT"
 msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
 msgstr "À la fin du timer, <0>{actualTickPoints}</0> seront attribués au camp avec le plus de dégâts."
 
-#: src/components/_military/hit/HitButton.tsx:488
+#: src/components/_military/hit/HitButton.tsx:471
 #: src/components/_political/map/MapMenu.tsx:256
 #: src/components/_user/user/skills.frontConfig.tsx:45
 #: src/components/_user/user/skills.frontConfig.tsx:46
@@ -1890,7 +1892,7 @@ msgid "Automated engine"
 msgstr "Moteur automatisé"
 
 #: src/components/_economy/work/WorkChart.tsx:235
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:106
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:105
 msgid "Automated Engine"
 msgstr "Moteur Automatisé"
 
@@ -2145,7 +2147,7 @@ msgstr "Pain"
 msgid "Break defensive pact"
 msgstr "Briser le pacte défensif"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:151
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:150
 msgid "Break room"
 msgstr "Salle de pause"
 
@@ -3173,7 +3175,7 @@ msgstr "Réduire"
 msgid "Decrease unrest"
 msgstr "Réduire le mécontentement"
 
-#: src/components/_military/hit/HitButton.tsx:491
+#: src/components/_military/hit/HitButton.tsx:474
 msgid "Defend"
 msgstr "Défendre"
 
@@ -3425,7 +3427,7 @@ msgstr "Résumé des dons"
 msgid "Donations"
 msgstr "Dons"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:138
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:137
 msgid "Dormitories"
 msgstr "Dortoirs"
 
@@ -4031,7 +4033,7 @@ msgid "Generate Missions"
 msgstr "Générer des missions"
 
 #. placeholder {0}: levelConfig.stats.dailyProd
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:109
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:108
 msgid "Generates <0>{0}</0>/day"
 msgstr "Génère <0>{0}</0>/jour"
 
@@ -4088,7 +4090,7 @@ msgid "Giveaway Won!"
 msgstr "Tirage au sort gagné !"
 
 #. placeholder {0}: levelConfig.stats.attackBonus
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:128
 msgid "Gives <0>{0}</0>"
 msgstr "Donne <0>{0}</0>"
 
@@ -4294,7 +4296,7 @@ msgstr "Tank Hamster"
 msgid "Hard Worker"
 msgstr "Bourreau de travail"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:126
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:125
 msgid "Headquarters"
 msgstr "Quartier général"
 
@@ -5055,13 +5057,13 @@ msgid "Maxed!"
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.members
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:141
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:140
 msgid "Maximum of <0>{0}</0> members."
 msgstr "Maximum de <0>{0}</0> membres."
 
 #. placeholder {0}: levelConfig.stats.maxWorkers
 #. placeholder {1}: typeof levelConfig.stats.dailyHires !== 'undefined' && ( <> <br /> Daily hiring limit of{' '} <EntityValue IconComponent={WorkerIcon}> {levelConfig.stats.dailyHires} </EntityValue>{' '} per day. </> )
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:154
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:153
 msgid "Maximum of <0>{0}</0> workers.{1}"
 msgstr "Maximum de <0>{0}</0> travailleurs.{1}"
 
@@ -5198,11 +5200,7 @@ msgstr "Message aimé"
 msgid "Military & Battles"
 msgstr "Militaire & Batailles"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:91
-msgid "Military airport"
-msgstr ""
-
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:51
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:53
 msgid "Military base"
 msgstr "Base Militaire"
 
@@ -5345,6 +5343,10 @@ msgstr "Motion proposée"
 msgid "Motions"
 msgstr "Motions"
 
+#: src/components/_military/hit/HitMoveButton.tsx:82
+msgid "Move"
+msgstr ""
+
 #: src/components/_user/mission/mission.frontConfig.tsx:458
 msgid "Move a company to another region"
 msgstr "Déplace une entreprise vers une autre région"
@@ -5361,10 +5363,6 @@ msgstr "Déplacer une entreprise"
 #: src/components/_economy/company/MoveCompanyForm.tsx:92
 msgid "Move the company"
 msgstr "Déplacer l'entreprise"
-
-#: src/components/_military/hit/HitMoveButton.tsx:71
-msgid "Move to"
-msgstr ""
 
 #: src/components/_economy/company/CompanyDropdown.tsx:248
 msgid "Move to top"
@@ -6061,7 +6059,7 @@ msgstr "La propriété de <0/> a été transférée de <1/> à <2/>"
 msgid "Ownership transferred successfully"
 msgstr "Transfert de propriété effectué avec succès"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:65
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:70
 msgid "Pacification Center"
 msgstr "Centre de pacification"
 
@@ -6533,6 +6531,10 @@ msgstr "Proposer une réduction de salaire"
 msgid "Propositions"
 msgstr "Propositions"
 
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:83
+msgid "Public transport"
+msgstr ""
+
 #: src/components/_common/GameRules.tsx:286
 msgid "Punishments, along with their reasoning, are visible on user profiles. Players may appeal through the official Discord server, where detailed explanations and evidence will be provided. Rule violations can be reported with supporting evidence."
 msgstr "Les sanctions, ainsi que leur justification, sont visibles sur les profils des utilisateurs. Les joueurs peuvent faire appel via le serveur Discord officiel, où des explications détaillées et des preuves seront fournies. Les violations des règles peuvent être signalées avec des preuves à l'appui."
@@ -6965,7 +6967,7 @@ msgstr "Réinitialiser le nom d'utilisateur"
 msgid "Reshuffle in"
 msgstr "Redistribution dans"
 
-#: src/components/_military/hit/HitButton.tsx:486
+#: src/components/_military/hit/HitButton.tsx:469
 msgid "Resist"
 msgstr "Résister"
 
@@ -7638,7 +7640,7 @@ msgid "Stone Maul"
 msgstr "Maillet en pierre"
 
 #: src/components/_economy/company/CompanyTags.tsx:107
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:115
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:114
 msgid "Storage"
 msgstr "Stockage"
 
