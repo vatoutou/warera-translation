@@ -65,13 +65,21 @@ msgid "- Development income is reduced by 50%:<0>{0}</0>."
 msgstr "- Attīstības ienākumi samazināti par 50%:<0>{0}</0>."
 
 #. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:97
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:104
 msgid "-{0}% move cost for anyone moving into your country."
 msgstr ""
 
 #. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:87
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:93
 msgid "-{0}% move cost for your citizens when they move."
+msgstr ""
+
+#: src/components/_political/region/CreateUpgradeModal.tsx:110
+msgid "({scalePct}% of country dev)"
+msgstr ""
+
+#: src/components/_political/region/CreateUpgradeModal.tsx:112
+msgid "({scalePct}% of region dev)"
 msgstr ""
 
 #: src/components/_political/alliance/AllianceMemberRow.tsx:71
@@ -194,8 +202,12 @@ msgstr "*Var aizdegties"
 msgid "/day"
 msgstr "/dienā"
 
+#: src/components/_political/region/CreateUpgradeModal.tsx:105
+msgid "/h"
+msgstr ""
+
 #. placeholder {0}: Math.round((levelConfig.stats.regionDevRevenuePercent ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:108
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:116
 msgid "+{0}% money from this region's development income."
 msgstr ""
 
@@ -603,7 +615,7 @@ msgid "<0/>Priority ends in <1/>"
 msgstr "<0/>Prioritāte beigsies pēc <1/>"
 
 #. placeholder {0}: levelConfig.stats.resistanceGrowthReduction ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:74
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:79
 msgid "<0>-{0}%</0> Resistance growth per hour"
 msgstr "<0>-{0}%</0> Pretestības pieaugums stundā"
 
@@ -637,7 +649,7 @@ msgstr "<0>{0}</0> pret <1/> zvērēto ienaidnieku"
 
 #. placeholder {0}: levelConfig.stats.attackBonus || 0
 #. placeholder {1}: (levelConfig.stats.attackBonus || 0) / 2
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:57
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:61
 msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/><2>{1}</2> Attack bonus when allied country attack in this region."
 msgstr ""
 
@@ -658,7 +670,7 @@ msgstr "<0>{0}</0> jo <1/> okupē vismaz vienu no <2/> reģioniem"
 
 #. placeholder {0}: levelConfig.stats.defenseBonus || 0
 #. placeholder {1}: (levelConfig.stats.defenseBonus || 0) / 2
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:40
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:43
 msgid "<0>{0}</0> Defense bonus when citizen defend this region.<1/><2>{1}</2> Defense bonus when allied country defend this region."
 msgstr ""
 
@@ -740,7 +752,7 @@ msgid "<0>{0}</0> returned to <1/>."
 msgstr "<0>{0}</0> atgriezts <1/>."
 
 #. placeholder {0}: levelConfig.stats.maxProduction
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:139
 msgid "<0>{0}</0> Storage capacity"
 msgstr "<0>{0}</0> Noliktavas ietilpība"
 
@@ -1405,7 +1417,7 @@ msgstr "Pievienot Lietotāju"
 msgid "Additional cost"
 msgstr "Papildu maksa"
 
-#: src/components/_layout/LayoutRightIcons.tsx:146
+#: src/components/_layout/LayoutRightIcons.tsx:216
 #: src/components/_layout/MoreButtonNav.tsx:67
 msgid "Admin"
 msgstr "Administrators"
@@ -1443,7 +1455,7 @@ msgstr "Zilās Bikses"
 msgid "Agrarian"
 msgstr "Agrārisms"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:94
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:100
 msgid "Airport"
 msgstr ""
 
@@ -1837,7 +1849,7 @@ msgstr ""
 msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
 msgstr "Pēc taimera beigām <0>{actualTickPoints}</0> tiks piešķirti pusei ar lielākajiem bojājumiem."
 
-#: src/components/_military/hit/HitButton.tsx:471
+#: src/components/_military/hit/HitButton.tsx:499
 #: src/components/_political/map/MapMenu.tsx:256
 #: src/components/_user/user/skills.frontConfig.tsx:45
 #: src/components/_user/user/skills.frontConfig.tsx:46
@@ -1897,7 +1909,7 @@ msgid "Automated engine"
 msgstr "Automatizētais dzinējs"
 
 #: src/components/_economy/work/WorkChart.tsx:235
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:117
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:125
 msgid "Automated Engine"
 msgstr "Automatizētais Dzinējs"
 
@@ -2152,7 +2164,7 @@ msgstr "Maize"
 msgid "Break defensive pact"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:162
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:174
 msgid "Break room"
 msgstr "Atpūtas telpa"
 
@@ -2192,6 +2204,10 @@ msgstr "Pastiprinājumi:"
 msgid "Bug finder"
 msgstr "Kļūmju meklētājs"
 
+#: src/components/_political/region/CreateUpgradeModal.tsx:224
+msgid "Build"
+msgstr ""
+
 #: src/components/_economy/company/CompanyList.tsx:153
 msgid "Build a company"
 msgstr "Jauns uzņēmums"
@@ -2201,11 +2217,20 @@ msgstr "Jauns uzņēmums"
 msgid "Build a military unit"
 msgstr "Izveidot militāro vienību"
 
+#: src/components/_political/region/CreateUpgradeModal.tsx:309
+msgid "Build an upgrade"
+msgstr ""
+
+#: src/components/_political/region/CreateUpgradeModal.tsx:137
+#: src/components/_political/region/CreateUpgradeModal.tsx:147
+msgid "Build cost"
+msgstr ""
+
 #: src/components/_military/mu/MuFormModal.tsx:133
 msgid "Build the military unit"
 msgstr "Izveidot militāro vienību"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:37
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:39
 msgid "Bunker"
 msgstr "Bunkurs"
 
@@ -2846,7 +2871,7 @@ msgstr "valstis"
 msgid "Countries"
 msgstr "Valstis"
 
-#: src/components/_layout/LayoutRightIcons.tsx:215
+#: src/components/_layout/LayoutRightIcons.tsx:285
 #: src/components/_layout/MoreButtonNav.tsx:133
 #: src/components/_military/battle/BattleCountrySide.tsx:73
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:133
@@ -3180,7 +3205,7 @@ msgstr "Samazināt"
 msgid "Decrease unrest"
 msgstr "Samazināt nemierus"
 
-#: src/components/_military/hit/HitButton.tsx:474
+#: src/components/_military/hit/HitButton.tsx:502
 msgid "Defend"
 msgstr "Aizstāvēt"
 
@@ -3432,7 +3457,7 @@ msgstr "Ziedojumu Kopsavilkums"
 msgid "Donations"
 msgstr "Ziedojumi"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:149
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:160
 msgid "Dormitories"
 msgstr "Kopmītnes"
 
@@ -3662,7 +3687,7 @@ msgstr "Vērtību priekšlikumi"
 msgid "Ethics Points:"
 msgstr "Vērtību Punkti:"
 
-#: src/components/_layout/LayoutRightIcons.tsx:245
+#: src/components/_layout/LayoutRightIcons.tsx:315
 #: src/components/_layout/MoreButtonNav.tsx:96
 #: src/pages/country/[countryId]/index.tsx:266
 msgid "Events"
@@ -3840,7 +3865,7 @@ msgstr "Favorīti"
 msgid "Fee"
 msgstr "Iemaksa"
 
-#: src/components/_layout/LayoutRightIcons.tsx:255
+#: src/components/_layout/LayoutRightIcons.tsx:325
 #: src/components/_layout/MoreButtonNav.tsx:88
 msgid "Feed"
 msgstr "Pasaulē"
@@ -4038,7 +4063,7 @@ msgid "Generate Missions"
 msgstr "Ģenerēt Uzdevumus"
 
 #. placeholder {0}: levelConfig.stats.dailyProd
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:120
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
 msgid "Generates <0>{0}</0>/day"
 msgstr "Saražo <0>{0}</0>/dienā"
 
@@ -4095,7 +4120,7 @@ msgid "Giveaway Won!"
 msgstr "Izloze laimēta!"
 
 #. placeholder {0}: levelConfig.stats.attackBonus
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:140
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:151
 msgid "Gives <0>{0}</0>"
 msgstr "Dod <0>{0}</0>"
 
@@ -4301,7 +4326,7 @@ msgstr ""
 msgid "Hard Worker"
 msgstr "Darbaholiķis"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:137
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:147
 msgid "Headquarters"
 msgstr "Štābs"
 
@@ -4361,6 +4386,10 @@ msgstr "Sitot par savu valsti, kamēr esi valdībā, dod {0}% no atlīdzības."
 #: src/components/_user/user/UserHeader.tsx:153
 msgid "Home"
 msgstr "Sākums"
+
+#: src/components/_political/region/CreateUpgradeModal.tsx:190
+msgid "Hourly maintenance cost"
+msgstr ""
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:30
 msgid "How many times have you seen this message already?"
@@ -4943,7 +4972,7 @@ msgstr "Ielādē…"
 msgid "Location"
 msgstr "Atrašanās vieta"
 
-#: src/components/_political/region/UpgradesGrid.tsx:146
+#: src/components/_political/region/UpgradesGrid.tsx:131
 msgid "Locked slot"
 msgstr ""
 
@@ -4992,7 +5021,7 @@ msgstr "Ģenerālleitnants"
 msgid "Luck is finally on payroll"
 msgstr "Veiksme beidzot tavā pusē"
 
-#: src/components/_political/region/UpgradesGrid.tsx:206
+#: src/components/_political/region/UpgradesGrid.tsx:191
 msgid "Lvl"
 msgstr ""
 
@@ -5025,8 +5054,8 @@ msgstr "Priekšniecība"
 msgid "map"
 msgstr "karti"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:108
 #: src/components/_layout/LayoutOptions.tsx:100
+#: src/components/_layout/LayoutRightIcons.tsx:188
 msgid "Map"
 msgstr ""
 
@@ -5066,13 +5095,13 @@ msgid "Maxed!"
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.members
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:152
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:164
 msgid "Maximum of <0>{0}</0> members."
 msgstr "Maksimālais biedru skaits <0>{0}</0>."
 
 #. placeholder {0}: levelConfig.stats.maxWorkers
 #. placeholder {1}: typeof levelConfig.stats.dailyHires !== 'undefined' && ( <> <br /> Daily hiring limit of{' '} <EntityValue IconComponent={WorkerIcon}> {levelConfig.stats.dailyHires} </EntityValue>{' '} per day. </> )
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:165
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:178
 msgid "Maximum of <0>{0}</0> workers.{1}"
 msgstr "Maksimālais strādnieku skaits <0>{0}</0>.{1}"
 
@@ -5209,7 +5238,7 @@ msgstr "Ziņa patika"
 msgid "Military & Battles"
 msgstr "Militārās un Kaujas"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:54
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:57
 msgid "Military base"
 msgstr "Karabāze"
 
@@ -5284,7 +5313,7 @@ msgstr "Ārlietu Ministrs"
 msgid "Mission tags"
 msgstr ""
 
-#: src/components/_layout/LayoutRightIcons.tsx:173
+#: src/components/_layout/LayoutRightIcons.tsx:243
 #: src/components/_layout/MoreButtonNav.tsx:105
 #: src/components/_user/mission/MissionsList.tsx:159
 msgid "Missions"
@@ -5352,7 +5381,7 @@ msgstr "Priekšlikums ierosināts"
 msgid "Motions"
 msgstr "Priekšlikumi"
 
-#: src/components/_military/hit/HitMoveButton.tsx:84
+#: src/components/_military/hit/HitMoveButton.tsx:78
 msgid "Move"
 msgstr ""
 
@@ -5617,7 +5646,7 @@ msgstr "Jauns strādnieks"
 msgid "Newest"
 msgstr "Jaunākie"
 
-#: src/components/_layout/LayoutRightIcons.tsx:199
+#: src/components/_layout/LayoutRightIcons.tsx:269
 #: src/components/_layout/MoreButtonNav.tsx:114
 msgid "News"
 msgstr "Raksti"
@@ -6005,7 +6034,7 @@ msgstr "Atver savu kasti!"
 msgid "Operative"
 msgstr "Štāba Virsseržants"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:159
+#: src/components/_layout/LayoutLeftIcons.tsx:94
 msgid "Options"
 msgstr "Iestatījumi"
 
@@ -6068,7 +6097,7 @@ msgstr "Īpašumtiesības <0/> tika nodotas no <1/> uz <2/>"
 msgid "Ownership transferred successfully"
 msgstr "Īpašumtiesības veiksmīgi nodotas"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:71
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:75
 msgid "Pacification Center"
 msgstr "Pāraudzināšanas Centrs"
 
@@ -6111,7 +6140,7 @@ msgstr "Piedalīties Kaujā"
 msgid "Parties"
 msgstr "Partijas"
 
-#: src/components/_layout/LayoutRightIcons.tsx:223
+#: src/components/_layout/LayoutRightIcons.tsx:293
 #: src/components/_layout/MoreButtonNav.tsx:142
 #: src/components/_user/notification/notificationPrefs.categories.ts:157
 #: src/pages/user/[userId]/index.tsx:176
@@ -6540,7 +6569,7 @@ msgstr "Piedāvāt algas samazināšanu"
 msgid "Propositions"
 msgstr "Priekšlikumi"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:84
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:89
 msgid "Public transport"
 msgstr ""
 
@@ -6584,7 +6613,7 @@ msgstr "Kopvērtējuma balvas"
 msgid "Rankings"
 msgstr "Kopvērtējums"
 
-#: src/components/_layout/LayoutRightIcons.tsx:233
+#: src/components/_layout/LayoutRightIcons.tsx:303
 msgid "Ranks"
 msgstr "Kopvērtējumi"
 
@@ -6976,7 +7005,7 @@ msgstr "Pāriestatīt Lietotājvārdu"
 msgid "Reshuffle in"
 msgstr "Pārdalīšana pēc"
 
-#: src/components/_military/hit/HitButton.tsx:469
+#: src/components/_military/hit/HitButton.tsx:497
 msgid "Resist"
 msgstr "Pretoties"
 
@@ -7120,7 +7149,7 @@ msgstr "Raundi uzvarēti"
 msgid "Rounds Won"
 msgstr "Raundi uzvarēti"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:169
+#: src/components/_layout/LayoutLeftIcons.tsx:104
 #: src/components/_user/auth/WelcomeModal.tsx:170
 msgid "Rules"
 msgstr "Noteikumi"
@@ -7383,7 +7412,7 @@ msgstr "Nomaini savu lietotājvārdu"
 msgid "Settings"
 msgstr "Iestatījumi"
 
-#: src/components/_layout/LayoutRightIcons.tsx:186
+#: src/components/_layout/LayoutRightIcons.tsx:256
 #: src/components/_layout/MoreButtonNav.tsx:75
 #: src/components/_other/shop/ShopHeader.tsx:52
 msgid "Shop"
@@ -7649,7 +7678,7 @@ msgid "Stone Maul"
 msgstr ""
 
 #: src/components/_economy/company/CompanyTags.tsx:107
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:126
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:135
 msgid "Storage"
 msgstr "Noliktava"
 
@@ -7799,7 +7828,7 @@ msgstr "Mērķa reģions"
 msgid "Target user"
 msgstr "Mērķa lietotājs"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:105
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:112
 msgid "Tax Office"
 msgstr ""
 
@@ -8362,7 +8391,7 @@ msgstr "Iegūsti \"Ražot visu\" pogu"
 msgid "Unlocked pack"
 msgstr "Komplekts iegūts"
 
-#: src/components/_political/region/UpgradesGrid.tsx:147
+#: src/components/_political/region/UpgradesGrid.tsx:132
 msgid "Unlocks at {dev} development."
 msgstr ""
 
@@ -9476,10 +9505,10 @@ msgstr "tavs@e-pasts.lv"
 msgid "Yours"
 msgstr "Tavi"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:85
+#: src/components/_layout/LayoutRightIcons.tsx:165
 msgid "Zoom in"
 msgstr ""
 
-#: src/components/_layout/LayoutLeftIcons.tsx:93
+#: src/components/_layout/LayoutRightIcons.tsx:173
 msgid "Zoom out"
 msgstr ""

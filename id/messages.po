@@ -65,13 +65,21 @@ msgid "- Development income is reduced by 50%:<0>{0}</0>."
 msgstr "- Pendapatan pembangunan berkurang 50%:<0>{0}</0>."
 
 #. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:97
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:104
 msgid "-{0}% move cost for anyone moving into your country."
 msgstr ""
 
 #. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:87
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:93
 msgid "-{0}% move cost for your citizens when they move."
+msgstr ""
+
+#: src/components/_political/region/CreateUpgradeModal.tsx:110
+msgid "({scalePct}% of country dev)"
+msgstr ""
+
+#: src/components/_political/region/CreateUpgradeModal.tsx:112
+msgid "({scalePct}% of region dev)"
 msgstr ""
 
 #: src/components/_political/alliance/AllianceMemberRow.tsx:71
@@ -194,8 +202,12 @@ msgstr "*Bisa terbakar"
 msgid "/day"
 msgstr "/hari"
 
+#: src/components/_political/region/CreateUpgradeModal.tsx:105
+msgid "/h"
+msgstr ""
+
 #. placeholder {0}: Math.round((levelConfig.stats.regionDevRevenuePercent ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:108
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:116
 msgid "+{0}% money from this region's development income."
 msgstr ""
 
@@ -603,7 +615,7 @@ msgid "<0/>Priority ends in <1/>"
 msgstr "<0/> Prioritas berakhir <1/>"
 
 #. placeholder {0}: levelConfig.stats.resistanceGrowthReduction ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:74
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:79
 msgid "<0>-{0}%</0> Resistance growth per hour"
 msgstr "<0>-{0}%</0> pertumbuhan perlawanan per jam"
 
@@ -637,7 +649,7 @@ msgstr "<0>{0}</0> melawan musuh dari <1/>"
 
 #. placeholder {0}: levelConfig.stats.attackBonus || 0
 #. placeholder {1}: (levelConfig.stats.attackBonus || 0) / 2
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:57
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:61
 msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/><2>{1}</2> Attack bonus when allied country attack in this region."
 msgstr ""
 
@@ -658,7 +670,7 @@ msgstr "<0>{0}</0> karena <1/> menduduki setidaknya satu dari <2/> wilayah"
 
 #. placeholder {0}: levelConfig.stats.defenseBonus || 0
 #. placeholder {1}: (levelConfig.stats.defenseBonus || 0) / 2
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:40
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:43
 msgid "<0>{0}</0> Defense bonus when citizen defend this region.<1/><2>{1}</2> Defense bonus when allied country defend this region."
 msgstr ""
 
@@ -740,7 +752,7 @@ msgid "<0>{0}</0> returned to <1/>."
 msgstr "<0>{0}</0> dikembalikan ke <1/>."
 
 #. placeholder {0}: levelConfig.stats.maxProduction
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:139
 msgid "<0>{0}</0> Storage capacity"
 msgstr "<0>{0}</0> kapasitas penyimpanan"
 
@@ -1405,7 +1417,7 @@ msgstr "Tambah pengguna"
 msgid "Additional cost"
 msgstr "Biaya tambahan"
 
-#: src/components/_layout/LayoutRightIcons.tsx:146
+#: src/components/_layout/LayoutRightIcons.tsx:216
 #: src/components/_layout/MoreButtonNav.tsx:67
 msgid "Admin"
 msgstr "Administrator"
@@ -1443,7 +1455,7 @@ msgstr "Celana Tingkat Lanjut"
 msgid "Agrarian"
 msgstr "Agraris"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:94
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:100
 msgid "Airport"
 msgstr ""
 
@@ -1837,7 +1849,7 @@ msgstr ""
 msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
 msgstr "Di akhir timer, <0>{actualTickPoints}</0> akan diberikan kepada pihak dengan total damage terbanyak."
 
-#: src/components/_military/hit/HitButton.tsx:471
+#: src/components/_military/hit/HitButton.tsx:499
 #: src/components/_political/map/MapMenu.tsx:256
 #: src/components/_user/user/skills.frontConfig.tsx:45
 #: src/components/_user/user/skills.frontConfig.tsx:46
@@ -1897,7 +1909,7 @@ msgid "Automated engine"
 msgstr "Mesin otomatis"
 
 #: src/components/_economy/work/WorkChart.tsx:235
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:117
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:125
 msgid "Automated Engine"
 msgstr "Mesin Otomatis"
 
@@ -2152,7 +2164,7 @@ msgstr "Roti"
 msgid "Break defensive pact"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:162
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:174
 msgid "Break room"
 msgstr "Ruang istirahat"
 
@@ -2192,6 +2204,10 @@ msgstr "Buff:"
 msgid "Bug finder"
 msgstr "Pencari bug"
 
+#: src/components/_political/region/CreateUpgradeModal.tsx:224
+msgid "Build"
+msgstr ""
+
 #: src/components/_economy/company/CompanyList.tsx:153
 msgid "Build a company"
 msgstr "Bangun perusahaan"
@@ -2201,11 +2217,20 @@ msgstr "Bangun perusahaan"
 msgid "Build a military unit"
 msgstr "Buat unit militer"
 
+#: src/components/_political/region/CreateUpgradeModal.tsx:309
+msgid "Build an upgrade"
+msgstr ""
+
+#: src/components/_political/region/CreateUpgradeModal.tsx:137
+#: src/components/_political/region/CreateUpgradeModal.tsx:147
+msgid "Build cost"
+msgstr ""
+
 #: src/components/_military/mu/MuFormModal.tsx:133
 msgid "Build the military unit"
 msgstr "Buat unit militer"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:37
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:39
 msgid "Bunker"
 msgstr "Bungker"
 
@@ -2846,7 +2871,7 @@ msgstr "negara"
 msgid "Countries"
 msgstr "Negara"
 
-#: src/components/_layout/LayoutRightIcons.tsx:215
+#: src/components/_layout/LayoutRightIcons.tsx:285
 #: src/components/_layout/MoreButtonNav.tsx:133
 #: src/components/_military/battle/BattleCountrySide.tsx:73
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:133
@@ -3180,7 +3205,7 @@ msgstr "Kurangi"
 msgid "Decrease unrest"
 msgstr "Kurangi ketidakstabilan"
 
-#: src/components/_military/hit/HitButton.tsx:474
+#: src/components/_military/hit/HitButton.tsx:502
 msgid "Defend"
 msgstr "Bertahan"
 
@@ -3432,7 +3457,7 @@ msgstr "Ringkasan Donasi"
 msgid "Donations"
 msgstr "Donasi"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:149
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:160
 msgid "Dormitories"
 msgstr "Asrama"
 
@@ -3662,7 +3687,7 @@ msgstr "Usulan Etika"
 msgid "Ethics Points:"
 msgstr "Poin Etika:"
 
-#: src/components/_layout/LayoutRightIcons.tsx:245
+#: src/components/_layout/LayoutRightIcons.tsx:315
 #: src/components/_layout/MoreButtonNav.tsx:96
 #: src/pages/country/[countryId]/index.tsx:266
 msgid "Events"
@@ -3840,7 +3865,7 @@ msgstr "Favorit"
 msgid "Fee"
 msgstr "Biaya"
 
-#: src/components/_layout/LayoutRightIcons.tsx:255
+#: src/components/_layout/LayoutRightIcons.tsx:325
 #: src/components/_layout/MoreButtonNav.tsx:88
 msgid "Feed"
 msgstr "Linimasa"
@@ -4038,7 +4063,7 @@ msgid "Generate Missions"
 msgstr "Buat misi"
 
 #. placeholder {0}: levelConfig.stats.dailyProd
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:120
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
 msgid "Generates <0>{0}</0>/day"
 msgstr "Menghasilkan <0>{0}</0>/hari"
 
@@ -4095,7 +4120,7 @@ msgid "Giveaway Won!"
 msgstr "Giveaway Dimenangkan!"
 
 #. placeholder {0}: levelConfig.stats.attackBonus
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:140
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:151
 msgid "Gives <0>{0}</0>"
 msgstr "Memberi <0>{0}</0>"
 
@@ -4301,7 +4326,7 @@ msgstr "Tank Hamster"
 msgid "Hard Worker"
 msgstr "Pekerja Keras"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:137
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:147
 msgid "Headquarters"
 msgstr "Markas"
 
@@ -4361,6 +4386,10 @@ msgstr "Menyerang untuk negaramu sendiri saat berada di pemerintahan memberi efi
 #: src/components/_user/user/UserHeader.tsx:153
 msgid "Home"
 msgstr "Beranda"
+
+#: src/components/_political/region/CreateUpgradeModal.tsx:190
+msgid "Hourly maintenance cost"
+msgstr ""
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:30
 msgid "How many times have you seen this message already?"
@@ -4943,7 +4972,7 @@ msgstr "Memuat..."
 msgid "Location"
 msgstr "Lokasi"
 
-#: src/components/_political/region/UpgradesGrid.tsx:146
+#: src/components/_political/region/UpgradesGrid.tsx:131
 msgid "Locked slot"
 msgstr ""
 
@@ -4992,7 +5021,7 @@ msgstr "Lt. General"
 msgid "Luck is finally on payroll"
 msgstr "Akhirnya keberuntungan berpihak padamu"
 
-#: src/components/_political/region/UpgradesGrid.tsx:206
+#: src/components/_political/region/UpgradesGrid.tsx:191
 msgid "Lvl"
 msgstr ""
 
@@ -5025,8 +5054,8 @@ msgstr "Manajemen"
 msgid "map"
 msgstr "peta"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:108
 #: src/components/_layout/LayoutOptions.tsx:100
+#: src/components/_layout/LayoutRightIcons.tsx:188
 msgid "Map"
 msgstr ""
 
@@ -5066,13 +5095,13 @@ msgid "Maxed!"
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.members
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:152
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:164
 msgid "Maximum of <0>{0}</0> members."
 msgstr "Maksimal <0>{0}</0> anggota."
 
 #. placeholder {0}: levelConfig.stats.maxWorkers
 #. placeholder {1}: typeof levelConfig.stats.dailyHires !== 'undefined' && ( <> <br /> Daily hiring limit of{' '} <EntityValue IconComponent={WorkerIcon}> {levelConfig.stats.dailyHires} </EntityValue>{' '} per day. </> )
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:165
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:178
 msgid "Maximum of <0>{0}</0> workers.{1}"
 msgstr "Maksimal <0>{0}</0> pekerja.{1}"
 
@@ -5209,7 +5238,7 @@ msgstr "Pesan disukai"
 msgid "Military & Battles"
 msgstr "Militer & Pertempuran"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:54
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:57
 msgid "Military base"
 msgstr "Pangkalan militer"
 
@@ -5284,7 +5313,7 @@ msgstr "Menteri Luar Negeri"
 msgid "Mission tags"
 msgstr ""
 
-#: src/components/_layout/LayoutRightIcons.tsx:173
+#: src/components/_layout/LayoutRightIcons.tsx:243
 #: src/components/_layout/MoreButtonNav.tsx:105
 #: src/components/_user/mission/MissionsList.tsx:159
 msgid "Missions"
@@ -5352,7 +5381,7 @@ msgstr "Mosi diajukan"
 msgid "Motions"
 msgstr "Mosi"
 
-#: src/components/_military/hit/HitMoveButton.tsx:84
+#: src/components/_military/hit/HitMoveButton.tsx:78
 msgid "Move"
 msgstr ""
 
@@ -5617,7 +5646,7 @@ msgstr "Pekerja baru"
 msgid "Newest"
 msgstr "Terbaru"
 
-#: src/components/_layout/LayoutRightIcons.tsx:199
+#: src/components/_layout/LayoutRightIcons.tsx:269
 #: src/components/_layout/MoreButtonNav.tsx:114
 msgid "News"
 msgstr "Berita"
@@ -6005,7 +6034,7 @@ msgstr "Buka petimu!"
 msgid "Operative"
 msgstr "Operative"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:159
+#: src/components/_layout/LayoutLeftIcons.tsx:94
 msgid "Options"
 msgstr "Opsi"
 
@@ -6068,7 +6097,7 @@ msgstr "Kepemilikan <0/> telah dipindahkan dari <1/> ke <2/>"
 msgid "Ownership transferred successfully"
 msgstr "Kepemilikan berhasil dipindahkan"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:71
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:75
 msgid "Pacification Center"
 msgstr "Pusat Pasifikasi"
 
@@ -6111,7 +6140,7 @@ msgstr "Ikut serta dalam pertempuran"
 msgid "Parties"
 msgstr "Partai"
 
-#: src/components/_layout/LayoutRightIcons.tsx:223
+#: src/components/_layout/LayoutRightIcons.tsx:293
 #: src/components/_layout/MoreButtonNav.tsx:142
 #: src/components/_user/notification/notificationPrefs.categories.ts:157
 #: src/pages/user/[userId]/index.tsx:176
@@ -6540,7 +6569,7 @@ msgstr "Ajukan pemotongan upah"
 msgid "Propositions"
 msgstr "Penawaran"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:84
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:89
 msgid "Public transport"
 msgstr ""
 
@@ -6584,7 +6613,7 @@ msgstr "Hadiah peringkat"
 msgid "Rankings"
 msgstr "Peringkat"
 
-#: src/components/_layout/LayoutRightIcons.tsx:233
+#: src/components/_layout/LayoutRightIcons.tsx:303
 msgid "Ranks"
 msgstr "Pangkat"
 
@@ -6976,7 +7005,7 @@ msgstr "Atur ulang nama pengguna"
 msgid "Reshuffle in"
 msgstr "Diacak ulang dalam"
 
-#: src/components/_military/hit/HitButton.tsx:469
+#: src/components/_military/hit/HitButton.tsx:497
 msgid "Resist"
 msgstr "Lawan"
 
@@ -7120,7 +7149,7 @@ msgstr "Ronde dimenangkan"
 msgid "Rounds Won"
 msgstr "Ronde Dimenangkan"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:169
+#: src/components/_layout/LayoutLeftIcons.tsx:104
 #: src/components/_user/auth/WelcomeModal.tsx:170
 msgid "Rules"
 msgstr "Aturan"
@@ -7383,7 +7412,7 @@ msgstr "Atur nama penggunamu"
 msgid "Settings"
 msgstr "Pengaturan"
 
-#: src/components/_layout/LayoutRightIcons.tsx:186
+#: src/components/_layout/LayoutRightIcons.tsx:256
 #: src/components/_layout/MoreButtonNav.tsx:75
 #: src/components/_other/shop/ShopHeader.tsx:52
 msgid "Shop"
@@ -7649,7 +7678,7 @@ msgid "Stone Maul"
 msgstr ""
 
 #: src/components/_economy/company/CompanyTags.tsx:107
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:126
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:135
 msgid "Storage"
 msgstr "Penyimpanan"
 
@@ -7799,7 +7828,7 @@ msgstr "Wilayah target"
 msgid "Target user"
 msgstr "Pengguna target"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:105
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:112
 msgid "Tax Office"
 msgstr ""
 
@@ -8362,7 +8391,7 @@ msgstr "Buka tombol \"Produksi semua\""
 msgid "Unlocked pack"
 msgstr "Paket sudah dibuka"
 
-#: src/components/_political/region/UpgradesGrid.tsx:147
+#: src/components/_political/region/UpgradesGrid.tsx:132
 msgid "Unlocks at {dev} development."
 msgstr ""
 
@@ -9476,10 +9505,10 @@ msgstr "emailanda@email.com"
 msgid "Yours"
 msgstr "Milikmu"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:85
+#: src/components/_layout/LayoutRightIcons.tsx:165
 msgid "Zoom in"
 msgstr ""
 
-#: src/components/_layout/LayoutLeftIcons.tsx:93
+#: src/components/_layout/LayoutRightIcons.tsx:173
 msgid "Zoom out"
 msgstr ""

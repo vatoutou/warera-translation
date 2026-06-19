@@ -66,13 +66,21 @@ msgid "- Development income is reduced by 50%:<0>{0}</0>."
 msgstr "- Kehitystulot vähenevät 50%:lla: <0>{0}</0>."
 
 #. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:97
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:104
 msgid "-{0}% move cost for anyone moving into your country."
 msgstr ""
 
 #. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:87
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:93
 msgid "-{0}% move cost for your citizens when they move."
+msgstr ""
+
+#: src/components/_political/region/CreateUpgradeModal.tsx:110
+msgid "({scalePct}% of country dev)"
+msgstr ""
+
+#: src/components/_political/region/CreateUpgradeModal.tsx:112
+msgid "({scalePct}% of region dev)"
 msgstr ""
 
 #: src/components/_political/alliance/AllianceMemberRow.tsx:71
@@ -195,8 +203,12 @@ msgstr "*Voidaan polttaa"
 msgid "/day"
 msgstr "/päivä"
 
+#: src/components/_political/region/CreateUpgradeModal.tsx:105
+msgid "/h"
+msgstr ""
+
 #. placeholder {0}: Math.round((levelConfig.stats.regionDevRevenuePercent ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:108
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:116
 msgid "+{0}% money from this region's development income."
 msgstr ""
 
@@ -604,7 +616,7 @@ msgid "<0/>Priority ends in <1/>"
 msgstr "<0/>Prioriteetti päättyy <1/>"
 
 #. placeholder {0}: levelConfig.stats.resistanceGrowthReduction ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:74
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:79
 msgid "<0>-{0}%</0> Resistance growth per hour"
 msgstr "<0>-{0}%</0> Resistanssin kasvu tunnissa"
 
@@ -638,7 +650,7 @@ msgstr "<0>{0}</0> <1/> vihollista vastaan"
 
 #. placeholder {0}: levelConfig.stats.attackBonus || 0
 #. placeholder {1}: (levelConfig.stats.attackBonus || 0) / 2
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:57
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:61
 msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/><2>{1}</2> Attack bonus when allied country attack in this region."
 msgstr ""
 
@@ -659,7 +671,7 @@ msgstr "<0>{0}</0> koska <1/> miehittää ainakin yhden <2/>:n alueista"
 
 #. placeholder {0}: levelConfig.stats.defenseBonus || 0
 #. placeholder {1}: (levelConfig.stats.defenseBonus || 0) / 2
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:40
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:43
 msgid "<0>{0}</0> Defense bonus when citizen defend this region.<1/><2>{1}</2> Defense bonus when allied country defend this region."
 msgstr ""
 
@@ -741,7 +753,7 @@ msgid "<0>{0}</0> returned to <1/>."
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.maxProduction
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:139
 msgid "<0>{0}</0> Storage capacity"
 msgstr "<0>{0}</0> Varastointikapasiteetti"
 
@@ -1406,7 +1418,7 @@ msgstr "Lisää käyttäjä"
 msgid "Additional cost"
 msgstr "Lisäkustannukset"
 
-#: src/components/_layout/LayoutRightIcons.tsx:146
+#: src/components/_layout/LayoutRightIcons.tsx:216
 #: src/components/_layout/MoreButtonNav.tsx:67
 msgid "Admin"
 msgstr "Ylläpitäjä"
@@ -1444,7 +1456,7 @@ msgstr "Edistyneet housut"
 msgid "Agrarian"
 msgstr "Maatalous"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:94
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:100
 msgid "Airport"
 msgstr ""
 
@@ -1838,7 +1850,7 @@ msgstr ""
 msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
 msgstr "Ajastimen lopussa <0>{actualTickPoints}</0> jaetaan sille puolelle, jolla on eniten vaurioita."
 
-#: src/components/_military/hit/HitButton.tsx:471
+#: src/components/_military/hit/HitButton.tsx:499
 #: src/components/_political/map/MapMenu.tsx:256
 #: src/components/_user/user/skills.frontConfig.tsx:45
 #: src/components/_user/user/skills.frontConfig.tsx:46
@@ -1898,7 +1910,7 @@ msgid "Automated engine"
 msgstr "Automaattinen moottori"
 
 #: src/components/_economy/work/WorkChart.tsx:235
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:117
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:125
 msgid "Automated Engine"
 msgstr "Automatisoitu Moottori"
 
@@ -2153,7 +2165,7 @@ msgstr "Leipä"
 msgid "Break defensive pact"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:162
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:174
 msgid "Break room"
 msgstr "Taukohuone"
 
@@ -2193,6 +2205,10 @@ msgstr "Buffit:"
 msgid "Bug finder"
 msgstr "Virheiden etsijä"
 
+#: src/components/_political/region/CreateUpgradeModal.tsx:224
+msgid "Build"
+msgstr ""
+
 #: src/components/_economy/company/CompanyList.tsx:153
 msgid "Build a company"
 msgstr "Rakenna yritys"
@@ -2202,11 +2218,20 @@ msgstr "Rakenna yritys"
 msgid "Build a military unit"
 msgstr "Rakenna sotilasyksikkö"
 
+#: src/components/_political/region/CreateUpgradeModal.tsx:309
+msgid "Build an upgrade"
+msgstr ""
+
+#: src/components/_political/region/CreateUpgradeModal.tsx:137
+#: src/components/_political/region/CreateUpgradeModal.tsx:147
+msgid "Build cost"
+msgstr ""
+
 #: src/components/_military/mu/MuFormModal.tsx:133
 msgid "Build the military unit"
 msgstr "Rakenna sotilasyksikkö"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:37
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:39
 msgid "Bunker"
 msgstr "Bunkkeri"
 
@@ -2847,7 +2872,7 @@ msgstr "maissa"
 msgid "Countries"
 msgstr "maat"
 
-#: src/components/_layout/LayoutRightIcons.tsx:215
+#: src/components/_layout/LayoutRightIcons.tsx:285
 #: src/components/_layout/MoreButtonNav.tsx:133
 #: src/components/_military/battle/BattleCountrySide.tsx:73
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:133
@@ -3181,7 +3206,7 @@ msgstr "Vähennä"
 msgid "Decrease unrest"
 msgstr "Vähennä levottomuutta"
 
-#: src/components/_military/hit/HitButton.tsx:474
+#: src/components/_military/hit/HitButton.tsx:502
 msgid "Defend"
 msgstr "Puolusta"
 
@@ -3433,7 +3458,7 @@ msgstr "Lahjoitusten yhteenveto"
 msgid "Donations"
 msgstr "Lahjoitukset"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:149
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:160
 msgid "Dormitories"
 msgstr "Asuntoloita"
 
@@ -3663,7 +3688,7 @@ msgstr "Eettiset liikkeet"
 msgid "Ethics Points:"
 msgstr "Eettiset kohdat:"
 
-#: src/components/_layout/LayoutRightIcons.tsx:245
+#: src/components/_layout/LayoutRightIcons.tsx:315
 #: src/components/_layout/MoreButtonNav.tsx:96
 #: src/pages/country/[countryId]/index.tsx:266
 msgid "Events"
@@ -3841,7 +3866,7 @@ msgstr "Suosikit"
 msgid "Fee"
 msgstr ""
 
-#: src/components/_layout/LayoutRightIcons.tsx:255
+#: src/components/_layout/LayoutRightIcons.tsx:325
 #: src/components/_layout/MoreButtonNav.tsx:88
 msgid "Feed"
 msgstr "Syötä"
@@ -4039,7 +4064,7 @@ msgid "Generate Missions"
 msgstr "Luo tehtäviä"
 
 #. placeholder {0}: levelConfig.stats.dailyProd
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:120
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
 msgid "Generates <0>{0}</0>/day"
 msgstr "Tuottaa <0>{0}</0>/päivä"
 
@@ -4096,7 +4121,7 @@ msgid "Giveaway Won!"
 msgstr "Giveaway voitettu!"
 
 #. placeholder {0}: levelConfig.stats.attackBonus
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:140
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:151
 msgid "Gives <0>{0}</0>"
 msgstr "Antaa <0>{0}</0>"
 
@@ -4302,7 +4327,7 @@ msgstr ""
 msgid "Hard Worker"
 msgstr "Kova Työmies"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:137
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:147
 msgid "Headquarters"
 msgstr "Päämaja"
 
@@ -4362,6 +4387,10 @@ msgstr "Oman maasi puolesta lyöminen hallituksessa antaa {0}% palkkion tehokkuu
 #: src/components/_user/user/UserHeader.tsx:153
 msgid "Home"
 msgstr "Kotiin"
+
+#: src/components/_political/region/CreateUpgradeModal.tsx:190
+msgid "Hourly maintenance cost"
+msgstr ""
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:30
 msgid "How many times have you seen this message already?"
@@ -4944,7 +4973,7 @@ msgstr "Ladataan..."
 msgid "Location"
 msgstr "Sijainti"
 
-#: src/components/_political/region/UpgradesGrid.tsx:146
+#: src/components/_political/region/UpgradesGrid.tsx:131
 msgid "Locked slot"
 msgstr ""
 
@@ -4993,7 +5022,7 @@ msgstr "Kenraaliluutnantti"
 msgid "Luck is finally on payroll"
 msgstr "Onni on vihdoin palkalla"
 
-#: src/components/_political/region/UpgradesGrid.tsx:206
+#: src/components/_political/region/UpgradesGrid.tsx:191
 msgid "Lvl"
 msgstr ""
 
@@ -5026,8 +5055,8 @@ msgstr "Hallinto"
 msgid "map"
 msgstr "kartta"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:108
 #: src/components/_layout/LayoutOptions.tsx:100
+#: src/components/_layout/LayoutRightIcons.tsx:188
 msgid "Map"
 msgstr ""
 
@@ -5067,13 +5096,13 @@ msgid "Maxed!"
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.members
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:152
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:164
 msgid "Maximum of <0>{0}</0> members."
 msgstr "Enintään <0>{0}</0> jäsentä."
 
 #. placeholder {0}: levelConfig.stats.maxWorkers
 #. placeholder {1}: typeof levelConfig.stats.dailyHires !== 'undefined' && ( <> <br /> Daily hiring limit of{' '} <EntityValue IconComponent={WorkerIcon}> {levelConfig.stats.dailyHires} </EntityValue>{' '} per day. </> )
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:165
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:178
 msgid "Maximum of <0>{0}</0> workers.{1}"
 msgstr "Enintään <0>{0}</0> työntekijää.{1}"
 
@@ -5210,7 +5239,7 @@ msgstr "Viestistä tykätty"
 msgid "Military & Battles"
 msgstr "Armeija ja taistelut"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:54
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:57
 msgid "Military base"
 msgstr "Sotilastukikohta"
 
@@ -5285,7 +5314,7 @@ msgstr "ulkoministeri"
 msgid "Mission tags"
 msgstr ""
 
-#: src/components/_layout/LayoutRightIcons.tsx:173
+#: src/components/_layout/LayoutRightIcons.tsx:243
 #: src/components/_layout/MoreButtonNav.tsx:105
 #: src/components/_user/mission/MissionsList.tsx:159
 msgid "Missions"
@@ -5353,7 +5382,7 @@ msgstr "Esitysehdotus"
 msgid "Motions"
 msgstr "Liikkeet"
 
-#: src/components/_military/hit/HitMoveButton.tsx:84
+#: src/components/_military/hit/HitMoveButton.tsx:78
 msgid "Move"
 msgstr ""
 
@@ -5618,7 +5647,7 @@ msgstr "Uusi työntekijä"
 msgid "Newest"
 msgstr "Uusin"
 
-#: src/components/_layout/LayoutRightIcons.tsx:199
+#: src/components/_layout/LayoutRightIcons.tsx:269
 #: src/components/_layout/MoreButtonNav.tsx:114
 msgid "News"
 msgstr "Uutiset"
@@ -6006,7 +6035,7 @@ msgstr "Avaa tapauksesi!"
 msgid "Operative"
 msgstr "Tiedustelija"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:159
+#: src/components/_layout/LayoutLeftIcons.tsx:94
 msgid "Options"
 msgstr "Vaihtoehdot"
 
@@ -6069,7 +6098,7 @@ msgstr "Kohteen <0/> omistusoikeus on siirtynyt <1/>:lle <2/>"
 msgid "Ownership transferred successfully"
 msgstr "Omistusoikeus siirrettiin onnistuneesti"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:71
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:75
 msgid "Pacification Center"
 msgstr "Rauhoituskeskus"
 
@@ -6112,7 +6141,7 @@ msgstr "Osallistu taisteluun"
 msgid "Parties"
 msgstr "Puolueet"
 
-#: src/components/_layout/LayoutRightIcons.tsx:223
+#: src/components/_layout/LayoutRightIcons.tsx:293
 #: src/components/_layout/MoreButtonNav.tsx:142
 #: src/components/_user/notification/notificationPrefs.categories.ts:157
 #: src/pages/user/[userId]/index.tsx:176
@@ -6541,7 +6570,7 @@ msgstr "Ehdota palkkojen alentamista"
 msgid "Propositions"
 msgstr "Ehdotukset"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:84
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:89
 msgid "Public transport"
 msgstr ""
 
@@ -6585,7 +6614,7 @@ msgstr "Sijoituspalkinto"
 msgid "Rankings"
 msgstr "Rankingit"
 
-#: src/components/_layout/LayoutRightIcons.tsx:233
+#: src/components/_layout/LayoutRightIcons.tsx:303
 msgid "Ranks"
 msgstr "Sijoitukset"
 
@@ -6977,7 +7006,7 @@ msgstr "Palauta käyttäjänimi"
 msgid "Reshuffle in"
 msgstr "Järjestä uudelleen"
 
-#: src/components/_military/hit/HitButton.tsx:469
+#: src/components/_military/hit/HitButton.tsx:497
 msgid "Resist"
 msgstr "Vastustaa"
 
@@ -7121,7 +7150,7 @@ msgstr "Kierroksia voitettu"
 msgid "Rounds Won"
 msgstr "Voitetut kierrokset"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:169
+#: src/components/_layout/LayoutLeftIcons.tsx:104
 #: src/components/_user/auth/WelcomeModal.tsx:170
 msgid "Rules"
 msgstr "säännöt"
@@ -7384,7 +7413,7 @@ msgstr "Aseta käyttäjätunnuksesi"
 msgid "Settings"
 msgstr "Asetukset"
 
-#: src/components/_layout/LayoutRightIcons.tsx:186
+#: src/components/_layout/LayoutRightIcons.tsx:256
 #: src/components/_layout/MoreButtonNav.tsx:75
 #: src/components/_other/shop/ShopHeader.tsx:52
 msgid "Shop"
@@ -7650,7 +7679,7 @@ msgid "Stone Maul"
 msgstr ""
 
 #: src/components/_economy/company/CompanyTags.tsx:107
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:126
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:135
 msgid "Storage"
 msgstr "Varastointi"
 
@@ -7800,7 +7829,7 @@ msgstr "Kohdealue"
 msgid "Target user"
 msgstr "Kohdekäyttäjä"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:105
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:112
 msgid "Tax Office"
 msgstr ""
 
@@ -8363,7 +8392,7 @@ msgstr "Avaa Tuo kaikki -painike"
 msgid "Unlocked pack"
 msgstr "Avattu pakkaus"
 
-#: src/components/_political/region/UpgradesGrid.tsx:147
+#: src/components/_political/region/UpgradesGrid.tsx:132
 msgid "Unlocks at {dev} development."
 msgstr ""
 
@@ -9477,10 +9506,10 @@ msgstr "sinun@sähköposti.fi"
 msgid "Yours"
 msgstr "Sinun"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:85
+#: src/components/_layout/LayoutRightIcons.tsx:165
 msgid "Zoom in"
 msgstr ""
 
-#: src/components/_layout/LayoutLeftIcons.tsx:93
+#: src/components/_layout/LayoutRightIcons.tsx:173
 msgid "Zoom out"
 msgstr ""
