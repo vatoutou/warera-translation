@@ -116,7 +116,7 @@ msgid "{0} days cooldown"
 msgstr "{0} 天冷却"
 
 #. placeholder {0}: user.data.leveling.freeReset
-#: src/pages/user/[userId]/skills.tsx:217
+#: src/pages/user/[userId]/skills.tsx:213
 msgid "{0} Free"
 msgstr "{0} 次免费"
 
@@ -132,6 +132,11 @@ msgstr "{0} 小时"
 #: src/components/_user/notification/notification.frontConfig.tsx:1675
 msgid "{0} outbid you at ${1}/K"
 msgstr "{0} 出价高于你 ${1}/K"
+
+#. placeholder {0}: leveling.prestigeLevel ?? 0
+#: src/components/_user/user/Level.tsx:141
+msgid "{0} Prestige Points"
+msgstr ""
 
 #. placeholder {0}: data.userId && ( <UserUsername userId={data.userId} withAvatar withFlag /> )
 #: src/components/_user/notification/notification.frontConfig.tsx:511
@@ -169,7 +174,7 @@ msgstr "会从你给员工的薪资中扣除 {0}% 所得税"
 msgid "{0}% of invested"
 msgstr "投入的 {0}%"
 
-#: src/components/_user/mission/MissionsList.tsx:151
+#: src/components/_user/mission/MissionsList.tsx:153
 msgid "{completedCount}/{totalCount} completed"
 msgstr "{completedCount}/{totalCount} 已完成"
 
@@ -204,6 +209,11 @@ msgstr "/天"
 
 #: src/components/_political/region/CreateUpgradeModal.tsx:105
 msgid "/h"
+msgstr ""
+
+#. placeholder {0}: staticGameConfig.user.prestige.xpMultiplierPercent
+#: src/components/_user/user/Level.tsx:147
+msgid "+{0}% XP activated"
 msgstr ""
 
 #: src/components/_user/notification/notification.frontConfig.tsx:381
@@ -1413,8 +1423,8 @@ msgid "Additional cost"
 msgstr "额外花费"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:77
-#: src/components/_layout/LayoutRightIcons.tsx:159
-#: src/components/_layout/MoreButtonNav.tsx:67
+#: src/components/_layout/LayoutRightIcons.tsx:158
+#: src/components/_layout/MoreButtonNav.tsx:71
 msgid "Admin"
 msgstr "管理员"
 
@@ -1521,8 +1531,9 @@ msgid "All types"
 msgstr "全部类型"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:156
-#: src/components/_layout/LayoutRightIcons.tsx:261
+#: src/components/_layout/LayoutRightIcons.tsx:208
 #: src/components/_layout/map.frontConfig.tsx:34
+#: src/components/_layout/MoreButtonNav.tsx:93
 #: src/components/_political/country/CountryDiplomacyGrid.tsx:193
 #: src/components/_political/map/MapMenu.tsx:264
 msgid "Alliance"
@@ -1783,10 +1794,6 @@ msgstr "文章"
 msgid "Articles by <0/>"
 msgstr "<0/> 的文章"
 
-#: src/components/_user/user/SkillUpgrade.tsx:217
-msgid "Assign prestige bonus?"
-msgstr ""
-
 #: src/components/_other/shop/skin.frontConfig.tsx:305
 msgid "AT Ammo"
 msgstr ""
@@ -1928,7 +1935,7 @@ msgstr ""
 msgid "b. Revealing personal information or doxxing (such as names or addresses), without explicit consent"
 msgstr "b. 未经明确同意泄露或公开个人信息（如姓名、住址等）"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:170
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:176
 msgid "Baby Boomer"
 msgstr "婴儿潮"
 
@@ -2068,7 +2075,7 @@ msgstr ""
 msgid "Battle orders to defend your core regions and revolts cost <0>{0}</0> less."
 msgstr ""
 
-#: src/components/_layout/LayoutMenu.tsx:169
+#: src/components/_layout/LayoutMenu.tsx:170
 #: src/components/_military/battle/BattlesHeader.tsx:21
 #: src/components/_military/war/WarHeader.tsx:84
 #: src/pages/region/[regionId]/index.tsx:141
@@ -2602,11 +2609,11 @@ msgstr "已赚取佣金"
 msgid "Commodore"
 msgstr "准将"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:141
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:147
 msgid "Community"
 msgstr "社区"
 
-#: src/components/_layout/LayoutMenu.tsx:210
+#: src/components/_layout/LayoutMenu.tsx:213
 #: src/components/_user/user/MyAvatar.tsx:48
 #: src/components/_user/user/UserHeader.tsx:219
 #: src/components/_user/user/WealthPanel.tsx:42
@@ -2853,7 +2860,7 @@ msgstr "核心地区"
 msgid "Corporal"
 msgstr "下士"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:223
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:229
 msgid "Council Member"
 msgstr "常委成员"
 
@@ -2874,8 +2881,8 @@ msgid "Countries"
 msgstr "国家"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:125
-#: src/components/_layout/LayoutRightIcons.tsx:217
-#: src/components/_layout/MoreButtonNav.tsx:133
+#: src/components/_layout/LayoutRightIcons.tsx:187
+#: src/components/_layout/MoreButtonNav.tsx:102
 #: src/components/_military/battle/BattleCountrySide.tsx:73
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:133
 #: src/components/_political/country/CountryHeader.tsx:55
@@ -2924,7 +2931,7 @@ msgstr "国家生产加成"
 msgid "Country to invite"
 msgstr ""
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:181
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:187
 msgid "Country Tournament Winner"
 msgstr "国家锦标赛冠军"
 
@@ -3057,7 +3064,7 @@ msgstr "个性化用户名称字体"
 msgid "d. Any form of discrimination, racism, xenophobia, antisemitism, homophobia, transphobia and hate speech"
 msgstr "d. 任何形式的歧视、种族主义、排外、反犹、恐同、恐跨以及仇恨言论"
 
-#: src/components/_user/mission/MissionsList.tsx:169
+#: src/components/_user/mission/MissionsList.tsx:171
 msgid "Daily"
 msgstr "每日"
 
@@ -3693,8 +3700,8 @@ msgid "Ethics Points:"
 msgstr "政策点数："
 
 #: src/components/_layout/LayoutMenuGrid.tsx:136
-#: src/components/_layout/LayoutRightIcons.tsx:239
-#: src/components/_layout/MoreButtonNav.tsx:96
+#: src/components/_layout/LayoutRightIcons.tsx:258
+#: src/components/_layout/MoreButtonNav.tsx:144
 #: src/pages/country/[countryId]/index.tsx:266
 msgid "Events"
 msgstr "活动"
@@ -3730,7 +3737,7 @@ msgstr "已过期：回合结束"
 msgid "Expires in"
 msgstr "过期于"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:217
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:223
 msgid "Exploit Finder"
 msgstr "漏洞利用发现者"
 
@@ -3872,8 +3879,8 @@ msgid "Fee"
 msgstr "手续费"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:172
-#: src/components/_layout/LayoutRightIcons.tsx:289
-#: src/components/_layout/MoreButtonNav.tsx:88
+#: src/components/_layout/LayoutRightIcons.tsx:276
+#: src/components/_layout/MoreButtonNav.tsx:136
 msgid "Feed"
 msgstr "动态"
 
@@ -4045,7 +4052,7 @@ msgstr "Fur Tunic"
 msgid "g. The use of profiles (picture, description, name) related to aforementioned ideologies and movements as well as political figures linked to ongoing real-world wars and armed conflicts. Humoristic names, descriptions and pictures are tolerated, with the exception of any content related to nazism and neo-nazism."
 msgstr "g. 使用与上述意识形态/运动相关的个人资料（头像、简介、名字），以及与现实世界正在进行的战争与武装冲突相关的政治人物。允许搞笑的名称、简介和图片，但与纳粹和新纳粹相关的内容除外。"
 
-#: src/components/_user/user/Level.tsx:93
+#: src/components/_user/user/Level.tsx:95
 msgid "Gain <0>Xp</0> by finishing your missions!"
 msgstr "通过完成你的任务来获得<0>Xp</0>！"
 
@@ -4065,7 +4072,7 @@ msgstr "宝石是用来在商店中购买资产，以及赠送支持者机会给
 msgid "General"
 msgstr "元帅"
 
-#: src/components/_user/mission/MissionsList.tsx:233
+#: src/components/_user/mission/MissionsList.tsx:236
 msgid "Generate Missions"
 msgstr "产生任务"
 
@@ -4118,7 +4125,7 @@ msgstr "授予所有权"
 msgid "Give your token a descriptive name so you can identify it later."
 msgstr "给你的 token 一个描述，这样你可以识别它"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:193
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:199
 msgid "Giveaway Winner"
 msgstr "抽奖获胜者"
 
@@ -4169,7 +4176,7 @@ msgstr "政府"
 msgid "Government announcement"
 msgstr ""
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:234
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:240
 msgid "Government Member"
 msgstr "政府成员"
 
@@ -4549,7 +4556,7 @@ msgstr "新兵"
 msgid "Intentional or repeated violations of this policy will result in a permanent ban."
 msgstr "故意或反复违反本政策将导致永久封禁。"
 
-#: src/components/_layout/LayoutMenu.tsx:128
+#: src/components/_layout/LayoutMenu.tsx:129
 #: src/components/_user/user/MyAvatar.tsx:35
 #: src/components/_user/user/UserHeader.tsx:172
 #: src/pages/companies.tsx:83
@@ -5073,7 +5080,7 @@ msgstr "管理"
 msgid "map"
 msgstr "地图"
 
-#: src/components/_layout/LayoutMapIcons.tsx:67
+#: src/components/_layout/LayoutMapIcons.tsx:53
 #: src/components/_layout/LayoutOptions.tsx:100
 msgid "Map"
 msgstr "地图"
@@ -5088,8 +5095,9 @@ msgid "Map icons"
 msgstr ""
 
 #: src/components/_economy/market/MarketHeader.tsx:37
-#: src/components/_layout/LayoutMenu.tsx:191
+#: src/components/_layout/LayoutMenu.tsx:193
 #: src/components/_layout/LayoutMenuGrid.tsx:85
+#: src/components/_layout/MoreButtonNav.tsx:176
 #: src/pages/country/[countryId]/account.tsx:31
 #: src/pages/party/[partyId]/account.tsx:24
 #: src/pages/user/[userId]/account.tsx:26
@@ -5289,7 +5297,7 @@ msgstr "军衔"
 msgid "Military Ranks"
 msgstr "军衔"
 
-#: src/components/_layout/MoreButtonNav.tsx:152
+#: src/components/_layout/MoreButtonNav.tsx:121
 #: src/components/_user/notification/notificationPrefs.categories.ts:161
 msgid "Military Unit"
 msgstr "军团"
@@ -5334,9 +5342,9 @@ msgid "Mission tags"
 msgstr ""
 
 #: src/components/_layout/LayoutMenuGrid.tsx:94
-#: src/components/_layout/LayoutRightIcons.tsx:176
-#: src/components/_layout/MoreButtonNav.tsx:105
-#: src/components/_user/mission/MissionsList.tsx:148
+#: src/components/_layout/LayoutRightIcons.tsx:224
+#: src/components/_layout/MoreButtonNav.tsx:152
+#: src/components/_user/mission/MissionsList.tsx:150
 msgid "Missions"
 msgstr "任务"
 
@@ -5369,7 +5377,7 @@ msgid "Money Won"
 msgstr "获得的钱"
 
 #: src/components/_military/mu/MuMemberList.tsx:191
-#: src/components/_user/mission/MissionsList.tsx:194
+#: src/components/_user/mission/MissionsList.tsx:197
 msgid "Monthly"
 msgstr "每月"
 
@@ -5386,9 +5394,9 @@ msgstr ""
 msgid "Monthly:"
 msgstr "每月："
 
+#: src/components/_layout/LayoutLeftIcons.tsx:162
 #: src/components/_layout/LayoutMenuGrid.tsx:224
-#: src/components/_layout/LayoutRightIcons.tsx:300
-#: src/components/_layout/MoreButtonNav.tsx:196
+#: src/components/_layout/MoreButtonNav.tsx:216
 msgid "More"
 msgstr "更多"
 
@@ -5438,7 +5446,7 @@ msgstr "至顶"
 msgid "Moved to a new company"
 msgstr "移动至一个新公司"
 
-#: src/components/_layout/LayoutMenu.tsx:141
+#: src/components/_layout/LayoutMenu.tsx:142
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:135
 msgid "MU"
 msgstr "军团"
@@ -5476,7 +5484,7 @@ msgstr "已转移军团所有权"
 msgid "MU reached level {0}! Reward: {rewardDisplay}"
 msgstr "军团达到了 {0} 级！奖励：{rewardDisplay}"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:187
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:193
 msgid "MU Tournament Winner"
 msgstr "军团锦标赛冠军"
 
@@ -5675,8 +5683,8 @@ msgid "Newest"
 msgstr "最新"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:115
-#: src/components/_layout/LayoutRightIcons.tsx:201
-#: src/components/_layout/MoreButtonNav.tsx:114
+#: src/components/_layout/LayoutRightIcons.tsx:248
+#: src/components/_layout/MoreButtonNav.tsx:161
 msgid "News"
 msgstr "新闻"
 
@@ -5808,7 +5816,7 @@ msgstr "没有雇佣兵合约"
 msgid "No military units found"
 msgstr "没有找到军团"
 
-#: src/components/_user/mission/MissionsList.tsx:223
+#: src/components/_user/mission/MissionsList.tsx:226
 msgid "No missions available"
 msgstr "没有任务可用"
 
@@ -6071,7 +6079,7 @@ msgstr "打开你的箱子！"
 msgid "Operative"
 msgstr "特勤员"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:82
+#: src/components/_layout/LayoutLeftIcons.tsx:99
 msgid "Options"
 msgstr "选项"
 
@@ -6178,8 +6186,8 @@ msgid "Parties"
 msgstr "政党"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:145
-#: src/components/_layout/LayoutRightIcons.tsx:245
-#: src/components/_layout/MoreButtonNav.tsx:142
+#: src/components/_layout/LayoutRightIcons.tsx:196
+#: src/components/_layout/MoreButtonNav.tsx:111
 #: src/components/_user/notification/notificationPrefs.categories.ts:159
 #: src/pages/user/[userId]/index.tsx:176
 msgid "Party"
@@ -6360,7 +6368,7 @@ msgstr "允许政治接管（PTO），但滥用该机制以牟利（为个人/�
 msgid "Politics & Government"
 msgstr "政治与政府"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:199
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:205
 msgid "Popular Article"
 msgstr "热门文章"
 
@@ -6443,21 +6451,22 @@ msgstr "<0/> 的总统选举投票开始了"
 msgid "Presidential elections"
 msgstr "总统选举"
 
-#: src/pages/user/[userId]/skills.tsx:191
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:135
+#: src/pages/user/[userId]/skills.tsx:193
 msgid "Prestige"
 msgstr ""
 
-#. placeholder {0}: leveling.prestigeLevel
-#: src/components/_user/user/Level.tsx:135
-msgid "Prestige {0}"
-msgstr ""
-
-#: src/components/_user/user/SkillUpgrade.tsx:193
+#: src/components/_user/user/SkillUpgrade.tsx:233
 msgid "Prestige bonus active on this skill"
 msgstr ""
 
-#: src/components/_user/user/SkillUpgrade.tsx:64
-msgid "Prestige bonus assigned!"
+#: src/components/_user/user/SkillUpgrade.tsx:235
+msgid "Prestige bonus staged, save to apply (tap to remove)"
+msgstr ""
+
+#. placeholder {0}: staticGameConfig.user.prestige.skillBonusLevels
+#: src/components/_user/user/SkillUpgrade.tsx:244
+msgid "Prestige gives the equivalent of {0} level of the selected skill"
 msgstr ""
 
 #: src/components/_user/user/SkillValue.tsx:68
@@ -6677,7 +6686,7 @@ msgstr "排名"
 msgid "Ranking reward"
 msgstr "排名奖励"
 
-#: src/components/_layout/MoreButtonNav.tsx:122
+#: src/components/_layout/MoreButtonNav.tsx:169
 #: src/pages/alliance/[allianceId]/index.tsx:48
 #: src/pages/country/[countryId]/index.tsx:167
 #: src/pages/user/[userId]/index.tsx:123
@@ -6685,7 +6694,7 @@ msgid "Rankings"
 msgstr "排名"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:164
-#: src/components/_layout/LayoutRightIcons.tsx:272
+#: src/components/_layout/LayoutRightIcons.tsx:267
 msgid "Ranks"
 msgstr "排行榜"
 
@@ -6750,7 +6759,7 @@ msgid "Reach Military Rank 5"
 msgstr "达到军衔 5"
 
 #. placeholder {0}: leveling.level + 1
-#: src/components/_user/user/Level.tsx:113
+#: src/components/_user/user/Level.tsx:115
 msgid "Reaching level {0} will give you <0>{nextLevelSkillPoints} Skill Points</0>."
 msgstr "达到等级 {0} 将会给你 <0>{nextLevelSkillPoints} 技能点</0>。"
 
@@ -7069,7 +7078,7 @@ msgstr "请求: "
 msgid "Reroll Mission"
 msgstr "重骰任务"
 
-#: src/pages/user/[userId]/skills.tsx:209
+#: src/pages/user/[userId]/skills.tsx:205
 msgid "Reset"
 msgstr "重置"
 
@@ -7253,7 +7262,7 @@ msgstr "回合获胜"
 msgid "Rounds Won"
 msgstr "回合获胜"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:91
+#: src/components/_layout/LayoutLeftIcons.tsx:109
 #: src/components/_user/auth/WelcomeModal.tsx:170
 msgid "Rules"
 msgstr "规则"
@@ -7268,7 +7277,7 @@ msgstr "生命值要用完了吗？"
 
 #: src/components/_political/party/PartyDescriptionModal.tsx:72
 #: src/components/_user/auth/WelcomeModal.tsx:182
-#: src/pages/user/[userId]/skills.tsx:256
+#: src/pages/user/[userId]/skills.tsx:252
 msgid "Save"
 msgstr "保存"
 
@@ -7517,8 +7526,8 @@ msgid "Settings"
 msgstr "设置"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:104
-#: src/components/_layout/LayoutRightIcons.tsx:189
-#: src/components/_layout/MoreButtonNav.tsx:75
+#: src/components/_layout/LayoutRightIcons.tsx:237
+#: src/components/_layout/MoreButtonNav.tsx:79
 #: src/components/_other/shop/ShopHeader.tsx:52
 msgid "Shop"
 msgstr "商店"
@@ -7662,10 +7671,6 @@ msgstr "特产物品"
 msgid "Spellcaster Gloves"
 msgstr "Spellcaster Gloves"
 
-#: src/components/_user/user/SkillUpgrade.tsx:194
-msgid "Spend a prestige point for a permanent bonus (reset on skill reset)"
-msgstr ""
-
 #: src/components/_other/tour/tuto.frontConfig.tsx:74
 msgid "Spend your <0>Energy</0> working here to earn <1>Money</1>. Keep clicking to work more!"
 msgstr "在此花费你的<0>能量</0>工作以赚取<1>金钱</1>。持续点击来工作更多次！"
@@ -7676,6 +7681,10 @@ msgstr "支出"
 
 #: src/components/_political/country/CountryHeader.tsx:186
 msgid "Stable, conquest-proof strength. Still used for unrest, government wages and revolution cost. Other costs use <0>Average development</0>."
+msgstr ""
+
+#: src/components/_user/user/SkillUpgrade.tsx:236
+msgid "Stage a prestige bonus on this skill (applied on save, reset on skill reset)"
 msgstr ""
 
 #: src/components/_user/user/skills.frontConfig.tsx:98
@@ -7736,7 +7745,7 @@ msgstr "开始于 <0/>"
 msgid "Started<0/><1/>"
 msgstr "已开始<0/><1/>"
 
-#: src/components/_user/mission/MissionsList.tsx:206
+#: src/components/_user/mission/MissionsList.tsx:210
 msgid "Starting"
 msgstr "新手任务"
 
@@ -7811,7 +7820,7 @@ msgstr "战略资源已在世界地图中被刷新"
 msgid "Subscribed"
 msgstr "已订阅"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:136
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:142
 msgid "Subscribed and supported the game <3"
 msgstr "订阅并支持了游戏 <3"
 
@@ -7823,7 +7832,7 @@ msgstr "订阅者"
 msgid "Successfully logged in!"
 msgstr "成功登入！"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:159
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:165
 msgid "Sugar Daddy"
 msgstr "金主"
 
@@ -7841,7 +7850,7 @@ msgstr "支持我们"
 
 #: src/components/_economy/work/WorkChart.tsx:291
 #: src/components/_ui/PremiumButtonTag.tsx:22
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:135
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:141
 msgid "Supporter"
 msgstr "支持者"
 
@@ -7852,7 +7861,7 @@ msgstr "支持者"
 msgid "Supporter feature"
 msgstr "支持者功能"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:151
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:157
 msgid "Supporter Gift"
 msgstr "支持者礼物"
 
@@ -8111,10 +8120,6 @@ msgstr "这个法案需要国家中有至少 {minActiveCitizen} 位活跃公民 
 #: src/components/_political/government/Government.tsx:266
 msgid "This member won't be able to be nominated again for {cooldownDays} days."
 msgstr "该成员在 {cooldownDays} 天内无法再次被提名。"
-
-#: src/components/_user/user/SkillUpgrade.tsx:218
-msgid "This permanently boosts this skill until your next skill reset."
-msgstr ""
 
 #: src/pages/region/[regionId]/index.tsx:179
 msgid "This region is not linked to it's owner's capital."
@@ -8408,7 +8413,7 @@ msgstr "转让所有权"
 msgid "Transfer to company (optional)"
 msgstr "调职到其他公司 (可选)"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:209
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:215
 msgid "Translator"
 msgstr "翻译者"
 
@@ -8581,7 +8586,7 @@ msgstr "升级为支持者"
 msgid "Upgrade your skills <0>{count}</0> times"
 msgstr "升级你的技能 <0>{count}</0> 次"
 
-#: src/pages/user/[userId]/skills.tsx:171
+#: src/pages/user/[userId]/skills.tsx:173
 msgid "Upgrade your skills!"
 msgstr "升级你的技能！"
 
@@ -8921,7 +8926,7 @@ msgid "Weapons"
 msgstr "武器"
 
 #: src/components/_military/mu/MuMemberList.tsx:192
-#: src/components/_user/mission/MissionsList.tsx:182
+#: src/components/_user/mission/MissionsList.tsx:184
 msgid "Weekly"
 msgstr "每周"
 
@@ -9127,11 +9132,11 @@ msgstr "你并未参与"
 msgid "You are very skilled!"
 msgstr "你很有自信呢！"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:225
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:231
 msgid "You are/were a council member, sharing ideas and feedback to improve the game <3"
 msgstr "你（曾）是理事会成员，分享想法和反馈以改进游戏 <3"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:143
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:149
 msgid "You are/were a part of the staff and helped the game to grow <3"
 msgstr "你曾是工作人员的一员，帮助游戏成长 <3"
 
@@ -9148,7 +9153,7 @@ msgid "You broke the rng"
 msgstr "随机数生成器都被你玩坏了"
 
 #. placeholder {0}: staticGameConfig.referral.levelNeededForBadge
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:172
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:178
 msgid "You brought 10 babies to the world (>= lvl {0})"
 msgstr "你带来了 10 个宝宝（>= {0} 级）"
 
@@ -9160,7 +9165,7 @@ msgstr "你可以在仓库中通过选取装备来拆解装备。"
 msgid "You can optionally link a campaign article to your candidacy."
 msgstr "你可以在参选时填上宣传文章链接"
 
-#: src/components/_user/user/Level.tsx:87
+#: src/components/_user/user/Level.tsx:89
 msgid "You can upgrade your skills!"
 msgstr "你可以升级技能了！"
 
@@ -9188,7 +9193,7 @@ msgstr "你售出皮肤包获得了宝石！"
 msgid "You feel healthy, the debuff effect no longer affects you."
 msgstr "减益效果不再影响你，你感觉好多了。"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:153
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:159
 msgid "You gifted a supporter plan subscription to someone <3"
 msgstr "你向他人赠送了支持者计划订阅 <3"
 
@@ -9251,11 +9256,11 @@ msgstr "你必须等待 {0} 天后才能再次接管一个国家。"
 msgid "You helped the dev find a bug, ty <3"
 msgstr "你帮助开发者找到了一个 bug，感谢 <3"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:218
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:224
 msgid "You helped the dev find an exploit, ty <3"
 msgstr "你帮助开发者找到了一个漏洞利用，感谢 <3"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:211
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:217
 msgid "You helped translate the game into another language"
 msgstr "你帮助将游戏翻译成了另一种语言"
 
@@ -9298,13 +9303,17 @@ msgstr "你必须花费所有 3 点政策点数 (剩余 {pointsRemaining})"
 msgid "You need to equip a weapon first"
 msgstr "你需要先装备一件武器"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:161
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:167
 msgid "You paid the dev's bills <3 (top 3 in monthly supporter gifts ranking)"
 msgstr "你帮开发者付了账单 <3（每月支持者礼物排行前 3）"
 
 #: src/components/_user/notification/notification.frontConfig.tsx:1053
 msgid "You premium gift from <0/> has expired! Would you consider subscribing and supporting the game? 👉👈"
 msgstr "<0/> 赠送给你的高级订阅已到期，有考虑订阅和赞助本游戏吗？👉👈"
+
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:136
+msgid "You prestiged and lost your levels"
+msgstr ""
 
 #. placeholder {0}: data.rank
 #: src/components/_user/notification/notification.frontConfig.tsx:1267
@@ -9379,7 +9388,7 @@ msgstr "你当选为本国总统"
 msgid "You were here at the beginning of War Era"
 msgstr "你在 War Era 的最初阶段就已加入"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:236
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:242
 msgid "You were nominated as a government member of a country"
 msgstr "你被提名为某国政府成员"
 
@@ -9391,7 +9400,7 @@ msgstr "你被提名为本国副总统"
 msgid "You were so close"
 msgstr "就差这么一点"
 
-#: src/pages/user/[userId]/skills.tsx:122
+#: src/pages/user/[userId]/skills.tsx:124
 msgid "You will drop to level 25 (losing 65,000 XP), gain a permanent +50% XP bonus and a prestige point, and your skills will be reset for free."
 msgstr ""
 
@@ -9400,15 +9409,15 @@ msgstr ""
 msgid "You win money for the badge + {0}% of the badge income of all your referrals"
 msgstr "你会从你所有推荐的人中额外获得他们徽章收入的 {0}%"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:182
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:188
 msgid "You won a country tournament"
 msgstr "你赢得了一场国家锦标赛"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:194
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:200
 msgid "You won a giveaway"
 msgstr "你赢得了一次抽奖"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:188
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:194
 msgid "You won a MU tournament"
 msgstr "你赢得了一场军团锦标赛"
 
@@ -9448,7 +9457,7 @@ msgstr "你太强了"
 msgid "You've completed some missions! Let's collect your XP rewards."
 msgstr "你已完成了任务，去领取经验值奖励吧！"
 
-#: src/components/_user/user/Level.tsx:127
+#: src/components/_user/user/Level.tsx:129
 msgid "You've reached max level!"
 msgstr "你已达到等级上限"
 
@@ -9473,7 +9482,7 @@ msgstr ""
 msgid "Your application to <0/> has been rejected"
 msgstr "你向 <0/> 提交的申请已遭拒绝"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:201
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:207
 msgid "Your article reached 2% of the active population in score (min 10)"
 msgstr "你的文章得分达到了活跃人口的 2%（至少 10）"
 
@@ -9638,10 +9647,10 @@ msgstr "your@email.com"
 msgid "Yours"
 msgstr "你的"
 
-#: src/components/_layout/LayoutMapIcons.tsx:84
+#: src/components/_layout/LayoutMapIcons.tsx:62
 msgid "Zoom in"
 msgstr ""
 
-#: src/components/_layout/LayoutMapIcons.tsx:76
+#: src/components/_layout/LayoutMapIcons.tsx:70
 msgid "Zoom out"
 msgstr ""

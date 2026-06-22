@@ -116,7 +116,7 @@ msgid "{0} days cooldown"
 msgstr "{0} Tage Abklingzeit"
 
 #. placeholder {0}: user.data.leveling.freeReset
-#: src/pages/user/[userId]/skills.tsx:217
+#: src/pages/user/[userId]/skills.tsx:213
 msgid "{0} Free"
 msgstr "{0} Kostenlos"
 
@@ -132,6 +132,11 @@ msgstr "{0} Stunden"
 #: src/components/_user/notification/notification.frontConfig.tsx:1675
 msgid "{0} outbid you at ${1}/K"
 msgstr "{0} hat dich mit ${1}/K überboten"
+
+#. placeholder {0}: leveling.prestigeLevel ?? 0
+#: src/components/_user/user/Level.tsx:141
+msgid "{0} Prestige Points"
+msgstr ""
 
 #. placeholder {0}: data.userId && ( <UserUsername userId={data.userId} withAvatar withFlag /> )
 #: src/components/_user/notification/notification.frontConfig.tsx:511
@@ -169,7 +174,7 @@ msgstr "{0}% Einkommensteuer wird vom Lohn deiner Arbeiter abgezogen."
 msgid "{0}% of invested"
 msgstr "{0}% des Investierten"
 
-#: src/components/_user/mission/MissionsList.tsx:151
+#: src/components/_user/mission/MissionsList.tsx:153
 msgid "{completedCount}/{totalCount} completed"
 msgstr "{completedCount}/{totalCount} abgeschlossen"
 
@@ -204,6 +209,11 @@ msgstr "/Tag"
 
 #: src/components/_political/region/CreateUpgradeModal.tsx:105
 msgid "/h"
+msgstr ""
+
+#. placeholder {0}: staticGameConfig.user.prestige.xpMultiplierPercent
+#: src/components/_user/user/Level.tsx:147
+msgid "+{0}% XP activated"
 msgstr ""
 
 #: src/components/_user/notification/notification.frontConfig.tsx:381
@@ -1413,8 +1423,8 @@ msgid "Additional cost"
 msgstr "Zusatzkosten"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:77
-#: src/components/_layout/LayoutRightIcons.tsx:159
-#: src/components/_layout/MoreButtonNav.tsx:67
+#: src/components/_layout/LayoutRightIcons.tsx:158
+#: src/components/_layout/MoreButtonNav.tsx:71
 msgid "Admin"
 msgstr "Admin"
 
@@ -1521,8 +1531,9 @@ msgid "All types"
 msgstr "Alle Typen"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:156
-#: src/components/_layout/LayoutRightIcons.tsx:261
+#: src/components/_layout/LayoutRightIcons.tsx:208
 #: src/components/_layout/map.frontConfig.tsx:34
+#: src/components/_layout/MoreButtonNav.tsx:93
 #: src/components/_political/country/CountryDiplomacyGrid.tsx:193
 #: src/components/_political/map/MapMenu.tsx:264
 msgid "Alliance"
@@ -1783,10 +1794,6 @@ msgstr "Artikel"
 msgid "Articles by <0/>"
 msgstr "Artikel von <0/>"
 
-#: src/components/_user/user/SkillUpgrade.tsx:217
-msgid "Assign prestige bonus?"
-msgstr ""
-
 #: src/components/_other/shop/skin.frontConfig.tsx:305
 msgid "AT Ammo"
 msgstr ""
@@ -1928,7 +1935,7 @@ msgstr "Durchschnittliche Entwicklung"
 msgid "b. Revealing personal information or doxxing (such as names or addresses), without explicit consent"
 msgstr "b. Veröffentlichung persönlicher Informationen oder Doxxing (z. B. Namen oder Adressen) ohne ausdrückliche Zustimmung"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:170
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:176
 msgid "Baby Boomer"
 msgstr "Babyboomer"
 
@@ -2068,7 +2075,7 @@ msgstr "Kampfbefehle zur Verteidigung deiner Kernregionen sowie Aufstände sind 
 msgid "Battle orders to defend your core regions and revolts cost <0>{0}</0> less."
 msgstr "Kampfbefehle zur Verteidigung deiner Kernregionen sowie Aufstände kosten <0>{0}</0> weniger."
 
-#: src/components/_layout/LayoutMenu.tsx:169
+#: src/components/_layout/LayoutMenu.tsx:170
 #: src/components/_military/battle/BattlesHeader.tsx:21
 #: src/components/_military/war/WarHeader.tsx:84
 #: src/pages/region/[regionId]/index.tsx:141
@@ -2602,11 +2609,11 @@ msgstr "Provision verdient"
 msgid "Commodore"
 msgstr "Kommodore"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:141
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:147
 msgid "Community"
 msgstr "Community"
 
-#: src/components/_layout/LayoutMenu.tsx:210
+#: src/components/_layout/LayoutMenu.tsx:213
 #: src/components/_user/user/MyAvatar.tsx:48
 #: src/components/_user/user/UserHeader.tsx:219
 #: src/components/_user/user/WealthPanel.tsx:42
@@ -2853,7 +2860,7 @@ msgstr "Kernregionen"
 msgid "Corporal"
 msgstr "Unteroffizier"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:223
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:229
 msgid "Council Member"
 msgstr "Ratsmitglied"
 
@@ -2874,8 +2881,8 @@ msgid "Countries"
 msgstr "Länder"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:125
-#: src/components/_layout/LayoutRightIcons.tsx:217
-#: src/components/_layout/MoreButtonNav.tsx:133
+#: src/components/_layout/LayoutRightIcons.tsx:187
+#: src/components/_layout/MoreButtonNav.tsx:102
 #: src/components/_military/battle/BattleCountrySide.tsx:73
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:133
 #: src/components/_political/country/CountryHeader.tsx:55
@@ -2924,7 +2931,7 @@ msgstr "Landes-Produktionsbonus"
 msgid "Country to invite"
 msgstr ""
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:181
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:187
 msgid "Country Tournament Winner"
 msgstr "Landesturnier-Gewinner"
 
@@ -3057,7 +3064,7 @@ msgstr "Benutzerdefinierte Schriftart des Benutzernamens"
 msgid "d. Any form of discrimination, racism, xenophobia, antisemitism, homophobia, transphobia and hate speech"
 msgstr "d. Jede Form von Diskriminierung, Rassismus, Fremdenfeindlichkeit, Antisemitismus, Homophobie, Transphobie und Hassrede"
 
-#: src/components/_user/mission/MissionsList.tsx:169
+#: src/components/_user/mission/MissionsList.tsx:171
 msgid "Daily"
 msgstr "Täglich"
 
@@ -3693,8 +3700,8 @@ msgid "Ethics Points:"
 msgstr "Ethik-Punkte:"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:136
-#: src/components/_layout/LayoutRightIcons.tsx:239
-#: src/components/_layout/MoreButtonNav.tsx:96
+#: src/components/_layout/LayoutRightIcons.tsx:258
+#: src/components/_layout/MoreButtonNav.tsx:144
 #: src/pages/country/[countryId]/index.tsx:266
 msgid "Events"
 msgstr "Events"
@@ -3730,7 +3737,7 @@ msgstr "Abgelaufen: Runde beendet"
 msgid "Expires in"
 msgstr "Läuft ab in"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:217
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:223
 msgid "Exploit Finder"
 msgstr "Exploit-Finder"
 
@@ -3872,8 +3879,8 @@ msgid "Fee"
 msgstr "Kaution"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:172
-#: src/components/_layout/LayoutRightIcons.tsx:289
-#: src/components/_layout/MoreButtonNav.tsx:88
+#: src/components/_layout/LayoutRightIcons.tsx:276
+#: src/components/_layout/MoreButtonNav.tsx:136
 msgid "Feed"
 msgstr "Feed"
 
@@ -4045,7 +4052,7 @@ msgstr ""
 msgid "g. The use of profiles (picture, description, name) related to aforementioned ideologies and movements as well as political figures linked to ongoing real-world wars and armed conflicts. Humoristic names, descriptions and pictures are tolerated, with the exception of any content related to nazism and neo-nazism."
 msgstr "g. Die Nutzung von Profilen (Bild, Beschreibung, Name), die sich auf die genannten Ideologien und Bewegungen beziehen, sowie auf politische Personen mit Bezug zu laufenden realen Kriegen und bewaffneten Konflikten. Humorvolle Namen, Beschreibungen und Bilder werden toleriert, ausgenommen Inhalte mit Bezug zu Nationalsozialismus und Neonazismus."
 
-#: src/components/_user/user/Level.tsx:93
+#: src/components/_user/user/Level.tsx:95
 msgid "Gain <0>Xp</0> by finishing your missions!"
 msgstr "Verdiene <0>EP</0>, indem du deine Missionen abschließt!"
 
@@ -4065,7 +4072,7 @@ msgstr "Edelsteine werden verwendet, um Gegenstände im Shop zu kaufen und Suppo
 msgid "General"
 msgstr "General"
 
-#: src/components/_user/mission/MissionsList.tsx:233
+#: src/components/_user/mission/MissionsList.tsx:236
 msgid "Generate Missions"
 msgstr "Missionen generieren"
 
@@ -4118,7 +4125,7 @@ msgstr "Besitzrechte übertragen"
 msgid "Give your token a descriptive name so you can identify it later."
 msgstr "Gib deinem Token einen aussagekräftigen Namen, damit du ihn später identifizieren kannst."
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:193
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:199
 msgid "Giveaway Winner"
 msgstr "Giveaway-Gewinner"
 
@@ -4169,7 +4176,7 @@ msgstr "Regierung"
 msgid "Government announcement"
 msgstr "Regierungsbekanntmachung"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:234
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:240
 msgid "Government Member"
 msgstr "Regierungsmitglied"
 
@@ -4549,7 +4556,7 @@ msgstr "Initiant"
 msgid "Intentional or repeated violations of this policy will result in a permanent ban."
 msgstr "Absichtliche oder wiederholte Verstöße gegen diese Regel führen zu einem permanenten Ban."
 
-#: src/components/_layout/LayoutMenu.tsx:128
+#: src/components/_layout/LayoutMenu.tsx:129
 #: src/components/_user/user/MyAvatar.tsx:35
 #: src/components/_user/user/UserHeader.tsx:172
 #: src/pages/companies.tsx:83
@@ -5073,7 +5080,7 @@ msgstr "Management"
 msgid "map"
 msgstr "Karte"
 
-#: src/components/_layout/LayoutMapIcons.tsx:67
+#: src/components/_layout/LayoutMapIcons.tsx:53
 #: src/components/_layout/LayoutOptions.tsx:100
 msgid "Map"
 msgstr "Karte"
@@ -5088,8 +5095,9 @@ msgid "Map icons"
 msgstr ""
 
 #: src/components/_economy/market/MarketHeader.tsx:37
-#: src/components/_layout/LayoutMenu.tsx:191
+#: src/components/_layout/LayoutMenu.tsx:193
 #: src/components/_layout/LayoutMenuGrid.tsx:85
+#: src/components/_layout/MoreButtonNav.tsx:176
 #: src/pages/country/[countryId]/account.tsx:31
 #: src/pages/party/[partyId]/account.tsx:24
 #: src/pages/user/[userId]/account.tsx:26
@@ -5289,7 +5297,7 @@ msgstr "Militärischer Rang:"
 msgid "Military Ranks"
 msgstr "Militärische Ränge"
 
-#: src/components/_layout/MoreButtonNav.tsx:152
+#: src/components/_layout/MoreButtonNav.tsx:121
 #: src/components/_user/notification/notificationPrefs.categories.ts:161
 msgid "Military Unit"
 msgstr "Militäreinheit"
@@ -5334,9 +5342,9 @@ msgid "Mission tags"
 msgstr ""
 
 #: src/components/_layout/LayoutMenuGrid.tsx:94
-#: src/components/_layout/LayoutRightIcons.tsx:176
-#: src/components/_layout/MoreButtonNav.tsx:105
-#: src/components/_user/mission/MissionsList.tsx:148
+#: src/components/_layout/LayoutRightIcons.tsx:224
+#: src/components/_layout/MoreButtonNav.tsx:152
+#: src/components/_user/mission/MissionsList.tsx:150
 msgid "Missions"
 msgstr "Missionen"
 
@@ -5369,7 +5377,7 @@ msgid "Money Won"
 msgstr "Geld gewonnen"
 
 #: src/components/_military/mu/MuMemberList.tsx:191
-#: src/components/_user/mission/MissionsList.tsx:194
+#: src/components/_user/mission/MissionsList.tsx:197
 msgid "Monthly"
 msgstr "Monatlich"
 
@@ -5386,9 +5394,9 @@ msgstr ""
 msgid "Monthly:"
 msgstr "Monatlich:"
 
+#: src/components/_layout/LayoutLeftIcons.tsx:162
 #: src/components/_layout/LayoutMenuGrid.tsx:224
-#: src/components/_layout/LayoutRightIcons.tsx:300
-#: src/components/_layout/MoreButtonNav.tsx:196
+#: src/components/_layout/MoreButtonNav.tsx:216
 msgid "More"
 msgstr "Mehr"
 
@@ -5438,7 +5446,7 @@ msgstr "Nach oben verschieben"
 msgid "Moved to a new company"
 msgstr "In ein neues Unternehmen gewechselt"
 
-#: src/components/_layout/LayoutMenu.tsx:141
+#: src/components/_layout/LayoutMenu.tsx:142
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:135
 msgid "MU"
 msgstr "ME"
@@ -5476,7 +5484,7 @@ msgstr "ME-Besitz übertragen"
 msgid "MU reached level {0}! Reward: {rewardDisplay}"
 msgstr "ME hat Level {0} erreicht! Belohnung: {rewardDisplay}"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:187
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:193
 msgid "MU Tournament Winner"
 msgstr "ME-Turniersieger"
 
@@ -5675,8 +5683,8 @@ msgid "Newest"
 msgstr "Neueste"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:115
-#: src/components/_layout/LayoutRightIcons.tsx:201
-#: src/components/_layout/MoreButtonNav.tsx:114
+#: src/components/_layout/LayoutRightIcons.tsx:248
+#: src/components/_layout/MoreButtonNav.tsx:161
 msgid "News"
 msgstr "News"
 
@@ -5808,7 +5816,7 @@ msgstr "Keine Söldnerverträge"
 msgid "No military units found"
 msgstr "Keine Militäreinheiten gefunden"
 
-#: src/components/_user/mission/MissionsList.tsx:223
+#: src/components/_user/mission/MissionsList.tsx:226
 msgid "No missions available"
 msgstr "Keine Missionen verfügbar"
 
@@ -6071,7 +6079,7 @@ msgstr "Öffne deine Kiste!"
 msgid "Operative"
 msgstr "Agent"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:82
+#: src/components/_layout/LayoutLeftIcons.tsx:99
 msgid "Options"
 msgstr "Optionen"
 
@@ -6178,8 +6186,8 @@ msgid "Parties"
 msgstr "Parteien"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:145
-#: src/components/_layout/LayoutRightIcons.tsx:245
-#: src/components/_layout/MoreButtonNav.tsx:142
+#: src/components/_layout/LayoutRightIcons.tsx:196
+#: src/components/_layout/MoreButtonNav.tsx:111
 #: src/components/_user/notification/notificationPrefs.categories.ts:159
 #: src/pages/user/[userId]/index.tsx:176
 msgid "Party"
@@ -6360,7 +6368,7 @@ msgstr "Political Take Overs (PTOs) sind erlaubt. Sie zu missbrauchen, um Ressou
 msgid "Politics & Government"
 msgstr "Politik & Regierung"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:199
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:205
 msgid "Popular Article"
 msgstr "Beliebter Artikel"
 
@@ -6443,21 +6451,22 @@ msgstr "Die Abstimmung für die Präsidentschaftswahl ist jetzt offen in <0/>"
 msgid "Presidential elections"
 msgstr "Präsidentschaftswahlen"
 
-#: src/pages/user/[userId]/skills.tsx:191
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:135
+#: src/pages/user/[userId]/skills.tsx:193
 msgid "Prestige"
 msgstr ""
 
-#. placeholder {0}: leveling.prestigeLevel
-#: src/components/_user/user/Level.tsx:135
-msgid "Prestige {0}"
-msgstr ""
-
-#: src/components/_user/user/SkillUpgrade.tsx:193
+#: src/components/_user/user/SkillUpgrade.tsx:233
 msgid "Prestige bonus active on this skill"
 msgstr ""
 
-#: src/components/_user/user/SkillUpgrade.tsx:64
-msgid "Prestige bonus assigned!"
+#: src/components/_user/user/SkillUpgrade.tsx:235
+msgid "Prestige bonus staged, save to apply (tap to remove)"
+msgstr ""
+
+#. placeholder {0}: staticGameConfig.user.prestige.skillBonusLevels
+#: src/components/_user/user/SkillUpgrade.tsx:244
+msgid "Prestige gives the equivalent of {0} level of the selected skill"
 msgstr ""
 
 #: src/components/_user/user/SkillValue.tsx:68
@@ -6677,7 +6686,7 @@ msgstr "Rangliste"
 msgid "Ranking reward"
 msgstr "Ranglistenbelohnung"
 
-#: src/components/_layout/MoreButtonNav.tsx:122
+#: src/components/_layout/MoreButtonNav.tsx:169
 #: src/pages/alliance/[allianceId]/index.tsx:48
 #: src/pages/country/[countryId]/index.tsx:167
 #: src/pages/user/[userId]/index.tsx:123
@@ -6685,7 +6694,7 @@ msgid "Rankings"
 msgstr "Ranglisten"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:164
-#: src/components/_layout/LayoutRightIcons.tsx:272
+#: src/components/_layout/LayoutRightIcons.tsx:267
 msgid "Ranks"
 msgstr "Ränge"
 
@@ -6750,7 +6759,7 @@ msgid "Reach Military Rank 5"
 msgstr "Erreiche Militärrang 5"
 
 #. placeholder {0}: leveling.level + 1
-#: src/components/_user/user/Level.tsx:113
+#: src/components/_user/user/Level.tsx:115
 msgid "Reaching level {0} will give you <0>{nextLevelSkillPoints} Skill Points</0>."
 msgstr "Das Erreichen von Level {0} gibt dir <0>{nextLevelSkillPoints} Skillpunkte</0>."
 
@@ -7069,7 +7078,7 @@ msgstr "Anfragen:"
 msgid "Reroll Mission"
 msgstr "Mission neu würfeln"
 
-#: src/pages/user/[userId]/skills.tsx:209
+#: src/pages/user/[userId]/skills.tsx:205
 msgid "Reset"
 msgstr "Zurücksetzen"
 
@@ -7253,7 +7262,7 @@ msgstr "Gewonnene Runden"
 msgid "Rounds Won"
 msgstr "Gewonnene Runden"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:91
+#: src/components/_layout/LayoutLeftIcons.tsx:109
 #: src/components/_user/auth/WelcomeModal.tsx:170
 msgid "Rules"
 msgstr "Regeln"
@@ -7268,7 +7277,7 @@ msgstr "Wenig Gesundheit?"
 
 #: src/components/_political/party/PartyDescriptionModal.tsx:72
 #: src/components/_user/auth/WelcomeModal.tsx:182
-#: src/pages/user/[userId]/skills.tsx:256
+#: src/pages/user/[userId]/skills.tsx:252
 msgid "Save"
 msgstr "Speichern"
 
@@ -7517,8 +7526,8 @@ msgid "Settings"
 msgstr "Einstellungen"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:104
-#: src/components/_layout/LayoutRightIcons.tsx:189
-#: src/components/_layout/MoreButtonNav.tsx:75
+#: src/components/_layout/LayoutRightIcons.tsx:237
+#: src/components/_layout/MoreButtonNav.tsx:79
 #: src/components/_other/shop/ShopHeader.tsx:52
 msgid "Shop"
 msgstr "Shop"
@@ -7662,10 +7671,6 @@ msgstr "Spezialisierungsgegenstand"
 msgid "Spellcaster Gloves"
 msgstr "Zauberer-Handschuhe"
 
-#: src/components/_user/user/SkillUpgrade.tsx:194
-msgid "Spend a prestige point for a permanent bonus (reset on skill reset)"
-msgstr ""
-
 #: src/components/_other/tour/tuto.frontConfig.tsx:74
 msgid "Spend your <0>Energy</0> working here to earn <1>Money</1>. Keep clicking to work more!"
 msgstr "Verbrauche deine <0>Energie</0> beim Arbeiten hier, um <1>Geld</1> zu verdienen. Klicke weiter, um mehr zu arbeiten!"
@@ -7676,6 +7681,10 @@ msgstr "Ausgaben"
 
 #: src/components/_political/country/CountryHeader.tsx:186
 msgid "Stable, conquest-proof strength. Still used for unrest, government wages and revolution cost. Other costs use <0>Average development</0>."
+msgstr ""
+
+#: src/components/_user/user/SkillUpgrade.tsx:236
+msgid "Stage a prestige bonus on this skill (applied on save, reset on skill reset)"
 msgstr ""
 
 #: src/components/_user/user/skills.frontConfig.tsx:98
@@ -7736,7 +7745,7 @@ msgstr "Gestartet <0/>"
 msgid "Started<0/><1/>"
 msgstr "Gestartet<0/><1/>"
 
-#: src/components/_user/mission/MissionsList.tsx:206
+#: src/components/_user/mission/MissionsList.tsx:210
 msgid "Starting"
 msgstr "Startet"
 
@@ -7811,7 +7820,7 @@ msgstr "Strategische Ressourcen wurden über die gesamte Karte neu verteilt."
 msgid "Subscribed"
 msgstr "Abonniert"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:136
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:142
 msgid "Subscribed and supported the game <3"
 msgstr "Abonniert und das Spiel unterstützt <3"
 
@@ -7823,7 +7832,7 @@ msgstr "Abonnenten"
 msgid "Successfully logged in!"
 msgstr "Erfolgreich eingeloggt!"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:159
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:165
 msgid "Sugar Daddy"
 msgstr "Sugar-Daddy"
 
@@ -7841,7 +7850,7 @@ msgstr "Unterstütze uns"
 
 #: src/components/_economy/work/WorkChart.tsx:291
 #: src/components/_ui/PremiumButtonTag.tsx:22
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:135
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:141
 msgid "Supporter"
 msgstr "Supporter"
 
@@ -7852,7 +7861,7 @@ msgstr "Supporter"
 msgid "Supporter feature"
 msgstr "Supporter-Funktion"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:151
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:157
 msgid "Supporter Gift"
 msgstr "Supporter-Geschenk"
 
@@ -8111,10 +8120,6 @@ msgstr "Dieses Gesetz erfordert mindestens {minActiveCitizen} aktive Bürger (Le
 #: src/components/_political/government/Government.tsx:266
 msgid "This member won't be able to be nominated again for {cooldownDays} days."
 msgstr "Dieses Mitglied kann für {cooldownDays} Tage nicht erneut nominiert werden."
-
-#: src/components/_user/user/SkillUpgrade.tsx:218
-msgid "This permanently boosts this skill until your next skill reset."
-msgstr ""
 
 #: src/pages/region/[regionId]/index.tsx:179
 msgid "This region is not linked to it's owner's capital."
@@ -8408,7 +8413,7 @@ msgstr "Besitzrechte übertragen"
 msgid "Transfer to company (optional)"
 msgstr "In Unternehmen versetzen (optional)"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:209
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:215
 msgid "Translator"
 msgstr "Übersetzer"
 
@@ -8581,7 +8586,7 @@ msgstr "Auf Supporter aufstufen"
 msgid "Upgrade your skills <0>{count}</0> times"
 msgstr "Verbessere deine Fähigkeiten <0>{count}</0> Mal"
 
-#: src/pages/user/[userId]/skills.tsx:171
+#: src/pages/user/[userId]/skills.tsx:173
 msgid "Upgrade your skills!"
 msgstr "Verbessere deine Fähigkeiten!"
 
@@ -8921,7 +8926,7 @@ msgid "Weapons"
 msgstr "Waffen"
 
 #: src/components/_military/mu/MuMemberList.tsx:192
-#: src/components/_user/mission/MissionsList.tsx:182
+#: src/components/_user/mission/MissionsList.tsx:184
 msgid "Weekly"
 msgstr "Wöchentlich"
 
@@ -9127,11 +9132,11 @@ msgstr "Du nimmst nicht teil"
 msgid "You are very skilled!"
 msgstr "Du bist sehr geschickt!"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:225
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:231
 msgid "You are/were a council member, sharing ideas and feedback to improve the game <3"
 msgstr "Du bist/warst ein Ratsmitglied und hast Ideen und Feedback geteilt, um das Spiel zu verbessern <3"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:143
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:149
 msgid "You are/were a part of the staff and helped the game to grow <3"
 msgstr "Du bist/warst Teil des Teams und hast geholfen, das Spiel wachsen zu lassen <3"
 
@@ -9148,7 +9153,7 @@ msgid "You broke the rng"
 msgstr "Du hast den RNG geknackt"
 
 #. placeholder {0}: staticGameConfig.referral.levelNeededForBadge
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:172
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:178
 msgid "You brought 10 babies to the world (>= lvl {0})"
 msgstr "Du hast 10 Babys auf die Welt gebracht (>= Lvl {0})"
 
@@ -9160,7 +9165,7 @@ msgstr "Du kannst Gegenstände aus deinem Inventar zerlegen, indem du einen Gege
 msgid "You can optionally link a campaign article to your candidacy."
 msgstr "Du kannst optional einen Wahlkampfartikel mit deiner Kandidatur verknüpfen."
 
-#: src/components/_user/user/Level.tsx:87
+#: src/components/_user/user/Level.tsx:89
 msgid "You can upgrade your skills!"
 msgstr "Du kannst deine Fähigkeiten verbessern!"
 
@@ -9188,7 +9193,7 @@ msgstr "Du hast Edelsteine durch einen Skin-Paket-Verkauf verdient!"
 msgid "You feel healthy, the debuff effect no longer affects you."
 msgstr "Du fühlst dich gesund, der Debuff-Effekt wirkt nicht mehr auf dich."
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:153
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:159
 msgid "You gifted a supporter plan subscription to someone <3"
 msgstr "Du hast jemandem ein Supporter-Plan-Abo geschenkt <3"
 
@@ -9251,11 +9256,11 @@ msgstr "Du musst {0} Tage warten, bevor du erneut die Kontrolle über ein Land �
 msgid "You helped the dev find a bug, ty <3"
 msgstr "Du hast dem Entwickler geholfen, einen Bug zu finden, danke <3"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:218
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:224
 msgid "You helped the dev find an exploit, ty <3"
 msgstr "Du hast dem Entwickler geholfen, einen Exploit zu finden, danke <3"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:211
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:217
 msgid "You helped translate the game into another language"
 msgstr "Du hast geholfen, das Spiel in eine andere Sprache zu übersetzen"
 
@@ -9298,13 +9303,17 @@ msgstr "Du musst alle 3 Ethikpunkte vergeben ({pointsRemaining} verbleibend)"
 msgid "You need to equip a weapon first"
 msgstr "Du musst zuerst eine Waffe ausrüsten"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:161
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:167
 msgid "You paid the dev's bills <3 (top 3 in monthly supporter gifts ranking)"
 msgstr "Du hast die Rechnungen des Entwicklers bezahlt <3 (Top 3 in der monatlichen Supporter-Geschenke-Rangliste)"
 
 #: src/components/_user/notification/notification.frontConfig.tsx:1053
 msgid "You premium gift from <0/> has expired! Would you consider subscribing and supporting the game? 👉👈"
 msgstr "Dein Premium-Geschenk von <0/> ist abgelaufen! Möchtest du vielleicht ein Abo abschließen und das Spiel unterstützen? 👉👈"
+
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:136
+msgid "You prestiged and lost your levels"
+msgstr ""
 
 #. placeholder {0}: data.rank
 #: src/components/_user/notification/notification.frontConfig.tsx:1267
@@ -9379,7 +9388,7 @@ msgstr "Du wurdest zum Präsidenten deines Landes gewählt"
 msgid "You were here at the beginning of War Era"
 msgstr "Du warst von Anfang an bei War Era dabei"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:236
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:242
 msgid "You were nominated as a government member of a country"
 msgstr "Du wurdest als Regierungsmitglied eines Landes nominiert"
 
@@ -9391,7 +9400,7 @@ msgstr "Du wurdest zum Vizepräsidenten deines Landes ernannt"
 msgid "You were so close"
 msgstr "Du warst so nah dran"
 
-#: src/pages/user/[userId]/skills.tsx:122
+#: src/pages/user/[userId]/skills.tsx:124
 msgid "You will drop to level 25 (losing 65,000 XP), gain a permanent +50% XP bonus and a prestige point, and your skills will be reset for free."
 msgstr ""
 
@@ -9400,15 +9409,15 @@ msgstr ""
 msgid "You win money for the badge + {0}% of the badge income of all your referrals"
 msgstr "Du gewinnst Geld für das Abzeichen + {0}% des Abzeichen-Einkommens all deiner Empfehlungen"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:182
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:188
 msgid "You won a country tournament"
 msgstr "Du hast ein Landesturnier gewonnen"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:194
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:200
 msgid "You won a giveaway"
 msgstr "Du hast ein Giveaway gewonnen"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:188
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:194
 msgid "You won a MU tournament"
 msgstr "Du hast ein ME-Turnier gewonnen"
 
@@ -9448,7 +9457,7 @@ msgstr "Du bist in Bestform"
 msgid "You've completed some missions! Let's collect your XP rewards."
 msgstr "Du hast einige Missionen abgeschlossen! Lass uns deine XP-Belohnungen abholen."
 
-#: src/components/_user/user/Level.tsx:127
+#: src/components/_user/user/Level.tsx:129
 msgid "You've reached max level!"
 msgstr "Du hast das maximale Level erreicht!"
 
@@ -9473,7 +9482,7 @@ msgstr ""
 msgid "Your application to <0/> has been rejected"
 msgstr "Deine Bewerbung bei <0/> wurde abgelehnt."
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:201
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:207
 msgid "Your article reached 2% of the active population in score (min 10)"
 msgstr "Dein Artikel hat eine Bewertung von 2% der aktiven Bevölkerung erreicht (mind. 10)"
 
@@ -9638,10 +9647,10 @@ msgstr "deine@email.de"
 msgid "Yours"
 msgstr "Deine"
 
-#: src/components/_layout/LayoutMapIcons.tsx:84
+#: src/components/_layout/LayoutMapIcons.tsx:62
 msgid "Zoom in"
 msgstr ""
 
-#: src/components/_layout/LayoutMapIcons.tsx:76
+#: src/components/_layout/LayoutMapIcons.tsx:70
 msgid "Zoom out"
 msgstr ""

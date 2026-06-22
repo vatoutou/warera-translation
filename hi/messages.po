@@ -116,7 +116,7 @@ msgid "{0} days cooldown"
 msgstr "{0} दिनों का कूलडाउन"
 
 #. placeholder {0}: user.data.leveling.freeReset
-#: src/pages/user/[userId]/skills.tsx:217
+#: src/pages/user/[userId]/skills.tsx:213
 msgid "{0} Free"
 msgstr "{0} निःशुल्क"
 
@@ -132,6 +132,11 @@ msgstr "{0} घंटे"
 #: src/components/_user/notification/notification.frontConfig.tsx:1675
 msgid "{0} outbid you at ${1}/K"
 msgstr "{0} ने ${1}/K पर आपसे अधिक बोली लगाई।"
+
+#. placeholder {0}: leveling.prestigeLevel ?? 0
+#: src/components/_user/user/Level.tsx:141
+msgid "{0} Prestige Points"
+msgstr ""
 
 #. placeholder {0}: data.userId && ( <UserUsername userId={data.userId} withAvatar withFlag /> )
 #: src/components/_user/notification/notification.frontConfig.tsx:511
@@ -169,7 +174,7 @@ msgstr "आपके कर्मचारियों के वेतन स�
 msgid "{0}% of invested"
 msgstr "निवेशित राशि का {0}%"
 
-#: src/components/_user/mission/MissionsList.tsx:151
+#: src/components/_user/mission/MissionsList.tsx:153
 msgid "{completedCount}/{totalCount} completed"
 msgstr "{completedCount}/{totalCount} पूर्ण हुए"
 
@@ -204,6 +209,11 @@ msgstr "दिन"
 
 #: src/components/_political/region/CreateUpgradeModal.tsx:105
 msgid "/h"
+msgstr ""
+
+#. placeholder {0}: staticGameConfig.user.prestige.xpMultiplierPercent
+#: src/components/_user/user/Level.tsx:147
+msgid "+{0}% XP activated"
 msgstr ""
 
 #: src/components/_user/notification/notification.frontConfig.tsx:381
@@ -1413,8 +1423,8 @@ msgid "Additional cost"
 msgstr "अतिरिक्त लागत"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:77
-#: src/components/_layout/LayoutRightIcons.tsx:159
-#: src/components/_layout/MoreButtonNav.tsx:67
+#: src/components/_layout/LayoutRightIcons.tsx:158
+#: src/components/_layout/MoreButtonNav.tsx:71
 msgid "Admin"
 msgstr "प्रशासक"
 
@@ -1521,8 +1531,9 @@ msgid "All types"
 msgstr "सभी प्रकार"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:156
-#: src/components/_layout/LayoutRightIcons.tsx:261
+#: src/components/_layout/LayoutRightIcons.tsx:208
 #: src/components/_layout/map.frontConfig.tsx:34
+#: src/components/_layout/MoreButtonNav.tsx:93
 #: src/components/_political/country/CountryDiplomacyGrid.tsx:193
 #: src/components/_political/map/MapMenu.tsx:264
 msgid "Alliance"
@@ -1783,10 +1794,6 @@ msgstr "लेख"
 msgid "Articles by <0/>"
 msgstr "<0/> द्वारा लिखे गए लेख"
 
-#: src/components/_user/user/SkillUpgrade.tsx:217
-msgid "Assign prestige bonus?"
-msgstr ""
-
 #: src/components/_other/shop/skin.frontConfig.tsx:305
 msgid "AT Ammo"
 msgstr ""
@@ -1928,7 +1935,7 @@ msgstr ""
 msgid "b. Revealing personal information or doxxing (such as names or addresses), without explicit consent"
 msgstr "b. स्पष्ट सहमति के बिना व्यक्तिगत जानकारी उजागर करना या डॉक्सिंग करना (जैसे नाम या पते)"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:170
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:176
 msgid "Baby Boomer"
 msgstr "बेबी बूमर"
 
@@ -2068,7 +2075,7 @@ msgstr ""
 msgid "Battle orders to defend your core regions and revolts cost <0>{0}</0> less."
 msgstr ""
 
-#: src/components/_layout/LayoutMenu.tsx:169
+#: src/components/_layout/LayoutMenu.tsx:170
 #: src/components/_military/battle/BattlesHeader.tsx:21
 #: src/components/_military/war/WarHeader.tsx:84
 #: src/pages/region/[regionId]/index.tsx:141
@@ -2602,11 +2609,11 @@ msgstr "कमीशन प्राप्त हुआ"
 msgid "Commodore"
 msgstr "कमोडोर"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:141
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:147
 msgid "Community"
 msgstr "समुदाय"
 
-#: src/components/_layout/LayoutMenu.tsx:210
+#: src/components/_layout/LayoutMenu.tsx:213
 #: src/components/_user/user/MyAvatar.tsx:48
 #: src/components/_user/user/UserHeader.tsx:219
 #: src/components/_user/user/WealthPanel.tsx:42
@@ -2853,7 +2860,7 @@ msgstr "मुख्य क्षेत्र"
 msgid "Corporal"
 msgstr "कॉर्पोरल"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:223
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:229
 msgid "Council Member"
 msgstr "परिषद सदस्य"
 
@@ -2874,8 +2881,8 @@ msgid "Countries"
 msgstr "देश"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:125
-#: src/components/_layout/LayoutRightIcons.tsx:217
-#: src/components/_layout/MoreButtonNav.tsx:133
+#: src/components/_layout/LayoutRightIcons.tsx:187
+#: src/components/_layout/MoreButtonNav.tsx:102
 #: src/components/_military/battle/BattleCountrySide.tsx:73
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:133
 #: src/components/_political/country/CountryHeader.tsx:55
@@ -2924,7 +2931,7 @@ msgstr "देश उत्पादन बोनस"
 msgid "Country to invite"
 msgstr ""
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:181
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:187
 msgid "Country Tournament Winner"
 msgstr "देश टूर्नामेंट विजेता"
 
@@ -3057,7 +3064,7 @@ msgstr "कस्टम उपयोगकर्ता नाम फ़ॉन्
 msgid "d. Any form of discrimination, racism, xenophobia, antisemitism, homophobia, transphobia and hate speech"
 msgstr "d. किसी भी प्रकार का भेदभाव, नस्लवाद, विदेशी-विरोध, यहूदी-विरोध, समलैंगिक-विरोध, ट्रांसफोबिया और घृणास्पद भाषण"
 
-#: src/components/_user/mission/MissionsList.tsx:169
+#: src/components/_user/mission/MissionsList.tsx:171
 msgid "Daily"
 msgstr "दैनिक"
 
@@ -3693,8 +3700,8 @@ msgid "Ethics Points:"
 msgstr "विचारधारा अंक:"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:136
-#: src/components/_layout/LayoutRightIcons.tsx:239
-#: src/components/_layout/MoreButtonNav.tsx:96
+#: src/components/_layout/LayoutRightIcons.tsx:258
+#: src/components/_layout/MoreButtonNav.tsx:144
 #: src/pages/country/[countryId]/index.tsx:266
 msgid "Events"
 msgstr "घटनाएँ"
@@ -3730,7 +3737,7 @@ msgstr "समाप्त: राउंड समाप्त हो गया"
 msgid "Expires in"
 msgstr "समाप्त होने में"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:217
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:223
 msgid "Exploit Finder"
 msgstr "एक्सप्लॉइट खोजक"
 
@@ -3872,8 +3879,8 @@ msgid "Fee"
 msgstr "शुल्क"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:172
-#: src/components/_layout/LayoutRightIcons.tsx:289
-#: src/components/_layout/MoreButtonNav.tsx:88
+#: src/components/_layout/LayoutRightIcons.tsx:276
+#: src/components/_layout/MoreButtonNav.tsx:136
 msgid "Feed"
 msgstr "फ़ीड"
 
@@ -4045,7 +4052,7 @@ msgstr "फर का कुर्ता"
 msgid "g. The use of profiles (picture, description, name) related to aforementioned ideologies and movements as well as political figures linked to ongoing real-world wars and armed conflicts. Humoristic names, descriptions and pictures are tolerated, with the exception of any content related to nazism and neo-nazism."
 msgstr "g. उपरोक्त विचारधाराओं और आंदोलनों से संबंधित प्रोफाइल (चित्र, विवरण, नाम) तथा चल रहे वास्तविक युद्धों और सशस्त्र संघर्षों से जुड़े राजनीतिक व्यक्तियों का उपयोग प्रतिबंधित है। हास्यपूर्ण नाम, विवरण और चित्र स्वीकार्य हैं, लेकिन नाज़ीवाद और नव-नाज़ीवाद से संबंधित किसी भी सामग्री को छोड़कर।"
 
-#: src/components/_user/user/Level.tsx:93
+#: src/components/_user/user/Level.tsx:95
 msgid "Gain <0>Xp</0> by finishing your missions!"
 msgstr "अपने मिशन पूरे करके <0>XP</0> प्राप्त करें!"
 
@@ -4065,7 +4072,7 @@ msgstr "रत्नों का उपयोग दुकान में व�
 msgid "General"
 msgstr "जनरल"
 
-#: src/components/_user/mission/MissionsList.tsx:233
+#: src/components/_user/mission/MissionsList.tsx:236
 msgid "Generate Missions"
 msgstr "मिशन उत्पन्न करें"
 
@@ -4118,7 +4125,7 @@ msgstr "स्वामित्व दें"
 msgid "Give your token a descriptive name so you can identify it later."
 msgstr "अपने टोकन को एक वर्णनात्मक नाम दें ताकि आप बाद में उसे पहचान सकें।"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:193
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:199
 msgid "Giveaway Winner"
 msgstr "गिवअवे विजेता"
 
@@ -4169,7 +4176,7 @@ msgstr "सरकार"
 msgid "Government announcement"
 msgstr ""
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:234
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:240
 msgid "Government Member"
 msgstr "सरकारी सदस्य"
 
@@ -4549,7 +4556,7 @@ msgstr "प्रारंभिक सदस्य"
 msgid "Intentional or repeated violations of this policy will result in a permanent ban."
 msgstr "इस नीति का जानबूझकर या बार-बार उल्लंघन करने पर स्थायी प्रतिबंध लगाया जाएगा।"
 
-#: src/components/_layout/LayoutMenu.tsx:128
+#: src/components/_layout/LayoutMenu.tsx:129
 #: src/components/_user/user/MyAvatar.tsx:35
 #: src/components/_user/user/UserHeader.tsx:172
 #: src/pages/companies.tsx:83
@@ -5073,7 +5080,7 @@ msgstr "प्रबंधन"
 msgid "map"
 msgstr "मानचित्र"
 
-#: src/components/_layout/LayoutMapIcons.tsx:67
+#: src/components/_layout/LayoutMapIcons.tsx:53
 #: src/components/_layout/LayoutOptions.tsx:100
 msgid "Map"
 msgstr "मानचित्र"
@@ -5088,8 +5095,9 @@ msgid "Map icons"
 msgstr ""
 
 #: src/components/_economy/market/MarketHeader.tsx:37
-#: src/components/_layout/LayoutMenu.tsx:191
+#: src/components/_layout/LayoutMenu.tsx:193
 #: src/components/_layout/LayoutMenuGrid.tsx:85
+#: src/components/_layout/MoreButtonNav.tsx:176
 #: src/pages/country/[countryId]/account.tsx:31
 #: src/pages/party/[partyId]/account.tsx:24
 #: src/pages/user/[userId]/account.tsx:26
@@ -5289,7 +5297,7 @@ msgstr "सैन्य रैंक:"
 msgid "Military Ranks"
 msgstr "सैन्य रैंक"
 
-#: src/components/_layout/MoreButtonNav.tsx:152
+#: src/components/_layout/MoreButtonNav.tsx:121
 #: src/components/_user/notification/notificationPrefs.categories.ts:161
 msgid "Military Unit"
 msgstr "सैन्य इकाई"
@@ -5334,9 +5342,9 @@ msgid "Mission tags"
 msgstr ""
 
 #: src/components/_layout/LayoutMenuGrid.tsx:94
-#: src/components/_layout/LayoutRightIcons.tsx:176
-#: src/components/_layout/MoreButtonNav.tsx:105
-#: src/components/_user/mission/MissionsList.tsx:148
+#: src/components/_layout/LayoutRightIcons.tsx:224
+#: src/components/_layout/MoreButtonNav.tsx:152
+#: src/components/_user/mission/MissionsList.tsx:150
 msgid "Missions"
 msgstr "मिशन"
 
@@ -5369,7 +5377,7 @@ msgid "Money Won"
 msgstr "जीता गया धन"
 
 #: src/components/_military/mu/MuMemberList.tsx:191
-#: src/components/_user/mission/MissionsList.tsx:194
+#: src/components/_user/mission/MissionsList.tsx:197
 msgid "Monthly"
 msgstr "मासिक"
 
@@ -5386,9 +5394,9 @@ msgstr ""
 msgid "Monthly:"
 msgstr "मासिक:"
 
+#: src/components/_layout/LayoutLeftIcons.tsx:162
 #: src/components/_layout/LayoutMenuGrid.tsx:224
-#: src/components/_layout/LayoutRightIcons.tsx:300
-#: src/components/_layout/MoreButtonNav.tsx:196
+#: src/components/_layout/MoreButtonNav.tsx:216
 msgid "More"
 msgstr "और"
 
@@ -5438,7 +5446,7 @@ msgstr "शीर्ष पर ले जाएँ"
 msgid "Moved to a new company"
 msgstr "नई कंपनी में स्थानांतरित किया गया"
 
-#: src/components/_layout/LayoutMenu.tsx:141
+#: src/components/_layout/LayoutMenu.tsx:142
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:135
 msgid "MU"
 msgstr "MU"
@@ -5476,7 +5484,7 @@ msgstr "MU स्वामित्व स्थानांतरित कि�
 msgid "MU reached level {0}! Reward: {rewardDisplay}"
 msgstr "MU स्तर {0} पर पहुँच गया! पुरस्कार: {rewardDisplay}"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:187
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:193
 msgid "MU Tournament Winner"
 msgstr "MU टूर्नामेंट विजेता"
 
@@ -5675,8 +5683,8 @@ msgid "Newest"
 msgstr "सबसे नया"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:115
-#: src/components/_layout/LayoutRightIcons.tsx:201
-#: src/components/_layout/MoreButtonNav.tsx:114
+#: src/components/_layout/LayoutRightIcons.tsx:248
+#: src/components/_layout/MoreButtonNav.tsx:161
 msgid "News"
 msgstr "समाचार"
 
@@ -5808,7 +5816,7 @@ msgstr "कोई भाड़े के सैनिक अनुबंध न�
 msgid "No military units found"
 msgstr "कोई सैन्य इकाई नहीं मिली"
 
-#: src/components/_user/mission/MissionsList.tsx:223
+#: src/components/_user/mission/MissionsList.tsx:226
 msgid "No missions available"
 msgstr "कोई मिशन उपलब्ध नहीं"
 
@@ -6071,7 +6079,7 @@ msgstr "अपना केस खोलें!"
 msgid "Operative"
 msgstr "ऑपरेटिव"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:82
+#: src/components/_layout/LayoutLeftIcons.tsx:99
 msgid "Options"
 msgstr "विकल्प"
 
@@ -6178,8 +6186,8 @@ msgid "Parties"
 msgstr "दल"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:145
-#: src/components/_layout/LayoutRightIcons.tsx:245
-#: src/components/_layout/MoreButtonNav.tsx:142
+#: src/components/_layout/LayoutRightIcons.tsx:196
+#: src/components/_layout/MoreButtonNav.tsx:111
 #: src/components/_user/notification/notificationPrefs.categories.ts:159
 #: src/pages/user/[userId]/index.tsx:176
 msgid "Party"
@@ -6360,7 +6368,7 @@ msgstr "पॉलिटिकल टेकओवर (PTO) की अनुमत
 msgid "Politics & Government"
 msgstr "राजनीति और सरकार"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:199
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:205
 msgid "Popular Article"
 msgstr "लोकप्रिय लेख"
 
@@ -6443,21 +6451,22 @@ msgstr "<0/> में राष्ट्रपति चुनाव के ल
 msgid "Presidential elections"
 msgstr "राष्ट्रपति चुनाव"
 
-#: src/pages/user/[userId]/skills.tsx:191
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:135
+#: src/pages/user/[userId]/skills.tsx:193
 msgid "Prestige"
 msgstr ""
 
-#. placeholder {0}: leveling.prestigeLevel
-#: src/components/_user/user/Level.tsx:135
-msgid "Prestige {0}"
-msgstr ""
-
-#: src/components/_user/user/SkillUpgrade.tsx:193
+#: src/components/_user/user/SkillUpgrade.tsx:233
 msgid "Prestige bonus active on this skill"
 msgstr ""
 
-#: src/components/_user/user/SkillUpgrade.tsx:64
-msgid "Prestige bonus assigned!"
+#: src/components/_user/user/SkillUpgrade.tsx:235
+msgid "Prestige bonus staged, save to apply (tap to remove)"
+msgstr ""
+
+#. placeholder {0}: staticGameConfig.user.prestige.skillBonusLevels
+#: src/components/_user/user/SkillUpgrade.tsx:244
+msgid "Prestige gives the equivalent of {0} level of the selected skill"
 msgstr ""
 
 #: src/components/_user/user/SkillValue.tsx:68
@@ -6677,7 +6686,7 @@ msgstr "रैंकिंग"
 msgid "Ranking reward"
 msgstr "रैंकिंग पुरस्कार"
 
-#: src/components/_layout/MoreButtonNav.tsx:122
+#: src/components/_layout/MoreButtonNav.tsx:169
 #: src/pages/alliance/[allianceId]/index.tsx:48
 #: src/pages/country/[countryId]/index.tsx:167
 #: src/pages/user/[userId]/index.tsx:123
@@ -6685,7 +6694,7 @@ msgid "Rankings"
 msgstr "रैंकिंग"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:164
-#: src/components/_layout/LayoutRightIcons.tsx:272
+#: src/components/_layout/LayoutRightIcons.tsx:267
 msgid "Ranks"
 msgstr "रैंक"
 
@@ -6750,7 +6759,7 @@ msgid "Reach Military Rank 5"
 msgstr "सैन्य रैंक 5 तक पहुँचें"
 
 #. placeholder {0}: leveling.level + 1
-#: src/components/_user/user/Level.tsx:113
+#: src/components/_user/user/Level.tsx:115
 msgid "Reaching level {0} will give you <0>{nextLevelSkillPoints} Skill Points</0>."
 msgstr "स्तर {0} पर पहुँचने से आपको <0>{nextLevelSkillPoints} कौशल अंक</0> मिलेंगे।"
 
@@ -7069,7 +7078,7 @@ msgstr "अनुरोध:"
 msgid "Reroll Mission"
 msgstr "मिशन पुनः रोल करें"
 
-#: src/pages/user/[userId]/skills.tsx:209
+#: src/pages/user/[userId]/skills.tsx:205
 msgid "Reset"
 msgstr "रीसेट"
 
@@ -7253,7 +7262,7 @@ msgstr "जीते गए राउंड"
 msgid "Rounds Won"
 msgstr "जीते गए राउंड"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:91
+#: src/components/_layout/LayoutLeftIcons.tsx:109
 #: src/components/_user/auth/WelcomeModal.tsx:170
 msgid "Rules"
 msgstr "नियम"
@@ -7268,7 +7277,7 @@ msgstr "स्वास्थ्य कम हो रहा है?"
 
 #: src/components/_political/party/PartyDescriptionModal.tsx:72
 #: src/components/_user/auth/WelcomeModal.tsx:182
-#: src/pages/user/[userId]/skills.tsx:256
+#: src/pages/user/[userId]/skills.tsx:252
 msgid "Save"
 msgstr "सहेजें"
 
@@ -7517,8 +7526,8 @@ msgid "Settings"
 msgstr "सेटिंग्स"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:104
-#: src/components/_layout/LayoutRightIcons.tsx:189
-#: src/components/_layout/MoreButtonNav.tsx:75
+#: src/components/_layout/LayoutRightIcons.tsx:237
+#: src/components/_layout/MoreButtonNav.tsx:79
 #: src/components/_other/shop/ShopHeader.tsx:52
 msgid "Shop"
 msgstr "दुकान"
@@ -7662,10 +7671,6 @@ msgstr "विशेषीकरण वस्तु"
 msgid "Spellcaster Gloves"
 msgstr "जादूगर के दस्ताने"
 
-#: src/components/_user/user/SkillUpgrade.tsx:194
-msgid "Spend a prestige point for a permanent bonus (reset on skill reset)"
-msgstr ""
-
 #: src/components/_other/tour/tuto.frontConfig.tsx:74
 msgid "Spend your <0>Energy</0> working here to earn <1>Money</1>. Keep clicking to work more!"
 msgstr "<0>ऊर्जा</0> खर्च करके यहाँ काम करें और <1>पैसा</1> कमाएँ। अधिक काम करने के लिए क्लिक करते रहें!"
@@ -7676,6 +7681,10 @@ msgstr "खर्च"
 
 #: src/components/_political/country/CountryHeader.tsx:186
 msgid "Stable, conquest-proof strength. Still used for unrest, government wages and revolution cost. Other costs use <0>Average development</0>."
+msgstr ""
+
+#: src/components/_user/user/SkillUpgrade.tsx:236
+msgid "Stage a prestige bonus on this skill (applied on save, reset on skill reset)"
 msgstr ""
 
 #: src/components/_user/user/skills.frontConfig.tsx:98
@@ -7736,7 +7745,7 @@ msgstr "<0/> शुरू हुआ"
 msgid "Started<0/><1/>"
 msgstr "शुरू हुआ<0/><1/>"
 
-#: src/components/_user/mission/MissionsList.tsx:206
+#: src/components/_user/mission/MissionsList.tsx:210
 msgid "Starting"
 msgstr "शुरू हो रहा है"
 
@@ -7811,7 +7820,7 @@ msgstr "पूरे मानचित्र में रणनीतिक �
 msgid "Subscribed"
 msgstr "सदस्यता ली गई"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:136
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:142
 msgid "Subscribed and supported the game <3"
 msgstr "सदस्यता ली और खेल का समर्थन किया <3"
 
@@ -7823,7 +7832,7 @@ msgstr "सदस्य"
 msgid "Successfully logged in!"
 msgstr "सफलतापूर्वक लॉग इन किया गया!"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:159
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:165
 msgid "Sugar Daddy"
 msgstr "शुगर डैडी"
 
@@ -7841,7 +7850,7 @@ msgstr "हमारा समर्थन करें"
 
 #: src/components/_economy/work/WorkChart.tsx:291
 #: src/components/_ui/PremiumButtonTag.tsx:22
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:135
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:141
 msgid "Supporter"
 msgstr "समर्थक"
 
@@ -7852,7 +7861,7 @@ msgstr "समर्थक"
 msgid "Supporter feature"
 msgstr "समर्थक सुविधा"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:151
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:157
 msgid "Supporter Gift"
 msgstr "समर्थक उपहार"
 
@@ -8111,10 +8120,6 @@ msgstr "इस कानून के लिए देश में कम स�
 #: src/components/_political/government/Government.tsx:266
 msgid "This member won't be able to be nominated again for {cooldownDays} days."
 msgstr "यह सदस्य {cooldownDays} दिनों तक पुनः नामांकित नहीं किया जा सकेगा।"
-
-#: src/components/_user/user/SkillUpgrade.tsx:218
-msgid "This permanently boosts this skill until your next skill reset."
-msgstr ""
 
 #: src/pages/region/[regionId]/index.tsx:179
 msgid "This region is not linked to it's owner's capital."
@@ -8408,7 +8413,7 @@ msgstr "स्वामित्व हस्तांतरित करें"
 msgid "Transfer to company (optional)"
 msgstr "कंपनी में स्थानांतरण (वैकल्पिक)"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:209
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:215
 msgid "Translator"
 msgstr "अनुवादक"
 
@@ -8581,7 +8586,7 @@ msgstr "समर्थक योजना में अपग्रेड क�
 msgid "Upgrade your skills <0>{count}</0> times"
 msgstr "अपने कौशल <0>{count}</0> बार अपग्रेड करें"
 
-#: src/pages/user/[userId]/skills.tsx:171
+#: src/pages/user/[userId]/skills.tsx:173
 msgid "Upgrade your skills!"
 msgstr "अपने कौशल अपग्रेड करें!"
 
@@ -8921,7 +8926,7 @@ msgid "Weapons"
 msgstr "हथियार"
 
 #: src/components/_military/mu/MuMemberList.tsx:192
-#: src/components/_user/mission/MissionsList.tsx:182
+#: src/components/_user/mission/MissionsList.tsx:184
 msgid "Weekly"
 msgstr "साप्ताहिक"
 
@@ -9127,11 +9132,11 @@ msgstr "आप भाग नहीं ले रहे हैं"
 msgid "You are very skilled!"
 msgstr "आप बहुत कुशल हैं!"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:225
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:231
 msgid "You are/were a council member, sharing ideas and feedback to improve the game <3"
 msgstr "आप परिषद सदस्य हैं/थे और आपने खेल को बेहतर बनाने के लिए सुझाव एवं प्रतिक्रिया साझा की <3"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:143
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:149
 msgid "You are/were a part of the staff and helped the game to grow <3"
 msgstr "आप स्टाफ का हिस्सा हैं/थे और आपने खेल के विकास में योगदान दिया <3"
 
@@ -9148,7 +9153,7 @@ msgid "You broke the rng"
 msgstr "आपने RNG को भी हरा दिया"
 
 #. placeholder {0}: staticGameConfig.referral.levelNeededForBadge
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:172
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:178
 msgid "You brought 10 babies to the world (>= lvl {0})"
 msgstr "आप 10 नए खिलाड़ियों को खेल में लाए (>= स्तर {0})"
 
@@ -9160,7 +9165,7 @@ msgstr "आप अपनी इन्वेंटरी से किसी व�
 msgid "You can optionally link a campaign article to your candidacy."
 msgstr "आप चाहें तो अपनी उम्मीदवारी के साथ एक अभियान लेख जोड़ सकते हैं।"
 
-#: src/components/_user/user/Level.tsx:87
+#: src/components/_user/user/Level.tsx:89
 msgid "You can upgrade your skills!"
 msgstr "आप अपनी कौशलों को उन्नत कर सकते हैं!"
 
@@ -9188,7 +9193,7 @@ msgstr "आपने स्किन पैक की बिक्री से 
 msgid "You feel healthy, the debuff effect no longer affects you."
 msgstr "आप स्वस्थ महसूस कर रहे हैं, डिबफ का प्रभाव अब आप पर नहीं है।"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:153
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:159
 msgid "You gifted a supporter plan subscription to someone <3"
 msgstr "आपने किसी को सपोर्टर प्लान की सदस्यता उपहार में दी <3"
 
@@ -9251,11 +9256,11 @@ msgstr "किसी देश का नियंत्रण दोबार�
 msgid "You helped the dev find a bug, ty <3"
 msgstr "आपने डेवलपर को एक बग खोजने में मदद की, धन्यवाद <3"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:218
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:224
 msgid "You helped the dev find an exploit, ty <3"
 msgstr "आपने डेवलपर को एक एक्सप्लॉइट खोजने में मदद की, धन्यवाद <3"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:211
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:217
 msgid "You helped translate the game into another language"
 msgstr "आपने खेल का दूसरी भाषा में अनुवाद करने में मदद की"
 
@@ -9298,13 +9303,17 @@ msgstr "आपको सभी 3 नैतिकता अंक खर्च �
 msgid "You need to equip a weapon first"
 msgstr "आपको पहले एक हथियार सुसज्जित करना होगा"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:161
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:167
 msgid "You paid the dev's bills <3 (top 3 in monthly supporter gifts ranking)"
 msgstr "आपने डेवलपर के बिल भरने में मदद की <3 (मासिक सपोर्टर उपहार रैंकिंग में शीर्ष 3)"
 
 #: src/components/_user/notification/notification.frontConfig.tsx:1053
 msgid "You premium gift from <0/> has expired! Would you consider subscribing and supporting the game? 👉👈"
 msgstr "<0/> से मिला आपका प्रीमियम उपहार समाप्त हो गया है! क्या आप सदस्यता लेकर खेल का समर्थन करना चाहेंगे? 👉👈"
+
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:136
+msgid "You prestiged and lost your levels"
+msgstr ""
 
 #. placeholder {0}: data.rank
 #: src/components/_user/notification/notification.frontConfig.tsx:1267
@@ -9379,7 +9388,7 @@ msgstr "आप अपने देश के राष्ट्रपति क�
 msgid "You were here at the beginning of War Era"
 msgstr "आप War Era की शुरुआत से यहाँ थे"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:236
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:242
 msgid "You were nominated as a government member of a country"
 msgstr "आपको किसी देश की सरकार के सदस्य के रूप में नामित किया गया"
 
@@ -9391,7 +9400,7 @@ msgstr "आपको अपने देश के उपराष्ट्र�
 msgid "You were so close"
 msgstr "आप बहुत करीब थे"
 
-#: src/pages/user/[userId]/skills.tsx:122
+#: src/pages/user/[userId]/skills.tsx:124
 msgid "You will drop to level 25 (losing 65,000 XP), gain a permanent +50% XP bonus and a prestige point, and your skills will be reset for free."
 msgstr ""
 
@@ -9400,15 +9409,15 @@ msgstr ""
 msgid "You win money for the badge + {0}% of the badge income of all your referrals"
 msgstr "आपको बैज के लिए धनराशि मिलेगी + आपके सभी रेफरल के बैज आय का {0}%"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:182
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:188
 msgid "You won a country tournament"
 msgstr "आपने एक राष्ट्रीय टूर्नामेंट जीता"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:194
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:200
 msgid "You won a giveaway"
 msgstr "आपने एक गिवअवे जीता"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:188
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:194
 msgid "You won a MU tournament"
 msgstr "आपने एक MU टूर्नामेंट जीता"
 
@@ -9448,7 +9457,7 @@ msgstr "आप अपने सर्वोच्च प्रदर्शन �
 msgid "You've completed some missions! Let's collect your XP rewards."
 msgstr "आपने कुछ मिशन पूरे कर लिए हैं! आइए अपने XP पुरस्कार प्राप्त करें।"
 
-#: src/components/_user/user/Level.tsx:127
+#: src/components/_user/user/Level.tsx:129
 msgid "You've reached max level!"
 msgstr "आप अधिकतम स्तर पर पहुँच चुके हैं!"
 
@@ -9473,7 +9482,7 @@ msgstr ""
 msgid "Your application to <0/> has been rejected"
 msgstr "<0/> के लिए आपका आवेदन अस्वीकार कर दिया गया है"
 
-#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:201
+#: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:207
 msgid "Your article reached 2% of the active population in score (min 10)"
 msgstr "आपका लेख सक्रिय जनसंख्या के 2% स्कोर तक पहुँचा (न्यूनतम 10)"
 
@@ -9638,10 +9647,10 @@ msgstr "your@email.com"
 msgid "Yours"
 msgstr "आपका"
 
-#: src/components/_layout/LayoutMapIcons.tsx:84
+#: src/components/_layout/LayoutMapIcons.tsx:62
 msgid "Zoom in"
 msgstr ""
 
-#: src/components/_layout/LayoutMapIcons.tsx:76
+#: src/components/_layout/LayoutMapIcons.tsx:70
 msgid "Zoom out"
 msgstr ""
