@@ -178,6 +178,10 @@ msgstr "{0}% de lo invertido"
 msgid "{completedCount}/{totalCount} completed"
 msgstr "{completedCount}/{totalCount} completadas"
 
+#: src/components/_user/user/SkillUpgrade.tsx:238
+msgid "{draftPrestigeCount} prestige point(s) on this skill ({savedPrestigeCount} saved, locked until reset)"
+msgstr ""
+
 #: src/components/_military/tournament/TournamentRegisteredTag.tsx:43
 msgid "{registeredCount} {entityLabel} registered"
 msgstr "{registeredCount} {entityLabel} registrados"
@@ -185,6 +189,10 @@ msgstr "{registeredCount} {entityLabel} registrados"
 #: src/components/_military/battle/BattleTimeline.tsx:79
 msgid "{roundsToWin} Rounds to win "
 msgstr "{roundsToWin} rondas para ganar "
+
+#: src/components/_user/user/SkillUpgrade.tsx:312
+msgid "{savedPrestigeCount} prestige point(s) active on this skill"
+msgstr ""
 
 #. placeholder {0}: staticGameConfig.battle.roundsToWin
 #: src/components/_military/battle/RoundScore.tsx:50
@@ -1424,7 +1432,7 @@ msgstr "Costo adicional"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:77
 #: src/components/_layout/LayoutRightIcons.tsx:158
-#: src/components/_layout/MoreButtonNav.tsx:71
+#: src/components/_layout/MoreWindowButton.tsx:76
 msgid "Admin"
 msgstr "Administrador"
 
@@ -1533,7 +1541,7 @@ msgstr "Todos los tipos"
 #: src/components/_layout/LayoutMenuGrid.tsx:156
 #: src/components/_layout/LayoutRightIcons.tsx:208
 #: src/components/_layout/map.frontConfig.tsx:34
-#: src/components/_layout/MoreButtonNav.tsx:93
+#: src/components/_layout/MoreWindowButton.tsx:98
 #: src/components/_political/country/CountryDiplomacyGrid.tsx:193
 #: src/components/_political/map/MapMenu.tsx:264
 msgid "Alliance"
@@ -1858,16 +1866,12 @@ msgstr "AT Chaleco Táctico"
 msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
 msgstr "Al final del temporizador, <0>{actualTickPoints}</0> se asignarán al bando con más daño."
 
-#: src/components/_military/hit/HitButton.tsx:499
+#: src/components/_military/hit/HitButton.tsx:530
 #: src/components/_political/map/MapMenu.tsx:285
 #: src/components/_user/user/skills.frontConfig.tsx:45
 #: src/components/_user/user/skills.frontConfig.tsx:46
 msgid "Attack"
 msgstr "Ataque"
-
-#: src/components/_military/battle/BattleItem.tsx:364
-msgid "Attack here"
-msgstr ""
 
 #: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:195
 #: src/components/_military/war/WarComparison.tsx:41
@@ -2079,7 +2083,7 @@ msgstr "Las órdenes de batalla para defender tus regiones centrales y las revue
 msgid "Battle orders to defend your core regions and revolts cost <0>{0}</0> less."
 msgstr "Las órdenes de batalla para defender tus regiones centrales y las revueltas cuestan <0>{0}</0> menos."
 
-#: src/components/_layout/LayoutMenu.tsx:190
+#: src/components/_layout/LayoutMenu.tsx:170
 #: src/components/_military/battle/BattlesHeader.tsx:21
 #: src/components/_military/war/WarHeader.tsx:84
 #: src/pages/region/[regionId]/index.tsx:141
@@ -2617,7 +2621,7 @@ msgstr "Comodoro"
 msgid "Community"
 msgstr "Comunidad"
 
-#: src/components/_layout/LayoutMenu.tsx:221
+#: src/components/_layout/LayoutMenu.tsx:212
 #: src/components/_user/user/MyAvatar.tsx:48
 #: src/components/_user/user/UserHeader.tsx:219
 #: src/components/_user/user/WealthPanel.tsx:42
@@ -2886,7 +2890,7 @@ msgstr "Países"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:125
 #: src/components/_layout/LayoutRightIcons.tsx:187
-#: src/components/_layout/MoreButtonNav.tsx:102
+#: src/components/_layout/MoreWindowButton.tsx:107
 #: src/components/_military/battle/BattleCountrySide.tsx:73
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:133
 #: src/components/_political/country/CountryHeader.tsx:55
@@ -3219,13 +3223,9 @@ msgstr "Disminuir"
 msgid "Decrease unrest"
 msgstr "Disminuir el malestar"
 
-#: src/components/_military/hit/HitButton.tsx:502
+#: src/components/_military/hit/HitButton.tsx:533
 msgid "Defend"
 msgstr "Defender"
-
-#: src/components/_military/battle/BattleItem.tsx:366
-msgid "Defend here"
-msgstr ""
 
 #: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:194
 #: src/components/_military/war/WarComparison.tsx:49
@@ -3488,6 +3488,10 @@ msgstr "Dragon"
 msgid "e. Content about ongoing real-world wars and armed conflicts (most notably the Russo-Ukrainian war and the Israeli–Palestinian conflict)"
 msgstr "e. Contenido sobre guerras y conflictos armados reales en curso (especialmente la guerra ruso-ucraniana y el conflicto israelí-palestino)"
 
+#: src/components/_user/user/SkillUpgrade.tsx:256
+msgid "Each prestige point gives the equivalent of {skillBonusLevels} level of the selected skill"
+msgstr ""
+
 #: src/components/_user/mission/mission.frontConfig.tsx:147
 msgid "Eat"
 msgstr "Comer"
@@ -3709,7 +3713,7 @@ msgstr "Puntos de ideología:"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:136
 #: src/components/_layout/LayoutRightIcons.tsx:258
-#: src/components/_layout/MoreButtonNav.tsx:144
+#: src/components/_layout/MoreWindowButton.tsx:149
 #: src/pages/country/[countryId]/index.tsx:266
 msgid "Events"
 msgstr "Eventos"
@@ -3888,7 +3892,7 @@ msgstr "Tarifa"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:172
 #: src/components/_layout/LayoutRightIcons.tsx:276
-#: src/components/_layout/MoreButtonNav.tsx:136
+#: src/components/_layout/MoreWindowButton.tsx:141
 msgid "Feed"
 msgstr "Feed"
 
@@ -4564,7 +4568,7 @@ msgstr "Iniciado"
 msgid "Intentional or repeated violations of this policy will result in a permanent ban."
 msgstr "Las infracciones intencionales o reiteradas de esta política resultarán en una prohibición permanente."
 
-#: src/components/_layout/LayoutMenu.tsx:149
+#: src/components/_layout/LayoutMenu.tsx:129
 #: src/components/_user/user/MyAvatar.tsx:35
 #: src/components/_user/user/UserHeader.tsx:172
 #: src/pages/companies.tsx:83
@@ -5103,9 +5107,9 @@ msgid "Map icons"
 msgstr ""
 
 #: src/components/_economy/market/MarketHeader.tsx:37
-#: src/components/_layout/LayoutMenu.tsx:241
+#: src/components/_layout/LayoutMenu.tsx:193
 #: src/components/_layout/LayoutMenuGrid.tsx:85
-#: src/components/_layout/MoreButtonNav.tsx:176
+#: src/components/_layout/MoreWindowButton.tsx:180
 #: src/pages/country/[countryId]/account.tsx:31
 #: src/pages/party/[partyId]/account.tsx:24
 #: src/pages/user/[userId]/account.tsx:26
@@ -5305,7 +5309,7 @@ msgstr "Rango militar:"
 msgid "Military Ranks"
 msgstr "Rangos Militares"
 
-#: src/components/_layout/MoreButtonNav.tsx:121
+#: src/components/_layout/MoreWindowButton.tsx:126
 #: src/components/_user/notification/notificationPrefs.categories.ts:161
 msgid "Military Unit"
 msgstr "Unidad Militar"
@@ -5351,7 +5355,7 @@ msgstr ""
 
 #: src/components/_layout/LayoutMenuGrid.tsx:94
 #: src/components/_layout/LayoutRightIcons.tsx:224
-#: src/components/_layout/MoreButtonNav.tsx:152
+#: src/components/_layout/MoreWindowButton.tsx:157
 #: src/components/_user/mission/MissionsList.tsx:150
 msgid "Missions"
 msgstr "Misiones"
@@ -5402,9 +5406,8 @@ msgstr ""
 msgid "Monthly:"
 msgstr "Mensual:"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:162
+#: src/components/_layout/LayoutLeftIcons.tsx:167
 #: src/components/_layout/LayoutMenuGrid.tsx:224
-#: src/components/_layout/MoreButtonNav.tsx:216
 msgid "More"
 msgstr "Más"
 
@@ -5454,7 +5457,7 @@ msgstr "Mover al principio"
 msgid "Moved to a new company"
 msgstr "Transferido a una nueva empresa"
 
-#: src/components/_layout/LayoutMenu.tsx:162
+#: src/components/_layout/LayoutMenu.tsx:142
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:135
 msgid "MU"
 msgstr "UM"
@@ -5692,7 +5695,7 @@ msgstr "Más recientes"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:115
 #: src/components/_layout/LayoutRightIcons.tsx:248
-#: src/components/_layout/MoreButtonNav.tsx:161
+#: src/components/_layout/MoreWindowButton.tsx:165
 msgid "News"
 msgstr "Noticias"
 
@@ -5703,6 +5706,10 @@ msgstr "La próxima será un tanque"
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:23
 msgid "Next one will be tank"
 msgstr "La próxima será un tanque"
+
+#: src/components/_user/user/SkillUpgrade.tsx:241
+msgid "Next point costs"
+msgstr ""
 
 #: src/components/_military/mu/MuLevel.tsx:97
 msgid "Next reward"
@@ -6195,7 +6202,7 @@ msgstr "Partidos"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:145
 #: src/components/_layout/LayoutRightIcons.tsx:196
-#: src/components/_layout/MoreButtonNav.tsx:111
+#: src/components/_layout/MoreWindowButton.tsx:116
 #: src/components/_user/notification/notificationPrefs.categories.ts:159
 #: src/pages/user/[userId]/index.tsx:176
 msgid "Party"
@@ -6464,20 +6471,6 @@ msgstr "Elecciones presidenciales"
 msgid "Prestige"
 msgstr ""
 
-#: src/components/_user/user/SkillUpgrade.tsx:235
-#: src/components/_user/user/SkillUpgrade.tsx:309
-msgid "Prestige bonus active on this skill"
-msgstr ""
-
-#: src/components/_user/user/SkillUpgrade.tsx:237
-msgid "Prestige bonus staged, save to apply (tap to remove)"
-msgstr ""
-
-#. placeholder {0}: staticGameConfig.user.prestige.skillBonusLevels
-#: src/components/_user/user/SkillUpgrade.tsx:251
-msgid "Prestige gives the equivalent of {0} level of the selected skill"
-msgstr ""
-
 #: src/components/_user/user/SkillValue.tsx:68
 msgid "Prestige:"
 msgstr ""
@@ -6695,7 +6688,7 @@ msgstr "Ranking"
 msgid "Ranking reward"
 msgstr "Recompensa de ranking"
 
-#: src/components/_layout/MoreButtonNav.tsx:169
+#: src/components/_layout/MoreWindowButton.tsx:173
 #: src/pages/alliance/[allianceId]/index.tsx:48
 #: src/pages/country/[countryId]/index.tsx:167
 #: src/pages/user/[userId]/index.tsx:123
@@ -7127,13 +7120,9 @@ msgstr ""
 msgid "Residents (home here)"
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:497
+#: src/components/_military/hit/HitButton.tsx:528
 msgid "Resist"
 msgstr "Resistir"
-
-#: src/components/_military/battle/BattleItem.tsx:362
-msgid "Resist here"
-msgstr ""
 
 #: src/pages/region/[regionId]/index.tsx:126
 msgid "Resistance"
@@ -7540,7 +7529,7 @@ msgstr "Ajustes"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:104
 #: src/components/_layout/LayoutRightIcons.tsx:237
-#: src/components/_layout/MoreButtonNav.tsx:79
+#: src/components/_layout/MoreWindowButton.tsx:84
 #: src/components/_other/shop/ShopHeader.tsx:52
 msgid "Shop"
 msgstr "Tienda"
@@ -7696,8 +7685,8 @@ msgstr "Gastos"
 msgid "Stable, conquest-proof strength. Still used for unrest, government wages and revolution cost. Other costs use <0>Average development</0>."
 msgstr "Fuerza estable e inmune a la conquista. Todavía se utiliza para disturbios, salarios gubernamentales y costos de revolución. Otros costos utilizan <0>Desarrollo promedio</0>."
 
-#: src/components/_user/user/SkillUpgrade.tsx:238
-msgid "Stage a prestige bonus on this skill (applied on save, reset on skill reset)"
+#: src/components/_user/user/SkillUpgrade.tsx:239
+msgid "Stage a prestige point on this skill (applied on save, reset on skill reset)"
 msgstr ""
 
 #: src/components/_user/user/skills.frontConfig.tsx:98
@@ -9149,7 +9138,8 @@ msgstr "No eres miembro del consejo de este partido"
 msgid "You are not participating"
 msgstr "No estás participando"
 
-#: src/components/_military/battle/BattleItem.tsx:357
+#: src/components/_military/battle/BattleItem.tsx:353
+#: src/components/_military/hit/HitButton.tsx:469
 msgid "You are standing in this region, so you can fight here."
 msgstr ""
 
@@ -9580,7 +9570,8 @@ msgstr "Tu información se ha guardado."
 msgid "Your inventory holds all your items. Let's see what you've got!"
 msgstr "Tu inventario contiene todos tus objetos. ¡Veamos qué tienes!"
 
-#: src/components/_military/battle/BattleItem.tsx:356
+#: src/components/_military/battle/BattleItem.tsx:352
+#: src/components/_military/hit/HitButton.tsx:468
 msgid "Your location"
 msgstr ""
 
