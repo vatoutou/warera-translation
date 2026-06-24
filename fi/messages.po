@@ -220,7 +220,7 @@ msgstr "/päivä"
 msgid "/h"
 msgstr ""
 
-#. placeholder {0}: (leveling.prestigeLevel ?? 0) * staticGameConfig.user.prestige.xpMultiplierPercent
+#. placeholder {0}: staticGameConfig.user.prestige.xpMultiplierPercent + ((leveling.prestigeLevel ?? 1) - 1) * staticGameConfig.user.prestige .xpMultiplierPerLevelPercent
 #: src/components/_user/user/Level.tsx:147
 msgid "+{0}% XP activated"
 msgstr ""
@@ -2404,10 +2404,6 @@ msgstr "Katapultti"
 #: src/components/_other/shop/skin.frontConfig.tsx:269
 msgid "Cave Bear Headdress"
 msgstr ""
-
-#: src/components/_user/user/skills.frontConfig.tsx:160
-msgid "Chance per hit to instantly loot:<0/>Each <1>1%</1> gives<2>1%</2> and <3>0.01%</3> to loot cases per hit."
-msgstr "Osumakohtainen mahdollisuus ryöstää välittömästi:<0/>Jokainen <1>1%</1> antaa<2>1%</2> ja <3>0,01%</3> tapauksia ryöstää osumaa kohti."
 
 #: src/components/_user/user/skills.frontConfig.tsx:146
 msgid "Chance to dodge all incoming damage when fighting in battles.<0/>Dodging also prevents equipment durability from being consumed."
@@ -5054,11 +5050,6 @@ msgstr "Ryöstele <0>{count}</0> taisteluista"
 msgid "Loot Cases"
 msgstr "Ryöstötapaukset"
 
-#: src/components/_user/user/skills.frontConfig.tsx:174
-#: src/components/_user/user/skills.frontConfig.tsx:175
-msgid "Loot chance"
-msgstr "Saalismahdollisuus"
-
 #: src/components/_user/notification/notification.frontConfig.tsx:2073
 msgid "Loot reward"
 msgstr "Saalispalkinto"
@@ -5078,6 +5069,11 @@ msgstr "Everstiluutnantti"
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:141
 msgid "Lt. General"
 msgstr "Kenraaliluutnantti"
+
+#: src/components/_user/user/skills.frontConfig.tsx:174
+#: src/components/_user/user/skills.frontConfig.tsx:175
+msgid "Luck"
+msgstr ""
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:59
 msgid "Luck is finally on payroll"
@@ -9460,7 +9456,7 @@ msgid "You were so close"
 msgstr "Olit niin lähellä"
 
 #: src/pages/user/[userId]/skills.tsx:124
-msgid "You will drop to level 25 (losing 65,000 XP), gain a permanent +25% XP bonus per prestige level and a prestige point, and your skills will be reset for free."
+msgid "You will drop to level 25 (losing 65,000 XP), gain a permanent +50% XP bonus (+10% per additional prestige level) and a prestige point, and your skills will be reset for free."
 msgstr ""
 
 #. placeholder {0}: gameConfig?.referral.lifeTimeBadgeMoneySharePercent
@@ -9631,6 +9627,10 @@ msgstr "Onnesi vain lämpenee, älä luovuta"
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:24
 msgid "Your luck is on vacation"
 msgstr "Onnesi on lomalla"
+
+#: src/components/_user/user/skills.frontConfig.tsx:160
+msgid "Your luck to instantly loot on each hit:<0/>Each <1>1%</1> gives<2>1%</2> and <3>0.01%</3> to loot cases per hit."
+msgstr ""
 
 #: src/components/_military/mu/MuFormModal.tsx:108
 msgid "Your military unit name"

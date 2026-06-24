@@ -219,7 +219,7 @@ msgstr ""
 msgid "/h"
 msgstr ""
 
-#. placeholder {0}: (leveling.prestigeLevel ?? 0) * staticGameConfig.user.prestige.xpMultiplierPercent
+#. placeholder {0}: staticGameConfig.user.prestige.xpMultiplierPercent + ((leveling.prestigeLevel ?? 1) - 1) * staticGameConfig.user.prestige .xpMultiplierPerLevelPercent
 #: src/components/_user/user/Level.tsx:147
 msgid "+{0}% XP activated"
 msgstr ""
@@ -2402,10 +2402,6 @@ msgstr "投石機"
 
 #: src/components/_other/shop/skin.frontConfig.tsx:269
 msgid "Cave Bear Headdress"
-msgstr ""
-
-#: src/components/_user/user/skills.frontConfig.tsx:160
-msgid "Chance per hit to instantly loot:<0/>Each <1>1%</1> gives<2>1%</2> and <3>0.01%</3> to loot cases per hit."
 msgstr ""
 
 #: src/components/_user/user/skills.frontConfig.tsx:146
@@ -5053,11 +5049,6 @@ msgstr "從戰鬥中獲得 <0>{count}</0>"
 msgid "Loot Cases"
 msgstr "獲取箱子"
 
-#: src/components/_user/user/skills.frontConfig.tsx:174
-#: src/components/_user/user/skills.frontConfig.tsx:175
-msgid "Loot chance"
-msgstr "戰利品機率"
-
 #: src/components/_user/notification/notification.frontConfig.tsx:2073
 msgid "Loot reward"
 msgstr ""
@@ -5077,6 +5068,11 @@ msgstr "中校"
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:141
 msgid "Lt. General"
 msgstr "中將"
+
+#: src/components/_user/user/skills.frontConfig.tsx:174
+#: src/components/_user/user/skills.frontConfig.tsx:175
+msgid "Luck"
+msgstr ""
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:59
 msgid "Luck is finally on payroll"
@@ -9459,7 +9455,7 @@ msgid "You were so close"
 msgstr "就差這麼一點"
 
 #: src/pages/user/[userId]/skills.tsx:124
-msgid "You will drop to level 25 (losing 65,000 XP), gain a permanent +25% XP bonus per prestige level and a prestige point, and your skills will be reset for free."
+msgid "You will drop to level 25 (losing 65,000 XP), gain a permanent +50% XP bonus (+10% per additional prestige level) and a prestige point, and your skills will be reset for free."
 msgstr ""
 
 #. placeholder {0}: gameConfig?.referral.lifeTimeBadgeMoneySharePercent
@@ -9630,6 +9626,10 @@ msgstr "你的好運才剛開始，千萬別放棄"
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:24
 msgid "Your luck is on vacation"
 msgstr "你的好運罷工了"
+
+#: src/components/_user/user/skills.frontConfig.tsx:160
+msgid "Your luck to instantly loot on each hit:<0/>Each <1>1%</1> gives<2>1%</2> and <3>0.01%</3> to loot cases per hit."
+msgstr ""
 
 #: src/components/_military/mu/MuFormModal.tsx:108
 msgid "Your military unit name"

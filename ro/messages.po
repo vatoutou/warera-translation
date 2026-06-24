@@ -217,7 +217,7 @@ msgstr "/zi"
 msgid "/h"
 msgstr ""
 
-#. placeholder {0}: (leveling.prestigeLevel ?? 0) * staticGameConfig.user.prestige.xpMultiplierPercent
+#. placeholder {0}: staticGameConfig.user.prestige.xpMultiplierPercent + ((leveling.prestigeLevel ?? 1) - 1) * staticGameConfig.user.prestige .xpMultiplierPerLevelPercent
 #: src/components/_user/user/Level.tsx:147
 msgid "+{0}% XP activated"
 msgstr ""
@@ -2401,10 +2401,6 @@ msgstr "Catapultă"
 #: src/components/_other/shop/skin.frontConfig.tsx:269
 msgid "Cave Bear Headdress"
 msgstr ""
-
-#: src/components/_user/user/skills.frontConfig.tsx:160
-msgid "Chance per hit to instantly loot:<0/>Each <1>1%</1> gives<2>1%</2> and <3>0.01%</3> to loot cases per hit."
-msgstr "Șansa per lovitură de a primi pradă:<0/>Fiecare <1>1%</1> îți dă <2>1% șanse</2>, respectiv <3>0.01% șanse</3> de a primi o cutie per lovitură."
 
 #: src/components/_user/user/skills.frontConfig.tsx:146
 msgid "Chance to dodge all incoming damage when fighting in battles.<0/>Dodging also prevents equipment durability from being consumed."
@@ -5051,11 +5047,6 @@ msgstr "Obține <0>{count}</0> ca pradă din lupte"
 msgid "Loot Cases"
 msgstr "Obține cutii"
 
-#: src/components/_user/user/skills.frontConfig.tsx:174
-#: src/components/_user/user/skills.frontConfig.tsx:175
-msgid "Loot chance"
-msgstr "Șansă pradă"
-
 #: src/components/_user/notification/notification.frontConfig.tsx:2073
 msgid "Loot reward"
 msgstr "Pradă"
@@ -5075,6 +5066,11 @@ msgstr "Lt. Colonel"
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:141
 msgid "Lt. General"
 msgstr "Lt. General"
+
+#: src/components/_user/user/skills.frontConfig.tsx:174
+#: src/components/_user/user/skills.frontConfig.tsx:175
+msgid "Luck"
+msgstr ""
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:59
 msgid "Luck is finally on payroll"
@@ -9457,7 +9453,7 @@ msgid "You were so close"
 msgstr "Erai așa de aproape"
 
 #: src/pages/user/[userId]/skills.tsx:124
-msgid "You will drop to level 25 (losing 65,000 XP), gain a permanent +25% XP bonus per prestige level and a prestige point, and your skills will be reset for free."
+msgid "You will drop to level 25 (losing 65,000 XP), gain a permanent +50% XP bonus (+10% per additional prestige level) and a prestige point, and your skills will be reset for free."
 msgstr ""
 
 #. placeholder {0}: gameConfig?.referral.lifeTimeBadgeMoneySharePercent
@@ -9628,6 +9624,10 @@ msgstr "Norocul tău abia se încălzește, nu renunța"
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:24
 msgid "Your luck is on vacation"
 msgstr "Norocul tău e în vacanță"
+
+#: src/components/_user/user/skills.frontConfig.tsx:160
+msgid "Your luck to instantly loot on each hit:<0/>Each <1>1%</1> gives<2>1%</2> and <3>0.01%</3> to loot cases per hit."
+msgstr ""
 
 #: src/components/_military/mu/MuFormModal.tsx:108
 msgid "Your military unit name"
