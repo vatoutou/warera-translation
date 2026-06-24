@@ -178,7 +178,7 @@ msgstr "投資的 {0}%"
 msgid "{completedCount}/{totalCount} completed"
 msgstr "{completedCount}/{totalCount} 已完成"
 
-#: src/components/_user/user/SkillUpgrade.tsx:266
+#: src/components/_user/user/SkillUpgrade.tsx:267
 msgid "{draftPrestigeCount} prestige point(s) on this skill ({savedPrestigeCount} saved, locked until reset)"
 msgstr ""
 
@@ -190,7 +190,7 @@ msgstr "{registeredCount} {entityLabel} 已登記"
 msgid "{roundsToWin} Rounds to win "
 msgstr ""
 
-#: src/components/_user/user/SkillUpgrade.tsx:367
+#: src/components/_user/user/SkillUpgrade.tsx:373
 msgid "{savedPrestigeCount} prestige point(s) active on this skill"
 msgstr ""
 
@@ -219,7 +219,7 @@ msgstr ""
 msgid "/h"
 msgstr ""
 
-#. placeholder {0}: staticGameConfig.user.prestige.xpMultiplierPercent
+#. placeholder {0}: (leveling.prestigeLevel ?? 0) * staticGameConfig.user.prestige.xpMultiplierPercent
 #: src/components/_user/user/Level.tsx:147
 msgid "+{0}% XP activated"
 msgstr ""
@@ -1435,7 +1435,7 @@ msgid "Additional cost"
 msgstr "額外花費"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:77
-#: src/components/_layout/LayoutRightIcons.tsx:158
+#: src/components/_layout/LayoutRightIcons.tsx:165
 #: src/components/_layout/MoreWindowButton.tsx:76
 msgid "Admin"
 msgstr "管理員"
@@ -1543,7 +1543,7 @@ msgid "All types"
 msgstr "全部類型"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:156
-#: src/components/_layout/LayoutRightIcons.tsx:208
+#: src/components/_layout/LayoutRightIcons.tsx:215
 #: src/components/_layout/map.frontConfig.tsx:34
 #: src/components/_layout/MoreWindowButton.tsx:98
 #: src/components/_political/country/CountryDiplomacyGrid.tsx:193
@@ -1870,7 +1870,7 @@ msgstr ""
 msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
 msgstr "在倒計時結束時， <0>{actualTickPoints}</0> 將會被發派到傷害較多的一邊。"
 
-#: src/components/_military/hit/HitButton.tsx:530
+#: src/components/_military/hit/HitButton.tsx:535
 #: src/components/_political/map/MapMenu.tsx:285
 #: src/components/_user/user/skills.frontConfig.tsx:45
 #: src/components/_user/user/skills.frontConfig.tsx:46
@@ -2899,7 +2899,7 @@ msgid "Countries"
 msgstr "國家"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:125
-#: src/components/_layout/LayoutRightIcons.tsx:187
+#: src/components/_layout/LayoutRightIcons.tsx:194
 #: src/components/_layout/MoreWindowButton.tsx:107
 #: src/components/_military/battle/BattleCountrySide.tsx:73
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:133
@@ -3233,7 +3233,7 @@ msgstr "減少"
 msgid "Decrease unrest"
 msgstr "減少動盪值"
 
-#: src/components/_military/hit/HitButton.tsx:533
+#: src/components/_military/hit/HitButton.tsx:538
 msgid "Defend"
 msgstr "防禦"
 
@@ -3498,7 +3498,7 @@ msgstr ""
 msgid "e. Content about ongoing real-world wars and armed conflicts (most notably the Russo-Ukrainian war and the Israeli–Palestinian conflict)"
 msgstr ""
 
-#: src/components/_user/user/SkillUpgrade.tsx:292
+#: src/components/_user/user/SkillUpgrade.tsx:293
 msgid "Each prestige point gives the equivalent of {skillBonusLevels} level of the selected skill"
 msgstr ""
 
@@ -3722,7 +3722,7 @@ msgid "Ethics Points:"
 msgstr "傳統點數："
 
 #: src/components/_layout/LayoutMenuGrid.tsx:136
-#: src/components/_layout/LayoutRightIcons.tsx:258
+#: src/components/_layout/LayoutRightIcons.tsx:265
 #: src/components/_layout/MoreWindowButton.tsx:149
 #: src/pages/country/[countryId]/index.tsx:266
 msgid "Events"
@@ -3901,7 +3901,7 @@ msgid "Fee"
 msgstr ""
 
 #: src/components/_layout/LayoutMenuGrid.tsx:172
-#: src/components/_layout/LayoutRightIcons.tsx:276
+#: src/components/_layout/LayoutRightIcons.tsx:283
 #: src/components/_layout/MoreWindowButton.tsx:141
 msgid "Feed"
 msgstr "動態"
@@ -4916,8 +4916,7 @@ msgstr "傳奇頭盔"
 msgid "Legendary Pants"
 msgstr "傳奇褲子"
 
-#: src/components/_economy/company/CompanyUpgradesGrid.tsx:191
-#: src/components/_political/region/UpgradesGrid.tsx:189
+#: src/components/_other/upgrade/UpgradeSlotCard.tsx:109
 msgid "Level"
 msgstr ""
 
@@ -5029,12 +5028,12 @@ msgstr "載入中..."
 msgid "Location"
 msgstr "地點"
 
-#: src/components/_economy/company/CompanyUpgradesGrid.tsx:128
-#: src/components/_political/region/UpgradesGrid.tsx:138
+#: src/components/_economy/company/CompanyUpgradesGrid.tsx:123
+#: src/components/_political/region/UpgradesGrid.tsx:132
 msgid "Locked slot"
 msgstr ""
 
-#: src/components/_user/user/SkillUpgrade.tsx:288
+#: src/components/_user/user/SkillUpgrade.tsx:289
 msgid "Locked, reset your skills to reassign"
 msgstr ""
 
@@ -5112,7 +5111,7 @@ msgstr "管理"
 msgid "map"
 msgstr "地圖"
 
-#: src/components/_layout/LayoutMapIcons.tsx:77
+#: src/components/_layout/LayoutMapIcons.tsx:79
 #: src/components/_layout/LayoutOptions.tsx:100
 msgid "Map"
 msgstr ""
@@ -5374,7 +5373,7 @@ msgid "Mission tags"
 msgstr ""
 
 #: src/components/_layout/LayoutMenuGrid.tsx:94
-#: src/components/_layout/LayoutRightIcons.tsx:224
+#: src/components/_layout/LayoutRightIcons.tsx:231
 #: src/components/_layout/MoreWindowButton.tsx:157
 #: src/components/_user/mission/MissionsList.tsx:150
 msgid "Missions"
@@ -5426,7 +5425,7 @@ msgstr ""
 msgid "Monthly:"
 msgstr ""
 
-#: src/components/_layout/LayoutLeftIcons.tsx:168
+#: src/components/_layout/LayoutLeftIcons.tsx:167
 #: src/components/_layout/LayoutMenuGrid.tsx:224
 msgid "More"
 msgstr "更多"
@@ -5714,7 +5713,7 @@ msgid "Newest"
 msgstr "最新"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:115
-#: src/components/_layout/LayoutRightIcons.tsx:248
+#: src/components/_layout/LayoutRightIcons.tsx:255
 #: src/components/_layout/MoreWindowButton.tsx:165
 msgid "News"
 msgstr "新聞"
@@ -5727,7 +5726,7 @@ msgstr "下個將會是一台坦克"
 msgid "Next one will be tank"
 msgstr "下個將會是坦克"
 
-#: src/components/_user/user/SkillUpgrade.tsx:271
+#: src/components/_user/user/SkillUpgrade.tsx:272
 msgid "Next point costs"
 msgstr ""
 
@@ -5879,7 +5878,7 @@ msgstr ""
 msgid "No parties found"
 msgstr "找不到政黨"
 
-#: src/components/_user/user/SkillUpgrade.tsx:286
+#: src/components/_user/user/SkillUpgrade.tsx:287
 msgid "No prestige points left, tap to reset staged points"
 msgstr ""
 
@@ -6118,7 +6117,7 @@ msgstr "打開你的箱子！"
 msgid "Operative"
 msgstr "作戰兵"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:99
+#: src/components/_layout/LayoutLeftIcons.tsx:98
 msgid "Options"
 msgstr "選項"
 
@@ -6225,7 +6224,7 @@ msgid "Parties"
 msgstr "政黨"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:145
-#: src/components/_layout/LayoutRightIcons.tsx:196
+#: src/components/_layout/LayoutRightIcons.tsx:203
 #: src/components/_layout/MoreWindowButton.tsx:116
 #: src/components/_user/notification/notificationPrefs.categories.ts:159
 #: src/pages/user/[userId]/index.tsx:176
@@ -6720,7 +6719,7 @@ msgid "Rankings"
 msgstr "排名"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:164
-#: src/components/_layout/LayoutRightIcons.tsx:267
+#: src/components/_layout/LayoutRightIcons.tsx:274
 msgid "Ranks"
 msgstr "排行榜"
 
@@ -7144,7 +7143,7 @@ msgstr ""
 msgid "Residents (home here)"
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:528
+#: src/components/_military/hit/HitButton.tsx:533
 msgid "Resist"
 msgstr "抵抗"
 
@@ -7288,7 +7287,7 @@ msgstr "回合獲勝"
 msgid "Rounds Won"
 msgstr "回合獲勝"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:109
+#: src/components/_layout/LayoutLeftIcons.tsx:108
 #: src/components/_user/auth/WelcomeModal.tsx:170
 msgid "Rules"
 msgstr "規則"
@@ -7552,7 +7551,7 @@ msgid "Settings"
 msgstr "設定"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:104
-#: src/components/_layout/LayoutRightIcons.tsx:237
+#: src/components/_layout/LayoutRightIcons.tsx:244
 #: src/components/_layout/MoreWindowButton.tsx:84
 #: src/components/_other/shop/ShopHeader.tsx:52
 msgid "Shop"
@@ -7709,7 +7708,7 @@ msgstr "支出"
 msgid "Stable, conquest-proof strength. Still used for unrest, government wages and revolution cost. Other costs use <0>Average development</0>."
 msgstr ""
 
-#: src/components/_user/user/SkillUpgrade.tsx:267
+#: src/components/_user/user/SkillUpgrade.tsx:268
 msgid "Stage a prestige point on this skill (applied on save, reset on skill reset)"
 msgstr ""
 
@@ -8455,7 +8454,7 @@ msgstr ""
 msgid "Travel to another region <0>{count}</0> times"
 msgstr ""
 
-#: src/components/_political/map/MapUserLootLayer.tsx:92
+#: src/components/_political/map/MapUserLootLayer.tsx:100
 msgid "Travel to this region to claim the case."
 msgstr ""
 
@@ -8535,11 +8534,11 @@ msgstr "解鎖一鍵幫助"
 msgid "Unlock Produce all button"
 msgstr "解鎖一鍵生產"
 
-#: src/components/_economy/company/CompanyUpgradesGrid.tsx:132
+#: src/components/_economy/company/CompanyUpgradesGrid.tsx:127
 msgid "Unlock the previous slot first."
 msgstr ""
 
-#: src/components/_economy/company/CompanyUpgradesGrid.tsx:131
+#: src/components/_economy/company/CompanyUpgradesGrid.tsx:126
 msgid "Unlock this slot for {cost} concrete."
 msgstr ""
 
@@ -8547,7 +8546,7 @@ msgstr ""
 msgid "Unlocked pack"
 msgstr "已解鎖組合包"
 
-#: src/components/_political/region/UpgradesGrid.tsx:139
+#: src/components/_political/region/UpgradesGrid.tsx:133
 msgid "Unlocks at {dev} development."
 msgstr ""
 
@@ -9064,7 +9063,7 @@ msgstr ""
 msgid "Wooden Case"
 msgstr ""
 
-#: src/components/_political/map/MapUserLootLayer.tsx:69
+#: src/components/_political/map/MapUserLootLayer.tsx:77
 msgid "Wooden case collected!"
 msgstr ""
 
@@ -9182,8 +9181,8 @@ msgstr "你不是這個政黨的中常委"
 msgid "You are not participating"
 msgstr "你並未參與"
 
-#: src/components/_military/battle/BattleItem.tsx:353
-#: src/components/_military/hit/HitButton.tsx:469
+#: src/components/_military/battle/BattleItem.tsx:363
+#: src/components/_military/hit/HitButton.tsx:474
 msgid "You are standing in this region, so you can fight here."
 msgstr ""
 
@@ -9460,7 +9459,7 @@ msgid "You were so close"
 msgstr "就差這麼一點"
 
 #: src/pages/user/[userId]/skills.tsx:124
-msgid "You will drop to level 25 (losing 65,000 XP), gain a permanent +50% XP bonus and a prestige point, and your skills will be reset for free."
+msgid "You will drop to level 25 (losing 65,000 XP), gain a permanent +25% XP bonus per prestige level and a prestige point, and your skills will be reset for free."
 msgstr ""
 
 #. placeholder {0}: gameConfig?.referral.lifeTimeBadgeMoneySharePercent
@@ -9614,8 +9613,8 @@ msgstr "你的資訊已儲存"
 msgid "Your inventory holds all your items. Let's see what you've got!"
 msgstr "倉庫中存放著你的所有物品，來看看都有什麼！"
 
-#: src/components/_military/battle/BattleItem.tsx:352
-#: src/components/_military/hit/HitButton.tsx:468
+#: src/components/_military/battle/BattleItem.tsx:362
+#: src/components/_military/hit/HitButton.tsx:473
 msgid "Your location"
 msgstr ""
 
@@ -9711,10 +9710,10 @@ msgstr "your@email.com"
 msgid "Yours"
 msgstr "你的"
 
-#: src/components/_layout/LayoutMapIcons.tsx:86
+#: src/components/_layout/LayoutMapIcons.tsx:88
 msgid "Zoom in"
 msgstr ""
 
-#: src/components/_layout/LayoutMapIcons.tsx:94
+#: src/components/_layout/LayoutMapIcons.tsx:96
 msgid "Zoom out"
 msgstr ""
