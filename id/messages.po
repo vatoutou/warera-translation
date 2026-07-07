@@ -55,12 +55,12 @@ msgid " Gift a sub"
 msgstr " Hadiahkan langganan"
 
 #. placeholder {0}: gameConfig?.battle.regionNotLinkedToCapitalMalusPercent
-#: src/pages/region/[regionId]/index.tsx:191
+#: src/pages/region/[regionId]/index.tsx:184
 msgid "- Defending this region will have a malus of <0>{0}</0>."
 msgstr "- Membela wilayah ini akan terkena penalti sebesar <0>{0}</0>."
 
 #. placeholder {0}: -region.development * 0.5
-#: src/pages/region/[regionId]/index.tsx:200
+#: src/pages/region/[regionId]/index.tsx:193
 msgid "- Development income is reduced by 50%:<0>{0}</0>."
 msgstr "- Pendapatan pembangunan berkurang 50%:<0>{0}</0>."
 
@@ -72,6 +72,11 @@ msgstr ""
 #. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
 #: src/components/_other/upgrade/upgrade.frontConfig.tsx:95
 msgid "-{0}% move cost for your citizens when they move."
+msgstr ""
+
+#: src/components/_economy/company/CompanyUpgradeList.tsx:123
+#: src/components/_political/region/UpgradeList.tsx:140
+msgid "({freeSlotCount} free slots)"
 msgstr ""
 
 #: src/components/_political/region/CreateUpgradeModal.tsx:128
@@ -1283,7 +1288,7 @@ msgstr "Nama pengguna berwarna yang keren, bikin kamu makin populer"
 msgid "A civil war has started by <0/> in <1/>"
 msgstr "Perang saudara dimulai oleh <0/> di <1/>"
 
-#: src/pages/region/[regionId]/index.tsx:72
+#: src/pages/region/[regionId]/index.tsx:65
 msgid "A deposit has been found in this region, it can be exploited by companies to produce raws."
 msgstr "Deposit ditemukan di wilayah ini. Perusahaan bisa mengeksploitasinya untuk memproduksi bahan mentah."
 
@@ -1308,7 +1313,7 @@ msgstr "Biaya sebesar <0>{0}</0> diperlukan untuk menerima kontrak ini. Biaya te
 msgid "A revolution has started in <0/>"
 msgstr "Revolusi dimulai di <0/>"
 
-#: src/pages/region/[regionId]/index.tsx:109
+#: src/pages/region/[regionId]/index.tsx:102
 msgid "A strategic resource has been found in this region, it gives its owner a production and development bonus."
 msgstr "Sumber daya strategis ditemukan di wilayah ini; pemiliknya mendapat bonus produksi dan pembangunan."
 
@@ -1396,7 +1401,7 @@ msgstr "Aksi"
 msgid "Active"
 msgstr "Aktif"
 
-#: src/pages/region/[regionId]/index.tsx:215
+#: src/pages/region/[regionId]/index.tsx:208
 msgid "Active battle"
 msgstr "Pertempuran aktif"
 
@@ -1408,7 +1413,7 @@ msgstr "Pertempuran aktif"
 msgid "Active Citizens"
 msgstr "Warga aktif"
 
-#: src/pages/region/[regionId]/index.tsx:221
+#: src/pages/region/[regionId]/index.tsx:214
 msgid "Active construction"
 msgstr "Konstruksi aktif"
 
@@ -1548,7 +1553,7 @@ msgstr "Semua tipe"
 #: src/components/_layout/map.frontConfig.tsx:34
 #: src/components/_layout/MoreWindowButton.tsx:96
 #: src/components/_political/country/CountryDiplomacyGrid.tsx:193
-#: src/components/_political/map/MapMenu.tsx:265
+#: src/components/_political/map/MapMenu.tsx:246
 msgid "Alliance"
 msgstr ""
 
@@ -1872,7 +1877,7 @@ msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the
 msgstr "Di akhir timer, <0>{actualTickPoints}</0> akan diberikan kepada pihak dengan total damage terbanyak."
 
 #: src/components/_military/hit/HitButton.tsx:535
-#: src/components/_political/map/MapMenu.tsx:286
+#: src/components/_political/map/MapMenu.tsx:254
 #: src/components/_user/user/skills.frontConfig.tsx:45
 #: src/components/_user/user/skills.frontConfig.tsx:46
 msgid "Attack"
@@ -2091,7 +2096,7 @@ msgstr ""
 #: src/components/_layout/LayoutMenu.tsx:170
 #: src/components/_military/battle/BattlesHeader.tsx:21
 #: src/components/_military/war/WarHeader.tsx:84
-#: src/pages/region/[regionId]/index.tsx:148
+#: src/pages/region/[regionId]/index.tsx:141
 #: src/pages/war/[warId]/index.tsx:75
 msgid "Battles"
 msgstr "Pertempuran"
@@ -2244,8 +2249,10 @@ msgstr "Bangun perusahaan"
 msgid "Build a military unit"
 msgstr "Buat unit militer"
 
+#: src/components/_economy/company/CompanyUpgradeList.tsx:120
 #: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:121
-#: src/components/_political/region/CreateUpgradeModal.tsx:326
+#: src/components/_political/region/CreateUpgradeModal.tsx:327
+#: src/components/_political/region/UpgradeList.tsx:137
 msgid "Build an upgrade"
 msgstr ""
 
@@ -2519,7 +2526,7 @@ msgstr "Warga"
 msgid "Citizens get a bonus when fighting for allies, or against the sworn enemy"
 msgstr "Warga mendapat bonus saat bertarung untuk sekutu, atau melawan musuh bebuyutan"
 
-#: src/components/_other/upgradeConstruction/ConstructionPanel.tsx:85
+#: src/components/_other/upgradeConstruction/ConstructionPanel.tsx:95
 msgid "Citizens of the owning country located in the region can spend <0>{cost}</0> to add <1>{points}</1> construction points. When the bar is full, the upgrade levels up."
 msgstr ""
 
@@ -2590,7 +2597,7 @@ msgstr "Klik untuk memilih mosi"
 msgid "Climate"
 msgstr "Iklim"
 
-#: ../__ui/src/components/Modal/Modal.tsx:240
+#: ../__ui/src/components/Modal/Modal.tsx:241
 msgid "Close"
 msgstr "Tutup"
 
@@ -2795,7 +2802,7 @@ msgstr "Coba kasih ke moderator setempat"
 msgid "Construct"
 msgstr ""
 
-#: src/components/_other/upgradeConstruction/ConstructionPanel.tsx:82
+#: src/components/_other/upgradeConstruction/ConstructionPanel.tsx:92
 msgid "Construction"
 msgstr ""
 
@@ -2804,7 +2811,6 @@ msgid "Construction Contributors"
 msgstr ""
 
 #: src/pages/country/[countryId]/index.tsx:226
-#: src/pages/region/[regionId]/index.tsx:57
 msgid "Constructions"
 msgstr ""
 
@@ -2930,7 +2936,7 @@ msgstr "Negara"
 #: src/components/_military/battle/BattleCountrySide.tsx:73
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:133
 #: src/components/_political/country/CountryHeader.tsx:55
-#: src/components/_political/map/MapMenu.tsx:249
+#: src/components/_political/map/MapMenu.tsx:230
 msgid "Country"
 msgstr "Negara"
 
@@ -3112,7 +3118,11 @@ msgstr ""
 msgid "Daily"
 msgstr "Harian"
 
-#: src/components/_other/upgrade/UpgradesGridSummary.tsx:136
+#: src/components/_other/upgrade/UpgradeListItem.tsx:181
+msgid "Daily cost"
+msgstr ""
+
+#: src/components/_other/upgrade/UpgradesGridSummary.tsx:140
 msgid "Daily income"
 msgstr ""
 
@@ -3133,11 +3143,11 @@ msgstr ""
 msgid "Daily Missions Reset"
 msgstr "Misi Harian Direset"
 
-#: src/components/_other/upgrade/UpgradesGridSummary.tsx:145
+#: src/components/_other/upgrade/UpgradesGridSummary.tsx:149
 msgid "Daily production"
 msgstr ""
 
-#: src/components/_political/map/MapMenu.tsx:358
+#: src/components/_political/map/MapMenu.tsx:326
 msgid "Daily revenue"
 msgstr ""
 
@@ -3357,7 +3367,7 @@ msgstr "Turunkan dari komandan"
 msgid "Demoted from Commander"
 msgstr "Diturunkan dari komandan"
 
-#: src/pages/region/[regionId]/index.tsx:75
+#: src/pages/region/[regionId]/index.tsx:68
 msgid "Deposit"
 msgstr "Deposit sumber daya"
 
@@ -3374,7 +3384,7 @@ msgstr "Deposit ditemukan"
 msgid "Deposit of <0>{0}</0> has been depleted in <1/>"
 msgstr "Deposit <0>{0}</0> telah habis di <1/>"
 
-#: src/pages/region/[regionId]/index.tsx:71
+#: src/pages/region/[regionId]/index.tsx:64
 msgid "Deposit resource"
 msgstr "Sumber daya deposit"
 
@@ -3414,7 +3424,7 @@ msgid "Destruct"
 msgstr "Hancurkan"
 
 #: src/components/_layout/map.frontConfig.tsx:40
-#: src/components/_political/map/MapMenu.tsx:350
+#: src/components/_political/map/MapMenu.tsx:318
 msgid "Development"
 msgstr "Pembangunan"
 
@@ -3652,7 +3662,7 @@ msgstr "Celana Elit"
 msgid "Employee Production"
 msgstr "Produksi karyawan"
 
-#: src/pages/region/[regionId]/index.tsx:175
+#: src/pages/region/[regionId]/index.tsx:168
 msgid "Empty"
 msgstr "Kosong"
 
@@ -3800,7 +3810,7 @@ msgstr "Kedaluwarsa: tidak ada penawaran"
 msgid "Expired: round ended"
 msgstr "Kedaluwarsa: ronde telah berakhir"
 
-#: src/pages/region/[regionId]/index.tsx:94
+#: src/pages/region/[regionId]/index.tsx:87
 msgid "Expires in"
 msgstr "Berakhir dalam"
 
@@ -4476,6 +4486,10 @@ msgstr "Menyerang untuk negaramu sendiri saat berada di pemerintahan memberi efi
 msgid "Home"
 msgstr "Beranda"
 
+#: src/components/_other/upgrade/UpgradeListItem.tsx:183
+msgid "Hourly cost"
+msgstr ""
+
 #: src/components/_political/region/CreateUpgradeModal.tsx:213
 msgid "Hourly maintenance cost"
 msgstr ""
@@ -4614,7 +4628,7 @@ msgstr "Industrialisasi vs Agraris"
 msgid "Industrialist"
 msgstr "Industrialis"
 
-#: src/components/_political/map/MapMenu.tsx:256
+#: src/components/_political/map/MapMenu.tsx:237
 msgid "Initial country"
 msgstr ""
 
@@ -5072,8 +5086,10 @@ msgstr "Memuat..."
 msgid "Location"
 msgstr "Lokasi"
 
+#: src/components/_economy/company/CompanyUpgradeList.tsx:166
 #: src/components/_economy/company/CompanyUpgradesGrid.tsx:136
-#: src/components/_political/region/UpgradesGrid.tsx:167
+#: src/components/_political/region/UpgradeList.tsx:162
+#: src/components/_political/region/UpgradesGrid.tsx:170
 msgid "Locked slot"
 msgstr ""
 
@@ -5127,8 +5143,12 @@ msgid "Luck is finally on payroll"
 msgstr "Akhirnya keberuntungan berpihak padamu"
 
 #. placeholder {0}: construction.targetLevel
-#: src/components/_other/upgradeConstruction/ConstructionListItem.tsx:41
+#: src/components/_other/upgradeConstruction/ConstructionListItem.tsx:65
 msgid "Lvl {0}"
+msgstr ""
+
+#: src/components/_other/upgrade/UpgradeListItem.tsx:154
+msgid "Lvl {level}"
 msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:191
@@ -5160,7 +5180,7 @@ msgstr "Manajemen"
 msgid "map"
 msgstr "peta"
 
-#: src/components/_layout/LayoutMapIcons.tsx:80
+#: src/components/_layout/LayoutMapIcons.tsx:78
 #: src/components/_layout/LayoutOptions.tsx:102
 msgid "Map"
 msgstr ""
@@ -5787,6 +5807,10 @@ msgstr ""
 msgid "Next reward"
 msgstr "Hadiah berikutnya"
 
+#: src/components/_political/region/UpgradeList.tsx:167
+msgid "Next slot unlocks at {unlockDevelopment} development"
+msgstr ""
+
 #: src/components/_military/battle/BattleSystem.tsx:699
 msgid "Next tick"
 msgstr "Tick berikutnya"
@@ -6097,7 +6121,7 @@ msgstr "Tinggal selangkah lagi jadi legendaris..."
 msgid "Only buffs and food deposits spawn in your borders (coca, grain, livestock and fish)."
 msgstr "Hanya buff dan deposit makanan yang muncul di perbatasanmu (coca, gandum, ternak, dan ikan)."
 
-#: src/components/_other/upgradeConstruction/ConstructionPanel.tsx:68
+#: src/components/_other/upgradeConstruction/ConstructionPanel.tsx:71
 msgid "Only citizens of the owning country can contribute."
 msgstr ""
 
@@ -6112,6 +6136,10 @@ msgstr "Hanya presiden yang bisa mendaftarkan negaranya"
 #: src/components/_economy/inventoryAccount/InventoryAccount.tsx:55
 msgid "Only supporters can see their spending and income breakdown."
 msgstr "Hanya supporter yang bisa melihat rincian pengeluaran dan pemasukan mereka."
+
+#: src/components/_economy/company/CompanyUpgradeList.tsx:170
+msgid "Only the company owner can unlock this slot."
+msgstr ""
 
 #: src/components/_military/mu/MuSettings.tsx:97
 msgid "Only the owner and commanders can change the nationality."
@@ -6475,7 +6503,7 @@ msgstr "Artikel Populer"
 msgid "Population"
 msgstr ""
 
-#: src/components/_political/map/MapMenu.tsx:366
+#: src/components/_political/map/MapMenu.tsx:334
 msgid "Population (currently here)"
 msgstr ""
 
@@ -6626,7 +6654,7 @@ msgstr "Produksi"
 
 #: src/components/_economy/company/CompanyProductionBonusTag.tsx:51
 #: src/components/_economy/company/RecommendedCompanyRegions.tsx:99
-#: src/pages/region/[regionId]/index.tsx:84
+#: src/pages/region/[regionId]/index.tsx:77
 msgid "Production bonus"
 msgstr "Bonus produksi"
 
@@ -6941,7 +6969,7 @@ msgstr "Regen dalam..."
 msgid "Regens <0>{0}</0> when consumed"
 msgstr "Memulihkan <0>{0}</0> saat dikonsumsi"
 
-#: src/components/_political/map/MapMenu.tsx:243
+#: src/components/_political/map/MapMenu.tsx:224
 #: src/components/_political/party/PartyFormModal.tsx:109
 msgid "Region"
 msgstr "Wilayah"
@@ -7192,7 +7220,7 @@ msgstr "Atur ulang nama pengguna"
 msgid "Reset your skills"
 msgstr ""
 
-#: src/pages/region/[regionId]/index.tsx:124
+#: src/pages/region/[regionId]/index.tsx:117
 msgid "Reshuffle in"
 msgstr "Diacak ulang dalam"
 
@@ -7201,7 +7229,7 @@ msgstr "Diacak ulang dalam"
 msgid "Residents"
 msgstr ""
 
-#: src/components/_political/map/MapMenu.tsx:374
+#: src/components/_political/map/MapMenu.tsx:342
 msgid "Residents (home here)"
 msgstr ""
 
@@ -7209,7 +7237,7 @@ msgstr ""
 msgid "Resist"
 msgstr "Lawan"
 
-#: src/pages/region/[regionId]/index.tsx:140
+#: src/pages/region/[regionId]/index.tsx:133
 msgid "Resistance"
 msgstr "Perlawanan"
 
@@ -7222,7 +7250,7 @@ msgid "Resistance for {regionName} {score}"
 msgstr ""
 
 #: src/pages/country/[countryId]/index.tsx:235
-#: src/pages/region/[regionId]/index.tsx:64
+#: src/pages/region/[regionId]/index.tsx:57
 msgid "Resources"
 msgstr "Sumber daya"
 
@@ -7895,11 +7923,11 @@ msgstr ""
 msgid "Storage"
 msgstr "Penyimpanan"
 
-#: src/pages/region/[regionId]/index.tsx:112
+#: src/pages/region/[regionId]/index.tsx:105
 msgid "Strategic"
 msgstr "Strategis"
 
-#: src/pages/region/[regionId]/index.tsx:108
+#: src/pages/region/[regionId]/index.tsx:101
 msgid "Strategic resource"
 msgstr "Sumber daya strategis"
 
@@ -8113,11 +8141,11 @@ msgstr ""
 msgid "The damage factor increase of critical hits over normal hits"
 msgstr "Kenaikan faktor damage dari critical hit dibanding hit normal"
 
-#: src/pages/region/[regionId]/index.tsx:85
+#: src/pages/region/[regionId]/index.tsx:78
 msgid "The deposit gives a production bonus of the following percentage."
 msgstr "Deposit memberi bonus produksi dengan persentase berikut."
 
-#: src/pages/region/[regionId]/index.tsx:95
+#: src/pages/region/[regionId]/index.tsx:88
 msgid "The deposit will expire in the following amount of time."
 msgstr "Deposit akan kedaluwarsa dalam waktu berikut."
 
@@ -8143,7 +8171,7 @@ msgstr "Revolusi di <0/> telah dipadamkan. Pemerintahan tetap berkuasa."
 msgid "The revolution in <0/> has succeeded! The government has been overthrown."
 msgstr "Revolusi di <0/> berhasil! Pemerintahan telah digulingkan."
 
-#: src/pages/region/[regionId]/index.tsx:125
+#: src/pages/region/[regionId]/index.tsx:118
 msgid "The strategic resource will be reshuffled in the following amount of time."
 msgstr "Sumber daya strategis akan diacak ulang dalam waktu berikut."
 
@@ -8216,7 +8244,7 @@ msgstr "Undang-undang ini membutuhkan setidaknya {minActiveCitizen} warga aktif 
 msgid "This member won't be able to be nominated again for {cooldownDays} days."
 msgstr "Anggota ini tidak bisa dinominasikan lagi selama {cooldownDays} hari."
 
-#: src/pages/region/[regionId]/index.tsx:186
+#: src/pages/region/[regionId]/index.tsx:179
 msgid "This region is not linked to it's owner's capital."
 msgstr "Wilayah ini tidak tertaut ke ibu kota pemiliknya."
 
@@ -8404,7 +8432,7 @@ msgstr "Total"
 msgid "Total cases opened"
 msgstr "Total peti dibuka"
 
-#: src/components/_other/upgrade/UpgradesGridSummary.tsx:187
+#: src/components/_other/upgrade/UpgradesGridSummary.tsx:191
 msgid "Total daily cost"
 msgstr ""
 
@@ -8416,7 +8444,7 @@ msgstr "Total damage"
 msgid "Total Donated:"
 msgstr "Total Donasi:"
 
-#: src/components/_other/upgrade/UpgradesGridSummary.tsx:166
+#: src/components/_other/upgrade/UpgradesGridSummary.tsx:170
 msgid "Total hourly cost"
 msgstr ""
 
@@ -8524,10 +8552,6 @@ msgstr "Penerjemah"
 msgid "Travel"
 msgstr ""
 
-#: src/components/_political/map/MapMenu.tsx:273
-msgid "Travel here"
-msgstr ""
-
 #: src/components/_user/mission/mission.frontConfig.tsx:503
 msgid "Travel to another region <0>{count}</0> times"
 msgstr ""
@@ -8586,11 +8610,11 @@ msgstr ""
 msgid "Unethical: national orders deal ×2 damage but cost ×2 <0>{0}</0>"
 msgstr ""
 
-#: src/pages/region/[regionId]/index.tsx:209
+#: src/pages/region/[regionId]/index.tsx:202
 msgid "Unlinked"
 msgstr "Tidak tertaut"
 
-#: src/pages/region/[regionId]/index.tsx:182
+#: src/pages/region/[regionId]/index.tsx:175
 msgid "Unlinked to capital"
 msgstr "Tidak tertaut ke ibu kota"
 
@@ -8612,10 +8636,15 @@ msgstr "Buka tombol \"Bantu semua\""
 msgid "Unlock Produce all button"
 msgstr "Buka tombol \"Produksi semua\""
 
+#: src/components/_economy/company/CompanyUpgradeList.tsx:178
+msgid "Unlock slot {slot}"
+msgstr ""
+
 #: src/components/_economy/company/CompanyUpgradesGrid.tsx:140
 msgid "Unlock the previous slot first."
 msgstr ""
 
+#: src/components/_economy/company/CompanyUpgradeList.tsx:169
 #: src/components/_economy/company/CompanyUpgradesGrid.tsx:139
 msgid "Unlock this slot for {cost} concrete."
 msgstr ""
@@ -8624,8 +8653,12 @@ msgstr ""
 msgid "Unlocked pack"
 msgstr "Paket sudah dibuka"
 
-#: src/components/_political/region/UpgradesGrid.tsx:168
+#: src/components/_political/region/UpgradesGrid.tsx:171
 msgid "Unlocks at {dev} development."
+msgstr ""
+
+#: src/components/_political/region/UpgradeList.tsx:163
+msgid "Unlocks at {unlockDevelopment} development."
 msgstr ""
 
 #: src/components/_user/user/UserHeader.tsx:447
@@ -8706,7 +8739,7 @@ msgid "Upgrade your skills!"
 msgstr "Tingkatkan skillmu!"
 
 #: src/pages/company/[companyId]/index.tsx:49
-#: src/pages/region/[regionId]/index.tsx:50
+#: src/pages/region/[regionId]/index.tsx:49
 msgid "Upgrades"
 msgstr "Upgrade"
 
@@ -9428,7 +9461,7 @@ msgstr ""
 msgid "You must be at least level {0} to vote."
 msgstr ""
 
-#: src/components/_other/upgradeConstruction/ConstructionPanel.tsx:75
+#: src/components/_other/upgradeConstruction/ConstructionPanel.tsx:78
 #: src/components/_political/contribution/ContributionPanel.tsx:107
 msgid "You must be at least level {minLevel} to contribute."
 msgstr ""
@@ -9794,10 +9827,10 @@ msgstr "emailanda@email.com"
 msgid "Yours"
 msgstr "Milikmu"
 
-#: src/components/_layout/LayoutMapIcons.tsx:89
+#: src/components/_layout/LayoutMapIcons.tsx:87
 msgid "Zoom in"
 msgstr ""
 
-#: src/components/_layout/LayoutMapIcons.tsx:97
+#: src/components/_layout/LayoutMapIcons.tsx:95
 msgid "Zoom out"
 msgstr ""
