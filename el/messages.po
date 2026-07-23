@@ -64,16 +64,6 @@ msgstr "- Η υπεράσπιση αυτής της περιοχής θα έχε
 msgid "- Development income is reduced by 50%:<0>{0}</0>."
 msgstr "- Το εισόδημα από ανάπτυξη μειώνεται κατά 50%:<0>{0}</0>."
 
-#. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:114
-msgid "-{0}% move cost for anyone moving into your country."
-msgstr ""
-
-#. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:103
-msgid "-{0}% move cost for your citizens when they move."
-msgstr ""
-
 #: src/components/_economy/company/CompanyUpgradeList.tsx:123
 #: src/components/_political/region/UpgradeList.tsx:140
 msgid "({freeSlotCount} free slots)"
@@ -115,7 +105,7 @@ msgid "{0} active citizens required"
 msgstr "{0} ενεργοί πολίτες απαιτούνται"
 
 #. placeholder {0}: formatKm(homeDistanceKm)
-#: src/components/_layout/LayoutMapUserMenu.tsx:114
+#: src/components/_layout/LayoutMapUserMenu.tsx:117
 msgid "{0} away"
 msgstr ""
 
@@ -196,7 +186,7 @@ msgstr "{completedCount}/{totalCount} ολοκληρωμένα"
 msgid "{draftPrestigeCount} prestige point(s) on this skill ({savedPrestigeCount} saved, locked until reset)"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:146
+#: src/components/_layout/LayoutMapUserMenu.tsx:149
 msgid "{lootCount} cases on the map"
 msgstr ""
 
@@ -217,7 +207,7 @@ msgstr ""
 msgid "{score}/{0} Rounds"
 msgstr "{score}/{0} Γύροι"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:54
+#: src/components/_layout/LayoutMapUserMenu.tsx:57
 msgid "{value} km"
 msgstr ""
 
@@ -782,13 +772,18 @@ msgstr "<0>{0}</0> από μπόνους παραγωγής στρατηγικώ
 msgid "<0>{0}</0> ground are required to win a round, points are gained every tick"
 msgstr "<0>{0}</0> έδαφος απαιτείται για να κερδίσεις έναν γύρο, οι πόντοι κερδίζονται σε κάθε tick"
 
+#. placeholder {0}: levelConfig.stats.skillBonuses?.stamina ?? 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:103
+msgid "<0>{0}</0> max stamina for every citizen of your country.<1/>Unique: only one per country."
+msgstr ""
+
 #. placeholder {0}: data.refund
 #: src/components/_user/notification/notification.frontConfig.tsx:1592
 msgid "<0>{0}</0> returned to <1/>."
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.maxProduction
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:188
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:179
 msgid "<0>{0}</0> Storage capacity"
 msgstr "<0>{0}</0> Χωρητικότητα αποθήκης"
 
@@ -1504,10 +1499,6 @@ msgstr ""
 msgid "Agrarian"
 msgstr "Αγροτικός"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:110
-msgid "Airport"
-msgstr ""
-
 #: src/components/_military/battle/ActiveBattlesList.tsx:133
 #: src/components/_military/battle/EndedBattlesList.tsx:78
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:79
@@ -1638,7 +1629,7 @@ msgstr "Alpha Tester"
 msgid "Ammo"
 msgstr "Πυρομαχικά"
 
-#: src/components/_user/user/SkillValue.tsx:162
+#: src/components/_user/user/SkillValue.tsx:178
 msgid "Ammo:"
 msgstr "Πυρομαχικά:"
 
@@ -1970,11 +1961,11 @@ msgid "Automated engine"
 msgstr "Αυτοματοποιημένη μηχανή"
 
 #: src/components/_economy/work/WorkChart.tsx:235
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:174
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:165
 msgid "Automated Engine"
 msgstr "Αυτοματοποιημένη Μηχανή"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:110
+#: src/components/_layout/LayoutMapUserMenu.tsx:113
 msgid "Available in"
 msgstr ""
 
@@ -1995,7 +1986,7 @@ msgstr ""
 msgid "Baby Boomer"
 msgstr "Baby Boomer"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:126
+#: src/components/_layout/LayoutMapUserMenu.tsx:129
 msgid "Back to home region"
 msgstr ""
 
@@ -2237,7 +2228,7 @@ msgstr "Ψωμί"
 msgid "Break defensive pact"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:223
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:214
 msgid "Break room"
 msgstr "Αίθουσα ανάπαυσης"
 
@@ -2269,7 +2260,7 @@ msgstr ""
 msgid "Buff started"
 msgstr "Το Buff ξεκίνησε"
 
-#: src/components/_user/user/SkillValue.tsx:194
+#: src/components/_user/user/SkillValue.tsx:210
 msgid "Buffs:"
 msgstr "Buffs:"
 
@@ -3322,7 +3313,7 @@ msgstr "Κάνει κάποιες ζημιές"
 msgid "Debuff ended"
 msgstr "Το Debuff τέλειωσε"
 
-#: src/components/_user/user/SkillValue.tsx:226
+#: src/components/_user/user/SkillValue.tsx:242
 msgid "Debuffs:"
 msgstr "Debuffs:"
 
@@ -3605,7 +3596,7 @@ msgstr "Σύνοψη Δωρεών"
 msgid "Donations"
 msgstr "Δωρεές"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:209
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:200
 msgid "Dormitories"
 msgstr "Κοιτώνες"
 
@@ -3674,7 +3665,7 @@ msgstr "Επεξεργασία εργαζόμενου"
 msgid "Effect applies to the whole country. Maintenance scales with the country's average development."
 msgstr ""
 
-#: src/components/_user/user/SkillValue.tsx:256
+#: src/components/_user/user/SkillValue.tsx:272
 msgid "Effective:"
 msgstr "Αποτελεσματικό:"
 
@@ -3807,7 +3798,7 @@ msgstr "Επιχειρηματικότητα"
 msgid "Equipment"
 msgstr "Εξοπλισμός"
 
-#: src/components/_user/user/SkillValue.tsx:99
+#: src/components/_user/user/SkillValue.tsx:115
 msgid "Equipment:"
 msgstr "Εξοπλισμός:"
 
@@ -4145,7 +4136,7 @@ msgstr "Σημαίες"
 msgid "Flail"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:120
+#: src/components/_layout/LayoutMapUserMenu.tsx:123
 msgid "Focus on you"
 msgstr ""
 
@@ -4231,7 +4222,7 @@ msgid "Generate Missions"
 msgstr "Δημιουργία Αποστολών"
 
 #. placeholder {0}: levelConfig.stats.dailyProd
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:178
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:169
 msgid "Generates <0>{0}</0>/day"
 msgstr "Παράγει <0>{0}</0>/ημέρα"
 
@@ -4288,24 +4279,24 @@ msgid "Giveaway Won!"
 msgstr "Κερδήθηκε το Giveaway!"
 
 #. placeholder {0}: levelConfig.stats.attackBonus
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:200
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:191
 msgid "Gives <0>{0}</0>"
 msgstr "Δίνει <0>{0}</0>"
 
 #. placeholder {0}: Math.round(percent * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:120
 msgid "Gives daily income of <0/> ({0}% of this region <1>Development</1>)"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:155
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:146
 msgid "Gives daily income of <0/> (<1/> per citizen present here × {regionPopulation})"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:138
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
 msgid "Gives daily income of <0/> of this region <1>Development</1>"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:164
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:155
 msgid "Gives daily income of <0/> per citizen present in this region."
 msgstr ""
 
@@ -4511,7 +4502,7 @@ msgstr ""
 msgid "Hard Worker"
 msgstr "Σκληρά εργαζόμενος"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:196
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:187
 msgid "Headquarters"
 msgstr "Αρχηγείο"
 
@@ -5141,7 +5132,7 @@ msgstr "Ασβεστόλιθος"
 msgid "Limit of food consumption"
 msgstr "Όριο κατανάλωσης τροφίμων"
 
-#: src/components/_user/user/SkillValue.tsx:114
+#: src/components/_user/user/SkillValue.tsx:130
 msgid "Limited:"
 msgstr ""
 
@@ -5301,7 +5292,7 @@ msgstr ""
 #: src/components/_layout/LayoutMenu.tsx:195
 #: src/components/_layout/LayoutMenuGrid.tsx:85
 #: src/components/_layout/MoreWindowButton.tsx:168
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:148
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:139
 #: src/pages/country/[countryId]/account.tsx:31
 #: src/pages/party/[partyId]/account.tsx:24
 #: src/pages/user/[userId]/account.tsx:26
@@ -5327,13 +5318,13 @@ msgid "Maxed!"
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.members
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:213
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:204
 msgid "Maximum of <0>{0}</0> members."
 msgstr "Μέγιστο <0>{0}</0> μέλη."
 
 #. placeholder {0}: levelConfig.stats.maxWorkers
 #. placeholder {1}: typeof levelConfig.stats.dailyHires !== 'undefined' && ( <> <br /> Daily hiring limit of{' '} <EntityValue IconComponent={WorkerIcon}> {levelConfig.stats.dailyHires} </EntityValue>{' '} per day. </> )
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:227
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:218
 msgid "Maximum of <0>{0}</0> workers.{1}"
 msgstr "Μέγιστο <0>{0}</0> εργαζόμενοι.{1}"
 
@@ -5493,7 +5484,7 @@ msgstr "Στρατιωτικοί νόμοι"
 msgid "Military Rank Up!"
 msgstr "Ανέβηκες Στρατιωτικό Βαθμό!"
 
-#: src/components/_user/user/SkillValue.tsx:210
+#: src/components/_user/user/SkillValue.tsx:226
 msgid "Military rank:"
 msgstr "Στρατιωτικός βαθμός:"
 
@@ -5756,11 +5747,15 @@ msgstr ""
 msgid "National bounty"
 msgstr ""
 
+#: src/components/_user/user/SkillValue.tsx:84
+msgid "National upgrade:"
+msgstr ""
+
 #: src/components/_military/mu/MuSettings.tsx:30
 msgid "Nationality updated"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:135
+#: src/components/_layout/LayoutMapUserMenu.tsx:138
 msgid "Nearest wooden case"
 msgstr ""
 
@@ -6015,7 +6010,7 @@ msgstr "Δεν υπάρχουν ακόμα δωρεές"
 msgid "No ground ranking yet."
 msgstr "Δεν υπάρχει ακόμα κατάταξη εδάφους."
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:105
+#: src/components/_layout/LayoutMapUserMenu.tsx:108
 msgid "No home region set"
 msgstr ""
 
@@ -6357,7 +6352,7 @@ msgstr "Αποτέλεσμα"
 msgid "Overall"
 msgstr ""
 
-#: src/components/_user/user/SkillValue.tsx:178
+#: src/components/_user/user/SkillValue.tsx:194
 msgid "Overflow:"
 msgstr ""
 
@@ -6893,10 +6888,6 @@ msgstr "Πρόταση μείωσης μισθού"
 #: src/components/_other/shop/ShopHeader.tsx:43
 msgid "Propositions"
 msgstr "Προτάσεις"
-
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:99
-msgid "Public transport"
-msgstr ""
 
 #: src/components/_common/GameRules.tsx:286
 msgid "Punishments, along with their reasoning, are visible on user profiles. Players may appeal through the official Discord server, where detailed explanations and evidence will be provided. Rule violations can be reported with supporting evidence."
@@ -8051,7 +8042,7 @@ msgid "Stone Maul"
 msgstr ""
 
 #: src/components/_economy/company/CompanyTags.tsx:107
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:184
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:175
 msgid "Storage"
 msgstr "Αποθήκη"
 
@@ -8201,7 +8192,7 @@ msgstr "Περιοχή στόχος"
 msgid "Target user"
 msgstr "Χρήστης στόχος"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:122
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:113
 msgid "Tax Office"
 msgstr ""
 
@@ -8594,7 +8585,7 @@ msgstr ""
 
 #: src/components/_military/mu/MuMemberList.tsx:361
 #: src/components/_military/mu/MuMemberList.tsx:401
-#: src/components/_user/user/SkillValue.tsx:241
+#: src/components/_user/user/SkillValue.tsx:257
 msgid "Total:"
 msgstr "Σύνολο:"
 
@@ -8620,7 +8611,7 @@ msgstr "Αποκλεισμός από Τουρνουά"
 msgid "Tournament Ended"
 msgstr "Τουρνουά Τέλειωσε"
 
-#: src/components/_user/user/SkillValue.tsx:142
+#: src/components/_user/user/SkillValue.tsx:158
 msgid "Tournament reward:"
 msgstr "Ανταμοιβή τουρνουά:"
 
@@ -8648,6 +8639,10 @@ msgstr ""
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:16
 msgid "Trainee"
 msgstr "Εκπαιδευόμενος"
+
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:99
+msgid "Training Center"
+msgstr ""
 
 #: src/components/_user/user/UserHeader.tsx:213
 msgid "Transac."
@@ -9213,7 +9208,7 @@ msgstr "Πλούτος"
 msgid "Weapon"
 msgstr "Όπλο"
 
-#: src/components/_user/user/SkillValue.tsx:84
+#: src/components/_user/user/SkillValue.tsx:100
 msgid "Weapon:"
 msgstr "Όπλο:"
 
@@ -9415,7 +9410,7 @@ msgstr "Είσαι τυχερός τύπος"
 msgid "You are already congress member of another country. Resign first."
 msgstr "Είσαι ήδη μέλος Κοινοβουλίου άλλης χώρας. Παραιτήσου πρώτα."
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:107
+#: src/components/_layout/LayoutMapUserMenu.tsx:110
 msgid "You are already home"
 msgstr ""
 

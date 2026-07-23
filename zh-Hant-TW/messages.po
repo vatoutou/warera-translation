@@ -64,16 +64,6 @@ msgstr "- 防禦此地區會有 <0>{0}</0> 減益"
 msgid "- Development income is reduced by 50%:<0>{0}</0>."
 msgstr "- 發展收入減少50%: <0>{0}</0> "
 
-#. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:114
-msgid "-{0}% move cost for anyone moving into your country."
-msgstr ""
-
-#. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:103
-msgid "-{0}% move cost for your citizens when they move."
-msgstr ""
-
 #: src/components/_economy/company/CompanyUpgradeList.tsx:123
 #: src/components/_political/region/UpgradeList.tsx:140
 msgid "({freeSlotCount} free slots)"
@@ -115,7 +105,7 @@ msgid "{0} active citizens required"
 msgstr "需要 {0} 位活躍公民"
 
 #. placeholder {0}: formatKm(homeDistanceKm)
-#: src/components/_layout/LayoutMapUserMenu.tsx:114
+#: src/components/_layout/LayoutMapUserMenu.tsx:117
 msgid "{0} away"
 msgstr ""
 
@@ -196,7 +186,7 @@ msgstr "{completedCount}/{totalCount} 已完成"
 msgid "{draftPrestigeCount} prestige point(s) on this skill ({savedPrestigeCount} saved, locked until reset)"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:146
+#: src/components/_layout/LayoutMapUserMenu.tsx:149
 msgid "{lootCount} cases on the map"
 msgstr ""
 
@@ -217,7 +207,7 @@ msgstr ""
 msgid "{score}/{0} Rounds"
 msgstr "{score}/{0} 回合"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:54
+#: src/components/_layout/LayoutMapUserMenu.tsx:57
 msgid "{value} km"
 msgstr ""
 
@@ -782,13 +772,18 @@ msgstr "<0>{0}</0> 來自於戰略資源生產加成。"
 msgid "<0>{0}</0> ground are required to win a round, points are gained every tick"
 msgstr "還需要 <0>{0}</0> 優勢點來取得回合勝利，點數隨每刻增加"
 
+#. placeholder {0}: levelConfig.stats.skillBonuses?.stamina ?? 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:103
+msgid "<0>{0}</0> max stamina for every citizen of your country.<1/>Unique: only one per country."
+msgstr ""
+
 #. placeholder {0}: data.refund
 #: src/components/_user/notification/notification.frontConfig.tsx:1592
 msgid "<0>{0}</0> returned to <1/>."
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.maxProduction
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:188
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:179
 msgid "<0>{0}</0> Storage capacity"
 msgstr "<0>{0}</0> 儲存空間"
 
@@ -1504,10 +1499,6 @@ msgstr ""
 msgid "Agrarian"
 msgstr "農業主義"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:110
-msgid "Airport"
-msgstr ""
-
 #: src/components/_military/battle/ActiveBattlesList.tsx:133
 #: src/components/_military/battle/EndedBattlesList.tsx:78
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:79
@@ -1638,7 +1629,7 @@ msgstr ""
 msgid "Ammo"
 msgstr "子彈"
 
-#: src/components/_user/user/SkillValue.tsx:162
+#: src/components/_user/user/SkillValue.tsx:178
 msgid "Ammo:"
 msgstr "子彈："
 
@@ -1970,11 +1961,11 @@ msgid "Automated engine"
 msgstr "自動化機械"
 
 #: src/components/_economy/work/WorkChart.tsx:235
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:174
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:165
 msgid "Automated Engine"
 msgstr "自動化機械"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:110
+#: src/components/_layout/LayoutMapUserMenu.tsx:113
 msgid "Available in"
 msgstr ""
 
@@ -1995,7 +1986,7 @@ msgstr ""
 msgid "Baby Boomer"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:126
+#: src/components/_layout/LayoutMapUserMenu.tsx:129
 msgid "Back to home region"
 msgstr ""
 
@@ -2237,7 +2228,7 @@ msgstr "麵包"
 msgid "Break defensive pact"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:223
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:214
 msgid "Break room"
 msgstr "休息室"
 
@@ -2269,7 +2260,7 @@ msgstr ""
 msgid "Buff started"
 msgstr "加成已開始"
 
-#: src/components/_user/user/SkillValue.tsx:194
+#: src/components/_user/user/SkillValue.tsx:210
 msgid "Buffs:"
 msgstr "加成："
 
@@ -3322,7 +3313,7 @@ msgstr "造成一些傷害"
 msgid "Debuff ended"
 msgstr "減益已結束"
 
-#: src/components/_user/user/SkillValue.tsx:226
+#: src/components/_user/user/SkillValue.tsx:242
 msgid "Debuffs:"
 msgstr "減益："
 
@@ -3605,7 +3596,7 @@ msgstr "捐款概要"
 msgid "Donations"
 msgstr "捐款"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:209
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:200
 msgid "Dormitories"
 msgstr "宿舍"
 
@@ -3674,7 +3665,7 @@ msgstr "編輯員工"
 msgid "Effect applies to the whole country. Maintenance scales with the country's average development."
 msgstr ""
 
-#: src/components/_user/user/SkillValue.tsx:256
+#: src/components/_user/user/SkillValue.tsx:272
 msgid "Effective:"
 msgstr "效果："
 
@@ -3807,7 +3798,7 @@ msgstr "創業能力"
 msgid "Equipment"
 msgstr "裝備"
 
-#: src/components/_user/user/SkillValue.tsx:99
+#: src/components/_user/user/SkillValue.tsx:115
 msgid "Equipment:"
 msgstr "裝備："
 
@@ -4145,7 +4136,7 @@ msgstr "旗幟"
 msgid "Flail"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:120
+#: src/components/_layout/LayoutMapUserMenu.tsx:123
 msgid "Focus on you"
 msgstr ""
 
@@ -4231,7 +4222,7 @@ msgid "Generate Missions"
 msgstr "產生任務"
 
 #. placeholder {0}: levelConfig.stats.dailyProd
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:178
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:169
 msgid "Generates <0>{0}</0>/day"
 msgstr "產生 <0>{0}</0>/日"
 
@@ -4288,24 +4279,24 @@ msgid "Giveaway Won!"
 msgstr "贏得了抽獎！"
 
 #. placeholder {0}: levelConfig.stats.attackBonus
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:200
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:191
 msgid "Gives <0>{0}</0>"
 msgstr "給予 <0>{0}</0>"
 
 #. placeholder {0}: Math.round(percent * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:120
 msgid "Gives daily income of <0/> ({0}% of this region <1>Development</1>)"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:155
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:146
 msgid "Gives daily income of <0/> (<1/> per citizen present here × {regionPopulation})"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:138
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
 msgid "Gives daily income of <0/> of this region <1>Development</1>"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:164
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:155
 msgid "Gives daily income of <0/> per citizen present in this region."
 msgstr ""
 
@@ -4511,7 +4502,7 @@ msgstr ""
 msgid "Hard Worker"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:196
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:187
 msgid "Headquarters"
 msgstr "總部"
 
@@ -5141,7 +5132,7 @@ msgstr "石灰岩"
 msgid "Limit of food consumption"
 msgstr "食物使用上限"
 
-#: src/components/_user/user/SkillValue.tsx:114
+#: src/components/_user/user/SkillValue.tsx:130
 msgid "Limited:"
 msgstr ""
 
@@ -5301,7 +5292,7 @@ msgstr ""
 #: src/components/_layout/LayoutMenu.tsx:195
 #: src/components/_layout/LayoutMenuGrid.tsx:85
 #: src/components/_layout/MoreWindowButton.tsx:168
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:148
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:139
 #: src/pages/country/[countryId]/account.tsx:31
 #: src/pages/party/[partyId]/account.tsx:24
 #: src/pages/user/[userId]/account.tsx:26
@@ -5327,13 +5318,13 @@ msgid "Maxed!"
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.members
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:213
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:204
 msgid "Maximum of <0>{0}</0> members."
 msgstr "最大可容納 <0>{0}</0> 位成員。"
 
 #. placeholder {0}: levelConfig.stats.maxWorkers
 #. placeholder {1}: typeof levelConfig.stats.dailyHires !== 'undefined' && ( <> <br /> Daily hiring limit of{' '} <EntityValue IconComponent={WorkerIcon}> {levelConfig.stats.dailyHires} </EntityValue>{' '} per day. </> )
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:227
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:218
 msgid "Maximum of <0>{0}</0> workers.{1}"
 msgstr "最大可容納 <0>{0}</0> 位員工。{1}"
 
@@ -5493,7 +5484,7 @@ msgstr "軍事法案"
 msgid "Military Rank Up!"
 msgstr "軍階提升！"
 
-#: src/components/_user/user/SkillValue.tsx:210
+#: src/components/_user/user/SkillValue.tsx:226
 msgid "Military rank:"
 msgstr "軍階："
 
@@ -5756,11 +5747,15 @@ msgstr ""
 msgid "National bounty"
 msgstr ""
 
+#: src/components/_user/user/SkillValue.tsx:84
+msgid "National upgrade:"
+msgstr ""
+
 #: src/components/_military/mu/MuSettings.tsx:30
 msgid "Nationality updated"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:135
+#: src/components/_layout/LayoutMapUserMenu.tsx:138
 msgid "Nearest wooden case"
 msgstr ""
 
@@ -6015,7 +6010,7 @@ msgstr "尚無捐款"
 msgid "No ground ranking yet."
 msgstr "還沒有優勢點排名。"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:105
+#: src/components/_layout/LayoutMapUserMenu.tsx:108
 msgid "No home region set"
 msgstr ""
 
@@ -6357,7 +6352,7 @@ msgstr "結果"
 msgid "Overall"
 msgstr ""
 
-#: src/components/_user/user/SkillValue.tsx:178
+#: src/components/_user/user/SkillValue.tsx:194
 msgid "Overflow:"
 msgstr ""
 
@@ -6893,10 +6888,6 @@ msgstr "提議減薪"
 #: src/components/_other/shop/ShopHeader.tsx:43
 msgid "Propositions"
 msgstr "提案"
-
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:99
-msgid "Public transport"
-msgstr ""
 
 #: src/components/_common/GameRules.tsx:286
 msgid "Punishments, along with their reasoning, are visible on user profiles. Players may appeal through the official Discord server, where detailed explanations and evidence will be provided. Rule violations can be reported with supporting evidence."
@@ -8051,7 +8042,7 @@ msgid "Stone Maul"
 msgstr ""
 
 #: src/components/_economy/company/CompanyTags.tsx:107
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:184
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:175
 msgid "Storage"
 msgstr "儲藏區"
 
@@ -8201,7 +8192,7 @@ msgstr "目標地區"
 msgid "Target user"
 msgstr "目標用戶"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:122
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:113
 msgid "Tax Office"
 msgstr ""
 
@@ -8594,7 +8585,7 @@ msgstr ""
 
 #: src/components/_military/mu/MuMemberList.tsx:361
 #: src/components/_military/mu/MuMemberList.tsx:401
-#: src/components/_user/user/SkillValue.tsx:241
+#: src/components/_user/user/SkillValue.tsx:257
 msgid "Total:"
 msgstr "總和："
 
@@ -8620,7 +8611,7 @@ msgstr "錦標賽中遭淘汰"
 msgid "Tournament Ended"
 msgstr "錦標賽已結束"
 
-#: src/components/_user/user/SkillValue.tsx:142
+#: src/components/_user/user/SkillValue.tsx:158
 msgid "Tournament reward:"
 msgstr "錦標賽獎勵："
 
@@ -8648,6 +8639,10 @@ msgstr ""
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:16
 msgid "Trainee"
 msgstr "訓練兵"
+
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:99
+msgid "Training Center"
+msgstr ""
 
 #: src/components/_user/user/UserHeader.tsx:213
 msgid "Transac."
@@ -9213,7 +9208,7 @@ msgstr "資產"
 msgid "Weapon"
 msgstr "武器"
 
-#: src/components/_user/user/SkillValue.tsx:84
+#: src/components/_user/user/SkillValue.tsx:100
 msgid "Weapon:"
 msgstr "武器："
 
@@ -9415,7 +9410,7 @@ msgstr "你個可惡的籤王"
 msgid "You are already congress member of another country. Resign first."
 msgstr "你已是其他國家的國會議員了，請先卸任。"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:107
+#: src/components/_layout/LayoutMapUserMenu.tsx:110
 msgid "You are already home"
 msgstr ""
 

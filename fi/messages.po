@@ -65,16 +65,6 @@ msgstr "- Tämän alueen puolustamisesta koituu haitta <0>{0}</0>."
 msgid "- Development income is reduced by 50%:<0>{0}</0>."
 msgstr "- Kehitystulot vähenevät 50%:lla: <0>{0}</0>."
 
-#. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:114
-msgid "-{0}% move cost for anyone moving into your country."
-msgstr ""
-
-#. placeholder {0}: Math.round((levelConfig.stats.oilCostReduction ?? 0) * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:103
-msgid "-{0}% move cost for your citizens when they move."
-msgstr ""
-
 #: src/components/_economy/company/CompanyUpgradeList.tsx:123
 #: src/components/_political/region/UpgradeList.tsx:140
 msgid "({freeSlotCount} free slots)"
@@ -116,7 +106,7 @@ msgid "{0} active citizens required"
 msgstr "Tarvitaan {0} aktiivista kansalaista"
 
 #. placeholder {0}: formatKm(homeDistanceKm)
-#: src/components/_layout/LayoutMapUserMenu.tsx:114
+#: src/components/_layout/LayoutMapUserMenu.tsx:117
 msgid "{0} away"
 msgstr ""
 
@@ -197,7 +187,7 @@ msgstr "{completedCount}/{totalCount} suoritettu"
 msgid "{draftPrestigeCount} prestige point(s) on this skill ({savedPrestigeCount} saved, locked until reset)"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:146
+#: src/components/_layout/LayoutMapUserMenu.tsx:149
 msgid "{lootCount} cases on the map"
 msgstr ""
 
@@ -218,7 +208,7 @@ msgstr ""
 msgid "{score}/{0} Rounds"
 msgstr "{score}/{0} kierrosta"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:54
+#: src/components/_layout/LayoutMapUserMenu.tsx:57
 msgid "{value} km"
 msgstr ""
 
@@ -783,13 +773,18 @@ msgstr "<0>{0}</0> strategisista resursseista tuotantobonus."
 msgid "<0>{0}</0> ground are required to win a round, points are gained every tick"
 msgstr "<0>{0}</0> maata vaaditaan kierroksen voittoon, pisteitä kertyy jokaisella rastilla"
 
+#. placeholder {0}: levelConfig.stats.skillBonuses?.stamina ?? 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:103
+msgid "<0>{0}</0> max stamina for every citizen of your country.<1/>Unique: only one per country."
+msgstr ""
+
 #. placeholder {0}: data.refund
 #: src/components/_user/notification/notification.frontConfig.tsx:1592
 msgid "<0>{0}</0> returned to <1/>."
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.maxProduction
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:188
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:179
 msgid "<0>{0}</0> Storage capacity"
 msgstr "<0>{0}</0> Varastointikapasiteetti"
 
@@ -1505,10 +1500,6 @@ msgstr ""
 msgid "Agrarian"
 msgstr "Maatalous"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:110
-msgid "Airport"
-msgstr ""
-
 #: src/components/_military/battle/ActiveBattlesList.tsx:133
 #: src/components/_military/battle/EndedBattlesList.tsx:78
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:79
@@ -1639,7 +1630,7 @@ msgstr "Alfa testaaja"
 msgid "Ammo"
 msgstr "Ammukset"
 
-#: src/components/_user/user/SkillValue.tsx:162
+#: src/components/_user/user/SkillValue.tsx:178
 msgid "Ammo:"
 msgstr "Ammus:"
 
@@ -1971,11 +1962,11 @@ msgid "Automated engine"
 msgstr "Automaattinen moottori"
 
 #: src/components/_economy/work/WorkChart.tsx:235
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:174
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:165
 msgid "Automated Engine"
 msgstr "Automatisoitu Moottori"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:110
+#: src/components/_layout/LayoutMapUserMenu.tsx:113
 msgid "Available in"
 msgstr ""
 
@@ -1996,7 +1987,7 @@ msgstr ""
 msgid "Baby Boomer"
 msgstr "Babyboomeri"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:126
+#: src/components/_layout/LayoutMapUserMenu.tsx:129
 msgid "Back to home region"
 msgstr ""
 
@@ -2238,7 +2229,7 @@ msgstr "Leipä"
 msgid "Break defensive pact"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:223
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:214
 msgid "Break room"
 msgstr "Taukohuone"
 
@@ -2270,7 +2261,7 @@ msgstr "Buff vanhenee pian"
 msgid "Buff started"
 msgstr "Buff aloitti"
 
-#: src/components/_user/user/SkillValue.tsx:194
+#: src/components/_user/user/SkillValue.tsx:210
 msgid "Buffs:"
 msgstr "Buffit:"
 
@@ -3323,7 +3314,7 @@ msgstr "Aiheuttaa joitakin vahinkoja"
 msgid "Debuff ended"
 msgstr "Debuff päättyi"
 
-#: src/components/_user/user/SkillValue.tsx:226
+#: src/components/_user/user/SkillValue.tsx:242
 msgid "Debuffs:"
 msgstr "Debuffit:"
 
@@ -3606,7 +3597,7 @@ msgstr "Lahjoitusten yhteenveto"
 msgid "Donations"
 msgstr "Lahjoitukset"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:209
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:200
 msgid "Dormitories"
 msgstr "Asuntoloita"
 
@@ -3675,7 +3666,7 @@ msgstr "Muokkaa työntekijää"
 msgid "Effect applies to the whole country. Maintenance scales with the country's average development."
 msgstr ""
 
-#: src/components/_user/user/SkillValue.tsx:256
+#: src/components/_user/user/SkillValue.tsx:272
 msgid "Effective:"
 msgstr "Voimassa:"
 
@@ -3808,7 +3799,7 @@ msgstr "Yrittäjyys"
 msgid "Equipment"
 msgstr "Laitteet"
 
-#: src/components/_user/user/SkillValue.tsx:99
+#: src/components/_user/user/SkillValue.tsx:115
 msgid "Equipment:"
 msgstr "Laitteet:"
 
@@ -4146,7 +4137,7 @@ msgstr "Liput"
 msgid "Flail"
 msgstr "Nuijakeihäs"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:120
+#: src/components/_layout/LayoutMapUserMenu.tsx:123
 msgid "Focus on you"
 msgstr ""
 
@@ -4232,7 +4223,7 @@ msgid "Generate Missions"
 msgstr "Luo tehtäviä"
 
 #. placeholder {0}: levelConfig.stats.dailyProd
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:178
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:169
 msgid "Generates <0>{0}</0>/day"
 msgstr "Tuottaa <0>{0}</0>/päivä"
 
@@ -4289,24 +4280,24 @@ msgid "Giveaway Won!"
 msgstr "Giveaway voitettu!"
 
 #. placeholder {0}: levelConfig.stats.attackBonus
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:200
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:191
 msgid "Gives <0>{0}</0>"
 msgstr "Antaa <0>{0}</0>"
 
 #. placeholder {0}: Math.round(percent * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:120
 msgid "Gives daily income of <0/> ({0}% of this region <1>Development</1>)"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:155
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:146
 msgid "Gives daily income of <0/> (<1/> per citizen present here × {regionPopulation})"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:138
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
 msgid "Gives daily income of <0/> of this region <1>Development</1>"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:164
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:155
 msgid "Gives daily income of <0/> per citizen present in this region."
 msgstr ""
 
@@ -4512,7 +4503,7 @@ msgstr ""
 msgid "Hard Worker"
 msgstr "Kova Työmies"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:196
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:187
 msgid "Headquarters"
 msgstr "Päämaja"
 
@@ -5142,7 +5133,7 @@ msgstr "Kalkkikivi"
 msgid "Limit of food consumption"
 msgstr "Ruoan kulutuksen raja"
 
-#: src/components/_user/user/SkillValue.tsx:114
+#: src/components/_user/user/SkillValue.tsx:130
 msgid "Limited:"
 msgstr "Rajoitettu:"
 
@@ -5302,7 +5293,7 @@ msgstr ""
 #: src/components/_layout/LayoutMenu.tsx:195
 #: src/components/_layout/LayoutMenuGrid.tsx:85
 #: src/components/_layout/MoreWindowButton.tsx:168
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:148
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:139
 #: src/pages/country/[countryId]/account.tsx:31
 #: src/pages/party/[partyId]/account.tsx:24
 #: src/pages/user/[userId]/account.tsx:26
@@ -5328,13 +5319,13 @@ msgid "Maxed!"
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.members
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:213
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:204
 msgid "Maximum of <0>{0}</0> members."
 msgstr "Enintään <0>{0}</0> jäsentä."
 
 #. placeholder {0}: levelConfig.stats.maxWorkers
 #. placeholder {1}: typeof levelConfig.stats.dailyHires !== 'undefined' && ( <> <br /> Daily hiring limit of{' '} <EntityValue IconComponent={WorkerIcon}> {levelConfig.stats.dailyHires} </EntityValue>{' '} per day. </> )
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:227
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:218
 msgid "Maximum of <0>{0}</0> workers.{1}"
 msgstr "Enintään <0>{0}</0> työntekijää.{1}"
 
@@ -5494,7 +5485,7 @@ msgstr "Sotilaalliset lait"
 msgid "Military Rank Up!"
 msgstr "Sotilasarvo ylös!"
 
-#: src/components/_user/user/SkillValue.tsx:210
+#: src/components/_user/user/SkillValue.tsx:226
 msgid "Military rank:"
 msgstr "Sotilasarvo:"
 
@@ -5757,11 +5748,15 @@ msgstr ""
 msgid "National bounty"
 msgstr "Kansallinen palkkio"
 
+#: src/components/_user/user/SkillValue.tsx:84
+msgid "National upgrade:"
+msgstr ""
+
 #: src/components/_military/mu/MuSettings.tsx:30
 msgid "Nationality updated"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:135
+#: src/components/_layout/LayoutMapUserMenu.tsx:138
 msgid "Nearest wooden case"
 msgstr ""
 
@@ -6016,7 +6011,7 @@ msgstr "Ei lahjoituksia vielä"
 msgid "No ground ranking yet."
 msgstr "Ei vielä maasijaa."
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:105
+#: src/components/_layout/LayoutMapUserMenu.tsx:108
 msgid "No home region set"
 msgstr ""
 
@@ -6358,7 +6353,7 @@ msgstr "Tulokset"
 msgid "Overall"
 msgstr "Kaiken kaikkiaan"
 
-#: src/components/_user/user/SkillValue.tsx:178
+#: src/components/_user/user/SkillValue.tsx:194
 msgid "Overflow:"
 msgstr "Ylivuoto:"
 
@@ -6894,10 +6889,6 @@ msgstr "Ehdota palkkojen alentamista"
 #: src/components/_other/shop/ShopHeader.tsx:43
 msgid "Propositions"
 msgstr "Ehdotukset"
-
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:99
-msgid "Public transport"
-msgstr ""
 
 #: src/components/_common/GameRules.tsx:286
 msgid "Punishments, along with their reasoning, are visible on user profiles. Players may appeal through the official Discord server, where detailed explanations and evidence will be provided. Rule violations can be reported with supporting evidence."
@@ -8052,7 +8043,7 @@ msgid "Stone Maul"
 msgstr ""
 
 #: src/components/_economy/company/CompanyTags.tsx:107
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:184
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:175
 msgid "Storage"
 msgstr "Varastointi"
 
@@ -8202,7 +8193,7 @@ msgstr "Kohdealue"
 msgid "Target user"
 msgstr "Kohdekäyttäjä"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:122
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:113
 msgid "Tax Office"
 msgstr ""
 
@@ -8595,7 +8586,7 @@ msgstr "Kokonaispalkinto"
 
 #: src/components/_military/mu/MuMemberList.tsx:361
 #: src/components/_military/mu/MuMemberList.tsx:401
-#: src/components/_user/user/SkillValue.tsx:241
+#: src/components/_user/user/SkillValue.tsx:257
 msgid "Total:"
 msgstr "Kokonais:"
 
@@ -8621,7 +8612,7 @@ msgstr "Turnaus eliminoitu"
 msgid "Tournament Ended"
 msgstr "Turnaus päättynyt"
 
-#: src/components/_user/user/SkillValue.tsx:142
+#: src/components/_user/user/SkillValue.tsx:158
 msgid "Tournament reward:"
 msgstr "Turnauksen palkinto:"
 
@@ -8649,6 +8640,10 @@ msgstr "Kaupankäyntitapahtuma"
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:16
 msgid "Trainee"
 msgstr "Harjoittelija"
+
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:99
+msgid "Training Center"
+msgstr ""
 
 #: src/components/_user/user/UserHeader.tsx:213
 msgid "Transac."
@@ -9214,7 +9209,7 @@ msgstr "Rikkaus"
 msgid "Weapon"
 msgstr "Ase"
 
-#: src/components/_user/user/SkillValue.tsx:84
+#: src/components/_user/user/SkillValue.tsx:100
 msgid "Weapon:"
 msgstr "Ase:"
 
@@ -9416,7 +9411,7 @@ msgstr "Olet onnekas paskiainen"
 msgid "You are already congress member of another country. Resign first."
 msgstr "Olet jo toisen maan kongressin jäsen. Irtisanoudu ensin."
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:107
+#: src/components/_layout/LayoutMapUserMenu.tsx:110
 msgid "You are already home"
 msgstr ""
 
