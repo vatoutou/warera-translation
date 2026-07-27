@@ -55,29 +55,29 @@ msgid " Gift a sub"
 msgstr " Gift a sub"
 
 #. placeholder {0}: gameConfig?.battle.regionNotLinkedToCapitalMalusPercent
-#: src/pages/region/[regionId]/index.tsx:185
+#: src/pages/region/[regionId]/index.tsx:184
 msgid "- Defending this region will have a malus of <0>{0}</0>."
 msgstr "- Defending this region will have a malus of <0>{0}</0>."
 
 #. placeholder {0}: -region.development * 0.5
-#: src/pages/region/[regionId]/index.tsx:194
+#: src/pages/region/[regionId]/index.tsx:193
 msgid "- Development income is reduced by 50%:<0>{0}</0>."
 msgstr "- Development income is reduced by 50%:<0>{0}</0>."
 
-#: src/components/_economy/company/CompanyUpgradeList.tsx:123
-#: src/components/_political/region/UpgradeList.tsx:140
+#: src/components/_economy/company/CompanyUpgradeList.tsx:121
+#: src/components/_political/region/UpgradeList.tsx:295
 msgid "({freeSlotCount} free slots)"
 msgstr "({freeSlotCount} free slots)"
 
-#: src/components/_political/region/CreateUpgradeModal.tsx:146
+#: src/components/_other/upgrade/UpgradeCardContent.tsx:138
 msgid "({scalePct}% of country dev)"
 msgstr "({scalePct}% of country dev)"
 
-#: src/components/_political/region/CreateUpgradeModal.tsx:150
+#: src/components/_other/upgrade/UpgradeCardContent.tsx:142
 msgid "({scalePct}% of region dev)"
 msgstr "({scalePct}% of region dev)"
 
-#: src/components/_political/region/CreateUpgradeModal.tsx:148
+#: src/components/_other/upgrade/UpgradeCardContent.tsx:140
 msgid "({scalePct}% of region population)"
 msgstr "({scalePct}% of region population)"
 
@@ -207,6 +207,10 @@ msgstr "{savedPrestigeCount} prestige point(s) active on this skill"
 msgid "{score}/{0} Rounds"
 msgstr "{score}/{0} Rounds"
 
+#: src/components/_political/region/UpgradeList.tsx:258
+msgid "{slotCount} slots"
+msgstr "{slotCount} slots"
+
 #: src/components/_layout/LayoutMapUserMenu.tsx:57
 msgid "{value} km"
 msgstr "{value} km"
@@ -223,12 +227,12 @@ msgstr "*If the user already owns some pieces of the set, the price will be redu
 msgid "*May burn"
 msgstr "*May burn"
 
+#: src/components/_other/upgrade/UpgradeCardContent.tsx:130
 #: src/components/_political/government/Government.tsx:222
-#: src/components/_political/region/CreateUpgradeModal.tsx:138
 msgid "/day"
 msgstr "/day"
 
-#: src/components/_political/region/CreateUpgradeModal.tsx:140
+#: src/components/_other/upgrade/UpgradeCardContent.tsx:132
 msgid "/h"
 msgstr "/h"
 
@@ -641,7 +645,7 @@ msgid "<0/>Priority ends in <1/>"
 msgstr "<0/>Priority ends in <1/>"
 
 #. placeholder {0}: levelConfig.stats.resistanceGrowthReduction ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:91
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:116
 msgid "<0>-{0}%</0> Resistance growth per hour"
 msgstr "<0>-{0}%</0> Resistance growth per hour"
 
@@ -675,7 +679,7 @@ msgstr "<0>{0}</0> against enemy of <1/>"
 
 #. placeholder {0}: levelConfig.stats.attackBonus || 0
 #. placeholder {1}: (levelConfig.stats.attackBonus || 0) / 2
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:73
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:97
 msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/><2>{1}</2> Attack bonus when allied country attack in this region."
 msgstr "<0>{0}</0> Attack bonus when attacking from this region.<1/><2>{1}</2> Attack bonus when allied country attack in this region."
 
@@ -696,7 +700,7 @@ msgstr "<0>{0}</0> because <1/> occupies at least one of <2/> regions"
 
 #. placeholder {0}: levelConfig.stats.defenseBonus || 0
 #. placeholder {1}: (levelConfig.stats.defenseBonus || 0) / 2
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:55
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:78
 msgid "<0>{0}</0> Defense bonus when citizen defend this region.<1/><2>{1}</2> Defense bonus when allied country defend this region."
 msgstr "<0>{0}</0> Defense bonus when citizen defend this region.<1/><2>{1}</2> Defense bonus when allied country defend this region."
 
@@ -773,12 +777,12 @@ msgid "<0>{0}</0> ground are required to win a round, points are gained every ti
 msgstr "<0>{0}</0> ground are required to win a round, points are gained every tick"
 
 #. placeholder {0}: levelConfig.stats.skillBonuses?.health ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:119
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:146
 msgid "<0>{0}</0> max health for every citizen of your country.<1/>Unique: only one per country."
 msgstr "<0>{0}</0> max health for every citizen of your country.<1/>Unique: only one per country."
 
 #. placeholder {0}: levelConfig.stats.skillBonuses?.stamina ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:105
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:131
 msgid "<0>{0}</0> max stamina for every citizen of your country.<1/>Unique: only one per country."
 msgstr "<0>{0}</0> max stamina for every citizen of your country.<1/>Unique: only one per country."
 
@@ -788,7 +792,7 @@ msgid "<0>{0}</0> returned to <1/>."
 msgstr "<0>{0}</0> returned to <1/>."
 
 #. placeholder {0}: levelConfig.stats.maxProduction
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:195
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:226
 msgid "<0>{0}</0> Storage capacity"
 msgstr "<0>{0}</0> Storage capacity"
 
@@ -1305,7 +1309,7 @@ msgstr "A beautiful colored username that will make you very popular"
 msgid "A civil war has started by <0/> in <1/>"
 msgstr "A civil war has started by <0/> in <1/>"
 
-#: src/pages/region/[regionId]/index.tsx:66
+#: src/pages/region/[regionId]/index.tsx:65
 msgid "A deposit has been found in this region, it can be exploited by companies to produce raws."
 msgstr "A deposit has been found in this region, it can be exploited by companies to produce raw materials."
 
@@ -1330,7 +1334,7 @@ msgstr "A fee of <0>{0}</0> was required to accept this contract. The fee has be
 msgid "A revolution has started in <0/>"
 msgstr "A revolution has started in <0/>"
 
-#: src/pages/region/[regionId]/index.tsx:103
+#: src/pages/region/[regionId]/index.tsx:102
 msgid "A strategic resource has been found in this region, it gives its owner a production and development bonus."
 msgstr "A strategic resource has been found in this region, it gives its owner a production and development bonus."
 
@@ -1393,7 +1397,7 @@ msgstr "Accepted"
 msgid "Access granted"
 msgstr "Access granted"
 
-#: src/components/_military/battle/BattleHeader.tsx:118
+#: src/components/_military/battle/BattleHeader.tsx:119
 msgid "Access war"
 msgstr "Access war"
 
@@ -1422,7 +1426,7 @@ msgstr "Actions"
 msgid "Active"
 msgstr "Active"
 
-#: src/pages/region/[regionId]/index.tsx:209
+#: src/pages/region/[regionId]/index.tsx:208
 msgid "Active battle"
 msgstr "Active battle"
 
@@ -1434,7 +1438,7 @@ msgstr "Active battles"
 msgid "Active Citizens"
 msgstr "Active Citizens"
 
-#: src/pages/region/[regionId]/index.tsx:215
+#: src/pages/region/[regionId]/index.tsx:214
 msgid "Active construction"
 msgstr "Active construction"
 
@@ -1462,7 +1466,7 @@ msgid "Additional cost"
 msgstr "Additional cost"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:77
-#: src/components/_layout/LayoutRightIcons.tsx:159
+#: src/components/_layout/LayoutRightIcons.tsx:160
 #: src/components/_layout/MoreWindowButton.tsx:75
 msgid "Admin"
 msgstr "Admin"
@@ -1504,7 +1508,7 @@ msgstr "Affects this region only. Maintenance scales with the region's developme
 msgid "Agrarian"
 msgstr "Agrarian"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:101
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:126
 msgid "Airport"
 msgstr "Airport"
 
@@ -1514,7 +1518,7 @@ msgstr "Airport"
 msgid "All"
 msgstr "All"
 
-#: src/components/_social/ArticleList.tsx:130
+#: src/components/_social/ArticleList.tsx:135
 msgid "All categories"
 msgstr "All categories"
 
@@ -1540,7 +1544,7 @@ msgstr "All event types"
 msgid "All Ingame"
 msgstr "All Ingame"
 
-#: src/components/_social/ArticleList.tsx:120
+#: src/components/_social/ArticleList.tsx:125
 msgid "All languages"
 msgstr "All languages"
 
@@ -1574,7 +1578,7 @@ msgid "All types"
 msgstr "All types"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:156
-#: src/components/_layout/LayoutRightIcons.tsx:198
+#: src/components/_layout/LayoutRightIcons.tsx:199
 #: src/components/_layout/map.frontConfig.tsx:34
 #: src/components/_layout/MoreWindowButton.tsx:97
 #: src/components/_political/country/CountryDiplomacyGrid.tsx:193
@@ -1933,7 +1937,7 @@ msgstr "Auction Outbid"
 msgid "Auction Won"
 msgstr "Auction Won"
 
-#: src/components/_military/battle/BattleHeader.tsx:296
+#: src/components/_military/battle/BattleHeader.tsx:299
 #: src/components/_military/battle/BattlesHeader.tsx:38
 #: src/components/_military/battle/BattleSideContractsModal.tsx:37
 msgid "Auctions"
@@ -1970,7 +1974,7 @@ msgid "Automated engine"
 msgstr "Automated engine"
 
 #: src/components/_economy/work/WorkChart.tsx:235
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:181
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:210
 msgid "Automated Engine"
 msgstr "Automated Engine"
 
@@ -2138,7 +2142,7 @@ msgstr "Battle orders to defend your core regions and revolts cost <0>{0}</0> le
 #: src/components/_layout/LayoutMenu.tsx:172
 #: src/components/_military/battle/BattlesHeader.tsx:21
 #: src/components/_military/war/WarHeader.tsx:84
-#: src/pages/region/[regionId]/index.tsx:142
+#: src/pages/region/[regionId]/index.tsx:141
 #: src/pages/war/[warId]/index.tsx:75
 msgid "Battles"
 msgstr "Battles"
@@ -2215,7 +2219,7 @@ msgstr "Boost your production!"
 msgid "Boots"
 msgstr "Boots"
 
-#: src/components/_military/battle/LootSummaryCard.tsx:104
+#: src/components/_military/battle/LootSummaryCard.tsx:125
 msgid "Bounty"
 msgstr "Bounty"
 
@@ -2237,7 +2241,7 @@ msgstr "Bread"
 msgid "Break defensive pact"
 msgstr "Break defensive pact"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:230
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:263
 msgid "Break room"
 msgstr "Break room"
 
@@ -2277,8 +2281,8 @@ msgstr "Buffs:"
 msgid "Bug finder"
 msgstr "Bug finder"
 
-#: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:72
-#: src/components/_political/region/CreateUpgradeModal.tsx:278
+#: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:75
+#: src/components/_political/region/CreateUpgradeModal.tsx:98
 msgid "Build"
 msgstr "Build"
 
@@ -2291,15 +2295,14 @@ msgstr "Build a company"
 msgid "Build a military unit"
 msgstr "Build a military unit"
 
-#: src/components/_economy/company/CompanyUpgradeList.tsx:120
-#: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:121
-#: src/components/_political/region/CreateUpgradeModal.tsx:361
-#: src/components/_political/region/UpgradeList.tsx:137
+#: src/components/_economy/company/CompanyUpgradeList.tsx:118
+#: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:122
+#: src/components/_political/region/CreateUpgradeModal.tsx:171
+#: src/components/_political/region/UpgradeList.tsx:292
 msgid "Build an upgrade"
 msgstr "Build an upgrade"
 
-#: src/components/_political/region/CreateUpgradeModal.tsx:182
-#: src/components/_political/region/CreateUpgradeModal.tsx:192
+#: src/components/_other/upgrade/UpgradeCardContent.tsx:177
 msgid "Build cost"
 msgstr "Build cost"
 
@@ -2307,7 +2310,7 @@ msgstr "Build cost"
 msgid "Build the military unit"
 msgstr "Build the military unit"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:51
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:73
 msgid "Bunker"
 msgstr "Bunker"
 
@@ -2358,7 +2361,9 @@ msgstr "Cadet"
 msgid "Campaign Article Link (optional)"
 msgstr "Campaign Article Link (optional)"
 
+#: src/components/_other/upgrade/UpgradeGrid.tsx:152
 #: src/components/_political/election/CandidateFormModal.tsx:83
+#: src/components/_political/region/UpgradeList.tsx:192
 msgid "Cancel"
 msgstr "Cancel"
 
@@ -2572,6 +2577,10 @@ msgstr "Citizens get a bonus when fighting for allies, or against the sworn enem
 msgid "Citizens of the owning country located in the region can spend <0>{cost}</0> to add <1>{points}</1> construction points. When the bar is full, the upgrade levels up."
 msgstr "Citizens of the owning country located in the region can spend <0>{cost}</0> to add <1>{points}</1> construction points. When the bar is full, the upgrade levels up."
 
+#: src/components/_other/upgrade/UpgradeCostDetails.tsx:71
+msgid "citizens present in the region"
+msgstr "citizens present in the region"
+
 #: src/components/_political/country/CountryHeader.tsx:113
 msgid "Citizenship"
 msgstr "Citizenship"
@@ -2639,7 +2648,7 @@ msgstr "Click to select motion"
 msgid "Climate"
 msgstr "Climate"
 
-#: ../__ui/src/components/Modal/Modal.tsx:241
+#: ../__ui/src/components/Modal/Modal.tsx:251
 msgid "Close"
 msgstr "Close"
 
@@ -2902,10 +2911,10 @@ msgstr "Contract expired"
 msgid "Contract rolled back"
 msgstr "Contract rolled back"
 
-#: src/components/_military/battle/BattleHeader.tsx:303
+#: src/components/_military/battle/BattleHeader.tsx:306
 #: src/components/_military/battle/BattlesHeader.tsx:44
 #: src/components/_military/battle/BattleSideContractsModal.tsx:47
-#: src/components/_military/battle/LootSummaryCard.tsx:96
+#: src/components/_military/battle/LootSummaryCard.tsx:117
 #: src/components/_political/country/CountryHeader.tsx:134
 msgid "Contracts"
 msgstr "Contracts"
@@ -2981,8 +2990,12 @@ msgstr "countries"
 msgid "Countries"
 msgstr "Countries"
 
+#: src/components/_other/upgrade/UpgradeCostDetails.tsx:77
+msgid "country"
+msgstr "country"
+
 #: src/components/_layout/LayoutMenuGrid.tsx:125
-#: src/components/_layout/LayoutRightIcons.tsx:177
+#: src/components/_layout/LayoutRightIcons.tsx:178
 #: src/components/_layout/MoreWindowButton.tsx:106
 #: src/components/_military/battle/BattleCountrySide.tsx:73
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:133
@@ -3169,7 +3182,7 @@ msgstr "d. Any form of discrimination, racism, xenophobia, antisemitism, homopho
 msgid "Daily"
 msgstr "Daily"
 
-#: src/components/_other/upgrade/UpgradeListItem.tsx:187
+#: src/components/_other/upgrade/UpgradeListItem.tsx:144
 msgid "Daily cost"
 msgstr "Daily cost"
 
@@ -3177,12 +3190,13 @@ msgstr "Daily cost"
 msgid "Daily income"
 msgstr "Daily income"
 
+#: src/components/_other/upgrade/UpgradeCostDetails.tsx:96
 #: src/components/_political/alliance/AllianceMemberRow.tsx:59
 #: src/components/_political/law/LawTypeSelect.tsx:188
 msgid "Daily maintenance"
 msgstr "Daily maintenance"
 
-#: src/components/_political/region/CreateUpgradeModal.tsx:241
+#: src/components/_other/upgrade/UpgradeCardContent.tsx:227
 msgid "Daily maintenance cost"
 msgstr "Daily maintenance cost"
 
@@ -3203,7 +3217,7 @@ msgid "Daily regions revenue"
 msgstr "Daily regions revenue"
 
 #: src/components/_layout/map.frontConfig.tsx:46
-#: src/components/_political/region/RegionTags.tsx:102
+#: src/components/_political/region/RegionTags.tsx:106
 msgid "Daily revenue"
 msgstr "Daily revenue"
 
@@ -3431,7 +3445,7 @@ msgstr "Demote from Commander"
 msgid "Demoted from Commander"
 msgstr "Demoted from Commander"
 
-#: src/pages/region/[regionId]/index.tsx:69
+#: src/pages/region/[regionId]/index.tsx:68
 msgid "Deposit"
 msgstr "Deposit"
 
@@ -3448,7 +3462,7 @@ msgstr "Deposit discovered"
 msgid "Deposit of <0>{0}</0> has been depleted in <1/>"
 msgstr "Deposit of <0>{0}</0> has been depleted in <1/>"
 
-#: src/pages/region/[regionId]/index.tsx:65
+#: src/pages/region/[regionId]/index.tsx:64
 msgid "Deposit resource"
 msgstr "Deposit resource"
 
@@ -3488,7 +3502,6 @@ msgid "Destruct"
 msgstr "Destruct"
 
 #: src/components/_layout/map.frontConfig.tsx:40
-#: src/components/_political/region/RegionTags.tsx:93
 msgid "Development"
 msgstr "Development"
 
@@ -3605,7 +3618,7 @@ msgstr "Donation Summary"
 msgid "Donations"
 msgstr "Donations"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:216
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:248
 msgid "Dormitories"
 msgstr "Dormitories"
 
@@ -3670,7 +3683,7 @@ msgstr "Edit Description"
 msgid "Edit worker"
 msgstr "Edit worker"
 
-#: src/components/_other/upgrade/UpgradeTypeTag.tsx:29
+#: src/components/_other/upgrade/UpgradeTypeTag.tsx:28
 msgid "Effect applies to the whole country. Maintenance scales with the country's average development."
 msgstr "Effect applies to the whole country. Maintenance scales with the country's average development."
 
@@ -3730,7 +3743,7 @@ msgstr "Elite Pants"
 msgid "Employee Production"
 msgstr "Employee Production"
 
-#: src/pages/region/[regionId]/index.tsx:169
+#: src/pages/region/[regionId]/index.tsx:168
 msgid "Empty"
 msgstr "Empty"
 
@@ -3845,7 +3858,7 @@ msgid "Ethics Points:"
 msgstr "Ethics Points:"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:136
-#: src/components/_layout/LayoutRightIcons.tsx:248
+#: src/components/_layout/LayoutRightIcons.tsx:249
 #: src/components/_layout/MoreWindowButton.tsx:137
 #: src/pages/country/[countryId]/index.tsx:287
 msgid "Events"
@@ -3878,7 +3891,7 @@ msgstr "Expired: no bids"
 msgid "Expired: round ended"
 msgstr "Expired: round ended"
 
-#: src/pages/region/[regionId]/index.tsx:88
+#: src/pages/region/[regionId]/index.tsx:87
 msgid "Expires in"
 msgstr "Expires in"
 
@@ -4025,7 +4038,7 @@ msgid "Fee"
 msgstr "Fee"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:172
-#: src/components/_layout/LayoutRightIcons.tsx:266
+#: src/components/_layout/LayoutRightIcons.tsx:267
 #: src/components/_layout/MoreWindowButton.tsx:129
 msgid "Feed"
 msgstr "Feed"
@@ -4231,7 +4244,7 @@ msgid "Generate Missions"
 msgstr "Generate Missions"
 
 #. placeholder {0}: levelConfig.stats.dailyProd
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:185
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:215
 msgid "Generates <0>{0}</0>/day"
 msgstr "Generates <0>{0}</0>/day"
 
@@ -4288,24 +4301,24 @@ msgid "Giveaway Won!"
 msgstr "Giveaway Won!"
 
 #. placeholder {0}: levelConfig.stats.attackBonus
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:207
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:239
 msgid "Gives <0>{0}</0>"
 msgstr "Gives <0>{0}</0>"
 
 #. placeholder {0}: Math.round(percent * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:136
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:164
 msgid "Gives daily income of <0/> ({0}% of this region <1>Development</1>)"
 msgstr "Gives daily income of <0/> ({0}% of this region <1>Development</1>)"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:162
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:191
 msgid "Gives daily income of <0/> (<1/> per citizen present here × {regionPopulation})"
 msgstr "Gives daily income of <0/> (<1/> per citizen present here × {regionPopulation})"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:145
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:173
 msgid "Gives daily income of <0/> of this region <1>Development</1>"
 msgstr "Gives daily income of <0/> of this region <1>Development</1>"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:171
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:200
 msgid "Gives daily income of <0/> per citizen present in this region."
 msgstr "Gives daily income of <0/> per citizen present in this region."
 
@@ -4511,7 +4524,7 @@ msgstr "Hamster Tank"
 msgid "Hard Worker"
 msgstr "Hard Worker"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:203
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:234
 msgid "Headquarters"
 msgstr "Headquarters"
 
@@ -4572,15 +4585,19 @@ msgstr "Hitting for your own country while in government gives {0}% bounty effic
 msgid "Home"
 msgstr "Home"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:115
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:141
 msgid "Hospital"
 msgstr "Hospital"
 
-#: src/components/_other/upgrade/UpgradeListItem.tsx:189
+#: src/components/_other/upgrade/UpgradeListItem.tsx:146
 msgid "Hourly cost"
 msgstr "Hourly cost"
 
-#: src/components/_political/region/CreateUpgradeModal.tsx:243
+#: src/components/_other/upgrade/UpgradeCostDetails.tsx:98
+msgid "Hourly maintenance"
+msgstr "Hourly maintenance"
+
+#: src/components/_other/upgrade/UpgradeCardContent.tsx:229
 msgid "Hourly maintenance cost"
 msgstr "Hourly maintenance cost"
 
@@ -5073,7 +5090,7 @@ msgstr "Legendary Helmet"
 msgid "Legendary Pants"
 msgstr "Legendary Pants"
 
-#: src/components/_other/upgrade/UpgradeSlotCard.tsx:140
+#: src/components/_other/upgrade/UpgradeSlotCard.tsx:150
 msgid "Level"
 msgstr "Level"
 
@@ -5181,7 +5198,7 @@ msgstr "Loading {status}..."
 msgid "Loading..."
 msgstr "Loading..."
 
-#: src/components/_other/upgrade/UpgradeTypeTag.tsx:16
+#: src/components/_other/upgrade/UpgradeTypeTag.tsx:17
 msgid "Local"
 msgstr "Local"
 
@@ -5189,10 +5206,11 @@ msgstr "Local"
 msgid "Location"
 msgstr "Location"
 
-#: src/components/_economy/company/CompanyUpgradeList.tsx:166
-#: src/components/_economy/company/CompanyUpgradesGrid.tsx:136
-#: src/components/_political/region/UpgradeList.tsx:162
-#: src/components/_political/region/UpgradesGrid.tsx:173
+#: src/components/_economy/company/CompanyUpgradeList.tsx:163
+#: src/components/_economy/company/CompanyUpgradesGrid.tsx:166
+#: src/components/_other/upgrade/UpgradeListItem.tsx:112
+#: src/components/_political/region/UpgradeList.tsx:316
+#: src/components/_political/region/UpgradesGrid.tsx:193
 msgid "Locked slot"
 msgstr "Locked slot"
 
@@ -5246,11 +5264,11 @@ msgid "Luck is finally on payroll"
 msgstr "Luck is finally on payroll"
 
 #. placeholder {0}: construction.targetLevel
-#: src/components/_other/upgradeConstruction/ConstructionListItem.tsx:67
+#: src/components/_other/upgradeConstruction/ConstructionListItem.tsx:54
 msgid "Lvl {0}"
 msgstr "Lvl {0}"
 
-#: src/components/_other/upgrade/UpgradeListItem.tsx:156
+#: src/components/_other/upgrade/UpgradeListItem.tsx:106
 msgid "Lvl {level}"
 msgstr "Lvl {level}"
 
@@ -5262,7 +5280,7 @@ msgstr "Mage Robe"
 msgid "Maintenance cost"
 msgstr "Maintenance cost"
 
-#: src/components/_other/upgrade/UpgradeTypeTag.tsx:39
+#: src/components/_other/upgrade/UpgradeTypeTag.tsx:37
 msgid "Maintenance scales with the number of citizens present in the region."
 msgstr "Maintenance scales with the number of citizens present in the region."
 
@@ -5305,7 +5323,7 @@ msgstr "Map icons"
 #: src/components/_layout/LayoutMenu.tsx:195
 #: src/components/_layout/LayoutMenuGrid.tsx:85
 #: src/components/_layout/MoreWindowButton.tsx:168
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:155
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:183
 #: src/pages/country/[countryId]/account.tsx:31
 #: src/pages/party/[partyId]/account.tsx:24
 #: src/pages/user/[userId]/account.tsx:26
@@ -5331,13 +5349,13 @@ msgid "Maxed!"
 msgstr "Maxed!"
 
 #. placeholder {0}: levelConfig.stats.members
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:220
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:253
 msgid "Maximum of <0>{0}</0> members."
 msgstr "Maximum of <0>{0}</0> members."
 
 #. placeholder {0}: levelConfig.stats.maxWorkers
 #. placeholder {1}: typeof levelConfig.stats.dailyHires !== 'undefined' && ( <> <br /> Daily hiring limit of{' '} <EntityValue IconComponent={WorkerIcon}> {levelConfig.stats.dailyHires} </EntityValue>{' '} per day. </> )
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:234
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:268
 msgid "Maximum of <0>{0}</0> workers.{1}"
 msgstr "Maximum of <0>{0}</0> workers.{1}"
 
@@ -5458,7 +5476,7 @@ msgstr "Mercenary Contracts"
 msgid "Mercenary contracts are currently disabled."
 msgstr "Mercenary contracts are currently disabled."
 
-#: src/components/_military/battle/LootSummaryCard.tsx:90
+#: src/components/_military/battle/LootSummaryCard.tsx:111
 msgid "Mercenary earnings"
 msgstr "Mercenary earnings"
 
@@ -5478,7 +5496,7 @@ msgstr "Message liked"
 msgid "Military & Battles"
 msgstr "Military & Battles"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:69
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:92
 msgid "Military base"
 msgstr "Military base"
 
@@ -5521,6 +5539,10 @@ msgstr "Military units"
 msgid "Military Units"
 msgstr "Military Units"
 
+#: src/components/_other/upgrade/UpgradeCostDetails.tsx:85
+msgid "min"
+msgstr "min"
+
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:293
 msgid "Min reached"
 msgstr "Min reached"
@@ -5549,7 +5571,7 @@ msgid "Mission tags"
 msgstr "Mission tags"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:94
-#: src/components/_layout/LayoutRightIcons.tsx:214
+#: src/components/_layout/LayoutRightIcons.tsx:215
 #: src/components/_layout/MoreWindowButton.tsx:145
 #: src/components/_user/mission/MissionsList.tsx:150
 msgid "Missions"
@@ -5699,7 +5721,7 @@ msgstr "MU reached level {0}! Reward: {rewardDisplay}"
 msgid "MU Tournament Winner"
 msgstr "MU Tournament Winner"
 
-#: src/components/_military/battle/LootSummaryCard.tsx:123
+#: src/components/_military/battle/LootSummaryCard.tsx:144
 msgid "My battle loot"
 msgstr "My battle loot"
 
@@ -5797,7 +5819,7 @@ msgid "Never stop gambling"
 msgstr "Never stop gambling"
 
 #: src/components/_other/shop/SkinPackItem.tsx:91
-#: src/components/_social/ArticleList.tsx:161
+#: src/components/_social/ArticleList.tsx:166
 msgid "New"
 msgstr "New"
 
@@ -5906,7 +5928,7 @@ msgid "Newest"
 msgstr "Newest"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:115
-#: src/components/_layout/LayoutRightIcons.tsx:238
+#: src/components/_layout/LayoutRightIcons.tsx:239
 #: src/components/_layout/MoreWindowButton.tsx:153
 msgid "News"
 msgstr "News"
@@ -5927,7 +5949,7 @@ msgstr "Next point costs"
 msgid "Next reward"
 msgstr "Next reward"
 
-#: src/components/_political/region/UpgradeList.tsx:167
+#: src/components/_political/region/UpgradeList.tsx:321
 msgid "Next slot unlocks at {unlockDevelopment} development"
 msgstr "Next slot unlocks at {unlockDevelopment} development"
 
@@ -6208,6 +6230,7 @@ msgstr "Obtain a Badge"
 msgid "Occupied region"
 msgstr "Occupied region"
 
+#: src/components/_other/upgrade/UpgradeCostDetails.tsx:69
 #: src/components/_political/government/Government.tsx:204
 msgid "of"
 msgstr "of"
@@ -6261,7 +6284,7 @@ msgstr "Only presidents can register their country"
 msgid "Only supporters can see their spending and income breakdown."
 msgstr "Only supporters can see their spending and income breakdown."
 
-#: src/components/_economy/company/CompanyUpgradeList.tsx:170
+#: src/components/_economy/company/CompanyUpgradeList.tsx:167
 msgid "Only the company owner can unlock this slot."
 msgstr "Only the company owner can unlock this slot."
 
@@ -6399,7 +6422,7 @@ msgstr "Ownership of <0/> has been transferred from <1/> to <2/>"
 msgid "Ownership transferred successfully"
 msgstr "Ownership transferred successfully"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:87
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:111
 msgid "Pacification Center"
 msgstr "Pacification Center"
 
@@ -6443,7 +6466,7 @@ msgid "Parties"
 msgstr "Parties"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:145
-#: src/components/_layout/LayoutRightIcons.tsx:186
+#: src/components/_layout/LayoutRightIcons.tsx:187
 #: src/components/_layout/MoreWindowButton.tsx:115
 #: src/components/_user/notification/notificationPrefs.categories.ts:159
 #: src/pages/user/[userId]/index.tsx:169
@@ -6638,11 +6661,11 @@ msgid "Popular Article"
 msgstr "Popular Article"
 
 #: src/components/_layout/map.frontConfig.tsx:52
-#: src/components/_other/upgrade/UpgradeTypeTag.tsx:36
+#: src/components/_other/upgrade/UpgradeTypeTag.tsx:35
 msgid "Population"
 msgstr "Population"
 
-#: src/components/_political/region/RegionTags.tsx:113
+#: src/components/_political/region/RegionTags.tsx:117
 msgid "Population (currently here)"
 msgstr "Population (currently here)"
 
@@ -6793,7 +6816,7 @@ msgstr "Production"
 
 #: src/components/_economy/company/CompanyProductionBonusTag.tsx:51
 #: src/components/_economy/company/RecommendedCompanyRegions.tsx:99
-#: src/pages/region/[regionId]/index.tsx:78
+#: src/pages/region/[regionId]/index.tsx:77
 msgid "Production bonus"
 msgstr "Production bonus"
 
@@ -6927,7 +6950,7 @@ msgstr "Quick equip best items of any tier"
 msgid "Quickly dismantle items"
 msgstr "Quickly dismantle items"
 
-#: src/components/_military/battle/BattleHeader.tsx:290
+#: src/components/_military/battle/BattleHeader.tsx:293
 msgid "Ranking"
 msgstr "Ranking"
 
@@ -6943,7 +6966,7 @@ msgid "Rankings"
 msgstr "Rankings"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:164
-#: src/components/_layout/LayoutRightIcons.tsx:257
+#: src/components/_layout/LayoutRightIcons.tsx:258
 msgid "Ranks"
 msgstr "Ranks"
 
@@ -7104,6 +7127,10 @@ msgstr "Regen in..."
 msgid "Regens <0>{0}</0> when consumed"
 msgstr "Regens <0>{0}</0> when consumed"
 
+#: src/components/_other/upgrade/UpgradeCostDetails.tsx:75
+msgid "region"
+msgstr "region"
+
 #: src/components/_political/map/MapMenu.tsx:194
 #: src/components/_political/party/PartyFormModal.tsx:109
 msgid "Region"
@@ -7121,6 +7148,10 @@ msgstr "Region is revolting!"
 #: src/components/_political/event/EventList.tsx:111
 msgid "Region liberated"
 msgstr "Region liberated"
+
+#: src/components/_political/region/UpgradeList.tsx:93
+msgid "Region slots"
+msgstr "Region slots"
 
 #: src/components/_political/event/EventList.tsx:110
 msgid "Region transfer"
@@ -7356,7 +7387,7 @@ msgstr "Reset Username"
 msgid "Reset your skills"
 msgstr "Reset your skills"
 
-#: src/pages/region/[regionId]/index.tsx:118
+#: src/pages/region/[regionId]/index.tsx:117
 msgid "Reshuffle in"
 msgstr "Reshuffle in"
 
@@ -7365,7 +7396,7 @@ msgstr "Reshuffle in"
 msgid "Residents"
 msgstr "Residents"
 
-#: src/components/_political/region/RegionTags.tsx:123
+#: src/components/_political/region/RegionTags.tsx:127
 msgid "Residents (home here)"
 msgstr "Residents (home here)"
 
@@ -7373,7 +7404,7 @@ msgstr "Residents (home here)"
 msgid "Resist"
 msgstr "Resist"
 
-#: src/pages/region/[regionId]/index.tsx:134
+#: src/pages/region/[regionId]/index.tsx:133
 msgid "Resistance"
 msgstr "Resistance"
 
@@ -7386,7 +7417,7 @@ msgid "Resistance for {regionName} {score}"
 msgstr "Resistance for {regionName} {score}"
 
 #: src/pages/country/[countryId]/index.tsx:247
-#: src/pages/region/[regionId]/index.tsx:58
+#: src/pages/region/[regionId]/index.tsx:57
 msgid "Resources"
 msgstr "Resources"
 
@@ -7526,7 +7557,9 @@ msgstr "Ruling Party"
 msgid "Running low on health?"
 msgstr "Running low on health?"
 
+#: src/components/_other/upgrade/UpgradeGrid.tsx:161
 #: src/components/_political/party/PartyDescriptionModal.tsx:72
+#: src/components/_political/region/UpgradeList.tsx:201
 #: src/components/_user/auth/WelcomeModal.tsx:182
 #: src/pages/user/[userId]/skills.tsx:252
 msgid "Save"
@@ -7777,7 +7810,7 @@ msgid "Settings"
 msgstr "Settings"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:104
-#: src/components/_layout/LayoutRightIcons.tsx:227
+#: src/components/_layout/LayoutRightIcons.tsx:228
 #: src/components/_layout/MoreWindowButton.tsx:83
 #: src/components/_other/shop/ShopHeader.tsx:52
 msgid "Shop"
@@ -7806,7 +7839,7 @@ msgstr "Show more"
 msgid "Show more ({0} remaining)"
 msgstr "Show more ({0} remaining)"
 
-#: src/components/_social/ArticleList.tsx:140
+#: src/components/_social/ArticleList.tsx:145
 msgid "Show only articles with positive score (score >= -5)"
 msgstr "Show only articles with positive score (score >= -5)"
 
@@ -7889,6 +7922,10 @@ msgstr "Skip Tutorial"
 #: src/components/_other/shop/skin.frontConfig.tsx:260
 msgid "Sling Stones"
 msgstr "Sling Stones"
+
+#: src/components/_political/region/UpgradeList.tsx:90
+msgid "Slots"
+msgstr "Slots"
 
 #: src/components/_layout/LayoutOptions.tsx:187
 msgid "Small GIFs"
@@ -7996,7 +8033,7 @@ msgstr "Start revolution"
 msgid "Started <0/>"
 msgstr "Started <0/>"
 
-#: src/components/_military/battle/BattleHeader.tsx:189
+#: src/components/_military/battle/BattleHeader.tsx:190
 msgid "Started<0/><1/>"
 msgstr "Started<0/><1/>"
 
@@ -8055,15 +8092,15 @@ msgid "Stone Maul"
 msgstr "Stone Maul"
 
 #: src/components/_economy/company/CompanyTags.tsx:107
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:191
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:221
 msgid "Storage"
 msgstr "Storage"
 
-#: src/pages/region/[regionId]/index.tsx:106
+#: src/pages/region/[regionId]/index.tsx:105
 msgid "Strategic"
 msgstr "Strategic"
 
-#: src/pages/region/[regionId]/index.tsx:102
+#: src/pages/region/[regionId]/index.tsx:101
 msgid "Strategic resource"
 msgstr "Strategic resource"
 
@@ -8075,7 +8112,7 @@ msgstr "Strategic resources"
 msgid "Strategic resources have been reshuffled across the whole map."
 msgstr "Strategic resources have been reshuffled across the whole map."
 
-#: src/components/_social/ArticleList.tsx:189
+#: src/components/_social/ArticleList.tsx:194
 msgid "Subscribed"
 msgstr "Subscribed"
 
@@ -8205,7 +8242,7 @@ msgstr "Target region"
 msgid "Target user"
 msgstr "Target user"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:156
 msgid "Tax Office"
 msgstr "Tax Office"
 
@@ -8277,11 +8314,11 @@ msgstr "The cost is the law's base cost scaled by your country's average develop
 msgid "The damage factor increase of critical hits over normal hits"
 msgstr "The damage factor increase of critical hits over normal hits"
 
-#: src/pages/region/[regionId]/index.tsx:79
+#: src/pages/region/[regionId]/index.tsx:78
 msgid "The deposit gives a production bonus of the following percentage."
 msgstr "The deposit gives a production bonus of the following percentage."
 
-#: src/pages/region/[regionId]/index.tsx:89
+#: src/pages/region/[regionId]/index.tsx:88
 msgid "The deposit will expire in the following amount of time."
 msgstr "The deposit will expire in the following amount of time."
 
@@ -8307,7 +8344,7 @@ msgstr "The revolution in <0/> has been suppressed. The government remains in po
 msgid "The revolution in <0/> has succeeded! The government has been overthrown."
 msgstr "The revolution in <0/> has succeeded! The government has been overthrown."
 
-#: src/pages/region/[regionId]/index.tsx:119
+#: src/pages/region/[regionId]/index.tsx:118
 msgid "The strategic resource will be reshuffled in the following amount of time."
 msgstr "The strategic resource will be reshuffled in the following amount of time."
 
@@ -8351,7 +8388,7 @@ msgstr "This equipment is green and so is grass"
 msgid "This feels good, huh?"
 msgstr "This feels good, huh?"
 
-#: src/components/_military/battle/LootSummaryCard.tsx:64
+#: src/components/_military/battle/LootSummaryCard.tsx:85
 msgid "This is a summary of the loot you received from this battle. It includes any cases you got as well as the most valuable items from the shared loot pool."
 msgstr "This is a summary of the loot you received from this battle. It includes any cases you got as well as the most valuable items from the shared loot pool."
 
@@ -8380,7 +8417,7 @@ msgstr "This law requires at least {minActiveCitizen} active citizens (level 10+
 msgid "This member won't be able to be nominated again for {cooldownDays} days."
 msgstr "This member won't be able to be nominated again for {cooldownDays} days."
 
-#: src/pages/region/[regionId]/index.tsx:180
+#: src/pages/region/[regionId]/index.tsx:179
 msgid "This region is not linked to it's owner's capital."
 msgstr "This region is not linked to its owner's capital."
 
@@ -8493,15 +8530,15 @@ msgid "Tome of Tides"
 msgstr "Tome of Tides"
 
 #: src/components/_military/damageRanking/BattleLoot.tsx:124
-#: src/components/_social/ArticleList.tsx:181
+#: src/components/_social/ArticleList.tsx:186
 msgid "Top"
 msgstr "Top"
 
-#: src/components/_social/ArticleList.tsx:168
+#: src/components/_social/ArticleList.tsx:173
 msgid "Top (1d)"
 msgstr "Top (1d)"
 
-#: src/components/_social/ArticleList.tsx:175
+#: src/components/_social/ArticleList.tsx:180
 msgid "Top (1w)"
 msgstr "Top (1w)"
 
@@ -8754,11 +8791,11 @@ msgstr "Unethical: capital occupied, national orders give only the regular bonus
 msgid "Unethical: national orders deal ×2 damage but cost ×2 <0>{0}</0>"
 msgstr "Unethical: national orders deal ×2 damage but cost ×2 <0>{0}</0>"
 
-#: src/pages/region/[regionId]/index.tsx:203
+#: src/pages/region/[regionId]/index.tsx:202
 msgid "Unlinked"
 msgstr "Unlinked"
 
-#: src/pages/region/[regionId]/index.tsx:176
+#: src/pages/region/[regionId]/index.tsx:175
 msgid "Unlinked to capital"
 msgstr "Unlinked to capital"
 
@@ -8780,16 +8817,16 @@ msgstr "Unlock Help all button"
 msgid "Unlock Produce all button"
 msgstr "Unlock Produce all button"
 
-#: src/components/_economy/company/CompanyUpgradeList.tsx:178
+#: src/components/_economy/company/CompanyUpgradeList.tsx:175
 msgid "Unlock slot {slot}"
 msgstr "Unlock slot {slot}"
 
-#: src/components/_economy/company/CompanyUpgradesGrid.tsx:140
+#: src/components/_economy/company/CompanyUpgradesGrid.tsx:170
 msgid "Unlock the previous slot first."
 msgstr "Unlock the previous slot first."
 
-#: src/components/_economy/company/CompanyUpgradeList.tsx:169
-#: src/components/_economy/company/CompanyUpgradesGrid.tsx:139
+#: src/components/_economy/company/CompanyUpgradeList.tsx:166
+#: src/components/_economy/company/CompanyUpgradesGrid.tsx:169
 msgid "Unlock this slot for {cost} concrete."
 msgstr "Unlock this slot for {cost} concrete."
 
@@ -8797,11 +8834,11 @@ msgstr "Unlock this slot for {cost} concrete."
 msgid "Unlocked pack"
 msgstr "Unlocked pack"
 
-#: src/components/_political/region/UpgradesGrid.tsx:174
+#: src/components/_political/region/UpgradesGrid.tsx:194
 msgid "Unlocks at {dev} development."
 msgstr "Unlocks at {dev} development."
 
-#: src/components/_political/region/UpgradeList.tsx:163
+#: src/components/_political/region/UpgradeList.tsx:317
 msgid "Unlocks at {unlockDevelopment} development."
 msgstr "Unlocks at {unlockDevelopment} development."
 
@@ -8883,7 +8920,7 @@ msgid "Upgrade your skills!"
 msgstr "Upgrade your skills!"
 
 #: src/pages/company/[companyId]/index.tsx:49
-#: src/pages/region/[regionId]/index.tsx:50
+#: src/pages/region/[regionId]/index.tsx:49
 msgid "Upgrades"
 msgstr "Upgrades"
 
@@ -9120,7 +9157,7 @@ msgstr "Vice President"
 msgid "View details"
 msgstr "View details"
 
-#: src/components/_military/battle/BattleHeader.tsx:125
+#: src/components/_military/battle/BattleHeader.tsx:126
 msgid "View on map"
 msgstr "View on map"
 
@@ -9879,8 +9916,8 @@ msgstr "Your inventory holds all your items. Let's see what you've got!"
 msgid "Your location"
 msgstr "Your location"
 
-#: src/components/_military/battle/LootSummaryCard.tsx:63
-#: src/components/_military/battle/LootSummaryCard.tsx:67
+#: src/components/_military/battle/LootSummaryCard.tsx:84
+#: src/components/_military/battle/LootSummaryCard.tsx:88
 msgid "Your loot"
 msgstr "Your loot"
 
@@ -9971,7 +10008,7 @@ msgid "your@email.com"
 msgstr "your@email.com"
 
 #: src/components/_political/chat/ChatConversationsMenu.tsx:152
-#: src/components/_social/ArticleList.tsx:195
+#: src/components/_social/ArticleList.tsx:200
 msgid "Yours"
 msgstr "Yours"
 

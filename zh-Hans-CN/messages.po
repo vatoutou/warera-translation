@@ -55,29 +55,29 @@ msgid " Gift a sub"
 msgstr " 赠送订阅"
 
 #. placeholder {0}: gameConfig?.battle.regionNotLinkedToCapitalMalusPercent
-#: src/pages/region/[regionId]/index.tsx:185
+#: src/pages/region/[regionId]/index.tsx:184
 msgid "- Defending this region will have a malus of <0>{0}</0>."
 msgstr "- 防御此地区会有 <0>{0}</0> 减益"
 
 #. placeholder {0}: -region.development * 0.5
-#: src/pages/region/[regionId]/index.tsx:194
+#: src/pages/region/[regionId]/index.tsx:193
 msgid "- Development income is reduced by 50%:<0>{0}</0>."
 msgstr "- 发展收入减少50%: <0>{0}</0> "
 
-#: src/components/_economy/company/CompanyUpgradeList.tsx:123
-#: src/components/_political/region/UpgradeList.tsx:140
+#: src/components/_economy/company/CompanyUpgradeList.tsx:121
+#: src/components/_political/region/UpgradeList.tsx:295
 msgid "({freeSlotCount} free slots)"
 msgstr ""
 
-#: src/components/_political/region/CreateUpgradeModal.tsx:146
+#: src/components/_other/upgrade/UpgradeCardContent.tsx:138
 msgid "({scalePct}% of country dev)"
 msgstr ""
 
-#: src/components/_political/region/CreateUpgradeModal.tsx:150
+#: src/components/_other/upgrade/UpgradeCardContent.tsx:142
 msgid "({scalePct}% of region dev)"
 msgstr ""
 
-#: src/components/_political/region/CreateUpgradeModal.tsx:148
+#: src/components/_other/upgrade/UpgradeCardContent.tsx:140
 msgid "({scalePct}% of region population)"
 msgstr ""
 
@@ -207,6 +207,10 @@ msgstr ""
 msgid "{score}/{0} Rounds"
 msgstr "{score}/{0} 回合"
 
+#: src/components/_political/region/UpgradeList.tsx:258
+msgid "{slotCount} slots"
+msgstr ""
+
 #: src/components/_layout/LayoutMapUserMenu.tsx:57
 msgid "{value} km"
 msgstr ""
@@ -223,12 +227,12 @@ msgstr "*如果用户已经拥有皮肤包中的皮肤，价格会减少"
 msgid "*May burn"
 msgstr "*可能会烧起来"
 
+#: src/components/_other/upgrade/UpgradeCardContent.tsx:130
 #: src/components/_political/government/Government.tsx:222
-#: src/components/_political/region/CreateUpgradeModal.tsx:138
 msgid "/day"
 msgstr "/天"
 
-#: src/components/_political/region/CreateUpgradeModal.tsx:140
+#: src/components/_other/upgrade/UpgradeCardContent.tsx:132
 msgid "/h"
 msgstr ""
 
@@ -641,7 +645,7 @@ msgid "<0/>Priority ends in <1/>"
 msgstr "<0/> 优先权于 <1/> 结束"
 
 #. placeholder {0}: levelConfig.stats.resistanceGrowthReduction ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:91
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:116
 msgid "<0>-{0}%</0> Resistance growth per hour"
 msgstr "反抗度每小时增长 <0>-{0}%</0>"
 
@@ -675,7 +679,7 @@ msgstr "<0>{0}</0> 对抗 <1/> 的死敌"
 
 #. placeholder {0}: levelConfig.stats.attackBonus || 0
 #. placeholder {1}: (levelConfig.stats.attackBonus || 0) / 2
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:73
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:97
 msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/><2>{1}</2> Attack bonus when allied country attack in this region."
 msgstr ""
 
@@ -696,7 +700,7 @@ msgstr "<0>{0}</0> 因为 <1/> 占领了至少一块 <2/> 地区"
 
 #. placeholder {0}: levelConfig.stats.defenseBonus || 0
 #. placeholder {1}: (levelConfig.stats.defenseBonus || 0) / 2
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:55
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:78
 msgid "<0>{0}</0> Defense bonus when citizen defend this region.<1/><2>{1}</2> Defense bonus when allied country defend this region."
 msgstr ""
 
@@ -773,12 +777,12 @@ msgid "<0>{0}</0> ground are required to win a round, points are gained every ti
 msgstr "还需要 <0>{0}</0> 地面控制点来取得回合胜利，地面控制点每次结算都会增加"
 
 #. placeholder {0}: levelConfig.stats.skillBonuses?.health ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:119
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:146
 msgid "<0>{0}</0> max health for every citizen of your country.<1/>Unique: only one per country."
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.skillBonuses?.stamina ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:105
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:131
 msgid "<0>{0}</0> max stamina for every citizen of your country.<1/>Unique: only one per country."
 msgstr ""
 
@@ -788,7 +792,7 @@ msgid "<0>{0}</0> returned to <1/>."
 msgstr "<0>{0}</0> 已退还给 <1/>。"
 
 #. placeholder {0}: levelConfig.stats.maxProduction
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:195
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:226
 msgid "<0>{0}</0> Storage capacity"
 msgstr "<0>{0}</0> 容量"
 
@@ -1305,7 +1309,7 @@ msgstr "个性化用户名称会让你变得十分受欢迎"
 msgid "A civil war has started by <0/> in <1/>"
 msgstr "<0/> 已在 <1/> 开始内战"
 
-#: src/pages/region/[regionId]/index.tsx:66
+#: src/pages/region/[regionId]/index.tsx:65
 msgid "A deposit has been found in this region, it can be exploited by companies to produce raws."
 msgstr "在这个区域中找到资源点，它可以被公司开发来生产原材料。"
 
@@ -1330,7 +1334,7 @@ msgstr "接受此合约曾支付 <0>{0}</0> 的手续费。最低伤害已达成
 msgid "A revolution has started in <0/>"
 msgstr "革命已在 <0/> 开始"
 
-#: src/pages/region/[regionId]/index.tsx:103
+#: src/pages/region/[regionId]/index.tsx:102
 msgid "A strategic resource has been found in this region, it gives its owner a production and development bonus."
 msgstr "在这个区域中找到战略资源，它可以向拥有者提供生产和发展度加成"
 
@@ -1393,7 +1397,7 @@ msgstr "已通过"
 msgid "Access granted"
 msgstr ""
 
-#: src/components/_military/battle/BattleHeader.tsx:118
+#: src/components/_military/battle/BattleHeader.tsx:119
 msgid "Access war"
 msgstr "访问战争"
 
@@ -1422,7 +1426,7 @@ msgstr "行动"
 msgid "Active"
 msgstr "进行中"
 
-#: src/pages/region/[regionId]/index.tsx:209
+#: src/pages/region/[regionId]/index.tsx:208
 msgid "Active battle"
 msgstr "进行中的战斗"
 
@@ -1434,7 +1438,7 @@ msgstr "进行中的战斗"
 msgid "Active Citizens"
 msgstr "活跃公民"
 
-#: src/pages/region/[regionId]/index.tsx:215
+#: src/pages/region/[regionId]/index.tsx:214
 msgid "Active construction"
 msgstr "启用建筑"
 
@@ -1462,7 +1466,7 @@ msgid "Additional cost"
 msgstr "额外花费"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:77
-#: src/components/_layout/LayoutRightIcons.tsx:159
+#: src/components/_layout/LayoutRightIcons.tsx:160
 #: src/components/_layout/MoreWindowButton.tsx:75
 msgid "Admin"
 msgstr "管理员"
@@ -1504,7 +1508,7 @@ msgstr ""
 msgid "Agrarian"
 msgstr "农业主义"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:101
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:126
 msgid "Airport"
 msgstr ""
 
@@ -1514,7 +1518,7 @@ msgstr ""
 msgid "All"
 msgstr "全部"
 
-#: src/components/_social/ArticleList.tsx:130
+#: src/components/_social/ArticleList.tsx:135
 msgid "All categories"
 msgstr "全部分类"
 
@@ -1540,7 +1544,7 @@ msgstr "全部活动类型"
 msgid "All Ingame"
 msgstr "全部（游戏内）"
 
-#: src/components/_social/ArticleList.tsx:120
+#: src/components/_social/ArticleList.tsx:125
 msgid "All languages"
 msgstr "全部语言"
 
@@ -1574,7 +1578,7 @@ msgid "All types"
 msgstr "全部类型"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:156
-#: src/components/_layout/LayoutRightIcons.tsx:198
+#: src/components/_layout/LayoutRightIcons.tsx:199
 #: src/components/_layout/map.frontConfig.tsx:34
 #: src/components/_layout/MoreWindowButton.tsx:97
 #: src/components/_political/country/CountryDiplomacyGrid.tsx:193
@@ -1933,7 +1937,7 @@ msgstr "拍卖被超价"
 msgid "Auction Won"
 msgstr "拍卖获胜"
 
-#: src/components/_military/battle/BattleHeader.tsx:296
+#: src/components/_military/battle/BattleHeader.tsx:299
 #: src/components/_military/battle/BattlesHeader.tsx:38
 #: src/components/_military/battle/BattleSideContractsModal.tsx:37
 msgid "Auctions"
@@ -1970,7 +1974,7 @@ msgid "Automated engine"
 msgstr "自动化机械"
 
 #: src/components/_economy/work/WorkChart.tsx:235
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:181
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:210
 msgid "Automated Engine"
 msgstr "自动化机械"
 
@@ -2138,7 +2142,7 @@ msgstr ""
 #: src/components/_layout/LayoutMenu.tsx:172
 #: src/components/_military/battle/BattlesHeader.tsx:21
 #: src/components/_military/war/WarHeader.tsx:84
-#: src/pages/region/[regionId]/index.tsx:142
+#: src/pages/region/[regionId]/index.tsx:141
 #: src/pages/war/[warId]/index.tsx:75
 msgid "Battles"
 msgstr "战斗"
@@ -2215,7 +2219,7 @@ msgstr "增加你的产量！"
 msgid "Boots"
 msgstr "靴子"
 
-#: src/components/_military/battle/LootSummaryCard.tsx:104
+#: src/components/_military/battle/LootSummaryCard.tsx:125
 msgid "Bounty"
 msgstr "赏金"
 
@@ -2237,7 +2241,7 @@ msgstr "面包"
 msgid "Break defensive pact"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:230
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:263
 msgid "Break room"
 msgstr "休息室"
 
@@ -2277,8 +2281,8 @@ msgstr "增益："
 msgid "Bug finder"
 msgstr "Bug 发现者"
 
-#: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:72
-#: src/components/_political/region/CreateUpgradeModal.tsx:278
+#: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:75
+#: src/components/_political/region/CreateUpgradeModal.tsx:98
 msgid "Build"
 msgstr ""
 
@@ -2291,15 +2295,14 @@ msgstr "建造一个公司"
 msgid "Build a military unit"
 msgstr "建造一个军团"
 
-#: src/components/_economy/company/CompanyUpgradeList.tsx:120
-#: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:121
-#: src/components/_political/region/CreateUpgradeModal.tsx:361
-#: src/components/_political/region/UpgradeList.tsx:137
+#: src/components/_economy/company/CompanyUpgradeList.tsx:118
+#: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:122
+#: src/components/_political/region/CreateUpgradeModal.tsx:171
+#: src/components/_political/region/UpgradeList.tsx:292
 msgid "Build an upgrade"
 msgstr ""
 
-#: src/components/_political/region/CreateUpgradeModal.tsx:182
-#: src/components/_political/region/CreateUpgradeModal.tsx:192
+#: src/components/_other/upgrade/UpgradeCardContent.tsx:177
 msgid "Build cost"
 msgstr ""
 
@@ -2307,7 +2310,7 @@ msgstr ""
 msgid "Build the military unit"
 msgstr "建造一个军团"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:51
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:73
 msgid "Bunker"
 msgstr "地堡"
 
@@ -2358,7 +2361,9 @@ msgstr "军校学员"
 msgid "Campaign Article Link (optional)"
 msgstr "参选文章链接 (可选)"
 
+#: src/components/_other/upgrade/UpgradeGrid.tsx:152
 #: src/components/_political/election/CandidateFormModal.tsx:83
+#: src/components/_political/region/UpgradeList.tsx:192
 msgid "Cancel"
 msgstr "取消"
 
@@ -2572,6 +2577,10 @@ msgstr "公民为盟友战斗或对抗死敌时会获得加成。"
 msgid "Citizens of the owning country located in the region can spend <0>{cost}</0> to add <1>{points}</1> construction points. When the bar is full, the upgrade levels up."
 msgstr ""
 
+#: src/components/_other/upgrade/UpgradeCostDetails.tsx:71
+msgid "citizens present in the region"
+msgstr ""
+
 #: src/components/_political/country/CountryHeader.tsx:113
 msgid "Citizenship"
 msgstr "公民身份"
@@ -2639,7 +2648,7 @@ msgstr "点击以选择提案"
 msgid "Climate"
 msgstr "气候"
 
-#: ../__ui/src/components/Modal/Modal.tsx:241
+#: ../__ui/src/components/Modal/Modal.tsx:251
 msgid "Close"
 msgstr "关闭"
 
@@ -2902,10 +2911,10 @@ msgstr "合约已过期"
 msgid "Contract rolled back"
 msgstr "合约已回滚"
 
-#: src/components/_military/battle/BattleHeader.tsx:303
+#: src/components/_military/battle/BattleHeader.tsx:306
 #: src/components/_military/battle/BattlesHeader.tsx:44
 #: src/components/_military/battle/BattleSideContractsModal.tsx:47
-#: src/components/_military/battle/LootSummaryCard.tsx:96
+#: src/components/_military/battle/LootSummaryCard.tsx:117
 #: src/components/_political/country/CountryHeader.tsx:134
 msgid "Contracts"
 msgstr "合约"
@@ -2981,8 +2990,12 @@ msgstr "国家"
 msgid "Countries"
 msgstr "国家"
 
+#: src/components/_other/upgrade/UpgradeCostDetails.tsx:77
+msgid "country"
+msgstr ""
+
 #: src/components/_layout/LayoutMenuGrid.tsx:125
-#: src/components/_layout/LayoutRightIcons.tsx:177
+#: src/components/_layout/LayoutRightIcons.tsx:178
 #: src/components/_layout/MoreWindowButton.tsx:106
 #: src/components/_military/battle/BattleCountrySide.tsx:73
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:133
@@ -3169,7 +3182,7 @@ msgstr "d. 任何形式的歧视、种族主义、排外、反犹、恐同、恐
 msgid "Daily"
 msgstr "每日"
 
-#: src/components/_other/upgrade/UpgradeListItem.tsx:187
+#: src/components/_other/upgrade/UpgradeListItem.tsx:144
 msgid "Daily cost"
 msgstr ""
 
@@ -3177,12 +3190,13 @@ msgstr ""
 msgid "Daily income"
 msgstr ""
 
+#: src/components/_other/upgrade/UpgradeCostDetails.tsx:96
 #: src/components/_political/alliance/AllianceMemberRow.tsx:59
 #: src/components/_political/law/LawTypeSelect.tsx:188
 msgid "Daily maintenance"
 msgstr "每日维护费"
 
-#: src/components/_political/region/CreateUpgradeModal.tsx:241
+#: src/components/_other/upgrade/UpgradeCardContent.tsx:227
 msgid "Daily maintenance cost"
 msgstr ""
 
@@ -3203,7 +3217,7 @@ msgid "Daily regions revenue"
 msgstr ""
 
 #: src/components/_layout/map.frontConfig.tsx:46
-#: src/components/_political/region/RegionTags.tsx:102
+#: src/components/_political/region/RegionTags.tsx:106
 msgid "Daily revenue"
 msgstr ""
 
@@ -3431,7 +3445,7 @@ msgstr "取消指挥官职务"
 msgid "Demoted from Commander"
 msgstr "取消指挥官职务"
 
-#: src/pages/region/[regionId]/index.tsx:69
+#: src/pages/region/[regionId]/index.tsx:68
 msgid "Deposit"
 msgstr "资源点"
 
@@ -3448,7 +3462,7 @@ msgstr "已发现资源点"
 msgid "Deposit of <0>{0}</0> has been depleted in <1/>"
 msgstr "在 <1/> 的 <0>{0}</0> 资源点已被耗尽"
 
-#: src/pages/region/[regionId]/index.tsx:65
+#: src/pages/region/[regionId]/index.tsx:64
 msgid "Deposit resource"
 msgstr "资源点"
 
@@ -3488,7 +3502,6 @@ msgid "Destruct"
 msgstr "拆除"
 
 #: src/components/_layout/map.frontConfig.tsx:40
-#: src/components/_political/region/RegionTags.tsx:93
 msgid "Development"
 msgstr "发展度"
 
@@ -3605,7 +3618,7 @@ msgstr "捐款概要"
 msgid "Donations"
 msgstr "捐款"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:216
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:248
 msgid "Dormitories"
 msgstr "宿舍"
 
@@ -3670,7 +3683,7 @@ msgstr "编辑描述"
 msgid "Edit worker"
 msgstr "编辑员工"
 
-#: src/components/_other/upgrade/UpgradeTypeTag.tsx:29
+#: src/components/_other/upgrade/UpgradeTypeTag.tsx:28
 msgid "Effect applies to the whole country. Maintenance scales with the country's average development."
 msgstr ""
 
@@ -3730,7 +3743,7 @@ msgstr "精英裤子"
 msgid "Employee Production"
 msgstr "工人生产"
 
-#: src/pages/region/[regionId]/index.tsx:169
+#: src/pages/region/[regionId]/index.tsx:168
 msgid "Empty"
 msgstr "空"
 
@@ -3845,7 +3858,7 @@ msgid "Ethics Points:"
 msgstr "政策点数："
 
 #: src/components/_layout/LayoutMenuGrid.tsx:136
-#: src/components/_layout/LayoutRightIcons.tsx:248
+#: src/components/_layout/LayoutRightIcons.tsx:249
 #: src/components/_layout/MoreWindowButton.tsx:137
 #: src/pages/country/[countryId]/index.tsx:287
 msgid "Events"
@@ -3878,7 +3891,7 @@ msgstr "已过期：无人出价"
 msgid "Expired: round ended"
 msgstr "已过期：回合结束"
 
-#: src/pages/region/[regionId]/index.tsx:88
+#: src/pages/region/[regionId]/index.tsx:87
 msgid "Expires in"
 msgstr "过期于"
 
@@ -4025,7 +4038,7 @@ msgid "Fee"
 msgstr "手续费"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:172
-#: src/components/_layout/LayoutRightIcons.tsx:266
+#: src/components/_layout/LayoutRightIcons.tsx:267
 #: src/components/_layout/MoreWindowButton.tsx:129
 msgid "Feed"
 msgstr "动态"
@@ -4231,7 +4244,7 @@ msgid "Generate Missions"
 msgstr "产生任务"
 
 #. placeholder {0}: levelConfig.stats.dailyProd
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:185
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:215
 msgid "Generates <0>{0}</0>/day"
 msgstr "产生 <0>{0}</0>/日"
 
@@ -4288,24 +4301,24 @@ msgid "Giveaway Won!"
 msgstr "赢得了抽奖！"
 
 #. placeholder {0}: levelConfig.stats.attackBonus
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:207
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:239
 msgid "Gives <0>{0}</0>"
 msgstr "给予 <0>{0}</0>"
 
 #. placeholder {0}: Math.round(percent * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:136
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:164
 msgid "Gives daily income of <0/> ({0}% of this region <1>Development</1>)"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:162
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:191
 msgid "Gives daily income of <0/> (<1/> per citizen present here × {regionPopulation})"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:145
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:173
 msgid "Gives daily income of <0/> of this region <1>Development</1>"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:171
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:200
 msgid "Gives daily income of <0/> per citizen present in this region."
 msgstr ""
 
@@ -4511,7 +4524,7 @@ msgstr "Hamster Tank"
 msgid "Hard Worker"
 msgstr "勤劳者"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:203
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:234
 msgid "Headquarters"
 msgstr "总部"
 
@@ -4572,15 +4585,19 @@ msgstr "在政府任职期间为自己国家作战会使赏金效率提高 {0}%�
 msgid "Home"
 msgstr "主页"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:115
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:141
 msgid "Hospital"
 msgstr ""
 
-#: src/components/_other/upgrade/UpgradeListItem.tsx:189
+#: src/components/_other/upgrade/UpgradeListItem.tsx:146
 msgid "Hourly cost"
 msgstr ""
 
-#: src/components/_political/region/CreateUpgradeModal.tsx:243
+#: src/components/_other/upgrade/UpgradeCostDetails.tsx:98
+msgid "Hourly maintenance"
+msgstr ""
+
+#: src/components/_other/upgrade/UpgradeCardContent.tsx:229
 msgid "Hourly maintenance cost"
 msgstr ""
 
@@ -5073,7 +5090,7 @@ msgstr "传奇头盔"
 msgid "Legendary Pants"
 msgstr "传奇裤子"
 
-#: src/components/_other/upgrade/UpgradeSlotCard.tsx:140
+#: src/components/_other/upgrade/UpgradeSlotCard.tsx:150
 msgid "Level"
 msgstr ""
 
@@ -5181,7 +5198,7 @@ msgstr "载入 {status} 中..."
 msgid "Loading..."
 msgstr "载入中..."
 
-#: src/components/_other/upgrade/UpgradeTypeTag.tsx:16
+#: src/components/_other/upgrade/UpgradeTypeTag.tsx:17
 msgid "Local"
 msgstr ""
 
@@ -5189,10 +5206,11 @@ msgstr ""
 msgid "Location"
 msgstr "地点"
 
-#: src/components/_economy/company/CompanyUpgradeList.tsx:166
-#: src/components/_economy/company/CompanyUpgradesGrid.tsx:136
-#: src/components/_political/region/UpgradeList.tsx:162
-#: src/components/_political/region/UpgradesGrid.tsx:173
+#: src/components/_economy/company/CompanyUpgradeList.tsx:163
+#: src/components/_economy/company/CompanyUpgradesGrid.tsx:166
+#: src/components/_other/upgrade/UpgradeListItem.tsx:112
+#: src/components/_political/region/UpgradeList.tsx:316
+#: src/components/_political/region/UpgradesGrid.tsx:193
 msgid "Locked slot"
 msgstr ""
 
@@ -5246,11 +5264,11 @@ msgid "Luck is finally on payroll"
 msgstr "幸运女神终于眷顾我了"
 
 #. placeholder {0}: construction.targetLevel
-#: src/components/_other/upgradeConstruction/ConstructionListItem.tsx:67
+#: src/components/_other/upgradeConstruction/ConstructionListItem.tsx:54
 msgid "Lvl {0}"
 msgstr ""
 
-#: src/components/_other/upgrade/UpgradeListItem.tsx:156
+#: src/components/_other/upgrade/UpgradeListItem.tsx:106
 msgid "Lvl {level}"
 msgstr ""
 
@@ -5262,7 +5280,7 @@ msgstr "Mage Robe"
 msgid "Maintenance cost"
 msgstr "维护费"
 
-#: src/components/_other/upgrade/UpgradeTypeTag.tsx:39
+#: src/components/_other/upgrade/UpgradeTypeTag.tsx:37
 msgid "Maintenance scales with the number of citizens present in the region."
 msgstr ""
 
@@ -5305,7 +5323,7 @@ msgstr ""
 #: src/components/_layout/LayoutMenu.tsx:195
 #: src/components/_layout/LayoutMenuGrid.tsx:85
 #: src/components/_layout/MoreWindowButton.tsx:168
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:155
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:183
 #: src/pages/country/[countryId]/account.tsx:31
 #: src/pages/party/[partyId]/account.tsx:24
 #: src/pages/user/[userId]/account.tsx:26
@@ -5331,13 +5349,13 @@ msgid "Maxed!"
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.members
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:220
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:253
 msgid "Maximum of <0>{0}</0> members."
 msgstr "最多可容纳 <0>{0}</0> 位成员。"
 
 #. placeholder {0}: levelConfig.stats.maxWorkers
 #. placeholder {1}: typeof levelConfig.stats.dailyHires !== 'undefined' && ( <> <br /> Daily hiring limit of{' '} <EntityValue IconComponent={WorkerIcon}> {levelConfig.stats.dailyHires} </EntityValue>{' '} per day. </> )
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:234
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:268
 msgid "Maximum of <0>{0}</0> workers.{1}"
 msgstr "最多可容纳 <0>{0}</0> 位员工。{1}"
 
@@ -5458,7 +5476,7 @@ msgstr "雇佣兵合约"
 msgid "Mercenary contracts are currently disabled."
 msgstr "雇佣兵合约目前已停用。"
 
-#: src/components/_military/battle/LootSummaryCard.tsx:90
+#: src/components/_military/battle/LootSummaryCard.tsx:111
 msgid "Mercenary earnings"
 msgstr "雇佣兵收益"
 
@@ -5478,7 +5496,7 @@ msgstr "已赞消息"
 msgid "Military & Battles"
 msgstr "军事与战斗"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:69
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:92
 msgid "Military base"
 msgstr "军事基地"
 
@@ -5521,6 +5539,10 @@ msgstr "军团"
 msgid "Military Units"
 msgstr "军团"
 
+#: src/components/_other/upgrade/UpgradeCostDetails.tsx:85
+msgid "min"
+msgstr ""
+
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:293
 msgid "Min reached"
 msgstr "已达最低要求"
@@ -5549,7 +5571,7 @@ msgid "Mission tags"
 msgstr ""
 
 #: src/components/_layout/LayoutMenuGrid.tsx:94
-#: src/components/_layout/LayoutRightIcons.tsx:214
+#: src/components/_layout/LayoutRightIcons.tsx:215
 #: src/components/_layout/MoreWindowButton.tsx:145
 #: src/components/_user/mission/MissionsList.tsx:150
 msgid "Missions"
@@ -5699,7 +5721,7 @@ msgstr "军团达到了 {0} 级！奖励：{rewardDisplay}"
 msgid "MU Tournament Winner"
 msgstr "军团锦标赛冠军"
 
-#: src/components/_military/battle/LootSummaryCard.tsx:123
+#: src/components/_military/battle/LootSummaryCard.tsx:144
 msgid "My battle loot"
 msgstr "我的战利品"
 
@@ -5797,7 +5819,7 @@ msgid "Never stop gambling"
 msgstr "不要停止赌博"
 
 #: src/components/_other/shop/SkinPackItem.tsx:91
-#: src/components/_social/ArticleList.tsx:161
+#: src/components/_social/ArticleList.tsx:166
 msgid "New"
 msgstr "最新"
 
@@ -5906,7 +5928,7 @@ msgid "Newest"
 msgstr "最新"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:115
-#: src/components/_layout/LayoutRightIcons.tsx:238
+#: src/components/_layout/LayoutRightIcons.tsx:239
 #: src/components/_layout/MoreWindowButton.tsx:153
 msgid "News"
 msgstr "新闻"
@@ -5927,7 +5949,7 @@ msgstr ""
 msgid "Next reward"
 msgstr "下一个奖励"
 
-#: src/components/_political/region/UpgradeList.tsx:167
+#: src/components/_political/region/UpgradeList.tsx:321
 msgid "Next slot unlocks at {unlockDevelopment} development"
 msgstr ""
 
@@ -6208,6 +6230,7 @@ msgstr ""
 msgid "Occupied region"
 msgstr "被占领地区"
 
+#: src/components/_other/upgrade/UpgradeCostDetails.tsx:69
 #: src/components/_political/government/Government.tsx:204
 msgid "of"
 msgstr "来自"
@@ -6261,7 +6284,7 @@ msgstr "只有总统可以为他的国家报名"
 msgid "Only supporters can see their spending and income breakdown."
 msgstr "只有支持者可以查看自己的支出与收入明细。"
 
-#: src/components/_economy/company/CompanyUpgradeList.tsx:170
+#: src/components/_economy/company/CompanyUpgradeList.tsx:167
 msgid "Only the company owner can unlock this slot."
 msgstr ""
 
@@ -6399,7 +6422,7 @@ msgstr "<0/> 的拥有权已从 <1/> 转移至 <2/>"
 msgid "Ownership transferred successfully"
 msgstr "所有权转移成功"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:87
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:111
 msgid "Pacification Center"
 msgstr "安抚中心"
 
@@ -6443,7 +6466,7 @@ msgid "Parties"
 msgstr "政党"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:145
-#: src/components/_layout/LayoutRightIcons.tsx:186
+#: src/components/_layout/LayoutRightIcons.tsx:187
 #: src/components/_layout/MoreWindowButton.tsx:115
 #: src/components/_user/notification/notificationPrefs.categories.ts:159
 #: src/pages/user/[userId]/index.tsx:169
@@ -6638,11 +6661,11 @@ msgid "Popular Article"
 msgstr "热门文章"
 
 #: src/components/_layout/map.frontConfig.tsx:52
-#: src/components/_other/upgrade/UpgradeTypeTag.tsx:36
+#: src/components/_other/upgrade/UpgradeTypeTag.tsx:35
 msgid "Population"
 msgstr ""
 
-#: src/components/_political/region/RegionTags.tsx:113
+#: src/components/_political/region/RegionTags.tsx:117
 msgid "Population (currently here)"
 msgstr ""
 
@@ -6793,7 +6816,7 @@ msgstr "生产"
 
 #: src/components/_economy/company/CompanyProductionBonusTag.tsx:51
 #: src/components/_economy/company/RecommendedCompanyRegions.tsx:99
-#: src/pages/region/[regionId]/index.tsx:78
+#: src/pages/region/[regionId]/index.tsx:77
 msgid "Production bonus"
 msgstr "生产加成"
 
@@ -6927,7 +6950,7 @@ msgstr "快速装备最佳道具"
 msgid "Quickly dismantle items"
 msgstr "快速拆解物品"
 
-#: src/components/_military/battle/BattleHeader.tsx:290
+#: src/components/_military/battle/BattleHeader.tsx:293
 msgid "Ranking"
 msgstr "排名"
 
@@ -6943,7 +6966,7 @@ msgid "Rankings"
 msgstr "排名"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:164
-#: src/components/_layout/LayoutRightIcons.tsx:257
+#: src/components/_layout/LayoutRightIcons.tsx:258
 msgid "Ranks"
 msgstr "排行榜"
 
@@ -7104,6 +7127,10 @@ msgstr "恢复于..."
 msgid "Regens <0>{0}</0> when consumed"
 msgstr "使用后回复 <0>{0}</0>"
 
+#: src/components/_other/upgrade/UpgradeCostDetails.tsx:75
+msgid "region"
+msgstr ""
+
 #: src/components/_political/map/MapMenu.tsx:194
 #: src/components/_political/party/PartyFormModal.tsx:109
 msgid "Region"
@@ -7121,6 +7148,10 @@ msgstr "地区正在叛乱！"
 #: src/components/_political/event/EventList.tsx:111
 msgid "Region liberated"
 msgstr "地区已解放"
+
+#: src/components/_political/region/UpgradeList.tsx:93
+msgid "Region slots"
+msgstr ""
 
 #: src/components/_political/event/EventList.tsx:110
 msgid "Region transfer"
@@ -7356,7 +7387,7 @@ msgstr "重置用户名称"
 msgid "Reset your skills"
 msgstr ""
 
-#: src/pages/region/[regionId]/index.tsx:118
+#: src/pages/region/[regionId]/index.tsx:117
 msgid "Reshuffle in"
 msgstr "重置于"
 
@@ -7365,7 +7396,7 @@ msgstr "重置于"
 msgid "Residents"
 msgstr ""
 
-#: src/components/_political/region/RegionTags.tsx:123
+#: src/components/_political/region/RegionTags.tsx:127
 msgid "Residents (home here)"
 msgstr ""
 
@@ -7373,7 +7404,7 @@ msgstr ""
 msgid "Resist"
 msgstr "抵抗"
 
-#: src/pages/region/[regionId]/index.tsx:134
+#: src/pages/region/[regionId]/index.tsx:133
 msgid "Resistance"
 msgstr "抵抗度"
 
@@ -7386,7 +7417,7 @@ msgid "Resistance for {regionName} {score}"
 msgstr "{regionName} 抵抗战 {score}"
 
 #: src/pages/country/[countryId]/index.tsx:247
-#: src/pages/region/[regionId]/index.tsx:58
+#: src/pages/region/[regionId]/index.tsx:57
 msgid "Resources"
 msgstr "资源"
 
@@ -7526,7 +7557,9 @@ msgstr "执政党"
 msgid "Running low on health?"
 msgstr "生命值要用完了吗？"
 
+#: src/components/_other/upgrade/UpgradeGrid.tsx:161
 #: src/components/_political/party/PartyDescriptionModal.tsx:72
+#: src/components/_political/region/UpgradeList.tsx:201
 #: src/components/_user/auth/WelcomeModal.tsx:182
 #: src/pages/user/[userId]/skills.tsx:252
 msgid "Save"
@@ -7777,7 +7810,7 @@ msgid "Settings"
 msgstr "设置"
 
 #: src/components/_layout/LayoutMenuGrid.tsx:104
-#: src/components/_layout/LayoutRightIcons.tsx:227
+#: src/components/_layout/LayoutRightIcons.tsx:228
 #: src/components/_layout/MoreWindowButton.tsx:83
 #: src/components/_other/shop/ShopHeader.tsx:52
 msgid "Shop"
@@ -7806,7 +7839,7 @@ msgstr "显示更多"
 msgid "Show more ({0} remaining)"
 msgstr "显示更多（剩余 {0} 个）"
 
-#: src/components/_social/ArticleList.tsx:140
+#: src/components/_social/ArticleList.tsx:145
 msgid "Show only articles with positive score (score >= -5)"
 msgstr "只显示正分数文章 (分数 >= -5)"
 
@@ -7889,6 +7922,10 @@ msgstr "跳过教学"
 #: src/components/_other/shop/skin.frontConfig.tsx:260
 msgid "Sling Stones"
 msgstr "Sling Stones"
+
+#: src/components/_political/region/UpgradeList.tsx:90
+msgid "Slots"
+msgstr ""
 
 #: src/components/_layout/LayoutOptions.tsx:187
 msgid "Small GIFs"
@@ -7996,7 +8033,7 @@ msgstr "开始革命"
 msgid "Started <0/>"
 msgstr "开始于 <0/>"
 
-#: src/components/_military/battle/BattleHeader.tsx:189
+#: src/components/_military/battle/BattleHeader.tsx:190
 msgid "Started<0/><1/>"
 msgstr "已开始<0/><1/>"
 
@@ -8055,15 +8092,15 @@ msgid "Stone Maul"
 msgstr "Stone Maul"
 
 #: src/components/_economy/company/CompanyTags.tsx:107
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:191
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:221
 msgid "Storage"
 msgstr "储藏区"
 
-#: src/pages/region/[regionId]/index.tsx:106
+#: src/pages/region/[regionId]/index.tsx:105
 msgid "Strategic"
 msgstr "战略"
 
-#: src/pages/region/[regionId]/index.tsx:102
+#: src/pages/region/[regionId]/index.tsx:101
 msgid "Strategic resource"
 msgstr "战略资源"
 
@@ -8075,7 +8112,7 @@ msgstr "战略资源"
 msgid "Strategic resources have been reshuffled across the whole map."
 msgstr "战略资源已在世界地图中被刷新"
 
-#: src/components/_social/ArticleList.tsx:189
+#: src/components/_social/ArticleList.tsx:194
 msgid "Subscribed"
 msgstr "已订阅"
 
@@ -8205,7 +8242,7 @@ msgstr "目标地区"
 msgid "Target user"
 msgstr "目标用户"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:156
 msgid "Tax Office"
 msgstr ""
 
@@ -8277,11 +8314,11 @@ msgstr ""
 msgid "The damage factor increase of critical hits over normal hits"
 msgstr "暴击造成的伤害会比普通伤害更高"
 
-#: src/pages/region/[regionId]/index.tsx:79
+#: src/pages/region/[regionId]/index.tsx:78
 msgid "The deposit gives a production bonus of the following percentage."
 msgstr "资源点可获取以下百分比的生产点数加成。"
 
-#: src/pages/region/[regionId]/index.tsx:89
+#: src/pages/region/[regionId]/index.tsx:88
 msgid "The deposit will expire in the following amount of time."
 msgstr "资源点将于一段时间后到期。"
 
@@ -8307,7 +8344,7 @@ msgstr "在 <0/> 的革命已被镇压。政府维持了他的权力。"
 msgid "The revolution in <0/> has succeeded! The government has been overthrown."
 msgstr "在 <0/> 的革命已成功！政府已被驱逐。"
 
-#: src/pages/region/[regionId]/index.tsx:119
+#: src/pages/region/[regionId]/index.tsx:118
 msgid "The strategic resource will be reshuffled in the following amount of time."
 msgstr "战略资源将在一段时间后重新分布。"
 
@@ -8351,7 +8388,7 @@ msgstr "这件装备跟草一样绿"
 msgid "This feels good, huh?"
 msgstr "感觉还不错，是吧？"
 
-#: src/components/_military/battle/LootSummaryCard.tsx:64
+#: src/components/_military/battle/LootSummaryCard.tsx:85
 msgid "This is a summary of the loot you received from this battle. It includes any cases you got as well as the most valuable items from the shared loot pool."
 msgstr "这是你从本场战斗中获得的战利品摘要，包括你获得的所有箱子，以及共享战利品池中最有价值的物品。"
 
@@ -8380,7 +8417,7 @@ msgstr "这个法案需要国家中有至少 {minActiveCitizen} 位活跃公民 
 msgid "This member won't be able to be nominated again for {cooldownDays} days."
 msgstr "该成员在 {cooldownDays} 天内无法再次被提名。"
 
-#: src/pages/region/[regionId]/index.tsx:180
+#: src/pages/region/[regionId]/index.tsx:179
 msgid "This region is not linked to it's owner's capital."
 msgstr "该地区未与其拥有者的首都连接。"
 
@@ -8493,15 +8530,15 @@ msgid "Tome of Tides"
 msgstr "Tome of Tides"
 
 #: src/components/_military/damageRanking/BattleLoot.tsx:124
-#: src/components/_social/ArticleList.tsx:181
+#: src/components/_social/ArticleList.tsx:186
 msgid "Top"
 msgstr "热门"
 
-#: src/components/_social/ArticleList.tsx:168
+#: src/components/_social/ArticleList.tsx:173
 msgid "Top (1d)"
 msgstr "热门 (一天)"
 
-#: src/components/_social/ArticleList.tsx:175
+#: src/components/_social/ArticleList.tsx:180
 msgid "Top (1w)"
 msgstr "热门 (一周)"
 
@@ -8754,11 +8791,11 @@ msgstr ""
 msgid "Unethical: national orders deal ×2 damage but cost ×2 <0>{0}</0>"
 msgstr ""
 
-#: src/pages/region/[regionId]/index.tsx:203
+#: src/pages/region/[regionId]/index.tsx:202
 msgid "Unlinked"
 msgstr "未连接"
 
-#: src/pages/region/[regionId]/index.tsx:176
+#: src/pages/region/[regionId]/index.tsx:175
 msgid "Unlinked to capital"
 msgstr "未与首都连接"
 
@@ -8780,16 +8817,16 @@ msgstr "解锁一键帮助"
 msgid "Unlock Produce all button"
 msgstr "解锁一键生产"
 
-#: src/components/_economy/company/CompanyUpgradeList.tsx:178
+#: src/components/_economy/company/CompanyUpgradeList.tsx:175
 msgid "Unlock slot {slot}"
 msgstr ""
 
-#: src/components/_economy/company/CompanyUpgradesGrid.tsx:140
+#: src/components/_economy/company/CompanyUpgradesGrid.tsx:170
 msgid "Unlock the previous slot first."
 msgstr ""
 
-#: src/components/_economy/company/CompanyUpgradeList.tsx:169
-#: src/components/_economy/company/CompanyUpgradesGrid.tsx:139
+#: src/components/_economy/company/CompanyUpgradeList.tsx:166
+#: src/components/_economy/company/CompanyUpgradesGrid.tsx:169
 msgid "Unlock this slot for {cost} concrete."
 msgstr ""
 
@@ -8797,11 +8834,11 @@ msgstr ""
 msgid "Unlocked pack"
 msgstr "已解锁皮肤包"
 
-#: src/components/_political/region/UpgradesGrid.tsx:174
+#: src/components/_political/region/UpgradesGrid.tsx:194
 msgid "Unlocks at {dev} development."
 msgstr ""
 
-#: src/components/_political/region/UpgradeList.tsx:163
+#: src/components/_political/region/UpgradeList.tsx:317
 msgid "Unlocks at {unlockDevelopment} development."
 msgstr ""
 
@@ -8883,7 +8920,7 @@ msgid "Upgrade your skills!"
 msgstr "升级你的技能！"
 
 #: src/pages/company/[companyId]/index.tsx:49
-#: src/pages/region/[regionId]/index.tsx:50
+#: src/pages/region/[regionId]/index.tsx:49
 msgid "Upgrades"
 msgstr "升级"
 
@@ -9120,7 +9157,7 @@ msgstr "副总统"
 msgid "View details"
 msgstr "查看详情"
 
-#: src/components/_military/battle/BattleHeader.tsx:125
+#: src/components/_military/battle/BattleHeader.tsx:126
 msgid "View on map"
 msgstr "在地图上查看"
 
@@ -9879,8 +9916,8 @@ msgstr "仓库中存放著你的所有物品，来看看都有什么！"
 msgid "Your location"
 msgstr ""
 
-#: src/components/_military/battle/LootSummaryCard.tsx:63
-#: src/components/_military/battle/LootSummaryCard.tsx:67
+#: src/components/_military/battle/LootSummaryCard.tsx:84
+#: src/components/_military/battle/LootSummaryCard.tsx:88
 msgid "Your loot"
 msgstr "你的战利品"
 
@@ -9971,7 +10008,7 @@ msgid "your@email.com"
 msgstr "your@email.com"
 
 #: src/components/_political/chat/ChatConversationsMenu.tsx:152
-#: src/components/_social/ArticleList.tsx:195
+#: src/components/_social/ArticleList.tsx:200
 msgid "Yours"
 msgstr "你的"
 
