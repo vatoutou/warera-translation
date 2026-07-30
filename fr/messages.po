@@ -182,7 +182,11 @@ msgstr "{0}% de l'investissement"
 msgid "{completedCount}/{totalCount} completed"
 msgstr "{completedCount}/{totalCount} terminées"
 
-#: src/components/_user/user/SkillUpgrade.tsx:267
+#: src/components/_user/badgeCollection/Badge.tsx:78
+msgid "{cooldownDays} days"
+msgstr ""
+
+#: src/components/_user/user/SkillUpgrade.tsx:220
 msgid "{draftPrestigeCount} prestige point(s) on this skill ({savedPrestigeCount} saved, locked until reset)"
 msgstr ""
 
@@ -198,7 +202,7 @@ msgstr "{registeredCount} {entityLabel} inscrits"
 msgid "{roundsToWin} Rounds to win "
 msgstr "{roundsToWin} Manches pour gagner"
 
-#: src/components/_user/user/SkillUpgrade.tsx:373
+#: src/components/_user/user/SkillUpgrade.tsx:326
 msgid "{savedPrestigeCount} prestige point(s) active on this skill"
 msgstr ""
 
@@ -209,6 +213,10 @@ msgstr "{score}/{0} Manches"
 
 #: src/components/_political/region/UpgradeList.tsx:258
 msgid "{slotCount} slots"
+msgstr ""
+
+#: src/components/_user/milestone/MilestonesList.tsx:24
+msgid "{tiersCompleted} tiers completed"
 msgstr ""
 
 #: src/components/_layout/LayoutMapUserMenu.tsx:57
@@ -359,7 +367,7 @@ msgstr "<0/> t'a offert le skin \"{skinTitle}\" !"
 msgid "<0/> gifted you the skin pack \"{skinPackTitle}\"!"
 msgstr ""
 
-#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:227
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:255
 msgid "<0/> got fee back"
 msgstr "<0/> a récupéré les frais"
 
@@ -519,7 +527,7 @@ msgstr "<0/> t'a mentioné <1/>"
 msgid "<0/> mentioned you in <1/><2/>"
 msgstr "<0/> vous a mentionné dans <1/><2/>"
 
-#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:221
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:249
 msgid "<0/> paid fee"
 msgstr "<0/> frais payés"
 
@@ -831,10 +839,6 @@ msgstr "Ressource <0>#{key}</0> de chaque type = <1>{value}</1>"
 msgid "<0>Average development</0> is the average of <1>Core development</1> and <2>Current development</2>."
 msgstr "<0>Développement moyen</0> est la moyenne de <1>Développement principal</1> et <2>Développement actuel</2>."
 
-#: src/components/_user/user/UserTooltip.tsx:137
-msgid "<0>Buff</0> ends <1/>"
-msgstr "<0>Bonus</0> se termine <1/>"
-
 #: src/components/_political/country/CountryHeader.tsx:172
 msgid "<0>Core development</0> is calculated depending on the country's <1>Population</1> and average <2>Level</2>. then distributed equally among the country's <3>Core regions</3>."
 msgstr "<0>Développement du noyau</0> est calculé en fonction de la <1>Population</1> du pays et du <2>Niveau</2> moyen. puis réparti équitablement entre les <3>régions principales</3> du pays."
@@ -842,10 +846,6 @@ msgstr "<0>Développement du noyau</0> est calculé en fonction de la <1>Populat
 #: src/components/_political/country/CountryHeader.tsx:236
 msgid "<0>Current development</0> is the total development of the <1>regions</1> the country currently controls, including conquered territory."
 msgstr "<0>Développement actuel</0> correspond au développement total des <1>régions</1> que le pays contrôle actuellement, y compris le territoire conquis."
-
-#: src/components/_user/user/UserTooltip.tsx:146
-msgid "<0>Debuff</0> ends <1/>"
-msgstr "<0>Malus</0> se termine <1/>"
 
 #: src/components/_user/premium/PremiumFeatureList.tsx:121
 msgid "<0>Emotes</0> in chat"
@@ -1322,12 +1322,12 @@ msgid "A deposit of <0>{0}</0> <1>{1}</1> has been found in <2/> for {2} days"
 msgstr "Un dépôt de <0>{0}</0> <1>{1}</1> a été trouvé dans <2/> pour {2} jours"
 
 #. placeholder {0}: contract.acceptanceFee
-#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:97
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:121
 msgid "A fee of <0>{0}</0> is required to accept this contract. The fee is returned once you complete the minimum damage of <1/>. If you fail to complete the contract or the country cancels it, the fee is lost."
 msgstr "Des frais de <0>{0}</0> sont nécessaires pour accepter ce contrat. Les frais sont remboursés une fois que vous avez atteint le dommage minimum de <1/>. Si vous ne parvenez pas à remplir le contrat ou si le pays l'annule, les frais sont perdus."
 
 #. placeholder {0}: contract.acceptanceFee
-#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:91
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:115
 msgid "A fee of <0>{0}</0> was required to accept this contract. The fee has been returned after completing the minimum damage."
 msgstr "Des frais de <0>{0}</0> étaient nécessaires pour accepter ce contrat. Les frais ont été remboursés après avoir causé les dommages minimaux."
 
@@ -1451,7 +1451,7 @@ msgstr "Guerre active"
 msgid "Active wars"
 msgstr "Guerres actives"
 
-#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:179
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:207
 msgid "Activity"
 msgstr "Activité"
 
@@ -1584,7 +1584,8 @@ msgstr "Tous les types"
 #: src/components/_layout/map.frontConfig.tsx:34
 #: src/components/_layout/MoreWindowButton.tsx:97
 #: src/components/_political/country/CountryDiplomacyGrid.tsx:193
-#: src/components/_political/map/MapMenu.tsx:216
+#: src/components/_political/country/CountryTooltip.tsx:109
+#: src/components/_political/map/MapMenu.tsx:199
 msgid "Alliance"
 msgstr "Alliance"
 
@@ -1907,8 +1908,12 @@ msgstr "Gilet Tactique AT"
 msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
 msgstr "À la fin du timer, <0>{actualTickPoints}</0> seront attribués au camp avec le plus de dégâts."
 
+#: src/components/_political/country/CountryTooltip.tsx:141
+msgid "At war with"
+msgstr ""
+
 #: src/components/_military/hit/HitButton.tsx:535
-#: src/components/_political/map/MapMenu.tsx:224
+#: src/components/_political/map/MapMenu.tsx:207
 #: src/components/_user/user/skills.frontConfig.tsx:45
 #: src/components/_user/user/skills.frontConfig.tsx:46
 msgid "Attack"
@@ -1935,7 +1940,7 @@ msgstr "Durée de l'enchère (minutes)"
 msgid "Auction Outbid"
 msgstr "Surenchère dépassée"
 
-#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:218
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:246
 msgid "Auction Won"
 msgstr "Enchère remportée"
 
@@ -2271,6 +2276,10 @@ msgstr "Budget"
 msgid "Buff ended"
 msgstr "Buff terminé"
 
+#: src/components/_user/user/UserTooltip.tsx:140
+msgid "Buff ends"
+msgstr ""
+
 #: src/components/_user/notification/notification.frontConfig.tsx:2115
 msgid "Buff expiring soon"
 msgstr "Le Buff expire bientôt"
@@ -2373,7 +2382,7 @@ msgstr "Lien vers l'article de campagne (optionnel)"
 msgid "Cancel"
 msgstr "Annuler"
 
-#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:77
+#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:80
 msgid "Cancel as gov"
 msgstr "Annuler en tant que gouvernement"
 
@@ -2386,13 +2395,13 @@ msgstr "Annuler à tout moment"
 msgid "Cancel Contract"
 msgstr "Annuler le contrat"
 
-#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:84
+#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:87
 #: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:63
 #: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:75
 msgid "Cancel Mercenary Contract"
 msgstr "Résilier le contrat de mercenaire"
 
-#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:232
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:260
 #: src/utils/translations.tsx:272
 msgid "Cancelled"
 msgstr "Résilié"
@@ -2401,7 +2410,7 @@ msgstr "Résilié"
 msgid "Cancelled by admin"
 msgstr "Annulé par un administrateur"
 
-#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:238
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:266
 msgid "Cancelled by Admin"
 msgstr "Annulé par un administrateur"
 
@@ -2428,6 +2437,10 @@ msgstr "Ne peut pas avoir d'ennemis jurés."
 #: src/components/_political/party/party.frontConfig.tsx:349
 msgid "Cannot pick a specialization good / no benefit from specialization."
 msgstr "Impossible de choisir un bien de spécialisation / aucun avantage de la spécialisation."
+
+#: src/components/_political/region/RegionTooltip.tsx:68
+msgid "Capital"
+msgstr ""
 
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:91
 msgid "Captain"
@@ -2762,7 +2775,8 @@ msgstr ""
 msgid "Complete missions daily to earn XP and level up faster. Click to claim!"
 msgstr "Termine des missions tous les jours pour gagner de l'XP et monter de niveau plus vite. Clique pour réclamer !"
 
-#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:234
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:262
+#: src/components/_user/milestone/MilestoneItem.tsx:163
 #: src/utils/translations.tsx:275
 msgid "Completed"
 msgstr "Terminé"
@@ -2953,8 +2967,8 @@ msgid "Cool down"
 msgstr "Temps de recharge"
 
 #: src/components/_user/badgeCollection/Badge.tsx:77
-msgid "Cooldown: {cooldownDays} days"
-msgstr "Temps de recharge : {cooldownDays} jours"
+msgid "Cooldown"
+msgstr ""
 
 #: src/components/_user/apiToken/ApiTokenList.tsx:90
 #: src/components/_user/userReports/UserReportListItem.tsx:106
@@ -3008,7 +3022,7 @@ msgstr "Pays"
 #: src/components/_military/battle/BattleCountrySide.tsx:73
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:133
 #: src/components/_political/country/CountryHeader.tsx:56
-#: src/components/_political/map/MapMenu.tsx:200
+#: src/components/_political/map/MapMenu.tsx:183
 msgid "Country"
 msgstr "Pays"
 
@@ -3228,7 +3242,7 @@ msgid "Daily regions revenue"
 msgstr ""
 
 #: src/components/_layout/map.frontConfig.tsx:46
-#: src/components/_political/region/RegionTags.tsx:106
+#: src/components/_political/region/RegionTags.tsx:116
 msgid "Daily revenue"
 msgstr ""
 
@@ -3244,7 +3258,7 @@ msgstr ""
 msgid "Daily wage paid from the country treasury."
 msgstr "Salaire quotidien versé par la trésorerie du pays."
 
-#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:156
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:184
 msgid "Damage by user"
 msgstr "Dégâts par utilisateur"
 
@@ -3351,6 +3365,10 @@ msgstr "Inflige quelques dégâts"
 msgid "Debuff ended"
 msgstr "Malus terminé"
 
+#: src/components/_user/user/UserTooltip.tsx:149
+msgid "Debuff ends"
+msgstr ""
+
 #: src/components/_user/user/SkillValue.tsx:234
 msgid "Debuffs:"
 msgstr "Malus :"
@@ -3418,6 +3436,10 @@ msgstr "Pacte défensif signé"
 msgid "Defensive pact: orders supporting your pact partner cost {orderDiscountPercent}% less <0>{0}</0>"
 msgstr "Pacte défensif : les ordres soutenant votre partenaire de pacte coûtent {orderDiscountPercent}% de moins <0>{0}</0>"
 
+#: src/components/_political/country/CountryTooltip.tsx:127
+msgid "Defensive pacts"
+msgstr ""
+
 #: src/components/_political/law/law.frontConfig.tsx:228
 msgid "Define <0/> as an enemy, increasing damages when fighting them"
 msgstr "Définissez <0/> comme un ennemi, augmentant les dégâts lors du combat contre lui"
@@ -3439,7 +3461,7 @@ msgstr "Déclarer un ennemi principal"
 msgid "Delete account"
 msgstr "Supprimer le compte"
 
-#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:100
+#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:103
 msgid "Delete contract"
 msgstr "Supprimer le contrat"
 
@@ -3521,6 +3543,7 @@ msgid "Destruct refund ({destroyRefundPercent}%):"
 msgstr ""
 
 #: src/components/_layout/map.frontConfig.tsx:40
+#: src/components/_political/region/RegionTooltip.tsx:79
 msgid "Development"
 msgstr "Développement"
 
@@ -3649,7 +3672,7 @@ msgstr "Dragon"
 msgid "e. Content about ongoing real-world wars and armed conflicts (most notably the Russo-Ukrainian war and the Israeli–Palestinian conflict)"
 msgstr "e. Contenu sur les guerres et conflits armés en cours dans le monde réel (notamment la guerre russo-ukrainienne et le conflit israélo-palestinien)"
 
-#: src/components/_user/user/SkillUpgrade.tsx:293
+#: src/components/_user/user/SkillUpgrade.tsx:246
 msgid "Each prestige point gives the equivalent of {skillBonusLevels} level of the selected skill"
 msgstr ""
 
@@ -3905,7 +3928,7 @@ msgid "Expansionist"
 msgstr "Expansionniste"
 
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:73
-#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:236
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:264
 #: src/utils/translations.tsx:276
 msgid "Expired"
 msgstr "Expiré"
@@ -4064,7 +4087,7 @@ msgid "Favorites"
 msgstr "Favoris"
 
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:238
-#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:108
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:132
 msgid "Fee"
 msgstr "Frais"
 
@@ -4083,10 +4106,11 @@ msgid "Fidelity bonus:"
 msgstr "Bonus de fidélité :"
 
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:159
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:79
 msgid "Fight for <0/> in <1/>"
 msgstr "Combat pour <0/> dans <1/>"
 
-#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:62
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:86
 msgid "Fight for <0/> in<1/><2/>"
 msgstr "Combat pour <0/> dans<1/><2/>"
 
@@ -4779,7 +4803,7 @@ msgstr "Industrialisme vs Agrarisme"
 msgid "Industrialist"
 msgstr "Industrialiste"
 
-#: src/components/_political/map/MapMenu.tsx:207
+#: src/components/_political/map/MapMenu.tsx:190
 msgid "Initial country"
 msgstr ""
 
@@ -5007,9 +5031,9 @@ msgstr "Langue"
 msgid "Last"
 msgstr "Dernier"
 
-#: src/components/_user/badgeCollection/Badge.tsx:70
-msgid "Last earned: <0/>"
-msgstr "Dernier gain : <0/>"
+#: src/components/_user/badgeCollection/Badge.tsx:82
+msgid "Last earned"
+msgstr ""
 
 #: src/pages/shop/index.tsx:91
 msgid "Last gifts"
@@ -5134,6 +5158,7 @@ msgid "Legendary Pants"
 msgstr "Pantalon Légendaire"
 
 #: src/components/_other/upgrade/UpgradeSlotCard.tsx:170
+#: src/components/_user/milestone/milestone.frontConfig.tsx:28
 msgid "Level"
 msgstr ""
 
@@ -5171,6 +5196,10 @@ msgstr "Libérer une région"
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:86
 msgid "Lieutenant"
 msgstr "Lieutenant"
+
+#: src/components/_user/milestone/MilestonesList.tsx:28
+msgid "Lifetime goals. Each tier is rewarded automatically the moment you reach it, and the next one unlocks right away."
+msgstr ""
 
 #: src/components/_political/law/LawFormModal.tsx:217
 #: src/components/_political/law/LawFormModal.tsx:295
@@ -5256,7 +5285,7 @@ msgstr "Localisation"
 msgid "Locked slot"
 msgstr ""
 
-#: src/components/_user/user/SkillUpgrade.tsx:289
+#: src/components/_user/user/SkillUpgrade.tsx:242
 msgid "Locked, reset your skills to reassign"
 msgstr ""
 
@@ -5304,6 +5333,10 @@ msgstr ""
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:59
 msgid "Luck is finally on payroll"
 msgstr "La chance est enfin de ton côté"
+
+#: src/components/_military/mu/MuTooltip.tsx:63
+msgid "Lvl"
+msgstr ""
 
 #. placeholder {0}: construction.targetLevel
 #: src/components/_other/upgradeConstruction/ConstructionListItem.tsx:54
@@ -5489,6 +5522,8 @@ msgstr "Membre de <0/>"
 msgid "Member promoted to commander"
 msgstr "Membre promu au rang de commandant"
 
+#: src/components/_military/mu/MuTooltip.tsx:76
+#: src/components/_military/tournament/TournamentTeamTooltip.tsx:100
 #: src/components/_political/alliance/AllianceHeader.tsx:88
 #: src/pages/party/[partyId]/index.tsx:76
 #: src/pages/party/[partyId]/members.tsx:21
@@ -5534,6 +5569,11 @@ msgstr "Message (Optionnel)"
 msgid "Message liked"
 msgstr "Message aimé"
 
+#: src/components/_user/milestone/MilestonesList.tsx:21
+#: src/pages/missions.tsx:29
+msgid "Milestones"
+msgstr ""
+
 #: src/components/_social/categories.frontConfig.tsx:55
 msgid "Military"
 msgstr ""
@@ -5556,6 +5596,10 @@ msgstr "Les bases militaires peuvent être améliorées ou dégradées toutes le
 #: src/components/_political/law/LawTypeSelect.tsx:76
 msgid "Military laws"
 msgstr "Lois Militaires"
+
+#: src/components/_user/milestone/milestone.frontConfig.tsx:38
+msgid "Military Rank"
+msgstr ""
 
 #: src/components/_user/notification/notification.frontConfig.tsx:2036
 msgid "Military Rank Up!"
@@ -5622,6 +5666,7 @@ msgstr ""
 #: src/components/_layout/LayoutRightIcons.tsx:215
 #: src/components/_layout/MoreWindowButton.tsx:145
 #: src/components/_user/mission/MissionsList.tsx:150
+#: src/pages/missions.tsx:22
 msgid "Missions"
 msgstr "Missions"
 
@@ -5990,7 +6035,7 @@ msgstr "La prochaine sera un tank"
 msgid "Next one will be tank"
 msgstr "La prochaine sera un tank"
 
-#: src/components/_user/user/SkillUpgrade.tsx:272
+#: src/components/_user/user/SkillUpgrade.tsx:225
 msgid "Next point costs"
 msgstr ""
 
@@ -6122,6 +6167,10 @@ msgstr "Pas d'enchères de mercenaires"
 msgid "No mercenary contracts"
 msgstr "Aucun contrat de mercenariat"
 
+#: src/components/_user/milestone/MilestonesList.tsx:40
+msgid "No milestones available"
+msgstr ""
+
 #: src/components/_military/mu/MuList.tsx:93
 msgid "No military units found"
 msgstr "Aucune unité militaire trouvée"
@@ -6154,7 +6203,7 @@ msgstr "Aucun ordre"
 msgid "No parties found"
 msgstr "Aucun parti trouvé"
 
-#: src/components/_user/user/SkillUpgrade.tsx:287
+#: src/components/_user/user/SkillUpgrade.tsx:240
 msgid "No prestige points left, tap to reset staged points"
 msgstr ""
 
@@ -6453,17 +6502,17 @@ msgstr "Aperçu"
 msgid "Owned"
 msgstr "Possédé"
 
-#. placeholder {0}: badgeStat.percent
-#. placeholder {1}: badgeStat.count
-#: src/components/_user/badgeCollection/Badge.tsx:82
-msgid "Owned by <0>{0}% <1>(<2>{1}</2>)</1></0> of active players"
+#: src/components/_user/badgeCollection/Badge.tsx:87
+msgid "Owned by"
 msgstr ""
 
 #: src/pages/user/[userId]/index.tsx:162
 msgid "Owned Military Units"
 msgstr "Unités militaires possédées"
 
+#: src/components/_economy/company/CompanyTooltip.tsx:70
 #: src/components/_military/mu/MuMemberList.tsx:321
+#: src/components/_military/mu/MuTooltip.tsx:84
 msgid "Owner"
 msgstr "Propriétaire"
 
@@ -6719,10 +6768,11 @@ msgstr "Auteur à succès"
 
 #: src/components/_layout/map.frontConfig.tsx:52
 #: src/components/_other/upgrade/upgrade.frontConfig.tsx:87
+#: src/components/_political/region/RegionTooltip.tsx:89
 msgid "Population"
 msgstr ""
 
-#: src/components/_political/region/RegionTags.tsx:117
+#: src/components/_political/region/RegionTags.tsx:127
 msgid "Population (currently here)"
 msgstr ""
 
@@ -7011,6 +7061,10 @@ msgstr "Équipe rapidement les meilleurs objets de n'importe quel niveau"
 msgid "Quickly dismantle items"
 msgstr "Démanteler rapidement les équipements"
 
+#: src/components/_user/user/UserTooltip.tsx:158
+msgid "Rank"
+msgstr ""
+
 #: src/components/_military/battle/BattleHeader.tsx:293
 msgid "Ranking"
 msgstr "Classement"
@@ -7043,6 +7097,10 @@ msgstr "Taux par 1K de dégâts"
 msgid "Raw materials:"
 msgstr "Matières premières :"
 
+#: src/components/_user/milestone/milestone.frontConfig.tsx:30
+msgid "Reach level <0>{count}</0>"
+msgstr ""
+
 #: src/components/_user/mission/mission.frontConfig.tsx:412
 msgid "Reach level 10"
 msgstr "Atteins le niveau 10"
@@ -7066,6 +7124,10 @@ msgstr "Atteins le niveau 5"
 #: src/components/_user/mission/mission.frontConfig.tsx:406
 msgid "Reach Level 5"
 msgstr "Atteindre le niveau 5"
+
+#: src/components/_user/milestone/milestone.frontConfig.tsx:40
+msgid "Reach military rank <0>{count}</0>"
+msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:443
 msgid "Reach military rank 10"
@@ -7188,7 +7250,7 @@ msgstr "Régénération dans..."
 msgid "Regens <0>{0}</0> when consumed"
 msgstr "Régénère <0>{0}</0> lors de la consommation"
 
-#: src/components/_political/map/MapMenu.tsx:194
+#: src/components/_political/map/MapMenu.tsx:177
 #: src/components/_political/party/PartyFormModal.tsx:109
 msgid "Region"
 msgstr "Région"
@@ -7387,7 +7449,7 @@ msgstr "Remplacer toutes les éthiques du parti par une nouvelle configuration"
 msgid "Replacing a member"
 msgstr "Remplacer un membre"
 
-#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:66
+#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:69
 msgid "Report"
 msgstr "Signaler"
 
@@ -7461,7 +7523,7 @@ msgstr "Redistribution dans"
 msgid "Residents"
 msgstr ""
 
-#: src/components/_political/region/RegionTags.tsx:127
+#: src/components/_political/region/RegionTags.tsx:137
 msgid "Residents (home here)"
 msgstr ""
 
@@ -7481,6 +7543,11 @@ msgstr "Contributeurs de la résistance"
 msgid "Resistance for {regionName} {score}"
 msgstr "Résistance pour {regionName} {score}"
 
+#: src/components/_political/region/RegionTooltip.tsx:98
+msgid "Resource"
+msgstr ""
+
+#: src/components/_political/country/CountryTooltip.tsx:160
 #: src/pages/country/[countryId]/index.tsx:247
 #: src/pages/region/[regionId]/index.tsx:57
 msgid "Resources"
@@ -7526,7 +7593,7 @@ msgstr "Révolution démarrée"
 msgid "Revolution started!"
 msgstr "Révolution lancée !"
 
-#: src/components/_user/badgeCollection/Badge.tsx:60
+#: src/components/_user/badgeCollection/Badge.tsx:64
 msgid "Reward"
 msgstr "Récompense"
 
@@ -7546,7 +7613,7 @@ msgstr "Restaurer les fonds (récupérer les paiements des UM/utilisateurs et re
 msgid "Rolled back by admin"
 msgstr "Annulé par l'administrateur"
 
-#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:240
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:268
 msgid "Rolled back by Admin"
 msgstr "Annulé par l'administrateur"
 
@@ -7557,7 +7624,7 @@ msgstr "Manche"
 #. placeholder {0}: auction.roundNumber
 #. placeholder {0}: contract.roundNumber
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:221
-#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:132
+#: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:160
 msgid "Round {0}"
 msgstr "Manche {0}"
 
@@ -8029,6 +8096,10 @@ msgstr "Spécialisation"
 msgid "Specialization item"
 msgstr "Objet de spécialisation"
 
+#: src/components/_political/country/CountryTooltip.tsx:177
+msgid "Specialty"
+msgstr ""
+
 #: src/components/_other/shop/skin.frontConfig.tsx:194
 msgid "Spellcaster Gloves"
 msgstr "Gants de lanceur de sorts"
@@ -8045,7 +8116,7 @@ msgstr "Dépenses"
 msgid "Stable, conquest-proof strength. Still used for unrest, government wages and revolution cost. Other costs use <0>Average development</0>."
 msgstr "Force stable et à l'épreuve des conquêtes. Toujours utilisé pour les troubles, les salaires du gouvernement et le coût de la révolution. Les autres coûts utilisent le <0>Développement moyen</0>."
 
-#: src/components/_user/user/SkillUpgrade.tsx:268
+#: src/components/_user/user/SkillUpgrade.tsx:221
 msgid "Stage a prestige point on this skill (applied on save, reset on skill reset)"
 msgstr ""
 
@@ -8257,6 +8328,7 @@ msgid "Supreme Commander"
 msgstr "Commandeur suprême"
 
 #: src/components/_political/country/CountryDiplomacyGrid.tsx:276
+#: src/components/_political/country/CountryTooltip.tsx:118
 msgid "Sworn enemy"
 msgstr "Ennemi principal"
 
@@ -8402,7 +8474,7 @@ msgid "The full bonus of <0/> applies up to <1/> share of global <2>Development<
 msgstr "Le bonus complet de <0/> s'applique jusqu'à <1/> de part de <2>Développement</2> mondial. Au-delà, le bonus diminue de <3/> par point de pourcentage de part au-delà du plateau, jusqu'à <4/>."
 
 #. placeholder {0}: Math.round(contract.moneyPool * 10) / 100
-#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:85
+#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:88
 #: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:64
 msgid "The MU will receive the acceptance fee back, partial payout for damage done, and a 10% penalty fee of <0>{0}</0>. Are you sure?"
 msgstr "L'UM recevra le montant de l'acompte, un paiement partiel pour les dommages causés, et une pénalité de 10 % de <0>{0}</0>. Êtes-vous sûr ?"
@@ -8471,6 +8543,10 @@ msgstr "Ceci est la valeur utilisée pour calculer la plupart des coûts : ordre
 msgid "This is your company hub. Here you can produce items and build your empire."
 msgstr "Voici ton centre d'entreprises. Ici tu peux produire des objets et construire ton empire."
 
+#: src/components/_military/tournament/TournamentTeamTooltip.tsx:88
+msgid "This is your team"
+msgstr ""
+
 #: src/components/_political/law/LawTypeSelect.tsx:200
 msgid "This law can be abusive and requires 5+ possible voters in the country."
 msgstr "Cette loi peut être abusive, elle impose donc un minimum de 5 électeurs dans les parlements des pays impliqués."
@@ -8507,6 +8583,10 @@ msgstr "Cela vous donnera un bonus pendant {cocainBuffHours}h puis causera un ma
 #: src/components/_user/user/UserDropdown.tsx:336
 msgid "This will require the user to verify their mobile phone number."
 msgstr "L'utilisateur devra vérifier son numéro de téléphone mobile."
+
+#: src/components/_user/milestone/MilestoneItem.tsx:140
+msgid "Tier {currentTier}"
+msgstr ""
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:132
 msgid "Time to fight for your country! Let's join the action."
@@ -8680,6 +8760,10 @@ msgstr "Nombre total de caisses ouvertes"
 msgid "Total daily cost"
 msgstr ""
 
+#: src/components/_military/tournament/TournamentTeamTooltip.tsx:92
+msgid "Total damage"
+msgstr ""
+
 #: src/components/_user/user/UserRankingsPanel.tsx:32
 msgid "Total damages"
 msgstr "Dégâts totaux"
@@ -8700,7 +8784,7 @@ msgstr ""
 msgid "Total of <0>{totalMaintenanceCostPerDay}</0>/day"
 msgstr "Total de <0>{totalMaintenanceCostPerDay}</0>/jour"
 
-#: src/components/_user/badgeCollection/Badge.tsx:64
+#: src/components/_user/badgeCollection/Badge.tsx:70
 msgid "Total reward"
 msgstr "Récompense totale"
 
@@ -8990,6 +9074,10 @@ msgstr "Améliore tes compétences <0>{count}</0> fois"
 msgid "Upgrade your skills!"
 msgstr "Améliorez tes compétences !"
 
+#: src/components/_economy/company/CompanyTooltip.tsx:98
+#: src/components/_military/mu/MuTooltip.tsx:96
+#: src/components/_political/map/MapMenu.tsx:270
+#: src/components/_political/region/RegionTooltip.tsx:114
 #: src/pages/company/[companyId]/index.tsx:49
 #: src/pages/region/[regionId]/index.tsx:49
 msgid "Upgrades"
@@ -9224,7 +9312,7 @@ msgstr "Vice-amiral"
 msgid "Vice President"
 msgstr "Vice-président"
 
-#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:60
+#: src/components/_military/mercenaryContract/MercenaryContractItem.tsx:63
 msgid "View details"
 msgstr "Voir les détails"
 
@@ -9467,6 +9555,7 @@ msgstr "Travailleur parti"
 msgid "Worker updated!"
 msgstr "Travailleur mis à jour !"
 
+#: src/components/_economy/company/CompanyTooltip.tsx:85
 #: src/pages/company/[companyId]/index.tsx:94
 #: src/pages/company/[companyId]/workers.tsx:37
 msgid "Workers"
