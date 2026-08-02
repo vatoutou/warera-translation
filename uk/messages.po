@@ -65,7 +65,7 @@ msgid "- Development income is reduced by 50%:<0>{0}</0>."
 msgstr "- Дохід від розвитку зменшено на 50%:<0>{0}</0>."
 
 #: src/components/_economy/company/CompanyUpgradeList.tsx:121
-#: src/components/_political/region/UpgradeList.tsx:295
+#: src/components/_political/region/UpgradeList.tsx:245
 msgid "({freeSlotCount} free slots)"
 msgstr ""
 
@@ -215,7 +215,7 @@ msgstr ""
 msgid "{score}/{0} Rounds"
 msgstr "{score}/{0} раундів"
 
-#: src/components/_political/region/UpgradeList.tsx:258
+#: src/components/_political/region/UpgradeList.tsx:208
 msgid "{slotCount} slots"
 msgstr ""
 
@@ -1419,7 +1419,7 @@ msgstr "Рахунок"
 msgid "Accounts created solely to benefit a player, group, military unit or country are not permitted. Exploited accounts can take many forms. This includes, but is not limited to:"
 msgstr "Акаунти, створені виключно для отримання переваги гравцем, групою, військовим підрозділом або державою, заборонені. Експлуатація акаунтів може набувати різних форм. Це включає, але не обмежується:"
 
-#: src/pages/country/[countryId]/government.tsx:84
+#: src/pages/country/[countryId]/government.tsx:88
 msgid "Actions"
 msgstr "Дії"
 
@@ -1699,7 +1699,7 @@ msgstr "Електронний лист з кодом підтвердження
 msgid "Animated <0>GIF</0> as avatar"
 msgstr "Анімований <0>GIF</0> як аватар"
 
-#: src/pages/country/[countryId]/government.tsx:148
+#: src/pages/country/[countryId]/government.tsx:170
 msgid "Announcement"
 msgstr "Оголошення"
 
@@ -1772,11 +1772,11 @@ msgstr "Ви впевнені, що хочете звільнити цього �
 msgid "Are you sure you want to kick this member?"
 msgstr "Впевнені, що хочете вигнати цього бійця?"
 
-#: src/pages/country/[countryId]/government.tsx:112
+#: src/pages/country/[countryId]/government.tsx:116
 msgid "Are you sure you want to leave the congress?"
 msgstr "Ви впевнені, що хочете покинути парламент?"
 
-#: src/pages/country/[countryId]/government.tsx:96
+#: src/pages/country/[countryId]/government.tsx:100
 msgid "Are you sure you want to leave the government?"
 msgstr "Ви впевнені, що хочете покинути уряд?"
 
@@ -1796,7 +1796,7 @@ msgstr "Ви впевнені, що хочете видалити усі зам�
 msgid "Are you sure you want to remove all sell orders?"
 msgstr "Ви впевнені, що хочете видалити усі замовлення на продаж?"
 
-#: src/pages/country/[countryId]/government.tsx:165
+#: src/pages/country/[countryId]/government.tsx:187
 msgid "Are you sure you want to remove this announcement?"
 msgstr "Ви впевнені, що бажаєте прибрати це оголошення?"
 
@@ -2131,7 +2131,11 @@ msgstr "Низка бойової здобичі"
 msgid "Battle opened"
 msgstr "Битва розпочата"
 
-#: src/components/_military/battle/BattleSideOrdersModal.tsx:103
+#: src/pages/country/[countryId]/government.tsx:142
+msgid "Battle orders"
+msgstr ""
+
+#: src/components/_military/battle/BattleSideOrdersModal.tsx:105
 msgid "Battle Orders"
 msgstr "Бойові накази"
 
@@ -2321,7 +2325,7 @@ msgstr "Побудувати підрозділ"
 #: src/components/_economy/company/CompanyUpgradeList.tsx:118
 #: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:122
 #: src/components/_political/region/CreateUpgradeModal.tsx:216
-#: src/components/_political/region/UpgradeList.tsx:292
+#: src/components/_political/region/UpgradeList.tsx:242
 msgid "Build an upgrade"
 msgstr ""
 
@@ -2384,9 +2388,10 @@ msgstr "Кадет"
 msgid "Campaign Article Link (optional)"
 msgstr "Посилання на статтю з програмою (за бажанням)"
 
-#: src/components/_other/upgrade/UpgradeGrid.tsx:152
+#: src/components/_military/order/BattleOrderList.tsx:111
+#: src/components/_other/upgrade/UpgradeGrid.tsx:113
 #: src/components/_political/election/CandidateFormModal.tsx:83
-#: src/components/_political/region/UpgradeList.tsx:192
+#: src/components/_political/region/UpgradeList.tsx:142
 msgid "Cancel"
 msgstr "Скасувати"
 
@@ -2863,7 +2868,7 @@ msgstr "Парламентські вибори"
 msgid "Congress Member"
 msgstr "Парламентар"
 
-#: src/pages/country/[countryId]/government.tsx:75
+#: src/pages/country/[countryId]/government.tsx:77
 msgid "Congress members"
 msgstr "Парламентарі"
 
@@ -3067,7 +3072,7 @@ msgstr "Держава покинула альянс"
 msgid "Country Money Transfer"
 msgstr "Переказ коштів державою"
 
-#: src/components/_military/battle/BattleSideOrdersModal.tsx:62
+#: src/components/_military/battle/BattleSideOrdersModal.tsx:64
 msgid "Country Orders"
 msgstr "Державні накази"
 
@@ -3445,7 +3450,7 @@ msgid "Defensive pact signed"
 msgstr "Підписано договір про захист"
 
 #. placeholder {0}: ts.paper
-#: src/components/_military/battle/SetOrderFormModal.tsx:427
+#: src/components/_military/battle/SetOrderFormModal.tsx:440
 msgid "Defensive pact: orders supporting your pact partner cost {orderDiscountPercent}% less <0>{0}</0>"
 msgstr "Договір про захист: накази на підтримку партнера коштують на {orderDiscountPercent}% менше <0>{0}</0>"
 
@@ -3680,6 +3685,10 @@ msgstr "Пожертви"
 #: src/components/_other/upgrade/upgrade.frontConfig.tsx:314
 msgid "Dormitories"
 msgstr "Казарми"
+
+#: src/components/_military/order/BattleOrderList.tsx:127
+msgid "Drag the orders to change their priority number."
+msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:155
 msgid "Dragon"
@@ -5141,13 +5150,13 @@ msgstr "Покинути альянс"
 msgid "Leave company?"
 msgstr "Покинути фабрику?"
 
-#: src/pages/country/[countryId]/government.tsx:111
-#: src/pages/country/[countryId]/government.tsx:116
+#: src/pages/country/[countryId]/government.tsx:115
+#: src/pages/country/[countryId]/government.tsx:120
 msgid "Leave congress"
 msgstr "Вийти з парламенту"
 
-#: src/pages/country/[countryId]/government.tsx:95
-#: src/pages/country/[countryId]/government.tsx:100
+#: src/pages/country/[countryId]/government.tsx:99
+#: src/pages/country/[countryId]/government.tsx:104
 msgid "Leave government"
 msgstr "Вийти з уряду"
 
@@ -5306,7 +5315,7 @@ msgstr "Розташування"
 
 #: src/components/_economy/company/CompanyUpgradeList.tsx:163
 #: src/components/_economy/company/CompanyUpgradesGrid.tsx:166
-#: src/components/_political/region/UpgradeList.tsx:316
+#: src/components/_political/region/UpgradeList.tsx:266
 #: src/components/_political/region/UpgradesGrid.tsx:209
 msgid "Locked slot"
 msgstr ""
@@ -5823,7 +5832,7 @@ msgstr "Підвищення рівня ВП!"
 msgid "MU Monthly Levels"
 msgstr ""
 
-#: src/components/_military/battle/BattleSideOrdersModal.tsx:72
+#: src/components/_military/battle/BattleSideOrdersModal.tsx:74
 msgid "MU Orders"
 msgstr "Накази ВП"
 
@@ -6069,7 +6078,7 @@ msgstr ""
 msgid "Next reward"
 msgstr "Наступна нагорода"
 
-#: src/components/_political/region/UpgradeList.tsx:321
+#: src/components/_political/region/UpgradeList.tsx:271
 msgid "Next slot unlocks at {unlockDevelopment} development"
 msgstr ""
 
@@ -6100,6 +6109,10 @@ msgstr "Діючих принципів немає - збалансовано"
 #: src/pages/company/[companyId]/index.tsx:85
 msgid "No active job offer"
 msgstr "Активних вакансій немає"
+
+#: src/components/_military/order/BattleOrderList.tsx:75
+msgid "No active order"
+msgstr ""
 
 #: src/components/_political/country/CountryDiplomacyGrid.tsx:267
 msgid "No active wars"
@@ -6137,7 +6150,7 @@ msgstr "Поки що ставок немає"
 msgid "No citizens"
 msgstr "Громадян немає"
 
-#: src/pages/country/[countryId]/government.tsx:200
+#: src/pages/country/[countryId]/government.tsx:222
 msgid "No congress members"
 msgstr "Парламентарів немає"
 
@@ -6221,7 +6234,7 @@ msgstr "Пропозицій не знайдено"
 msgid "No one nominated yet"
 msgstr "Поки ніхто не призначений"
 
-#: src/components/_military/battle/BattleSideOrdersModal.tsx:113
+#: src/components/_military/battle/BattleSideOrdersModal.tsx:115
 msgid "No orders"
 msgstr "Наказів немає"
 
@@ -6500,6 +6513,13 @@ msgstr "Накази та дії"
 msgid "Orders cancelled"
 msgstr "Замовлення скасовані"
 
+#: src/components/_military/order/BattleOrderListModal.tsx:38
+#: src/components/_military/order/BattleOrderListModal.tsx:52
+#: src/pages/orders.tsx:24
+#: src/pages/orders.tsx:35
+msgid "Orders of <0/>"
+msgstr ""
+
 #: src/components/_military/battle/ActiveBattlesList.tsx:118
 #: src/components/_social/categories.frontConfig.tsx:85
 #: src/components/_user/notification/notificationPrefs.categories.ts:162
@@ -6564,7 +6584,7 @@ msgid "Pacifist"
 msgstr "Пацифізм"
 
 #. placeholder {0}: ts.paper
-#: src/components/_military/battle/SetOrderFormModal.tsx:439
+#: src/components/_military/battle/SetOrderFormModal.tsx:452
 msgid "Pacifist: orders defending your core regions or revolts cost {orderDiscountPercent}% less <0>{0}</0>"
 msgstr ""
 
@@ -6803,7 +6823,7 @@ msgid "Population (currently here)"
 msgstr ""
 
 #: src/components/_political/government/AnnouncementForm.tsx:17
-#: src/pages/country/[countryId]/government.tsx:177
+#: src/pages/country/[countryId]/government.tsx:199
 msgid "Post announcement"
 msgstr "Опублікувати оголошення"
 
@@ -7306,7 +7326,7 @@ msgstr "Регіон звільнено"
 msgid "region residents"
 msgstr ""
 
-#: src/components/_political/region/UpgradeList.tsx:93
+#: src/components/_political/region/UpgradeList.tsx:96
 msgid "Region slots"
 msgstr ""
 
@@ -7404,8 +7424,8 @@ msgstr "Видалити усі"
 msgid "Remove an inactive congress member from its position"
 msgstr "Вилучити неактивного парламентаря з займаної посади"
 
-#: src/pages/country/[countryId]/government.tsx:164
-#: src/pages/country/[countryId]/government.tsx:169
+#: src/pages/country/[countryId]/government.tsx:186
+#: src/pages/country/[countryId]/government.tsx:191
 msgid "Remove announcement"
 msgstr ""
 
@@ -7720,9 +7740,10 @@ msgstr "Правляча партія"
 msgid "Running low on health?"
 msgstr "Мало здоров'я?"
 
-#: src/components/_other/upgrade/UpgradeGrid.tsx:161
+#: src/components/_military/order/BattleOrderList.tsx:120
+#: src/components/_other/upgrade/UpgradeGrid.tsx:122
 #: src/components/_political/party/PartyDescriptionModal.tsx:72
-#: src/components/_political/region/UpgradeList.tsx:201
+#: src/components/_political/region/UpgradeList.tsx:151
 #: src/components/_user/auth/WelcomeModal.tsx:182
 #: src/pages/user/[userId]/skills.tsx:252
 msgid "Save"
@@ -8091,7 +8112,7 @@ msgstr "Пропустити навчання"
 msgid "Sling Stones"
 msgstr ""
 
-#: src/components/_political/region/UpgradeList.tsx:90
+#: src/components/_political/region/UpgradeList.tsx:93
 msgid "Slots"
 msgstr ""
 
@@ -8378,7 +8399,7 @@ msgid "Sworn enemy treaties start at <0>{0} fidelity</0> and gain <1>{1}</1> eac
 msgstr ""
 
 #. placeholder {0}: ts.paper
-#: src/components/_military/battle/SetOrderFormModal.tsx:433
+#: src/components/_military/battle/SetOrderFormModal.tsx:446
 msgid "Sworn enemy: orders against your sworn enemy cost {orderDiscountPercent}% less <0>{0}</0>"
 msgstr ""
 
@@ -8973,12 +8994,12 @@ msgid "Unethical countries cannot hold any treaty — this law cannot be enacted
 msgstr ""
 
 #. placeholder {0}: ts.paper
-#: src/components/_military/battle/SetOrderFormModal.tsx:457
+#: src/components/_military/battle/SetOrderFormModal.tsx:470
 msgid "Unethical: capital occupied, national orders give only the regular bonus but still cost ×2 <0>{0}</0>"
 msgstr ""
 
 #. placeholder {0}: ts.paper
-#: src/components/_military/battle/SetOrderFormModal.tsx:452
+#: src/components/_military/battle/SetOrderFormModal.tsx:465
 msgid "Unethical: national orders deal ×2 damage but cost ×2 <0>{0}</0>"
 msgstr ""
 
@@ -9029,7 +9050,7 @@ msgstr "Розблокований набір"
 msgid "Unlocks at {dev} development."
 msgstr ""
 
-#: src/components/_political/region/UpgradeList.tsx:317
+#: src/components/_political/region/UpgradeList.tsx:267
 msgid "Unlocks at {unlockDevelopment} development."
 msgstr ""
 
@@ -9788,11 +9809,11 @@ msgstr "Ви спожили <0>{0}</0>, дія починається зараз
 msgid "You have prestiged! Enjoy your permanent XP bonus and prestige point."
 msgstr ""
 
-#: src/pages/country/[countryId]/government.tsx:46
+#: src/pages/country/[countryId]/government.tsx:48
 msgid "You have resigned from the congress"
 msgstr "Ви покинули парламент"
 
-#: src/pages/country/[countryId]/government.tsx:38
+#: src/pages/country/[countryId]/government.tsx:40
 msgid "You have resigned from the government"
 msgstr "Ви покинули уряд"
 
