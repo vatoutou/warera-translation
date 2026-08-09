@@ -66,6 +66,7 @@ msgstr "- A fejlettségi bevétel 50%-kal csökken:<0>{0}</0>."
 
 #: src/components/_economy/company/CompanyUpgradeList.tsx:121
 #: src/components/_political/region/UpgradeList.tsx:245
+#: src/components/_user/domain/DomainUpgradeList.tsx:191
 msgid "({freeSlotCount} free slots)"
 msgstr ""
 
@@ -186,7 +187,7 @@ msgstr "{completedCount}/{totalCount} teljesítve"
 msgid "{cooldownDays} days"
 msgstr ""
 
-#: src/components/_other/upgrade/Upgrade.tsx:330
+#: src/components/_other/upgrade/Upgrade.tsx:335
 msgid "{destroyRefundPercent}% of what was invested"
 msgstr ""
 
@@ -246,6 +247,11 @@ msgstr "/nap"
 
 #: src/components/_other/upgrade/UpgradeCardContent.tsx:180
 msgid "/h"
+msgstr ""
+
+#. placeholder {0}: levelConfig.stats.scrapYieldBonusPercent ?? 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:372
+msgid "+{0}% scrap yield when dismantling items. Works everywhere."
 msgstr ""
 
 #. placeholder {0}: staticGameConfig.user.prestige.xpMultiplierPercent + ((leveling.prestigeLevel ?? 1) - 1) * staticGameConfig.user.prestige .xpMultiplierPerLevelPercent
@@ -657,7 +663,7 @@ msgid "<0/>Priority ends in <1/>"
 msgstr "<0/>Prioritás lejár <1/>"
 
 #. placeholder {0}: levelConfig.stats.resistanceGrowthReduction ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:167
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:172
 msgid "<0>-{0}%</0> Resistance growth per hour"
 msgstr "<0>-{0}%</0> Ellenállás növekedés óránként"
 
@@ -691,8 +697,13 @@ msgstr "<0>{0}</0> <1/> ellensége ellen"
 
 #. placeholder {0}: levelConfig.stats.attackBonus || 0
 #. placeholder {1}: (levelConfig.stats.attackBonus || 0) / 2
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:148
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:153
 msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/><2>{1}</2> Attack bonus when allied country attack in this region."
+msgstr ""
+
+#. placeholder {0}: levelConfig.stats.skillBonuses?.attack ?? 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:358
+msgid "<0>{0}</0> attack.<1/>Only works while you are located in your home region."
 msgstr ""
 
 #. placeholder {0}: sideBonus.regionNotLinkedToCapitalMalusPercent
@@ -712,7 +723,7 @@ msgstr "<0>{0}</0> mert <1/> megszállja <2/> legalább egy régióját"
 
 #. placeholder {0}: levelConfig.stats.defenseBonus || 0
 #. placeholder {1}: (levelConfig.stats.defenseBonus || 0) / 2
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:134
 msgid "<0>{0}</0> Defense bonus when citizen defend this region.<1/><2>{1}</2> Defense bonus when allied country defend this region."
 msgstr ""
 
@@ -788,18 +799,28 @@ msgstr "<0>{0}</0> a stratégiai erőforrások termelési bónuszából."
 msgid "<0>{0}</0> ground are required to win a round, points are gained every tick"
 msgstr "<0>{0}</0> terület szükséges egy kör megnyeréséhez, a pontok minden tikben gyűlnek"
 
+#. placeholder {0}: levelConfig.stats.barRegenBonusPercent ?? 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:342
+msgid "<0>{0}</0> health, energy and stamina regeneration.<1/>Only works while you are located in your home region."
+msgstr ""
+
+#. placeholder {0}: levelConfig.stats.homeLootChanceBonusPercent ?? 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:384
+msgid "<0>{0}</0> loot chance in battles in your home region.<1/>Only works while you are located in your home region."
+msgstr ""
+
 #. placeholder {0}: levelConfig.stats.skillBonuses?.energy ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:212
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:217
 msgid "<0>{0}</0> max energy for every citizen of your country.<1/>Unique: only one per country."
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.skillBonuses?.health ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:197
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:202
 msgid "<0>{0}</0> max health for every citizen of your country.<1/>Unique: only one per country."
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.skillBonuses?.stamina ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:182
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:187
 msgid "<0>{0}</0> max stamina for every citizen of your country.<1/>Unique: only one per country."
 msgstr ""
 
@@ -809,7 +830,7 @@ msgid "<0>{0}</0> returned to <1/>."
 msgstr "<0>{0}</0> visszatérítve <1/> részére."
 
 #. placeholder {0}: levelConfig.stats.maxProduction
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:292
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:297
 msgid "<0>{0}</0> Storage capacity"
 msgstr "<0>{0}</0> Raktárkapacitás"
 
@@ -1411,7 +1432,7 @@ msgstr "Háború megtekintése"
 #: src/pages/country/[countryId]/account.tsx:43
 #: src/pages/country/[countryId]/index.tsx:274
 #: src/pages/user/[userId]/account.tsx:32
-#: src/pages/user/[userId]/index.tsx:143
+#: src/pages/user/[userId]/index.tsx:154
 msgid "Account"
 msgstr "Fiók"
 
@@ -1504,7 +1525,7 @@ msgstr "Fejlett sisak"
 msgid "Advanced Pants"
 msgstr "Fejlett nadrág"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:71
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:76
 msgid "Affects this region only. Maintenance scales with the region's development."
 msgstr ""
 
@@ -1513,7 +1534,7 @@ msgstr ""
 msgid "Agrarian"
 msgstr "Agrár"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:177
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:182
 msgid "Airport"
 msgstr ""
 
@@ -1836,7 +1857,7 @@ msgid "Article tipped"
 msgstr "Cikk borravalót kapott"
 
 #: src/components/_user/user/UserHeader.tsx:227
-#: src/pages/user/[userId]/index.tsx:201
+#: src/pages/user/[userId]/index.tsx:212
 msgid "Articles"
 msgstr "Cikkek"
 
@@ -1985,7 +2006,7 @@ msgid "Automated engine"
 msgstr "Automatizált motor"
 
 #: src/components/_economy/work/WorkChart.tsx:235
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:276
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:281
 msgid "Automated Engine"
 msgstr "Automatizált Motor"
 
@@ -1993,7 +2014,7 @@ msgstr "Automatizált Motor"
 msgid "Available in"
 msgstr ""
 
-#: src/components/_user/user/UserDropdown.tsx:138
+#: src/components/_user/user/UserDropdown.tsx:141
 msgid "Avatar removed"
 msgstr "Avatar eltávolítva"
 
@@ -2027,7 +2048,7 @@ msgid "Badge Won"
 msgstr "Jelvény Megszerzve"
 
 #: src/pages/country/[countryId]/index.tsx:281
-#: src/pages/user/[userId]/index.tsx:135
+#: src/pages/user/[userId]/index.tsx:146
 msgid "Badges"
 msgstr "Jelvények"
 
@@ -2208,7 +2229,7 @@ msgstr "Licit"
 msgid "Birthday Hat for 1st year of Beta"
 msgstr "Szülinapi kalap az 1. Béta évfordulóra"
 
-#: src/components/_user/user/UserDropdown.tsx:278
+#: src/components/_user/user/UserDropdown.tsx:295
 msgid "Block (hide content)"
 msgstr "Blokkolás (tartalom elrejtése)"
 
@@ -2264,7 +2285,7 @@ msgstr "Kenyér"
 msgid "Break defensive pact"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:329
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:396
 msgid "Break room"
 msgstr "Pihenőszoba"
 
@@ -2310,6 +2331,7 @@ msgstr "Hibakereső"
 
 #: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:75
 #: src/components/_political/region/CreateUpgradeModal.tsx:116
+#: src/components/_user/domain/CreateDomainUpgradeModal.tsx:75
 msgid "Build"
 msgstr ""
 
@@ -2326,6 +2348,8 @@ msgstr "Katonai egység létrehozása"
 #: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:122
 #: src/components/_political/region/CreateUpgradeModal.tsx:216
 #: src/components/_political/region/UpgradeList.tsx:242
+#: src/components/_user/domain/CreateDomainUpgradeModal.tsx:119
+#: src/components/_user/domain/DomainUpgradeList.tsx:188
 msgid "Build an upgrade"
 msgstr ""
 
@@ -2337,7 +2361,7 @@ msgstr ""
 msgid "Build the military unit"
 msgstr "A katonai egység létrehozása"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:124
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
 msgid "Bunker"
 msgstr "Bunker"
 
@@ -2709,7 +2733,7 @@ msgstr ""
 msgid "Colonel"
 msgstr "Ezredes"
 
-#: src/components/_user/user/UserDropdown.tsx:218
+#: src/components/_user/user/UserDropdown.tsx:235
 msgid "Color scheme"
 msgstr "Színséma"
 
@@ -3013,6 +3037,10 @@ msgstr "Alapterületek"
 msgid "Corporal"
 msgstr "Tizedes"
 
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:337
+msgid "Cottage"
+msgstr ""
+
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:229
 msgid "Council Member"
 msgstr "Tanácstag"
@@ -3201,7 +3229,7 @@ msgstr ""
 msgid "Current development"
 msgstr ""
 
-#: src/pages/user/[userId]/index.tsx:156
+#: src/pages/user/[userId]/index.tsx:167
 msgid "Current Military Unit"
 msgstr "Jelenlegi katonai egység"
 
@@ -3229,7 +3257,7 @@ msgstr "d. A diszkrimináció, rasszizmus, idegengylőlet, antiszemitizmus, homo
 msgid "Daily"
 msgstr "Napi"
 
-#: src/components/_other/upgrade/UpgradeListItem.tsx:147
+#: src/components/_other/upgrade/UpgradeListItem.tsx:150
 msgid "Daily cost"
 msgstr ""
 
@@ -3543,7 +3571,7 @@ msgstr "Írd le a pártod céljait és értékeit"
 msgid "Description"
 msgstr "Leírás"
 
-#: src/components/_user/user/UserDropdown.tsx:152
+#: src/components/_user/user/UserDropdown.tsx:155
 msgid "Description removed"
 msgstr "Leírás eltávolítva"
 
@@ -3555,11 +3583,11 @@ msgstr "Leírás frissítve!"
 msgid "Destruct"
 msgstr "Lebontás"
 
-#: src/components/_other/upgrade/Upgrade.tsx:319
+#: src/components/_other/upgrade/Upgrade.tsx:324
 msgid "Destruct refund"
 msgstr ""
 
-#: src/components/_other/upgrade/Upgrade.tsx:354
+#: src/components/_other/upgrade/Upgrade.tsx:359
 msgid "Destruct refund ({destroyRefundPercent}%):"
 msgstr ""
 
@@ -3646,6 +3674,14 @@ msgstr "Kitérés"
 msgid "Dodge <0>{count}</0> attacks"
 msgstr "Térj ki <0>{count}</0> támadás elől"
 
+#: src/pages/user/[userId]/index.tsx:140
+msgid "Domain"
+msgstr ""
+
+#: src/components/_user/domain/DomainUpgradeList.tsx:98
+msgid "Domain slots"
+msgstr ""
+
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:55
 msgid "Don't forget to drink water"
 msgstr "Ne felejtsd el inni a vizet"
@@ -3681,7 +3717,7 @@ msgstr "Adományok összesítése"
 msgid "Donations"
 msgstr "Adományok"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:314
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:319
 msgid "Dormitories"
 msgstr "Hálótermek"
 
@@ -3750,7 +3786,7 @@ msgstr "Gazdaság & Vállalatok"
 msgid "Edit country order"
 msgstr ""
 
-#: src/components/_user/user/UserDropdown.tsx:209
+#: src/components/_user/user/UserDropdown.tsx:226
 msgid "Edit description"
 msgstr "Leírás szerkesztése"
 
@@ -3774,7 +3810,7 @@ msgstr ""
 msgid "Editing another order"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:80
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:85
 msgid "Effect applies to the whole country. Maintenance scales with the country's average development."
 msgstr ""
 
@@ -3914,7 +3950,7 @@ msgstr "Vállalkozás"
 #: src/components/_layout/LayoutOptions.tsx:232
 #: src/components/_user/user/WealthPanel.tsx:56
 #: src/pages/market/index.tsx:81
-#: src/pages/user/[userId]/index.tsx:118
+#: src/pages/user/[userId]/index.tsx:120
 #: src/pages/user/[userId]/inventory.tsx:62
 msgid "Equipment"
 msgstr "Felszerelés"
@@ -4271,7 +4307,7 @@ msgstr "Betűtípus"
 msgid "Font size"
 msgstr "Betűméret"
 
-#: src/components/_user/user/UserDropdown.tsx:227
+#: src/components/_user/user/UserDropdown.tsx:244
 msgid "Font style"
 msgstr "Betűstílus"
 
@@ -4349,7 +4385,7 @@ msgid "Generate Missions"
 msgstr "Küldetések generálása"
 
 #. placeholder {0}: levelConfig.stats.dailyProd
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:281
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:286
 msgid "Generates <0>{0}</0>/day"
 msgstr "Termel <0>{0}</0>/nap"
 
@@ -4377,7 +4413,7 @@ msgstr "Ajándék elküldve! Skin csomag feloldva a címzett számára!"
 msgid "Gift sent! Thanks for supporting the game <3"
 msgstr "Ajándék elküldve! Köszönjük, hogy támogatod a játékot <3"
 
-#: src/components/_user/user/UserDropdown.tsx:261
+#: src/components/_user/user/UserDropdown.tsx:278
 msgid "Gift Supporter Plan"
 msgstr "Támogatói csomag ajándékozása"
 
@@ -4411,24 +4447,24 @@ msgid "Giveaway Won!"
 msgstr "Nyereményjátékot nyertél!"
 
 #. placeholder {0}: levelConfig.stats.attackBonus
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:305
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:310
 msgid "Gives <0>{0}</0>"
 msgstr "Ad <0>{0}</0>"
 
 #. placeholder {0}: Math.round(percent * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:230
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:235
 msgid "Gives daily income of <0/> ({0}% of this region <1>Development</1>)"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:257
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:262
 msgid "Gives daily income of <0/> (<1/> per citizen present here × {regionPopulation})"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:239
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:244
 msgid "Gives daily income of <0/> of this region <1>Development</1>"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:266
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:271
 msgid "Gives daily income of <0/> per citizen present in this region."
 msgstr ""
 
@@ -4638,7 +4674,7 @@ msgstr "Hörcsög tank"
 msgid "Hard Worker"
 msgstr "Szorgalmas dolgozó"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:300
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:305
 msgid "Headquarters"
 msgstr "Főhadiszállás"
 
@@ -4699,11 +4735,11 @@ msgstr "A saját országod melletti harcolás kormánytagként {0}% jutalom hat�
 msgid "Home"
 msgstr "Kezdőlap"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:192
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:197
 msgid "Hospital"
 msgstr ""
 
-#: src/components/_other/upgrade/UpgradeListItem.tsx:149
+#: src/components/_other/upgrade/UpgradeListItem.tsx:152
 msgid "Hourly cost"
 msgstr ""
 
@@ -4870,16 +4906,16 @@ msgstr "Ezen szabályzat szándékos vagy ismételt megsértése végleges kitil
 #: src/pages/market/index.tsx:56
 #: src/pages/user/[userId]/account.tsx:20
 #: src/pages/user/[userId]/companies.tsx:46
-#: src/pages/user/[userId]/index.tsx:194
+#: src/pages/user/[userId]/index.tsx:205
 #: src/pages/user/[userId]/inventory.tsx:31
 msgid "Inventory"
 msgstr "Készlet"
 
-#: src/components/_other/upgrade/Upgrade.tsx:305
+#: src/components/_other/upgrade/Upgrade.tsx:310
 msgid "Invested"
 msgstr ""
 
-#: src/components/_other/upgrade/Upgrade.tsx:345
+#: src/components/_other/upgrade/Upgrade.tsx:350
 msgid "Invested:"
 msgstr ""
 
@@ -5219,8 +5255,13 @@ msgstr ""
 
 #: src/components/_military/mu/MuLevel.tsx:64
 #: src/components/_military/mu/MuLevelsInfoModal.tsx:89
+#: src/components/_user/domain/DomainUpgradeList.tsx:155
 msgid "Level {level}"
 msgstr "{level}. szint"
+
+#: src/components/_user/domain/DomainUpgradesGrid.tsx:150
+msgid "Level {unlockLevel}"
+msgstr ""
 
 #: src/components/_political/election/Election.tsx:132
 #: src/components/_political/election/Election.tsx:224
@@ -5323,7 +5364,7 @@ msgstr "Betöltés: {status}..."
 msgid "Loading..."
 msgstr "Betöltés..."
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:69
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:74
 msgid "Local"
 msgstr ""
 
@@ -5335,6 +5376,8 @@ msgstr "Helyszín"
 #: src/components/_economy/company/CompanyUpgradesGrid.tsx:166
 #: src/components/_political/region/UpgradeList.tsx:266
 #: src/components/_political/region/UpgradesGrid.tsx:209
+#: src/components/_user/domain/DomainUpgradeList.tsx:211
+#: src/components/_user/domain/DomainUpgradesGrid.tsx:131
 msgid "Locked slot"
 msgstr ""
 
@@ -5396,7 +5439,7 @@ msgstr ""
 msgid "Lvl {0}"
 msgstr ""
 
-#: src/components/_other/upgrade/UpgradeListItem.tsx:120
+#: src/components/_other/upgrade/UpgradeListItem.tsx:123
 msgid "Lvl {level}"
 msgstr ""
 
@@ -5408,7 +5451,7 @@ msgstr "Mágus köpeny"
 msgid "Maintenance cost"
 msgstr "Fenntartási költség"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:89
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:94
 msgid "Maintenance scales with the number of citizens present in the region."
 msgstr ""
 
@@ -5459,7 +5502,7 @@ msgstr ""
 #: src/components/_layout/LayoutMenu.tsx:161
 #: src/components/_layout/LayoutMenuGrid.tsx:85
 #: src/components/_layout/MoreWindowButton.tsx:168
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:249
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:254
 #: src/pages/country/[countryId]/account.tsx:31
 #: src/pages/party/[partyId]/account.tsx:24
 #: src/pages/user/[userId]/account.tsx:26
@@ -5485,13 +5528,13 @@ msgid "Maxed!"
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.members
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:319
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:324
 msgid "Maximum of <0>{0}</0> members."
 msgstr "Legfeljebb <0>{0}</0> tag."
 
 #. placeholder {0}: levelConfig.stats.maxWorkers
 #. placeholder {1}: typeof levelConfig.stats.dailyHires !== 'undefined' && ( <> <br /> Daily hiring limit of{' '} <EntityValue IconComponent={WorkerIcon}> {levelConfig.stats.dailyHires} </EntityValue>{' '} per day. </> )
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:334
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:401
 msgid "Maximum of <0>{0}</0> workers.{1}"
 msgstr "Legfeljebb <0>{0}</0> munkás.{1}"
 
@@ -5643,7 +5686,7 @@ msgstr ""
 msgid "Military & Battles"
 msgstr "Katonaság & Csaták"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:143
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:148
 msgid "Military base"
 msgstr "Katonai bázis"
 
@@ -5925,7 +5968,7 @@ msgstr "Mitikus?! A fiókod áldott"
 msgid "Name"
 msgstr "Név"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:78
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:83
 msgid "National"
 msgstr ""
 
@@ -6119,6 +6162,10 @@ msgstr "Következő jutalom"
 
 #: src/components/_political/region/UpgradeList.tsx:271
 msgid "Next slot unlocks at {unlockDevelopment} development"
+msgstr ""
+
+#: src/components/_user/domain/DomainUpgradeList.tsx:216
+msgid "Next slot unlocks at level {unlockLevel}"
 msgstr ""
 
 #: src/components/_military/battle/BattleSystem.tsx:725
@@ -6593,7 +6640,7 @@ msgstr "Birtokodban"
 msgid "Owned by"
 msgstr ""
 
-#: src/pages/user/[userId]/index.tsx:162
+#: src/pages/user/[userId]/index.tsx:173
 msgid "Owned Military Units"
 msgstr "Tulajdonban lévő katonai egységek"
 
@@ -6611,7 +6658,7 @@ msgstr "<0/> tulajdonjoga átkerült <1/> személytől <2/> személyhez"
 msgid "Ownership transferred successfully"
 msgstr "Tulajdonjog sikeresen átruházva"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:162
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:167
 msgid "Pacification Center"
 msgstr "Pacifikációs Központ"
 
@@ -6658,7 +6705,7 @@ msgstr "Pártok"
 #: src/components/_layout/LayoutRightIcons.tsx:136
 #: src/components/_layout/MoreWindowButton.tsx:115
 #: src/components/_user/notification/notificationPrefs.categories.ts:159
-#: src/pages/user/[userId]/index.tsx:169
+#: src/pages/user/[userId]/index.tsx:180
 msgid "Party"
 msgstr "Párt"
 
@@ -6766,6 +6813,10 @@ msgstr "Az emberek dühösek, automatikus lázadás kezdődött itt: <0/>"
 msgid "Permanently dissolve the alliance."
 msgstr ""
 
+#: src/pages/user/[userId]/index.tsx:138
+msgid "Personal buildings anchored to the home region. Some only work while their owner is located there."
+msgstr ""
+
 #: src/utils/translations.tsx:86
 msgid "Petroleum"
 msgstr "Kőolaj"
@@ -6782,7 +6833,7 @@ msgstr "Telefonszám megerősítve!"
 msgid "Phone Verification"
 msgstr "Telefonos ellenőrzés"
 
-#: src/components/_user/user/UserDropdown.tsx:174
+#: src/components/_user/user/UserDropdown.tsx:177
 msgid "Phone verification requested"
 msgstr "Telefonos ellenőrzés kérelmezve"
 
@@ -6854,7 +6905,7 @@ msgid "Popular Article"
 msgstr "Népszerű cikk"
 
 #: src/components/_layout/map.frontConfig.tsx:52
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:87
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:92
 #: src/components/_political/region/RegionTooltip.tsx:89
 msgid "Population"
 msgstr ""
@@ -6868,7 +6919,7 @@ msgstr ""
 msgid "Post announcement"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:207
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:212
 msgid "Power Plant"
 msgstr ""
 
@@ -7163,7 +7214,7 @@ msgstr "Rangsori jutalom"
 #: src/components/_layout/MoreWindowButton.tsx:161
 #: src/pages/alliance/[allianceId]/index.tsx:48
 #: src/pages/country/[countryId]/index.tsx:171
-#: src/pages/user/[userId]/index.tsx:78
+#: src/pages/user/[userId]/index.tsx:80
 msgid "Rankings"
 msgstr "Ranglisták"
 
@@ -7310,7 +7361,7 @@ msgstr "Ajánlási link a vágólapra másolva"
 
 #: src/components/_user/user/UserHeader.tsx:233
 #: src/components/_user/user/UserRankingsPanel.tsx:55
-#: src/pages/user/[userId]/index.tsx:212
+#: src/pages/user/[userId]/index.tsx:223
 #: src/pages/user/[userId]/referrals.tsx:67
 msgid "Referrals"
 msgstr "Ajánlások"
@@ -7328,7 +7379,7 @@ msgstr "Az ajánló beállítva"
 msgid "Referrer username"
 msgstr "Ajánló felhasználóneve"
 
-#: src/pages/user/[userId]/index.tsx:77
+#: src/pages/user/[userId]/index.tsx:79
 msgid "Refresh every hour"
 msgstr "Frissítés óránként"
 
@@ -7474,7 +7525,7 @@ msgstr "Inaktív kongresszusi tag eltávolítása posztjáról"
 msgid "Remove announcement"
 msgstr ""
 
-#: src/components/_user/user/UserDropdown.tsx:395
+#: src/components/_user/user/UserDropdown.tsx:425
 msgid "Remove Avatar"
 msgstr "Avatár eltávolítása"
 
@@ -7486,7 +7537,7 @@ msgstr "Fejpénz eltávolítása"
 msgid "Remove council member"
 msgstr "Tanácstag eltávolítása"
 
-#: src/components/_user/user/UserDropdown.tsx:417
+#: src/components/_user/user/UserDropdown.tsx:447
 msgid "Remove Description"
 msgstr "Leírás eltávolítása"
 
@@ -7548,7 +7599,7 @@ msgstr "Tag cseréje"
 msgid "Report"
 msgstr "Jelentés"
 
-#: src/components/_user/user/UserDropdown.tsx:268
+#: src/components/_user/user/UserDropdown.tsx:285
 msgid "Report user"
 msgstr "Felhasználó jelentése"
 
@@ -7569,7 +7620,7 @@ msgstr "A hírnév hetente 20%-kal csökken 0 felé (minimum 1 pont)."
 msgid "Reputation purchased!"
 msgstr "Hírnév vásárolva!"
 
-#: src/components/_user/user/UserDropdown.tsx:335
+#: src/components/_user/user/UserDropdown.tsx:352
 msgid "Request Phone Verification"
 msgstr "Telefonos hitelesítés kérése"
 
@@ -7601,7 +7652,7 @@ msgstr "Újraindítás Túlélő"
 msgid "Reset tutorials"
 msgstr "Oktatóanyagok visszaállítása"
 
-#: src/components/_user/user/UserDropdown.tsx:406
+#: src/components/_user/user/UserDropdown.tsx:436
 msgid "Reset Username"
 msgstr "Felhasználónév visszaállítása"
 
@@ -7810,6 +7861,10 @@ msgstr "Átverve"
 msgid "Scraps"
 msgstr "Roncsok"
 
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:367
+msgid "Scrapyard"
+msgstr ""
+
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:75
 msgid "Screenshot or it didn't happen"
 msgstr "Screenshot vagy nem történt meg"
@@ -7858,7 +7913,7 @@ msgstr "Összes kijelölése"
 msgid "Select an occupied region"
 msgstr "Válassz egy megszállt régiót"
 
-#: src/components/_user/user/UserDropdown.tsx:241
+#: src/components/_user/user/UserDropdown.tsx:258
 msgid "Select banner"
 msgstr "Banner kiválasztása"
 
@@ -7876,7 +7931,7 @@ msgstr "Térkép szín kiválasztása"
 msgid "Select motion type"
 msgstr "Indítvány típusának kiválasztása"
 
-#: src/components/_user/user/UserDropdown.tsx:248
+#: src/components/_user/user/UserDropdown.tsx:265
 msgid "Select skin"
 msgstr "Skin kiválasztása"
 
@@ -7926,7 +7981,7 @@ msgstr ""
 msgid "Send <0>{count}</0> messages"
 msgstr "Küldj <0>{count}</0> üzenetet"
 
-#: src/components/_user/user/UserDropdown.tsx:190
+#: src/components/_user/user/UserDropdown.tsx:207
 msgid "Send a message"
 msgstr "Üzenet küldése"
 
@@ -8099,7 +8154,7 @@ msgstr "Skill fejlesztés:"
 
 #: src/components/_user/user/MyAvatar.tsx:41
 #: src/components/_user/user/UserHeader.tsx:187
-#: src/pages/user/[userId]/index.tsx:150
+#: src/pages/user/[userId]/index.tsx:161
 msgid "Skills"
 msgstr "Képességek"
 
@@ -8137,7 +8192,7 @@ msgstr "Skin jutalom"
 
 #: src/components/_other/shop/ShopHeader.tsx:23
 #: src/pages/shop/index.tsx:188
-#: src/pages/user/[userId]/index.tsx:119
+#: src/pages/user/[userId]/index.tsx:121
 msgid "Skins"
 msgstr "Skinek"
 
@@ -8157,7 +8212,12 @@ msgstr "Bemutató kihagyása"
 msgid "Sling Stones"
 msgstr ""
 
+#: src/components/_user/domain/DomainUpgradeList.tsx:158
+msgid "slot {slot}"
+msgstr ""
+
 #: src/components/_political/region/UpgradeList.tsx:93
+#: src/components/_user/domain/DomainUpgradeList.tsx:95
 msgid "Slots"
 msgstr ""
 
@@ -8331,7 +8391,7 @@ msgid "Stone Maul"
 msgstr ""
 
 #: src/components/_economy/company/CompanyTags.tsx:107
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:287
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:292
 msgid "Storage"
 msgstr "Raktár"
 
@@ -8390,9 +8450,9 @@ msgid "Supporter"
 msgstr "Támogató"
 
 #: src/components/_economy/inventoryAccount/InventoryAccount.tsx:51
-#: src/components/_user/user/UserDropdown.tsx:212
-#: src/components/_user/user/UserDropdown.tsx:221
-#: src/components/_user/user/UserDropdown.tsx:230
+#: src/components/_user/user/UserDropdown.tsx:229
+#: src/components/_user/user/UserDropdown.tsx:238
+#: src/components/_user/user/UserDropdown.tsx:247
 msgid "Supporter feature"
 msgstr "Támogató funkció"
 
@@ -8482,7 +8542,7 @@ msgstr "Célrégió"
 msgid "Target user"
 msgstr "Céljátékos"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:222
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:227
 msgid "Tax Office"
 msgstr ""
 
@@ -8677,7 +8737,7 @@ msgstr "Ez a felhasználó nem tagja egyetlen családi csoportnak sem"
 msgid "This will give you a buff for {cocainBuffHours}h then cause a malus for {cocainDebuffHours}h"
 msgstr ""
 
-#: src/components/_user/user/UserDropdown.tsx:336
+#: src/components/_user/user/UserDropdown.tsx:353
 msgid "This will require the user to verify their mobile phone number."
 msgstr "Ez megköveteli, hogy a felhasználó ellenőrizze a mobiltelefon számát."
 
@@ -8943,13 +9003,17 @@ msgstr "Kereskedelmi tranzakció"
 msgid "Trainee"
 msgstr "Újonc"
 
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:353
+msgid "Training grounds"
+msgstr ""
+
 #: src/components/_user/user/UserHeader.tsx:213
 msgid "Transac."
 msgstr "Tranzak."
 
 #: src/components/_political/country/CountryHeader.tsx:83
 #: src/pages/market/index.tsx:93
-#: src/pages/user/[userId]/index.tsx:223
+#: src/pages/user/[userId]/index.tsx:234
 msgid "Transactions"
 msgstr "Tranzakciók"
 
@@ -9018,7 +9082,7 @@ msgstr ""
 msgid "UI"
 msgstr ""
 
-#: src/components/_user/user/UserDropdown.tsx:277
+#: src/components/_user/user/UserDropdown.tsx:294
 msgid "Unblock (show content)"
 msgstr "Feloldás (tartalom megjelenítése)"
 
@@ -9093,6 +9157,11 @@ msgstr ""
 
 #: src/components/_political/region/UpgradeList.tsx:267
 msgid "Unlocks at {unlockDevelopment} development."
+msgstr ""
+
+#: src/components/_user/domain/DomainUpgradeList.tsx:212
+#: src/components/_user/domain/DomainUpgradesGrid.tsx:132
+msgid "Unlocks at level {unlockLevel}."
 msgstr ""
 
 #: src/components/_user/user/UserHeader.tsx:447
@@ -9271,7 +9340,7 @@ msgstr "Felhasználó & Haladás"
 msgid "User already owns all skins"
 msgstr "A felhasználó már minden kinézettel rendelkezik"
 
-#: src/components/_user/user/UserDropdown.tsx:119
+#: src/components/_user/user/UserDropdown.tsx:122
 msgid "User blocked"
 msgstr "Felhasználó letiltva"
 
@@ -9283,7 +9352,7 @@ msgstr "Felhasználó részvétele a földi pontokban."
 msgid "User removed from family group"
 msgstr "Felhasználó eltávolítva a családi csoportból"
 
-#: src/components/_user/user/UserDropdown.tsx:123
+#: src/components/_user/user/UserDropdown.tsx:126
 msgid "User unblocked"
 msgstr "Felhasználó feloldva"
 
@@ -9295,7 +9364,7 @@ msgstr "Felhasználó feloldva"
 msgid "Username"
 msgstr "Felhasználónév"
 
-#: src/components/_user/user/UserDropdown.tsx:145
+#: src/components/_user/user/UserDropdown.tsx:148
 msgid "Username removed"
 msgstr "Felhasználónév eltávolítva"
 
@@ -9505,8 +9574,12 @@ msgstr "Zászlós"
 msgid "Wars"
 msgstr "Háborúk"
 
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:379
+msgid "Watchtower"
+msgstr ""
+
 #: src/components/_user/user/UserRankingsPanel.tsx:43
-#: src/pages/user/[userId]/index.tsx:129
+#: src/pages/user/[userId]/index.tsx:131
 msgid "Wealth"
 msgstr "Vagyon"
 

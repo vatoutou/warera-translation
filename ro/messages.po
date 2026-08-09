@@ -64,6 +64,7 @@ msgstr "- Venitul din dezvoltare este redus cu 50%:<0>{0}</0>."
 
 #: src/components/_economy/company/CompanyUpgradeList.tsx:121
 #: src/components/_political/region/UpgradeList.tsx:245
+#: src/components/_user/domain/DomainUpgradeList.tsx:191
 msgid "({freeSlotCount} free slots)"
 msgstr ""
 
@@ -184,7 +185,7 @@ msgstr "{completedCount}/{totalCount} completate"
 msgid "{cooldownDays} days"
 msgstr ""
 
-#: src/components/_other/upgrade/Upgrade.tsx:330
+#: src/components/_other/upgrade/Upgrade.tsx:335
 msgid "{destroyRefundPercent}% of what was invested"
 msgstr ""
 
@@ -244,6 +245,11 @@ msgstr "/zi"
 
 #: src/components/_other/upgrade/UpgradeCardContent.tsx:180
 msgid "/h"
+msgstr ""
+
+#. placeholder {0}: levelConfig.stats.scrapYieldBonusPercent ?? 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:372
+msgid "+{0}% scrap yield when dismantling items. Works everywhere."
 msgstr ""
 
 #. placeholder {0}: staticGameConfig.user.prestige.xpMultiplierPercent + ((leveling.prestigeLevel ?? 1) - 1) * staticGameConfig.user.prestige .xpMultiplierPerLevelPercent
@@ -655,7 +661,7 @@ msgid "<0/>Priority ends in <1/>"
 msgstr "Prioritatea pentru <0/> se termină în <1/>"
 
 #. placeholder {0}: levelConfig.stats.resistanceGrowthReduction ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:167
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:172
 msgid "<0>-{0}%</0> Resistance growth per hour"
 msgstr "<0>-{0}%</0> Rezistență pe oră"
 
@@ -689,8 +695,13 @@ msgstr "<0>{0}</0> împortiva inamicului <1/>"
 
 #. placeholder {0}: levelConfig.stats.attackBonus || 0
 #. placeholder {1}: (levelConfig.stats.attackBonus || 0) / 2
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:148
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:153
 msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/><2>{1}</2> Attack bonus when allied country attack in this region."
+msgstr ""
+
+#. placeholder {0}: levelConfig.stats.skillBonuses?.attack ?? 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:358
+msgid "<0>{0}</0> attack.<1/>Only works while you are located in your home region."
 msgstr ""
 
 #. placeholder {0}: sideBonus.regionNotLinkedToCapitalMalusPercent
@@ -710,7 +721,7 @@ msgstr "<0>{0}</0> deoarece <1/> ocupă cel puțin o regiune din <2/>"
 
 #. placeholder {0}: levelConfig.stats.defenseBonus || 0
 #. placeholder {1}: (levelConfig.stats.defenseBonus || 0) / 2
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:134
 msgid "<0>{0}</0> Defense bonus when citizen defend this region.<1/><2>{1}</2> Defense bonus when allied country defend this region."
 msgstr ""
 
@@ -786,18 +797,28 @@ msgstr "<0>{0}</0> bonus producție datorită resurselor strategice"
 msgid "<0>{0}</0> ground are required to win a round, points are gained every tick"
 msgstr "<0>{0}</0> Teren necesar pentru a câștiga runda, terenul fiind câștigat în fiecare tic"
 
+#. placeholder {0}: levelConfig.stats.barRegenBonusPercent ?? 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:342
+msgid "<0>{0}</0> health, energy and stamina regeneration.<1/>Only works while you are located in your home region."
+msgstr ""
+
+#. placeholder {0}: levelConfig.stats.homeLootChanceBonusPercent ?? 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:384
+msgid "<0>{0}</0> loot chance in battles in your home region.<1/>Only works while you are located in your home region."
+msgstr ""
+
 #. placeholder {0}: levelConfig.stats.skillBonuses?.energy ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:212
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:217
 msgid "<0>{0}</0> max energy for every citizen of your country.<1/>Unique: only one per country."
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.skillBonuses?.health ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:197
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:202
 msgid "<0>{0}</0> max health for every citizen of your country.<1/>Unique: only one per country."
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.skillBonuses?.stamina ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:182
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:187
 msgid "<0>{0}</0> max stamina for every citizen of your country.<1/>Unique: only one per country."
 msgstr ""
 
@@ -807,7 +828,7 @@ msgid "<0>{0}</0> returned to <1/>."
 msgstr "<0>{0}</0> returnat la <1/>."
 
 #. placeholder {0}: levelConfig.stats.maxProduction
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:292
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:297
 msgid "<0>{0}</0> Storage capacity"
 msgstr "<0>{0}</0> Capacitate magazie"
 
@@ -1409,7 +1430,7 @@ msgstr "Vezi război"
 #: src/pages/country/[countryId]/account.tsx:43
 #: src/pages/country/[countryId]/index.tsx:274
 #: src/pages/user/[userId]/account.tsx:32
-#: src/pages/user/[userId]/index.tsx:143
+#: src/pages/user/[userId]/index.tsx:154
 msgid "Account"
 msgstr "Cont"
 
@@ -1502,7 +1523,7 @@ msgstr "Cască avansată"
 msgid "Advanced Pants"
 msgstr "Pantaloni avansați"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:71
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:76
 msgid "Affects this region only. Maintenance scales with the region's development."
 msgstr ""
 
@@ -1511,7 +1532,7 @@ msgstr ""
 msgid "Agrarian"
 msgstr "Agrar"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:177
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:182
 msgid "Airport"
 msgstr ""
 
@@ -1834,7 +1855,7 @@ msgid "Article tipped"
 msgstr "Articol sponsorizat"
 
 #: src/components/_user/user/UserHeader.tsx:227
-#: src/pages/user/[userId]/index.tsx:201
+#: src/pages/user/[userId]/index.tsx:212
 msgid "Articles"
 msgstr "Articole"
 
@@ -1983,7 +2004,7 @@ msgid "Automated engine"
 msgstr "Motor automat"
 
 #: src/components/_economy/work/WorkChart.tsx:235
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:276
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:281
 msgid "Automated Engine"
 msgstr "Motor Automat"
 
@@ -1991,7 +2012,7 @@ msgstr "Motor Automat"
 msgid "Available in"
 msgstr ""
 
-#: src/components/_user/user/UserDropdown.tsx:138
+#: src/components/_user/user/UserDropdown.tsx:141
 msgid "Avatar removed"
 msgstr "Avatar șters"
 
@@ -2025,7 +2046,7 @@ msgid "Badge Won"
 msgstr "Insignă câștigată"
 
 #: src/pages/country/[countryId]/index.tsx:281
-#: src/pages/user/[userId]/index.tsx:135
+#: src/pages/user/[userId]/index.tsx:146
 msgid "Badges"
 msgstr "Insigne"
 
@@ -2206,7 +2227,7 @@ msgstr "Ofertă"
 msgid "Birthday Hat for 1st year of Beta"
 msgstr ""
 
-#: src/components/_user/user/UserDropdown.tsx:278
+#: src/components/_user/user/UserDropdown.tsx:295
 msgid "Block (hide content)"
 msgstr "Blochează (ascunde conținut)"
 
@@ -2262,7 +2283,7 @@ msgstr "Pâine"
 msgid "Break defensive pact"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:329
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:396
 msgid "Break room"
 msgstr "Cameră de pauză"
 
@@ -2308,6 +2329,7 @@ msgstr "Bug finder"
 
 #: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:75
 #: src/components/_political/region/CreateUpgradeModal.tsx:116
+#: src/components/_user/domain/CreateDomainUpgradeModal.tsx:75
 msgid "Build"
 msgstr ""
 
@@ -2324,6 +2346,8 @@ msgstr "Construiește unitate militară"
 #: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:122
 #: src/components/_political/region/CreateUpgradeModal.tsx:216
 #: src/components/_political/region/UpgradeList.tsx:242
+#: src/components/_user/domain/CreateDomainUpgradeModal.tsx:119
+#: src/components/_user/domain/DomainUpgradeList.tsx:188
 msgid "Build an upgrade"
 msgstr ""
 
@@ -2335,7 +2359,7 @@ msgstr ""
 msgid "Build the military unit"
 msgstr "Construiește unitatea militară"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:124
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
 msgid "Bunker"
 msgstr "Buncăr"
 
@@ -2707,7 +2731,7 @@ msgstr ""
 msgid "Colonel"
 msgstr "Colonel"
 
-#: src/components/_user/user/UserDropdown.tsx:218
+#: src/components/_user/user/UserDropdown.tsx:235
 msgid "Color scheme"
 msgstr "Culoare"
 
@@ -3011,6 +3035,10 @@ msgstr "Regiuni de bază"
 msgid "Corporal"
 msgstr "Caporal"
 
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:337
+msgid "Cottage"
+msgstr ""
+
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:229
 msgid "Council Member"
 msgstr "Membru Consiliu"
@@ -3199,7 +3227,7 @@ msgstr ""
 msgid "Current development"
 msgstr ""
 
-#: src/pages/user/[userId]/index.tsx:156
+#: src/pages/user/[userId]/index.tsx:167
 msgid "Current Military Unit"
 msgstr "Unitate Militară Actuală"
 
@@ -3227,7 +3255,7 @@ msgstr ""
 msgid "Daily"
 msgstr "Zilnice"
 
-#: src/components/_other/upgrade/UpgradeListItem.tsx:147
+#: src/components/_other/upgrade/UpgradeListItem.tsx:150
 msgid "Daily cost"
 msgstr ""
 
@@ -3541,7 +3569,7 @@ msgstr "Descrieți obiectivele și valorile partidului dumneavoastră"
 msgid "Description"
 msgstr "Descriere"
 
-#: src/components/_user/user/UserDropdown.tsx:152
+#: src/components/_user/user/UserDropdown.tsx:155
 msgid "Description removed"
 msgstr "Descriere ștersă"
 
@@ -3553,11 +3581,11 @@ msgstr "Descriere actualizată!"
 msgid "Destruct"
 msgstr "Demolează"
 
-#: src/components/_other/upgrade/Upgrade.tsx:319
+#: src/components/_other/upgrade/Upgrade.tsx:324
 msgid "Destruct refund"
 msgstr ""
 
-#: src/components/_other/upgrade/Upgrade.tsx:354
+#: src/components/_other/upgrade/Upgrade.tsx:359
 msgid "Destruct refund ({destroyRefundPercent}%):"
 msgstr ""
 
@@ -3644,6 +3672,14 @@ msgstr "Eschivă"
 msgid "Dodge <0>{count}</0> attacks"
 msgstr "Eschivează <0>{count}</0> atacuri"
 
+#: src/pages/user/[userId]/index.tsx:140
+msgid "Domain"
+msgstr ""
+
+#: src/components/_user/domain/DomainUpgradeList.tsx:98
+msgid "Domain slots"
+msgstr ""
+
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:55
 msgid "Don't forget to drink water"
 msgstr "Nu uita să bei apă"
@@ -3679,7 +3715,7 @@ msgstr "Sumar Donații"
 msgid "Donations"
 msgstr "Donații"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:314
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:319
 msgid "Dormitories"
 msgstr "Dormitoare"
 
@@ -3748,7 +3784,7 @@ msgstr "Economie & Companii"
 msgid "Edit country order"
 msgstr ""
 
-#: src/components/_user/user/UserDropdown.tsx:209
+#: src/components/_user/user/UserDropdown.tsx:226
 msgid "Edit description"
 msgstr "Editează descriere"
 
@@ -3772,7 +3808,7 @@ msgstr ""
 msgid "Editing another order"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:80
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:85
 msgid "Effect applies to the whole country. Maintenance scales with the country's average development."
 msgstr ""
 
@@ -3912,7 +3948,7 @@ msgstr "Antreprenoriat"
 #: src/components/_layout/LayoutOptions.tsx:232
 #: src/components/_user/user/WealthPanel.tsx:56
 #: src/pages/market/index.tsx:81
-#: src/pages/user/[userId]/index.tsx:118
+#: src/pages/user/[userId]/index.tsx:120
 #: src/pages/user/[userId]/inventory.tsx:62
 msgid "Equipment"
 msgstr "Echipament"
@@ -4269,7 +4305,7 @@ msgstr "Font"
 msgid "Font size"
 msgstr "Mărimea fontului"
 
-#: src/components/_user/user/UserDropdown.tsx:227
+#: src/components/_user/user/UserDropdown.tsx:244
 msgid "Font style"
 msgstr "Stil text (font)"
 
@@ -4347,7 +4383,7 @@ msgid "Generate Missions"
 msgstr "Generează Misiuni"
 
 #. placeholder {0}: levelConfig.stats.dailyProd
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:281
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:286
 msgid "Generates <0>{0}</0>/day"
 msgstr "Generează <0>{0}</0>/zi"
 
@@ -4375,7 +4411,7 @@ msgstr "Cadou trimis! Pachetul de skinuri a fost deblocat pentru destinatar."
 msgid "Gift sent! Thanks for supporting the game <3"
 msgstr "Cadou trimis! Mulțumim că susții jocul <3"
 
-#: src/components/_user/user/UserDropdown.tsx:261
+#: src/components/_user/user/UserDropdown.tsx:278
 msgid "Gift Supporter Plan"
 msgstr "Oferă Plan Susținător"
 
@@ -4409,24 +4445,24 @@ msgid "Giveaway Won!"
 msgstr "Ai câștigat tombola!"
 
 #. placeholder {0}: levelConfig.stats.attackBonus
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:305
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:310
 msgid "Gives <0>{0}</0>"
 msgstr "Oferă <0>{0}</0>"
 
 #. placeholder {0}: Math.round(percent * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:230
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:235
 msgid "Gives daily income of <0/> ({0}% of this region <1>Development</1>)"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:257
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:262
 msgid "Gives daily income of <0/> (<1/> per citizen present here × {regionPopulation})"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:239
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:244
 msgid "Gives daily income of <0/> of this region <1>Development</1>"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:266
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:271
 msgid "Gives daily income of <0/> per citizen present in this region."
 msgstr ""
 
@@ -4636,7 +4672,7 @@ msgstr ""
 msgid "Hard Worker"
 msgstr "Muncitor harnic"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:300
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:305
 msgid "Headquarters"
 msgstr "Sediu central"
 
@@ -4697,11 +4733,11 @@ msgstr "Loviturile pentru țara ta, cât timp ești membru al guvernului, sunt r
 msgid "Home"
 msgstr "Acasă"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:192
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:197
 msgid "Hospital"
 msgstr ""
 
-#: src/components/_other/upgrade/UpgradeListItem.tsx:149
+#: src/components/_other/upgrade/UpgradeListItem.tsx:152
 msgid "Hourly cost"
 msgstr ""
 
@@ -4868,16 +4904,16 @@ msgstr ""
 #: src/pages/market/index.tsx:56
 #: src/pages/user/[userId]/account.tsx:20
 #: src/pages/user/[userId]/companies.tsx:46
-#: src/pages/user/[userId]/index.tsx:194
+#: src/pages/user/[userId]/index.tsx:205
 #: src/pages/user/[userId]/inventory.tsx:31
 msgid "Inventory"
 msgstr "Inventar"
 
-#: src/components/_other/upgrade/Upgrade.tsx:305
+#: src/components/_other/upgrade/Upgrade.tsx:310
 msgid "Invested"
 msgstr ""
 
-#: src/components/_other/upgrade/Upgrade.tsx:345
+#: src/components/_other/upgrade/Upgrade.tsx:350
 msgid "Invested:"
 msgstr ""
 
@@ -5217,8 +5253,13 @@ msgstr ""
 
 #: src/components/_military/mu/MuLevel.tsx:64
 #: src/components/_military/mu/MuLevelsInfoModal.tsx:89
+#: src/components/_user/domain/DomainUpgradeList.tsx:155
 msgid "Level {level}"
 msgstr "Nivel {level}"
+
+#: src/components/_user/domain/DomainUpgradesGrid.tsx:150
+msgid "Level {unlockLevel}"
+msgstr ""
 
 #: src/components/_political/election/Election.tsx:132
 #: src/components/_political/election/Election.tsx:224
@@ -5321,7 +5362,7 @@ msgstr "Se încarcă {status}..."
 msgid "Loading..."
 msgstr "Se încarcă..."
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:69
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:74
 msgid "Local"
 msgstr ""
 
@@ -5333,6 +5374,8 @@ msgstr "Locație"
 #: src/components/_economy/company/CompanyUpgradesGrid.tsx:166
 #: src/components/_political/region/UpgradeList.tsx:266
 #: src/components/_political/region/UpgradesGrid.tsx:209
+#: src/components/_user/domain/DomainUpgradeList.tsx:211
+#: src/components/_user/domain/DomainUpgradesGrid.tsx:131
 msgid "Locked slot"
 msgstr ""
 
@@ -5394,7 +5437,7 @@ msgstr ""
 msgid "Lvl {0}"
 msgstr ""
 
-#: src/components/_other/upgrade/UpgradeListItem.tsx:120
+#: src/components/_other/upgrade/UpgradeListItem.tsx:123
 msgid "Lvl {level}"
 msgstr ""
 
@@ -5406,7 +5449,7 @@ msgstr "Mage Robe"
 msgid "Maintenance cost"
 msgstr "Cost întreținere"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:89
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:94
 msgid "Maintenance scales with the number of citizens present in the region."
 msgstr ""
 
@@ -5457,7 +5500,7 @@ msgstr ""
 #: src/components/_layout/LayoutMenu.tsx:161
 #: src/components/_layout/LayoutMenuGrid.tsx:85
 #: src/components/_layout/MoreWindowButton.tsx:168
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:249
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:254
 #: src/pages/country/[countryId]/account.tsx:31
 #: src/pages/party/[partyId]/account.tsx:24
 #: src/pages/user/[userId]/account.tsx:26
@@ -5483,13 +5526,13 @@ msgid "Maxed!"
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.members
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:319
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:324
 msgid "Maximum of <0>{0}</0> members."
 msgstr "Maxim de <0>{0}</0> membri."
 
 #. placeholder {0}: levelConfig.stats.maxWorkers
 #. placeholder {1}: typeof levelConfig.stats.dailyHires !== 'undefined' && ( <> <br /> Daily hiring limit of{' '} <EntityValue IconComponent={WorkerIcon}> {levelConfig.stats.dailyHires} </EntityValue>{' '} per day. </> )
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:334
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:401
 msgid "Maximum of <0>{0}</0> workers.{1}"
 msgstr "Maxim <0>{0}</0> angajați.{1}"
 
@@ -5641,7 +5684,7 @@ msgstr ""
 msgid "Military & Battles"
 msgstr "Lupte & Războaie"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:143
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:148
 msgid "Military base"
 msgstr "Bază Militară"
 
@@ -5923,7 +5966,7 @@ msgstr "Mitic?! Contul tău e binecuvântat"
 msgid "Name"
 msgstr "Nume"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:78
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:83
 msgid "National"
 msgstr ""
 
@@ -6117,6 +6160,10 @@ msgstr "Următorul premiu"
 
 #: src/components/_political/region/UpgradeList.tsx:271
 msgid "Next slot unlocks at {unlockDevelopment} development"
+msgstr ""
+
+#: src/components/_user/domain/DomainUpgradeList.tsx:216
+msgid "Next slot unlocks at level {unlockLevel}"
 msgstr ""
 
 #: src/components/_military/battle/BattleSystem.tsx:725
@@ -6591,7 +6638,7 @@ msgstr "Deținut"
 msgid "Owned by"
 msgstr ""
 
-#: src/pages/user/[userId]/index.tsx:162
+#: src/pages/user/[userId]/index.tsx:173
 msgid "Owned Military Units"
 msgstr "Unități Militare Deținute"
 
@@ -6609,7 +6656,7 @@ msgstr "Proprietatea <0/> a fost transferată de la <1/> la <2/>"
 msgid "Ownership transferred successfully"
 msgstr "Titlul de proprietate a fost transferat cu succes"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:162
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:167
 msgid "Pacification Center"
 msgstr "Centru de Pacificare"
 
@@ -6656,7 +6703,7 @@ msgstr "Partide"
 #: src/components/_layout/LayoutRightIcons.tsx:136
 #: src/components/_layout/MoreWindowButton.tsx:115
 #: src/components/_user/notification/notificationPrefs.categories.ts:159
-#: src/pages/user/[userId]/index.tsx:169
+#: src/pages/user/[userId]/index.tsx:180
 msgid "Party"
 msgstr "Partid"
 
@@ -6764,6 +6811,10 @@ msgstr "Oamenii sunt nervoși, o revoltă automată a început în <0/>"
 msgid "Permanently dissolve the alliance."
 msgstr ""
 
+#: src/pages/user/[userId]/index.tsx:138
+msgid "Personal buildings anchored to the home region. Some only work while their owner is located there."
+msgstr ""
+
 #: src/utils/translations.tsx:86
 msgid "Petroleum"
 msgstr "Țiței"
@@ -6780,7 +6831,7 @@ msgstr "Număr de telefon verificat"
 msgid "Phone Verification"
 msgstr "Verificare număr de telefon"
 
-#: src/components/_user/user/UserDropdown.tsx:174
+#: src/components/_user/user/UserDropdown.tsx:177
 msgid "Phone verification requested"
 msgstr "Verificare număr de telefon cerută"
 
@@ -6852,7 +6903,7 @@ msgid "Popular Article"
 msgstr "Articol Popular"
 
 #: src/components/_layout/map.frontConfig.tsx:52
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:87
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:92
 #: src/components/_political/region/RegionTooltip.tsx:89
 msgid "Population"
 msgstr ""
@@ -6866,7 +6917,7 @@ msgstr ""
 msgid "Post announcement"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:207
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:212
 msgid "Power Plant"
 msgstr ""
 
@@ -7161,7 +7212,7 @@ msgstr "Recompense clasament"
 #: src/components/_layout/MoreWindowButton.tsx:161
 #: src/pages/alliance/[allianceId]/index.tsx:48
 #: src/pages/country/[countryId]/index.tsx:171
-#: src/pages/user/[userId]/index.tsx:78
+#: src/pages/user/[userId]/index.tsx:80
 msgid "Rankings"
 msgstr "Clasamente"
 
@@ -7308,7 +7359,7 @@ msgstr "Link recomandare copiat"
 
 #: src/components/_user/user/UserHeader.tsx:233
 #: src/components/_user/user/UserRankingsPanel.tsx:55
-#: src/pages/user/[userId]/index.tsx:212
+#: src/pages/user/[userId]/index.tsx:223
 #: src/pages/user/[userId]/referrals.tsx:67
 msgid "Referrals"
 msgstr "Recomandări"
@@ -7326,7 +7377,7 @@ msgstr "Recomandatorul a fost setat"
 msgid "Referrer username"
 msgstr "Numele celui care ți-a recomandat jocul"
 
-#: src/pages/user/[userId]/index.tsx:77
+#: src/pages/user/[userId]/index.tsx:79
 msgid "Refresh every hour"
 msgstr "Actualizate în fiecare oră"
 
@@ -7472,7 +7523,7 @@ msgstr "Demite un membru inactiv din parlament"
 msgid "Remove announcement"
 msgstr ""
 
-#: src/components/_user/user/UserDropdown.tsx:395
+#: src/components/_user/user/UserDropdown.tsx:425
 msgid "Remove Avatar"
 msgstr "Șterge Avatar"
 
@@ -7484,7 +7535,7 @@ msgstr "Elimină recompensă"
 msgid "Remove council member"
 msgstr "Elimină membru partid"
 
-#: src/components/_user/user/UserDropdown.tsx:417
+#: src/components/_user/user/UserDropdown.tsx:447
 msgid "Remove Description"
 msgstr "Șterge Descriere"
 
@@ -7546,7 +7597,7 @@ msgstr "Înlocuiește un membru"
 msgid "Report"
 msgstr "Raportează"
 
-#: src/components/_user/user/UserDropdown.tsx:268
+#: src/components/_user/user/UserDropdown.tsx:285
 msgid "Report user"
 msgstr "Raportează"
 
@@ -7567,7 +7618,7 @@ msgstr "Reputația scade cu 20% săptămânal (până la minimumul de 1)."
 msgid "Reputation purchased!"
 msgstr ""
 
-#: src/components/_user/user/UserDropdown.tsx:335
+#: src/components/_user/user/UserDropdown.tsx:352
 msgid "Request Phone Verification"
 msgstr "Cere verificare număr telefon"
 
@@ -7599,7 +7650,7 @@ msgstr "Reset Survivor"
 msgid "Reset tutorials"
 msgstr "Resetează tutorialele"
 
-#: src/components/_user/user/UserDropdown.tsx:406
+#: src/components/_user/user/UserDropdown.tsx:436
 msgid "Reset Username"
 msgstr "Resetează Nume"
 
@@ -7808,6 +7859,10 @@ msgstr "Țeapă, n-ai mai luat țeapă?"
 msgid "Scraps"
 msgstr "Resturi"
 
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:367
+msgid "Scrapyard"
+msgstr ""
+
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:75
 msgid "Screenshot or it didn't happen"
 msgstr "Screenshot sau nu s-a întâmplat"
@@ -7856,7 +7911,7 @@ msgstr "Selectează tot"
 msgid "Select an occupied region"
 msgstr "Selectează o regiune ocupată"
 
-#: src/components/_user/user/UserDropdown.tsx:241
+#: src/components/_user/user/UserDropdown.tsx:258
 msgid "Select banner"
 msgstr "Selectează copertă"
 
@@ -7874,7 +7929,7 @@ msgstr "Selectează tentă"
 msgid "Select motion type"
 msgstr "Selectează tip moțiune"
 
-#: src/components/_user/user/UserDropdown.tsx:248
+#: src/components/_user/user/UserDropdown.tsx:265
 msgid "Select skin"
 msgstr "Selectează skin"
 
@@ -7924,7 +7979,7 @@ msgstr ""
 msgid "Send <0>{count}</0> messages"
 msgstr "Trimite <0>{count}</0> mesaje"
 
-#: src/components/_user/user/UserDropdown.tsx:190
+#: src/components/_user/user/UserDropdown.tsx:207
 msgid "Send a message"
 msgstr "Trimite un mesaj"
 
@@ -8097,7 +8152,7 @@ msgstr "Competență:"
 
 #: src/components/_user/user/MyAvatar.tsx:41
 #: src/components/_user/user/UserHeader.tsx:187
-#: src/pages/user/[userId]/index.tsx:150
+#: src/pages/user/[userId]/index.tsx:161
 msgid "Skills"
 msgstr "Competențe"
 
@@ -8135,7 +8190,7 @@ msgstr "Recompensă Skin"
 
 #: src/components/_other/shop/ShopHeader.tsx:23
 #: src/pages/shop/index.tsx:188
-#: src/pages/user/[userId]/index.tsx:119
+#: src/pages/user/[userId]/index.tsx:121
 msgid "Skins"
 msgstr "Skinuri"
 
@@ -8155,7 +8210,12 @@ msgstr "Sari peste tutorial"
 msgid "Sling Stones"
 msgstr ""
 
+#: src/components/_user/domain/DomainUpgradeList.tsx:158
+msgid "slot {slot}"
+msgstr ""
+
 #: src/components/_political/region/UpgradeList.tsx:93
+#: src/components/_user/domain/DomainUpgradeList.tsx:95
 msgid "Slots"
 msgstr ""
 
@@ -8329,7 +8389,7 @@ msgid "Stone Maul"
 msgstr ""
 
 #: src/components/_economy/company/CompanyTags.tsx:107
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:287
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:292
 msgid "Storage"
 msgstr "Magazie"
 
@@ -8388,9 +8448,9 @@ msgid "Supporter"
 msgstr "Susținător"
 
 #: src/components/_economy/inventoryAccount/InventoryAccount.tsx:51
-#: src/components/_user/user/UserDropdown.tsx:212
-#: src/components/_user/user/UserDropdown.tsx:221
-#: src/components/_user/user/UserDropdown.tsx:230
+#: src/components/_user/user/UserDropdown.tsx:229
+#: src/components/_user/user/UserDropdown.tsx:238
+#: src/components/_user/user/UserDropdown.tsx:247
 msgid "Supporter feature"
 msgstr "Funcție Susținător"
 
@@ -8480,7 +8540,7 @@ msgstr "Regiune target"
 msgid "Target user"
 msgstr "Jucător target"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:222
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:227
 msgid "Tax Office"
 msgstr ""
 
@@ -8675,7 +8735,7 @@ msgstr "Acest utilizator nu face parte din niciun grup de familie"
 msgid "This will give you a buff for {cocainBuffHours}h then cause a malus for {cocainDebuffHours}h"
 msgstr ""
 
-#: src/components/_user/user/UserDropdown.tsx:336
+#: src/components/_user/user/UserDropdown.tsx:353
 msgid "This will require the user to verify their mobile phone number."
 msgstr "Cere verificarea numărului de telefon mobil al jucătorului."
 
@@ -8941,13 +9001,17 @@ msgstr "Tranzacție"
 msgid "Trainee"
 msgstr "Stagiar"
 
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:353
+msgid "Training grounds"
+msgstr ""
+
 #: src/components/_user/user/UserHeader.tsx:213
 msgid "Transac."
 msgstr "Transac."
 
 #: src/components/_political/country/CountryHeader.tsx:83
 #: src/pages/market/index.tsx:93
-#: src/pages/user/[userId]/index.tsx:223
+#: src/pages/user/[userId]/index.tsx:234
 msgid "Transactions"
 msgstr "Tranzacții"
 
@@ -9016,7 +9080,7 @@ msgstr ""
 msgid "UI"
 msgstr ""
 
-#: src/components/_user/user/UserDropdown.tsx:277
+#: src/components/_user/user/UserDropdown.tsx:294
 msgid "Unblock (show content)"
 msgstr "Deblochează (arată conținut)"
 
@@ -9091,6 +9155,11 @@ msgstr ""
 
 #: src/components/_political/region/UpgradeList.tsx:267
 msgid "Unlocks at {unlockDevelopment} development."
+msgstr ""
+
+#: src/components/_user/domain/DomainUpgradeList.tsx:212
+#: src/components/_user/domain/DomainUpgradesGrid.tsx:132
+msgid "Unlocks at level {unlockLevel}."
 msgstr ""
 
 #: src/components/_user/user/UserHeader.tsx:447
@@ -9269,7 +9338,7 @@ msgstr "Cont & Progresie"
 msgid "User already owns all skins"
 msgstr "Jucătorul deține deja toate skinurile"
 
-#: src/components/_user/user/UserDropdown.tsx:119
+#: src/components/_user/user/UserDropdown.tsx:122
 msgid "User blocked"
 msgstr "Utilizator blocat"
 
@@ -9281,7 +9350,7 @@ msgstr "Participarea la punctele Teren"
 msgid "User removed from family group"
 msgstr "Utilizator scos din grupul de familie"
 
-#: src/components/_user/user/UserDropdown.tsx:123
+#: src/components/_user/user/UserDropdown.tsx:126
 msgid "User unblocked"
 msgstr "Utilizator deblocat"
 
@@ -9293,7 +9362,7 @@ msgstr "Utilizator deblocat"
 msgid "Username"
 msgstr "Nume de utilizator"
 
-#: src/components/_user/user/UserDropdown.tsx:145
+#: src/components/_user/user/UserDropdown.tsx:148
 msgid "Username removed"
 msgstr "Nume șters"
 
@@ -9503,8 +9572,12 @@ msgstr "Plutonier"
 msgid "Wars"
 msgstr "Războaie"
 
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:379
+msgid "Watchtower"
+msgstr ""
+
 #: src/components/_user/user/UserRankingsPanel.tsx:43
-#: src/pages/user/[userId]/index.tsx:129
+#: src/pages/user/[userId]/index.tsx:131
 msgid "Wealth"
 msgstr "Avere"
 

@@ -66,6 +66,7 @@ msgstr "- Приход од развоја је смањен за 50%:<0>{0}</0>
 
 #: src/components/_economy/company/CompanyUpgradeList.tsx:121
 #: src/components/_political/region/UpgradeList.tsx:245
+#: src/components/_user/domain/DomainUpgradeList.tsx:191
 msgid "({freeSlotCount} free slots)"
 msgstr ""
 
@@ -186,7 +187,7 @@ msgstr "{completedCount}/{totalCount} завршено"
 msgid "{cooldownDays} days"
 msgstr ""
 
-#: src/components/_other/upgrade/Upgrade.tsx:330
+#: src/components/_other/upgrade/Upgrade.tsx:335
 msgid "{destroyRefundPercent}% of what was invested"
 msgstr ""
 
@@ -246,6 +247,11 @@ msgstr "/дан"
 
 #: src/components/_other/upgrade/UpgradeCardContent.tsx:180
 msgid "/h"
+msgstr ""
+
+#. placeholder {0}: levelConfig.stats.scrapYieldBonusPercent ?? 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:372
+msgid "+{0}% scrap yield when dismantling items. Works everywhere."
 msgstr ""
 
 #. placeholder {0}: staticGameConfig.user.prestige.xpMultiplierPercent + ((leveling.prestigeLevel ?? 1) - 1) * staticGameConfig.user.prestige .xpMultiplierPerLevelPercent
@@ -657,7 +663,7 @@ msgid "<0/>Priority ends in <1/>"
 msgstr "<0/>Приоритет истиче за <1/>"
 
 #. placeholder {0}: levelConfig.stats.resistanceGrowthReduction ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:167
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:172
 msgid "<0>-{0}%</0> Resistance growth per hour"
 msgstr "<0>-{0}%</0> Раст отпора по сату"
 
@@ -691,8 +697,13 @@ msgstr "<0>{0}</0> против непријатеља <1/>"
 
 #. placeholder {0}: levelConfig.stats.attackBonus || 0
 #. placeholder {1}: (levelConfig.stats.attackBonus || 0) / 2
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:148
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:153
 msgid "<0>{0}</0> Attack bonus when attacking from this region.<1/><2>{1}</2> Attack bonus when allied country attack in this region."
+msgstr ""
+
+#. placeholder {0}: levelConfig.stats.skillBonuses?.attack ?? 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:358
+msgid "<0>{0}</0> attack.<1/>Only works while you are located in your home region."
 msgstr ""
 
 #. placeholder {0}: sideBonus.regionNotLinkedToCapitalMalusPercent
@@ -712,7 +723,7 @@ msgstr "<0>{0}</0> јер <1/> окупира најмање један реги
 
 #. placeholder {0}: levelConfig.stats.defenseBonus || 0
 #. placeholder {1}: (levelConfig.stats.defenseBonus || 0) / 2
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:134
 msgid "<0>{0}</0> Defense bonus when citizen defend this region.<1/><2>{1}</2> Defense bonus when allied country defend this region."
 msgstr ""
 
@@ -788,18 +799,28 @@ msgstr "<0>{0}</0> од бонуса за производњу стратешк�
 msgid "<0>{0}</0> ground are required to win a round, points are gained every tick"
 msgstr "<0>{0}</0> поена је потребно за победу у рунди, поени се добијају при сваком тику"
 
+#. placeholder {0}: levelConfig.stats.barRegenBonusPercent ?? 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:342
+msgid "<0>{0}</0> health, energy and stamina regeneration.<1/>Only works while you are located in your home region."
+msgstr ""
+
+#. placeholder {0}: levelConfig.stats.homeLootChanceBonusPercent ?? 0
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:384
+msgid "<0>{0}</0> loot chance in battles in your home region.<1/>Only works while you are located in your home region."
+msgstr ""
+
 #. placeholder {0}: levelConfig.stats.skillBonuses?.energy ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:212
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:217
 msgid "<0>{0}</0> max energy for every citizen of your country.<1/>Unique: only one per country."
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.skillBonuses?.health ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:197
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:202
 msgid "<0>{0}</0> max health for every citizen of your country.<1/>Unique: only one per country."
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.skillBonuses?.stamina ?? 0
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:182
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:187
 msgid "<0>{0}</0> max stamina for every citizen of your country.<1/>Unique: only one per country."
 msgstr ""
 
@@ -809,7 +830,7 @@ msgid "<0>{0}</0> returned to <1/>."
 msgstr "<0>{0}</0> враћено за <1/>."
 
 #. placeholder {0}: levelConfig.stats.maxProduction
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:292
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:297
 msgid "<0>{0}</0> Storage capacity"
 msgstr "<0>{0}</0> Капацитет складишта"
 
@@ -1411,7 +1432,7 @@ msgstr "Погледај рат"
 #: src/pages/country/[countryId]/account.tsx:43
 #: src/pages/country/[countryId]/index.tsx:274
 #: src/pages/user/[userId]/account.tsx:32
-#: src/pages/user/[userId]/index.tsx:143
+#: src/pages/user/[userId]/index.tsx:154
 msgid "Account"
 msgstr "Налог"
 
@@ -1504,7 +1525,7 @@ msgstr "Напредна кацига"
 msgid "Advanced Pants"
 msgstr "Напредне панталоне"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:71
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:76
 msgid "Affects this region only. Maintenance scales with the region's development."
 msgstr ""
 
@@ -1513,7 +1534,7 @@ msgstr ""
 msgid "Agrarian"
 msgstr "Аграризам"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:177
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:182
 msgid "Airport"
 msgstr ""
 
@@ -1836,7 +1857,7 @@ msgid "Article tipped"
 msgstr "Напојница дата"
 
 #: src/components/_user/user/UserHeader.tsx:227
-#: src/pages/user/[userId]/index.tsx:201
+#: src/pages/user/[userId]/index.tsx:212
 msgid "Articles"
 msgstr "Чланци"
 
@@ -1985,7 +2006,7 @@ msgid "Automated engine"
 msgstr "Аутоматизовани механизам"
 
 #: src/components/_economy/work/WorkChart.tsx:235
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:276
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:281
 msgid "Automated Engine"
 msgstr "Аутоматизовани механизам"
 
@@ -1993,7 +2014,7 @@ msgstr "Аутоматизовани механизам"
 msgid "Available in"
 msgstr ""
 
-#: src/components/_user/user/UserDropdown.tsx:138
+#: src/components/_user/user/UserDropdown.tsx:141
 msgid "Avatar removed"
 msgstr "Аватар уклоњен"
 
@@ -2027,7 +2048,7 @@ msgid "Badge Won"
 msgstr "Значка освојена"
 
 #: src/pages/country/[countryId]/index.tsx:281
-#: src/pages/user/[userId]/index.tsx:135
+#: src/pages/user/[userId]/index.tsx:146
 msgid "Badges"
 msgstr "Значке"
 
@@ -2208,7 +2229,7 @@ msgstr "Понуда"
 msgid "Birthday Hat for 1st year of Beta"
 msgstr "Рођенданска капа за прву годину Бете"
 
-#: src/components/_user/user/UserDropdown.tsx:278
+#: src/components/_user/user/UserDropdown.tsx:295
 msgid "Block (hide content)"
 msgstr "Блокирај (сакриј садржај)"
 
@@ -2264,7 +2285,7 @@ msgstr "Хлеб"
 msgid "Break defensive pact"
 msgstr "Раскини одбрамбени пакт"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:329
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:396
 msgid "Break room"
 msgstr "Соба за одмор"
 
@@ -2310,6 +2331,7 @@ msgstr "Проналазач багова"
 
 #: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:75
 #: src/components/_political/region/CreateUpgradeModal.tsx:116
+#: src/components/_user/domain/CreateDomainUpgradeModal.tsx:75
 msgid "Build"
 msgstr ""
 
@@ -2326,6 +2348,8 @@ msgstr "Изгради војну јединицу"
 #: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:122
 #: src/components/_political/region/CreateUpgradeModal.tsx:216
 #: src/components/_political/region/UpgradeList.tsx:242
+#: src/components/_user/domain/CreateDomainUpgradeModal.tsx:119
+#: src/components/_user/domain/DomainUpgradeList.tsx:188
 msgid "Build an upgrade"
 msgstr ""
 
@@ -2337,7 +2361,7 @@ msgstr ""
 msgid "Build the military unit"
 msgstr "Изгради војну јединицу"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:124
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:129
 msgid "Bunker"
 msgstr "Бункер"
 
@@ -2709,7 +2733,7 @@ msgstr ""
 msgid "Colonel"
 msgstr "Пуковник"
 
-#: src/components/_user/user/UserDropdown.tsx:218
+#: src/components/_user/user/UserDropdown.tsx:235
 msgid "Color scheme"
 msgstr "Шема боја"
 
@@ -3013,6 +3037,10 @@ msgstr "Матични региони"
 msgid "Corporal"
 msgstr "Десетар"
 
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:337
+msgid "Cottage"
+msgstr ""
+
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:229
 msgid "Council Member"
 msgstr "Члан савета"
@@ -3201,7 +3229,7 @@ msgstr "Тренутни бонус штете у бици за савез → <
 msgid "Current development"
 msgstr "Тренутни развој"
 
-#: src/pages/user/[userId]/index.tsx:156
+#: src/pages/user/[userId]/index.tsx:167
 msgid "Current Military Unit"
 msgstr "Тренутна војна јединица"
 
@@ -3229,7 +3257,7 @@ msgstr "д. Сваки облик дискриминације, расизма, 
 msgid "Daily"
 msgstr "Дневне"
 
-#: src/components/_other/upgrade/UpgradeListItem.tsx:147
+#: src/components/_other/upgrade/UpgradeListItem.tsx:150
 msgid "Daily cost"
 msgstr ""
 
@@ -3543,7 +3571,7 @@ msgstr "Опиши циљеве и вредности своје странке"
 msgid "Description"
 msgstr "Опис"
 
-#: src/components/_user/user/UserDropdown.tsx:152
+#: src/components/_user/user/UserDropdown.tsx:155
 msgid "Description removed"
 msgstr "Опис уклоњен"
 
@@ -3555,11 +3583,11 @@ msgstr "Опис ажуриран!"
 msgid "Destruct"
 msgstr "Уништи"
 
-#: src/components/_other/upgrade/Upgrade.tsx:319
+#: src/components/_other/upgrade/Upgrade.tsx:324
 msgid "Destruct refund"
 msgstr ""
 
-#: src/components/_other/upgrade/Upgrade.tsx:354
+#: src/components/_other/upgrade/Upgrade.tsx:359
 msgid "Destruct refund ({destroyRefundPercent}%):"
 msgstr ""
 
@@ -3646,6 +3674,14 @@ msgstr "Избегавање"
 msgid "Dodge <0>{count}</0> attacks"
 msgstr "Избегни <0>{count}</0> напада"
 
+#: src/pages/user/[userId]/index.tsx:140
+msgid "Domain"
+msgstr ""
+
+#: src/components/_user/domain/DomainUpgradeList.tsx:98
+msgid "Domain slots"
+msgstr ""
+
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:55
 msgid "Don't forget to drink water"
 msgstr "Не заборави да пијеш воду"
@@ -3681,7 +3717,7 @@ msgstr "Резиме донација"
 msgid "Donations"
 msgstr "Донације"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:314
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:319
 msgid "Dormitories"
 msgstr "Спаваонице"
 
@@ -3750,7 +3786,7 @@ msgstr "Економија и компаније"
 msgid "Edit country order"
 msgstr ""
 
-#: src/components/_user/user/UserDropdown.tsx:209
+#: src/components/_user/user/UserDropdown.tsx:226
 msgid "Edit description"
 msgstr "Измени опис"
 
@@ -3774,7 +3810,7 @@ msgstr ""
 msgid "Editing another order"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:80
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:85
 msgid "Effect applies to the whole country. Maintenance scales with the country's average development."
 msgstr ""
 
@@ -3914,7 +3950,7 @@ msgstr "Предузетништво"
 #: src/components/_layout/LayoutOptions.tsx:232
 #: src/components/_user/user/WealthPanel.tsx:56
 #: src/pages/market/index.tsx:81
-#: src/pages/user/[userId]/index.tsx:118
+#: src/pages/user/[userId]/index.tsx:120
 #: src/pages/user/[userId]/inventory.tsx:62
 msgid "Equipment"
 msgstr "Опрема"
@@ -4271,7 +4307,7 @@ msgstr "Фонт"
 msgid "Font size"
 msgstr "Величина фонта"
 
-#: src/components/_user/user/UserDropdown.tsx:227
+#: src/components/_user/user/UserDropdown.tsx:244
 msgid "Font style"
 msgstr "Стил фонта"
 
@@ -4349,7 +4385,7 @@ msgid "Generate Missions"
 msgstr "Генериши мисије"
 
 #. placeholder {0}: levelConfig.stats.dailyProd
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:281
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:286
 msgid "Generates <0>{0}</0>/day"
 msgstr "Генерише <0>{0}</0>/дневно"
 
@@ -4377,7 +4413,7 @@ msgstr "Поклон послат! Скин пакет је откључан з�
 msgid "Gift sent! Thanks for supporting the game <3"
 msgstr "Поклон послат! Хвала на подршци игри <3"
 
-#: src/components/_user/user/UserDropdown.tsx:261
+#: src/components/_user/user/UserDropdown.tsx:278
 msgid "Gift Supporter Plan"
 msgstr "Поклони претплату подржаваоца"
 
@@ -4411,24 +4447,24 @@ msgid "Giveaway Won!"
 msgstr "Наградна игра освојена!"
 
 #. placeholder {0}: levelConfig.stats.attackBonus
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:305
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:310
 msgid "Gives <0>{0}</0>"
 msgstr "Даје <0>{0}</0>"
 
 #. placeholder {0}: Math.round(percent * 100)
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:230
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:235
 msgid "Gives daily income of <0/> ({0}% of this region <1>Development</1>)"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:257
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:262
 msgid "Gives daily income of <0/> (<1/> per citizen present here × {regionPopulation})"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:239
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:244
 msgid "Gives daily income of <0/> of this region <1>Development</1>"
 msgstr ""
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:266
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:271
 msgid "Gives daily income of <0/> per citizen present in this region."
 msgstr ""
 
@@ -4638,7 +4674,7 @@ msgstr "Хрчак тенк"
 msgid "Hard Worker"
 msgstr "Марљив радник"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:300
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:305
 msgid "Headquarters"
 msgstr "Главни штаб"
 
@@ -4699,11 +4735,11 @@ msgstr "Ударање за своју земљу док си у влади да
 msgid "Home"
 msgstr "Почетна"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:192
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:197
 msgid "Hospital"
 msgstr ""
 
-#: src/components/_other/upgrade/UpgradeListItem.tsx:149
+#: src/components/_other/upgrade/UpgradeListItem.tsx:152
 msgid "Hourly cost"
 msgstr ""
 
@@ -4870,16 +4906,16 @@ msgstr "Намерно или поновљено кршење ове полит�
 #: src/pages/market/index.tsx:56
 #: src/pages/user/[userId]/account.tsx:20
 #: src/pages/user/[userId]/companies.tsx:46
-#: src/pages/user/[userId]/index.tsx:194
+#: src/pages/user/[userId]/index.tsx:205
 #: src/pages/user/[userId]/inventory.tsx:31
 msgid "Inventory"
 msgstr "Инвентар"
 
-#: src/components/_other/upgrade/Upgrade.tsx:305
+#: src/components/_other/upgrade/Upgrade.tsx:310
 msgid "Invested"
 msgstr ""
 
-#: src/components/_other/upgrade/Upgrade.tsx:345
+#: src/components/_other/upgrade/Upgrade.tsx:350
 msgid "Invested:"
 msgstr ""
 
@@ -5219,8 +5255,13 @@ msgstr ""
 
 #: src/components/_military/mu/MuLevel.tsx:64
 #: src/components/_military/mu/MuLevelsInfoModal.tsx:89
+#: src/components/_user/domain/DomainUpgradeList.tsx:155
 msgid "Level {level}"
 msgstr "Ниво {level}"
+
+#: src/components/_user/domain/DomainUpgradesGrid.tsx:150
+msgid "Level {unlockLevel}"
+msgstr ""
 
 #: src/components/_political/election/Election.tsx:132
 #: src/components/_political/election/Election.tsx:224
@@ -5323,7 +5364,7 @@ msgstr "Учитавање {status}..."
 msgid "Loading..."
 msgstr "Учитавање..."
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:69
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:74
 msgid "Local"
 msgstr ""
 
@@ -5335,6 +5376,8 @@ msgstr "Локација"
 #: src/components/_economy/company/CompanyUpgradesGrid.tsx:166
 #: src/components/_political/region/UpgradeList.tsx:266
 #: src/components/_political/region/UpgradesGrid.tsx:209
+#: src/components/_user/domain/DomainUpgradeList.tsx:211
+#: src/components/_user/domain/DomainUpgradesGrid.tsx:131
 msgid "Locked slot"
 msgstr ""
 
@@ -5396,7 +5439,7 @@ msgstr ""
 msgid "Lvl {0}"
 msgstr ""
 
-#: src/components/_other/upgrade/UpgradeListItem.tsx:120
+#: src/components/_other/upgrade/UpgradeListItem.tsx:123
 msgid "Lvl {level}"
 msgstr ""
 
@@ -5408,7 +5451,7 @@ msgstr "Одора чаробњака"
 msgid "Maintenance cost"
 msgstr "Цена одржавања"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:89
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:94
 msgid "Maintenance scales with the number of citizens present in the region."
 msgstr ""
 
@@ -5459,7 +5502,7 @@ msgstr ""
 #: src/components/_layout/LayoutMenu.tsx:161
 #: src/components/_layout/LayoutMenuGrid.tsx:85
 #: src/components/_layout/MoreWindowButton.tsx:168
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:249
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:254
 #: src/pages/country/[countryId]/account.tsx:31
 #: src/pages/party/[partyId]/account.tsx:24
 #: src/pages/user/[userId]/account.tsx:26
@@ -5485,13 +5528,13 @@ msgid "Maxed!"
 msgstr ""
 
 #. placeholder {0}: levelConfig.stats.members
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:319
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:324
 msgid "Maximum of <0>{0}</0> members."
 msgstr "Максимум <0>{0}</0> чланова."
 
 #. placeholder {0}: levelConfig.stats.maxWorkers
 #. placeholder {1}: typeof levelConfig.stats.dailyHires !== 'undefined' && ( <> <br /> Daily hiring limit of{' '} <EntityValue IconComponent={WorkerIcon}> {levelConfig.stats.dailyHires} </EntityValue>{' '} per day. </> )
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:334
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:401
 msgid "Maximum of <0>{0}</0> workers.{1}"
 msgstr "Максимум <0>{0}</0> радника.{1}"
 
@@ -5643,7 +5686,7 @@ msgstr ""
 msgid "Military & Battles"
 msgstr "Војска и битке"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:143
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:148
 msgid "Military base"
 msgstr "Војна база"
 
@@ -5925,7 +5968,7 @@ msgstr "Митски?! Твој налог је благословен"
 msgid "Name"
 msgstr "Име"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:78
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:83
 msgid "National"
 msgstr ""
 
@@ -6119,6 +6162,10 @@ msgstr "Следећа награда"
 
 #: src/components/_political/region/UpgradeList.tsx:271
 msgid "Next slot unlocks at {unlockDevelopment} development"
+msgstr ""
+
+#: src/components/_user/domain/DomainUpgradeList.tsx:216
+msgid "Next slot unlocks at level {unlockLevel}"
 msgstr ""
 
 #: src/components/_military/battle/BattleSystem.tsx:725
@@ -6593,7 +6640,7 @@ msgstr "У власништву"
 msgid "Owned by"
 msgstr ""
 
-#: src/pages/user/[userId]/index.tsx:162
+#: src/pages/user/[userId]/index.tsx:173
 msgid "Owned Military Units"
 msgstr "Војне јединице у власништву"
 
@@ -6611,7 +6658,7 @@ msgstr "Власништво над <0/> је пренето са <1/> на <2/>
 msgid "Ownership transferred successfully"
 msgstr "Власништво пренесено"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:162
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:167
 msgid "Pacification Center"
 msgstr "Центар за пацификацију"
 
@@ -6658,7 +6705,7 @@ msgstr "Странке"
 #: src/components/_layout/LayoutRightIcons.tsx:136
 #: src/components/_layout/MoreWindowButton.tsx:115
 #: src/components/_user/notification/notificationPrefs.categories.ts:159
-#: src/pages/user/[userId]/index.tsx:169
+#: src/pages/user/[userId]/index.tsx:180
 msgid "Party"
 msgstr "Странка"
 
@@ -6766,6 +6813,10 @@ msgstr "Људи су љути, аутоматски револт је поче�
 msgid "Permanently dissolve the alliance."
 msgstr "Трајно распусти савез."
 
+#: src/pages/user/[userId]/index.tsx:138
+msgid "Personal buildings anchored to the home region. Some only work while their owner is located there."
+msgstr ""
+
 #: src/utils/translations.tsx:86
 msgid "Petroleum"
 msgstr "Петролеј"
@@ -6782,7 +6833,7 @@ msgstr "Број телефона је верификован!"
 msgid "Phone Verification"
 msgstr "Телефонска верификација"
 
-#: src/components/_user/user/UserDropdown.tsx:174
+#: src/components/_user/user/UserDropdown.tsx:177
 msgid "Phone verification requested"
 msgstr "Захтевана је верификација телефона"
 
@@ -6854,7 +6905,7 @@ msgid "Popular Article"
 msgstr "Популаран чланак"
 
 #: src/components/_layout/map.frontConfig.tsx:52
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:87
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:92
 #: src/components/_political/region/RegionTooltip.tsx:89
 msgid "Population"
 msgstr ""
@@ -6868,7 +6919,7 @@ msgstr ""
 msgid "Post announcement"
 msgstr "Објави обавештење"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:207
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:212
 msgid "Power Plant"
 msgstr ""
 
@@ -7163,7 +7214,7 @@ msgstr "Награда за рангирање"
 #: src/components/_layout/MoreWindowButton.tsx:161
 #: src/pages/alliance/[allianceId]/index.tsx:48
 #: src/pages/country/[countryId]/index.tsx:171
-#: src/pages/user/[userId]/index.tsx:78
+#: src/pages/user/[userId]/index.tsx:80
 msgid "Rankings"
 msgstr "Рангирања"
 
@@ -7310,7 +7361,7 @@ msgstr "Реферал линк копиран у клипборд"
 
 #: src/components/_user/user/UserHeader.tsx:233
 #: src/components/_user/user/UserRankingsPanel.tsx:55
-#: src/pages/user/[userId]/index.tsx:212
+#: src/pages/user/[userId]/index.tsx:223
 #: src/pages/user/[userId]/referrals.tsx:67
 msgid "Referrals"
 msgstr "Реферали"
@@ -7328,7 +7379,7 @@ msgstr "Препоручилац је постављен"
 msgid "Referrer username"
 msgstr "Корисничко име препоручиоца"
 
-#: src/pages/user/[userId]/index.tsx:77
+#: src/pages/user/[userId]/index.tsx:79
 msgid "Refresh every hour"
 msgstr "Освежава се сваког сата"
 
@@ -7474,7 +7525,7 @@ msgstr "Уклони неактивног члана конгреса са по�
 msgid "Remove announcement"
 msgstr "Уклони обавештење"
 
-#: src/components/_user/user/UserDropdown.tsx:395
+#: src/components/_user/user/UserDropdown.tsx:425
 msgid "Remove Avatar"
 msgstr "Уклони аватар"
 
@@ -7486,7 +7537,7 @@ msgstr "Уклони награду"
 msgid "Remove council member"
 msgstr "Уклони члана савета"
 
-#: src/components/_user/user/UserDropdown.tsx:417
+#: src/components/_user/user/UserDropdown.tsx:447
 msgid "Remove Description"
 msgstr "Уклони опис"
 
@@ -7548,7 +7599,7 @@ msgstr "Замена члана"
 msgid "Report"
 msgstr "Пријави"
 
-#: src/components/_user/user/UserDropdown.tsx:268
+#: src/components/_user/user/UserDropdown.tsx:285
 msgid "Report user"
 msgstr "Пријави корисника"
 
@@ -7569,7 +7620,7 @@ msgstr "Углед опада за 20% према 0 сваке недеље (м�
 msgid "Reputation purchased!"
 msgstr "Углед купљен!"
 
-#: src/components/_user/user/UserDropdown.tsx:335
+#: src/components/_user/user/UserDropdown.tsx:352
 msgid "Request Phone Verification"
 msgstr "Захтевај верификацију телефона"
 
@@ -7601,7 +7652,7 @@ msgstr "Преживео ресет"
 msgid "Reset tutorials"
 msgstr "Ресетуј водиче"
 
-#: src/components/_user/user/UserDropdown.tsx:406
+#: src/components/_user/user/UserDropdown.tsx:436
 msgid "Reset Username"
 msgstr "Ресетуј корисничко име"
 
@@ -7810,6 +7861,10 @@ msgstr "Преварен"
 msgid "Scraps"
 msgstr "Метални отпад"
 
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:367
+msgid "Scrapyard"
+msgstr ""
+
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:75
 msgid "Screenshot or it didn't happen"
 msgstr "Слика екрана или се није десило"
@@ -7858,7 +7913,7 @@ msgstr "Изабери све"
 msgid "Select an occupied region"
 msgstr "Изабери окупиран регион"
 
-#: src/components/_user/user/UserDropdown.tsx:241
+#: src/components/_user/user/UserDropdown.tsx:258
 msgid "Select banner"
 msgstr "Изабери банер"
 
@@ -7876,7 +7931,7 @@ msgstr "Изабери акцент мапе"
 msgid "Select motion type"
 msgstr "Изабери тип предлога"
 
-#: src/components/_user/user/UserDropdown.tsx:248
+#: src/components/_user/user/UserDropdown.tsx:265
 msgid "Select skin"
 msgstr "Изабери скин"
 
@@ -7926,7 +7981,7 @@ msgstr "Пошаљи <0/> ка <1/>"
 msgid "Send <0>{count}</0> messages"
 msgstr "Пошаљи <0>{count}</0> порука"
 
-#: src/components/_user/user/UserDropdown.tsx:190
+#: src/components/_user/user/UserDropdown.tsx:207
 msgid "Send a message"
 msgstr "Пошаљи поруку"
 
@@ -8099,7 +8154,7 @@ msgstr "Надоградња вештина:"
 
 #: src/components/_user/user/MyAvatar.tsx:41
 #: src/components/_user/user/UserHeader.tsx:187
-#: src/pages/user/[userId]/index.tsx:150
+#: src/pages/user/[userId]/index.tsx:161
 msgid "Skills"
 msgstr "Вештине"
 
@@ -8137,7 +8192,7 @@ msgstr "Награда у скину"
 
 #: src/components/_other/shop/ShopHeader.tsx:23
 #: src/pages/shop/index.tsx:188
-#: src/pages/user/[userId]/index.tsx:119
+#: src/pages/user/[userId]/index.tsx:121
 msgid "Skins"
 msgstr "Скинови"
 
@@ -8157,7 +8212,12 @@ msgstr "Прескочи водич"
 msgid "Sling Stones"
 msgstr "Камење за праћку"
 
+#: src/components/_user/domain/DomainUpgradeList.tsx:158
+msgid "slot {slot}"
+msgstr ""
+
 #: src/components/_political/region/UpgradeList.tsx:93
+#: src/components/_user/domain/DomainUpgradeList.tsx:95
 msgid "Slots"
 msgstr ""
 
@@ -8331,7 +8391,7 @@ msgid "Stone Maul"
 msgstr "Камени маљ"
 
 #: src/components/_economy/company/CompanyTags.tsx:107
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:287
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:292
 msgid "Storage"
 msgstr "Складиште"
 
@@ -8390,9 +8450,9 @@ msgid "Supporter"
 msgstr "Подржавалац"
 
 #: src/components/_economy/inventoryAccount/InventoryAccount.tsx:51
-#: src/components/_user/user/UserDropdown.tsx:212
-#: src/components/_user/user/UserDropdown.tsx:221
-#: src/components/_user/user/UserDropdown.tsx:230
+#: src/components/_user/user/UserDropdown.tsx:229
+#: src/components/_user/user/UserDropdown.tsx:238
+#: src/components/_user/user/UserDropdown.tsx:247
 msgid "Supporter feature"
 msgstr "Функција подржаваоца"
 
@@ -8482,7 +8542,7 @@ msgstr "Циљни регион"
 msgid "Target user"
 msgstr "Циљни корисник"
 
-#: src/components/_other/upgrade/upgrade.frontConfig.tsx:222
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:227
 msgid "Tax Office"
 msgstr ""
 
@@ -8677,7 +8737,7 @@ msgstr "Овај корисник није део ниједне породич�
 msgid "This will give you a buff for {cocainBuffHours}h then cause a malus for {cocainDebuffHours}h"
 msgstr "Ово ће ти дати ојачање на {cocainBuffHours}ч, а затим изазвати ослабљење на {cocainDebuffHours}ч"
 
-#: src/components/_user/user/UserDropdown.tsx:336
+#: src/components/_user/user/UserDropdown.tsx:353
 msgid "This will require the user to verify their mobile phone number."
 msgstr "Ово ће захтевати од корисника да потврди свој број мобилног телефона."
 
@@ -8943,13 +9003,17 @@ msgstr "Трговинска трансакција"
 msgid "Trainee"
 msgstr "Обученик"
 
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:353
+msgid "Training grounds"
+msgstr ""
+
 #: src/components/_user/user/UserHeader.tsx:213
 msgid "Transac."
 msgstr "Трансак."
 
 #: src/components/_political/country/CountryHeader.tsx:83
 #: src/pages/market/index.tsx:93
-#: src/pages/user/[userId]/index.tsx:223
+#: src/pages/user/[userId]/index.tsx:234
 msgid "Transactions"
 msgstr "Трансакције"
 
@@ -9018,7 +9082,7 @@ msgstr "Тираносаурус Рекс"
 msgid "UI"
 msgstr "Интерфејс"
 
-#: src/components/_user/user/UserDropdown.tsx:277
+#: src/components/_user/user/UserDropdown.tsx:294
 msgid "Unblock (show content)"
 msgstr "Деблокирај (прикажи садржај)"
 
@@ -9093,6 +9157,11 @@ msgstr ""
 
 #: src/components/_political/region/UpgradeList.tsx:267
 msgid "Unlocks at {unlockDevelopment} development."
+msgstr ""
+
+#: src/components/_user/domain/DomainUpgradeList.tsx:212
+#: src/components/_user/domain/DomainUpgradesGrid.tsx:132
+msgid "Unlocks at level {unlockLevel}."
 msgstr ""
 
 #: src/components/_user/user/UserHeader.tsx:447
@@ -9271,7 +9340,7 @@ msgstr "Корисник и напредак"
 msgid "User already owns all skins"
 msgstr "Корисник поседује све скинове"
 
-#: src/components/_user/user/UserDropdown.tsx:119
+#: src/components/_user/user/UserDropdown.tsx:122
 msgid "User blocked"
 msgstr "Корисник блокиран"
 
@@ -9283,7 +9352,7 @@ msgstr "Учешће корисника у поенима за земљиште.
 msgid "User removed from family group"
 msgstr "Корисник уклоњен из породичне групе"
 
-#: src/components/_user/user/UserDropdown.tsx:123
+#: src/components/_user/user/UserDropdown.tsx:126
 msgid "User unblocked"
 msgstr "Корисник деблокиран"
 
@@ -9295,7 +9364,7 @@ msgstr "Корисник деблокиран"
 msgid "Username"
 msgstr "Корисничко име"
 
-#: src/components/_user/user/UserDropdown.tsx:145
+#: src/components/_user/user/UserDropdown.tsx:148
 msgid "Username removed"
 msgstr "Корисничко име уклоњено"
 
@@ -9505,8 +9574,12 @@ msgstr "Заставник"
 msgid "Wars"
 msgstr "Ратови"
 
+#: src/components/_other/upgrade/upgrade.frontConfig.tsx:379
+msgid "Watchtower"
+msgstr ""
+
 #: src/components/_user/user/UserRankingsPanel.tsx:43
-#: src/pages/user/[userId]/index.tsx:129
+#: src/pages/user/[userId]/index.tsx:131
 msgid "Wealth"
 msgstr "Богатство"
 
