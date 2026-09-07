@@ -64,7 +64,7 @@ msgstr "- Försvar av denna region innebär ett malus på <0>{0}</0>."
 msgid "- Development income is reduced by 50%:<0>{0}</0>."
 msgstr "- Inkomst från bebyggelse reduceras med 50%:<0>{0}</0>."
 
-#: src/components/_political/region/MoveButton.tsx:125
+#: src/components/_political/region/MoveButton.tsx:107
 msgid "-{reductionPercent}%"
 msgstr ""
 
@@ -125,7 +125,7 @@ msgid "{0} days cooldown"
 msgstr "{0} dagars spärrtid"
 
 #. placeholder {0}: user.data.leveling.freeReset
-#: src/pages/user/[userId]/skills.tsx:233
+#: src/pages/user/[userId]/skills.tsx:219
 msgid "{0} Free"
 msgstr "{0} Kostnadsfria"
 
@@ -157,6 +157,12 @@ msgstr "{0} ronder krävs för att vinna striden."
 msgid "{0}'s Companies"
 msgstr "{0}s Företag"
 
+#. placeholder {0}: activeCompaniesCount.data ?? 0
+#. placeholder {1}: companiesLimit ?? 1
+#: src/components/_economy/company/CompanyDropdown.tsx:261
+msgid "{0}/{1} active"
+msgstr ""
+
 #. placeholder {0}: userMapLootConfig.lootChancePercent
 #: src/components/_layout/LayoutMapUserMenu.tsx:225
 msgid "{0}% base chance, plus your Luck skill"
@@ -173,7 +179,7 @@ msgid "{0}% income tax will be deducted from your workers wages."
 msgstr "{0}% inkomstskatt dras från anställdas löner."
 
 #. placeholder {0}: gameConfig.company.destructionValuePercent
-#: src/components/_economy/company/CompanyDropdown.tsx:294
+#: src/components/_economy/company/CompanyDropdown.tsx:322
 msgid "{0}% of invested"
 msgstr "{0}% av investerat belopp"
 
@@ -185,7 +191,7 @@ msgstr "{completedCount}/{totalCount} slutförda"
 msgid "{destroyRefundPercent}% of what was invested"
 msgstr ""
 
-#: src/components/_user/user/SkillUpgrade.tsx:265
+#: src/components/_user/user/SkillUpgrade.tsx:267
 msgid "{draftPrestigeCount} prestige point(s) on this skill ({savedPrestigeCount} saved, locked until reset)"
 msgstr ""
 
@@ -214,7 +220,7 @@ msgstr ""
 msgid "{roundsToWin} Rounds to win "
 msgstr "{roundsToWin} Ronder för att segra "
 
-#: src/components/_user/user/SkillUpgrade.tsx:374
+#: src/components/_user/user/SkillUpgrade.tsx:376
 msgid "{savedPrestigeCount} prestige point(s) active on this skill"
 msgstr ""
 
@@ -262,6 +268,10 @@ msgstr ""
 
 #: src/components/_user/user/Level.tsx:162
 msgid "+{xpBonusPercent}% XP"
+msgstr ""
+
+#: src/components/_economy/employee/EmployeeModal.tsx:234
+msgid "+1 to a random stat"
 msgstr ""
 
 #: src/components/_user/notification/notification.frontConfig.tsx:381
@@ -318,10 +328,6 @@ msgstr "<0/> avbröt kontraktet."
 #: src/components/_user/notification/notification.frontConfig.tsx:774
 msgid "<0/> commented on your article <1/>"
 msgstr "<0/> kommenterade din artikel <1/>"
-
-#: src/components/_economy/company/CompanyList.tsx:92
-msgid "<0/> Companies"
-msgstr ""
 
 #: src/components/_user/notification/notification.frontConfig.tsx:1583
 msgid "<0/> completed a contract, you earned <1/>"
@@ -698,7 +704,7 @@ msgstr "<0>-{0}%</0> Motståndstillväxt per timme"
 
 #. placeholder {0}: totalWorkersCount.data ?? 0
 #. placeholder {1}: managementLimit ?? 99
-#: src/components/_economy/company/CompanyList.tsx:102
+#: src/components/_economy/company/CompanyList.tsx:134
 #: src/components/_economy/workOffer/WorkersLimit.tsx:24
 msgid "<0>{0}/{1}</0> Workers"
 msgstr "<0>{0}/{1}</0> anställda"
@@ -851,6 +857,11 @@ msgstr "<0>{0}</0> lagerkapacitet"
 #: src/components/_political/law/Law.tsx:124
 msgid "<0>{0}</0>/day"
 msgstr "<0>{0}</0>/dag"
+
+#. placeholder {0}: companiesLimit ?? 99
+#: src/components/_economy/company/CompanyList.tsx:118
+msgid "<0>{activeCompaniesCount}/{0}</0> Companies"
+msgstr ""
 
 #: src/components/_economy/company/CompanyProductionBonusTag.tsx:79
 msgid "<0>{depositBonus}</0> from deposit resources in <1/>."
@@ -1728,9 +1739,13 @@ msgstr "Belopp"
 msgid "Amount of <0>Production Points</0> that can be stored inside the company before production stops."
 msgstr "Mängden <0>produktionspoäng</0> som kan lagras i företaget innan produktionen avstannar."
 
-#: src/components/_user/user/skills.frontConfig.tsx:192
+#: src/components/_user/user/skills.frontConfig.tsx:202
 msgid "Amount of <0>Workers</0> you can manage. And daily hire limit."
 msgstr "Antalet <0>anställda</0> du kan leda, samt daglig anställningsgräns."
+
+#: src/components/_user/user/skills.frontConfig.tsx:125
+msgid "Amount of companies you can own"
+msgstr ""
 
 #: src/components/_economy/company/CompanyFormModal.tsx:112
 #: src/components/_economy/company/MoveCompanyForm.tsx:69
@@ -1905,8 +1920,8 @@ msgstr "Är du säker på att du vill hoppa över introduktionen?"
 msgid "Are you sure you want to transfer ownership to this member? This action cannot be undone."
 msgstr "Är du säker på att du vill överföra ägarskapet till denna medlem? Åtgärden kan inte ångras."
 
-#: src/components/_user/user/skills.frontConfig.tsx:71
-#: src/components/_user/user/skills.frontConfig.tsx:72
+#: src/components/_user/user/skills.frontConfig.tsx:74
+#: src/components/_user/user/skills.frontConfig.tsx:75
 msgid "Armor"
 msgstr "Kroppsskydd"
 
@@ -2014,8 +2029,8 @@ msgstr ""
 
 #: src/components/_military/hit/HitButton.tsx:569
 #: src/components/_political/map/MapMenu.tsx:398
-#: src/components/_user/user/skills.frontConfig.tsx:44
-#: src/components/_user/user/skills.frontConfig.tsx:45
+#: src/components/_user/user/skills.frontConfig.tsx:47
+#: src/components/_user/user/skills.frontConfig.tsx:48
 msgid "Attack"
 msgstr "Anfall"
 
@@ -2425,11 +2440,11 @@ msgstr "Felletare"
 
 #: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:66
 #: src/components/_political/region/CreateUpgradeModal.tsx:122
-#: src/components/_user/domain/CreateDomainUpgradeModal.tsx:66
+#: src/components/_user/domain/CreateDomainUpgradeModal.tsx:68
 msgid "Build"
 msgstr ""
 
-#: src/components/_economy/company/CompanyList.tsx:144
+#: src/components/_economy/company/CompanyList.tsx:178
 msgid "Build a company"
 msgstr "Starta företag"
 
@@ -2442,7 +2457,7 @@ msgstr "Etablera ett militärt förband"
 #: src/components/_economy/company/CreateCompanyUpgradeModal.tsx:108
 #: src/components/_political/region/CreateUpgradeModal.tsx:222
 #: src/components/_political/region/UpgradeList.tsx:242
-#: src/components/_user/domain/CreateDomainUpgradeModal.tsx:105
+#: src/components/_user/domain/CreateDomainUpgradeModal.tsx:107
 #: src/components/_user/domain/DomainUpgradeList.tsx:191
 msgid "Build an upgrade"
 msgstr ""
@@ -2451,7 +2466,7 @@ msgstr ""
 msgid "Build cost"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:642
+#: src/components/_user/mission/mission.frontConfig.tsx:598
 msgid "Build or level up a building on your domain"
 msgstr ""
 
@@ -2467,7 +2482,7 @@ msgstr ""
 msgid "Build this one first."
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:640
+#: src/components/_user/mission/mission.frontConfig.tsx:596
 msgid "Build your domain"
 msgstr ""
 
@@ -2582,9 +2597,14 @@ msgstr "Avbrutet av administratör"
 msgid "Candidacy is open for <0/>"
 msgstr "Kandidatur till <0/> är öppen"
 
+#: src/components/_economy/employee/employeeCards.tsx:304
 #: src/components/_political/election/CandidateFormModal.tsx:87
 msgid "Candidate"
 msgstr "Kandidat"
+
+#: src/components/_economy/employee/RecruitModal.tsx:92
+msgid "Candidates"
+msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:315
 msgid "Cannot have a vice president or ministers."
@@ -2650,15 +2670,15 @@ msgstr "Katapult"
 msgid "Cave Bear Headdress"
 msgstr ""
 
-#: src/components/_user/user/skills.frontConfig.tsx:158
+#: src/components/_user/user/skills.frontConfig.tsx:168
 msgid "Chance per hit to instantly loot:<0/>Each <1>1%</1> gives<2>1%</2> and <3>0.01%</3> to loot cases per hit."
 msgstr ""
 
-#: src/components/_user/user/skills.frontConfig.tsx:144
+#: src/components/_user/user/skills.frontConfig.tsx:154
 msgid "Chance to dodge all incoming damage when fighting in battles.<0/>Dodging also prevents equipment durability from being consumed."
 msgstr "Chans att undvika all inkommande skada i strid. <0/>Lyckad undanmanöver förhindrar även slitage på utrustning."
 
-#: src/components/_user/user/skills.frontConfig.tsx:130
+#: src/components/_user/user/skills.frontConfig.tsx:140
 msgid "Chance to hit the target.<0/>Misses cannot crit, and deal half damage."
 msgstr "Chans att träffa målet. <0/>Missar kan inte bli kritiska och ger halv skada."
 
@@ -2690,7 +2710,7 @@ msgstr ""
 msgid "Change produced item"
 msgstr "Ändra tillverkad produkt"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:188
+#: src/components/_economy/company/CompanyDropdown.tsx:202
 msgid "Change production"
 msgstr "Ändra produktion"
 
@@ -2873,11 +2893,11 @@ msgstr ""
 msgid "Collect"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:631
+#: src/components/_user/mission/mission.frontConfig.tsx:587
 msgid "Collect <0/> on the map"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:629
+#: src/components/_user/mission/mission.frontConfig.tsx:585
 msgid "Collect Cases on the Map"
 msgstr ""
 
@@ -2933,11 +2953,20 @@ msgstr "Gemenskap"
 #: src/components/_user/user/MyAvatar.tsx:55
 #: src/components/_user/user/UserHeader.tsx:267
 #: src/components/_user/user/WealthPanel.tsx:42
-#: src/pages/companies.tsx:97
+#: src/pages/companies.tsx:108
 msgid "Companies"
 msgstr "Företag"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:95
+#: src/components/_user/user/skills.frontConfig.tsx:126
+#: src/components/_user/user/skills.frontConfig.tsx:127
+msgid "Companies limit"
+msgstr ""
+
+#: src/components/_economy/company/CompanyList.tsx:91
+msgid "Companies limit reached"
+msgstr ""
+
+#: src/components/_economy/company/CompanyDropdown.tsx:99
 msgid "Company destroyed!"
 msgstr "Företaget har förstörts."
 
@@ -2945,11 +2974,11 @@ msgstr "Företaget har förstörts."
 msgid "Company disabled"
 msgstr "Företag deaktiverat"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:108
+#: src/components/_economy/company/CompanyDropdown.tsx:126
 msgid "Company disabled!"
 msgstr "Företaget deaktiverades."
 
-#: src/components/_economy/company/CompanyDropdown.tsx:107
+#: src/components/_economy/company/CompanyDropdown.tsx:125
 msgid "Company enabled!"
 msgstr "Företaget aktiverades."
 
@@ -2965,7 +2994,7 @@ msgstr "Företagets produktionslager"
 msgid "Company renamed!"
 msgstr "Företaget har döpts om."
 
-#: src/components/_economy/company/CompanyDropdown.tsx:131
+#: src/components/_economy/company/CompanyDropdown.tsx:149
 msgid "Company upgraded!"
 msgstr ""
 
@@ -3081,7 +3110,7 @@ msgid "Consider giving it to your local moderator"
 msgstr "Överväg att skänka det till din lokala moderator"
 
 #: src/components/_other/upgradeConstruction/ConstructionPanel.tsx:255
-#: src/components/_user/mission/mission.frontConfig.tsx:599
+#: src/components/_user/mission/mission.frontConfig.tsx:555
 msgid "Construct"
 msgstr ""
 
@@ -3119,7 +3148,7 @@ msgstr ""
 msgid "Consume items"
 msgstr ""
 
-#: src/components/_user/user/skills.frontConfig.tsx:78
+#: src/components/_user/user/skills.frontConfig.tsx:81
 msgid "Consumed when fighting in battles"
 msgstr "Förbrukas vid deltagande i strid"
 
@@ -3166,11 +3195,11 @@ msgstr "Kontrakt & Auktioner"
 msgid "Contribute"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:601
+#: src/components/_user/mission/mission.frontConfig.tsx:557
 msgid "Contribute to constructions <0/> times"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:611
+#: src/components/_user/mission/mission.frontConfig.tsx:567
 msgid "Contribute to resistance <0/> times"
 msgstr ""
 
@@ -3409,13 +3438,13 @@ msgstr "Skapa token"
 msgid "Created:"
 msgstr "Skapad:"
 
-#: src/components/_user/user/skills.frontConfig.tsx:51
-#: src/components/_user/user/skills.frontConfig.tsx:52
+#: src/components/_user/user/skills.frontConfig.tsx:54
+#: src/components/_user/user/skills.frontConfig.tsx:55
 msgid "Crit. chance"
 msgstr "Fullträffschans"
 
-#: src/components/_user/user/skills.frontConfig.tsx:63
-#: src/components/_user/user/skills.frontConfig.tsx:64
+#: src/components/_user/user/skills.frontConfig.tsx:66
+#: src/components/_user/user/skills.frontConfig.tsx:67
 msgid "Crit. damages"
 msgstr "Fullträffsskada"
 
@@ -3423,7 +3452,7 @@ msgstr "Fullträffsskada"
 msgid "Critical Hit"
 msgstr "Fullträff"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:650
+#: src/components/_user/mission/mission.frontConfig.tsx:606
 msgid "Cross <0/> regions on the map"
 msgstr ""
 
@@ -3792,7 +3821,7 @@ msgstr "Beskrivningen har tagits bort"
 msgid "Description updated!"
 msgstr "Beskrivningen har uppdaterats."
 
-#: src/components/_economy/company/CompanyDropdown.tsx:284
+#: src/components/_economy/company/CompanyDropdown.tsx:312
 msgid "Destruct"
 msgstr "Riv"
 
@@ -3880,7 +3909,7 @@ msgstr "Diplomatisk"
 msgid "Diplomatic: defensive pact maintenance costs {less}% less <0>{0}</0>."
 msgstr ""
 
-#: src/components/_economy/company/CompanyDropdown.tsx:245
+#: src/components/_economy/company/CompanyDropdown.tsx:268
 msgid "Disable company"
 msgstr "Deaktivera företag"
 
@@ -3909,6 +3938,13 @@ msgstr "Skrota föremål"
 msgid "Dismiss"
 msgstr "Avfärda"
 
+#. placeholder {0}: employee.name || 'this employee'
+#. placeholder {1}: employeeConfig.fireSeverance
+#: src/components/_economy/employee/EmployeeModal.tsx:271
+#: src/components/_economy/employee/EmployeePanel.tsx:98
+msgid "Dismiss {0} and pay <0>{1}</0> severance? This cannot be undone."
+msgstr ""
+
 #: src/components/_political/alliance/alliance.frontConfig.tsx:20
 #: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:173
 msgid "Dissolve alliance"
@@ -3927,8 +3963,8 @@ msgid "Do you even know what luck is?"
 msgstr "Har du ens hört talas om tur?"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:292
-#: src/components/_user/user/skills.frontConfig.tsx:150
-#: src/components/_user/user/skills.frontConfig.tsx:151
+#: src/components/_user/user/skills.frontConfig.tsx:160
+#: src/components/_user/user/skills.frontConfig.tsx:161
 msgid "Dodge"
 msgstr "Undanmanöver"
 
@@ -3962,11 +3998,11 @@ msgstr "Glöm inte att spara uppgraderingarna av dina färdigheter."
 msgid "Don't quit now, your luck is buffering"
 msgstr "Sluta inte nu, din tur håller på att laddas"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:579
+#: src/components/_user/mission/mission.frontConfig.tsx:535
 msgid "Donate"
 msgstr "Donera"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:581
+#: src/components/_user/mission/mission.frontConfig.tsx:537
 msgid "Donate <0/> to MU or Country"
 msgstr ""
 
@@ -4007,7 +4043,7 @@ msgstr "Drake"
 msgid "e. Content about ongoing real-world wars and armed conflicts (most notably the Russo-Ukrainian war and the Israeli–Palestinian conflict)"
 msgstr "e. Innehåll rörande pågående krig och väpnade konflikter i den verkliga världen (i synnerhet det rysk-ukrainska kriget och den israelisk-palestinska konflikten)"
 
-#: src/components/_user/user/SkillUpgrade.tsx:291
+#: src/components/_user/user/SkillUpgrade.tsx:293
 msgid "Each prestige point gives the equivalent of {skillBonusLevels} level of the selected skill"
 msgstr ""
 
@@ -4044,11 +4080,7 @@ msgstr "Odalbondemundering"
 msgid "Economic laws"
 msgstr "Finansiella lagar"
 
-#: src/components/_user/user/SkillPointsPool.tsx:19
-msgid "Economic skill points"
-msgstr ""
-
-#: src/components/_user/user/skills.frontConfig.tsx:222
+#: src/components/_user/user/skills.frontConfig.tsx:256
 msgid "Economic skills"
 msgstr "Ekonomiska färdigheter"
 
@@ -4157,15 +4189,30 @@ msgstr "Elithjälm"
 msgid "Elite Pants"
 msgstr "Elitbyxor"
 
+#: src/components/_economy/employee/employeeCards.tsx:207
+#: src/components/_economy/employee/EmployeeList.tsx:69
+#: src/components/_economy/employee/EmployeeModal.tsx:107
+#: src/components/_economy/employee/EmployeeModal.tsx:129
+msgid "Employee"
+msgstr ""
+
 #: src/components/_economy/work/WorkChart.tsx:214
 msgid "Employee Production"
 msgstr "Anställdas produktion"
+
+#: src/components/_economy/employee/WorkforceSummary.tsx:123
+msgid "employees"
+msgstr ""
+
+#: src/pages/company/[companyId]/index.tsx:40
+msgid "Employees"
+msgstr ""
 
 #: src/pages/region/[regionId]/index.tsx:165
 msgid "Empty"
 msgstr "Tom"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:243
+#: src/components/_economy/company/CompanyDropdown.tsx:258
 msgid "Enable company"
 msgstr "Aktivera företag"
 
@@ -4206,9 +4253,10 @@ msgstr "Avslutad <0/>"
 msgid "Enemies"
 msgstr "Fiender"
 
+#: src/components/_economy/employee/employee.frontConfig.tsx:45
 #: src/components/_economy/workOffer/WorkOfferList.tsx:148
-#: src/components/_user/user/skills.frontConfig.tsx:90
-#: src/components/_user/user/skills.frontConfig.tsx:91
+#: src/components/_user/user/skills.frontConfig.tsx:93
+#: src/components/_user/user/skills.frontConfig.tsx:94
 msgid "Energy"
 msgstr "Energi"
 
@@ -4225,8 +4273,8 @@ msgstr "Ange artikel-ID"
 msgid "Enter the code we sent to your email."
 msgstr "Ange koden vi skickade till din e-post."
 
-#: src/components/_user/user/skills.frontConfig.tsx:185
-#: src/components/_user/user/skills.frontConfig.tsx:186
+#: src/components/_user/user/skills.frontConfig.tsx:195
+#: src/components/_user/user/skills.frontConfig.tsx:196
 msgid "Entrepreneurship"
 msgstr "Entreprenörskap"
 
@@ -4250,6 +4298,23 @@ msgstr "Utrustning"
 #: src/components/_political/law/GenericLawStatus.tsx:44
 msgid "Error"
 msgstr "Fel"
+
+#: src/components/_economy/employee/EmployeeList.tsx:149
+#: src/components/_economy/employee/EmployeeModal.tsx:213
+msgid "Est."
+msgstr ""
+
+#: src/components/_economy/employee/WorkforceSummary.tsx:33
+msgid "Est. prod"
+msgstr ""
+
+#: src/components/_economy/employee/EmployeePanel.tsx:56
+msgid "Est. production"
+msgstr ""
+
+#: src/components/_economy/employee/EmployeePanel.tsx:64
+msgid "Est. wage cost"
+msgstr ""
 
 #: src/components/_economy/workOffer/EstimatedCompanyBenefit.tsx:103
 msgid "Estimated benefit per"
@@ -4505,6 +4570,10 @@ msgstr "Strid för <0/> i <1/>"
 msgid "Fight for <0/> in<1/><2/>"
 msgstr "Strid för <0/> i<1/><2/>"
 
+#: src/components/_user/user/skills.frontConfig.tsx:241
+msgid "Fight skills"
+msgstr ""
+
 #: src/components/_other/tour/tuto.frontConfig.tsx:142
 msgid "Fight!"
 msgstr "Till Strid!"
@@ -4550,16 +4619,16 @@ msgstr "Finansiera lokalt motstånd"
 msgid "Finance resistance in <0/>"
 msgstr "Finansiera motstånd i <0/>"
 
-#: src/pages/companies.tsx:60
+#: src/pages/companies.tsx:62
 #: src/pages/user/[userId]/companies.tsx:73
 msgid "Find a job"
 msgstr "Sök ett arbete"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:547
+#: src/components/_user/mission/mission.frontConfig.tsx:503
 msgid "Find a Job"
 msgstr "Sök ett arbete"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:548
+#: src/components/_user/mission/mission.frontConfig.tsx:504
 msgid "Find a job at a company"
 msgstr "Sök ett arbete vid ett företag"
 
@@ -4571,6 +4640,8 @@ msgstr "Sök ett militärt förband"
 msgid "Find another job"
 msgstr "Sök ett annat arbete"
 
+#: src/components/_economy/employee/employeeCards.tsx:271
+#: src/components/_economy/employee/EmployeeModal.tsx:279
 #: src/components/_political/government/Government.tsx:253
 #: src/components/_user/user/UserEffectSelector.tsx:61
 #: src/components/_user/worker/WorkerEditFormModal.tsx:214
@@ -4662,6 +4733,10 @@ msgstr "Daglig gratisbelöning"
 
 #: src/components/_other/shop/skinPack.frontConfig.tsx:49
 msgid "Full throttle, no brakes"
+msgstr ""
+
+#: src/components/_economy/employee/EmployeeModal.tsx:237
+msgid "Fully trained: no Potential left"
 msgstr ""
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:27
@@ -4830,6 +4905,10 @@ msgstr "Gå och köp en trisslott direkt"
 #: src/components/_economy/company/CompanyProduce.tsx:117
 msgid "Go to job market"
 msgstr "Gå till arbetsmarknaden"
+
+#: src/components/_economy/company/CompanyList.tsx:105
+msgid "Go to skills"
+msgstr ""
 
 #: src/utils/translations.tsx:34
 msgid "Gold"
@@ -5023,8 +5102,8 @@ msgstr "Slitvarg"
 msgid "Headquarters"
 msgstr "Högkvarter"
 
-#: src/components/_user/user/skills.frontConfig.tsx:79
-#: src/components/_user/user/skills.frontConfig.tsx:80
+#: src/components/_user/user/skills.frontConfig.tsx:82
+#: src/components/_user/user/skills.frontConfig.tsx:83
 msgid "Health"
 msgstr "Hälsa"
 
@@ -5053,9 +5132,17 @@ msgstr "Hjälp förbandsmedlemmar"
 msgid "Help the game to grow"
 msgstr "Hjälp spelet att växa"
 
+#: src/components/_economy/employee/EmployeeModal.tsx:176
+msgid "hidden"
+msgstr ""
+
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:157
 msgid "High Commander"
 msgstr "Huvudbefälhavare"
+
+#: src/components/_economy/employee/employeeCards.tsx:336
+msgid "Hire"
+msgstr ""
 
 #: src/components/_military/battle/BattlesHeader.tsx:33
 msgid "History"
@@ -5103,12 +5190,16 @@ msgstr ""
 msgid "Hourly upkeep"
 msgstr ""
 
+#: src/components/_economy/employee/employee.frontConfig.tsx:37
+msgid "How many production points this employee banks each time they work."
+msgstr ""
+
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:30
 msgid "How many times have you seen this message already?"
 msgstr "Hur många gånger har du sett det här meddelandet redan?"
 
-#: src/components/_user/user/skills.frontConfig.tsx:123
-#: src/components/_user/user/skills.frontConfig.tsx:124
+#: src/components/_user/user/skills.frontConfig.tsx:133
+#: src/components/_user/user/skills.frontConfig.tsx:134
 msgid "Hunger"
 msgstr "Hunger"
 
@@ -5258,7 +5349,7 @@ msgstr "Uppsåtliga eller upprepade överträdelser av denna policy leder till p
 #: src/components/_layout/LayoutUserMenu.tsx:149
 #: src/components/_user/user/MyAvatar.tsx:36
 #: src/components/_user/user/UserHeader.tsx:195
-#: src/pages/companies.tsx:84
+#: src/pages/companies.tsx:86
 #: src/pages/country/[countryId]/account.tsx:25
 #: src/pages/market/index.tsx:56
 #: src/pages/user/[userId]/account.tsx:20
@@ -5338,19 +5429,15 @@ msgstr "Föremål"
 msgid "j. Spam and repeated messages"
 msgstr "j. Spam och upprepade meddelanden"
 
-#: src/pages/companies.tsx:32
+#: src/pages/companies.tsx:34
 #: src/pages/user/[userId]/companies.tsx:56
 msgid "Job"
 msgstr "Jobb"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:253
+#: src/components/_economy/company/CompanyDropdown.tsx:281
 #: src/components/_economy/workOffer/WageInfoAlert.tsx:42
 msgid "Job market"
 msgstr "Arbetsmarknad"
-
-#: src/pages/company/[companyId]/index.tsx:69
-msgid "Job offer"
-msgstr "Jobberbjudande"
 
 #: src/pages/market/index.tsx:87
 msgid "Job offers"
@@ -5365,7 +5452,7 @@ msgstr "Jobb"
 msgid "Join <0/>"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:429
+#: src/components/_user/mission/mission.frontConfig.tsx:385
 msgid "Join a Military Unit"
 msgstr "Gå med i ett militärt förband"
 
@@ -5373,11 +5460,11 @@ msgstr "Gå med i ett militärt förband"
 msgid "Join a military unit to take part"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:525
+#: src/components/_user/mission/mission.frontConfig.tsx:481
 msgid "Join a Party"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:526
+#: src/components/_user/mission/mission.frontConfig.tsx:482
 msgid "Join a political party"
 msgstr ""
 
@@ -5386,7 +5473,7 @@ msgstr ""
 msgid "Join alliance"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:428
+#: src/components/_user/mission/mission.frontConfig.tsx:384
 msgid "Join MU"
 msgstr "Gå med i förband"
 
@@ -5552,11 +5639,16 @@ msgstr "Bly"
 msgid "Leader"
 msgstr ""
 
+#: src/components/_user/user/skills.frontConfig.tsx:234
+#: src/components/_user/user/skills.frontConfig.tsx:235
+msgid "Leadership"
+msgstr ""
+
 #: src/components/_other/shop/skin.frontConfig.tsx:248
 msgid "Leather Sling"
 msgstr ""
 
-#: src/components/_economy/company/CompanyDropdown.tsx:272
+#: src/components/_economy/company/CompanyDropdown.tsx:300
 msgid "Leave"
 msgstr "Lämna"
 
@@ -5680,7 +5772,7 @@ msgstr "Lätt ammunition"
 msgid "Like <0/> articles"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:476
+#: src/components/_user/mission/mission.frontConfig.tsx:432
 msgid "Like <0/> messages"
 msgstr ""
 
@@ -5688,7 +5780,7 @@ msgstr ""
 msgid "Like Article"
 msgstr "Gilla artikel"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:474
+#: src/components/_user/mission/mission.frontConfig.tsx:430
 msgid "Like Message"
 msgstr "Gilla meddelande"
 
@@ -5696,11 +5788,11 @@ msgstr "Gilla meddelande"
 msgid "Limestone"
 msgstr "Kalksten"
 
-#: src/components/_user/user/skills.frontConfig.tsx:122
+#: src/components/_user/user/skills.frontConfig.tsx:132
 msgid "Limit of food consumption"
 msgstr "Gräns för livsmedelskonsumtion"
 
-#: src/components/_economy/company/CompanyList.tsx:147
+#: src/components/_economy/company/CompanyList.tsx:181
 msgid "Limit reached"
 msgstr ""
 
@@ -5759,7 +5851,7 @@ msgstr "Plats"
 msgid "Locked slot"
 msgstr ""
 
-#: src/components/_user/user/SkillUpgrade.tsx:287
+#: src/components/_user/user/SkillUpgrade.tsx:289
 msgid "Locked, reset your skills to reassign"
 msgstr ""
 
@@ -5783,8 +5875,8 @@ msgstr ""
 msgid "Loot Cases"
 msgstr "Erhåll lådor"
 
-#: src/components/_user/user/skills.frontConfig.tsx:172
-#: src/components/_user/user/skills.frontConfig.tsx:173
+#: src/components/_user/user/skills.frontConfig.tsx:182
+#: src/components/_user/user/skills.frontConfig.tsx:183
 msgid "Loot chance"
 msgstr ""
 
@@ -5845,8 +5937,8 @@ msgstr ""
 msgid "Manage Subscription"
 msgstr "Hantera prenumeration"
 
-#: src/components/_user/user/skills.frontConfig.tsx:200
-#: src/components/_user/user/skills.frontConfig.tsx:201
+#: src/components/_user/user/skills.frontConfig.tsx:210
+#: src/components/_user/user/skills.frontConfig.tsx:211
 msgid "Management"
 msgstr "Arbetsledning"
 
@@ -5904,8 +5996,13 @@ msgstr ""
 msgid "Max rate: {0} money per 1000 construction points. The pool leaves your treasury now and comes back if you cancel it or when the construction is done."
 msgstr ""
 
-#: src/components/_economy/company/CompanyDropdown.tsx:208
-#: src/components/_economy/company/CompanyDropdown.tsx:226
+#: src/components/_economy/employee/employeeCards.tsx:260
+#: src/components/_economy/employee/EmployeeModal.tsx:258
+msgid "Maxed"
+msgstr ""
+
+#: src/components/_economy/company/CompanyDropdown.tsx:222
+#: src/components/_economy/company/CompanyDropdown.tsx:240
 msgid "Maxed!"
 msgstr ""
 
@@ -6167,14 +6264,6 @@ msgstr "Militär grad:"
 msgid "Military Ranks"
 msgstr "Militära grader"
 
-#: src/components/_user/user/SkillPointsPool.tsx:14
-msgid "Military skill points"
-msgstr ""
-
-#: src/components/_user/user/skills.frontConfig.tsx:207
-msgid "Military skills"
-msgstr ""
-
 #: src/components/_layout/MoreButtonNav.tsx:147
 #: src/components/_military/mu/MuHeader.tsx:88
 #: src/components/_user/notification/notificationPrefs.categories.ts:161
@@ -6314,6 +6403,10 @@ msgstr ""
 msgid "Monthly:"
 msgstr "Månadsvis:"
 
+#: src/components/_economy/employee/employee.frontConfig.tsx:57
+msgid "Morale shield: Responsibility ÷ 10 of every happiness loss is cancelled (fully shielded at 10). Does not affect output."
+msgstr ""
+
 #: src/components/_layout/LayoutLeftIcons.tsx:224
 #: src/components/_layout/MoreButtonNav.tsx:191
 msgid "More"
@@ -6337,21 +6430,21 @@ msgstr "Förslag framlagt"
 msgid "Motions"
 msgstr "Förslag"
 
-#: src/components/_political/region/MoveButton.tsx:86
-#: src/components/_political/region/MoveButton.tsx:98
+#: src/components/_political/region/MoveButton.tsx:117
+#: src/components/_political/region/MoveButton.tsx:129
 msgid "Move"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:564
+#: src/components/_user/mission/mission.frontConfig.tsx:520
 msgid "Move a company to another region"
 msgstr "Flytta ett företag till en annan region"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:173
+#: src/components/_economy/company/CompanyDropdown.tsx:187
 #: src/components/_economy/company/MoveCompanyForm.tsx:66
 msgid "Move company"
 msgstr "Flytta företag"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:563
+#: src/components/_user/mission/mission.frontConfig.tsx:519
 msgid "Move Company"
 msgstr "Flytta företag"
 
@@ -6363,7 +6456,7 @@ msgstr "Flytta företaget"
 msgid "Move to this region to collect its wooden case"
 msgstr ""
 
-#: src/components/_economy/company/CompanyDropdown.tsx:235
+#: src/components/_economy/company/CompanyDropdown.tsx:249
 msgid "Move to top"
 msgstr "Flytta högst upp"
 
@@ -6441,6 +6534,10 @@ msgstr ""
 #. placeholder {0}: milestone.tier
 #: src/components/_user/milestone/MilestoneItem.tsx:134
 msgid "My tier {0}"
+msgstr ""
+
+#: src/components/_economy/employee/WorkforceSummary.tsx:75
+msgid "My workforce"
 msgstr ""
 
 #: src/utils/translations.tsx:118
@@ -6566,9 +6663,8 @@ msgstr "Ny ideologisk konfiguration"
 msgid "New item offer"
 msgstr "Nytt föremålserbjudande"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:180
+#: src/components/_economy/company/CompanyDropdown.tsx:194
 #: src/components/_economy/workOffer/WorkOfferList.tsx:172
-#: src/pages/company/[companyId]/index.tsx:74
 msgid "New job offer"
 msgstr "Nytt jobberbjudande"
 
@@ -6666,7 +6762,7 @@ msgstr "Nästa blir en stridsvagn 122"
 msgid "Next one will be tank"
 msgstr "Nästa blir en stridsvagn 122"
 
-#: src/components/_user/user/SkillUpgrade.tsx:270
+#: src/components/_user/user/SkillUpgrade.tsx:272
 msgid "Next point costs"
 msgstr ""
 
@@ -6711,10 +6807,6 @@ msgstr "Inga pågående strider"
 msgid "No active ethics - Balanced"
 msgstr "Ingen aktiv ideologi - Balanserad"
 
-#: src/pages/company/[companyId]/index.tsx:85
-msgid "No active job offer"
-msgstr "Inget aktivt jobberbjudande"
-
 #: src/components/_military/order/BattleOrderList.tsx:155
 msgid "No active order"
 msgstr ""
@@ -6755,6 +6847,10 @@ msgstr "Inga strider ännu"
 msgid "No bids yet"
 msgstr "Inga bud ännu"
 
+#: src/components/_economy/employee/RecruitModal.tsx:98
+msgid "No candidates available"
+msgstr ""
+
 #: src/pages/country/[countryId]/citizens.tsx:41
 msgid "No citizens"
 msgstr "Inga medborgare"
@@ -6787,6 +6883,14 @@ msgstr ""
 #: src/components/_economy/donation/DonationList.tsx:81
 msgid "No donations yet"
 msgstr "Inga donationer ännu"
+
+#: src/components/_economy/employee/EmployeeList.tsx:143
+msgid "No employees"
+msgstr ""
+
+#: src/components/_economy/employee/EmployeePanel.tsx:80
+msgid "No employees yet"
+msgstr ""
 
 #: src/components/_military/damageRanking/DamageRankingList.tsx:172
 msgid "No ground ranking yet."
@@ -6865,7 +6969,7 @@ msgstr "Inga order"
 msgid "No parties found"
 msgstr "Inga partier hittades"
 
-#: src/components/_user/user/SkillUpgrade.tsx:285
+#: src/components/_user/user/SkillUpgrade.tsx:287
 msgid "No prestige points left, tap to reset staged points"
 msgstr ""
 
@@ -7002,11 +7106,11 @@ msgstr "Nu börjar det likna något!"
 msgid "Number of Donors:"
 msgstr "Antal donatorer:"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:543
+#: src/components/_user/mission/mission.frontConfig.tsx:499
 msgid "Obtain a badge"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:542
+#: src/components/_user/mission/mission.frontConfig.tsx:498
 msgid "Obtain a Badge"
 msgstr ""
 
@@ -7017,6 +7121,14 @@ msgstr ""
 #: src/components/_political/partyMotion/PartyMotionFormModal.tsx:140
 msgid "Occupied region"
 msgstr "Ockuperad region"
+
+#: src/components/_user/user/skills.frontConfig.tsx:229
+msgid "Odds to improve an employee's traits when you train them in your companies."
+msgstr ""
+
+#: src/components/_user/user/skills.frontConfig.tsx:217
+msgid "Odds to reveal an employee's hidden traits, when you hire them and when you train them."
+msgstr ""
 
 #: src/components/_political/government/Government.tsx:204
 msgid "of"
@@ -7111,7 +7223,7 @@ msgstr "Öppna låda"
 msgid "Open Cases"
 msgstr "Öppna lådor"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:422
+#: src/components/_user/mission/mission.frontConfig.tsx:378
 msgid "Open Chat"
 msgstr "Öppna chatt"
 
@@ -7131,7 +7243,7 @@ msgstr "Öppna för att få ett slumpmässigt föremål"
 msgid "Open multiple <0>Cases</0> at same time"
 msgstr "Öppna flera <0>lådor</0> samtidigt"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:423
+#: src/components/_user/mission/mission.frontConfig.tsx:379
 msgid "Open the chat"
 msgstr "Öppna chatten"
 
@@ -7202,29 +7314,6 @@ msgstr "Överskott:"
 #: src/components/_military/war/WarHeader.tsx:79
 msgid "Overview"
 msgstr "Översikt"
-
-#: src/components/_user/mission/mission.frontConfig.tsx:380
-#: src/components/_user/mission/mission.frontConfig.tsx:391
-#: src/components/_user/mission/mission.frontConfig.tsx:402
-#: src/components/_user/mission/mission.frontConfig.tsx:413
-msgid "Own <0/> companies"
-msgstr ""
-
-#: src/components/_user/mission/mission.frontConfig.tsx:378
-msgid "Own 2 Companies"
-msgstr ""
-
-#: src/components/_user/mission/mission.frontConfig.tsx:389
-msgid "Own 3 Companies"
-msgstr ""
-
-#: src/components/_user/mission/mission.frontConfig.tsx:400
-msgid "Own 4 Companies"
-msgstr ""
-
-#: src/components/_user/mission/mission.frontConfig.tsx:411
-msgid "Own 5 Companies"
-msgstr ""
 
 #: src/components/_other/shop/SkinPackItem.tsx:107
 msgid "Owned"
@@ -7411,6 +7500,11 @@ msgstr "Väntande lönesänkning"
 msgid "People are angry, an auto revolt has started in <0/>"
 msgstr "Folket är upprörda; en automatisk revolt har startat i <0/>"
 
+#: src/components/_user/user/skills.frontConfig.tsx:222
+#: src/components/_user/user/skills.frontConfig.tsx:223
+msgid "Perception"
+msgstr ""
+
 #: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:174
 msgid "Permanently dissolve the alliance."
 msgstr ""
@@ -7524,12 +7618,17 @@ msgstr ""
 msgid "Post announcement"
 msgstr ""
 
+#: src/components/_economy/employee/employeeCards.tsx:240
+#: src/components/_economy/employee/EmployeeModal.tsx:220
+msgid "Potential"
+msgstr ""
+
 #: src/components/_other/upgrade/upgrade.frontConfig.tsx:225
 msgid "Power Plant"
 msgstr ""
 
-#: src/components/_user/user/skills.frontConfig.tsx:136
-#: src/components/_user/user/skills.frontConfig.tsx:137
+#: src/components/_user/user/skills.frontConfig.tsx:146
+#: src/components/_user/user/skills.frontConfig.tsx:147
 msgid "Precision"
 msgstr "Precision"
 
@@ -7595,7 +7694,7 @@ msgid "Presidential elections"
 msgstr "Statsministerval"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:135
-#: src/pages/user/[userId]/skills.tsx:203
+#: src/pages/user/[userId]/skills.tsx:189
 msgid "Prestige"
 msgstr ""
 
@@ -7636,12 +7735,12 @@ msgstr "Menig"
 msgid "Pro Only"
 msgstr "Endast Pro"
 
-#: src/components/_user/user/skills.frontConfig.tsx:50
+#: src/components/_user/user/skills.frontConfig.tsx:53
 msgid "Probability of landing a critical hit"
 msgstr "Sannolikhet för en fullträff"
 
 #: src/components/_economy/company/ProduceButton.tsx:142
-#: src/components/_user/mission/mission.frontConfig.tsx:553
+#: src/components/_user/mission/mission.frontConfig.tsx:509
 msgid "Produce"
 msgstr "Producera"
 
@@ -7649,7 +7748,7 @@ msgstr "Producera"
 msgid "Produce All"
 msgstr "Producera Allt"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:555
+#: src/components/_user/mission/mission.frontConfig.tsx:511
 msgid "Produce items <0/> times"
 msgstr ""
 
@@ -7665,10 +7764,11 @@ msgstr "Tillverkad produkt"
 msgid "Produced item changed!"
 msgstr "Tillverkad produkt ändrad."
 
+#: src/components/_economy/employee/employee.frontConfig.tsx:35
 #: src/components/_economy/workOffer/WorkOfferList.tsx:162
-#: src/components/_user/user/skills.frontConfig.tsx:116
-#: src/components/_user/user/skills.frontConfig.tsx:117
-#: src/pages/company/[companyId]/index.tsx:56
+#: src/components/_user/user/skills.frontConfig.tsx:119
+#: src/components/_user/user/skills.frontConfig.tsx:120
+#: src/pages/company/[companyId]/index.tsx:47
 msgid "Production"
 msgstr "Produktion"
 
@@ -7861,91 +7961,91 @@ msgstr "Ersättning per 1k skada"
 msgid "Raw materials:"
 msgstr "Råvaror:"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:455
+#: src/components/_user/mission/mission.frontConfig.tsx:411
 msgid "Reach level 10"
 msgstr "Nå nivå 10"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:454
+#: src/components/_user/mission/mission.frontConfig.tsx:410
 msgid "Reach Level 10"
 msgstr "Nå nivå 10"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:460
+#: src/components/_user/mission/mission.frontConfig.tsx:416
 msgid "Reach level 15"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:459
+#: src/components/_user/mission/mission.frontConfig.tsx:415
 msgid "Reach Level 15"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:465
+#: src/components/_user/mission/mission.frontConfig.tsx:421
 msgid "Reach level 20"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:464
+#: src/components/_user/mission/mission.frontConfig.tsx:420
 msgid "Reach Level 20"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:470
+#: src/components/_user/mission/mission.frontConfig.tsx:426
 msgid "Reach level 25"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:469
+#: src/components/_user/mission/mission.frontConfig.tsx:425
 msgid "Reach Level 25"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:450
+#: src/components/_user/mission/mission.frontConfig.tsx:406
 msgid "Reach level 5"
 msgstr "Nå nivå 5"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:449
+#: src/components/_user/mission/mission.frontConfig.tsx:405
 msgid "Reach Level 5"
 msgstr "Nå nivå 5"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:501
+#: src/components/_user/mission/mission.frontConfig.tsx:457
 msgid "Reach military rank 10"
 msgstr "Nå militär grad 10"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:500
+#: src/components/_user/mission/mission.frontConfig.tsx:456
 msgid "Reach Military Rank 10"
 msgstr "Nå militär grad 10"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:506
+#: src/components/_user/mission/mission.frontConfig.tsx:462
 msgid "Reach military rank 20"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:505
+#: src/components/_user/mission/mission.frontConfig.tsx:461
 msgid "Reach Military Rank 20"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:511
+#: src/components/_user/mission/mission.frontConfig.tsx:467
 msgid "Reach military rank 30"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:510
+#: src/components/_user/mission/mission.frontConfig.tsx:466
 msgid "Reach Military Rank 30"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:516
+#: src/components/_user/mission/mission.frontConfig.tsx:472
 msgid "Reach military rank 40"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:515
+#: src/components/_user/mission/mission.frontConfig.tsx:471
 msgid "Reach Military Rank 40"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:496
+#: src/components/_user/mission/mission.frontConfig.tsx:452
 msgid "Reach military rank 5"
 msgstr "Nå militär grad 5"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:495
+#: src/components/_user/mission/mission.frontConfig.tsx:451
 msgid "Reach Military Rank 5"
 msgstr "Nå militär grad 5"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:521
+#: src/components/_user/mission/mission.frontConfig.tsx:477
 msgid "Reach military rank 50"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:520
+#: src/components/_user/mission/mission.frontConfig.tsx:476
 msgid "Reach Military Rank 50"
 msgstr ""
 
@@ -7995,7 +8095,7 @@ msgstr "Orsak"
 msgid "Recent Applications"
 msgstr "Senaste ansökningar"
 
-#: src/pages/company/[companyId]/index.tsx:101
+#: src/pages/company/[companyId]/index.tsx:68
 msgid "Recipe"
 msgstr "Recept"
 
@@ -8007,6 +8107,8 @@ msgstr "Mottagare"
 msgid "Recommended regions"
 msgstr "Rekommenderade regioner"
 
+#: src/components/_economy/employee/EmployeeList.tsx:183
+#: src/components/_economy/employee/RecruitModal.tsx:151
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:21
 msgid "Recruit"
 msgstr "Rekryt"
@@ -8015,7 +8117,7 @@ msgstr "Rekryt"
 msgid "Red Staff"
 msgstr "Röd stav"
 
-#: src/components/_user/user/skills.frontConfig.tsx:70
+#: src/components/_user/user/skills.frontConfig.tsx:73
 msgid "Reduces health lost when fighting in battles"
 msgstr "Minskar förlust av hälsa i strid"
 
@@ -8114,7 +8216,7 @@ msgstr "regioner"
 msgid "Regions"
 msgstr "Regioner"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:648
+#: src/components/_user/mission/mission.frontConfig.tsx:604
 msgid "Regions Crossed"
 msgstr ""
 
@@ -8256,7 +8358,7 @@ msgstr "Avsätt den nuvarande partiledaren från sin post"
 msgid "Removed from Military Unit"
 msgstr "Avlägsnad från det militära förbandet"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:262
+#: src/components/_economy/company/CompanyDropdown.tsx:290
 msgid "Rename"
 msgstr "Byt namn"
 
@@ -8339,11 +8441,15 @@ msgstr "Begär mobilverifiering"
 msgid "Requests:"
 msgstr "Anrop:"
 
+#: src/components/_economy/employee/RecruitModal.tsx:71
+msgid "Reroll all"
+msgstr ""
+
 #: src/components/_user/mission/MissionItem.tsx:118
 msgid "Reroll Mission"
 msgstr "Generera nytt uppdrag"
 
-#: src/pages/user/[userId]/skills.tsx:230
+#: src/pages/user/[userId]/skills.tsx:216
 msgid "Reset"
 msgstr "Återställ"
 
@@ -8351,7 +8457,7 @@ msgstr "Återställ"
 msgid "Reset CAPTCHA"
 msgstr "Återställ CAPTCHA"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:536
+#: src/components/_user/mission/mission.frontConfig.tsx:492
 msgid "Reset Skills"
 msgstr ""
 
@@ -8367,7 +8473,7 @@ msgstr "Återställ guider"
 msgid "Reset Username"
 msgstr "Återställ användarnamn"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:537
+#: src/components/_user/mission/mission.frontConfig.tsx:493
 msgid "Reset your skills"
 msgstr ""
 
@@ -8391,7 +8497,7 @@ msgid "Residents (home in one of the country's regions)"
 msgstr ""
 
 #: src/components/_military/hit/HitButton.tsx:567
-#: src/components/_user/mission/mission.frontConfig.tsx:609
+#: src/components/_user/mission/mission.frontConfig.tsx:565
 msgid "Resist"
 msgstr "Motstånd"
 
@@ -8434,6 +8540,10 @@ msgstr "Resurser omfördelade"
 #: src/components/_user/notification/notification.frontConfig.tsx:2153
 msgid "Response to message"
 msgstr "Svar på meddelande"
+
+#: src/components/_economy/employee/employee.frontConfig.tsx:55
+msgid "Responsibility"
+msgstr ""
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:162
 msgid "Restore your health!"
@@ -8490,6 +8600,10 @@ msgstr "Återställt av administratör"
 #: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:240
 msgid "Rolled back by Admin"
 msgstr "Återställt av administratör"
+
+#: src/components/_economy/employee/EmployeePanel.tsx:74
+msgid "Roster"
+msgstr ""
 
 #: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:198
 msgid "Round"
@@ -8568,7 +8682,7 @@ msgstr "Börjar hälsan ta slut?"
 #: src/components/_political/party/PartyDescriptionModal.tsx:72
 #: src/components/_political/region/UpgradeList.tsx:151
 #: src/components/_user/auth/WelcomeModal.tsx:182
-#: src/pages/user/[userId]/skills.tsx:261
+#: src/pages/user/[userId]/skills.tsx:247
 msgid "Save"
 msgstr "Spara"
 
@@ -8671,7 +8785,7 @@ msgstr "Eget arbete"
 msgid "Self work <0/> times in your companies"
 msgstr ""
 
-#: src/components/_economy/company/CompanyDropdown.tsx:304
+#: src/components/_economy/company/CompanyDropdown.tsx:332
 msgid "Sell company?"
 msgstr "Sälja företaget?"
 
@@ -8700,7 +8814,7 @@ msgstr "Säljpris:"
 msgid "sells"
 msgstr "säljer"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:436
+#: src/components/_user/mission/mission.frontConfig.tsx:392
 msgid "Send <0/> messages"
 msgstr ""
 
@@ -8724,7 +8838,7 @@ msgstr "Skicka kod"
 msgid "Send Gift"
 msgstr "Skicka gåva"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:434
+#: src/components/_user/mission/mission.frontConfig.tsx:390
 msgid "Send Message"
 msgstr "Skicka meddelande"
 
@@ -8789,7 +8903,7 @@ msgstr "Välj partiideologi"
 msgid "Set payout"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:489
+#: src/components/_user/mission/mission.frontConfig.tsx:445
 msgid "Set Profile Picture"
 msgstr "Välj profilbild"
 
@@ -8807,7 +8921,7 @@ msgstr "Sätt landets specialiserade produkt till <0>{0}</0>.<1/>Landets strateg
 msgid "Set the country's specialized production item"
 msgstr "Ställ in landets specialiserade produktionsfokus"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:483
+#: src/components/_user/mission/mission.frontConfig.tsx:439
 msgid "Set Username"
 msgstr "Välj användarnamn"
 
@@ -8816,11 +8930,11 @@ msgstr "Välj användarnamn"
 msgid "Set welcome article"
 msgstr "Välj välkomstartikel"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:490
+#: src/components/_user/mission/mission.frontConfig.tsx:446
 msgid "Set your profile picture"
 msgstr "Välj din profilbild"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:484
+#: src/components/_user/mission/mission.frontConfig.tsx:440
 msgid "Set your username"
 msgstr "Välj ditt användarnamn"
 
@@ -8829,6 +8943,11 @@ msgstr "Välj ditt användarnamn"
 #: src/components/_user/user/UserHeader.tsx:287
 msgid "Settings"
 msgstr "Inställningar"
+
+#. placeholder {0}: employeeConfig.fireSeverance
+#: src/components/_economy/employee/employeeCards.tsx:273
+msgid "Severance: <0>{0}</0>"
+msgstr ""
 
 #: src/components/_user/milestone/MilestoneTiersModal.tsx:64
 msgid "Share of active players who reached each tier, refreshed daily."
@@ -8915,7 +9034,7 @@ msgstr "Färdigheter"
 msgid "Skills make you stronger. Let's boost your abilities!"
 msgstr "Färdigheter gör dig starkare. Låt oss boosta dina förmågor!"
 
-#: src/pages/user/[userId]/skills.tsx:59
+#: src/pages/user/[userId]/skills.tsx:55
 msgid "Skills saved!"
 msgstr "Färdigheter sparade!"
 
@@ -8990,6 +9109,10 @@ msgstr "Prickskyttegevär 90"
 msgid "Social & Messages"
 msgstr "Socialt & Meddelanden"
 
+#: src/components/_economy/company/CompanyList.tsx:96
+msgid "Some of your companies are disabled."
+msgstr ""
+
 #: src/components/_layout/LayoutOptions.tsx:178
 msgid "Sound effects"
 msgstr "Ljudeffekter"
@@ -9022,7 +9145,7 @@ msgstr "Använd din <0>energi</0> för att arbeta här och tjäna <1>valuta</1>.
 msgid "Spendings"
 msgstr "Utgifter"
 
-#: src/components/_user/user/skills.frontConfig.tsx:97
+#: src/components/_user/user/skills.frontConfig.tsx:100
 msgid "Spent when moving on the map: 10 points per case crossed. Cases your stamina can't cover are paid in oil. It cannot be upgraded with skill points."
 msgstr ""
 
@@ -9030,12 +9153,12 @@ msgstr ""
 msgid "Stable, conquest-proof strength. Still used for unrest, government wages and revolution cost. Other costs use <0>Average development</0>."
 msgstr ""
 
-#: src/components/_user/user/SkillUpgrade.tsx:266
+#: src/components/_user/user/SkillUpgrade.tsx:268
 msgid "Stage a prestige point on this skill (applied on save, reset on skill reset)"
 msgstr ""
 
-#: src/components/_user/user/skills.frontConfig.tsx:103
-#: src/components/_user/user/skills.frontConfig.tsx:104
+#: src/components/_user/user/skills.frontConfig.tsx:106
+#: src/components/_user/user/skills.frontConfig.tsx:107
 msgid "Stamina"
 msgstr ""
 
@@ -9121,7 +9244,7 @@ msgstr "Statistiskt omöjligt att ha så här mycket otur"
 msgid "Statistically rigged"
 msgstr "Statistiskt riggat"
 
-#: src/pages/company/[companyId]/index.tsx:63
+#: src/pages/company/[companyId]/index.tsx:54
 #: src/pages/war/[warId]/index.tsx:65
 msgid "Stats"
 msgstr "Statistik"
@@ -9365,11 +9488,11 @@ msgstr "Den där dopaminkicken är gratis"
 msgid "That's epic!"
 msgstr "Det är episkt!"
 
-#: src/components/_user/user/skills.frontConfig.tsx:111
+#: src/components/_user/user/skills.frontConfig.tsx:114
 msgid "The <0>Production Points</0> you generate each time you work"
 msgstr "De <0>produktionspoäng</0> du genererar varje gång du arbetar"
 
-#: src/components/_user/user/skills.frontConfig.tsx:40
+#: src/components/_user/user/skills.frontConfig.tsx:43
 msgid "The base value for <0>Damages</0> calculation."
 msgstr "Basvärdet för beräkning av <0>skada</0>."
 
@@ -9395,7 +9518,7 @@ msgstr "Kontraktet har rullats tillbaka. <0>{0}</0> har skickats tillbaka till <
 msgid "The cost is the law's base cost scaled by your country's average development."
 msgstr ""
 
-#: src/components/_user/user/skills.frontConfig.tsx:59
+#: src/components/_user/user/skills.frontConfig.tsx:62
 msgid "The damage factor increase of critical hits over normal hits"
 msgstr "Skadefaktorns ökning för fullträffar jämfört med normala träffar"
 
@@ -9448,6 +9571,10 @@ msgstr "Universum är skyldig dig något stort"
 #: src/components/_common/GameRules.tsx:117
 msgid "The use of bots, scripts, or any form of automation to gain an advantage over other players is strictly forbidden. This includes, but is not limited to, web scraping and creating scripts that bypass the game intended functionality or restrictions."
 msgstr "Användning av botar, skript eller någon form av automatisering för att skaffa sig fördelar gentemot andra spelare är strängt förbjudet. Detta inkluderar, men är inte begränsat till, webbskrapning och skapande av skript som kringgår spelets avsedda funktionalitet eller begränsningar."
+
+#: src/components/_economy/employee/employee.frontConfig.tsx:47
+msgid "Their work speed: every 10 Energy is one work action per hour."
+msgstr ""
 
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:139
 msgid "This action will submit your MU bid for this contract."
@@ -9839,12 +9966,26 @@ msgstr "Handel"
 msgid "Trading transaction"
 msgstr "Handelstransaktion"
 
+#: src/components/_economy/employee/employeeCards.tsx:258
+#: src/components/_economy/employee/EmployeeModal.tsx:234
+#: src/components/_economy/employee/EmployeeModal.tsx:256
+msgid "Train"
+msgstr ""
+
+#: src/components/_economy/employee/EmployeeModal.tsx:188
+msgid "Train to reveal traits"
+msgstr ""
+
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:16
 msgid "Trainee"
 msgstr "Aspirant"
 
 #: src/components/_other/upgrade/upgrade.frontConfig.tsx:432
 msgid "Training Grounds"
+msgstr ""
+
+#: src/components/_economy/employee/EmployeeModal.tsx:172
+msgid "Traits"
 msgstr ""
 
 #: src/components/_user/user/UserHeader.tsx:261
@@ -9880,19 +10021,19 @@ msgstr "Flytta till företag (valfritt)"
 msgid "Translator"
 msgstr "Översättare"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:619
+#: src/components/_user/mission/mission.frontConfig.tsx:575
 msgid "Travel"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:660
+#: src/components/_user/mission/mission.frontConfig.tsx:616
 msgid "Travel <0/> km on the map"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:658
+#: src/components/_user/mission/mission.frontConfig.tsx:614
 msgid "Travel Distance"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:621
+#: src/components/_user/mission/mission.frontConfig.tsx:577
 msgid "Travel to another region <0/> times"
 msgstr ""
 
@@ -10055,19 +10196,19 @@ msgstr ""
 msgid "Update worker"
 msgstr "Uppdatera anställd"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:444
+#: src/components/_user/mission/mission.frontConfig.tsx:400
 msgid "Upgrade a company"
 msgstr "Uppgradera ett företag"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:194
+#: src/components/_economy/company/CompanyDropdown.tsx:208
 msgid "Upgrade automated engine"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:443
+#: src/components/_user/mission/mission.frontConfig.tsx:399
 msgid "Upgrade Company"
 msgstr "Uppgradera företag"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:569
+#: src/components/_user/mission/mission.frontConfig.tsx:525
 msgid "Upgrade Skills"
 msgstr "Uppgradera färdigheter"
 
@@ -10075,7 +10216,7 @@ msgstr "Uppgradera färdigheter"
 msgid "Upgrade slots"
 msgstr ""
 
-#: src/components/_economy/company/CompanyDropdown.tsx:212
+#: src/components/_economy/company/CompanyDropdown.tsx:226
 msgid "Upgrade storage"
 msgstr ""
 
@@ -10083,11 +10224,11 @@ msgstr ""
 msgid "Upgrade to supporter"
 msgstr "Uppgradera till supporter"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:571
+#: src/components/_user/mission/mission.frontConfig.tsx:527
 msgid "Upgrade your skills <0/> times"
 msgstr ""
 
-#: src/pages/user/[userId]/skills.tsx:183
+#: src/pages/user/[userId]/skills.tsx:169
 msgid "Upgrade your skills!"
 msgstr "Uppgradera dina färdigheter!"
 
@@ -10095,16 +10236,16 @@ msgstr "Uppgradera dina färdigheter!"
 #: src/components/_military/mu/MuTooltip.tsx:96
 #: src/components/_political/map/MapMenu.tsx:477
 #: src/components/_political/region/RegionTooltip.tsx:114
-#: src/pages/company/[companyId]/index.tsx:49
+#: src/pages/company/[companyId]/index.tsx:33
 #: src/pages/region/[regionId]/index.tsx:48
 msgid "Upgrades"
 msgstr "Uppgraderingar"
 
-#: src/components/_user/mission/mission.frontConfig.tsx:591
+#: src/components/_user/mission/mission.frontConfig.tsx:547
 msgid "Use <0/>"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:589
+#: src/components/_user/mission/mission.frontConfig.tsx:545
 msgid "Use Pills"
 msgstr ""
 
@@ -10122,11 +10263,11 @@ msgstr "Använd din <0>hunger</0> för att äta och återställa din <1>hälsa</
 msgid "Used for shooting guns. Increases your <0>Attack</0>"
 msgstr "Används för skjutvapen. Ökar ditt <0>anfall</0>"
 
-#: src/components/_user/user/skills.frontConfig.tsx:180
+#: src/components/_user/user/skills.frontConfig.tsx:190
 msgid "Used to <0>Self Work</0> in your own companies"
 msgstr "Används för <0>eget arbete</0> i dina egna företag."
 
-#: src/components/_user/user/skills.frontConfig.tsx:86
+#: src/components/_user/user/skills.frontConfig.tsx:89
 msgid "Used to <0>Work</0>"
 msgstr "Används för att <0>arbeta</0>."
 
@@ -10367,11 +10508,11 @@ msgstr "Visa på kartan"
 msgid "Views"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:531
+#: src/components/_user/mission/mission.frontConfig.tsx:487
 msgid "Vote"
 msgstr ""
 
-#: src/components/_user/mission/mission.frontConfig.tsx:532
+#: src/components/_user/mission/mission.frontConfig.tsx:488
 msgid "Vote in an election"
 msgstr ""
 
@@ -10383,6 +10524,7 @@ msgstr "Röstande"
 msgid "VS"
 msgstr "mot"
 
+#: src/components/_economy/employee/EmployeeModal.tsx:207
 #: src/components/_economy/transaction/TransactionList.tsx:77
 #: src/components/_economy/work/WorkChart.tsx:245
 msgid "Wage"
@@ -10391,6 +10533,10 @@ msgstr "Lön"
 #: src/components/_user/notification/notification.frontConfig.tsx:2008
 msgid "Wage changed"
 msgstr "Lönen ändrad"
+
+#: src/components/_economy/employee/WorkforceSummary.tsx:41
+msgid "Wage cost"
+msgstr ""
 
 #: src/components/_economy/workOffer/EstimatedCompanyBenefit.tsx:119
 msgid "Wage cost ({productionPoints} pts):"
@@ -10543,7 +10689,7 @@ msgstr "Verktyg för datainsamling och datavisning som använder det officiella 
 msgid "White suit, gold everything"
 msgstr ""
 
-#: src/pages/companies.tsx:103
+#: src/pages/companies.tsx:114
 msgid "Whole Production"
 msgstr "Total produktion"
 
@@ -10638,10 +10784,14 @@ msgstr "Anställd uppdaterad!"
 #: src/components/_economy/company/CompanyHeader.tsx:35
 #: src/components/_economy/company/CompanyHeader.tsx:74
 #: src/components/_economy/company/CompanyTooltip.tsx:85
-#: src/pages/company/[companyId]/index.tsx:94
+#: src/pages/company/[companyId]/index.tsx:61
 #: src/pages/company/[companyId]/workers.tsx:37
 msgid "Workers"
 msgstr "Anställda"
+
+#: src/pages/companies.tsx:100
+msgid "Workforce"
+msgstr ""
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:58
 msgid "Working for others is a great way to earn money when starting out."
@@ -10685,6 +10835,15 @@ msgstr "XP"
 msgid "XP earned"
 msgstr ""
 
+#: src/components/_economy/employee/EmployeeModal.tsx:133
+msgid "y old"
+msgstr ""
+
+#. placeholder {0}: companiesLimit ?? 1
+#: src/components/_economy/company/CompanyDropdown.tsx:276
+msgid "You already have {0} active companies. Disable one first."
+msgstr ""
+
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:25
 msgid "You are a beautiful person"
 msgstr "Du är en fin människa"
@@ -10714,7 +10873,7 @@ msgstr "Du är redan vice statsminister i ett annat land. Avgå först."
 msgid "You are here"
 msgstr ""
 
-#: src/pages/companies.tsx:45
+#: src/pages/companies.tsx:47
 #: src/pages/user/[userId]/companies.tsx:64
 msgid "You are jobless"
 msgstr "Du är arbetslös"
@@ -10837,6 +10996,10 @@ msgstr "Du har flyttats från <0/> till <1/>"
 msgid "You have consumed <0>{0}</0>, it's effect starts now and ends in <1>{buffDuration}h</1>."
 msgstr "Du har konsumerat <0>{0}</0>, dess effekt börjar nu och upphör om <1>{buffDuration}h</1>."
 
+#: src/components/_economy/employee/WorkforceSummary.tsx:83
+msgid "You have no employees yet"
+msgstr ""
+
 #: src/components/_user/notification/notification.frontConfig.tsx:1738
 msgid "You have prestiged! Enjoy your permanent XP bonus and prestige point."
 msgstr ""
@@ -10881,7 +11044,7 @@ msgstr "Du bjöd in en vän eller spammade foruminlägg. När de når nivå {0} 
 msgid "You left the company."
 msgstr "Du lämnade företaget."
 
-#: src/components/_economy/company/CompanyDropdown.tsx:61
+#: src/components/_economy/company/CompanyDropdown.tsx:65
 msgid "You left your job!"
 msgstr "Du lämnade ditt jobb!"
 
@@ -11016,7 +11179,7 @@ msgstr "Du nominerades till vice statsminister för ditt land"
 msgid "You were so close"
 msgstr "Det var nära ögat"
 
-#: src/pages/user/[userId]/skills.tsx:123
+#: src/pages/user/[userId]/skills.tsx:120
 msgid "You will drop to level 25 (losing 65,000 XP), gain a permanent +50% XP bonus (+10% per additional prestige level) and a prestige point, and your skills will be reset for free."
 msgstr ""
 
