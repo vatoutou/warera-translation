@@ -125,7 +125,7 @@ msgid "{0} days cooldown"
 msgstr "{0} dagen afkoelperiode"
 
 #. placeholder {0}: user.data.leveling.freeReset
-#: src/pages/user/[userId]/skills.tsx:266
+#: src/pages/user/[userId]/skills.tsx:316
 msgid "{0} Free"
 msgstr "{0} Beschikbaar"
 
@@ -2874,7 +2874,7 @@ msgstr "Klik om een motie te selecteren"
 msgid "Climate"
 msgstr "Klimaat"
 
-#: ../__ui/src/components/Modal/Modal.tsx:364
+#: ../__ui/src/components/Modal/Modal.tsx:375
 #: ../__ui/src/components/Modal/ModalOld.tsx:249
 #: src/components/_political/map/MapMenu.tsx:207
 msgid "Close"
@@ -3260,7 +3260,7 @@ msgstr "Kernregio's"
 msgid "Corporal"
 msgstr "Korporaal"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:223
+#: src/components/_economy/employee/EmployeeModal.tsx:272
 msgid "Cost/PP"
 msgstr ""
 
@@ -3492,10 +3492,6 @@ msgstr ""
 #: src/components/_military/battle/BattleSystem.tsx:632
 msgid "Current total:"
 msgstr "Huidig totaal:"
-
-#: src/pages/user/[userId]/skills.tsx:246
-msgid "Currently ×{resetMultiplier} because you reset recently. Drops by 1× each day, back down to ×1."
-msgstr ""
 
 #: src/components/_user/user/UserFontSelector.tsx:148
 msgid "Custom fonts are a Supporter Plan feature."
@@ -3951,7 +3947,7 @@ msgstr "Sluiten"
 
 #. placeholder {0}: employee.name || 'this employee'
 #. placeholder {1}: employeeConfig.fireSeverance
-#: src/components/_economy/employee/EmployeeModal.tsx:293
+#: src/components/_economy/employee/EmployeeModal.tsx:403
 #: src/components/_economy/employee/EmployeePanel.tsx:98
 msgid "Dismiss {0} and pay <0>{1}</0> severance? This cannot be undone."
 msgstr ""
@@ -4056,11 +4052,6 @@ msgstr "e. Inhoud over lopende oorlogen en gewapende conflicten in de echte were
 
 #: src/components/_user/user/SkillUpgrade.tsx:293
 msgid "Each prestige point gives the equivalent of {skillBonusLevels} level of the selected skill"
-msgstr ""
-
-#. placeholder {0}: gameConfig.user.resetSkillCost.maxMultiplier
-#: src/pages/user/[userId]/skills.tsx:247
-msgid "Each reset temporarily raises the next reset's cost to ×{0}, dropping by 1× per day back to ×1."
 msgstr ""
 
 #: src/components/_user/milestone/milestone.frontConfig.tsx:34
@@ -4211,8 +4202,8 @@ msgstr "Elite Broek"
 
 #: src/components/_economy/employee/employeeCards.tsx:206
 #: src/components/_economy/employee/EmployeeList.tsx:67
-#: src/components/_economy/employee/EmployeeModal.tsx:107
-#: src/components/_economy/employee/EmployeeModal.tsx:129
+#: src/components/_economy/employee/EmployeeModal.tsx:150
+#: src/components/_economy/employee/EmployeeModal.tsx:172
 msgid "Employee"
 msgstr ""
 
@@ -4277,7 +4268,7 @@ msgstr "Eindigde op <0/>"
 msgid "Enemies"
 msgstr "Vijanden"
 
-#: src/components/_economy/employee/employee.frontConfig.tsx:45
+#: src/components/_economy/employee/employee.frontConfig.tsx:52
 #: src/components/_economy/workOffer/WorkOfferList.tsx:148
 #: src/components/_user/user/skills.frontConfig.tsx:93
 #: src/components/_user/user/skills.frontConfig.tsx:94
@@ -4324,8 +4315,11 @@ msgid "Error"
 msgstr "Fout"
 
 #: src/components/_economy/employee/EmployeeList.tsx:146
-#: src/components/_economy/employee/EmployeeModal.tsx:215
 msgid "Est."
+msgstr ""
+
+#: src/components/_economy/employee/EmployeeModal.tsx:263
+msgid "Est. output"
 msgstr ""
 
 #: src/components/_economy/employee/WorkforceSummary.tsx:33
@@ -4400,6 +4394,10 @@ msgstr ""
 msgid "Expansionist"
 msgstr ""
 
+#: src/components/_economy/employee/EmployeeModal.tsx:253
+msgid "Expected"
+msgstr ""
+
 #: src/components/_military/battle/MyBattlesRecapCard.tsx:233
 msgid "Expected loot"
 msgstr ""
@@ -4471,10 +4469,6 @@ msgstr "Google-login is niet gestart."
 #: src/components/_user/auth/ConnectFromModal.tsx:138
 msgid "Failed to start Google login. Please retry the CAPTCHA."
 msgstr "Google-login is niet gestart. Probeer de CAPTCHA alsjeblieft opnieuw."
-
-#: src/components/_economy/employee/EmployeeModal.tsx:208
-msgid "Fair"
-msgstr ""
 
 #: src/components/_user/user/FamilyGroup.tsx:49
 msgid "Family Group"
@@ -4669,7 +4663,7 @@ msgid "Find another job"
 msgstr "Zoek een andere baan"
 
 #: src/components/_economy/employee/employeeCards.tsx:268
-#: src/components/_economy/employee/EmployeeModal.tsx:286
+#: src/components/_economy/employee/EmployeeModal.tsx:396
 #: src/components/_political/government/Government.tsx:253
 #: src/components/_user/user/UserEffectSelector.tsx:61
 #: src/components/_user/worker/WorkerEditFormModal.tsx:214
@@ -4761,10 +4755,6 @@ msgstr "Gratis dagelijkse beloning"
 
 #: src/components/_other/shop/skinPack.frontConfig.tsx:49
 msgid "Full throttle, no brakes"
-msgstr ""
-
-#: src/components/_economy/employee/EmployeeModal.tsx:243
-msgid "Fully trained: no Potential left"
 msgstr ""
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:27
@@ -5160,13 +5150,17 @@ msgstr "Help MU leden"
 msgid "Help the game to grow"
 msgstr "Help het spel te groeien"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:171
+#: src/components/_economy/employee/EmployeeModal.tsx:217
 msgid "hidden"
 msgstr ""
 
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:157
 msgid "High Commander"
 msgstr "Hoge Commandant"
+
+#: src/pages/user/[userId]/skills.tsx:271
+msgid "Higher because you reset recently. It drops by 1× each day back to ×1:"
+msgstr ""
 
 #: src/components/_economy/employee/employeeCards.tsx:333
 msgid "Hire"
@@ -5218,7 +5212,7 @@ msgstr ""
 msgid "Hourly upkeep"
 msgstr ""
 
-#: src/components/_economy/employee/employee.frontConfig.tsx:37
+#: src/components/_economy/employee/employee.frontConfig.tsx:44
 msgid "How many production points this employee banks each time they work."
 msgstr ""
 
@@ -6034,7 +6028,7 @@ msgid "Max rate: {0} money per 1000 construction points. The pool leaves your tr
 msgstr ""
 
 #: src/components/_economy/employee/employeeCards.tsx:257
-#: src/components/_economy/employee/EmployeeModal.tsx:275
+#: src/components/_economy/employee/EmployeeModal.tsx:385
 msgid "Maxed"
 msgstr ""
 
@@ -6440,8 +6434,8 @@ msgstr ""
 msgid "Monthly:"
 msgstr "Maandelijks:"
 
-#: src/components/_economy/employee/employee.frontConfig.tsx:57
-msgid "Morale shield: Responsibility ÷ 10 of every happiness loss is cancelled (fully shielded at 10). Does not affect output."
+#: src/components/_economy/employee/employee.frontConfig.tsx:64
+msgid "Morale shield: cancels a share of every happiness loss, ramping from 0 to {RESP_MAX_SHIELD_PERCENT}% at {RESP_FULL_AT} Responsibility. Does not affect output."
 msgstr ""
 
 #: src/components/_layout/LayoutLeftIcons.tsx:227
@@ -6789,6 +6783,10 @@ msgstr "Nieuws"
 
 #: src/components/_user/milestone/MilestoneTiersModal.tsx:106
 msgid "Next"
+msgstr ""
+
+#: src/pages/user/[userId]/skills.tsx:284
+msgid "Next discount in"
 msgstr ""
 
 #: src/components/_other/upgrade/UpgradesGridSummary.tsx:226
@@ -7668,7 +7666,7 @@ msgid "Post announcement"
 msgstr ""
 
 #: src/components/_economy/employee/employeeCards.tsx:237
-#: src/components/_economy/employee/EmployeeModal.tsx:230
+#: src/components/_economy/employee/EmployeeModal.tsx:283
 msgid "Potential"
 msgstr ""
 
@@ -7726,7 +7724,7 @@ msgstr ""
 msgid "Preset saved!"
 msgstr ""
 
-#: src/pages/user/[userId]/skills.tsx:238
+#: src/pages/user/[userId]/skills.tsx:259
 msgid "Presets"
 msgstr ""
 
@@ -7757,7 +7755,7 @@ msgstr "Presidentsverkiezingen"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:135
 #: src/components/_user/user/Level.tsx:143
-#: src/pages/user/[userId]/skills.tsx:228
+#: src/pages/user/[userId]/skills.tsx:249
 msgid "Prestige"
 msgstr ""
 
@@ -7827,7 +7825,7 @@ msgstr "Geproduceerd item"
 msgid "Produced item changed!"
 msgstr "Geproduceerd item veranderd!"
 
-#: src/components/_economy/employee/employee.frontConfig.tsx:35
+#: src/components/_economy/employee/employee.frontConfig.tsx:42
 #: src/components/_economy/workOffer/WorkOfferList.tsx:162
 #: src/components/_user/user/skills.frontConfig.tsx:119
 #: src/components/_user/user/skills.frontConfig.tsx:120
@@ -8508,7 +8506,7 @@ msgstr ""
 msgid "Reroll Mission"
 msgstr "Reroll missie"
 
-#: src/pages/user/[userId]/skills.tsx:263
+#: src/pages/user/[userId]/skills.tsx:313
 msgid "Reset"
 msgstr "Reset"
 
@@ -8516,7 +8514,7 @@ msgstr "Reset"
 msgid "Reset CAPTCHA"
 msgstr "Reset CAPTCHA"
 
-#: src/pages/user/[userId]/skills.tsx:241
+#: src/pages/user/[userId]/skills.tsx:262
 msgid "Reset cost"
 msgstr ""
 
@@ -8538,6 +8536,11 @@ msgstr "Gebruikersnaam resetten"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:493
 msgid "Reset your skills"
+msgstr ""
+
+#. placeholder {0}: gameConfig.user.resetSkillCost.maxMultiplier
+#: src/pages/user/[userId]/skills.tsx:290
+msgid "Resetting temporarily raises the next reset's cost to ×{0}, dropping by 1× each day back to ×1."
 msgstr ""
 
 #: src/pages/region/[regionId]/index.tsx:115
@@ -8604,7 +8607,7 @@ msgstr "Grondstoffen herverdeeld"
 msgid "Response to message"
 msgstr "Reactie op bericht"
 
-#: src/components/_economy/employee/employee.frontConfig.tsx:55
+#: src/components/_economy/employee/employee.frontConfig.tsx:62
 msgid "Responsibility"
 msgstr ""
 
@@ -8745,7 +8748,7 @@ msgstr "Zit je bijna zonder levenspunten?"
 #: src/components/_political/party/PartyDescriptionModal.tsx:72
 #: src/components/_political/region/UpgradeList.tsx:151
 #: src/components/_user/auth/WelcomeModal.tsx:182
-#: src/pages/user/[userId]/skills.tsx:295
+#: src/pages/user/[userId]/skills.tsx:345
 msgid "Save"
 msgstr "Opslaan"
 
@@ -9109,7 +9112,7 @@ msgstr "Vaardigheden"
 msgid "Skills make you stronger. Let's boost your abilities!"
 msgstr "Vaardigheden maken je sterker. Laten we je vaardigheden verbeteren!"
 
-#: src/pages/user/[userId]/skills.tsx:64
+#: src/pages/user/[userId]/skills.tsx:69
 msgid "Skills saved!"
 msgstr "Vaardigheden opgeslagen!"
 
@@ -9647,7 +9650,7 @@ msgstr "Het universum is je iets groots verschuldigd"
 msgid "The use of bots, scripts, or any form of automation to gain an advantage over other players is strictly forbidden. This includes, but is not limited to, web scraping and creating scripts that bypass the game intended functionality or restrictions."
 msgstr "Het gebruik van bots, scripts of enige vorm van automatisering om een voordeel te behalen ten opzichte van andere spelers is ten strengste verboden. Dit omvat, maar is niet beperkt tot, web scraping en het maken van scripts die de bedoelde functionaliteit of beperkingen van het spel omzeilen."
 
-#: src/components/_economy/employee/employee.frontConfig.tsx:47
+#: src/components/_economy/employee/employee.frontConfig.tsx:54
 msgid "Their work speed: every 10 Energy is one work action per hour."
 msgstr ""
 
@@ -9717,7 +9720,7 @@ msgstr "Deze wet vereist dat er minstens {minActiveCitizen} actieve burgers (niv
 msgid "This member won't be able to be nominated again for {cooldownDays} days."
 msgstr "Dit lid kan niet opnieuw worden genomineerd voor {cooldownDays} dagen."
 
-#: src/pages/user/[userId]/skills.tsx:120
+#: src/pages/user/[userId]/skills.tsx:125
 msgid "This refunds all your skill points. Resetting again soon costs more (the cost drops back down each day since your last reset)."
 msgstr ""
 
@@ -10045,11 +10048,11 @@ msgid "Trading transaction"
 msgstr "Handelstransactie"
 
 #: src/components/_economy/employee/employeeCards.tsx:255
-#: src/components/_economy/employee/EmployeeModal.tsx:273
+#: src/components/_economy/employee/EmployeeModal.tsx:383
 msgid "Train"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:183
+#: src/components/_economy/employee/EmployeeModal.tsx:229
 msgid "Train to reveal traits"
 msgstr ""
 
@@ -10061,7 +10064,7 @@ msgstr "Leerling"
 msgid "Training Grounds"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:167
+#: src/components/_economy/employee/EmployeeModal.tsx:213
 msgid "Traits"
 msgstr ""
 
@@ -10309,7 +10312,7 @@ msgstr "Upgrade naar supporter"
 msgid "Upgrade your skills <0/> times"
 msgstr ""
 
-#: src/pages/user/[userId]/skills.tsx:208
+#: src/pages/user/[userId]/skills.tsx:229
 msgid "Upgrade your skills!"
 msgstr "Verbeter je vaardigheden!"
 
@@ -10605,7 +10608,9 @@ msgstr "Kiezer"
 msgid "VS"
 msgstr "tegen"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:202
+#: src/components/_economy/employee/EmployeeModal.tsx:249
+#: src/components/_economy/employee/EmployeeModal.tsx:328
+#: src/components/_economy/employee/EmployeeModal.tsx:353
 #: src/components/_economy/transaction/TransactionList.tsx:77
 #: src/components/_economy/work/WorkChart.tsx:245
 msgid "Wage"
@@ -10920,7 +10925,7 @@ msgstr ""
 msgid "XP earned"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:133
+#: src/components/_economy/employee/EmployeeModal.tsx:176
 msgid "y old"
 msgstr ""
 
@@ -11056,7 +11061,7 @@ msgstr "Je wordt automatisch goedgekeurd omdat de bevolking van het land lager i
 msgid "You have a case!"
 msgstr "Je hebt een kist!"
 
-#: src/pages/user/[userId]/skills.tsx:244
+#: src/pages/user/[userId]/skills.tsx:265
 msgid "You have a free skill reset."
 msgstr ""
 
@@ -11268,7 +11273,7 @@ msgstr "Je bent genomineerd als vice-president van je land"
 msgid "You were so close"
 msgstr "Je was zo dichtbij"
 
-#: src/pages/user/[userId]/skills.tsx:152
+#: src/pages/user/[userId]/skills.tsx:157
 msgid "You will drop to level 25 (losing 65,000 XP), gain a permanent +50% XP bonus (+10% per additional prestige level) and a prestige point, and your skills will be reset for free."
 msgstr ""
 

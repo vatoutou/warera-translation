@@ -123,7 +123,7 @@ msgid "{0} days cooldown"
 msgstr "{0} zile timp de așteptare"
 
 #. placeholder {0}: user.data.leveling.freeReset
-#: src/pages/user/[userId]/skills.tsx:266
+#: src/pages/user/[userId]/skills.tsx:316
 msgid "{0} Free"
 msgstr "{0} Gratis"
 
@@ -2872,7 +2872,7 @@ msgstr "Click pentru a selecta o moțiune"
 msgid "Climate"
 msgstr "Climă"
 
-#: ../__ui/src/components/Modal/Modal.tsx:364
+#: ../__ui/src/components/Modal/Modal.tsx:375
 #: ../__ui/src/components/Modal/ModalOld.tsx:249
 #: src/components/_political/map/MapMenu.tsx:207
 msgid "Close"
@@ -3258,7 +3258,7 @@ msgstr "Regiuni de bază"
 msgid "Corporal"
 msgstr "Caporal"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:223
+#: src/components/_economy/employee/EmployeeModal.tsx:272
 msgid "Cost/PP"
 msgstr ""
 
@@ -3490,10 +3490,6 @@ msgstr ""
 #: src/components/_military/battle/BattleSystem.tsx:632
 msgid "Current total:"
 msgstr "Total până acum:"
-
-#: src/pages/user/[userId]/skills.tsx:246
-msgid "Currently ×{resetMultiplier} because you reset recently. Drops by 1× each day, back down to ×1."
-msgstr ""
 
 #: src/components/_user/user/UserFontSelector.tsx:148
 msgid "Custom fonts are a Supporter Plan feature."
@@ -3949,7 +3945,7 @@ msgstr "Închide"
 
 #. placeholder {0}: employee.name || 'this employee'
 #. placeholder {1}: employeeConfig.fireSeverance
-#: src/components/_economy/employee/EmployeeModal.tsx:293
+#: src/components/_economy/employee/EmployeeModal.tsx:403
 #: src/components/_economy/employee/EmployeePanel.tsx:98
 msgid "Dismiss {0} and pay <0>{1}</0> severance? This cannot be undone."
 msgstr ""
@@ -4054,11 +4050,6 @@ msgstr ""
 
 #: src/components/_user/user/SkillUpgrade.tsx:293
 msgid "Each prestige point gives the equivalent of {skillBonusLevels} level of the selected skill"
-msgstr ""
-
-#. placeholder {0}: gameConfig.user.resetSkillCost.maxMultiplier
-#: src/pages/user/[userId]/skills.tsx:247
-msgid "Each reset temporarily raises the next reset's cost to ×{0}, dropping by 1× per day back to ×1."
 msgstr ""
 
 #: src/components/_user/milestone/milestone.frontConfig.tsx:34
@@ -4209,8 +4200,8 @@ msgstr "Pantaloni de elită"
 
 #: src/components/_economy/employee/employeeCards.tsx:206
 #: src/components/_economy/employee/EmployeeList.tsx:67
-#: src/components/_economy/employee/EmployeeModal.tsx:107
-#: src/components/_economy/employee/EmployeeModal.tsx:129
+#: src/components/_economy/employee/EmployeeModal.tsx:150
+#: src/components/_economy/employee/EmployeeModal.tsx:172
 msgid "Employee"
 msgstr ""
 
@@ -4275,7 +4266,7 @@ msgstr "Încheiat <0/>"
 msgid "Enemies"
 msgstr "Inamici"
 
-#: src/components/_economy/employee/employee.frontConfig.tsx:45
+#: src/components/_economy/employee/employee.frontConfig.tsx:52
 #: src/components/_economy/workOffer/WorkOfferList.tsx:148
 #: src/components/_user/user/skills.frontConfig.tsx:93
 #: src/components/_user/user/skills.frontConfig.tsx:94
@@ -4322,8 +4313,11 @@ msgid "Error"
 msgstr "Eroare"
 
 #: src/components/_economy/employee/EmployeeList.tsx:146
-#: src/components/_economy/employee/EmployeeModal.tsx:215
 msgid "Est."
+msgstr ""
+
+#: src/components/_economy/employee/EmployeeModal.tsx:263
+msgid "Est. output"
 msgstr ""
 
 #: src/components/_economy/employee/WorkforceSummary.tsx:33
@@ -4398,6 +4392,10 @@ msgstr ""
 msgid "Expansionist"
 msgstr ""
 
+#: src/components/_economy/employee/EmployeeModal.tsx:253
+msgid "Expected"
+msgstr ""
+
 #: src/components/_military/battle/MyBattlesRecapCard.tsx:233
 msgid "Expected loot"
 msgstr ""
@@ -4469,10 +4467,6 @@ msgstr "Eroareîn pornirea autentificării cu Google. "
 #: src/components/_user/auth/ConnectFromModal.tsx:138
 msgid "Failed to start Google login. Please retry the CAPTCHA."
 msgstr "Eroare în pornirea autentificării cu Google. Refă testul CAPTCHA."
-
-#: src/components/_economy/employee/EmployeeModal.tsx:208
-msgid "Fair"
-msgstr ""
 
 #: src/components/_user/user/FamilyGroup.tsx:49
 msgid "Family Group"
@@ -4667,7 +4661,7 @@ msgid "Find another job"
 msgstr "Găsește alt loc de muncă"
 
 #: src/components/_economy/employee/employeeCards.tsx:268
-#: src/components/_economy/employee/EmployeeModal.tsx:286
+#: src/components/_economy/employee/EmployeeModal.tsx:396
 #: src/components/_political/government/Government.tsx:253
 #: src/components/_user/user/UserEffectSelector.tsx:61
 #: src/components/_user/worker/WorkerEditFormModal.tsx:214
@@ -4759,10 +4753,6 @@ msgstr "Recompensă zilnică gratuită"
 
 #: src/components/_other/shop/skinPack.frontConfig.tsx:49
 msgid "Full throttle, no brakes"
-msgstr ""
-
-#: src/components/_economy/employee/EmployeeModal.tsx:243
-msgid "Fully trained: no Potential left"
 msgstr ""
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:27
@@ -5158,13 +5148,17 @@ msgstr "Ajută membrii UM"
 msgid "Help the game to grow"
 msgstr "Ajută jocul să crească"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:171
+#: src/components/_economy/employee/EmployeeModal.tsx:217
 msgid "hidden"
 msgstr ""
 
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:157
 msgid "High Commander"
 msgstr "Înalt Comandant"
+
+#: src/pages/user/[userId]/skills.tsx:271
+msgid "Higher because you reset recently. It drops by 1× each day back to ×1:"
+msgstr ""
 
 #: src/components/_economy/employee/employeeCards.tsx:333
 msgid "Hire"
@@ -5216,7 +5210,7 @@ msgstr ""
 msgid "Hourly upkeep"
 msgstr ""
 
-#: src/components/_economy/employee/employee.frontConfig.tsx:37
+#: src/components/_economy/employee/employee.frontConfig.tsx:44
 msgid "How many production points this employee banks each time they work."
 msgstr ""
 
@@ -6032,7 +6026,7 @@ msgid "Max rate: {0} money per 1000 construction points. The pool leaves your tr
 msgstr ""
 
 #: src/components/_economy/employee/employeeCards.tsx:257
-#: src/components/_economy/employee/EmployeeModal.tsx:275
+#: src/components/_economy/employee/EmployeeModal.tsx:385
 msgid "Maxed"
 msgstr ""
 
@@ -6438,8 +6432,8 @@ msgstr ""
 msgid "Monthly:"
 msgstr "Lunar:"
 
-#: src/components/_economy/employee/employee.frontConfig.tsx:57
-msgid "Morale shield: Responsibility ÷ 10 of every happiness loss is cancelled (fully shielded at 10). Does not affect output."
+#: src/components/_economy/employee/employee.frontConfig.tsx:64
+msgid "Morale shield: cancels a share of every happiness loss, ramping from 0 to {RESP_MAX_SHIELD_PERCENT}% at {RESP_FULL_AT} Responsibility. Does not affect output."
 msgstr ""
 
 #: src/components/_layout/LayoutLeftIcons.tsx:227
@@ -6787,6 +6781,10 @@ msgstr "Știri"
 
 #: src/components/_user/milestone/MilestoneTiersModal.tsx:106
 msgid "Next"
+msgstr ""
+
+#: src/pages/user/[userId]/skills.tsx:284
+msgid "Next discount in"
 msgstr ""
 
 #: src/components/_other/upgrade/UpgradesGridSummary.tsx:226
@@ -7666,7 +7664,7 @@ msgid "Post announcement"
 msgstr ""
 
 #: src/components/_economy/employee/employeeCards.tsx:237
-#: src/components/_economy/employee/EmployeeModal.tsx:230
+#: src/components/_economy/employee/EmployeeModal.tsx:283
 msgid "Potential"
 msgstr ""
 
@@ -7724,7 +7722,7 @@ msgstr ""
 msgid "Preset saved!"
 msgstr ""
 
-#: src/pages/user/[userId]/skills.tsx:238
+#: src/pages/user/[userId]/skills.tsx:259
 msgid "Presets"
 msgstr ""
 
@@ -7755,7 +7753,7 @@ msgstr "Alegeri prezidențiale"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:135
 #: src/components/_user/user/Level.tsx:143
-#: src/pages/user/[userId]/skills.tsx:228
+#: src/pages/user/[userId]/skills.tsx:249
 msgid "Prestige"
 msgstr ""
 
@@ -7825,7 +7823,7 @@ msgstr "Obiectul produs"
 msgid "Produced item changed!"
 msgstr "Obiectul produs a fost schimbat!"
 
-#: src/components/_economy/employee/employee.frontConfig.tsx:35
+#: src/components/_economy/employee/employee.frontConfig.tsx:42
 #: src/components/_economy/workOffer/WorkOfferList.tsx:162
 #: src/components/_user/user/skills.frontConfig.tsx:119
 #: src/components/_user/user/skills.frontConfig.tsx:120
@@ -8506,7 +8504,7 @@ msgstr ""
 msgid "Reroll Mission"
 msgstr "Schimbă misiunea"
 
-#: src/pages/user/[userId]/skills.tsx:263
+#: src/pages/user/[userId]/skills.tsx:313
 msgid "Reset"
 msgstr "Reset"
 
@@ -8514,7 +8512,7 @@ msgstr "Reset"
 msgid "Reset CAPTCHA"
 msgstr "Resetează testul CAPTCHA"
 
-#: src/pages/user/[userId]/skills.tsx:241
+#: src/pages/user/[userId]/skills.tsx:262
 msgid "Reset cost"
 msgstr ""
 
@@ -8536,6 +8534,11 @@ msgstr "Resetează Nume"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:493
 msgid "Reset your skills"
+msgstr ""
+
+#. placeholder {0}: gameConfig.user.resetSkillCost.maxMultiplier
+#: src/pages/user/[userId]/skills.tsx:290
+msgid "Resetting temporarily raises the next reset's cost to ×{0}, dropping by 1× each day back to ×1."
 msgstr ""
 
 #: src/pages/region/[regionId]/index.tsx:115
@@ -8602,7 +8605,7 @@ msgstr "Resurse redistribuite"
 msgid "Response to message"
 msgstr "Răspuns la mesaj"
 
-#: src/components/_economy/employee/employee.frontConfig.tsx:55
+#: src/components/_economy/employee/employee.frontConfig.tsx:62
 msgid "Responsibility"
 msgstr ""
 
@@ -8743,7 +8746,7 @@ msgstr "Nu mai ai viață?"
 #: src/components/_political/party/PartyDescriptionModal.tsx:72
 #: src/components/_political/region/UpgradeList.tsx:151
 #: src/components/_user/auth/WelcomeModal.tsx:182
-#: src/pages/user/[userId]/skills.tsx:295
+#: src/pages/user/[userId]/skills.tsx:345
 msgid "Save"
 msgstr "Salvează"
 
@@ -9107,7 +9110,7 @@ msgstr "Competențe"
 msgid "Skills make you stronger. Let's boost your abilities!"
 msgstr "Competențele te fac mai puternic. Hai să-ți îmbunătățim abilitățile!"
 
-#: src/pages/user/[userId]/skills.tsx:64
+#: src/pages/user/[userId]/skills.tsx:69
 msgid "Skills saved!"
 msgstr "Competențe salvate!"
 
@@ -9645,7 +9648,7 @@ msgstr "Universul îți datorează ceva mai bun"
 msgid "The use of bots, scripts, or any form of automation to gain an advantage over other players is strictly forbidden. This includes, but is not limited to, web scraping and creating scripts that bypass the game intended functionality or restrictions."
 msgstr ""
 
-#: src/components/_economy/employee/employee.frontConfig.tsx:47
+#: src/components/_economy/employee/employee.frontConfig.tsx:54
 msgid "Their work speed: every 10 Energy is one work action per hour."
 msgstr ""
 
@@ -9715,7 +9718,7 @@ msgstr "Această lege necesită un minumim de {minActiveCitizen} cetățeni acti
 msgid "This member won't be able to be nominated again for {cooldownDays} days."
 msgstr "Acest membru nu poate fi nominalizat pentru {cooldownDays} zile."
 
-#: src/pages/user/[userId]/skills.tsx:120
+#: src/pages/user/[userId]/skills.tsx:125
 msgid "This refunds all your skill points. Resetting again soon costs more (the cost drops back down each day since your last reset)."
 msgstr ""
 
@@ -10043,11 +10046,11 @@ msgid "Trading transaction"
 msgstr "Tranzacție"
 
 #: src/components/_economy/employee/employeeCards.tsx:255
-#: src/components/_economy/employee/EmployeeModal.tsx:273
+#: src/components/_economy/employee/EmployeeModal.tsx:383
 msgid "Train"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:183
+#: src/components/_economy/employee/EmployeeModal.tsx:229
 msgid "Train to reveal traits"
 msgstr ""
 
@@ -10059,7 +10062,7 @@ msgstr "Stagiar"
 msgid "Training Grounds"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:167
+#: src/components/_economy/employee/EmployeeModal.tsx:213
 msgid "Traits"
 msgstr ""
 
@@ -10307,7 +10310,7 @@ msgstr "Devino Susținător"
 msgid "Upgrade your skills <0/> times"
 msgstr ""
 
-#: src/pages/user/[userId]/skills.tsx:208
+#: src/pages/user/[userId]/skills.tsx:229
 msgid "Upgrade your skills!"
 msgstr "Crește competențele!"
 
@@ -10603,7 +10606,9 @@ msgstr "Votant"
 msgid "VS"
 msgstr "VS"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:202
+#: src/components/_economy/employee/EmployeeModal.tsx:249
+#: src/components/_economy/employee/EmployeeModal.tsx:328
+#: src/components/_economy/employee/EmployeeModal.tsx:353
 #: src/components/_economy/transaction/TransactionList.tsx:77
 #: src/components/_economy/work/WorkChart.tsx:245
 msgid "Wage"
@@ -10918,7 +10923,7 @@ msgstr ""
 msgid "XP earned"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:133
+#: src/components/_economy/employee/EmployeeModal.tsx:176
 msgid "y old"
 msgstr ""
 
@@ -11054,7 +11059,7 @@ msgstr "Vei fi aprobat automat, deoarece populația acestei țări este sub"
 msgid "You have a case!"
 msgstr "Ai o cutie!"
 
-#: src/pages/user/[userId]/skills.tsx:244
+#: src/pages/user/[userId]/skills.tsx:265
 msgid "You have a free skill reset."
 msgstr ""
 
@@ -11266,7 +11271,7 @@ msgstr "Ai fost nominalizat vicepreședintele țării"
 msgid "You were so close"
 msgstr "Erai așa de aproape"
 
-#: src/pages/user/[userId]/skills.tsx:152
+#: src/pages/user/[userId]/skills.tsx:157
 msgid "You will drop to level 25 (losing 65,000 XP), gain a permanent +50% XP bonus (+10% per additional prestige level) and a prestige point, and your skills will be reset for free."
 msgstr ""
 
