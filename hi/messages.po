@@ -287,20 +287,21 @@ msgstr "*जल सकता है"
 msgid "/day"
 msgstr "दिन"
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:293
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:316
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:308
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:331
 #: src/components/_economy/manager/ManagerBestOfferLine.tsx:41
 #: src/components/_economy/manager/ManagerOfferRow.tsx:199
 #: src/components/_economy/manager/ManagerRateReductionAlert.tsx:43
+#: src/components/_economy/manager/MoveManagerModal.tsx:69
 msgid "/h"
 msgstr ""
 
 #. placeholder {0}: contract.managementLevel
-#: src/components/_economy/manager/ManagerRateFormModal.tsx:145
+#: src/components/_economy/manager/ManagerRateFormModal.tsx:114
 msgid "/h at Management {0}"
 msgstr ""
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:245
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:260
 msgid "/h max"
 msgstr ""
 
@@ -933,7 +934,7 @@ msgstr ""
 #. placeholder {2}: employeeConfig.skills.managementBonusPercentPerLevel
 #. placeholder {3}: contract.managementLevel
 #. placeholder {4}: contract.isInactive && ( <p>They are away, so none of it applies right now.</p> )
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:122
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:125
 msgid "<0>Every employee of this company produces <1>{0}</1> more.</0><2>{1}% for having a manager at all, plus {2}% per Management level, and they have {3}.</2>{4}"
 msgstr ""
 
@@ -1444,7 +1445,7 @@ msgstr ""
 msgid "A company's Break Room level is the number of employees it can hold."
 msgstr ""
 
-#: src/components/_economy/manager/ManagerRateFormModal.tsx:137
+#: src/components/_economy/manager/ManagerRateFormModal.tsx:106
 msgid "A cut applies now. They accept it or they resign."
 msgstr ""
 
@@ -1712,6 +1713,7 @@ msgid "All categories"
 msgstr "सभी श्रेणियाँ"
 
 #: src/components/_economy/employee/MoveEmployeeModal.tsx:268
+#: src/components/_economy/manager/MoveManagerModal.tsx:223
 msgid "All companies"
 msgstr ""
 
@@ -2807,8 +2809,16 @@ msgstr ""
 msgid "Change color to <0>{0}</0>"
 msgstr ""
 
+#: src/components/_economy/manager/ManagerRateFormModal.tsx:98
+msgid "Change manager pay"
+msgstr ""
+
 #: src/components/_military/mu/MuSettings.tsx:89
 msgid "Change nationality"
+msgstr ""
+
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:198
+msgid "Change pay"
 msgstr ""
 
 #: src/components/_economy/company/CompanyChangeItemFormModal.tsx:65
@@ -3596,7 +3606,7 @@ msgstr ""
 msgid "Current total:"
 msgstr "वर्तमान कुल:"
 
-#: src/components/_economy/manager/ManagerRateFormModal.tsx:141
+#: src/components/_economy/manager/ManagerRateFormModal.tsx:110
 msgid "Currently"
 msgstr ""
 
@@ -3608,11 +3618,11 @@ msgstr ""
 msgid "Custom username font"
 msgstr "कस्टम उपयोगकर्ता नाम फ़ॉन्ट"
 
-#: src/components/_economy/manager/ManagerRateFormModal.tsx:211
+#: src/components/_economy/manager/ManagerRateFormModal.tsx:155
 msgid "Cut pay"
 msgstr ""
 
-#: src/components/_economy/manager/ManagerRateFormModal.tsx:97
+#: src/components/_economy/manager/ManagerRateFormModal.tsx:82
 msgid "Cut your manager's pay?"
 msgstr ""
 
@@ -4241,11 +4251,6 @@ msgstr "विवरण संपादित करें"
 msgid "Edit focus message"
 msgstr ""
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:195
-#: src/components/_economy/manager/ManagerRateFormModal.tsx:129
-msgid "Edit manager"
-msgstr ""
-
 #: src/components/_military/battle/BattleOrderActionsDropdown.tsx:149
 msgid "Edit MU order"
 msgstr ""
@@ -4533,6 +4538,10 @@ msgstr ""
 msgid "Everyone can vote"
 msgstr ""
 
+#: src/components/_economy/manager/MoveManagerModal.tsx:52
+msgid "Everyone who changes company can resign straight afterwards"
+msgstr ""
+
 #: src/components/_economy/company/CompanyDropdown.tsx:349
 #: src/components/_economy/manager/ManagerRateReductionAlert.tsx:68
 msgid "Everything you earned is paid out now."
@@ -4805,7 +4814,7 @@ msgstr "सैन्य इकाई खोजें"
 
 #: src/components/_economy/employee/employeeCards.tsx:296
 #: src/components/_economy/employee/EmployeeModal.tsx:435
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:201
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:210
 #: src/components/_political/government/Government.tsx:253
 #: src/components/_user/user/UserEffectSelector.tsx:61
 msgid "Fire"
@@ -4815,7 +4824,7 @@ msgstr "बर्खास्त करें"
 msgid "Fire government member"
 msgstr "सरकारी सदस्य को बर्खास्त करें"
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:205
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:214
 msgid "Fire your manager?"
 msgstr ""
 
@@ -5466,11 +5475,11 @@ msgstr "प्रभावशाली"
 msgid "In a Military Unit, ask your mates for help every {helpCooldownHours}h: each help gives you <0>{healthPerHelp}</0>."
 msgstr ""
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:168
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:171
 msgid "inactive"
 msgstr ""
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:158
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:161
 #: src/components/_user/apiToken/ApiTokenList.tsx:174
 msgid "Inactive"
 msgstr "निष्क्रिय"
@@ -5597,7 +5606,7 @@ msgstr "अलगाववादी"
 msgid "Isolationist: this sworn enemy starts at {start}% bonus and grows +{perDay}% per day."
 msgstr ""
 
-#: src/components/_economy/manager/ManagerRateFormModal.tsx:98
+#: src/components/_economy/manager/ManagerRateFormModal.tsx:83
 msgid "It applies right away, and they can resign over it."
 msgstr ""
 
@@ -5698,10 +5707,6 @@ msgstr "उस मिथिक के पीछे लगे रहो"
 #: src/components/_other/tour/tuto.frontConfig.tsx:223
 msgid "Keep fighting!"
 msgstr "लड़ते रहो!"
-
-#: src/components/_economy/manager/ManagerRateFormModal.tsx:183
-msgid "Keep on this company"
-msgstr ""
 
 #: src/components/_military/mu/MuMemberList.tsx:428
 msgid "Kick"
@@ -6150,7 +6155,7 @@ msgstr ""
 msgid "Manager resigned"
 msgstr ""
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:240
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:255
 msgid "Manager wanted"
 msgstr ""
 
@@ -6667,6 +6672,7 @@ msgid "Motions"
 msgstr "प्रस्ताव"
 
 #: src/components/_economy/employee/EmployeeModal.tsx:429
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:204
 #: src/components/_political/region/MoveButton.tsx:120
 #: src/components/_political/region/MoveButton.tsx:132
 msgid "Move"
@@ -6680,6 +6686,11 @@ msgstr ""
 
 #: src/components/_political/map/MapMenu.tsx:640
 msgid "Move & collect"
+msgstr ""
+
+#. placeholder {0}: target.name
+#: src/components/_economy/manager/MoveManagerModal.tsx:249
+msgid "Move <0/> into {0}? They keep their pay and what they have earned, and can resign straight afterwards."
 msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:516
@@ -6700,10 +6711,11 @@ msgid "Move employee"
 msgstr ""
 
 #: src/components/_economy/employee/MoveEmployeeModal.tsx:303
+#: src/components/_economy/manager/MoveManagerModal.tsx:257
 msgid "Move here"
 msgstr ""
 
-#: src/components/_economy/manager/ManagerRateFormModal.tsx:213
+#: src/components/_economy/manager/MoveManagerModal.tsx:322
 msgid "Move manager"
 msgstr ""
 
@@ -6712,12 +6724,17 @@ msgid "Move the company"
 msgstr "कंपनी को स्थानांतरित करें"
 
 #: src/components/_economy/employee/MoveEmployeeModal.tsx:222
+#: src/components/_economy/manager/MoveManagerModal.tsx:177
 msgid "Move to"
 msgstr ""
 
 #: src/components/_economy/company/CompanyDropdown.tsx:291
 msgid "Move to top"
 msgstr "शीर्ष पर ले जाएँ"
+
+#: src/components/_economy/manager/MoveManagerModal.tsx:248
+msgid "Move your manager?"
+msgstr ""
 
 #: src/components/_user/notification/notification.frontConfig.tsx:2104
 msgid "Moved to a new company"
@@ -7296,6 +7313,10 @@ msgstr ""
 msgid "No work yet"
 msgstr ""
 
+#: src/components/_economy/manager/MoveManagerModal.tsx:266
+msgid "Nobody manages this company yet"
+msgstr ""
+
 #: src/components/_economy/employee/MoveEmployeeModal.tsx:312
 msgid "Nobody works here yet"
 msgstr ""
@@ -7787,6 +7808,10 @@ msgstr "अपने चुनाव अभियान लेख का लि�
 msgid "Paused"
 msgstr ""
 
+#: src/components/_economy/manager/MoveManagerModal.tsx:96
+msgid "Paused: nobody manages here"
+msgstr ""
+
 #: src/components/_economy/employee/MoveEmployeeModal.tsx:123
 msgid "Paused: nobody produces here"
 msgstr ""
@@ -7800,12 +7825,12 @@ msgstr ""
 msgid "Pay cut"
 msgstr ""
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:180
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:183
 msgid "pay cut pending"
 msgstr ""
 
 #: src/components/_economy/manager/ManagerOfferFormModal.tsx:177
-#: src/components/_economy/manager/ManagerRateFormModal.tsx:158
+#: src/components/_economy/manager/ManagerRateFormModal.tsx:127
 msgid "Pay per Management level"
 msgstr ""
 
@@ -7843,12 +7868,12 @@ msgid "per"
 msgstr ""
 
 #: src/components/_economy/manager/ManagerOfferFormModal.tsx:191
-#: src/components/_economy/manager/ManagerRateFormModal.tsx:172
+#: src/components/_economy/manager/ManagerRateFormModal.tsx:141
 msgid "Per hour, per Management level"
 msgstr ""
 
 #: src/components/_economy/manager/ManagerOfferFormModal.tsx:181
-#: src/components/_economy/manager/ManagerRateFormModal.tsx:162
+#: src/components/_economy/manager/ManagerRateFormModal.tsx:131
 msgid "Per hour. Allowed"
 msgstr ""
 
@@ -8164,7 +8189,7 @@ msgstr "उत्पादन"
 
 #: src/components/_economy/company/CompanyProductionBonusTag.tsx:42
 #: src/components/_economy/company/RecommendedCompanyRegions.tsx:85
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:120
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:123
 #: src/pages/region/[regionId]/index.tsx:73
 msgid "Production bonus"
 msgstr "उत्पादन बोनस"
@@ -9109,7 +9134,7 @@ msgid "Rusty Sickle"
 msgstr ""
 
 #: src/components/_economy/manager/ManagerOfferFormModal.tsx:235
-#: src/components/_economy/manager/ManagerRateFormModal.tsx:215
+#: src/components/_economy/manager/ManagerRateFormModal.tsx:155
 #: src/components/_military/order/BattleOrderList.tsx:217
 #: src/components/_political/party/PartyDescriptionModal.tsx:72
 #: src/components/_user/auth/WelcomeModal.tsx:182
@@ -9837,7 +9862,12 @@ msgid "Supreme Commander"
 msgstr "सर्वोच्च कमांडर"
 
 #: src/components/_economy/employee/MoveEmployeeModal.tsx:308
+#: src/components/_economy/manager/MoveManagerModal.tsx:262
 msgid "Swap with"
+msgstr ""
+
+#: src/components/_economy/manager/MoveManagerModal.tsx:283
+msgid "Swap your managers?"
 msgstr ""
 
 #: src/components/_political/map/MapLibre.tsx:457
@@ -9884,6 +9914,10 @@ msgstr "नियंत्रण संभालें"
 
 #: src/components/_economy/manager/ManagerOfferRow.tsx:93
 msgid "Take this position?"
+msgstr ""
+
+#: src/components/_economy/manager/MoveManagerModal.tsx:98
+msgid "Taken: a swap is the only way in"
 msgstr ""
 
 #: src/components/_economy/manager/ManagerOfferList.tsx:118
@@ -10063,6 +10097,10 @@ msgstr "<0/> में क्रांति सफल हो गई है! स
 msgid "The roll is skipped while you hold {maxLoots} uncollected cases"
 msgstr ""
 
+#: src/components/_economy/manager/MoveManagerModal.tsx:100
+msgid "The seat is free"
+msgstr ""
+
 #: src/components/_economy/employee/training.frontConfig.tsx:57
 msgid "The step out of a bad trait into a good one, worth +2."
 msgstr ""
@@ -10103,11 +10141,7 @@ msgstr ""
 msgid "These items have no authorized price in common. Remove the cheapest or the most valuable one."
 msgstr ""
 
-#: src/components/_economy/manager/ManagerRateFormModal.tsx:193
-msgid "They keep this contract, what it has earned and their seniority. They can resign right after a move."
-msgstr ""
-
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:206
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:215
 msgid "They keep what they earned."
 msgstr ""
 
@@ -10184,7 +10218,7 @@ msgstr "इस कानून के लिए देश में कम स�
 msgid "This member won't be able to be nominated again for {cooldownDays} days."
 msgstr "यह सदस्य {cooldownDays} दिनों तक पुनः नामांकित नहीं किया जा सकेगा।"
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:160
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:163
 msgid "This player has not connected for days. Until they come back they add no production to the roster and earn nothing."
 msgstr ""
 
@@ -10490,6 +10524,10 @@ msgstr "टूर्नामेंट जीता!"
 msgid "Trade places between {who} and {0}? Both lose <0>{1}</0> happiness for {penaltyDays} days."
 msgstr ""
 
+#: src/components/_economy/manager/MoveManagerModal.tsx:284
+msgid "Trade places between <0/> and <1/>? Each keeps their own pay and what they have earned, and both can resign straight afterwards."
+msgstr ""
+
 #: src/components/_economy/transaction/TransactionList.tsx:71
 #: src/pages/market/index.tsx:62
 msgid "Trading"
@@ -10580,10 +10618,6 @@ msgstr "पैसा स्थानांतरित करें"
 #: src/components/_military/mu/MuMemberList.tsx:161
 msgid "Transfer Ownership"
 msgstr "स्वामित्व हस्तांतरित करें"
-
-#: src/components/_economy/manager/ManagerRateFormModal.tsx:182
-msgid "Transfer to company (optional)"
-msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:215
 msgid "Translator"
@@ -11529,6 +11563,7 @@ msgid "You have no employees yet"
 msgstr ""
 
 #: src/components/_economy/employee/MoveEmployeeModal.tsx:217
+#: src/components/_economy/manager/MoveManagerModal.tsx:172
 msgid "You have no other company to move them to"
 msgstr ""
 
@@ -11925,10 +11960,6 @@ msgstr "आपकी किस्मत अभी बस चमकना शु�
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:24
 msgid "Your luck is on vacation"
 msgstr "आपकी किस्मत छुट्टी पर है"
-
-#: src/components/_economy/manager/ManagerRateFormModal.tsx:188
-msgid "Your manager has to answer the pay cut before you can move them."
-msgstr ""
 
 #: src/components/_military/mu/MuFormModal.tsx:106
 msgid "Your military unit name"
