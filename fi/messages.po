@@ -78,10 +78,6 @@ msgstr ""
 msgid "(average member development)"
 msgstr ""
 
-#: src/components/_economy/manager/ManagerWageBandAlert.tsx:61
-msgid "(estimated)"
-msgstr ""
-
 #: src/components/_political/alliance/AllianceMemberRow.tsx:66
 msgid "(member average development)"
 msgstr ""
@@ -165,7 +161,7 @@ msgstr "{0}n yritykset"
 
 #. placeholder {0}: activeCompaniesCount.data ?? 0
 #. placeholder {1}: companiesLimit ?? 1
-#: src/components/_economy/company/CompanyDropdown.tsx:290
+#: src/components/_economy/company/CompanyDropdown.tsx:303
 msgid "{0}/{1} active"
 msgstr "{0}/{1} aktiivista"
 
@@ -185,7 +181,7 @@ msgid "{0}% income tax will be deducted from your employees wages."
 msgstr ""
 
 #. placeholder {0}: gameConfig.company.destructionValuePercent
-#: src/components/_economy/company/CompanyDropdown.tsx:336
+#: src/components/_economy/company/CompanyDropdown.tsx:375
 msgid "{0}% of invested"
 msgstr "{0}% sijoitetusta"
 
@@ -292,12 +288,11 @@ msgstr "*Voidaan polttaa"
 msgid "/day"
 msgstr "/päivä"
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:84
-#: src/components/_economy/manager/ManagerJobPanel.tsx:61
-#: src/components/_economy/manager/ManagerJobPanel.tsx:79
-#: src/components/_economy/manager/ManagerOfferList.tsx:93
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:287
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:310
+#: src/components/_economy/manager/ManagerBestOfferLine.tsx:41
 #: src/components/_economy/manager/ManagerOfferRow.tsx:199
-#: src/components/_economy/manager/ManagerWageBandAlert.tsx:91
+#: src/components/_economy/manager/ManagerRateReductionAlert.tsx:43
 msgid "/h"
 msgstr ""
 
@@ -306,19 +301,12 @@ msgstr ""
 msgid "/h at Management {0}"
 msgstr ""
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:155
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:239
 msgid "/h max"
 msgstr ""
 
 #: src/components/_economy/manager/ManagerOfferFormModal.tsx:150
-#: src/components/_economy/manager/ManagerWageBandAlert.tsx:57
-#: src/components/_economy/manager/ManagerWageBandAlert.tsx:77
 msgid "/h per level"
-msgstr ""
-
-#. placeholder {0}: contract.productionBonusPercent
-#: src/components/_economy/manager/ManagerJobPanel.tsx:65
-msgid "+{0}% production"
 msgstr ""
 
 #. placeholder {0}: status?.bonusPercent ?? held.skills?.production ?? 0
@@ -356,6 +344,12 @@ msgstr ""
 #: src/components/_user/notification/notification.frontConfig.tsx:1187
 msgid "<0/> applied to join <1/>"
 msgstr "<0/> haki liittyä <1/>"
+
+#. placeholder {0}: myJob.data.hourlyWage
+#. placeholder {1}: incomeTax > 0 && ( <Typo as='span' opacity={0.7}> {' ('} <Money static color='yellowText'> {wageAfterTax} </Money> {' after taxes)'} </Typo> )
+#: src/components/_economy/manager/ManagerOfferList.tsx:104
+msgid "<0/> at <1>{0}</1> /h.{1}"
+msgstr ""
 
 #: src/components/_political/message/systemMessage.frontConfig.tsx:54
 msgid "<0/> banned <1/> from the conversation"
@@ -935,7 +929,16 @@ msgstr ""
 msgid "<0>Every <1/> total damage dealt across both sides rolls an <2>{0}</2> into the battle loot pool.</0><3>The pool is handed out at the end of the battle: the top damage dealer gets the most valuable item, #2 the next one, and so on. The item you are in line for is shown on your row in the ranking below.</3>"
 msgstr ""
 
-#: src/components/_economy/company/CompanyProduce.tsx:76
+#. placeholder {0}: contract.productionBonusPercent
+#. placeholder {1}: managerConfig.baseBonusPercent
+#. placeholder {2}: employeeConfig.skills.managementBonusPercentPerLevel
+#. placeholder {3}: contract.managementLevel
+#. placeholder {4}: contract.isInactive && ( <p>They are away, so none of it applies right now.</p> )
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:120
+msgid "<0>Every employee of this company produces <1>{0}</1> more.</0><2>{1}% for having a manager at all, plus {2}% per Management level, and they have {3}.</2>{4}"
+msgstr ""
+
+#: src/components/_economy/company/CompanyProduce.tsx:82
 msgid "<0>Filled with <1>Production Points</1> when you work, by your employees and by the automated engine.</0><2>Only the company owner can spend it to produce items.</2>"
 msgstr ""
 
@@ -1537,7 +1540,7 @@ msgstr "Ilmoitusjärjestelmän väärinkäyttö tai roskapostittaminen voi johta
 msgid "Abusing this power to advantage another country will lead to a <0>ban.</0>"
 msgstr "Tämän vallan väärinkäyttö toisen maan hyväksi johtaa <0>kieltoon.</0>"
 
-#: src/components/_economy/manager/ManagerJobPanel.tsx:99
+#: src/components/_economy/manager/ManagerRateReductionAlert.tsx:58
 #: src/components/_political/allianceLaw/AllianceLaw.tsx:131
 #: src/components/_political/law/Law.tsx:188
 #: src/components/_political/partyMotion/PartyMotion.tsx:179
@@ -1737,7 +1740,7 @@ msgstr "Kaikki mobiili"
 msgid "All Parties"
 msgstr "Kaikki osapuolet"
 
-#: src/components/_economy/manager/ManagerOfferList.tsx:116
+#: src/components/_economy/manager/ManagerOfferList.tsx:134
 msgid "All positions"
 msgstr ""
 
@@ -1812,10 +1815,6 @@ msgstr "Liittolaisia"
 
 #: src/components/_social/poll/PollEditorModal.tsx:253
 msgid "Allow multiple answers"
-msgstr ""
-
-#: src/components/_economy/manager/ManagerWageBandAlert.tsx:47
-msgid "Allowed"
 msgstr ""
 
 #. placeholder {0}: sharedRange.min
@@ -2073,10 +2072,6 @@ msgstr "Artikkelit"
 #: src/pages/user/[userId]/articles.tsx:25
 msgid "Articles by <0/>"
 msgstr "Artikkelit tekijältä <0/>"
-
-#: src/components/_economy/manager/ManagerOfferList.tsx:89
-msgid "at"
-msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:305
 msgid "AT Ammo"
@@ -2445,8 +2440,11 @@ msgid "Best"
 msgstr ""
 
 #: src/components/_economy/manager/ManagerOfferFormModal.tsx:144
-#: src/components/_economy/manager/ManagerWageBandAlert.tsx:71
 msgid "Best offer"
+msgstr ""
+
+#: src/components/_economy/manager/ManagerBestOfferLine.tsx:37
+msgid "Best position for you"
 msgstr ""
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:37
@@ -2651,11 +2649,6 @@ msgstr ""
 msgid "Campaign Article Link (optional)"
 msgstr "Kampanjan artikkelilinkki (valinnainen)"
 
-#. placeholder {0}: getTimeAgo(contract.canEndAt, 'fromNow')
-#: src/components/_economy/manager/ManagerJobPanel.tsx:170
-msgid "Can resign {0}"
-msgstr ""
-
 #: src/components/_military/order/BattleOrderList.tsx:207
 #: src/components/_political/election/CandidateFormModal.tsx:79
 #: src/components/_social/poll/PollEditorModal.tsx:283
@@ -2823,7 +2816,7 @@ msgstr ""
 msgid "Change nationality"
 msgstr ""
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:114
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:189
 msgid "Change pay"
 msgstr ""
 
@@ -2832,7 +2825,7 @@ msgstr ""
 msgid "Change produced item"
 msgstr "Muuta tuotettua tuotetta"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:213
+#: src/components/_economy/company/CompanyDropdown.tsx:226
 msgid "Change production"
 msgstr "Muuta tuotantoa"
 
@@ -3047,7 +3040,7 @@ msgstr ""
 msgid "Cold af"
 msgstr ""
 
-#: src/components/_economy/manager/ManagerJobPanel.tsx:138
+#: src/components/_economy/manager/ManagerCollectButton.tsx:74
 #: src/components/_political/map/MapMenu.tsx:679
 msgid "Collect"
 msgstr ""
@@ -3115,7 +3108,7 @@ msgstr "yhteisössä"
 #: src/components/_user/user/MyAvatar.tsx:47
 #: src/components/_user/user/UserHeader.tsx:244
 #: src/components/_user/user/WealthPanel.tsx:42
-#: src/pages/companies.tsx:61
+#: src/pages/companies.tsx:115
 msgid "Companies"
 msgstr "Yritykset"
 
@@ -3128,7 +3121,7 @@ msgstr "Yritysten raja"
 msgid "Companies limit reached"
 msgstr "Yritysraja saavutettu"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:95
+#: src/components/_economy/company/CompanyDropdown.tsx:108
 msgid "Company destroyed!"
 msgstr "Yritys tuhottu!"
 
@@ -3136,11 +3129,11 @@ msgstr "Yritys tuhottu!"
 msgid "Company disabled"
 msgstr "Yritys pois käytöstä"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:122
+#: src/components/_economy/company/CompanyDropdown.tsx:135
 msgid "Company disabled!"
 msgstr "Yritys pois käytöstä!"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:121
+#: src/components/_economy/company/CompanyDropdown.tsx:134
 msgid "Company enabled!"
 msgstr "Yritys käytössä!"
 
@@ -3148,7 +3141,7 @@ msgstr "Yritys käytössä!"
 msgid "Company moved"
 msgstr "Yritys muutti"
 
-#: src/components/_economy/company/CompanyProduce.tsx:74
+#: src/components/_economy/company/CompanyProduce.tsx:80
 msgid "Company production storage"
 msgstr "Yrityksen tuotannon varastointi"
 
@@ -3156,7 +3149,7 @@ msgstr "Yrityksen tuotannon varastointi"
 msgid "Company renamed!"
 msgstr "Yritys nimetty uudelleen!"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:149
+#: src/components/_economy/company/CompanyDropdown.tsx:162
 msgid "Company upgraded!"
 msgstr ""
 
@@ -3390,6 +3383,10 @@ msgstr "Ydinalueet"
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:46
 msgid "Corporal"
 msgstr "Korpraali"
+
+#: src/components/_economy/employee/EmployeeList.tsx:165
+msgid "Cost per production point"
+msgstr ""
 
 #: src/components/_political/partyMotion/PartyMotionFormModal.tsx:132
 msgid "Council member to remove"
@@ -3783,6 +3780,10 @@ msgstr "Julista sota <0/>"
 msgid "Declare war to another country"
 msgstr "Julista sota toiselle maalle"
 
+#: src/components/_economy/manager/ManagerRateReductionAlert.tsx:72
+msgid "Decline & Leave"
+msgstr ""
+
 #: src/components/_political/unrest/UnrestPanel.tsx:143
 #: src/components/_political/unrest/UnrestPanel.tsx:179
 msgid "Decrease"
@@ -3940,7 +3941,7 @@ msgstr "Kuvaus poistettu"
 msgid "Description updated!"
 msgstr "Kuvaus päivitetty!"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:326
+#: src/components/_economy/company/CompanyDropdown.tsx:365
 msgid "Destruct"
 msgstr "Tuhota"
 
@@ -4024,7 +4025,7 @@ msgstr "Diplomaattinen"
 msgid "Diplomatic: defensive pact maintenance costs {less}% less <0>{0}</0>."
 msgstr ""
 
-#: src/components/_economy/company/CompanyDropdown.tsx:297
+#: src/components/_economy/company/CompanyDropdown.tsx:310
 msgid "Disable company"
 msgstr "Poista yritys käytöstä"
 
@@ -4054,7 +4055,6 @@ msgstr "Pura kohde"
 msgid "Dismantle items"
 msgstr ""
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:120
 #: src/components/_user/apiToken/ApiTokenList.tsx:153
 msgid "Dismiss"
 msgstr "Hylkää"
@@ -4064,10 +4064,6 @@ msgstr "Hylkää"
 #: src/components/_economy/employee/EmployeeModal.tsx:442
 #: src/components/_economy/employee/EmployeePanel.tsx:107
 msgid "Dismiss {0} and pay <0>{1}</0> severance? This cannot be undone."
-msgstr ""
-
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:124
-msgid "Dismiss your manager?"
 msgstr ""
 
 #: src/components/_political/alliance/alliance.frontConfig.tsx:20
@@ -4372,16 +4368,11 @@ msgstr ""
 msgid "Employees work in your company every hour, even while you're offline. Click to see the candidates."
 msgstr ""
 
-#. placeholder {0}: contract.unpaidHours
-#: src/components/_economy/manager/ManagerJobPanel.tsx:123
-msgid "Employer could not pay the last {0}h. Nothing is owed for them."
-msgstr ""
-
 #: src/pages/region/[regionId]/index.tsx:170
 msgid "Empty"
 msgstr "Tyhjä"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:287
+#: src/components/_economy/company/CompanyDropdown.tsx:300
 msgid "Enable company"
 msgstr "Ota yritys käyttöön"
 
@@ -4546,8 +4537,8 @@ msgstr ""
 msgid "Everyone can vote"
 msgstr ""
 
-#: src/components/_economy/manager/ManagerJobPanel.tsx:111
-#: src/components/_economy/manager/ManagerJobPanel.tsx:165
+#: src/components/_economy/company/CompanyDropdown.tsx:349
+#: src/components/_economy/manager/ManagerRateReductionAlert.tsx:68
 msgid "Everything you earned is paid out now."
 msgstr ""
 
@@ -4804,6 +4795,10 @@ msgstr "Rahoita paikallista vastustusta"
 msgid "Finance resistance in <0/>"
 msgstr ""
 
+#: src/pages/companies.tsx:69
+msgid "Find a job"
+msgstr ""
+
 #: src/components/_user/mission/mission.frontConfig.tsx:497
 msgid "Find a Job"
 msgstr "Etsi työpaikka"
@@ -4814,6 +4809,7 @@ msgstr "Etsi sotilasyksikkö"
 
 #: src/components/_economy/employee/employeeCards.tsx:296
 #: src/components/_economy/employee/EmployeeModal.tsx:435
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:195
 #: src/components/_political/government/Government.tsx:253
 #: src/components/_user/user/UserEffectSelector.tsx:61
 msgid "Fire"
@@ -4822,6 +4818,10 @@ msgstr "Irtisano"
 #: src/components/_political/government/Government.tsx:265
 msgid "Fire government member"
 msgstr "Irtisano hallituksen jäsen"
+
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:199
+msgid "Fire your manager?"
+msgstr ""
 
 #: src/components/_user/notification/notification.frontConfig.tsx:2135
 msgid "Fired from government"
@@ -4884,10 +4884,6 @@ msgstr ""
 msgid "for {penaltyDays} days, on everyone who changes desk"
 msgstr ""
 
-#: src/components/_economy/manager/ManagerWageBandAlert.tsx:87
-msgid "For you"
-msgstr ""
-
 #: src/utils/translations.tsx:269
 msgid "Forge Hammer"
 msgstr ""
@@ -4912,7 +4908,7 @@ msgstr "Perustaja"
 msgid "Free daily reward"
 msgstr "Ilmainen päivittäinen palkinto"
 
-#: src/components/_economy/manager/ManagerJobPanel.tsx:84
+#: src/components/_economy/manager/ManagerRateReductionAlert.tsx:46
 msgid "from"
 msgstr ""
 
@@ -5327,7 +5323,7 @@ msgstr "Korkea komentaja"
 msgid "Hire"
 msgstr ""
 
-#: src/components/_economy/company/CompanyDropdown.tsx:194
+#: src/components/_economy/company/CompanyDropdown.tsx:207
 msgid "Hire a manager"
 msgstr ""
 
@@ -5397,7 +5393,7 @@ msgstr "Tunnen sen, seuraava on myyttiä!"
 msgid "I heard buying premium boost your chances :3"
 msgstr "Kuulin, että premium-luokan ostaminen parantaa mahdollisuuksiasi :3"
 
-#: src/components/_economy/manager/ManagerOfferList.tsx:110
+#: src/components/_economy/manager/ManagerOfferList.tsx:128
 msgid "I qualify"
 msgstr ""
 
@@ -5474,6 +5470,11 @@ msgstr "Vaikuttava"
 msgid "In a Military Unit, ask your mates for help every {helpCooldownHours}h: each help gives you <0>{healthPerHelp}</0>."
 msgstr ""
 
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:162
+msgid "inactive"
+msgstr ""
+
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:152
 #: src/components/_user/apiToken/ApiTokenList.tsx:174
 msgid "Inactive"
 msgstr "Ei-aktiivinen"
@@ -5548,7 +5549,7 @@ msgstr ""
 #: src/components/_layout/LayoutUserMenu.tsx:150
 #: src/components/_user/user/MyAvatar.tsx:35
 #: src/components/_user/user/UserHeader.tsx:178
-#: src/pages/companies.tsx:32
+#: src/pages/companies.tsx:93
 #: src/pages/country/[countryId]/account.tsx:25
 #: src/pages/market/index.tsx:55
 #: src/pages/user/[userId]/account.tsx:20
@@ -5627,6 +5628,14 @@ msgstr "Tuotteet"
 
 #: src/components/_common/GameRules.tsx:296
 msgid "j. Spam and repeated messages"
+msgstr ""
+
+#: src/pages/companies.tsx:53
+msgid "Job"
+msgstr ""
+
+#: src/components/_economy/company/CompanyDropdown.tsx:330
+msgid "Job market"
 msgstr ""
 
 #: src/components/_economy/market/MarketHeader.tsx:26
@@ -5813,6 +5822,10 @@ msgstr ""
 msgid "Leather Sling"
 msgstr ""
 
+#: src/components/_economy/company/CompanyDropdown.tsx:342
+msgid "Leave"
+msgstr ""
+
 #: src/components/_political/law/law.frontConfig.tsx:359
 msgid "Leave <0/>"
 msgstr ""
@@ -5883,7 +5896,7 @@ msgstr ""
 msgid "Level {level}"
 msgstr "Taso {level}"
 
-#: src/components/_economy/manager/managerStats.tsx:103
+#: src/components/_economy/manager/managerStats.tsx:95
 msgid "level {minLevel}"
 msgstr ""
 
@@ -6129,7 +6142,7 @@ msgstr ""
 msgid "Manager hired"
 msgstr ""
 
-#: src/pages/market/jobs.tsx:36
+#: src/pages/market/jobs.tsx:25
 msgid "Manager positions"
 msgstr ""
 
@@ -6137,7 +6150,7 @@ msgstr ""
 msgid "Manager resigned"
 msgstr ""
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:150
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:234
 msgid "Manager wanted"
 msgstr ""
 
@@ -6184,6 +6197,7 @@ msgstr ""
 msgid "Market tax"
 msgstr "Markkinavero"
 
+#: src/components/_economy/employee/EmployeeList.tsx:186
 #: src/components/_economy/employee/PpMoneyValue.tsx:88
 msgid "Market value"
 msgstr ""
@@ -6210,9 +6224,9 @@ msgstr ""
 msgid "Maxed"
 msgstr ""
 
-#: src/components/_economy/company/CompanyDropdown.tsx:233
-#: src/components/_economy/company/CompanyDropdown.tsx:251
-#: src/components/_economy/company/CompanyDropdown.tsx:269
+#: src/components/_economy/company/CompanyDropdown.tsx:246
+#: src/components/_economy/company/CompanyDropdown.tsx:264
+#: src/components/_economy/company/CompanyDropdown.tsx:282
 msgid "Maxed!"
 msgstr ""
 
@@ -6672,7 +6686,7 @@ msgstr ""
 msgid "Move a company to another region"
 msgstr "Siirrä yritys toiselle alueelle"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:205
+#: src/components/_economy/company/CompanyDropdown.tsx:218
 #: src/components/_economy/company/MoveCompanyForm.tsx:63
 msgid "Move company"
 msgstr "Siirrä yritys"
@@ -6697,7 +6711,7 @@ msgstr "Siirrä yritys"
 msgid "Move to"
 msgstr ""
 
-#: src/components/_economy/company/CompanyDropdown.tsx:278
+#: src/components/_economy/company/CompanyDropdown.tsx:291
 msgid "Move to top"
 msgstr "Siirrä ylös"
 
@@ -7091,7 +7105,7 @@ msgstr ""
 msgid "No citizens"
 msgstr "Ei kansalaisia"
 
-#: src/components/_economy/manager/ManagerOfferList.tsx:123
+#: src/components/_economy/manager/ManagerOfferList.tsx:141
 msgid "No company is looking for a manager right now."
 msgstr ""
 
@@ -7123,7 +7137,7 @@ msgstr ""
 msgid "No donations yet"
 msgstr "Ei lahjoituksia vielä"
 
-#: src/components/_economy/employee/EmployeeList.tsx:116
+#: src/components/_economy/employee/EmployeeList.tsx:244
 msgid "No employees"
 msgstr ""
 
@@ -7427,7 +7441,7 @@ msgstr ""
 msgid "On contract failure: -1 rep per <0/> in budget, and -1 rep per <1/> short of completing the contract."
 msgstr ""
 
-#: src/components/_economy/manager/managerStats.tsx:72
+#: src/components/_economy/manager/managerStats.tsx:64
 msgid "on every employee, plus"
 msgstr ""
 
@@ -7660,15 +7674,6 @@ msgstr ""
 msgid "Packs"
 msgstr "Pakkaukset"
 
-#. placeholder {0}: getTimeAgo(contract.lastAccruedAt, 'fromNow')
-#: src/components/_economy/manager/ManagerJobPanel.tsx:145
-msgid "Paid {0} ago. Income tax is taken on collect."
-msgstr ""
-
-#: src/components/_economy/manager/ManagerJobPanel.tsx:150
-msgid "Paid every hour your employer can afford it."
-msgstr ""
-
 #: src/components/_user/UserEquipments.tsx:202
 #: src/utils/translations.tsx:230
 msgid "Pants"
@@ -7786,11 +7791,12 @@ msgstr ""
 msgid "Pay"
 msgstr ""
 
+#: src/components/_economy/manager/ManagerRateReductionAlert.tsx:37
 #: src/components/_user/notification/notification.frontConfig.tsx:2101
 msgid "Pay cut"
 msgstr ""
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:99
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:174
 msgid "pay cut pending"
 msgstr ""
 
@@ -7828,7 +7834,7 @@ msgid "People are angry, an auto revolt has started in <0/>"
 msgstr "Ihmiset ovat vihaisia, autokapina on alkanut <0/>"
 
 #: src/components/_economy/employee/EmployeeModal.tsx:716
-#: src/components/_economy/manager/managerStats.tsx:76
+#: src/components/_economy/manager/managerStats.tsx:68
 msgid "per"
 msgstr ""
 
@@ -8154,6 +8160,7 @@ msgstr "Tuotanto"
 
 #: src/components/_economy/company/CompanyProductionBonusTag.tsx:42
 #: src/components/_economy/company/RecommendedCompanyRegions.tsx:85
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:118
 #: src/pages/region/[regionId]/index.tsx:73
 msgid "Production bonus"
 msgstr "Tuotantobonus"
@@ -8506,7 +8513,7 @@ msgstr "Vastaanottaja"
 msgid "Recommended regions"
 msgstr "Suositellut alueet"
 
-#: src/components/_economy/employee/EmployeeList.tsx:164
+#: src/components/_economy/employee/EmployeeList.tsx:281
 #: src/components/_economy/employee/RecruitModal.tsx:184
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:21
 msgid "Recruit"
@@ -8548,11 +8555,7 @@ msgstr "Viittauskäyttäjätunnus"
 msgid "Refresh every hour"
 msgstr "Päivitä tunnin välein"
 
-#: src/components/_economy/manager/ManagerJobPanel.tsx:115
-msgid "Refuse and leave"
-msgstr ""
-
-#: src/components/_economy/manager/ManagerJobPanel.tsx:110
+#: src/components/_economy/manager/ManagerRateReductionAlert.tsx:67
 msgid "Refuse and leave?"
 msgstr ""
 
@@ -8772,7 +8775,7 @@ msgstr ""
 msgid "Removed from Military Unit"
 msgstr "Poistettu sotilasyksiköstä"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:311
+#: src/components/_economy/company/CompanyDropdown.tsx:324
 #: src/components/_economy/employee/EmployeeModal.tsx:422
 #: src/components/_economy/employee/EmployeeRenameModal.tsx:83
 msgid "Rename"
@@ -8859,7 +8862,7 @@ msgstr ""
 msgid "Requirements"
 msgstr ""
 
-#: src/components/_economy/manager/managerStats.tsx:98
+#: src/components/_economy/manager/managerStats.tsx:90
 msgid "Requires"
 msgstr ""
 
@@ -8912,15 +8915,7 @@ msgstr ""
 msgid "Residents (home here)"
 msgstr ""
 
-#: src/components/_economy/manager/ManagerJobPanel.tsx:172
-msgid "Resign"
-msgstr ""
-
-#: src/components/_economy/manager/ManagerOfferList.tsx:97
-msgid "Resign from it before taking another one."
-msgstr ""
-
-#: src/components/_economy/manager/ManagerJobPanel.tsx:164
+#: src/components/_economy/company/CompanyDropdown.tsx:348
 msgid "Resign from this position?"
 msgstr ""
 
@@ -9246,7 +9241,7 @@ msgstr ""
 msgid "Sell an item"
 msgstr ""
 
-#: src/components/_economy/company/CompanyDropdown.tsx:346
+#: src/components/_economy/company/CompanyDropdown.tsx:385
 msgid "Sell company? Its employees will be let go and their tools returned to your inventory."
 msgstr ""
 
@@ -9887,6 +9882,10 @@ msgstr "Ota hallintaasi"
 msgid "Take this position?"
 msgstr ""
 
+#: src/components/_economy/manager/ManagerOfferList.tsx:118
+msgid "Taking another position will make you leave this one!"
+msgstr ""
+
 #: src/utils/translations.tsx:26
 msgid "Tank"
 msgstr "Tankki"
@@ -10026,6 +10025,10 @@ msgstr "Käyttämiesi buffien vaikutus on päättynyt. Debuff-vaihe on alkanut j
 msgid "The full bonus of <0/> applies up to <1/> share of global <2>Development</2>. Above that, the bonus drops by <3/> per percentage point of share over the plateau, down to <4/>."
 msgstr ""
 
+#: src/components/_economy/employee/EmployeeList.tsx:169
+msgid "The hour's whole payroll, employees and manager, divided by the production it banks. Under the market value of a point the company earns more than it spends; over it, the roster costs more than what it makes is worth."
+msgstr ""
+
 #: src/components/_political/map/MapLibreErrorBoundary.tsx:69
 msgid "The map needs WebGL2, which your browser or device doesn't support. Everything else in the game works normally."
 msgstr ""
@@ -10096,7 +10099,7 @@ msgstr ""
 msgid "These items have no authorized price in common. Remove the cheapest or the most valuable one."
 msgstr ""
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:125
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:200
 msgid "They keep what they earned."
 msgstr ""
 
@@ -10172,6 +10175,10 @@ msgstr "Tämä laki edellyttää vähintään {minActiveCitizen} aktiivista kans
 #: src/components/_political/government/Government.tsx:266
 msgid "This member won't be able to be nominated again for {cooldownDays} days."
 msgstr "Tätä jäsentä ei voida nimittää uudelleen {cooldownDays} päivään."
+
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:154
+msgid "This player has not connected for days. Until they come back they add no production to the roster and earn nothing."
+msgstr ""
 
 #: src/components/_social/poll/PollCard.tsx:163
 msgid "This poll is not available."
@@ -10711,11 +10718,11 @@ msgstr "Päivitä tiedot"
 msgid "Upgrade a company"
 msgstr "Päivitä yritys"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:219
+#: src/components/_economy/company/CompanyDropdown.tsx:232
 msgid "Upgrade automated engine"
 msgstr ""
 
-#: src/components/_economy/company/CompanyDropdown.tsx:255
+#: src/components/_economy/company/CompanyDropdown.tsx:268
 msgid "Upgrade break room"
 msgstr ""
 
@@ -10727,7 +10734,7 @@ msgstr "Päivitä yritys"
 msgid "Upgrade Skills"
 msgstr "Päivitä taitoja"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:237
+#: src/components/_economy/company/CompanyDropdown.tsx:250
 msgid "Upgrade storage"
 msgstr ""
 
@@ -11183,7 +11190,7 @@ msgstr ""
 msgid "White suit, gold everything"
 msgstr ""
 
-#: src/pages/companies.tsx:67
+#: src/pages/companies.tsx:121
 msgid "Whole Production"
 msgstr "Koko Tuotanto"
 
@@ -11268,7 +11275,7 @@ msgstr "Työntekijä lähti"
 msgid "Workers"
 msgstr "Työntekijät"
 
-#: src/pages/companies.tsx:53
+#: src/pages/companies.tsx:107
 msgid "Workforce"
 msgstr ""
 
@@ -11332,7 +11339,7 @@ msgid "XP earned"
 msgstr ""
 
 #. placeholder {0}: companiesLimit ?? 1
-#: src/components/_economy/company/CompanyDropdown.tsx:305
+#: src/components/_economy/company/CompanyDropdown.tsx:318
 msgid "You already have {0} active companies. Disable one first."
 msgstr "Sinulla on jo {0} aktiivista yritystä. Poista ensin yksi käytöstä."
 
@@ -11363,6 +11370,10 @@ msgstr "Olet jo toisen maan varapresidentti. Irtisanoudu ensin."
 #: src/components/_political/map/MapMenu.tsx:698
 #: src/components/_user/milestone/MilestoneTiersModal.tsx:96
 msgid "You are here"
+msgstr ""
+
+#: src/pages/companies.tsx:65
+msgid "You are jobless"
 msgstr ""
 
 #: src/components/_user/notification/notification.frontConfig.tsx:453
@@ -11430,6 +11441,11 @@ msgstr ""
 #: src/components/_political/election/CandidateFormModal.tsx:62
 msgid "You can optionally link a campaign article to your candidacy."
 msgstr "Voit halutessasi linkittää ehdokkaasi kampanjaartikkelin."
+
+#. placeholder {0}: getTimeAgo(managerLockedUntil, 'fromNow')
+#: src/components/_economy/company/CompanyDropdown.tsx:356
+msgid "You can resign {0}"
+msgstr ""
 
 #: src/components/_user/user/Level.tsx:102
 msgid "You can upgrade your skills!"
@@ -11544,10 +11560,6 @@ msgstr "Auttoit kääntämään pelin toiselle kielelle"
 msgid "You invited a friend or spammed forum posts. After they reach level {0}, you will get the badge + {1}% of all your referrals' badge rewards"
 msgstr "Kutsuit ystäväsi tai lähetit roskapostiviestejä. Kun he saavuttavat tason {0}, saat tunnuksen + {1} % kaikista viittauksiesi merkkipalkkioista"
 
-#: src/components/_economy/manager/ManagerJobPanel.tsx:51
-msgid "You manage"
-msgstr ""
-
 #. placeholder {0}: gameConfig.election.candidateMinLevel
 #: src/components/_political/election/Election.tsx:133
 msgid "You must be at least level {0} to become a candidate."
@@ -11593,6 +11605,7 @@ msgstr "Maksoit kehittäjän laskut <3 (kuukausittaisten tukilahjojen 3 parasta)
 msgid "you pay"
 msgstr ""
 
+#: src/components/_economy/employee/EmployeeList.tsx:177
 #: src/components/_economy/employee/PpMoneyValue.tsx:101
 msgid "You pay"
 msgstr ""
@@ -11846,7 +11859,7 @@ msgstr "Maasi aloitti kapinan <0/> <1/>"
 msgid "Your current order"
 msgstr "Nykyinen tilauksesi"
 
-#: src/components/_economy/manager/ManagerOfferList.tsx:81
+#: src/components/_economy/manager/ManagerOfferList.tsx:98
 msgid "Your current position"
 msgstr ""
 
@@ -11857,6 +11870,10 @@ msgstr "Päivittäiset tehtäväsi on nollattu! Täytä ne ansaitaksesi palkinto
 #: src/pages/user/[userId]/settings.tsx:67
 msgid "Your email"
 msgstr "Sähköpostisi"
+
+#: src/components/_economy/manager/ManagerRateReductionAlert.tsx:41
+msgid "Your employer cut your pay to"
+msgstr ""
 
 #. placeholder {0}: data.oldWage
 #. placeholder {1}: data.newWage
@@ -11896,10 +11913,6 @@ msgstr "Onnesi vain lämpenee, älä luovuta"
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:24
 msgid "Your luck is on vacation"
 msgstr "Onnesi on lomalla"
-
-#: src/pages/companies.tsx:44
-msgid "Your manager position"
-msgstr ""
 
 #: src/components/_military/mu/MuFormModal.tsx:106
 msgid "Your military unit name"
@@ -11941,14 +11954,6 @@ msgstr "Puolueen nimi"
 #. placeholder {1}: data.newWage
 #: src/components/_user/notification/notification.frontConfig.tsx:466
 msgid "Your pay at <0/> went from <1>{0}</1> to <2>{1}</2> per hour"
-msgstr ""
-
-#: src/components/_economy/manager/ManagerJobPanel.tsx:76
-msgid "Your pay was cut to"
-msgstr ""
-
-#: src/pages/market/jobs.tsx:28
-msgid "Your position"
 msgstr ""
 
 #: src/components/_user/notification/notification.frontConfig.tsx:1092
