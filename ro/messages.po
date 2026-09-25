@@ -97,12 +97,8 @@ msgstr ""
 msgid "{0, plural, one {# vote} other {# votes}}"
 msgstr ""
 
-#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:327
-#~ msgid "{0, plural, one {Put on sale} other {Put # items on sale}}"
-#~ msgstr ""
-
 #. placeholder {0}: Math.max(items.length, 1)
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:329
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:341
 msgid "{0, plural, one {Start auction} other {Start # auctions}}"
 msgstr ""
 
@@ -116,8 +112,10 @@ msgstr "{0} & aliați"
 msgid "{0} active citizens required"
 msgstr "minim {0} cetățeni activi"
 
+#. placeholder {0}: getTimeAgo(entry.pickedAt, 'fromNow', undefined, true, true)
 #. placeholder {0}: getTimeAgo(leftAt, 'fromNow', undefined, true)
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:78
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:79
+#: src/components/_economy/employee/TrainingHistory.tsx:183
 msgid "{0} ago"
 msgstr ""
 
@@ -202,7 +200,7 @@ msgid "{0}d worked: <0>{1}</0>"
 msgstr ""
 
 #. placeholder {0}: employee.age
-#: src/components/_economy/employee/EmployeeModal.tsx:455
+#: src/components/_economy/employee/EmployeeModal.tsx:457
 msgid "{0}y old"
 msgstr ""
 
@@ -236,7 +234,7 @@ msgstr ""
 msgid "{homeRegionsAway, plural, one {# region away} other {# regions away}}"
 msgstr ""
 
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:270
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:282
 msgid "{hours}h"
 msgstr ""
 
@@ -615,6 +613,7 @@ msgid "<0/> is attacking your country in <1/>"
 msgstr "<0/> atacă țara ta în <1/>"
 
 #: src/components/_economy/employee/TrainingDraftModal.tsx:192
+#: src/components/_economy/employee/TrainingHistory.tsx:125
 msgid "<0/> is gone"
 msgstr ""
 
@@ -991,7 +990,7 @@ msgstr ""
 msgid "<0>Every employee of this company produces <1>{0}</1> more.</0><2>{1}% for having a manager at all, plus {2}% per Management level, and they have {3}.</2>{4}"
 msgstr ""
 
-#: src/components/_economy/company/CompanyProduce.tsx:82
+#: src/components/_economy/company/CompanyProduce.tsx:83
 msgid "<0>Filled with <1>Production Points</1> when you work, by your employees and by the automated engine.</0><2>Only the company owner can spend it to produce items.</2>"
 msgstr ""
 
@@ -1863,10 +1862,6 @@ msgstr "Aliați"
 msgid "Allow multiple answers"
 msgstr ""
 
-#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:139
-#~ msgid "Allowed between {0} and {1}"
-#~ msgstr ""
-
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:73
 msgid "Almost feels like cheating"
 msgstr "Aproape că pare că ai trișat"
@@ -1938,7 +1933,7 @@ msgstr "Un email cu codul de verificare a fost trimis la {email}"
 msgid "An employee expects to be paid what one hour of their output is worth, give or take {spreadPercent}%: their own pay expectation, rolled at hire and never rerolled. So this value sets every wage: when it rises, what you pay each employee rises with it."
 msgstr ""
 
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:209
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:221
 msgid "An item has no market value yet, so it has no max price and can't be auctioned. Remove it from the selection."
 msgstr ""
 
@@ -1982,7 +1977,7 @@ msgstr ""
 msgid "Anyone moved cannot be fired for {fireLockHours} hours"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:264
+#: src/components/_economy/employee/EmployeeModal.tsx:266
 msgid "Anywhere between -{spreadPercent}% and +{spreadPercent}%."
 msgstr ""
 
@@ -2027,7 +2022,7 @@ msgstr "Taxă aplicare"
 msgid "Applications"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:294
+#: src/components/_economy/employee/EmployeeModal.tsx:296
 msgid "Applied on top of the above."
 msgstr ""
 
@@ -2165,7 +2160,7 @@ msgstr "Măcar ai încercat"
 msgid "AT Light Ammo"
 msgstr ""
 
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:131
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:142
 msgid "At most {maxStartPrice}, the max price"
 msgstr ""
 
@@ -2241,7 +2236,7 @@ msgstr "Atacatori"
 msgid "Auction"
 msgstr ""
 
-#: src/components/_economy/itemAuction/itemAuction.hooks.ts:52
+#: src/components/_economy/itemAuction/itemAuction.hooks.ts:53
 msgid "Auction cancelled"
 msgstr ""
 
@@ -2257,7 +2252,7 @@ msgstr ""
 msgid "Auction Outbid"
 msgstr "Licitație pierdută"
 
-#: src/components/_economy/itemAuction/itemAuction.hooks.ts:32
+#: src/components/_economy/itemAuction/itemAuction.hooks.ts:33
 msgid "Auction started"
 msgstr ""
 
@@ -2277,7 +2272,7 @@ msgstr "Licitație câștigată"
 msgid "Auctions"
 msgstr "Licitații"
 
-#: src/components/_economy/itemAuction/itemAuction.hooks.ts:32
+#: src/components/_economy/itemAuction/itemAuction.hooks.ts:33
 msgid "Auctions started"
 msgstr ""
 
@@ -2558,7 +2553,7 @@ msgstr ""
 msgid "Bid"
 msgstr "Ofertă"
 
-#: src/components/_economy/itemAuction/ItemAuctionCard.tsx:156
+#: src/components/_economy/itemAuction/ItemAuctionCard.tsx:157
 msgid "Bid {minNextBid} on this item?"
 msgstr ""
 
@@ -2566,11 +2561,11 @@ msgstr ""
 msgid "Bid history"
 msgstr ""
 
-#: src/components/_economy/itemAuction/itemAuction.hooks.ts:41
+#: src/components/_economy/itemAuction/itemAuction.hooks.ts:42
 msgid "Bid placed"
 msgstr ""
 
-#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:29
+#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:30
 msgid "Bidding"
 msgstr ""
 
@@ -2579,7 +2574,7 @@ msgid "Bids"
 msgstr ""
 
 #. placeholder {0}: country?.taxes.market ?? 0
-#: src/pages/market/auctions.tsx:89
+#: src/pages/market/auctions.tsx:92
 msgid "Bids are shown before tax: when you bid, your country <0/> adds its {0}% market tax. A bid at the max price wins at once."
 msgstr ""
 
@@ -2668,14 +2663,10 @@ msgstr ""
 msgid "Brigadier"
 msgstr "Brigadier"
 
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:231
-#: src/components/_economy/inventory/Inventory.tsx:764
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:233
+#: src/components/_economy/inventory/Inventory.tsx:778
 msgid "Broken"
 msgstr ""
-
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:134
-#~ msgid "Broken, take it back to dismantle it"
-#~ msgstr ""
 
 #: src/components/_other/shop/SkinCollectionModal.tsx:214
 msgid "Browse Packs"
@@ -2815,7 +2806,7 @@ msgstr "Anulează Contract Mercenar"
 msgid "Cancel this auction?"
 msgstr ""
 
-#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:56
+#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:65
 #: src/components/_economy/itemAuction/ItemAuctionModal.tsx:465
 #: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:234
 #: src/pages/events/index.tsx:156
@@ -2894,6 +2885,10 @@ msgstr ""
 
 #: src/components/_economy/employee/TrainingCardList.tsx:146
 msgid "Cards"
+msgstr ""
+
+#: src/components/_economy/manager/ManagerCareButton.tsx:58
+msgid "Care"
 msgstr ""
 
 #: src/utils/translations.tsx:110
@@ -3109,7 +3104,7 @@ msgid "Clean slate"
 msgstr ""
 
 #: src/components/_economy/inventory/DismantleModal.tsx:334
-#: src/components/_economy/inventory/ItemSelectorModal.tsx:166
+#: src/components/_economy/inventory/ItemSelectorModal.tsx:171
 msgid "Clear"
 msgstr ""
 
@@ -3299,7 +3294,7 @@ msgstr "Companie activată!"
 msgid "Company moved"
 msgstr "Companie mutată"
 
-#: src/components/_economy/company/CompanyProduce.tsx:80
+#: src/components/_economy/company/CompanyProduce.tsx:81
 msgid "Company production storage"
 msgstr "Magazie"
 
@@ -3542,7 +3537,7 @@ msgstr "Regiuni de bază"
 msgid "Corporal"
 msgstr "Caporal"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:871
+#: src/components/_economy/employee/EmployeeModal.tsx:874
 msgid "Cost per"
 msgstr ""
 
@@ -3631,7 +3626,7 @@ msgstr "Câștigător Turneu pe Țări"
 msgid "Country wars"
 msgstr "Războaie"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:386
+#: src/components/_economy/employee/EmployeeModal.tsx:388
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:42
 msgid "Coworkers"
 msgstr ""
@@ -3715,7 +3710,7 @@ msgstr "Creează Token"
 msgid "Created:"
 msgstr "Creat:"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:288
+#: src/components/_economy/employee/EmployeeModal.tsx:290
 msgid "Creeps up every week since hire."
 msgstr ""
 
@@ -3788,7 +3783,7 @@ msgstr ""
 msgid "Custom username font"
 msgstr "Font personalizat pentru numele utilizatorului"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:280
+#: src/components/_economy/employee/EmployeeModal.tsx:282
 msgid "Cut by Negotiation training cards."
 msgstr ""
 
@@ -3822,7 +3817,7 @@ msgstr "Întreținere zinlică"
 msgid "Daily Missions Reset"
 msgstr "Resetare Misiuni Zilnice"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:340
+#: src/components/_economy/employee/EmployeeModal.tsx:342
 msgid "Daily production"
 msgstr ""
 
@@ -4143,10 +4138,6 @@ msgstr "Dezvoltare"
 msgid "Development income"
 msgstr ""
 
-#: src/components/_political/region/IncomeEstimateBreakdown.tsx:26
-#~ msgid "Development income: <0>{0}</0>"
-#~ msgstr ""
-
 #: src/utils/translations.tsx:254
 msgid "Diamond Auger"
 msgstr ""
@@ -4355,7 +4346,7 @@ msgstr ""
 msgid "Drill"
 msgstr ""
 
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:257
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:269
 #: src/components/_social/poll/PollEditorModal.tsx:244
 msgid "Duration"
 msgstr ""
@@ -4372,13 +4363,9 @@ msgstr ""
 msgid "Each card trains your employee differently. Tap one to see what it does, then pick it: the other one is lost."
 msgstr ""
 
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:191
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:203
 msgid "Each item gets its own auction, with the same start price and length."
 msgstr ""
-
-#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:211
-#~ msgid "Each item gets its own offer, all at the same price."
-#~ msgstr ""
 
 #: src/components/_user/user/EcoSkillEffects.tsx:90
 msgid "Each level adds <0>{perLevel}</0> to the production bonus of every one of your employees."
@@ -4402,10 +4389,6 @@ msgstr ""
 #: src/components/_user/milestone/milestone.frontConfig.tsx:34
 msgid "Earn <0/> in total"
 msgstr ""
-
-#: src/components/_political/region/RegionRevenueBreakdown.tsx:14
-#~ msgid "Earned for the owner country over the last full day."
-#~ msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:154
 msgid "Eat"
@@ -4549,11 +4532,11 @@ msgid "Elite Pants"
 msgstr "Pantaloni de elită"
 
 #: src/components/_economy/employee/employeeCards.tsx:200
-#: src/components/_economy/employee/EmployeeModal.tsx:452
-#: src/components/_economy/employee/EmployeeModal.tsx:773
+#: src/components/_economy/employee/EmployeeModal.tsx:454
+#: src/components/_economy/employee/EmployeeModal.tsx:775
 #: src/components/_economy/employee/EmployeeResumeCard.tsx:226
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:124
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:166
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:125
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:167
 #: src/components/_economy/employee/HireRevealModal.tsx:67
 #: src/components/_economy/employee/MoveEmployeeModal.tsx:90
 msgid "Employee"
@@ -4563,17 +4546,9 @@ msgstr ""
 msgid "Employee income tax"
 msgstr ""
 
-#: src/components/_political/region/IncomeEstimateBreakdown.tsx:32
-#~ msgid "Employee income tax: <0>{0}</0>"
-#~ msgstr ""
-
 #: src/components/_economy/employee/EmployeeRenameModal.tsx:48
 msgid "Employee renamed!"
 msgstr ""
-
-#: src/components/_economy/employee/WorkforceSummary.tsx:249
-#~ msgid "employees"
-#~ msgstr ""
 
 #: src/components/_economy/work/WorkChart.tsx:237
 #: src/pages/company/[companyId]/index.tsx:41
@@ -4634,7 +4609,7 @@ msgstr ""
 msgid "End this poll?"
 msgstr ""
 
-#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:30
+#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:31
 #: src/components/_military/battle/BattleSystem.tsx:774
 #: src/components/_military/tournament/TournamentHeader.tsx:85
 #: src/components/_military/war/WarHeader.tsx:70
@@ -4649,11 +4624,11 @@ msgstr "Încheiat <0/>"
 msgid "Ended without a bid"
 msgstr ""
 
-#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:18
+#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:19
 msgid "Ending soon"
 msgstr ""
 
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:303
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:315
 msgid "Ends"
 msgstr ""
 
@@ -4672,11 +4647,7 @@ msgstr "Energie"
 msgid "Ensign"
 msgstr "Sublocotenent"
 
-#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:133
-#~ msgid "Enter a price"
-#~ msgstr ""
-
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:127
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:138
 msgid "Enter a start price, 0 is fine"
 msgstr ""
 
@@ -4714,10 +4685,6 @@ msgstr "Echipament"
 #: src/components/_user/user/SkillValue.tsx:107
 msgid "Equipment:"
 msgstr "Echipament:"
-
-#: src/components/_economy/market/MarketHeader.tsx:20
-#~ msgid "Equipments"
-#~ msgstr "Echipamente"
 
 #: src/components/_other/shop/SkinCollectionModal.tsx:246
 msgid "Equipped"
@@ -4829,6 +4796,11 @@ msgstr ""
 #: src/components/_economy/employee/TrainingCard.tsx:202
 #: src/components/_economy/employee/TrainingDraftModal.tsx:201
 msgid "Expected wage"
+msgstr ""
+
+#. placeholder {0}: Math.round(entry.delta * 100)
+#: src/components/_economy/employee/TrainingHistory.tsx:133
+msgid "Expected wage <0>-{0}%</0>"
 msgstr ""
 
 #: src/components/_user/milestone/milestone.frontConfig.tsx:28
@@ -5084,7 +5056,7 @@ msgstr "Găsește o unitate militară"
 
 #: src/components/_economy/employee/employeeCards.tsx:294
 #: src/components/_economy/employee/employeeCards.tsx:310
-#: src/components/_economy/employee/EmployeeModal.tsx:612
+#: src/components/_economy/employee/EmployeeModal.tsx:614
 #: src/components/_economy/manager/CompanyManagerSlot.tsx:212
 #: src/components/_political/government/Government.tsx:253
 #: src/components/_user/user/UserEffectSelector.tsx:61
@@ -5360,7 +5332,7 @@ msgstr "Către Competențe"
 msgid "Gold"
 msgstr "Aur"
 
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:72
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:73
 msgid "Gone"
 msgstr ""
 
@@ -5644,11 +5616,11 @@ msgstr "Ajută membrii UM"
 msgid "Help the game to grow"
 msgstr "Ajută jocul să crească"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:931
+#: src/components/_economy/employee/EmployeeModal.tsx:934
 msgid "hidden"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:235
+#: src/components/_economy/employee/EmployeeModal.tsx:237
 #: src/components/_economy/employee/EmployeeResumeCard.tsx:60
 msgid "Hidden trait"
 msgstr ""
@@ -5673,7 +5645,7 @@ msgstr ""
 msgid "Hire your first employee!"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:459
+#: src/components/_economy/employee/EmployeeModal.tsx:461
 msgid "hired {hiredDaysAgo}d ago"
 msgstr ""
 
@@ -5722,7 +5694,7 @@ msgstr ""
 msgid "How many times have you seen this message already?"
 msgstr "De câte ori ai văzut deja acest mesaj?"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:255
+#: src/components/_economy/employee/EmployeeModal.tsx:257
 msgid "How much more or less than the market rate they ask for the same stats. It sets the wage they are paid."
 msgstr ""
 
@@ -5751,8 +5723,8 @@ msgstr ""
 msgid "I'm proud of you"
 msgstr "Sunt mândru de tine"
 
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:233
-#: src/components/_economy/inventory/Inventory.tsx:766
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:235
+#: src/components/_economy/inventory/Inventory.tsx:780
 msgid "Idle"
 msgstr ""
 
@@ -5972,7 +5944,7 @@ msgstr "Piață Obiecte"
 msgid "Item sold"
 msgstr ""
 
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:175
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:187
 #: src/components/_user/user/WealthPanel.tsx:49
 msgid "Items"
 msgstr "Obiecte"
@@ -6130,7 +6102,7 @@ msgstr "Ultima utilizare"
 msgid "Last used:"
 msgstr "Ultima utilizare:"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:359
+#: src/components/_economy/employee/EmployeeModal.tsx:361
 msgid "Last works"
 msgstr ""
 
@@ -6185,7 +6157,7 @@ msgstr ""
 msgid "Leadership"
 msgstr ""
 
-#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:50
+#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:56
 msgid "Leading"
 msgstr ""
 
@@ -6358,15 +6330,11 @@ msgstr "Limitat:"
 msgid "Line"
 msgstr "Linii"
 
-#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:297
-#~ msgid "Listed at, taxes included"
-#~ msgstr ""
-
 #: src/utils/translations.tsx:72
 msgid "Little cuties used to make steaks :("
 msgstr "Drăguțele mici folosite la friptură :("
 
-#: src/pages/market/auctions.tsx:88
+#: src/pages/market/auctions.tsx:91
 msgid "Live auctions"
 msgstr ""
 
@@ -6454,7 +6422,7 @@ msgstr "Șansă pradă"
 msgid "Loot reward"
 msgstr "Pradă"
 
-#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:53
+#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:62
 msgid "Lost"
 msgstr ""
 
@@ -6466,7 +6434,7 @@ msgstr "Love Paper Jet"
 msgid "Lowers their wage, for good."
 msgstr ""
 
-#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:20
+#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:21
 msgid "Lowest price"
 msgstr ""
 
@@ -6534,10 +6502,6 @@ msgstr ""
 msgid "Manager income tax"
 msgstr ""
 
-#: src/components/_political/region/IncomeEstimateBreakdown.tsx:38
-#~ msgid "Manager income tax: <0>{0}</0>"
-#~ msgstr ""
-
 #: src/pages/market/jobs.tsx:25
 msgid "Manager positions"
 msgstr ""
@@ -6549,10 +6513,6 @@ msgstr ""
 #: src/components/_economy/manager/CompanyManagerSlot.tsx:263
 msgid "Manager wanted"
 msgstr ""
-
-#: src/components/_economy/employee/WorkforceSummary.tsx:258
-#~ msgid "managers"
-#~ msgstr ""
 
 #: src/components/_layout/LoadingScreenContent.tsx:25
 msgid "map"
@@ -6583,10 +6543,6 @@ msgstr ""
 #: src/pages/user/[userId]/account.tsx:26
 msgid "Market"
 msgstr "Piață"
-
-#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:205
-#~ msgid "Market average"
-#~ msgstr ""
 
 #: src/components/_economy/employee/TrainingDraftModal.tsx:131
 msgid "Market rate"
@@ -6622,7 +6578,7 @@ msgstr ""
 msgid "Max level reached!"
 msgstr "Nivel maxim atins!"
 
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:292
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:304
 #: src/components/_economy/itemAuction/ItemAuctionCard.tsx:106
 #: src/components/_economy/itemAuction/ItemAuctionModal.tsx:266
 msgid "Max price"
@@ -6634,7 +6590,7 @@ msgid "Max rarity"
 msgstr ""
 
 #: src/components/_economy/employee/employeeCards.tsx:288
-#: src/components/_economy/employee/EmployeeModal.tsx:588
+#: src/components/_economy/employee/EmployeeModal.tsx:590
 msgid "Maxed"
 msgstr ""
 
@@ -7074,7 +7030,7 @@ msgstr "Mai multe funcții premium în curând!"
 msgid "More training sessions for this employee."
 msgstr ""
 
-#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:21
+#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:22
 msgid "Most bids"
 msgstr ""
 
@@ -7092,7 +7048,7 @@ msgstr "Moțiune propusă"
 msgid "Motions"
 msgstr "Moțiuni"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:606
+#: src/components/_economy/employee/EmployeeModal.tsx:608
 #: src/components/_economy/manager/CompanyManagerSlot.tsx:206
 #: src/components/_political/region/MoveButton.tsx:120
 #: src/components/_political/region/MoveButton.tsx:132
@@ -7314,7 +7270,7 @@ msgstr ""
 msgid "Negative mercenary reputation"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:279
+#: src/components/_economy/employee/EmployeeModal.tsx:281
 #: src/components/_economy/employee/training.frontConfig.tsx:158
 msgid "Negotiation"
 msgstr ""
@@ -7334,7 +7290,7 @@ msgstr "Nu renunța niciodată!"
 msgid "Never stop gambling"
 msgstr "Nu riști, nu câștigi!"
 
-#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:19
+#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:20
 #: src/components/_other/shop/SkinPackItem.tsx:93
 #: src/components/_social/ArticleList.tsx:189
 msgid "New"
@@ -7372,10 +7328,6 @@ msgstr "Nouă configurație de etici"
 #: src/components/_economy/employee/training.frontConfig.tsx:120
 msgid "New habit"
 msgstr ""
-
-#: src/components/_economy/itemOffer/ItemOfferList.tsx:69
-#~ msgid "New item offer"
-#~ msgstr "Ofertă nouă"
 
 #: src/components/_political/allianceLaw/AllianceLawFormModal.tsx:159
 msgid "New leader"
@@ -7541,7 +7493,7 @@ msgstr ""
 msgid "No API tokens yet. Create one to get started."
 msgstr "Niciun token API. Creează unul pentru a începe."
 
-#: src/pages/market/auctions.tsx:167
+#: src/pages/market/auctions.tsx:170
 msgid "No auction running for this item"
 msgstr ""
 
@@ -7623,7 +7575,7 @@ msgid "No home region set"
 msgstr ""
 
 #: src/components/_economy/inventory/DismantleModal.tsx:285
-#: src/components/_economy/inventory/ItemSelectorModal.tsx:198
+#: src/components/_economy/inventory/ItemSelectorModal.tsx:203
 msgid "No items found"
 msgstr ""
 
@@ -7684,10 +7636,6 @@ msgstr "Fără moțiuni"
 msgid "No MU has registered yet. Be the first."
 msgstr ""
 
-#: src/components/_economy/itemOffer/ItemOfferList.tsx:76
-#~ msgid "No offers found"
-#~ msgstr "Nu s-au găsit oferte"
-
 #: src/components/_political/government/Government.tsx:230
 msgid "No one nominated yet"
 msgstr "Nimeni nominalizat"
@@ -7708,7 +7656,7 @@ msgstr ""
 msgid "No prestige points left, tap to reset staged points"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:350
+#: src/components/_economy/employee/EmployeeModal.tsx:352
 msgid "No production yet"
 msgstr ""
 
@@ -7816,10 +7764,6 @@ msgstr "Numit în guvern"
 msgid "None"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:145
-#~ msgid "None of yours fits this company"
-#~ msgstr ""
-
 #: src/components/_political/law/LawFormModal.tsx:213
 #: src/components/_political/law/LawFormModal.tsx:291
 msgid "Normal"
@@ -7908,11 +7852,11 @@ msgstr "Petrol"
 
 #: src/components/_economy/employee/employeeCards.tsx:257
 #: src/components/_economy/employee/EmployeeResumeCard.tsx:281
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:151
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:152
 msgid "OK"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:670
+#: src/components/_economy/employee/EmployeeModal.tsx:672
 msgid "OK, remove them"
 msgstr ""
 
@@ -8097,7 +8041,7 @@ msgstr ""
 msgid "Other"
 msgstr "Altele"
 
-#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:51
+#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:60
 #: src/components/_user/notification/notification.frontConfig.tsx:2175
 msgid "Outbid"
 msgstr ""
@@ -8108,7 +8052,7 @@ msgstr ""
 msgid "Outcome"
 msgstr "Efect"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:844
+#: src/components/_economy/employee/EmployeeModal.tsx:847
 msgid "Output"
 msgstr ""
 
@@ -8398,7 +8342,7 @@ msgid "Pick a candidate!"
 msgstr ""
 
 #: src/components/_economy/employee/employeeCards.tsx:284
-#: src/components/_economy/employee/EmployeeModal.tsx:584
+#: src/components/_economy/employee/EmployeeModal.tsx:586
 #: src/components/_economy/employee/TrainingDraftModal.tsx:390
 msgid "Pick a card"
 msgstr ""
@@ -8415,13 +8359,13 @@ msgstr "Alege o luptă!"
 msgid "Pick one card, the other is lost."
 msgstr ""
 
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:198
-msgid "Pick up to {maxItemsPerListing} weapons or equipment in perfect condition to put up for auction."
+#: src/components/_economy/manager/ManagerCareButton.tsx:106
+msgid "Pick one employee. They gain +{happinessBoost} happiness for {durationHours}h. Picking the same employee again stacks, and each boost runs out on its own. You get one pick per day, reset at 00:00 UTC."
 msgstr ""
 
-#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:217
-#~ msgid "Pick up to {maxItemsPerListing} weapons or equipment in perfect condition to sell at the same price."
-#~ msgstr ""
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:210
+msgid "Pick up to {maxItemsPerListing} weapons, equipment or tools in perfect condition to put up for auction."
+msgstr ""
 
 #: src/utils/translations.tsx:248
 msgid "Pickaxe"
@@ -8630,10 +8574,6 @@ msgstr ""
 #: src/components/_user/notification/notification.frontConfig.tsx:2340
 msgid "Prestige!"
 msgstr ""
-
-#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:238
-#~ msgid "Price"
-#~ msgstr ""
 
 #: src/components/_economy/itemTrading/ItemTradingOrderFormModal.tsx:558
 msgid "Price auto-matches existing orders"
@@ -9043,7 +8983,7 @@ msgstr "Motiv"
 msgid "Recent Applications"
 msgstr "Cereri recente"
 
-#: src/pages/market/auctions.tsx:176
+#: src/pages/market/auctions.tsx:179
 msgid "Recent sales"
 msgstr ""
 
@@ -9327,7 +9267,7 @@ msgid "Removed from Military Unit"
 msgstr "Eliminat din Unitatea Militară"
 
 #: src/components/_economy/company/CompanyDropdown.tsx:324
-#: src/components/_economy/employee/EmployeeModal.tsx:599
+#: src/components/_economy/employee/EmployeeModal.tsx:601
 #: src/components/_economy/employee/EmployeeRenameModal.tsx:83
 #: src/components/_user/user/SkillPresetsModal.tsx:230
 msgid "Rename"
@@ -9572,7 +9512,7 @@ msgstr "Drepturi"
 msgid "Rollback money (take back all payments from MU/users and refund full pool to country)"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:262
+#: src/components/_economy/employee/EmployeeModal.tsx:264
 msgid "Rolled at hire"
 msgstr ""
 
@@ -9806,7 +9746,7 @@ msgid "Self work <0/> times in your companies"
 msgstr ""
 
 #: src/components/_economy/itemAuction/MyItemAuctions.tsx:49
-#: src/pages/market/auctions.tsx:98
+#: src/pages/market/auctions.tsx:101
 msgid "Sell an item"
 msgstr ""
 
@@ -9831,7 +9771,7 @@ msgstr "Vinde obiecte"
 msgid "Sell orders"
 msgstr "Comenzi de vânzare"
 
-#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:28
+#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:29
 msgid "Selling"
 msgstr ""
 
@@ -10141,7 +10081,7 @@ msgstr "Pușcă cu lunetă"
 msgid "Social & Messages"
 msgstr "Social & Mesaje"
 
-#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:54
+#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:63
 msgid "Sold"
 msgstr ""
 
@@ -10246,7 +10186,7 @@ msgstr "Declanșează alegeri prezidențiale anticipate"
 msgid "Start a revolution to overthrow the government"
 msgstr "Declanșează o revoluție împotriva guvernului"
 
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:68
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:72
 msgid "Start an auction"
 msgstr ""
 
@@ -10260,7 +10200,7 @@ msgstr "Declanșează alegeri parlamentare"
 msgid "Start presidential election"
 msgstr "Declanșează alegeri prezidențiale"
 
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:219
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:231
 msgid "Start price"
 msgstr ""
 
@@ -10289,7 +10229,7 @@ msgstr "Inițiere"
 msgid "Starting from the bottom..."
 msgstr "Ai plecat de jos..."
 
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:229
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:241
 msgid "Starting low draws bidders. The price climbs up to the max."
 msgstr ""
 
@@ -10398,10 +10338,6 @@ msgstr "Conectat cu succes!"
 msgid "Sugar Daddy"
 msgstr "Sugar Daddy"
 
-#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:253
-#~ msgid "Suggested price <0>{0}</0>"
-#~ msgstr ""
-
 #: src/components/_political/country/CountryHeader.tsx:196
 msgid "Sum of the regions the country currently controls. Market taxes and other income are not included."
 msgstr ""
@@ -10428,7 +10364,7 @@ msgstr "Susține-ne"
 msgid "Supporter"
 msgstr "Susținător"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:601
+#: src/components/_economy/employee/EmployeeModal.tsx:603
 #: src/components/_economy/inventoryAccount/InventoryAccount.tsx:52
 #: src/components/_user/user/UserDropdown.tsx:237
 #: src/components/_user/user/UserDropdown.tsx:246
@@ -10509,6 +10445,15 @@ msgstr "Revoltă de sistem"
 
 #: src/components/_economy/employee/ToolSelectorPopover.tsx:195
 msgid "Take back"
+msgstr ""
+
+#. placeholder {0}: employee.name
+#: src/components/_economy/manager/ManagerCareButton.tsx:134
+msgid "Take care of {0}?"
+msgstr ""
+
+#: src/components/_economy/manager/ManagerCareButton.tsx:66
+msgid "Take care of an employee"
 msgstr ""
 
 #: src/pages/country/[countryId]/index.tsx:114
@@ -10714,10 +10659,6 @@ msgstr ""
 msgid "The MU will receive the acceptance fee back, partial payout for damage done, and a 10% penalty fee of <0>{0}</0>. Are you sure?"
 msgstr "UM va primi taxa de acceptare înapoi, plată parțială pentru daunele efectuate, și 10% taxă de penalizare de <0>{0}</0>. Ești sigur?"
 
-#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:136
-#~ msgid "The price must be positive"
-#~ msgstr ""
-
 #: src/components/_economy/employee/TrainingCardList.tsx:125
 msgid "The rarity is rolled once for the whole hand, among the rarities the employee has enough cards in. Leadership tilts these odds."
 msgstr ""
@@ -10738,7 +10679,7 @@ msgstr ""
 msgid "The seat is free"
 msgstr ""
 
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:129
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:140
 msgid "The start price can't be negative"
 msgstr ""
 
@@ -10774,19 +10715,15 @@ msgstr ""
 msgid "Their work speed: every 10 Energy is one work action per hour."
 msgstr ""
 
-#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:228
-#~ msgid "These items have no authorized price in common. Remove the cheapest or the most valuable one."
-#~ msgstr ""
-
 #: src/components/_economy/manager/CompanyManagerSlot.tsx:217
 msgid "They keep what they earned."
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:782
+#: src/components/_economy/employee/EmployeeModal.tsx:784
 msgid "They left the company"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:75
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:76
 msgid "They left the company."
 msgstr ""
 
@@ -10801,6 +10738,10 @@ msgstr ""
 #: src/components/_military/battle/BattleSystem.tsx:830
 msgid "This bounty is reserved for nationals only."
 msgstr "Răsplată doar pentru cetățenii țării."
+
+#: src/components/_economy/manager/ManagerCareButton.tsx:115
+msgid "This company has no employees"
+msgstr ""
 
 #: src/components/_economy/company/CompanyTags.tsx:67
 msgid "This company is disabled because the owner reached the company limit."
@@ -10890,6 +10831,10 @@ msgstr ""
 #: src/components/_user/user/FamilyGroup.tsx:64
 msgid "This user is not part of any family group"
 msgstr "Acest utilizator nu face parte din niciun grup de familie"
+
+#: src/components/_economy/manager/ManagerCareButton.tsx:135
+msgid "This uses your pick for today. The next one opens at 00:00 UTC."
+msgstr ""
 
 #: src/components/_economy/inventory/ConsumeItems.tsx:237
 msgid "This will give you a buff for {cocainBuffHours}h then cause a malus for {cocainDebuffHours}h"
@@ -11008,10 +10953,6 @@ msgstr ""
 msgid "Tome of Tides"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:156
-#~ msgid "Tool"
-#~ msgstr ""
-
 #: src/utils/translations.tsx:119
 msgid "Toolbox"
 msgstr ""
@@ -11071,7 +11012,7 @@ msgstr "Top of the hill"
 msgid "total"
 msgstr "total"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:299
+#: src/components/_economy/employee/EmployeeModal.tsx:301
 #: src/components/_economy/inventoryAccount/InventoryAccount.tsx:120
 #: src/components/_economy/itemTrading/TradingOrders.tsx:55
 #: src/components/_economy/itemTrading/TradingOrders.tsx:86
@@ -11191,7 +11132,7 @@ msgid "Trading transaction"
 msgstr "Tranzacție"
 
 #: src/components/_economy/employee/employeeCards.tsx:286
-#: src/components/_economy/employee/EmployeeModal.tsx:586
+#: src/components/_economy/employee/EmployeeModal.tsx:588
 msgid "Train"
 msgstr ""
 
@@ -11203,7 +11144,7 @@ msgstr ""
 msgid "Train each employee every {trainingCooldownHours}h: you draw {trainingHandSize} cards and keep the one you like."
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:926
+#: src/components/_economy/employee/EmployeeModal.tsx:929
 msgid "Train to reveal traits"
 msgstr ""
 
@@ -11236,13 +11177,22 @@ msgstr ""
 msgid "Training deals a hand of {handSize} of these, all at the same rarity, and you keep one."
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:159
+#: src/components/_economy/employee/TrainingHistory.tsx:241
+msgid "Training history"
+msgstr ""
+
+#: src/components/_economy/employee/EmployeeModal.tsx:161
 #: src/components/_economy/employee/TrainingCard.tsx:214
 #: src/components/_economy/employee/TrainingDraftModal.tsx:213
 msgid "Training potential"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:897
+#. placeholder {0}: outcome.potentialMax
+#: src/components/_economy/employee/TrainingHistory.tsx:144
+msgid "Training potential raised to <0>{0}</0>"
+msgstr ""
+
+#: src/components/_economy/employee/EmployeeModal.tsx:900
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:156
 msgid "Traits"
 msgstr ""
@@ -11409,7 +11359,7 @@ msgstr "Deselectează tot"
 msgid "Unset the sworn enemy country"
 msgstr "Elimină inamicul principal al țării"
 
-#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:55
+#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:64
 msgid "Unsold"
 msgstr ""
 
@@ -11832,7 +11782,7 @@ msgstr ""
 msgid "VS"
 msgstr "VS"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:858
+#: src/components/_economy/employee/EmployeeModal.tsx:861
 #: src/components/_economy/transaction/TransactionList.tsx:77
 #: src/components/_economy/work/WorkChart.tsx:268
 msgid "Wage"
@@ -11842,7 +11792,7 @@ msgstr "Salariu"
 msgid "Wage changed"
 msgstr "Salariu modificat"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:251
+#: src/components/_economy/employee/EmployeeModal.tsx:253
 msgid "Wage expectation"
 msgstr ""
 
@@ -11965,10 +11915,6 @@ msgstr ""
 msgid "What one production point is worth on the market. Recomputed daily: each raw good's traded price over the last {windowDays} days is divided by the production points it takes to make, and this is the median of those."
 msgstr ""
 
-#: src/components/_political/country/CountryHeader.tsx:305
-#~ msgid "What the <0>regions</0> the country currently controls generate. Market taxes and other income are not included."
-#~ msgstr ""
-
 #: src/components/_military/battle/MyBattlesRecapCard.tsx:162
 msgid "What the battles you are fighting in have paid you so far (hits, damage, cases, bounty and contract money), plus the loot pool items you are currently in line for. Pool items are not won yet: they follow the damage rankings and are only yours once the pool is distributed."
 msgstr ""
@@ -12028,7 +11974,7 @@ msgstr ""
 msgid "Wizard Hat"
 msgstr ""
 
-#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:52
+#: src/components/_economy/itemAuction/itemAuction.frontConfig.tsx:61
 msgid "Won"
 msgstr ""
 
@@ -12088,7 +12034,7 @@ msgstr ""
 msgid "Working in your own company costs <0>{energyCostPerAction}</0> and adds your <1>Production</1> to its storage."
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:393
+#: src/components/_economy/employee/EmployeeModal.tsx:395
 msgid "Works alone"
 msgstr ""
 
@@ -12117,10 +12063,6 @@ msgstr "Wow felicitări! Mă rog, te-ai gândit să cumperi plan Susținător?"
 #: src/components/_political/law/LawList.tsx:52
 msgid "Write a law"
 msgstr "Propune o lege"
-
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:138
-#~ msgid "Wrong tool here, it belongs in {0}"
-#~ msgstr ""
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:65
 msgid "Wtf"
@@ -12411,7 +12353,7 @@ msgstr "Trebuie să consumi toate cele 3 puncte (mai ai {pointsRemaining})"
 msgid "You need a country to take part"
 msgstr ""
 
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:161
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:172
 msgid "You need to be level {minLevel} to sell equipment"
 msgstr ""
 
@@ -12441,21 +12383,9 @@ msgstr "Cadoul tău Susținător de la <0/> a expirat! Ai lua în considerare s�
 msgid "You prestiged and lost your levels"
 msgstr ""
 
-#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:288
-#~ msgid "You receive"
-#~ msgstr ""
-
-#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:306
-#~ msgid "You receive if all sell"
-#~ msgstr ""
-
-#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:310
+#: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:322
 msgid "You receive the full winning bid, the buyer pays the tax. A bid at the max price ends the auction at once."
 msgstr ""
-
-#: src/components/_economy/itemOffer/ItemOfferFormModal.tsx:286
-#~ msgid "You receive, per item"
-#~ msgstr ""
 
 #. placeholder {0}: data.rank
 #: src/components/_user/notification/notification.frontConfig.tsx:1425
@@ -12660,7 +12590,7 @@ msgstr "Coperta ta \"{0}\" a fost acceptată și este acum disponibilă în maga
 msgid "Your bid"
 msgstr ""
 
-#: src/components/_economy/itemAuction/ItemAuctionCard.tsx:157
+#: src/components/_economy/itemAuction/ItemAuctionCard.tsx:158
 msgid "Your bid plus your country's market tax is held until you are outbid or win."
 msgstr ""
 
