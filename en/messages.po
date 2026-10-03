@@ -112,20 +112,20 @@ msgstr "{0, plural, one {# coworker} other {# coworkers}}"
 msgid "{0, plural, one {# day} other {# days}}"
 msgstr "{0, plural, one {# day} other {# days}}"
 
+#. placeholder {0}: data.employeeCount
+#: src/components/_economy/employee/WorkforceSummary.tsx:388
+msgid "{0, plural, one {# employee} other {# employees}}"
+msgstr "{0, plural, one {# employee} other {# employees}}"
+
+#. placeholder {0}: data.managerCount
+#: src/components/_economy/employee/WorkforceSummary.tsx:405
+msgid "{0, plural, one {# manager} other {# managers}}"
+msgstr "{0, plural, one {# manager} other {# managers}}"
+
 #. placeholder {0}: poll.totalVoters
 #: src/components/_social/poll/PollCard.tsx:391
 msgid "{0, plural, one {# vote} other {# votes}}"
 msgstr "{0, plural, one {# vote} other {# votes}}"
-
-#. placeholder {0}: data.employeeCount
-#: src/components/_economy/employee/WorkforceSummary.tsx:418
-msgid "{0, plural, one {employee} other {employees}}"
-msgstr "{0, plural, one {employee} other {employees}}"
-
-#. placeholder {0}: data.managerCount
-#: src/components/_economy/employee/WorkforceSummary.tsx:428
-msgid "{0, plural, one {manager} other {managers}}"
-msgstr "{0, plural, one {manager} other {managers}}"
 
 #. placeholder {0}: Math.max(items.length, 1)
 #: src/components/_economy/itemAuction/CreateItemAuctionModal.tsx:500
@@ -260,10 +260,6 @@ msgstr "{completedCount}/{totalCount} completed"
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:307
 msgid "{contribution} when anyone in the event has it."
 msgstr "{contribution} when anyone in the event has it."
-
-#: src/components/_economy/employee/EmployeeFoundToolboxes.tsx:217
-msgid "{count} toolboxes found by your employees"
-msgstr "{count} toolboxes found by your employees"
 
 #: src/components/_economy/employeeEvent/EmployeeEventEffects.tsx:171
 msgid "{days, plural, one {# day of their wage} other {# days of their wage}}"
@@ -939,8 +935,8 @@ msgstr "{selectedCount} selected"
 msgid "{timeLeft} left"
 msgstr "{timeLeft} left"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:299
-#: src/components/_economy/employee/WorkforceSummary.tsx:411
+#: src/components/_economy/employee/WorkforceSummary.tsx:280
+#: src/components/_economy/employee/WorkforceSummary.tsx:444
 msgid "{trainable} to train"
 msgstr "{trainable} to train"
 
@@ -1064,6 +1060,8 @@ msgstr "*If the user already owns some pieces of the set, the price will be redu
 msgid "*May burn"
 msgstr "*May burn"
 
+#: src/components/_economy/employee/WorkforceSummary.tsx:421
+#: src/components/_economy/employee/WorkforceSummary.tsx:433
 #: src/components/_political/government/Government.tsx:222
 msgid "/day"
 msgstr "/day"
@@ -1790,10 +1788,6 @@ msgstr "1 hour"
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:86
 msgid "1 legendary down, 5 more to go for a full stuff, keep gambling!"
 msgstr "1 legendary down, 5 more to go for a full stuff, keep gambling!"
-
-#: src/components/_economy/employee/EmployeeFoundToolboxes.tsx:219
-msgid "1 toolbox found by your employees"
-msgstr "1 toolbox found by your employees"
 
 #: src/components/_common/GameRules.tsx:226
 msgid "1. English is the only allowed language in World/Global chat"
@@ -3808,7 +3802,7 @@ msgstr "Buy orders"
 msgid "Buy this item at its max price?"
 msgstr "Buy this item at its max price?"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:317
+#: src/components/_economy/employee/WorkforceSummary.tsx:298
 msgid "By companies"
 msgstr "By companies"
 
@@ -4184,15 +4178,13 @@ msgstr "Civil war"
 msgid "Claim"
 msgstr "Claim"
 
-#: src/components/_economy/employee/EmployeeFoundToolboxes.tsx:164
+#: src/components/_economy/employee/EmployeeFoundToolboxes.tsx:166
+#: src/components/_economy/employee/EmployeeFoundToolboxes.tsx:237
 msgid "Claim {count} toolboxes"
 msgstr "Claim {count} toolboxes"
 
-#: src/components/_economy/employee/EmployeeFoundToolboxes.tsx:234
-msgid "Claim all"
-msgstr "Claim all"
-
-#: src/components/_economy/employee/EmployeeFoundToolboxes.tsx:166
+#: src/components/_economy/employee/EmployeeFoundToolboxes.tsx:168
+#: src/components/_economy/employee/EmployeeFoundToolboxes.tsx:239
 msgid "Claim the toolbox"
 msgstr "Claim the toolbox"
 
@@ -4681,7 +4673,6 @@ msgid "Cost"
 msgstr "Cost"
 
 #: src/components/_economy/employee/EmployeeModal.tsx:633
-#: src/components/_economy/employee/WorkforceSummary.tsx:160
 msgid "Cost per"
 msgstr "Cost per"
 
@@ -4983,7 +4974,6 @@ msgid "Daily Missions Reset"
 msgstr "Daily Missions Reset"
 
 #: src/components/_economy/employee/EmployeeModal.tsx:616
-#: src/components/_economy/employee/WorkforceSummary.tsx:147
 msgid "Daily output"
 msgstr "Daily output"
 
@@ -4991,17 +4981,9 @@ msgstr "Daily output"
 msgid "Daily pay"
 msgstr "Daily pay"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:150
-msgid "Daily payroll"
-msgstr "Daily payroll"
-
 #: src/components/_economy/employee/EmployeeModal.tsx:129
 msgid "Daily production"
 msgstr "Daily production"
-
-#: src/components/_economy/employee/WorkforceSummary.tsx:182
-msgid "Daily profit"
-msgstr "Daily profit"
 
 #: src/components/_layout/map.frontConfig.tsx:49
 msgid "Daily revenue"
@@ -8045,11 +8027,11 @@ msgstr "Lt. General"
 msgid "Luck"
 msgstr "Luck"
 
-#: src/components/_economy/employee/EmployeeFoundToolboxes.tsx:123
+#: src/components/_economy/employee/EmployeeFoundToolboxes.tsx:125
 msgid "Luck found {count} toolboxes. Click to claim them."
 msgstr "Luck found {count} toolboxes. Click to claim them."
 
-#: src/components/_economy/employee/EmployeeFoundToolboxes.tsx:125
+#: src/components/_economy/employee/EmployeeFoundToolboxes.tsx:127
 msgid "Luck found a toolbox. Click to claim it."
 msgstr "Luck found a toolbox. Click to claim it."
 
@@ -8152,6 +8134,7 @@ msgstr "Map textures"
 msgid "market"
 msgstr "market"
 
+#: src/components/_economy/employee/WorkforceSummary.tsx:179
 #: src/components/_economy/market/MarketHeader.tsx:38
 #: src/components/_layout/LayoutMenu.tsx:171
 #: src/pages/country/[countryId]/account.tsx:31
@@ -8857,8 +8840,7 @@ msgstr "My country"
 msgid "My tier {0}"
 msgstr "My tier {0}"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:269
-#: src/components/_economy/employee/WorkforceSummary.tsx:398
+#: src/components/_economy/employee/WorkforceSummary.tsx:250
 msgid "My workforce"
 msgstr "My workforce"
 
@@ -9251,7 +9233,7 @@ msgstr "No defensive pact"
 msgid "No donations yet"
 msgstr "No donations yet"
 
-#: src/components/_economy/employee/EmployeeList.tsx:335
+#: src/components/_economy/employee/EmployeeList.tsx:337
 #: src/components/_economy/employee/EmployeeListV2.tsx:135
 msgid "No employees"
 msgstr "No employees"
@@ -9783,10 +9765,6 @@ msgstr "Open the chat"
 #: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:214
 msgid "Open to all"
 msgstr "Open to all"
-
-#: src/components/_economy/employee/WorkforceSummary.tsx:461
-msgid "Open workforce"
-msgstr "Open workforce"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:125
 msgid "Open your case!"
@@ -10922,7 +10900,7 @@ msgstr "Recipient"
 msgid "Recommended regions"
 msgstr "Recommended regions"
 
-#: src/components/_economy/employee/EmployeeList.tsx:355
+#: src/components/_economy/employee/EmployeeList.tsx:357
 #: src/components/_economy/employee/EmployeeListV2.tsx:172
 #: src/components/_economy/employee/RecruitModal.tsx:248
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:21
@@ -11274,7 +11252,7 @@ msgstr "Request Phone Verification"
 msgid "Requests:"
 msgstr "Requests:"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:288
+#: src/components/_economy/employee/WorkforceSummary.tsx:269
 msgid "Require attention"
 msgstr "Require attention"
 
@@ -12816,7 +12794,7 @@ msgstr "The General retreats in good order."
 msgid "The great soup debate"
 msgstr "The great soup debate"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:172
+#: src/components/_economy/employee/WorkforceSummary.tsx:169
 msgid "The hour's whole payroll across all your companies, employees and managers, divided by the production it banks. Under the market value of a point your companies earn more than they spend; over it, they cost more than what they make is worth."
 msgstr "The hour's whole payroll across all your companies, employees and managers, divided by the production it banks. Under the market value of a point your companies earn more than they spend; over it, they cost more than what they make is worth."
 
@@ -14780,7 +14758,7 @@ msgstr "You have been transferred from <0/> to <1/>"
 msgid "You have consumed <0>{0}</0>, it's effect starts now and ends in <1>{buffDuration}h</1>."
 msgstr "You have consumed <0>{0}</0>, its effect starts now and ends in <1>{buffDuration}h</1>."
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:281
+#: src/components/_economy/employee/WorkforceSummary.tsx:262
 msgid "You have no employees yet"
 msgstr "You have no employees yet"
 
