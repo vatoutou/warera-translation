@@ -113,12 +113,12 @@ msgid "{0, plural, one {# day} other {# days}}"
 msgstr ""
 
 #. placeholder {0}: data.employeeCount
-#: src/components/_economy/employee/WorkforceSummary.tsx:395
+#: src/components/_economy/employee/WorkforceSummary.tsx:525
 msgid "{0, plural, one {# employee} other {# employees}}"
 msgstr ""
 
 #. placeholder {0}: data.managerCount
-#: src/components/_economy/employee/WorkforceSummary.tsx:412
+#: src/components/_economy/employee/WorkforceSummary.tsx:542
 msgid "{0, plural, one {# manager} other {# managers}}"
 msgstr ""
 
@@ -144,7 +144,7 @@ msgstr "需要 {0} 位活躍公民"
 
 #. placeholder {0}: getTimeAgo(entry.pickedAt, 'fromNow', undefined, true, true)
 #. placeholder {0}: getTimeAgo(leftAt, 'fromNow', undefined, true)
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:94
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:100
 #: src/components/_economy/employee/TrainingHistory.tsx:183
 msgid "{0} ago"
 msgstr ""
@@ -951,13 +951,27 @@ msgstr ""
 msgid "{selectedCount} selected"
 msgstr ""
 
+#: src/components/_economy/employee/EmployeeTraitArg.tsx:54
+msgid "{step} every {perDays} days in the same company, up to {cap}."
+msgstr ""
+
+#: src/components/_economy/employee/EmployeeTraitArg.tsx:43
+msgid "{step} every {perDays} days in the same company."
+msgstr ""
+
 #: src/components/_social/poll/PollCard.tsx:221
 msgid "{timeLeft} left"
 msgstr ""
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:285
-#: src/components/_economy/employee/WorkforceSummary.tsx:451
+#: src/components/_economy/employee/WorkforceSummary.tsx:396
+#: src/components/_economy/employee/WorkforceSummary.tsx:581
 msgid "{trainable} to train"
+msgstr ""
+
+#. placeholder {0}: employee.potential
+#. placeholder {1}: employee.potentialMax
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:299
+msgid "{trainingsLeft} training sessions left ({0}/{1} used)."
 msgstr ""
 
 #: src/components/_economy/employeeEvent/EmployeeEventEffects.tsx:474
@@ -1080,8 +1094,8 @@ msgstr "*如果用戶已經擁有一些造型包中的造型，價格會減少"
 msgid "*May burn"
 msgstr "*可能會燒起來"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:428
-#: src/components/_economy/employee/WorkforceSummary.tsx:440
+#: src/components/_economy/employee/WorkforceSummary.tsx:558
+#: src/components/_economy/employee/WorkforceSummary.tsx:570
 #: src/components/_political/government/Government.tsx:222
 msgid "/day"
 msgstr "/天"
@@ -3329,11 +3343,11 @@ msgstr "頭像已移除"
 msgid "Average development"
 msgstr "平均發展度"
 
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:261
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:275
 msgid "Away"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:254
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:268
 msgid "Away for <0/>: no work, no wage."
 msgstr ""
 
@@ -3732,7 +3746,7 @@ msgstr ""
 msgid "broken"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:289
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:337
 #: src/components/_economy/inventory/Inventory.tsx:764
 msgid "Broken"
 msgstr ""
@@ -3824,10 +3838,6 @@ msgstr "買單"
 #: src/components/_economy/itemAuction/ItemAuctionBuyNowButton.tsx:51
 #: src/components/_economy/itemAuction/ItemAuctionModal.tsx:206
 msgid "Buy this item at its max price?"
-msgstr ""
-
-#: src/components/_economy/employee/WorkforceSummary.tsx:303
-msgid "By companies"
 msgstr ""
 
 #: src/components/_user/auth/ConnectFromModal.tsx:408
@@ -4406,11 +4416,16 @@ msgstr "公司上限"
 msgid "Companies limit reached"
 msgstr "達到公司上限"
 
+#: src/components/_economy/employee/WorkforceSummary.tsx:419
+msgid "Company"
+msgstr ""
+
 #: src/components/_economy/company/CompanyDropdown.tsx:108
 msgid "Company destroyed!"
 msgstr "公司已摧毀！"
 
 #: src/components/_economy/company/CompanyTags.tsx:73
+#: src/components/_economy/employee/WorkforceSummary.tsx:267
 msgid "Company disabled"
 msgstr "公司已停用"
 
@@ -4700,7 +4715,7 @@ msgstr ""
 msgid "Cost per"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeList.tsx:145
+#: src/components/_economy/employee/CostPerPp.tsx:67
 msgid "Cost per production point"
 msgstr ""
 
@@ -5006,7 +5021,6 @@ msgid "Daily pay"
 msgstr ""
 
 #: src/components/_economy/employee/EmployeeModal.tsx:129
-#: src/components/_economy/employee/WorkforceSummary.tsx:257
 msgid "Daily production"
 msgstr ""
 
@@ -5426,6 +5440,7 @@ msgid "Disable company"
 msgstr "停用公司"
 
 #: src/components/_economy/company/CompanyTags.tsx:92
+#: src/components/_economy/employee/WorkforceSummary.tsx:276
 #: src/components/_economy/manager/ManagerOfferRow.tsx:179
 msgid "Disabled"
 msgstr "已停用"
@@ -5753,8 +5768,8 @@ msgstr "精英褲子"
 #: src/components/_economy/employee/EmployeeModal.tsx:559
 #: src/components/_economy/employee/EmployeeName.tsx:70
 #: src/components/_economy/employee/EmployeeResumeCard.tsx:183
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:143
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:203
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:153
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:217
 #: src/components/_economy/employee/employeeTags.tsx:261
 #: src/components/_economy/employee/MoveEmployeeModal.tsx:92
 msgid "Employee"
@@ -5781,6 +5796,7 @@ msgstr ""
 msgid "Employee renamed!"
 msgstr ""
 
+#: src/components/_economy/employee/WorkforceSummary.tsx:410
 #: src/components/_economy/work/WorkChart.tsx:252
 #: src/pages/company/[companyId]/index.tsx:41
 msgid "Employees"
@@ -5964,7 +5980,7 @@ msgstr ""
 msgid "Estimated minimum time for this side to win the current round if all ticks are won."
 msgstr "預計此方最短贏得此回合所需時間，若贏得所有刻。"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:63
+#: src/components/_economy/employee/WorkforceSummary.tsx:72
 msgid "Estimated profit"
 msgstr ""
 
@@ -6707,7 +6723,7 @@ msgstr ""
 msgid "Gold"
 msgstr "黃金"
 
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:88
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:94
 msgid "Gone"
 msgstr ""
 
@@ -6910,6 +6926,7 @@ msgid "Hand over a toolbox and do it properly"
 msgstr ""
 
 #: src/components/_economy/employee/EmployeeTooltip.tsx:120
+#: src/components/_economy/employee/WorkforceSummary.tsx:440
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:159
 msgid "Happiness"
 msgstr ""
@@ -7041,7 +7058,7 @@ msgid "hidden"
 msgstr ""
 
 #: src/components/_economy/employee/employeeTags.tsx:134
-#: src/components/_economy/employee/EmployeeTraitBadge.tsx:77
+#: src/components/_economy/employee/EmployeeTraitBadge.tsx:82
 msgid "Hidden trait"
 msgstr ""
 
@@ -7168,7 +7185,7 @@ msgstr "i. 推廣其他遊戲、產品、或服務"
 msgid "I'm proud of you"
 msgstr "我以你為榮"
 
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:291
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:339
 #: src/components/_economy/inventory/Inventory.tsx:766
 msgid "Idle"
 msgstr ""
@@ -7454,6 +7471,10 @@ msgstr ""
 #: src/components/_user/user/WealthPanel.tsx:49
 msgid "Items"
 msgstr "物品"
+
+#: src/components/_economy/employee/WorkforceSummary.tsx:269
+msgid "Its employees do not work and are not paid until the company is enabled again."
+msgstr ""
 
 #: src/components/_common/GameRules.tsx:296
 msgid "j. Spam and repeated messages"
@@ -7837,8 +7858,8 @@ msgstr "等級 {level}"
 msgid "Level {minLevel}+"
 msgstr ""
 
-#: src/components/_political/election/Election.tsx:145
-#: src/components/_political/election/Election.tsx:237
+#: src/components/_political/election/Election.tsx:146
+#: src/components/_political/election/Election.tsx:239
 msgid "Level too low"
 msgstr "等級過低"
 
@@ -8154,12 +8175,12 @@ msgstr "地圖圖示"
 msgid "Map textures"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeList.tsx:179
+#: src/components/_economy/employee/CostPerPp.tsx:101
 #: src/components/_economy/employee/PpMoneyValue.tsx:130
 msgid "market"
 msgstr ""
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:180
+#: src/components/_economy/employee/WorkforceSummary.tsx:193
 #: src/components/_economy/market/MarketHeader.tsx:38
 #: src/components/_layout/LayoutMenu.tsx:171
 #: src/pages/country/[countryId]/account.tsx:31
@@ -8181,7 +8202,7 @@ msgstr "市場稅"
 msgid "Market tax ({taxRate}%)"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeList.tsx:164
+#: src/components/_economy/employee/CostPerPp.tsx:86
 #: src/components/_economy/employee/PpMoneyValue.tsx:84
 msgid "Market value"
 msgstr ""
@@ -8869,7 +8890,7 @@ msgstr ""
 msgid "My tier {0}"
 msgstr "我的級別 {0}"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:251
+#: src/components/_economy/employee/WorkforceSummary.tsx:365
 msgid "My workforce"
 msgstr ""
 
@@ -9258,7 +9279,7 @@ msgstr "沒有共同防禦條約"
 msgid "No donations yet"
 msgstr "尚無捐款"
 
-#: src/components/_economy/employee/EmployeeList.tsx:337
+#: src/components/_economy/employee/EmployeeList.tsx:238
 #: src/components/_economy/employee/EmployeeListV2.tsx:135
 msgid "No employees"
 msgstr ""
@@ -9630,7 +9651,7 @@ msgstr ""
 
 #: src/components/_economy/employee/employeeCards.tsx:278
 #: src/components/_economy/employee/EmployeeResumeCard.tsx:233
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:170
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:180
 msgid "OK"
 msgstr ""
 
@@ -10113,7 +10134,7 @@ msgstr "付款成功！謝謝支持遊戲 <3"
 msgid "Payout"
 msgstr "支付"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:93
+#: src/components/_economy/employee/WorkforceSummary.tsx:102
 msgid "Payroll"
 msgstr ""
 
@@ -10509,6 +10530,7 @@ msgid "Produced item changed!"
 msgstr "生產物品已更改！"
 
 #: src/components/_economy/employee/employee.frontConfig.tsx:122
+#: src/components/_economy/employee/WorkforceSummary.tsx:426
 #: src/components/_economy/work/WorkChart.tsx:232
 #: src/components/_user/user/skills.frontConfig.tsx:127
 #: src/components/_user/user/skills.frontConfig.tsx:128
@@ -10537,7 +10559,7 @@ msgstr "生產點數已滿"
 msgid "Production point value"
 msgstr ""
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:76
+#: src/components/_economy/employee/WorkforceSummary.tsx:85
 msgid "Production value"
 msgstr ""
 
@@ -10553,7 +10575,7 @@ msgstr "僅限專家（名聲 5 以上）"
 msgid "Profile"
 msgstr "個人檔案"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:103
+#: src/components/_economy/employee/WorkforceSummary.tsx:112
 msgid "Profit"
 msgstr ""
 
@@ -10909,7 +10931,7 @@ msgstr "原因"
 msgid "Recent Applications"
 msgstr "最近申請"
 
-#: src/components/_political/election/Election.tsx:247
+#: src/components/_political/election/Election.tsx:249
 msgid "Recent citizenship change"
 msgstr ""
 
@@ -10929,7 +10951,7 @@ msgstr "接收者"
 msgid "Recommended regions"
 msgstr "推薦地區"
 
-#: src/components/_economy/employee/EmployeeList.tsx:357
+#: src/components/_economy/employee/EmployeeList.tsx:258
 #: src/components/_economy/employee/EmployeeListV2.tsx:172
 #: src/components/_economy/employee/RecruitModal.tsx:244
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:21
@@ -11281,7 +11303,7 @@ msgstr "請求手機驗證"
 msgid "Requests:"
 msgstr "請求: "
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:274
+#: src/components/_economy/employee/WorkforceSummary.tsx:385
 msgid "Require attention"
 msgstr ""
 
@@ -12823,11 +12845,11 @@ msgstr ""
 msgid "The great soup debate"
 msgstr ""
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:170
+#: src/components/_economy/employee/WorkforceSummary.tsx:183
 msgid "The hour's whole payroll across all your companies, employees and managers, divided by the production it banks. Under the market value of a point your companies earn more than they spend; over it, they cost more than what they make is worth."
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeList.tsx:150
+#: src/components/_economy/employee/CostPerPp.tsx:72
 msgid "The hour's whole payroll, employees and manager, divided by the production it banks. Under the market value of a point the company earns more than it spends; over it, the roster costs more than what it makes is worth."
 msgstr ""
 
@@ -13022,8 +13044,12 @@ msgstr ""
 msgid "Their coworkers"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeTraitArg.tsx:39
+#: src/components/_economy/employee/EmployeeTraitArg.tsx:82
 msgid "Their good: {good}"
+msgstr ""
+
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:285
+msgid "Their hourly wage divided by the production they bank in that hour. Under the market value of a point they earn you more than they cost; over it, they cost more than what they make is worth."
 msgstr ""
 
 #: src/components/_economy/employee/TrainingDrawOdds.tsx:166
@@ -13042,7 +13068,7 @@ msgstr ""
 msgid "Their output: every {OUTPUT_DIVISOR} Production banks one production point per hour, before bonuses."
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeTraitArg.tsx:54
+#: src/components/_economy/employee/EmployeeTraitArg.tsx:97
 msgid "Their stat: {stat}"
 msgstr ""
 
@@ -13062,7 +13088,7 @@ msgstr ""
 msgid "They left the company"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:91
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:97
 msgid "They left the company."
 msgstr ""
 
@@ -14289,6 +14315,7 @@ msgid "VS"
 msgstr "VS"
 
 #: src/components/_economy/employee/EmployeeTooltip.tsx:141
+#: src/components/_economy/employee/WorkforceSummary.tsx:433
 #: src/components/_economy/transaction/TransactionList.tsx:77
 #: src/components/_economy/work/WorkChart.tsx:283
 msgid "Wage"
@@ -14409,7 +14436,7 @@ msgstr "歡迎來到 War Era！"
 msgid "Welcome to your economy!"
 msgstr "歡迎來到資本世界！"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:67
+#: src/components/_economy/employee/WorkforceSummary.tsx:76
 msgid "What a day of your employees' production is worth at the market value of a point, minus the day's whole payroll, employees and managers. An estimate: what you really earn depends on what you make and the price you sell it at."
 msgstr ""
 
@@ -14467,7 +14494,7 @@ msgstr "贏家"
 msgid "Winter Soldier Pack"
 msgstr "冬天士兵組合"
 
-#: src/components/_economy/employee/EmployeeTraitArg.tsx:59
+#: src/components/_economy/employee/EmployeeTraitArg.tsx:102
 msgid "With {partner}"
 msgstr ""
 
@@ -14736,8 +14763,8 @@ msgstr ""
 msgid "You can upgrade your skills!"
 msgstr "你可以升級技能了！"
 
-#. placeholder {0}: gameConfig?.election.voteMinDaysSinceCitizenshipChange
-#: src/components/_political/election/Election.tsx:249
+#. placeholder {0}: gameConfig?.election .voteMinDaysSinceCitizenshipChange
+#: src/components/_political/election/Election.tsx:251
 msgid "You can vote {0} days after changing citizenship. Available in <0/>."
 msgstr ""
 
@@ -14811,7 +14838,7 @@ msgstr "你已被從 <0/> 轉移至 <1/>"
 msgid "You have consumed <0>{0}</0>, it's effect starts now and ends in <1>{buffDuration}h</1>."
 msgstr "你已經使用 <0>{0}</0>，它的效果現在開始，且結束於 <1>{buffDuration} 小時</1>。"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:267
+#: src/components/_economy/employee/WorkforceSummary.tsx:378
 msgid "You have no employees yet"
 msgstr ""
 
@@ -14874,7 +14901,7 @@ msgid "You lose the election 1 to 0."
 msgstr ""
 
 #. placeholder {0}: gameConfig.election.candidateMinLevel
-#: src/components/_political/election/Election.tsx:146
+#: src/components/_political/election/Election.tsx:148
 msgid "You must be at least level {0} to become a candidate."
 msgstr "你必須至少為等級 {0} 以成為參選者。"
 
@@ -14886,7 +14913,7 @@ msgid "You must be at least level {0} to contribute."
 msgstr "你必須至少要等級 {0} 才能貢獻"
 
 #. placeholder {0}: gameConfig.election.voteMinLevel
-#: src/components/_political/election/Election.tsx:239
+#: src/components/_political/election/Election.tsx:241
 msgid "You must be at least level {0} to vote."
 msgstr "你必須至少等級 {0} 以投票。"
 
@@ -14918,7 +14945,7 @@ msgstr ""
 msgid "You paid the dev's bills <3 (top 3 in monthly supporter gifts ranking)"
 msgstr "你付了開發團隊的帳單 <3 （每月排名前三的支持者禮物）"
 
-#: src/components/_economy/employee/EmployeeList.tsx:159
+#: src/components/_economy/employee/CostPerPp.tsx:81
 #: src/components/_economy/employee/PpMoneyValue.tsx:97
 #: src/components/_economy/itemAuction/ItemAuctionModal.tsx:361
 msgid "You pay"
