@@ -86,7 +86,7 @@ msgid "“Senior Worker” it is. It will do, for now."
 msgstr ""
 
 #: src/components/_political/alliance/AllianceMemberRow.tsx:71
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:246
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:225
 msgid "(average member development)"
 msgstr ""
 
@@ -94,7 +94,7 @@ msgstr ""
 msgid "(member average development)"
 msgstr ""
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:236
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:215
 msgid "(own development)"
 msgstr ""
 
@@ -151,7 +151,7 @@ msgid "{0} ago"
 msgstr ""
 
 #. placeholder {0}: formatKm(homeDistanceKm)
-#: src/components/_layout/LayoutMapUserMenu.tsx:274
+#: src/components/_layout/LayoutMapUserMenu.tsx:282
 msgid "{0} away"
 msgstr ""
 
@@ -161,9 +161,24 @@ msgid "{0} bought your item offer"
 msgstr "{0} osti tarjouksesi"
 
 #. placeholder {0}: Math.floor(cooldownHours / 24)
-#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:145
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:127
 msgid "{0} days cooldown"
 msgstr "{0} päivän odotusaika"
+
+#. placeholder {0}: percentChange(core)
+#: src/components/_political/govType/govType.frontConfig.tsx:113
+msgid "{0} development income"
+msgstr ""
+
+#. placeholder {0}: percentChange(conquered)
+#: src/components/_political/govType/govType.frontConfig.tsx:131
+msgid "{0} development income from conquered regions"
+msgstr ""
+
+#. placeholder {0}: percentChange(core)
+#: src/components/_political/govType/govType.frontConfig.tsx:118
+msgid "{0} development income from core regions"
+msgstr ""
 
 #. placeholder {0}: user.data.leveling.freeReset
 #: src/pages/user/[userId]/skills.tsx:263
@@ -188,6 +203,11 @@ msgstr ""
 msgid "{0} outbid you at ${1}/K"
 msgstr ""
 
+#. placeholder {0}: percentChange(effects.incomeTaxMultiplier)
+#: src/components/_political/govType/govType.frontConfig.tsx:153
+msgid "{0} payroll and manager tax income"
+msgstr ""
+
 #. placeholder {0}: data.userId && ( <UserUsername userId={data.userId} withAvatar withFlag /> )
 #: src/components/_user/notification/notification.frontConfig.tsx:741
 msgid "{0} proposed a new law <0/>"
@@ -197,6 +217,11 @@ msgstr ""
 #: src/components/_military/battle/RoundScore.tsx:55
 msgid "{0} rounds are needed to win the battle."
 msgstr "{0} kierrosta tarvitaan taistelun voittamiseen."
+
+#. placeholder {0}: percentChange(effects.strategicResourceIncomeMultiplier)
+#: src/components/_political/govType/govType.frontConfig.tsx:146
+msgid "{0} strategic resource income"
+msgstr ""
 
 #. placeholder {0}: itemName(rarity)
 #: src/components/_economy/employeeEvent/EmployeeEventEffects.tsx:244
@@ -215,7 +240,7 @@ msgid "{0}/{1} active"
 msgstr "{0}/{1} aktiivista"
 
 #. placeholder {0}: userMapLootConfig.lootChancePercent
-#: src/components/_layout/LayoutMapUserMenu.tsx:376
+#: src/components/_layout/LayoutMapUserMenu.tsx:384
 msgid "{0}% base chance, plus your Luck skill"
 msgstr ""
 
@@ -809,7 +834,7 @@ msgstr ""
 msgid "{grainPerBread} <0>{0}</0> make one <1>{1}</1>, {ironPerSteel} <2>{2}</2> one <3>{3}</3> and {limestonePerConcrete} <4>{4}</4> one <5>{5}</5>."
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:268
+#: src/components/_layout/LayoutMapUserMenu.tsx:276
 msgid "{homeRegionsAway, plural, one {# region away} other {# regions away}}"
 msgstr ""
 
@@ -909,7 +934,7 @@ msgstr ""
 msgid "{partnerName} learns fast."
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:225
+#: src/components/_layout/LayoutMapUserMenu.tsx:234
 #: src/components/_political/map/MapMenu.tsx:191
 msgid "{quantity} wooden cases collected!"
 msgstr ""
@@ -922,7 +947,7 @@ msgstr ""
 msgid "{raw} of the company's good, {product} if it is a product"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:297
+#: src/components/_layout/LayoutMapUserMenu.tsx:305
 #: src/components/_political/map/MapMenu.tsx:652
 msgid "{regionsAway, plural, one {# region away} other {# regions away}}"
 msgstr ""
@@ -984,7 +1009,7 @@ msgstr ""
 msgid "{value} days of experience"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:108
+#: src/components/_layout/LayoutMapUserMenu.tsx:118
 msgid "{value} km"
 msgstr ""
 
@@ -1104,7 +1129,7 @@ msgstr "*Voidaan polttaa"
 #: src/components/_economy/employee/EstimatedProfit.tsx:148
 #: src/components/_economy/employee/WorkforceSummary.tsx:488
 #: src/components/_economy/employee/WorkforceSummary.tsx:523
-#: src/components/_political/government/Government.tsx:222
+#: src/components/_political/government/Government.tsx:221
 msgid "/day"
 msgstr "/päivä"
 
@@ -1127,6 +1152,16 @@ msgstr ""
 
 #: src/components/_economy/manager/ManagerOfferFormModal.tsx:164
 msgid "/h per point"
+msgstr ""
+
+#. placeholder {0}: effects.allianceBonusDelta
+#: src/components/_political/govType/govType.frontConfig.tsx:171
+msgid "+{0}% alliance bonus when fighting for an ally"
+msgstr ""
+
+#. placeholder {0}: effects.bunkerBonusDelta
+#: src/components/_political/govType/govType.frontConfig.tsx:178
+msgid "+{0}% bunker bonus"
 msgstr ""
 
 #: src/components/_military/battle/MyBattlesRecapCard.tsx:203
@@ -1221,12 +1256,12 @@ msgid "<0/> bought your banner{0}!"
 msgstr ""
 
 #. placeholder {0}: law.data.amount ?? 0
-#: src/components/_political/law/law.frontConfig.tsx:443
+#: src/components/_political/law/law.frontConfig.tsx:447
 msgid "<0/> buys <1/> for <2>{0}</2>"
 msgstr ""
 
 #. placeholder {0}: law.data.amount ?? 0
-#: src/components/_political/law/law.frontConfig.tsx:454
+#: src/components/_political/law/law.frontConfig.tsx:458
 msgid "<0/> buys your region <1/> for <2>{0}</2>"
 msgstr "<0/> ostaa alueesi <1/> hintaan <2>{0}</2>"
 
@@ -1364,7 +1399,7 @@ msgstr "<0/> on rahoittanut vastarintaa maassa <1/>"
 msgid "<0/> has formed an alliance with <1/>"
 msgstr "<0/> on muodostanut liiton <1/> kanssa"
 
-#: src/components/_political/law/law.frontConfig.tsx:392
+#: src/components/_political/law/law.frontConfig.tsx:396
 msgid "<0/> has invited your country to join."
 msgstr ""
 
@@ -1492,7 +1527,7 @@ msgstr ""
 msgid "<0/> Priority ends in <1/>"
 msgstr "<0/> Prioriteetti päättyy <1/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:296
+#: src/components/_political/law/law.frontConfig.tsx:300
 msgid "<0/> proposed a mutual defensive pact to your country."
 msgstr ""
 
@@ -1551,11 +1586,11 @@ msgstr "<0/> otti haltuunsa <1/>"
 msgid "<0/> vs <1/> war"
 msgstr "<0/> vs <1/> sota"
 
-#: src/components/_political/law/law.frontConfig.tsx:94
+#: src/components/_political/law/law.frontConfig.tsx:98
 msgid "<0/> wants peace"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:104
+#: src/components/_political/law/law.frontConfig.tsx:108
 msgid "<0/> wants to make peace with your country"
 msgstr "<0/> haluaa tehdä rauhan maasi kanssa"
 
@@ -1604,6 +1639,11 @@ msgstr "<0/> voitti kierroksen <1>#{0}</1> pelissä <2/>!"
 #. placeholder {0}: ts[data.itemCode]
 #: src/components/_user/notification/notification.frontConfig.tsx:708
 msgid "<0/> won your {0}."
+msgstr ""
+
+#. placeholder {0}: ts.paper
+#: src/components/_military/battle/SetOrderFormModal.tsx:465
+msgid "<0/>: this order costs ×{orderCostMult} <1>{0}</1> and gives ×{orderDamageMult} damage bonus"
 msgstr ""
 
 #: src/pages/war/[warId]/index.tsx:55
@@ -1687,15 +1727,13 @@ msgstr ""
 msgid "<0>{0}</0> from deposit resources."
 msgstr "<0>{0}</0> talletusresursseista."
 
-#. placeholder {0}: sideBonus.pacificationDefenseBonusPercent
 #: src/components/_military/battle/BattleDamageBonuses.tsx:273
-msgid "<0>{0}</0> from Fanatic Expansionist ethics (Pacification Center)"
-msgstr ""
+#~ msgid "<0>{0}</0> from Fanatic Expansionist ethics (Pacification Center)"
+#~ msgstr ""
 
-#. placeholder {0}: sideBonus.revoltBunkerCopyBonusPercent
 #: src/components/_military/battle/BattleDamageBonuses.tsx:263
-msgid "<0>{0}</0> from Fanatic Pacifist ethics (revolt copies enemy bunker)"
-msgstr ""
+#~ msgid "<0>{0}</0> from Fanatic Pacifist ethics (revolt copies enemy bunker)"
+#~ msgstr ""
 
 #. placeholder {0}: sideBonus.patrioticBonusPercent
 #: src/components/_military/battle/BattleDamageBonuses.tsx:73
@@ -1748,11 +1786,11 @@ msgstr ""
 msgid "<0>Armor</0> and <1>Dodge</1> have diminishing returns: each point is worth a bit less than the one before."
 msgstr ""
 
-#: src/components/_political/country/CountryHeader.tsx:276
+#: src/components/_political/country/CountryHeader.tsx:292
 msgid "<0>Average development</0> is the average of <1>Core development</1> and <2>Current development</2>."
 msgstr ""
 
-#: src/components/_political/country/CountryHeader.tsx:240
+#: src/components/_political/country/CountryHeader.tsx:256
 msgid "<0>Core development</0> is calculated depending on the country's <1>Population</1> and average <2>Level</2>. then distributed equally among the country's <3>Core regions</3>."
 msgstr ""
 
@@ -1760,7 +1798,7 @@ msgstr ""
 msgid "<0>Critical chance</0> caps at 100%: every point above turns into <1>{criticalOverflow}</1> critical damages."
 msgstr ""
 
-#: src/components/_political/country/CountryHeader.tsx:304
+#: src/components/_political/country/CountryHeader.tsx:320
 msgid "<0>Current development</0> is the total development of the <1>regions</1> the country currently controls, including conquered territory."
 msgstr ""
 
@@ -2532,7 +2570,7 @@ msgstr "Pidättäytyä äänestämästä"
 msgid "Abusing or spamming the report system may lead to sanctions."
 msgstr "Ilmoitusjärjestelmän väärinkäyttö tai roskapostittaminen voi johtaa seuraamuksiin."
 
-#: src/pages/country/[countryId]/index.tsx:131
+#: src/pages/country/[countryId]/index.tsx:133
 msgid "Abusing this power to advantage another country will lead to a <0>ban.</0>"
 msgstr "Tämän vallan väärinkäyttö toisen maan hyväksi johtaa <0>kieltoon.</0>"
 
@@ -2544,11 +2582,11 @@ msgstr "Tämän vallan väärinkäyttö toisen maan hyväksi johtaa <0>kieltoon.
 msgid "Accept"
 msgstr "Hyväksy"
 
-#: src/components/_political/law/law.frontConfig.tsx:287
+#: src/components/_political/law/law.frontConfig.tsx:291
 msgid "Accept a defensive pact with <0/>"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:281
+#: src/components/_political/law/law.frontConfig.tsx:285
 #: src/components/_political/law/lawNames.tsx:41
 msgid "Accept defensive pact"
 msgstr ""
@@ -2557,16 +2595,16 @@ msgstr ""
 msgid "Accept its command"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:439
+#: src/components/_political/law/law.frontConfig.tsx:443
 msgid "Accept or reject a region buy offer"
 msgstr "Hyväksy tai hylkää alueostotarjous"
 
-#: src/components/_political/law/law.frontConfig.tsx:89
+#: src/components/_political/law/law.frontConfig.tsx:93
 #: src/components/_political/law/lawNames.tsx:13
 msgid "Accept peace"
 msgstr "Hyväksy rauha"
 
-#: src/components/_political/law/law.frontConfig.tsx:90
+#: src/components/_political/law/law.frontConfig.tsx:94
 msgid "Accept to make peace with the other country"
 msgstr "Hyväksy rauhan tekeminen toisen maan kanssa"
 
@@ -2578,16 +2616,16 @@ msgstr "Hyväksytty"
 msgid "Access granted"
 msgstr ""
 
-#: src/components/_military/battle/BattleHeader.tsx:124
+#: src/components/_military/battle/BattleHeader.tsx:178
 msgid "Access war"
 msgstr "Siirry sotaan"
 
 #: src/components/_military/mu/MuHeader.tsx:161
-#: src/components/_political/country/CountryHeader.tsx:98
+#: src/components/_political/country/CountryHeader.tsx:102
 #: src/components/_political/party/PartyHeader.tsx:117
 #: src/components/_user/user/UserHeader.tsx:186
 #: src/pages/country/[countryId]/account.tsx:43
-#: src/pages/country/[countryId]/index.tsx:256
+#: src/pages/country/[countryId]/index.tsx:257
 #: src/pages/user/[userId]/account.tsx:32
 #: src/pages/user/[userId]/index.tsx:166
 msgid "Account"
@@ -2615,7 +2653,7 @@ msgstr "Aktiivinen"
 msgid "Active battle"
 msgstr "Aktiivinen taistelu"
 
-#: src/pages/country/[countryId]/index.tsx:206
+#: src/pages/country/[countryId]/index.tsx:208
 msgid "Active battles"
 msgstr "Aktiiviset taistelut"
 
@@ -2624,7 +2662,7 @@ msgid "Active Citizens"
 msgstr "Aktiiviset kansalaiset"
 
 #. placeholder {0}: staticGameConfig.user.activeCitizenMinLevel
-#: src/components/_political/country/CountryHeader.tsx:220
+#: src/components/_political/country/CountryHeader.tsx:236
 msgid "Active citizens (citizenship of this country, active and level {0}+)"
 msgstr ""
 
@@ -2636,7 +2674,7 @@ msgstr "Aktiivinen rakentaminen"
 msgid "Active War"
 msgstr "Aktiivinen sota"
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:269
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:248
 msgid "Active wars"
 msgstr "Aktiiviset sodat"
 
@@ -2657,9 +2695,9 @@ msgid "Add User"
 msgstr "Lisää käyttäjä"
 
 #: src/components/_political/law/Law.tsx:110
-#: src/components/_political/law/LawFormModal.tsx:329
+#: src/components/_political/law/LawFormModal.tsx:383
 #: src/components/_political/partyMotion/PartyMotion.tsx:116
-#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:170
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:146
 msgid "Additional cost"
 msgstr "Lisäkustannukset"
 
@@ -2735,8 +2773,8 @@ msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:341
 #: src/components/_political/party/party.frontConfig.tsx:346
-msgid "Agrarian"
-msgstr "Maatalous"
+#~ msgid "Agrarian"
+#~ msgstr "Maatalous"
 
 #: src/components/_economy/inventory/ItemGridFilters.tsx:183
 #: src/components/_economy/inventory/ItemGridFilters.tsx:221
@@ -2775,7 +2813,7 @@ msgstr "Kaikki kielet"
 msgid "All Mobile"
 msgstr "Kaikki mobiili"
 
-#: src/pages/party/[partyId]/index.tsx:113
+#: src/pages/party/[partyId]/index.tsx:90
 msgid "All Parties"
 msgstr "Kaikki osapuolet"
 
@@ -2799,10 +2837,9 @@ msgstr ""
 msgid "All transactions must stay fair and balanced."
 msgstr ""
 
-#. placeholder {0}: formatMultiplierDelta( ethicsBonuses.isolationism['-2'].treatyMaintenanceMultiplier, )
 #: src/components/_political/party/party.frontConfig.tsx:160
-msgid "All treaty maintenance costs are increased by <0>{0}</0>."
-msgstr ""
+#~ msgid "All treaty maintenance costs are increased by <0>{0}</0>."
+#~ msgstr ""
 
 #: src/components/_economy/transaction/TransactionList.tsx:70
 msgid "All types"
@@ -2810,15 +2847,24 @@ msgstr "Kaikki tyypit"
 
 #: src/components/_layout/map.frontConfig.tsx:37
 #: src/components/_political/alliance/AllianceHeader.tsx:68
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:203
-#: src/components/_political/country/CountryHeader.tsx:208
-#: src/components/_political/country/CountryTooltip.tsx:103
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:182
+#: src/components/_political/country/CountryHeader.tsx:224
+#: src/components/_political/country/CountryTooltip.tsx:115
 #: src/components/_political/map/MapMenu.tsx:449
 msgid "Alliance"
 msgstr ""
 
 #: src/components/_political/alliance/AllianceBattleBonus.tsx:70
 msgid "Alliance <0/> (<1/>)"
+msgstr ""
+
+#. placeholder {0}: effects.allianceUpkeepMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:301
+msgid "Alliance and pact upkeep x{0}"
+msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:62
+msgid "Alliance backbone"
 msgstr ""
 
 #: src/components/_political/alliance/AllianceBattleBonus.tsx:94
@@ -2842,9 +2888,14 @@ msgstr ""
 msgid "Alliance laws"
 msgstr ""
 
-#: src/components/_political/law/LawFormModal.tsx:212
-#: src/components/_political/law/LawFormModal.tsx:213
+#: src/components/_political/law/LawFormModal.tsx:232
+#: src/components/_political/law/LawFormModal.tsx:233
 msgid "Alliance name"
+msgstr ""
+
+#. placeholder {0}: effects.allianceUpkeepMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:309
+msgid "Alliance upkeep x{0}"
 msgstr ""
 
 #: src/components/_military/battle/ActiveBattlesList.tsx:101
@@ -2885,8 +2936,8 @@ msgstr "Ammukset"
 msgid "Ammo:"
 msgstr "Ammus:"
 
-#: src/components/_political/law/LawFormModal.tsx:286
-#: src/components/_political/law/LawFormModal.tsx:287
+#: src/components/_political/law/LawFormModal.tsx:306
+#: src/components/_political/law/LawFormModal.tsx:307
 msgid "Amount"
 msgstr "Määrä"
 
@@ -2911,7 +2962,7 @@ msgstr "Liitto on katkennut"
 msgid "An alliance has been formed"
 msgstr "Liitto on muodostettu"
 
-#: src/components/_political/law/law.frontConfig.tsx:379
+#: src/components/_political/law/law.frontConfig.tsx:383
 msgid "An alliance has invited your country to join"
 msgstr ""
 
@@ -2935,6 +2986,10 @@ msgstr ""
 msgid "An item has no market value yet, so it has no max price and can't be auctioned. Remove it from the selection."
 msgstr ""
 
+#: src/components/_political/govType/govType.frontConfig.tsx:254
+msgid "An occupied capital revolts on its own at full resistance"
+msgstr ""
+
 #: src/components/_user/premium/PremiumFeatureList.tsx:113
 msgid "Animated <0>GIF</0> as avatar"
 msgstr "Animoitu <0>GIF</0> avatarina"
@@ -2947,7 +3002,7 @@ msgstr ""
 msgid "Announcements"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:282
+#: src/components/_political/law/law.frontConfig.tsx:286
 msgid "Another country proposed a defensive pact to yours"
 msgstr ""
 
@@ -3108,7 +3163,7 @@ msgstr "Haluatko varmasti siirtää omistajuuden tälle jäsenelle? Tätä toimi
 msgid "Armor"
 msgstr "Panssari"
 
-#: src/components/_political/law/LawFormModal.tsx:253
+#: src/components/_political/law/LawFormModal.tsx:273
 msgid "Article ID"
 msgstr "Artikkelin tunnus"
 
@@ -3222,7 +3277,7 @@ msgstr ""
 msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
 msgstr "Ajastimen lopussa <0>{actualTickPoints}</0> jaetaan sille puolelle, jolla on eniten vaurioita."
 
-#: src/components/_political/country/CountryTooltip.tsx:135
+#: src/components/_political/country/CountryTooltip.tsx:147
 msgid "At war with"
 msgstr ""
 
@@ -3230,11 +3285,11 @@ msgstr ""
 msgid "At your Management level"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:420
+#: src/components/_layout/LayoutMapUserMenu.tsx:428
 msgid "Atlas"
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:535
+#: src/components/_military/hit/HitButton.tsx:491
 #: src/components/_political/map/MapMenu.tsx:457
 #: src/components/_user/user/skills.frontConfig.tsx:59
 #: src/components/_user/user/skills.frontConfig.tsx:60
@@ -3243,6 +3298,11 @@ msgstr "Hyökkäys"
 
 #: src/components/_user/user/MilitaryRank.tsx:123
 msgid "Attack bonus:"
+msgstr ""
+
+#. placeholder {0}: effects.nonCoreAttackOrderCostMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:221
+msgid "Attack orders outside its core regions cost x{0}"
 msgstr ""
 
 #: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:193
@@ -3287,7 +3347,7 @@ msgid "Auction Won"
 msgstr ""
 
 #: src/components/_economy/market/MarketHeader.tsx:20
-#: src/components/_military/battle/BattleHeader.tsx:322
+#: src/components/_military/battle/BattleHeader.tsx:358
 #: src/components/_military/battle/BattlesHeader.tsx:39
 #: src/components/_military/battle/BattleSideContractsModal.tsx:37
 #: src/pages/market/index.tsx:80
@@ -3319,6 +3379,10 @@ msgstr "Luo automaattisesti <0>tuotantopisteitä</0> ajan mittaan ilman, että s
 msgid "Autobuy when empty"
 msgstr ""
 
+#: src/components/_political/govType/govType.frontConfig.tsx:73
+msgid "Autocracy"
+msgstr ""
+
 #: src/components/_economy/company/CompanyTags.tsx:123
 msgid "Automated engine"
 msgstr "Automaattinen moottori"
@@ -3328,7 +3392,7 @@ msgstr "Automaattinen moottori"
 msgid "Automated Engine"
 msgstr "Automatisoitu Moottori"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:264
+#: src/components/_layout/LayoutMapUserMenu.tsx:272
 msgid "Available in"
 msgstr ""
 
@@ -3341,8 +3405,8 @@ msgid "Avatar removed"
 msgstr "Avatar poistettu"
 
 #: src/components/_political/alliance/AllianceHeader.tsx:83
-#: src/components/_political/country/CountryHeader.tsx:267
-#: src/components/_political/country/CountryHeader.tsx:272
+#: src/components/_political/country/CountryHeader.tsx:283
+#: src/components/_political/country/CountryHeader.tsx:288
 #: src/components/_political/law/LawCostExplanation.tsx:44
 msgid "Average development"
 msgstr ""
@@ -3371,7 +3435,7 @@ msgstr "Babyboomeri"
 msgid "Back the reinvention"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:326
+#: src/components/_layout/LayoutMapUserMenu.tsx:334
 msgid "Back to home region"
 msgstr ""
 
@@ -3387,18 +3451,18 @@ msgstr "Merkki ansaittu"
 msgid "Badge Won"
 msgstr "Merkki voitettu"
 
-#: src/pages/country/[countryId]/index.tsx:263
+#: src/pages/country/[countryId]/index.tsx:264
 #: src/pages/user/[userId]/index.tsx:143
 msgid "Badges"
 msgstr "Tunnusmerkit"
 
 #: src/components/_political/party/party.frontConfig.tsx:393
-msgid "Balanced"
-msgstr "Tasapainoinen"
+#~ msgid "Balanced"
+#~ msgstr "Tasapainoinen"
 
 #: src/components/_political/party/party.frontConfig.tsx:394
-msgid "Balanced - No modifiers"
-msgstr "Tasapainotettu - Ei modifikaatioita"
+#~ msgid "Balanced - No modifiers"
+#~ msgstr "Tasapainotettu - Ei modifikaatioita"
 
 #: src/components/_other/shop/skin.frontConfig.tsx:359
 msgid "Ball"
@@ -3523,24 +3587,21 @@ msgstr ""
 msgid "Battle Orders"
 msgstr "Taistelukäskyt"
 
-#. placeholder {0}: formatMultiplierDelta( ethicsBonuses.isolationism['-2'].enemyBattleOrderMultiplier, )
 #: src/components/_political/party/party.frontConfig.tsx:151
-msgid "Battle orders against your sworn enemy cost <0>{0}</0> less."
-msgstr ""
+#~ msgid "Battle orders against your sworn enemy cost <0>{0}</0> less."
+#~ msgstr ""
 
-#. placeholder {0}: formatMultiplierDelta( ethicsBonuses.isolationism[2].pactBattleOrderMultiplier, )
 #: src/components/_political/party/party.frontConfig.tsx:223
-msgid "Battle orders supporting a defensive pact partner cost <0>{0}</0> less."
-msgstr ""
+#~ msgid "Battle orders supporting a defensive pact partner cost <0>{0}</0> less."
+#~ msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:59
-msgid "Battle orders to defend your core regions and revolts are free."
-msgstr ""
+#~ msgid "Battle orders to defend your core regions and revolts are free."
+#~ msgstr ""
 
-#. placeholder {0}: formatMultiplierDelta( ethicsBonuses.militarism['-1'].defendCoreRevoltOrderMultiplier, )
 #: src/components/_political/party/party.frontConfig.tsx:74
-msgid "Battle orders to defend your core regions and revolts cost <0>{0}</0> less."
-msgstr ""
+#~ msgid "Battle orders to defend your core regions and revolts cost <0>{0}</0> less."
+#~ msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:327
 msgid "Battlefield Loot"
@@ -3649,6 +3710,10 @@ msgstr ""
 msgid "Bids are shown before tax: when you bid, your country <0/> adds its {0}% market tax. A bid at the max price wins at once."
 msgstr ""
 
+#: src/components/_political/govType/govType.frontConfig.tsx:38
+msgid "Big peaceful population"
+msgstr ""
+
 #: src/components/_political/region/RegionHeader.tsx:147
 msgid "Biome"
 msgstr ""
@@ -3678,7 +3743,7 @@ msgid "Bone Club"
 msgstr ""
 
 #: src/components/_military/battle/BattleDamageBonuses.tsx:62
-#: src/components/_political/law/law.frontConfig.tsx:235
+#: src/components/_political/law/law.frontConfig.tsx:239
 msgid "Bonus damages"
 msgstr "Bonusvahingot"
 
@@ -3727,7 +3792,7 @@ msgstr ""
 msgid "Bread"
 msgstr "Leipä"
 
-#: src/components/_political/law/law.frontConfig.tsx:306
+#: src/components/_political/law/law.frontConfig.tsx:310
 #: src/components/_political/law/lawNames.tsx:42
 msgid "Break defensive pact"
 msgstr ""
@@ -3737,7 +3802,7 @@ msgstr ""
 msgid "Break room"
 msgstr "Taukohuone"
 
-#: src/components/_political/law/law.frontConfig.tsx:312
+#: src/components/_political/law/law.frontConfig.tsx:316
 msgid "Break the defensive pact with <0/>"
 msgstr ""
 
@@ -3817,7 +3882,7 @@ msgid "Buy <0/>"
 msgstr ""
 
 #. placeholder {0}: law.data.amount ?? 0
-#: src/components/_political/law/law.frontConfig.tsx:471
+#: src/components/_political/law/law.frontConfig.tsx:475
 msgid "Buy <0/> from <1/> for <2>{0}</2>"
 msgstr ""
 
@@ -3891,6 +3956,18 @@ msgstr "Kampanjan artikkelilinkki (valinnainen)"
 msgid "Can happen to anyone."
 msgstr ""
 
+#: src/components/_political/govType/govType.frontConfig.tsx:335
+msgid "Can't have a sworn enemy"
+msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:329
+msgid "Can't join an alliance"
+msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:332
+msgid "Can't sign defensive pacts"
+msgstr ""
+
 #: src/components/_military/order/BattleOrderList.tsx:210
 #: src/components/_political/election/CandidateFormModal.tsx:79
 #: src/components/_social/poll/PollEditorModal.tsx:284
@@ -3955,16 +4032,16 @@ msgid "Candidates"
 msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:314
-msgid "Cannot have a vice president or ministers."
-msgstr "Ei voi olla varapresidenttiä tai ministereitä."
+#~ msgid "Cannot have a vice president or ministers."
+#~ msgstr "Ei voi olla varapresidenttiä tai ministereitä."
 
 #: src/components/_political/party/party.frontConfig.tsx:382
-msgid "Cannot have any treaty (sworn enemy, defensive pact or alliance)."
-msgstr ""
+#~ msgid "Cannot have any treaty (sworn enemy, defensive pact or alliance)."
+#~ msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:66
-msgid "Cannot have sworn enemies."
-msgstr "Ei voi olla vannoneita vihollisia."
+#~ msgid "Cannot have sworn enemies."
+#~ msgstr "Ei voi olla vannoneita vihollisia."
 
 #: src/components/_political/region/RegionTooltip.tsx:79
 msgid "Capital"
@@ -4063,11 +4140,11 @@ msgid "Chance to hit the target.<0/>Misses cannot crit, and deal half damage."
 msgstr "Mahdollisuus osua maaliin.<0/>Pitot eivät voi arvostella ja tehdä puolivaurioita."
 
 #. placeholder {0}: law.data.taxType
-#: src/components/_political/law/law.frontConfig.tsx:65
+#: src/components/_political/law/law.frontConfig.tsx:69
 msgid "Change {0} tax to <0/>"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:61
+#: src/components/_political/law/law.frontConfig.tsx:65
 msgid "Change a country tax"
 msgstr "Muuta maaveroa"
 
@@ -4102,7 +4179,7 @@ msgstr "Muuta tuotettua tuotetta"
 msgid "Change production"
 msgstr "Muuta tuotantoa"
 
-#: src/components/_political/law/law.frontConfig.tsx:60
+#: src/components/_political/law/law.frontConfig.tsx:64
 #: src/components/_political/law/lawNames.tsx:12
 msgid "Change tax"
 msgstr "Muuta veroa"
@@ -4116,22 +4193,30 @@ msgstr ""
 msgid "Change the color scheme of the alliance."
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:545
+#: src/components/_political/law/law.frontConfig.tsx:549
 msgid "Change the country color scheme"
 msgstr "Muuta maan värimaailmaa"
 
 #. placeholder {0}: law.data.scheme
 #. placeholder {1}: law.data.mapAccent
-#: src/components/_political/law/law.frontConfig.tsx:551
+#: src/components/_political/law/law.frontConfig.tsx:555
 msgid "Change the country color scheme to <0>{0}</0> with a <1>{1}</1> map accent"
 msgstr "Muuta maan väriteema <0>{0}</0> <1>{1}</1> karttakoristeella"
+
+#: src/components/_political/law/law.frontConfig.tsx:633
+msgid "Change the government type to <0/>. It can't change again for {GOV_TYPE_CHANGE_COOLDOWN_DAYS} days."
+msgstr ""
+
+#: src/components/_political/law/law.frontConfig.tsx:619
+msgid "Change the government type, then wait {GOV_TYPE_CHANGE_COOLDOWN_DAYS} days before the next change"
+msgstr ""
 
 #: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:121
 msgid "Change the name of the alliance."
 msgstr ""
 
 #. placeholder {0}: law.data.taxType
-#: src/components/_political/law/law.frontConfig.tsx:76
+#: src/components/_political/law/law.frontConfig.tsx:80
 msgid "Change the tax of {0} to"
 msgstr "Muuta {0} veroksi"
 
@@ -4201,16 +4286,16 @@ msgstr ""
 msgid "Citizen since"
 msgstr ""
 
-#: src/components/_political/country/CountryHeader.tsx:148
-#: src/components/_political/country/CountryHeader.tsx:216
+#: src/components/_political/country/CountryHeader.tsx:152
+#: src/components/_political/country/CountryHeader.tsx:232
 msgid "Citizens"
 msgstr "Kansalaiset"
 
-#: src/pages/country/[countryId]/index.tsx:193
+#: src/pages/country/[countryId]/index.tsx:195
 msgid "Citizens get a bonus when fighting for allies, or against the sworn enemy"
 msgstr "Kansalaiset saavat bonuksen taistellessaan liittolaisten puolesta tai vannottua vihollista vastaan"
 
-#: src/components/_political/country/CountryHeader.tsx:135
+#: src/components/_political/country/CountryHeader.tsx:139
 msgid "Citizenship"
 msgstr "Kansalaisuus"
 
@@ -4313,7 +4398,7 @@ msgstr "Napsauta nähdäksesi, mitä sisällä on. Saatat saada jotain arvokasta
 msgid "Click to select law"
 msgstr "Valitse laki napsauttamalla"
 
-#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:50
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:49
 msgid "Click to select motion"
 msgstr "Valitse liike napsauttamalla"
 
@@ -4579,9 +4664,17 @@ msgstr "Yhdistä sähköpostikoodilla"
 msgid "Connect with Google"
 msgstr "Kirjaudu Googlella"
 
+#: src/components/_political/govType/govType.frontConfig.tsx:44
+msgid "Conquer and hold"
+msgstr ""
+
 #: src/pages/country/[countryId]/regions.tsx:45
 msgid "Conquered regions"
 msgstr "Valloitettuja alueita"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:125
+msgid "Conquered regions give no development income"
+msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:91
 msgid "Conqueror"
@@ -4638,12 +4731,12 @@ msgstr "Sopimus umpeutunut"
 msgid "Contract rolled back"
 msgstr "Sopimus peruutettu"
 
-#: src/components/_military/battle/BattleHeader.tsx:329
+#: src/components/_military/battle/BattleHeader.tsx:365
 #: src/components/_military/battle/BattlesHeader.tsx:45
 #: src/components/_military/battle/BattleSideContractsModal.tsx:47
 #: src/components/_military/battle/LootSummaryCard.tsx:113
 #: src/components/_military/mu/MuHeader.tsx:181
-#: src/components/_political/country/CountryHeader.tsx:156
+#: src/components/_political/country/CountryHeader.tsx:160
 msgid "Contracts"
 msgstr "Sopimukset"
 
@@ -4706,13 +4799,13 @@ msgid "Copy this token now. You won't be able to see it again! Use it in the <0>
 msgstr "Kopioi tämä tunnus nyt. Et voi nähdä sitä enää! Käytä sitä <0>X-API-Key</0>-otsikossa."
 
 #: src/components/_political/alliance/AllianceHeader.tsx:78
-#: src/components/_political/country/CountryHeader.tsx:231
-#: src/components/_political/country/CountryHeader.tsx:236
-#: src/components/_political/government/Government.tsx:206
+#: src/components/_political/country/CountryHeader.tsx:247
+#: src/components/_political/country/CountryHeader.tsx:252
+#: src/components/_political/government/Government.tsx:205
 msgid "Core development"
 msgstr ""
 
-#: src/pages/country/[countryId]/index.tsx:373
+#: src/pages/country/[countryId]/index.tsx:374
 msgid "Core development of <0/>"
 msgstr ""
 
@@ -4737,7 +4830,7 @@ msgstr ""
 msgid "Cost per production point"
 msgstr ""
 
-#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:132
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:123
 msgid "Council member to remove"
 msgstr "Erotettava neuvoston jäsen"
 
@@ -4759,7 +4852,7 @@ msgstr "maat"
 #: src/components/_military/battle/BattleCountrySide.tsx:73
 #: src/components/_military/tournament/TournamentHeader.tsx:55
 #: src/components/_military/tournament/TournamentItem.tsx:54
-#: src/components/_political/country/CountryHeader.tsx:77
+#: src/components/_political/country/CountryHeader.tsx:81
 #: src/components/_political/map/MapMenu.tsx:430
 #: src/components/_political/party/PartyHeader.tsx:84
 msgid "Country"
@@ -4856,7 +4949,7 @@ msgstr "Luo yritys"
 
 #. placeholder {0}: law.data.name
 #. placeholder {1}: law.data.scheme
-#: src/components/_political/law/law.frontConfig.tsx:342
+#: src/components/_political/law/law.frontConfig.tsx:346
 msgid "Create a new alliance named <0>{0}</0> with <1>{1}</1> color scheme."
 msgstr ""
 
@@ -4869,13 +4962,13 @@ msgstr "Luo uusi yritys"
 msgid "Create a party"
 msgstr "Luo puolue"
 
-#: src/components/_political/law/law.frontConfig.tsx:331
+#: src/components/_political/law/law.frontConfig.tsx:335
 #: src/components/_political/law/lawNames.tsx:25
 msgid "Create alliance"
 msgstr ""
 
 #. placeholder {0}: law.data.name
-#: src/components/_political/law/law.frontConfig.tsx:336
+#: src/components/_political/law/law.frontConfig.tsx:340
 msgid "Create alliance {0}"
 msgstr ""
 
@@ -4955,8 +5048,8 @@ msgid "Current bid"
 msgstr ""
 
 #: src/components/_political/alliance/AllianceHeader.tsx:88
-#: src/components/_political/country/CountryHeader.tsx:296
-#: src/components/_political/country/CountryHeader.tsx:301
+#: src/components/_political/country/CountryHeader.tsx:312
+#: src/components/_political/country/CountryHeader.tsx:317
 msgid "Current development"
 msgstr ""
 
@@ -5012,13 +5105,13 @@ msgstr ""
 msgid "Daily"
 msgstr "Päivittäin"
 
-#: src/components/_political/country/CountryHeader.tsx:187
+#: src/components/_political/country/CountryHeader.tsx:191
 #: src/components/_political/region/RegionHeader.tsx:80
 msgid "Daily income"
 msgstr ""
 
 #: src/components/_political/alliance/AllianceMemberRow.tsx:59
-#: src/components/_political/law/LawTypeSelect.tsx:189
+#: src/components/_political/law/LawTypeSelect.tsx:187
 msgid "Daily maintenance"
 msgstr "Päivittäinen huolto"
 
@@ -5050,13 +5143,17 @@ msgstr ""
 msgid "Daily wage"
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:199
+#: src/components/_political/government/Government.tsx:198
 msgid "Daily wage paid from the country treasury."
 msgstr "Päiväpalkka maksetaan valtionkassasta."
 
 #: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:156
 msgid "Damage by user"
 msgstr "Käyttäjän aiheuttama vahinko"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:80
+msgid "Damage farmer"
+msgstr ""
 
 #: src/components/_military/damageRanking/DamageRankingSides.tsx:127
 msgid "Damage ranking"
@@ -5084,8 +5181,8 @@ msgstr "Vitun onnekas"
 msgid "Danger zone"
 msgstr "Vaaravyöhyke"
 
-#: src/components/_political/law/LawFormModal.tsx:228
-#: src/components/_political/law/LawFormModal.tsx:306
+#: src/components/_political/law/LawFormModal.tsx:248
+#: src/components/_political/law/LawFormModal.tsx:326
 msgid "Dark"
 msgstr "Tumma"
 
@@ -5174,17 +5271,17 @@ msgstr "Debuffit:"
 msgid "Decides on its own in <0/>"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:114
+#: src/components/_political/law/law.frontConfig.tsx:118
 #: src/components/_political/law/lawNames.tsx:14
 msgid "Declare war"
 msgstr "Julista sota"
 
-#: src/components/_political/law/law.frontConfig.tsx:119
-#: src/components/_political/law/law.frontConfig.tsx:128
+#: src/components/_political/law/law.frontConfig.tsx:123
+#: src/components/_political/law/law.frontConfig.tsx:132
 msgid "Declare war to <0/>"
 msgstr "Julista sota <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:115
+#: src/components/_political/law/law.frontConfig.tsx:119
 msgid "Declare war to another country"
 msgstr "Julista sota toiselle maalle"
 
@@ -5201,6 +5298,10 @@ msgstr "Vähennä"
 msgid "Decrease unrest"
 msgstr "Vähennä levottomuutta"
 
+#: src/components/_political/law/Law.tsx:68
+#~ msgid "Decree"
+#~ msgstr ""
+
 #: src/utils/translations.tsx:252
 msgid "Deepcut Pickaxe"
 msgstr ""
@@ -5209,9 +5310,13 @@ msgstr ""
 msgid "Deeply disappointed, but still here."
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:538
+#: src/components/_military/hit/HitButton.tsx:494
 msgid "Defend"
 msgstr "Puolusta"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:56
+msgid "Defend and liberate"
+msgstr ""
 
 #: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:192
 #: src/components/_military/war/WarComparison.tsx:49
@@ -5222,47 +5327,49 @@ msgstr "Puolustaja"
 msgid "Defenders"
 msgstr "Puolustajat"
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:344
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:318
 msgid "Defensive pact"
+msgstr ""
+
+#. placeholder {0}: effects.pactBonusPerDayPercent
+#: src/components/_political/govType/govType.frontConfig.tsx:293
+msgid "Defensive pact bonus ramps +{0}%/day"
 msgstr ""
 
 #: src/components/_political/event/EventList.tsx:137
 msgid "Defensive pact broken"
 msgstr ""
 
-#. placeholder {0}: formatMultiplierDelta( ethicsBonuses.isolationism[1].pactMaintenanceMultiplier, )
-#. placeholder {0}: formatMultiplierDelta( ethicsBonuses.isolationism[2].pactMaintenanceMultiplier, )
 #: src/components/_political/party/party.frontConfig.tsx:198
 #: src/components/_political/party/party.frontConfig.tsx:214
-msgid "Defensive pact maintenance costs are reduced by <0>{0}</0>."
-msgstr ""
+#~ msgid "Defensive pact maintenance costs are reduced by <0>{0}</0>."
+#~ msgstr ""
 
 #: src/components/_political/event/EventList.tsx:133
 msgid "Defensive pact signed"
 msgstr ""
 
-#. placeholder {0}: ts.paper
 #: src/components/_military/battle/SetOrderFormModal.tsx:532
-msgid "Defensive pact: orders supporting your pact partner cost {orderDiscountPercent}% less <0>{0}</0>"
-msgstr ""
+#~ msgid "Defensive pact: orders supporting your pact partner cost {orderDiscountPercent}% less <0>{0}</0>"
+#~ msgstr ""
 
-#: src/components/_political/country/CountryTooltip.tsx:121
+#: src/components/_political/country/CountryTooltip.tsx:133
 msgid "Defensive pacts"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:228
+#: src/components/_political/law/law.frontConfig.tsx:232
 msgid "Define <0/> as an enemy, increasing damages when fighting them"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:218
+#: src/components/_political/law/law.frontConfig.tsx:222
 msgid "Define <0/> as enemy"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:214
+#: src/components/_political/law/law.frontConfig.tsx:218
 msgid "Define a country as an enemy to get bonus against"
 msgstr "Määrittele maa viholliseksi, jota vastaan ​​voit saada bonusta"
 
-#: src/components/_political/law/law.frontConfig.tsx:213
+#: src/components/_political/law/law.frontConfig.tsx:217
 #: src/components/_political/law/lawNames.tsx:24
 msgid "Define a sworn enemy"
 msgstr "Määrittele vannoutunut vihollinen"
@@ -5345,7 +5452,7 @@ msgstr "Kuvaile puolueesi tavoitteita ja arvoja"
 #: src/components/_economy/manager/ManagerOfferRow.tsx:204
 #: src/components/_political/party/PartyDescriptionModal.tsx:61
 #: src/components/_political/party/PartyFormModal.tsx:102
-#: src/pages/party/[partyId]/index.tsx:41
+#: src/pages/party/[partyId]/index.tsx:39
 msgid "Description"
 msgstr "Kuvaus"
 
@@ -5443,19 +5550,18 @@ msgstr "Pienennä <0/> sai vaurioita <1>Armor</1> taisteluissa"
 msgid "Diminish Received Damages"
 msgstr "Pienennä saatuja vahingonkorvauksia"
 
-#: src/pages/country/[countryId]/index.tsx:199
+#: src/pages/country/[countryId]/index.tsx:201
 msgid "Diplomacy"
 msgstr "Diplomatia"
 
 #: src/components/_political/party/party.frontConfig.tsx:194
 #: src/components/_political/party/party.frontConfig.tsx:243
-msgid "Diplomatic"
-msgstr "Diplomaattinen"
+#~ msgid "Diplomatic"
+#~ msgstr "Diplomaattinen"
 
-#. placeholder {0}: ts.paper
 #: src/components/_political/law/LawEthicEffects.tsx:152
-msgid "Diplomatic: defensive pact maintenance costs {less}% less <0>{0}</0>."
-msgstr ""
+#~ msgid "Diplomatic: defensive pact maintenance costs {less}% less <0>{0}</0>."
+#~ msgstr ""
 
 #: src/components/_economy/company/CompanyDropdown.tsx:323
 msgid "Disable company"
@@ -5556,7 +5662,7 @@ msgid "Donation Summary"
 msgstr "Lahjoitusten yhteenveto"
 
 #: src/components/_military/mu/MuHeader.tsx:173
-#: src/components/_political/country/CountryHeader.tsx:110
+#: src/components/_political/country/CountryHeader.tsx:114
 #: src/components/_political/party/PartyHeader.tsx:123
 #: src/pages/country/[countryId]/donations.tsx:17
 #: src/pages/mu/[muId]/donations.tsx:17
@@ -5644,7 +5750,7 @@ msgstr ""
 msgid "Each region you cross costs <0>{MOVE_STAMINA_PER_REGION}</0>. When the bar runs dry, the trip costs <1>{MOVE_OIL_PER_REGION}</1> per region instead."
 msgstr ""
 
-#: src/pages/country/[countryId]/index.tsx:416
+#: src/pages/country/[countryId]/index.tsx:417
 msgid "Each strategic resource pays the country holding it, every day, the core <0>Development</0> of the country it originally belonged to."
 msgstr ""
 
@@ -5689,6 +5795,10 @@ msgstr "Taloudelliset taidot"
 msgid "Economy & Companies"
 msgstr "Talous & Yritykset"
 
+#: src/components/_political/govType/govType.frontConfig.tsx:68
+msgid "Economy first"
+msgstr ""
+
 #: src/components/_military/battle/BattleOrderActionsDropdown.tsx:148
 msgid "Edit country order"
 msgstr ""
@@ -5729,11 +5839,11 @@ msgstr ""
 msgid "Edit the position"
 msgstr ""
 
-#: src/components/_military/battle/SetOrderFormModal.tsx:493
+#: src/components/_military/battle/SetOrderFormModal.tsx:426
 msgid "Editing an existing order"
 msgstr ""
 
-#: src/components/_military/battle/SetOrderFormModal.tsx:491
+#: src/components/_military/battle/SetOrderFormModal.tsx:424
 msgid "Editing another order"
 msgstr ""
 
@@ -5753,11 +5863,11 @@ msgstr "Vaalit päättyivät"
 msgid "Election vote open"
 msgstr "Vaaliäänestys auki"
 
-#: src/components/_political/country/CountryHeader.tsx:129
+#: src/components/_political/country/CountryHeader.tsx:133
 #: src/pages/country/[countryId]/elections.tsx:28
-#: src/pages/country/[countryId]/index.tsx:284
+#: src/pages/country/[countryId]/index.tsx:285
 #: src/pages/events/index.tsx:398
-#: src/pages/party/[partyId]/index.tsx:101
+#: src/pages/party/[partyId]/index.tsx:78
 msgid "Elections"
 msgstr "vaalit"
 
@@ -5792,6 +5902,10 @@ msgstr "Elite kypärä"
 #: src/utils/translations.tsx:234
 msgid "Elite Pants"
 msgstr "Elite housut"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:43
+msgid "Empire"
+msgstr ""
 
 #: src/components/_economy/employee/employeeCards.tsx:221
 #: src/components/_economy/employee/EmployeeListMini.tsx:44
@@ -5860,9 +5974,9 @@ msgstr "Ota yritys käyttöön"
 #: src/components/_political/allianceLaw/AllianceLawTypeSelect.tsx:103
 #: src/components/_political/law/Law.tsx:92
 #: src/components/_political/law/Law.tsx:95
-#: src/components/_political/law/LawTypeSelect.tsx:177
+#: src/components/_political/law/LawTypeSelect.tsx:175
 #: src/components/_political/partyMotion/PartyMotion.tsx:106
-#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:133
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:115
 msgid "Enacting cost"
 msgstr "Toteutuskustannukset"
 
@@ -5875,7 +5989,7 @@ msgstr "Lumotut housut"
 msgid "Encourage it"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:307
+#: src/components/_political/law/law.frontConfig.tsx:311
 msgid "End an existing defensive pact with another country"
 msgstr ""
 
@@ -5883,7 +5997,7 @@ msgstr ""
 msgid "End poll"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:321
+#: src/components/_political/law/law.frontConfig.tsx:325
 msgid "End the defensive pact with <0/>."
 msgstr ""
 
@@ -5945,7 +6059,7 @@ msgstr ""
 msgid "Enter an amount"
 msgstr ""
 
-#: src/components/_political/law/LawFormModal.tsx:254
+#: src/components/_political/law/LawFormModal.tsx:274
 msgid "Enter article ID"
 msgstr "Anna artikkelin tunnus"
 
@@ -6000,7 +6114,7 @@ msgstr "Virhe"
 msgid "Est. daily income"
 msgstr ""
 
-#: src/components/_political/country/CountryHeader.tsx:191
+#: src/components/_political/country/CountryHeader.tsx:195
 #: src/components/_political/map/MapMenu.tsx:533
 #: src/components/_political/region/RegionHeader.tsx:84
 msgid "Estimated daily income"
@@ -6030,20 +6144,20 @@ msgstr ""
 
 #: src/components/_political/party/PartyTooltip.tsx:162
 #: src/pages/party/[partyId]/index.tsx:57
-msgid "Ethics"
-msgstr "Etiikka"
+#~ msgid "Ethics"
+#~ msgstr "Etiikka"
 
 #: src/pages/party/[partyId]/index.tsx:51
-msgid "Ethics are bonuses from the party, applied when the president is a member of this party."
-msgstr "Etiikka ovat puolueen bonuksia, joita sovelletaan presidentin ollessa tämän puolueen jäsen."
+#~ msgid "Ethics are bonuses from the party, applied when the president is a member of this party."
+#~ msgstr "Etiikka ovat puolueen bonuksia, joita sovelletaan presidentin ollessa tämän puolueen jäsen."
 
 #: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:83
-msgid "Ethics motions"
-msgstr "Eettiset liikkeet"
+#~ msgid "Ethics motions"
+#~ msgstr "Eettiset liikkeet"
 
 #: src/components/_political/government/PoliticalEthics.tsx:533
-msgid "Ethics Points:"
-msgstr "Eettiset kohdat:"
+#~ msgid "Ethics Points:"
+#~ msgstr "Eettiset kohdat:"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:246
 msgid "Eureka"
@@ -6052,7 +6166,7 @@ msgstr ""
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:173
 #: src/components/_layout/LayoutRightIcons.tsx:243
 #: src/components/_layout/MoreButtonNav.tsx:91
-#: src/pages/country/[countryId]/index.tsx:269
+#: src/pages/country/[countryId]/index.tsx:270
 msgid "Events"
 msgstr "Tapahtumat"
 
@@ -6140,8 +6254,8 @@ msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:90
 #: src/components/_political/party/party.frontConfig.tsx:129
-msgid "Expansionist"
-msgstr ""
+#~ msgid "Expansionist"
+#~ msgstr ""
 
 #: src/components/_military/battle/MyBattlesRecapCard.tsx:248
 msgid "Expected loot"
@@ -6238,59 +6352,56 @@ msgid "Family Group"
 msgstr "Perheryhmä"
 
 #: src/components/_political/party/party.frontConfig.tsx:335
-msgid "Fanatic Agrarian"
-msgstr "Fanaattinen agrari"
+#~ msgid "Fanatic Agrarian"
+#~ msgstr "Fanaattinen agrari"
 
 #: src/components/_political/party/party.frontConfig.tsx:210
-msgid "Fanatic Diplomatic"
-msgstr "Fanaattinen diplomaatti"
+#~ msgid "Fanatic Diplomatic"
+#~ msgstr "Fanaattinen diplomaatti"
 
-#. placeholder {0}: ts.paper
 #: src/components/_political/law/LawEthicEffects.tsx:139
-msgid "Fanatic Diplomatic: defensive pact maintenance costs {less}% less <0>{0}</0>."
-msgstr ""
+#~ msgid "Fanatic Diplomatic: defensive pact maintenance costs {less}% less <0>{0}</0>."
+#~ msgstr ""
 
-#. placeholder {0}: ts.paper
 #: src/components/_political/law/LawEthicEffects.tsx:122
-msgid "Fanatic Diplomatic: sworn enemy maintenance costs {more}% more <0>{0}</0>."
-msgstr ""
+#~ msgid "Fanatic Diplomatic: sworn enemy maintenance costs {more}% more <0>{0}</0>."
+#~ msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:104
-msgid "Fanatic Expansionist"
-msgstr ""
+#~ msgid "Fanatic Expansionist"
+#~ msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:303
-msgid "Fanatic Imperialist"
-msgstr "Fanaattinen imperialisti"
+#~ msgid "Fanatic Imperialist"
+#~ msgstr "Fanaattinen imperialisti"
 
 #: src/components/_political/party/party.frontConfig.tsx:357
-msgid "Fanatic Industrialist"
-msgstr "Fanaattinen teollisuusmies"
+#~ msgid "Fanatic Industrialist"
+#~ msgstr "Fanaattinen teollisuusmies"
 
 #: src/components/_political/party/party.frontConfig.tsx:136
-msgid "Fanatic Isolationist"
-msgstr "Fanaattinen isolasionisti"
+#~ msgid "Fanatic Isolationist"
+#~ msgstr "Fanaattinen isolasionisti"
 
-#. placeholder {0}: ts.paper
 #: src/components/_political/law/LawEthicEffects.tsx:167
-msgid "Fanatic Isolationist: all treaty maintenance costs {more}% more <0>{0}</0>."
-msgstr ""
+#~ msgid "Fanatic Isolationist: all treaty maintenance costs {more}% more <0>{0}</0>."
+#~ msgstr ""
 
 #: src/components/_political/law/LawEthicEffects.tsx:93
-msgid "Fanatic Isolationist: this sworn enemy starts at {start}% bonus and grows +{perDay}% per day."
-msgstr ""
+#~ msgid "Fanatic Isolationist: this sworn enemy starts at {start}% bonus and grows +{perDay}% per day."
+#~ msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:55
-msgid "Fanatic Pacifist"
-msgstr "Fanaattinen pasifisti"
+#~ msgid "Fanatic Pacifist"
+#~ msgstr "Fanaattinen pasifisti"
 
 #: src/components/_political/law/LawEthicEffects.tsx:73
-msgid "Fanatic Pacifist countries cannot have sworn enemies — this law cannot be enacted."
-msgstr ""
+#~ msgid "Fanatic Pacifist countries cannot have sworn enemies — this law cannot be enacted."
+#~ msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:250
-msgid "Fanatic Republican"
-msgstr "Fanaattinen republikaani"
+#~ msgid "Fanatic Republican"
+#~ msgstr "Fanaattinen republikaani"
 
 #: src/components/_other/shop/skinPack.frontConfig.tsx:21
 msgid "Farmer"
@@ -6328,6 +6439,10 @@ msgstr ""
 #: src/components/_military/battle/ActiveBattlesList.tsx:169
 msgid "Favorites"
 msgstr "Suosikit"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:61
+msgid "Federation"
+msgstr ""
 
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:238
 #: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:108
@@ -6379,32 +6494,32 @@ msgstr "Suodata tapahtumatyypin mukaan"
 msgid "Finally above average!"
 msgstr "Lopulta keskiarvon yläpuolella!"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:129
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:113
 msgid "Finance a resistance battle in <0/>"
 msgstr "Rahoita vastarintataistelua <0/>"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:123
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:107
 msgid "Finance a resistance battle in an occupied region of your country"
 msgstr "Rahoita vastarintataistelua maasi miehitetyllä alueella"
 
-#: src/components/_political/law/law.frontConfig.tsx:614
+#: src/components/_political/law/law.frontConfig.tsx:647
 msgid "Finance a resistance to liberate an occupied region"
 msgstr "Rahoita vastarintaa miehitetyn alueen vapauttamiseksi"
 
-#: src/components/_political/law/law.frontConfig.tsx:627
+#: src/components/_political/law/law.frontConfig.tsx:660
 msgid "Finance a revolt to liberate <0/>"
 msgstr "Rahoita kapina vapauttaaksesi <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:613
+#: src/components/_political/law/law.frontConfig.tsx:646
 #: src/components/_political/law/lawNames.tsx:38
 msgid "Finance foreign resistance"
 msgstr "Rahoita ulkomaista vastustusta"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:122
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:106
 msgid "Finance local resistance"
 msgstr "Rahoita paikallista vastustusta"
 
-#: src/components/_political/law/law.frontConfig.tsx:618
+#: src/components/_political/law/law.frontConfig.tsx:651
 msgid "Finance resistance in <0/>"
 msgstr ""
 
@@ -6428,7 +6543,7 @@ msgstr ""
 #: src/components/_economy/employee/employeeCards.tsx:332
 #: src/components/_economy/employee/EmployeeModal.tsx:390
 #: src/components/_economy/manager/CompanyManagerSlot.tsx:261
-#: src/components/_political/government/Government.tsx:253
+#: src/components/_political/government/Government.tsx:252
 #: src/components/_user/user/UserEffectSelector.tsx:61
 msgid "Fire"
 msgstr "Irtisano"
@@ -6437,7 +6552,7 @@ msgstr "Irtisano"
 msgid "Fire employee?"
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:265
+#: src/components/_political/government/Government.tsx:264
 msgid "Fire government member"
 msgstr "Irtisano hallituksen jäsen"
 
@@ -6473,7 +6588,7 @@ msgstr "Nuijakeihäs"
 msgid "Flask"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:316
+#: src/components/_layout/LayoutMapUserMenu.tsx:324
 msgid "Focus on you"
 msgstr ""
 
@@ -6538,7 +6653,7 @@ msgstr ""
 msgid "Found a bug? Report it instead of using it: valuable reports earn the Bug Finder badge."
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:333
+#: src/components/_political/law/law.frontConfig.tsx:337
 msgid "Found a new alliance with your country as founding member"
 msgstr ""
 
@@ -6557,6 +6672,10 @@ msgstr "Perustaja"
 #: src/pages/shop/index.tsx:180
 msgid "Free daily reward"
 msgstr "Ilmainen päivittäinen palkinto"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:201
+msgid "Free national orders to defend, revolt in or retake its core regions"
+msgstr ""
 
 #: src/components/_economy/manager/ManagerRateReductionAlert.tsx:46
 msgid "from"
@@ -6769,8 +6888,10 @@ msgstr "Kulta"
 msgid "Gone"
 msgstr ""
 
-#: src/components/_political/country/CountryHeader.tsx:116
-#: src/pages/country/[countryId]/index.tsx:179
+#: src/components/_political/country/CountryHeader.tsx:120
+#: src/components/_political/country/CountryHeader.tsx:212
+#: src/components/_political/country/CountryTooltip.tsx:103
+#: src/pages/country/[countryId]/index.tsx:181
 msgid "Government"
 msgstr "Hallitus"
 
@@ -6787,7 +6908,12 @@ msgstr "hallituksen jäsen"
 msgid "Government penalty"
 msgstr "Hallituksen rangaistus"
 
-#: src/components/_political/government/Government.tsx:210
+#: src/components/_political/law/LawFormModal.tsx:342
+#: src/pages/country/[countryId]/index.tsx:238
+msgid "Government type"
+msgstr ""
+
+#: src/components/_political/government/Government.tsx:209
 msgid "Government wage"
 msgstr "Valtion palkka"
 
@@ -7180,12 +7306,16 @@ msgstr ""
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:95
 #: src/components/_other/shop/ShopHeader.tsx:17
 #: src/components/_political/alliance/AllianceHeader.tsx:108
-#: src/components/_political/country/CountryHeader.tsx:85
+#: src/components/_political/country/CountryHeader.tsx:89
 #: src/components/_political/party/PartyHeader.tsx:99
 #: src/components/_political/region/RegionHeader.tsx:62
 #: src/components/_user/user/UserHeader.tsx:172
 msgid "Home"
 msgstr "Kotiin"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:55
+msgid "Homeland Front"
+msgstr ""
 
 #: src/utils/translations.tsx:242
 msgid "Honed Sickle"
@@ -7250,8 +7380,8 @@ msgid "If the new nominee is already in government, their positions will be swap
 msgstr "Jos uusi ehdokas on jo hallituksessa, heidän asemansa vaihdetaan. Muussa tapauksessa nykyinen jäsen erotetaan, eikä häntä voida nimittää uudelleen {cooldownDays} päivään."
 
 #: src/components/_political/party/party.frontConfig.tsx:385
-msgid "If your capital is occupied, national orders give only the regular bonus and the capital automatically revolts at full resistance."
-msgstr ""
+#~ msgid "If your capital is occupied, national orders give only the regular bonus and the capital automatically revolts at full resistance."
+#~ msgstr ""
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1331
 msgid "Ignore the leaflets"
@@ -7269,37 +7399,37 @@ msgstr "Kuvittele, jos pysähdyt juuri ennen myyttiä"
 msgid "Imagine wasting your click on this"
 msgstr "Kuvittele, että tuhlaat klikkauksen tähän"
 
-#: src/components/_political/law/law.frontConfig.tsx:190
+#: src/components/_political/law/law.frontConfig.tsx:194
 msgid "Impeach <0/>"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:184
+#: src/components/_political/law/law.frontConfig.tsx:188
 #: src/components/_political/law/lawNames.tsx:22
 msgid "Impeach congress member"
 msgstr "Erota kongressin jäsen"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:59
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:58
 msgid "Impeach party leader"
 msgstr "Erota puolueen johtaja"
 
-#: src/components/_political/law/law.frontConfig.tsx:176
+#: src/components/_political/law/law.frontConfig.tsx:180
 #: src/components/_political/law/lawNames.tsx:20
 msgid "Impeach president"
 msgstr "Erota presidentti"
 
-#: src/components/_political/law/law.frontConfig.tsx:177
-#: src/components/_political/law/law.frontConfig.tsx:179
+#: src/components/_political/law/law.frontConfig.tsx:181
+#: src/components/_political/law/law.frontConfig.tsx:183
 msgid "Impeach the current president"
 msgstr "Nosta nykyinen presidentti syytteeseen"
 
 #: src/components/_political/party/party.frontConfig.tsx:286
-msgid "Imperialism vs Republicanism"
-msgstr "Imperialismi vs republikanismi"
+#~ msgid "Imperialism vs Republicanism"
+#~ msgstr "Imperialismi vs republikanismi"
 
 #: src/components/_political/party/party.frontConfig.tsx:289
 #: src/components/_political/party/party.frontConfig.tsx:326
-msgid "Imperialist"
-msgstr "Imperialisti"
+#~ msgid "Imperialist"
+#~ msgstr "Imperialisti"
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:52
 msgid "Impressive"
@@ -7322,23 +7452,19 @@ msgstr "Ei-aktiivinen"
 msgid "Income"
 msgstr "Tulot"
 
-#. placeholder {0}: formatPercent( ethicsBonuses.imperialism['-1'].developmentIncomeBonus, )
-#. placeholder {0}: formatPercent( ethicsBonuses.imperialism['-2'].developmentIncomeBonus, )
 #: src/components/_political/party/party.frontConfig.tsx:254
 #: src/components/_political/party/party.frontConfig.tsx:273
-msgid "Income from development increases by <0>{0}</0>."
-msgstr "Kehitystulot kasvavat <0>{0}</0>."
+#~ msgid "Income from development increases by <0>{0}</0>."
+#~ msgstr "Kehitystulot kasvavat <0>{0}</0>."
 
-#. placeholder {0}: formatPercent(ethicsBonuses.imperialism[1].taxIncomeBonus)
-#. placeholder {0}: formatPercent(ethicsBonuses.imperialism[2].taxIncomeBonus)
 #: src/components/_political/party/party.frontConfig.tsx:293
 #: src/components/_political/party/party.frontConfig.tsx:307
-msgid "Income from taxes increases by <0>{0}</0>."
-msgstr "Verotuotot kasvavat <0>{0}</0>."
+#~ msgid "Income from taxes increases by <0>{0}</0>."
+#~ msgstr "Verotuotot kasvavat <0>{0}</0>."
 
 #: src/components/_economy/manager/CompanyManagerSlot.tsx:434
 #: src/components/_political/country/CountryTaxes.tsx:21
-#: src/components/_political/law/LawFormModal.tsx:264
+#: src/components/_political/law/LawFormModal.tsx:284
 msgid "Income tax"
 msgstr "Tulovero"
 
@@ -7357,13 +7483,13 @@ msgid "Increase unrest"
 msgstr "Lisää levottomuutta"
 
 #: src/components/_political/party/party.frontConfig.tsx:348
-msgid "Industrialism vs Agrarianism"
-msgstr "Industrialismi vs agrarismi"
+#~ msgid "Industrialism vs Agrarianism"
+#~ msgstr "Industrialismi vs agrarismi"
 
 #: src/components/_political/party/party.frontConfig.tsx:351
 #: src/components/_political/party/party.frontConfig.tsx:362
-msgid "Industrialist"
-msgstr "Teollisuusmies"
+#~ msgid "Industrialist"
+#~ msgstr "Teollisuusmies"
 
 #: src/components/_political/map/MapMenu.tsx:437
 msgid "Initial country"
@@ -7428,17 +7554,17 @@ msgid "Iron Pickaxe"
 msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:191
-msgid "Isolationism vs Diplomacy"
-msgstr "Isolationismi vs diplomatia"
+#~ msgid "Isolationism vs Diplomacy"
+#~ msgstr "Isolationismi vs diplomatia"
 
 #: src/components/_political/party/party.frontConfig.tsx:172
 #: src/components/_political/party/party.frontConfig.tsx:189
-msgid "Isolationist"
-msgstr "Isolationisti"
+#~ msgid "Isolationist"
+#~ msgstr "Isolationisti"
 
 #: src/components/_political/law/LawEthicEffects.tsx:107
-msgid "Isolationist: this sworn enemy starts at {start}% bonus and grows +{perDay}% per day."
-msgstr ""
+#~ msgid "Isolationist: this sworn enemy starts at {start}% bonus and grows +{perDay}% per day."
+#~ msgstr ""
 
 #: src/components/_economy/manager/ManagerRateFormModal.tsx:89
 msgid "It applies right away, and they can resign over it."
@@ -7539,7 +7665,7 @@ msgstr ""
 msgid "Jobs"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:384
+#: src/components/_political/law/law.frontConfig.tsx:388
 msgid "Join <0/>"
 msgstr ""
 
@@ -7559,7 +7685,7 @@ msgstr ""
 msgid "Join a political party"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:378
+#: src/components/_political/law/law.frontConfig.tsx:382
 #: src/components/_political/law/lawNames.tsx:27
 msgid "Join alliance"
 msgstr ""
@@ -7712,15 +7838,15 @@ msgstr "Uusin paketti"
 msgid "Laugh along"
 msgstr ""
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:50
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:49
 msgid "Launch council election"
 msgstr "Aloitetaan valtuustovaalit"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:70
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:69
 msgid "Launch leader election"
 msgstr "Aloitetaan johtajan vaalit"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:104
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:88
 msgid "Launch primary election"
 msgstr "Aloita esivaalit"
 
@@ -7729,15 +7855,15 @@ msgstr "Aloita esivaalit"
 msgid "Law failed"
 msgstr "Laki epäonnistui"
 
-#: src/components/_political/law/LawFormModal.tsx:79
+#: src/components/_political/law/LawFormModal.tsx:93
 #: src/components/_user/notification/notification.frontConfig.tsx:2268
 msgid "Law proposed"
 msgstr "Lakiehdotus"
 
 #: src/components/_political/alliance/AllianceHeader.tsx:114
-#: src/components/_political/country/CountryHeader.tsx:91
+#: src/components/_political/country/CountryHeader.tsx:95
 #: src/pages/alliance/[allianceId]/index.tsx:95
-#: src/pages/country/[countryId]/index.tsx:185
+#: src/pages/country/[countryId]/index.tsx:187
 #: src/pages/country/[countryId]/laws.tsx:26
 msgid "Laws"
 msgstr "lait"
@@ -7747,7 +7873,7 @@ msgid "Lead"
 msgstr "Lyijy"
 
 #: src/components/_political/alliance/AllianceHeader.tsx:100
-#: src/components/_political/party/PartyTooltip.tsx:127
+#: src/components/_political/party/PartyTooltip.tsx:82
 msgid "Leader"
 msgstr ""
 
@@ -7768,15 +7894,15 @@ msgstr ""
 msgid "Leave"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:359
+#: src/components/_political/law/law.frontConfig.tsx:363
 msgid "Leave <0/>"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:368
+#: src/components/_political/law/law.frontConfig.tsx:372
 msgid "Leave <0/>."
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:353
+#: src/components/_political/law/law.frontConfig.tsx:357
 #: src/components/_political/law/lawNames.tsx:26
 msgid "Leave alliance"
 msgstr ""
@@ -7799,7 +7925,7 @@ msgstr "Jätä hallitus"
 msgid "Leave it"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:354
+#: src/components/_political/law/law.frontConfig.tsx:358
 msgid "Leave the alliance your country belongs to"
 msgstr ""
 
@@ -7915,15 +8041,15 @@ msgstr "Nosta osaamistasi!"
 msgid "Level up!"
 msgstr "Taso ylöspäin!"
 
-#: src/components/_political/law/law.frontConfig.tsx:498
+#: src/components/_political/law/law.frontConfig.tsx:502
 msgid "Liberate <0/>"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:507
+#: src/components/_political/law/law.frontConfig.tsx:511
 msgid "Liberate <0/> and return it to its original country"
 msgstr "Vapauta <0/> ja palauta se alkuperäiseen maahan"
 
-#: src/components/_political/law/law.frontConfig.tsx:493
+#: src/components/_political/law/law.frontConfig.tsx:497
 #: src/components/_political/law/lawNames.tsx:32
 msgid "Liberate a region"
 msgstr "Vapauta alue"
@@ -7944,8 +8070,8 @@ msgstr ""
 msgid "Lifetime goals. Reach a tier, claim its XP, and the next one unlocks right away."
 msgstr ""
 
-#: src/components/_political/law/LawFormModal.tsx:226
-#: src/components/_political/law/LawFormModal.tsx:304
+#: src/components/_political/law/LawFormModal.tsx:246
+#: src/components/_political/law/LawFormModal.tsx:324
 msgid "Light"
 msgstr "Kevyt"
 
@@ -8055,6 +8181,10 @@ msgstr ""
 #: src/components/_user/user/MyAvatar.tsx:59
 msgid "Logout"
 msgstr "Kirjaudu ulos"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:50
+#~ msgid "Lone military country"
+#~ msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:86
 msgid "Long Sword"
@@ -8210,8 +8340,8 @@ msgstr "kartta"
 msgid "Map"
 msgstr ""
 
-#: src/components/_political/law/LawFormModal.tsx:223
-#: src/components/_political/law/LawFormModal.tsx:301
+#: src/components/_political/law/LawFormModal.tsx:243
+#: src/components/_political/law/LawFormModal.tsx:321
 msgid "Map Accent"
 msgstr "Kartta Accent"
 
@@ -8241,7 +8371,7 @@ msgid "Market rate"
 msgstr ""
 
 #: src/components/_political/country/CountryTaxes.tsx:24
-#: src/components/_political/law/LawFormModal.tsx:268
+#: src/components/_political/law/LawFormModal.tsx:288
 msgid "Market tax"
 msgstr "Markkinavero"
 
@@ -8412,8 +8542,8 @@ msgstr "Jäsen ylennettiin komentajaksi"
 #: src/components/_political/alliance/AllianceHeader.tsx:72
 #: src/components/_political/party/PartyHeader.tsx:78
 #: src/components/_political/party/PartyHeader.tsx:105
-#: src/components/_political/party/PartyTooltip.tsx:119
-#: src/pages/party/[partyId]/index.tsx:76
+#: src/components/_political/party/PartyTooltip.tsx:74
+#: src/pages/party/[partyId]/index.tsx:53
 #: src/pages/party/[partyId]/members.tsx:21
 msgid "Members"
 msgstr "jäsenet"
@@ -8435,12 +8565,12 @@ msgid "Mentoring"
 msgstr ""
 
 #: src/pages/country/[countryId]/auctions.tsx:25
-#: src/pages/country/[countryId]/index.tsx:307
+#: src/pages/country/[countryId]/index.tsx:308
 msgid "Mercenary Auctions"
 msgstr ""
 
 #: src/pages/country/[countryId]/contracts.tsx:25
-#: src/pages/country/[countryId]/index.tsx:295
+#: src/pages/country/[countryId]/index.tsx:296
 #: src/pages/mu/[muId]/contracts.tsx:25
 msgid "Mercenary Contracts"
 msgstr "Palkkasoturisopimukset"
@@ -8461,6 +8591,10 @@ msgstr ""
 #: src/components/_military/mercenaryContract/MercenaryReputationTooltip.tsx:15
 msgid "Mercenary Reputation"
 msgstr "Palkkasotilaiden maine"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:79
+msgid "Mercenary State"
+msgstr ""
 
 #: src/components/_political/region/SetResistanceFocusModal.tsx:129
 msgid "Message"
@@ -8557,12 +8691,18 @@ msgstr "Armeija ja taistelut"
 msgid "Military base"
 msgstr "Sotilastukikohta"
 
-#. placeholder {0}: ethicsBonuses.militarism[1].regionUpgradeCooldownHours
-#. placeholder {0}: ethicsBonuses.militarism[2].regionUpgradeCooldownHours
 #: src/components/_political/party/party.frontConfig.tsx:94
 #: src/components/_political/party/party.frontConfig.tsx:108
-msgid "Military bases can be upgraded or downgraded every <0>{0} hours</0>."
+#~ msgid "Military bases can be upgraded or downgraded every <0>{0} hours</0>."
+#~ msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:228
+msgid "Military bases can't be activated"
 msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:49
+#~ msgid "Military Junta"
+#~ msgstr ""
 
 #: src/components/_political/law/LawTypeSelect.tsx:76
 msgid "Military laws"
@@ -8655,17 +8795,17 @@ msgstr ""
 msgid "Minimum Management"
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:100
+#: src/components/_political/government/Government.tsx:99
 #: src/components/_political/government/GovernmentScroll.tsx:54
 msgid "Minister of Defense"
 msgstr "Puolustusministeri"
 
-#: src/components/_political/government/Government.tsx:109
+#: src/components/_political/government/Government.tsx:108
 #: src/components/_political/government/GovernmentScroll.tsx:61
 msgid "Minister of Economy"
 msgstr "talousministeri"
 
-#: src/components/_political/government/Government.tsx:118
+#: src/components/_political/government/Government.tsx:117
 #: src/components/_political/government/GovernmentScroll.tsx:68
 msgid "Minister of Foreign Affairs"
 msgstr "ulkoministeri"
@@ -8780,12 +8920,12 @@ msgstr ""
 msgid "Motion failed"
 msgstr "Liike epäonnistui"
 
-#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:49
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:45
 msgid "Motion proposed"
 msgstr "Esitysehdotus"
 
 #: src/components/_political/party/PartyHeader.tsx:111
-#: src/pages/party/[partyId]/index.tsx:94
+#: src/pages/party/[partyId]/index.tsx:71
 #: src/pages/party/[partyId]/motions.tsx:19
 msgid "Motions"
 msgstr "Liikkeet"
@@ -8977,17 +9117,36 @@ msgid "Name"
 msgstr "Nimi"
 
 #: src/components/_political/party/party.frontConfig.tsx:381
-msgid "National battle orders cost double."
-msgstr ""
+#~ msgid "National battle orders cost double."
+#~ msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:376
-msgid "National battle orders give <0>double</0> the priority damage bonus (<1>+10%</1> / <2>+20%</2> / <3>+30%</3>)."
-msgstr ""
+#~ msgid "National battle orders give <0>double</0> the priority damage bonus (<1>+10%</1> / <2>+20%</2> / <3>+30%</3>)."
+#~ msgstr ""
 
 #: src/components/_military/battle/BattleBountySideIndicators.tsx:44
 #: src/components/_military/battle/BattleSystem.tsx:895
 msgid "National bounty"
 msgstr "Kansallinen palkkio"
+
+#. placeholder {0}: effects.orderCostMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:194
+msgid "National orders cost x{0}"
+msgstr ""
+
+#. placeholder {0}: effects.coreOrderCostMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:207
+msgid "National orders for its core regions cost x{0}"
+msgstr ""
+
+#. placeholder {0}: effects.orderBonusMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:185
+msgid "National orders give x{0} bonus (normal bonus while the capital is occupied)"
+msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:49
+msgid "Nationalist State"
+msgstr ""
 
 #: src/components/_military/mu/MuHeader.tsx:104
 msgid "Nationality"
@@ -8997,7 +9156,7 @@ msgstr ""
 msgid "Nationality updated"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:281
+#: src/components/_layout/LayoutMapUserMenu.tsx:289
 msgid "Nearest wooden case"
 msgstr ""
 
@@ -9087,8 +9246,8 @@ msgid "New employee"
 msgstr ""
 
 #: src/components/_political/partyMotion/PartyMotionFormModal.tsx:155
-msgid "New ethics configuration"
-msgstr "Uusi eettinen konfiguraatio"
+#~ msgid "New ethics configuration"
+#~ msgstr "Uusi eettinen konfiguraatio"
 
 #: src/components/_economy/employee/training.frontConfig.tsx:93
 msgid "New habit"
@@ -9239,14 +9398,14 @@ msgid "No active battles"
 msgstr "Ei aktiivisia taisteluita"
 
 #: src/components/_political/government/PoliticalEthics.tsx:563
-msgid "No active ethics - Balanced"
-msgstr "Ei aktiivista etiikkaa - Tasapainoinen"
+#~ msgid "No active ethics - Balanced"
+#~ msgstr "Ei aktiivista etiikkaa - Tasapainoinen"
 
 #: src/components/_military/order/BattleOrderList.tsx:160
 msgid "No active order"
 msgstr ""
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:277
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:256
 msgid "No active wars"
 msgstr "Ei aktiivisia sotia"
 
@@ -9306,6 +9465,10 @@ msgstr ""
 msgid "No congress members"
 msgstr "Ei kongressin jäseniä"
 
+#: src/components/_political/govType/govType.frontConfig.tsx:353
+msgid "No congress: only the president and vice president vote laws"
+msgstr ""
+
 #: src/components/_political/contribution/ContributionList.tsx:221
 msgid "No contributions yet"
 msgstr "Ei vielä lahjoituksia"
@@ -9322,13 +9485,17 @@ msgstr "Ei vielä vahinkoluokitusta."
 msgid "No days worked yet"
 msgstr ""
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:403
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:377
 msgid "No defensive pact"
 msgstr ""
 
 #: src/components/_economy/donation/DonationList.tsx:81
 msgid "No donations yet"
 msgstr "Ei lahjoituksia vielä"
+
+#: src/components/_political/govType/GovTypeEffects.tsx:32
+msgid "No effects"
+msgstr ""
 
 #: src/components/_economy/employee/EmployeeList.tsx:306
 #: src/components/_economy/employee/EmployeeListV2.tsx:135
@@ -9343,6 +9510,10 @@ msgstr ""
 msgid "No ended auction yet"
 msgstr ""
 
+#: src/components/_political/govType/govType.frontConfig.tsx:32
+msgid "No government type chosen yet"
+msgstr ""
+
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1116
 msgid "No grapes"
 msgstr ""
@@ -9351,7 +9522,7 @@ msgstr ""
 msgid "No ground ranking yet."
 msgstr "Ei vielä maasijaa."
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:259
+#: src/components/_layout/LayoutMapUserMenu.tsx:267
 msgid "No home region set"
 msgstr ""
 
@@ -9409,6 +9580,14 @@ msgstr "Sotilasyksiköitä ei löytynyt"
 msgid "No minimum"
 msgstr ""
 
+#: src/components/_political/govType/govType.frontConfig.tsx:348
+msgid "No ministers (vice president only)"
+msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:343
+msgid "No ministers and no congress: only the president and vice president vote laws"
+msgstr ""
+
 #: src/components/_user/mission/MissionsList.tsx:330
 msgid "No missions available"
 msgstr "Ei tehtäviä saatavilla"
@@ -9425,7 +9604,7 @@ msgstr "Ei vielä liikkeitä"
 msgid "No MU has registered yet. Be the first."
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:230
+#: src/components/_political/government/Government.tsx:229
 msgid "No one nominated yet"
 msgstr "Kukaan ei ole vielä ehdolla"
 
@@ -9473,7 +9652,7 @@ msgstr ""
 msgid "No skins equipped"
 msgstr "Ei skinejä varustettuja"
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:336
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:310
 msgid "No sworn enemy"
 msgstr "Ei vannottua vihollista"
 
@@ -9497,6 +9676,10 @@ msgstr "Ei kaupankäyntimääräyksiä"
 #: src/components/_economy/transaction/TransactionList.tsx:153
 msgid "No transactions found"
 msgstr "Tapahtumia ei löytynyt"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:326
+msgid "No treaties (alliance, pacts, sworn enemy)"
+msgstr ""
 
 #: src/components/_social/poll/PollVotersModal.tsx:42
 msgid "No votes yet"
@@ -9543,7 +9726,7 @@ msgstr ""
 msgid "Nobody yet"
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:244
+#: src/components/_political/government/Government.tsx:243
 #: src/components/_political/government/NominateForm.tsx:80
 msgid "Nominate"
 msgstr "Nimitä"
@@ -9552,7 +9735,7 @@ msgstr "Nimitä"
 msgid "Nominate <0/> as leader"
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:282
+#: src/components/_political/government/Government.tsx:281
 msgid "Nominate a {title}"
 msgstr "Nimeä {title}"
 
@@ -9573,8 +9756,8 @@ msgstr "Ehdolla hallituksessa"
 msgid "None"
 msgstr ""
 
-#: src/components/_political/law/LawFormModal.tsx:227
-#: src/components/_political/law/LawFormModal.tsx:305
+#: src/components/_political/law/LawFormModal.tsx:247
+#: src/components/_political/law/LawFormModal.tsx:325
 msgid "Normal"
 msgstr "Normaali"
 
@@ -9602,7 +9785,7 @@ msgstr ""
 msgid "Not impressive, but not shameful"
 msgstr "Ei vaikuttava, mutta ei häpeällinen"
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:218
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:197
 msgid "Not in any alliance"
 msgstr ""
 
@@ -9680,7 +9863,7 @@ msgstr ""
 msgid "Occupied by"
 msgstr ""
 
-#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:140
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:131
 msgid "Occupied region"
 msgstr "Miehitetty alue"
 
@@ -9688,7 +9871,7 @@ msgstr "Miehitetty alue"
 msgid "Odds"
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:204
+#: src/components/_political/government/Government.tsx:203
 msgid "of"
 msgstr "/"
 
@@ -9754,6 +9937,10 @@ msgstr ""
 msgid "One account per player. Multi-accounting can get you permanently banned."
 msgstr ""
 
+#: src/components/_political/govType/govType.frontConfig.tsx:74
+msgid "One ruler, fast decisions"
+msgstr ""
+
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:70
 msgid "One step away from legendary..."
 msgstr "Askeleen päässä legendaarisesta..."
@@ -9814,8 +10001,8 @@ msgid "Only the owner and commanders can change the nationality."
 msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:263
-msgid "Only your core regions generate development income."
-msgstr ""
+#~ msgid "Only your core regions generate development income."
+#~ msgstr ""
 
 #: src/components/_economy/inventory/case/OpenCaseModal.tsx:171
 #: src/components/_economy/inventory/case/OpenCaseModal.tsx:587
@@ -9915,6 +10102,11 @@ msgstr "Tilaukset peruttu"
 msgid "Orders of <0/>"
 msgstr ""
 
+#. placeholder {0}: effects.allyOrderCostMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:214
+msgid "Orders on allies' and pact partners' battles cost x{0}"
+msgstr ""
+
 #: src/components/_political/map/MapMenu.tsx:440
 msgid "Origin"
 msgstr ""
@@ -9951,6 +10143,10 @@ msgstr "Yleiskatsaus"
 
 #: src/components/_user/user/SkillPresetsModal.tsx:273
 msgid "Overwrite with current"
+msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:50
+msgid "Own country first, no alliance"
 msgstr ""
 
 #: src/components/_other/shop/SkinPackItem.tsx:108
@@ -9991,23 +10187,27 @@ msgid "Pacification Center"
 msgstr "Rauhoituskeskus"
 
 #: src/components/_political/party/party.frontConfig.tsx:87
-msgid "Pacifism vs Expansionism"
-msgstr ""
+#~ msgid "Pacifism vs Expansionism"
+#~ msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:70
 #: src/components/_political/party/party.frontConfig.tsx:85
-msgid "Pacifist"
-msgstr "Pasifisti"
+#~ msgid "Pacifist"
+#~ msgstr "Pasifisti"
 
-#. placeholder {0}: ts.paper
 #: src/components/_military/battle/SetOrderFormModal.tsx:544
-msgid "Pacifist: orders defending your core regions or revolts cost {orderDiscountPercent}% less <0>{0}</0>"
-msgstr ""
+#~ msgid "Pacifist: orders defending your core regions or revolts cost {orderDiscountPercent}% less <0>{0}</0>"
+#~ msgstr ""
 
 #: src/components/_other/shop/ShopHeader.tsx:30
 #: src/components/_other/shop/SkinCollectionModal.tsx:194
 msgid "Packs"
 msgstr "Pakkaukset"
+
+#. placeholder {0}: effects.pactUpkeepMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:316
+msgid "Pact upkeep x{0}"
+msgstr ""
 
 #: src/components/_economy/employeeEvent/EmployeeEventEffects.tsx:491
 msgid "Paid back in full"
@@ -10099,6 +10299,10 @@ msgstr "Puoluevaalit päättyivät"
 msgid "Party election vote open"
 msgstr "Puoluevaalien äänestys avattu"
 
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:79
+msgid "Party ethics were replaced by government types"
+msgstr ""
+
 #: src/components/_political/election/election.frontConfig.tsx:33
 msgid "Party Leader election"
 msgstr "Puolueen johtajan vaalit"
@@ -10127,9 +10331,17 @@ msgstr "Puolueen esivaalit ovat päättyneet <0/>. Tarkista tulokset!"
 msgid "Party Primary election voting is now open in <0/>"
 msgstr "Puolueen esivaalien äänestys on nyt auki <0/>"
 
+#: src/components/_political/law/LawFormModal.tsx:402
+#~ msgid "Pass it by decree, without a vote (once every {0} hours)"
+#~ msgstr ""
+
 #: src/components/_political/election/CandidateFormModal.tsx:72
 msgid "Paste a link to your campaign article, or leave empty."
 msgstr "Liitä linkki kampanjaartikkeliisi tai jätä tyhjäksi."
+
+#: src/components/_political/govType/govType.frontConfig.tsx:164
+msgid "Patriotic bonus {base}% → {next}%"
+msgstr ""
 
 #: src/components/_user/user/Level.tsx:194
 msgid "Paused"
@@ -10210,11 +10422,11 @@ msgid "People are angry, an auto revolt has started in <0/>"
 msgstr "Ihmiset ovat vihaisia, autokapina on alkanut <0/>"
 
 #: src/components/_political/region/IncomeEstimateBreakdown.tsx:74
-#: src/pages/country/[countryId]/index.tsx:393
+#: src/pages/country/[countryId]/index.tsx:394
 msgid "Per day"
 msgstr ""
 
-#: src/pages/country/[countryId]/index.tsx:428
+#: src/pages/country/[countryId]/index.tsx:429
 msgid "per day to <0/>."
 msgstr ""
 
@@ -10334,7 +10546,7 @@ msgstr ""
 msgid "Players can share an IP address if they have been registered as a \"Family Group\". This status must be requested in advance to an admin on our Discord. Group members are prohibited from:"
 msgstr ""
 
-#: src/components/_military/battle/BattleHeader.tsx:214
+#: src/components/_military/battle/BattleHeader.tsx:268
 msgid "Players watching this battle right now (refreshes every 30 seconds)."
 msgstr ""
 
@@ -10349,6 +10561,10 @@ msgstr "Täytä CAPTCHA."
 msgid "Please select a region"
 msgstr "Valitse alue"
 
+#: src/components/_political/govType/govType.frontConfig.tsx:67
+msgid "Plutocracy"
+msgstr ""
+
 #: src/components/_economy/employee/employee.frontConfig.tsx:99
 msgid "Poached"
 msgstr ""
@@ -10361,7 +10577,7 @@ msgstr "Poliittinen"
 msgid "Political laws"
 msgstr "Poliittiset lait"
 
-#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:66
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:65
 msgid "Political motions"
 msgstr "Poliittiset liikkeet"
 
@@ -10480,11 +10696,15 @@ msgstr ""
 msgid "Presets"
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:82
+#: src/components/_political/government/Government.tsx:81
 #: src/components/_political/government/GovernmentScroll.tsx:40
 #: src/components/_user/user/UserBadges.tsx:190
 msgid "President"
 msgstr "Presidentti"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:336
+#~ msgid "President decree: 1 law per {0}h without a vote (tax, enemy, pacts, peace)"
+#~ msgstr ""
 
 #: src/components/_user/user/UserBadges.tsx:193
 msgid "President of <0/>"
@@ -10663,20 +10883,20 @@ msgstr "Ylennä komentajaksi"
 msgid "Promoted to Commander"
 msgstr "Ylennettiin komentajaksi"
 
-#: src/components/_political/law/law.frontConfig.tsx:259
+#: src/components/_political/law/law.frontConfig.tsx:263
 msgid "Propose a defensive pact with <0/>"
 msgstr ""
 
-#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:123
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:114
 #: src/components/_political/partyMotion/PartyMotionList.tsx:48
 msgid "Propose a motion"
 msgstr "Tee ehdotus"
 
-#: src/components/_political/law/law.frontConfig.tsx:268
+#: src/components/_political/law/law.frontConfig.tsx:272
 msgid "Propose a mutual defensive pact with <0/>. Once accepted, defenders of either country get a bonus that starts at 1% and grows +1% per day up to 10%."
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:254
+#: src/components/_political/law/law.frontConfig.tsx:258
 msgid "Propose a mutual defensive pact with another country to get a growing defensive bonus"
 msgstr ""
 
@@ -10685,45 +10905,45 @@ msgstr ""
 msgid "Propose alliance law"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:252
+#: src/components/_political/law/law.frontConfig.tsx:256
 #: src/components/_political/law/lawNames.tsx:40
 msgid "Propose defensive pact"
 msgstr ""
 
 #: src/components/_political/allianceLaw/AllianceLawFormModal.tsx:198
-#: src/components/_political/law/LawFormModal.tsx:349
+#: src/components/_political/law/LawFormModal.tsx:403
 msgid "Propose law"
 msgstr "Ehdota lakia"
 
-#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:187
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:163
 msgid "Propose motion"
 msgstr "Ehdota liikettä"
 
-#: src/components/_political/law/law.frontConfig.tsx:137
+#: src/components/_political/law/law.frontConfig.tsx:141
 #: src/components/_political/law/lawNames.tsx:15
 msgid "Propose peace"
 msgstr "Ehdota rauhaa"
 
-#: src/components/_political/law/law.frontConfig.tsx:142
-#: src/components/_political/law/law.frontConfig.tsx:151
+#: src/components/_political/law/law.frontConfig.tsx:146
+#: src/components/_political/law/law.frontConfig.tsx:155
 msgid "Propose peace to <0/>"
 msgstr "Ehdota rauhaa <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:138
+#: src/components/_political/law/law.frontConfig.tsx:142
 msgid "Propose peace to another country"
 msgstr "Ehdota rauhaa toiselle maalle"
 
 #. placeholder {0}: law.data.amount ?? 0
-#: src/components/_political/law/law.frontConfig.tsx:482
+#: src/components/_political/law/law.frontConfig.tsx:486
 msgid "Propose to buy <0/> from <1/> for <2>{0}</2>"
 msgstr "Ehdota ostaa <0/> alkaen <1/> hintaan <2>{0}</2>"
 
-#: src/components/_political/law/law.frontConfig.tsx:466
+#: src/components/_political/law/law.frontConfig.tsx:470
 #: src/components/_political/law/lawNames.tsx:31
 msgid "Propose to buy a region"
 msgstr "Ehdota alueen ostamista"
 
-#: src/components/_political/law/law.frontConfig.tsx:467
+#: src/components/_political/law/law.frontConfig.tsx:471
 msgid "Propose to buy a region from another country"
 msgstr "Ehdota alueen ostamista toisesta maasta"
 
@@ -10733,6 +10953,10 @@ msgstr "Ehdotukset"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1088
 msgid "Provide the grapes"
+msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:31
+msgid "Provisional"
 msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:362
@@ -10788,7 +11012,7 @@ msgstr "Nopea purkaminen"
 msgid "Quick equip best items of any tier"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:401
+#: src/components/_layout/LayoutMapUserMenu.tsx:409
 msgid "Quick move & collect on case click"
 msgstr ""
 
@@ -10824,7 +11048,7 @@ msgstr ""
 msgid "Rank"
 msgstr ""
 
-#: src/components/_military/battle/BattleHeader.tsx:316
+#: src/components/_military/battle/BattleHeader.tsx:352
 #: src/pages/battle/[battleId]/index.tsx:65
 msgid "Ranking"
 msgstr ""
@@ -10835,7 +11059,7 @@ msgstr "Sijoituspalkinto"
 
 #: src/components/_layout/MoreButtonNav.tsx:117
 #: src/pages/alliance/[allianceId]/index.tsx:48
-#: src/pages/country/[countryId]/index.tsx:170
+#: src/pages/country/[countryId]/index.tsx:172
 #: src/pages/user/[userId]/index.tsx:131
 msgid "Rankings"
 msgstr "Rankingit"
@@ -11001,11 +11225,11 @@ msgstr "Kontra-amiraali"
 #: src/components/_political/allianceLaw/AllianceLaw.tsx:79
 #: src/components/_political/allianceLaw/AllianceLawFormModal.tsx:133
 #: src/components/_political/law/Law.tsx:84
-#: src/components/_political/law/LawFormModal.tsx:189
+#: src/components/_political/law/LawFormModal.tsx:209
 msgid "Reason"
 msgstr "Syy"
 
-#: src/pages/party/[partyId]/index.tsx:86
+#: src/pages/party/[partyId]/index.tsx:63
 msgid "Recent Applications"
 msgstr "Viimeaikaiset sovellukset"
 
@@ -11100,11 +11324,11 @@ msgstr "Regens <0>{0}</0> kulutettuna"
 #: src/components/_political/map/MapMenu.tsx:424
 #: src/components/_political/party/PartyFormModal.tsx:107
 #: src/components/_political/party/PartyHeader.tsx:90
-#: src/components/_political/party/PartyTooltip.tsx:145
+#: src/components/_political/party/PartyTooltip.tsx:100
 msgid "Region"
 msgstr "Alue"
 
-#: src/components/_political/law/law.frontConfig.tsx:438
+#: src/components/_political/law/law.frontConfig.tsx:442
 #: src/components/_political/law/lawNames.tsx:30
 msgid "Region buy offer"
 msgstr "Alueen ostotarjous"
@@ -11125,16 +11349,15 @@ msgstr ""
 msgid "Region transfer"
 msgstr "Alueen siirto"
 
-#. placeholder {0}: formatMultiplierDelta( ethicsBonuses.imperialism[2].upgradeMaintenanceMultiplier, )
 #: src/components/_political/party/party.frontConfig.tsx:315
-msgid "Region upgrade maintenance costs are increased by <0>{0}</0>."
-msgstr ""
+#~ msgid "Region upgrade maintenance costs are increased by <0>{0}</0>."
+#~ msgstr ""
 
 #: src/components/_layout/LoadingScreenContent.tsx:24
 msgid "regions"
 msgstr "alueilla"
 
-#: src/components/_political/country/CountryHeader.tsx:142
+#: src/components/_political/country/CountryHeader.tsx:146
 msgid "Regions"
 msgstr "Alueet"
 
@@ -11142,9 +11365,13 @@ msgstr "Alueet"
 msgid "Regions Crossed"
 msgstr ""
 
-#: src/components/_political/party/party.frontConfig.tsx:124
-msgid "Regions you occupy generate double the amount of resistance."
+#: src/components/_political/govType/govType.frontConfig.tsx:139
+msgid "Regions not linked to the capital keep their full development income"
 msgstr ""
+
+#: src/components/_political/party/party.frontConfig.tsx:124
+#~ msgid "Regions you occupy generate double the amount of resistance."
+#~ msgstr ""
 
 #: src/pages/index.tsx:149
 msgid "Register"
@@ -11223,7 +11450,7 @@ msgstr "Jäljellä oleva debuffin kesto"
 msgid "Remove <0/>"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:201
+#: src/components/_political/law/law.frontConfig.tsx:205
 msgid "Remove <0/> from congress due to inactivity"
 msgstr "Poista <0/> kongressista passiivisuuden vuoksi"
 
@@ -11231,7 +11458,7 @@ msgstr "Poista <0/> kongressista passiivisuuden vuoksi"
 msgid "Remove <0/> from the alliance immediately on acceptance."
 msgstr ""
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:38
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:37
 msgid "Remove <0/> from the party council"
 msgstr "Poistetaan <0/> puoluehallituksesta"
 
@@ -11239,7 +11466,7 @@ msgstr "Poistetaan <0/> puoluehallituksesta"
 msgid "Remove a member country from the alliance."
 msgstr ""
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:32
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:31
 msgid "Remove a member from the party council"
 msgstr "Erota jäsen puoluehallituksesta"
 
@@ -11248,7 +11475,7 @@ msgstr "Erota jäsen puoluehallituksesta"
 msgid "Remove all"
 msgstr "Poista kaikki"
 
-#: src/components/_political/law/law.frontConfig.tsx:185
+#: src/components/_political/law/law.frontConfig.tsx:189
 msgid "Remove an inactive congress member from its position"
 msgstr "Poista ei-aktiivinen kongressin jäsen asemastaan"
 
@@ -11265,7 +11492,7 @@ msgstr "Poista Avatar"
 msgid "Remove bounty"
 msgstr "Poista palkkio"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:31
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:30
 msgid "Remove council member"
 msgstr "Erotetaan valtuuston jäsen"
 
@@ -11273,7 +11500,7 @@ msgstr "Erotetaan valtuuston jäsen"
 msgid "Remove Description"
 msgstr "Poista kuvaus"
 
-#: src/components/_political/law/law.frontConfig.tsx:428
+#: src/components/_political/law/law.frontConfig.tsx:432
 #: src/components/_political/law/lawNames.tsx:29
 msgid "Remove enemy"
 msgstr "Poista vihollinen"
@@ -11290,8 +11517,8 @@ msgstr ""
 msgid "Remove position"
 msgstr ""
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:60
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:63
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:59
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:62
 msgid "Remove the current party leader from their position"
 msgstr "Poista puolueen nykyinen johtaja asemastaan"
 
@@ -11334,17 +11561,17 @@ msgstr ""
 msgid "Rename the alliance to \"{0}\" immediately on acceptance."
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:244
+#: src/components/_political/government/Government.tsx:243
 msgid "Replace"
 msgstr "Korvaa"
 
-#: src/components/_political/government/Government.tsx:282
+#: src/components/_political/government/Government.tsx:281
 msgid "Replace {title}"
 msgstr "Korvaa {title}"
 
 #: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:80
-msgid "Replace all party ethics with a new configuration"
-msgstr "Korvaa kaikki puolueetiikka uudella kokoonpanolla"
+#~ msgid "Replace all party ethics with a new configuration"
+#~ msgstr "Korvaa kaikki puolueetiikka uudella kokoonpanolla"
 
 #: src/components/_political/government/NominateForm.tsx:62
 msgid "Replacing a member"
@@ -11362,10 +11589,14 @@ msgstr "Ilmoita käyttäjästä"
 msgid "Reports"
 msgstr ""
 
+#: src/components/_political/govType/govType.frontConfig.tsx:37
+msgid "Republic"
+msgstr ""
+
 #: src/components/_political/party/party.frontConfig.tsx:269
 #: src/components/_political/party/party.frontConfig.tsx:284
-msgid "Republican"
-msgstr "republikaani"
+#~ msgid "Republican"
+#~ msgstr "republikaani"
 
 #: src/components/_military/mercenaryContract/MercenaryReputationTooltip.tsx:34
 msgid "Reputation decays 20% toward 0 every week (minimum 1 point)."
@@ -11452,7 +11683,7 @@ msgstr ""
 msgid "Resign from this position?"
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:533
+#: src/components/_military/hit/HitButton.tsx:489
 #: src/components/_user/mission/mission.frontConfig.tsx:605
 msgid "Resist"
 msgstr "Vastustaa"
@@ -11462,6 +11693,16 @@ msgstr "Vastustaa"
 #: src/pages/region/[regionId]/index.tsx:129
 msgid "Resistance"
 msgstr "Resistanssi"
+
+#. placeholder {0}: effects.coreResistanceBattleCostMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:240
+msgid "Resistance battles cost x{0} in its occupied core regions"
+msgstr ""
+
+#. placeholder {0}: effects.coreResistanceContributionMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:233
+msgid "Resistance contributions x{0} in its occupied core regions"
+msgstr ""
 
 #: src/components/_political/contribution/ContributionList.tsx:194
 msgid "Resistance Contributors"
@@ -11479,12 +11720,17 @@ msgstr ""
 msgid "Resistance for {regionName} {score}"
 msgstr ""
 
+#. placeholder {0}: effects.conqueredResistanceGrowthMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:247
+msgid "Resistance grows x{0} faster in conquered regions"
+msgstr ""
+
 #: src/components/_political/region/RegionTooltip.tsx:119
 msgid "Resource"
 msgstr ""
 
-#: src/components/_political/country/CountryTooltip.tsx:153
-#: src/pages/country/[countryId]/index.tsx:229
+#: src/components/_political/country/CountryTooltip.tsx:165
+#: src/pages/country/[countryId]/index.tsx:231
 #: src/pages/region/[regionId]/index.tsx:53
 msgid "Resources"
 msgstr "Resurssit"
@@ -11517,7 +11763,7 @@ msgstr ""
 msgid "Retired at the end of a long career."
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:494
+#: src/components/_political/law/law.frontConfig.tsx:498
 msgid "Return a region to its original country"
 msgstr "Palauta alue alkuperäiseen maahan"
 
@@ -11557,7 +11803,7 @@ msgstr "Kivääri"
 msgid "Right after you pick {answer} in {source}."
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:179
+#: src/components/_political/government/Government.tsx:178
 msgid "Rights"
 msgstr "Oikeudet"
 
@@ -11646,7 +11892,7 @@ msgstr "Voitetut kierrokset"
 msgid "Rules"
 msgstr "säännöt"
 
-#: src/pages/country/[countryId]/index.tsx:237
+#: src/pages/country/[countryId]/index.tsx:248
 msgid "Ruling Party"
 msgstr "Hallitseva puolue"
 
@@ -11765,6 +12011,10 @@ msgstr ""
 msgid "Select a country"
 msgstr ""
 
+#: src/components/_political/law/LawFormModal.tsx:343
+msgid "Select a government type"
+msgstr ""
+
 #: src/components/_military/mu/MuFormModal.tsx:112
 msgid "Select a location"
 msgstr "Valitse sijainti"
@@ -11782,7 +12032,7 @@ msgstr ""
 msgid "Select an item"
 msgstr ""
 
-#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:141
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:132
 msgid "Select an occupied region"
 msgstr "Valitse varattu alue"
 
@@ -11795,12 +12045,12 @@ msgstr "Valitse banneri"
 msgid "Select law type"
 msgstr "Valitse lain tyyppi"
 
-#: src/components/_political/law/LawFormModal.tsx:224
-#: src/components/_political/law/LawFormModal.tsx:302
+#: src/components/_political/law/LawFormModal.tsx:244
+#: src/components/_political/law/LawFormModal.tsx:322
 msgid "Select map accent"
 msgstr "Valitse kartan korostus"
 
-#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:59
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:58
 msgid "Select motion type"
 msgstr "Valitse liiketyyppi"
 
@@ -11867,7 +12117,7 @@ msgstr "myy"
 msgid "Send <0/> messages"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:418
+#: src/components/_political/law/law.frontConfig.tsx:422
 msgid "Send <0/> to <1/>"
 msgstr ""
 
@@ -11893,7 +12143,7 @@ msgstr "Lähetä Viesti"
 
 #. placeholder {0}: staticGameConfig.law[ELawType.SEND_MONEY_TO_COUNTRY].allianceTaxRate * 100
 #. placeholder {1}: staticGameConfig.law[ELawType.SEND_MONEY_TO_COUNTRY].externalTaxRate * 100
-#: src/components/_political/law/law.frontConfig.tsx:404
+#: src/components/_political/law/law.frontConfig.tsx:408
 msgid "Send money to another country. Paper tax on top: {0}% within your alliance, {1}% for external transfers."
 msgstr ""
 
@@ -11917,11 +12167,11 @@ msgstr "Aseta <0>kuvaus</0>"
 msgid "Set a referrer"
 msgstr "Aseta viittaus"
 
-#: src/components/_political/law/law.frontConfig.tsx:518
+#: src/components/_political/law/law.frontConfig.tsx:522
 msgid "Set a welcome article for your country"
 msgstr "Aseta tervetuloartikkeli maallesi"
 
-#: src/components/_political/law/law.frontConfig.tsx:523
+#: src/components/_political/law/law.frontConfig.tsx:527
 msgid "Set a welcome article for your country<0/>"
 msgstr "Aseta tervetuliaisartikkeli maallesi<0/>"
 
@@ -11929,25 +12179,38 @@ msgstr "Aseta tervetuliaisartikkeli maallesi<0/>"
 msgid "Set bounty"
 msgstr "Aseta palkkio"
 
-#: src/components/_political/law/law.frontConfig.tsx:544
+#: src/components/_political/law/law.frontConfig.tsx:548
 #: src/components/_political/law/lawNames.tsx:34
 msgid "Set country color"
 msgstr "Aseta maan väri"
 
 #. placeholder {0}: law.data.scheme
-#: src/components/_political/law/law.frontConfig.tsx:536
+#: src/components/_political/law/law.frontConfig.tsx:540
 msgid "Set country color to <0>{0}</0> "
 msgstr ""
 
+#: src/components/_political/law/law.frontConfig.tsx:617
+#: src/components/_political/law/lawNames.tsx:43
+msgid "Set government type"
+msgstr ""
+
+#: src/components/_political/law/law.frontConfig.tsx:623
+msgid "Set government type to <0/>"
+msgstr ""
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:82
+msgid "Set new party ethics (no longer in the game)"
+msgstr ""
+
 #: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:88
-msgid "Set new party ethics configuration:"
-msgstr "Aseta uusi puolueetiikan määritys:"
+#~ msgid "Set new party ethics configuration:"
+#~ msgstr "Aseta uusi puolueetiikan määritys:"
 
 #: src/components/_military/battle/BattleOrderActionsDropdown.tsx:139
 msgid "Set order"
 msgstr "Aseta järjestys"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:79
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:78
 msgid "Set party ethics"
 msgstr "Aseta puolueen etiikka"
 
@@ -11955,17 +12218,17 @@ msgstr "Aseta puolueen etiikka"
 msgid "Set Profile Picture"
 msgstr "Aseta profiilikuva"
 
-#: src/components/_political/law/law.frontConfig.tsx:590
+#: src/components/_political/law/law.frontConfig.tsx:594
 #: src/components/_political/law/lawNames.tsx:36
 msgid "Set specialization item"
 msgstr "Aseta erikoistumiskohde"
 
 #. placeholder {0}: ts[law.data.itemCode]
-#: src/components/_political/law/law.frontConfig.tsx:596
+#: src/components/_political/law/law.frontConfig.tsx:600
 msgid "Set the country's specialized item to <0>{0}</0>.<1/>The country strategic resources <2>Production Bonus</2> will be available for local companies producing this item."
 msgstr "Aseta maan erikoistuote <0>{0}</0>.<1/>Maan strategiset resurssit <2>Tuotantobonus</2> ovat saatavilla tätä tuotetta valmistaville paikallisille yrityksille."
 
-#: src/components/_political/law/law.frontConfig.tsx:591
+#: src/components/_political/law/law.frontConfig.tsx:595
 msgid "Set the country's specialized production item"
 msgstr "Aseta maan erikoistuote"
 
@@ -11973,7 +12236,7 @@ msgstr "Aseta maan erikoistuote"
 msgid "Set Username"
 msgstr "Aseta käyttäjätunnus"
 
-#: src/components/_political/law/law.frontConfig.tsx:517
+#: src/components/_political/law/law.frontConfig.tsx:521
 #: src/components/_political/law/lawNames.tsx:33
 msgid "Set welcome article"
 msgstr "Aseta tervetuloartikkeli"
@@ -12165,7 +12428,7 @@ msgstr ""
 msgid "Skip Tutorial"
 msgstr "Ohita opetusohjelma"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:379
+#: src/components/_layout/LayoutMapUserMenu.tsx:387
 msgid "Skipped"
 msgstr ""
 
@@ -12292,7 +12555,7 @@ msgstr ""
 msgid "Spent when moving on the map: 10 points per region crossed. The regions your stamina can't cover are paid in oil. It refills 10 points an hour and cannot be raised with skill points."
 msgstr ""
 
-#: src/components/_political/country/CountryHeader.tsx:255
+#: src/components/_political/country/CountryHeader.tsx:271
 msgid "Stable, conquest-proof strength. Still used for unrest, government wages and revolution cost. Other costs use <0>Average development</0>."
 msgstr ""
 
@@ -12309,33 +12572,33 @@ msgstr ""
 msgid "Starforge Hammer"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:169
-#: src/components/_political/law/law.frontConfig.tsx:171
+#: src/components/_political/law/law.frontConfig.tsx:173
+#: src/components/_political/law/law.frontConfig.tsx:175
 msgid "Start a congress election, now"
 msgstr "Aloita nyt kongressivaalit"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:51
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:53
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:50
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:52
 msgid "Start a party council election immediately"
 msgstr "Aloita puoluevaltuuston vaalit välittömästi"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:71
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:73
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:70
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:72
 msgid "Start a party leader election immediately"
 msgstr "Aloita puolueen johtajavaalit välittömästi"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:105
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:107
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:89
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:91
 msgid "Start a party primary election immediately"
 msgstr "Aloita puolueen esivaalit välittömästi"
 
-#: src/components/_political/law/law.frontConfig.tsx:161
-#: src/components/_political/law/law.frontConfig.tsx:163
+#: src/components/_political/law/law.frontConfig.tsx:165
+#: src/components/_political/law/law.frontConfig.tsx:167
 msgid "Start a presidential election, now"
 msgstr "Aloita presidentinvaalit nyt"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:114
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:116
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:98
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:100
 msgid "Start a revolution to overthrow the government"
 msgstr "Aloita vallankumous hallituksen kaatamiseksi"
 
@@ -12343,12 +12606,12 @@ msgstr "Aloita vallankumous hallituksen kaatamiseksi"
 msgid "Start an auction"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:168
+#: src/components/_political/law/law.frontConfig.tsx:172
 #: src/components/_political/law/lawNames.tsx:19
 msgid "Start congress election"
 msgstr "Aloitetaan kongressivaalit"
 
-#: src/components/_political/law/law.frontConfig.tsx:160
+#: src/components/_political/law/law.frontConfig.tsx:164
 #: src/components/_political/law/lawNames.tsx:17
 msgid "Start presidential election"
 msgstr "Aloita presidentinvaalit"
@@ -12357,7 +12620,7 @@ msgstr "Aloita presidentinvaalit"
 msgid "Start price"
 msgstr ""
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:113
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:97
 msgid "Start revolution"
 msgstr "Aloita vallankumous"
 
@@ -12370,7 +12633,7 @@ msgstr ""
 msgid "Started <0/>"
 msgstr "Alkoi <0/>"
 
-#: src/components/_military/battle/BattleHeader.tsx:201
+#: src/components/_military/battle/BattleHeader.tsx:255
 msgid "Started<0/><1/>"
 msgstr ""
 
@@ -12400,7 +12663,7 @@ msgid "Starts"
 msgstr ""
 
 #. placeholder {0}: gameConfig?.battle.enemyDamagesBonusPercent
-#: src/components/_political/law/law.frontConfig.tsx:237
+#: src/components/_political/law/law.frontConfig.tsx:241
 msgid "starts at 1% and grows +1% per day up to <0>{0}</0>"
 msgstr ""
 
@@ -12480,7 +12743,7 @@ msgstr "Strategiset resurssit"
 msgid "Strategic resources have been reshuffled across the whole map."
 msgstr "Strategiset resurssit on jaettu uudelleen koko kartalla."
 
-#: src/pages/country/[countryId]/index.tsx:414
+#: src/pages/country/[countryId]/index.tsx:415
 msgid "Strategic resources income"
 msgstr ""
 
@@ -12512,7 +12775,7 @@ msgstr "Sisäänkirjautuminen onnistui!"
 msgid "Sugar Daddy"
 msgstr "Rikas tukija"
 
-#: src/components/_political/country/CountryHeader.tsx:196
+#: src/components/_political/country/CountryHeader.tsx:200
 msgid "Sum of the regions the country currently controls. Market taxes and other income are not included."
 msgstr ""
 
@@ -12595,29 +12858,27 @@ msgstr ""
 msgid "Switched back to the flat map."
 msgstr ""
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:286
-#: src/components/_political/country/CountryTooltip.tsx:112
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:265
+#: src/components/_political/country/CountryTooltip.tsx:124
 msgid "Sworn enemy"
 msgstr "Valannut vihollinen"
 
-#. placeholder {0}: formatMultiplierDelta( ethicsBonuses.isolationism[2].enemyMaintenanceMultiplier, )
-#: src/components/_political/party/party.frontConfig.tsx:232
-msgid "Sworn enemy maintenance costs are increased by <0>{0}</0>."
+#: src/components/_political/govType/govType.frontConfig.tsx:286
+msgid "Sworn enemy bonus starts at {start}%, +{perDay}%/day, up to {cap}%"
 msgstr ""
 
-#. placeholder {0}: ethicsBonuses.isolationism['-1'].enemyFidelityStart
-#. placeholder {0}: ethicsBonuses.isolationism['-2'].enemyFidelityStart
-#. placeholder {1}: ethicsBonuses.isolationism['-1'].enemyFidelityPerDay
-#. placeholder {1}: ethicsBonuses.isolationism['-2'].enemyFidelityPerDay
+#: src/components/_political/party/party.frontConfig.tsx:232
+#~ msgid "Sworn enemy maintenance costs are increased by <0>{0}</0>."
+#~ msgstr ""
+
 #: src/components/_political/party/party.frontConfig.tsx:140
 #: src/components/_political/party/party.frontConfig.tsx:176
-msgid "Sworn enemy treaties start at <0>{0} fidelity</0> and gain <1>{1}</1> each day."
-msgstr ""
+#~ msgid "Sworn enemy treaties start at <0>{0} fidelity</0> and gain <1>{1}</1> each day."
+#~ msgstr ""
 
-#. placeholder {0}: ts.paper
 #: src/components/_military/battle/SetOrderFormModal.tsx:538
-msgid "Sworn enemy: orders against your sworn enemy cost {orderDiscountPercent}% less <0>{0}</0>"
-msgstr ""
+#~ msgid "Sworn enemy: orders against your sworn enemy cost {orderDiscountPercent}% less <0>{0}</0>"
+#~ msgstr ""
 
 #: src/components/_political/event/EventList.tsx:115
 msgid "System revolt"
@@ -12644,9 +12905,9 @@ msgstr ""
 msgid "Take care of an employee <0/> times in the company you manage"
 msgstr ""
 
-#: src/pages/country/[countryId]/index.tsx:120
-#: src/pages/country/[countryId]/index.tsx:144
-#: src/pages/country/[countryId]/index.tsx:149
+#: src/pages/country/[countryId]/index.tsx:122
+#: src/pages/country/[countryId]/index.tsx:146
+#: src/pages/country/[countryId]/index.tsx:151
 msgid "Take control"
 msgstr "Ota hallintaasi"
 
@@ -12687,19 +12948,19 @@ msgstr ""
 msgid "Tap for the full tier breakdown"
 msgstr ""
 
-#: src/components/_political/law/LawFormModal.tsx:203
+#: src/components/_political/law/LawFormModal.tsx:223
 msgid "Target country"
 msgstr "Kohdemaa"
 
-#: src/components/_political/law/LawFormModal.tsx:241
+#: src/components/_political/law/LawFormModal.tsx:261
 msgid "Target region"
 msgstr "Kohdealue"
 
-#: src/components/_political/law/LawFormModal.tsx:315
+#: src/components/_political/law/LawFormModal.tsx:335
 msgid "Target user"
 msgstr "Kohdekäyttäjä"
 
-#: src/components/_political/law/LawFormModal.tsx:261
+#: src/components/_political/law/LawFormModal.tsx:281
 msgid "Tax type"
 msgstr "Verotyyppi"
 
@@ -12930,6 +13191,22 @@ msgstr ""
 msgid "The General retreats in good order."
 msgstr ""
 
+#: src/components/_political/law/LawFormModal.tsx:363
+msgid "The government type changed less than {GOV_TYPE_CHANGE_COOLDOWN_DAYS} days ago. It can change again <0/>."
+msgstr ""
+
+#: src/components/_political/law/LawGovTypeAlert.tsx:41
+msgid "The government type of this country forbids a sworn enemy."
+msgstr ""
+
+#: src/components/_political/law/LawGovTypeAlert.tsx:24
+msgid "The government type of this country forbids alliances."
+msgstr ""
+
+#: src/components/_political/law/LawGovTypeAlert.tsx:32
+msgid "The government type of this country forbids defensive pacts."
+msgstr ""
+
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1764
 msgid "The great soup debate"
 msgstr ""
@@ -13049,7 +13326,7 @@ msgstr "Vallankumous maassa <0/> on tukahdutettu. Hallitus pysyy vallassa."
 msgid "The revolution in <0/> has succeeded! The government has been overthrown."
 msgstr "<0/>:n vallankumous on onnistunut! Hallitus on kaadettu."
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:375
+#: src/components/_layout/LayoutMapUserMenu.tsx:383
 msgid "The roll is skipped while you hold {maxLoots} uncollected cases"
 msgstr ""
 
@@ -13242,13 +13519,21 @@ msgstr ""
 msgid "This company is disabled because the owner reached the company limit."
 msgstr "Tämä yritys on poistettu käytöstä, koska omistaja saavutti yritysrajan."
 
-#: src/pages/country/[countryId]/index.tsx:124
+#: src/pages/country/[countryId]/index.tsx:126
 msgid "This country has no president or active congress member, you can take control of it."
 msgstr "Tällä maalla ei ole presidenttiä tai aktiivista kongressin jäsentä, voit ottaa sen hallintaansa."
 
 #: src/components/_political/government/Government.tsx:72
-msgid "This country is Fanatic Imperialist: it cannot have ministers, only a president and vice president. Minister nominations will be rejected."
+#~ msgid "This country is Fanatic Imperialist: it cannot have ministers, only a president and vice president. Minister nominations will be rejected."
+#~ msgstr ""
+
+#: src/components/_political/government/Government.tsx:71
+msgid "This country's government type has no ministers and no congress, only a president and vice president. The president takes over the ministers' powers and they alone vote laws."
 msgstr ""
+
+#: src/components/_political/government/Government.tsx:71
+#~ msgid "This country's government type has no ministers, only a president and vice president. The president takes over the ministers' powers."
+#~ msgstr ""
 
 #: src/components/_political/map/MapLibreErrorBoundary.tsx:66
 msgid "This device can't display the map"
@@ -13290,7 +13575,7 @@ msgstr ""
 msgid "This is a summary of the loot you received from this battle. It includes any cases you got as well as the most valuable items from the shared loot pool."
 msgstr "Tämä on yhteenveto saaliista, jonka sait tästä taistelusta. Se sisältää kaikki saamasi kotelot sekä arvokkaimmat tavarat yhteisestä saaliista."
 
-#: src/components/_political/country/CountryHeader.tsx:284
+#: src/components/_political/country/CountryHeader.tsx:300
 msgid "This is the value used to calculate most costs: battle orders, alliance, sworn enemy and defensive pact maintenance, laws and upgrade upkeep."
 msgstr ""
 
@@ -13302,20 +13587,20 @@ msgstr "Tämä on yrityksesi keskus. Täällä voit valmistaa esineitä ja raken
 msgid "This is your team"
 msgstr ""
 
-#: src/components/_political/law/LawTypeSelect.tsx:201
+#: src/components/_political/law/LawTypeSelect.tsx:199
 msgid "This law can be abusive and requires 5+ possible voters in the country."
 msgstr "Tämä laki voi olla loukkaavaa ja edellyttää vähintään 5 mahdollista äänestäjää maassa."
 
-#: src/components/_political/law/LawTypeSelect.tsx:195
-#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:139
+#: src/components/_political/law/LawTypeSelect.tsx:193
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:121
 msgid "This law has an additional variable cost"
 msgstr "Tällä lailla on ylimääräinen muuttuva kustannus"
 
-#: src/components/_political/law/LawTypeSelect.tsx:210
+#: src/components/_political/law/LawTypeSelect.tsx:208
 msgid "This law requires at least {minActiveCitizen} active citizens (level 10+) in the country."
 msgstr "Tämä laki edellyttää vähintään {minActiveCitizen} aktiivista kansalaista (taso 10+) maassa."
 
-#: src/components/_political/government/Government.tsx:266
+#: src/components/_political/government/Government.tsx:265
 msgid "This member won't be able to be nominated again for {cooldownDays} days."
 msgstr "Tätä jäsentä ei voida nimittää uudelleen {cooldownDays} päivään."
 
@@ -13384,7 +13669,7 @@ msgstr "Aika tuottaa!"
 msgid "Time to retire"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:385
+#: src/components/_layout/LayoutMapUserMenu.tsx:393
 msgid "Time until the next case roll"
 msgstr ""
 
@@ -13609,7 +13894,7 @@ msgstr "Lahjoitetut yhteensä:"
 msgid "Total of <0/>"
 msgstr ""
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:409
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:383
 msgid "Total of <0>{totalMaintenanceCostPerDay}</0>/day"
 msgstr ""
 
@@ -13779,18 +14064,18 @@ msgid "Transac."
 msgstr "Tapaht."
 
 #: src/components/_military/mu/MuHeader.tsx:167
-#: src/components/_political/country/CountryHeader.tsx:104
+#: src/components/_political/country/CountryHeader.tsx:108
 #: src/components/_political/party/PartyHeader.tsx:129
 #: src/pages/market/index.tsx:86
 #: src/pages/user/[userId]/index.tsx:237
 msgid "Transactions"
 msgstr "Tapahtumat"
 
-#: src/components/_political/law/law.frontConfig.tsx:408
+#: src/components/_political/law/law.frontConfig.tsx:412
 msgid "Transfer <0/> to <1/>"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:402
+#: src/components/_political/law/law.frontConfig.tsx:406
 #: src/components/_political/law/lawNames.tsx:28
 msgid "Transfer money"
 msgstr "Siirrä rahaa"
@@ -13811,7 +14096,7 @@ msgstr ""
 msgid "Travel to another region <0/> times"
 msgstr ""
 
-#: src/components/_political/party/PartyTooltip.tsx:136
+#: src/components/_political/party/PartyTooltip.tsx:91
 msgid "Treasurer"
 msgstr ""
 
@@ -13879,7 +14164,7 @@ msgstr ""
 msgid "Unblock (show content)"
 msgstr "Kumoa esto (näytä sisältö)"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:363
+#: src/components/_layout/LayoutMapUserMenu.tsx:371
 msgid "Uncollected cases waiting on the map, out of {maxLoots}"
 msgstr ""
 
@@ -13896,22 +14181,20 @@ msgid "Unequip all"
 msgstr "Tyhjennä kaikki"
 
 #: src/components/_political/party/party.frontConfig.tsx:372
-msgid "Unethical"
-msgstr ""
+#~ msgid "Unethical"
+#~ msgstr ""
 
 #: src/components/_political/law/LawEthicEffects.tsx:58
-msgid "Unethical countries cannot hold any treaty — this law cannot be enacted."
-msgstr ""
+#~ msgid "Unethical countries cannot hold any treaty — this law cannot be enacted."
+#~ msgstr ""
 
-#. placeholder {0}: ts.paper
 #: src/components/_military/battle/SetOrderFormModal.tsx:562
-msgid "Unethical: capital occupied, national orders give only the regular bonus but still cost ×2 <0>{0}</0>"
-msgstr ""
+#~ msgid "Unethical: capital occupied, national orders give only the regular bonus but still cost ×2 <0>{0}</0>"
+#~ msgstr ""
 
-#. placeholder {0}: ts.paper
 #: src/components/_military/battle/SetOrderFormModal.tsx:557
-msgid "Unethical: national orders deal ×2 damage but cost ×2 <0>{0}</0>"
-msgstr ""
+#~ msgid "Unethical: national orders deal ×2 damage but cost ×2 <0>{0}</0>"
+#~ msgstr ""
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1788
 msgid "United in outrage against you, {name} and {partnerName} are inseparable now."
@@ -13959,9 +14242,19 @@ msgstr "Mykistetty <0/>"
 msgid "Unreal. This doesn't happen"
 msgstr "Epätodellinen. Tätä ei tapahdu"
 
-#: src/pages/country/[countryId]/index.tsx:220
+#: src/pages/country/[countryId]/index.tsx:222
 msgid "Unrest"
 msgstr "Levottomuus"
+
+#. placeholder {0}: effects.unrestCapMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:268
+msgid "Unrest bar x{0}"
+msgstr ""
+
+#. placeholder {0}: effects.unrestIncreaseMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:261
+msgid "Unrest contributions x{0} when pushing the bar up"
+msgstr ""
 
 #: src/components/_political/contribution/ContributionList.tsx:196
 msgid "Unrest Contributors"
@@ -13971,8 +14264,8 @@ msgstr "Levottomuuksien avustajat"
 msgid "Unselect all"
 msgstr "Poista kaikki valinnat"
 
-#: src/components/_political/law/law.frontConfig.tsx:429
-#: src/components/_political/law/law.frontConfig.tsx:431
+#: src/components/_political/law/law.frontConfig.tsx:433
+#: src/components/_political/law/law.frontConfig.tsx:435
 msgid "Unset the sworn enemy country"
 msgstr "Purkaa vannonut vihollismaa"
 
@@ -14366,7 +14659,7 @@ msgstr ""
 msgid "Vice Admiral"
 msgstr "Vara-amiraali"
 
-#: src/components/_political/government/Government.tsx:91
+#: src/components/_political/government/Government.tsx:90
 #: src/components/_political/government/GovernmentScroll.tsx:47
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:65
 #: src/components/_user/user/UserBadges.tsx:214
@@ -14381,11 +14674,11 @@ msgstr ""
 msgid "View details"
 msgstr "Näytä tiedot"
 
-#: src/components/_military/battle/BattleHeader.tsx:131
+#: src/components/_military/battle/BattleHeader.tsx:185
 msgid "View on map"
 msgstr "Näytä kartalla"
 
-#: src/components/_military/battle/BattleHeader.tsx:213
+#: src/components/_military/battle/BattleHeader.tsx:267
 msgid "Viewers"
 msgstr ""
 
@@ -14468,7 +14761,7 @@ msgstr "Varoitus"
 msgid "Warrant Officer"
 msgstr "Aliupseeri"
 
-#: src/components/_political/country/CountryHeader.tsx:122
+#: src/components/_political/country/CountryHeader.tsx:126
 msgid "Wars"
 msgstr "Sodat"
 
@@ -14569,14 +14862,13 @@ msgstr ""
 msgid "What your employees' Luck is expected to find in a day, at their current Luck and traits. Only hours that bank production roll a find, so a full storage or a disabled company finds nothing (Salvagers keep looking while the storage is full)."
 msgstr ""
 
-#. placeholder {0}: formatPercent( ethicsBonuses.militarism[2].pacificationDefenseBonusPerLevel, )
 #: src/components/_political/party/party.frontConfig.tsx:115
-msgid "When defending a revolt, gain an additional <0>{0}</0> battle bonus per Pacification Center level."
-msgstr ""
+#~ msgid "When defending a revolt, gain an additional <0>{0}</0> battle bonus per Pacification Center level."
+#~ msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:62
-msgid "When revolting, you copy the enemy's defensive battle bonus from Bunker region upgrades."
-msgstr ""
+#~ msgid "When revolting, you copy the enemy's defensive battle bonus from Bunker region upgrades."
+#~ msgstr ""
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:197
 msgid "When your <0>Health</0> runs out, open this menu to restore it with food."
@@ -14591,7 +14883,7 @@ msgid "White suit, gold everything"
 msgstr ""
 
 #: src/components/_political/allianceLaw/AllianceLawFormModal.tsx:134
-#: src/components/_political/law/LawFormModal.tsx:190
+#: src/components/_political/law/LawFormModal.tsx:210
 msgid "Why do you want to propose this law?"
 msgstr "Miksi haluat ehdottaa tätä lakia?"
 
@@ -14649,7 +14941,7 @@ msgstr ""
 msgid "Wooden Case"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:226
+#: src/components/_layout/LayoutMapUserMenu.tsx:235
 #: src/components/_political/map/MapMenu.tsx:192
 msgid "Wooden case collected!"
 msgstr ""
@@ -14726,7 +15018,7 @@ msgstr ""
 msgid "Wow congratulations! Anyway have you considered buying premium?"
 msgstr "Vau onnittelut! Oletko muuten harkinnut premiumin ostamista?"
 
-#: src/components/_political/law/LawFormModal.tsx:179
+#: src/components/_political/law/LawFormModal.tsx:199
 #: src/components/_political/law/LawList.tsx:52
 msgid "Write a law"
 msgstr "Kirjoita laki"
@@ -14772,19 +15064,19 @@ msgstr "Olet kaunis ihminen"
 msgid "You are a lucky bastard"
 msgstr "Olet onnekas paskiainen"
 
-#: src/pages/country/[countryId]/index.tsx:114
+#: src/pages/country/[countryId]/index.tsx:116
 msgid "You are already congress member of another country. Resign first."
 msgstr "Olet jo toisen maan kongressin jäsen. Irtisanoudu ensin."
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:261
+#: src/components/_layout/LayoutMapUserMenu.tsx:269
 msgid "You are already home"
 msgstr ""
 
-#: src/pages/country/[countryId]/index.tsx:110
+#: src/pages/country/[countryId]/index.tsx:112
 msgid "You are already president of another country. Resign first."
 msgstr "Olet jo toisen maan presidentti. Irtisanoudu ensin."
 
-#: src/pages/country/[countryId]/index.tsx:112
+#: src/pages/country/[countryId]/index.tsx:114
 msgid "You are already vice president of another country. Resign first."
 msgstr "Olet jo toisen maan varapresidentti. Irtisanoudu ensin."
 
@@ -14826,7 +15118,7 @@ msgstr "Et osallistu"
 msgid "You are paid hourly and can resign after 24h."
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:473
+#: src/components/_military/hit/HitButton.tsx:429
 msgid "You are standing in this region, so you can fight here."
 msgstr ""
 
@@ -14986,12 +15278,12 @@ msgid "You have the highest bid. Your <0>{0}</0> is held until the auction ends.
 msgstr ""
 
 #. placeholder {0}: gameConfig?.user.canTakeControlAtLevel
-#: src/pages/country/[countryId]/index.tsx:106
+#: src/pages/country/[countryId]/index.tsx:108
 msgid "You have to be level {0} to take control of a country."
 msgstr "Sinun on oltava tasolla {0} hallitaksesi maata."
 
 #. placeholder {0}: gameConfig?.user.takeControlCooldownInDays
-#: src/pages/country/[countryId]/index.tsx:108
+#: src/pages/country/[countryId]/index.tsx:110
 msgid "You have to wait {0} days before taking control of a country again."
 msgstr "Sinun on odotettava {0} päivää ennen kuin otat maan uudelleen hallintaan."
 
@@ -15035,8 +15327,8 @@ msgid "You must be at least level {0} to vote."
 msgstr ""
 
 #: src/components/_political/government/PoliticalEthicsSelect.tsx:115
-msgid "You must spend all 3 ethics points ({pointsRemaining} remaining)"
-msgstr "Sinun on käytettävä kaikki 3 eettistä pistettä ({pointsRemaining} jäljellä)"
+#~ msgid "You must spend all 3 ethics points ({pointsRemaining} remaining)"
+#~ msgstr "Sinun on käytettävä kaikki 3 eettistä pistettä ({pointsRemaining} jäljellä)"
 
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:155
 msgid "You need a country to take part"
@@ -15308,7 +15600,7 @@ msgstr "Buffisi vanhenee alle 1 tunnin kuluttua. Debuff-vaihe alkaa pian."
 msgid "Your citizens will see <0/> in their battle list, with this message. It gives no bonus: it tells people where to spend their contributions."
 msgstr ""
 
-#: src/pages/country/[countryId]/index.tsx:145
+#: src/pages/country/[countryId]/index.tsx:147
 msgid "Your citizenship is going to change"
 msgstr "Kansalaisuutesi tulee muuttumaan"
 
@@ -15403,7 +15695,7 @@ msgstr ""
 msgid "Your Leadership {value}"
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:472
+#: src/components/_military/hit/HitButton.tsx:428
 msgid "Your location"
 msgstr ""
 

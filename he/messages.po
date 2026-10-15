@@ -86,7 +86,7 @@ msgid "“Senior Worker” it is. It will do, for now."
 msgstr ""
 
 #: src/components/_political/alliance/AllianceMemberRow.tsx:71
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:246
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:225
 msgid "(average member development)"
 msgstr "(התפתחות ממוצעת של חברים)"
 
@@ -94,7 +94,7 @@ msgstr "(התפתחות ממוצעת של חברים)"
 msgid "(member average development)"
 msgstr "(ממוצע ההתפתחות של החבר)"
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:236
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:215
 msgid "(own development)"
 msgstr "(התפתחות עצמית)"
 
@@ -151,7 +151,7 @@ msgid "{0} ago"
 msgstr ""
 
 #. placeholder {0}: formatKm(homeDistanceKm)
-#: src/components/_layout/LayoutMapUserMenu.tsx:274
+#: src/components/_layout/LayoutMapUserMenu.tsx:282
 msgid "{0} away"
 msgstr ""
 
@@ -161,9 +161,24 @@ msgid "{0} bought your item offer"
 msgstr "{0} קנה את הצעת הפריט שלך"
 
 #. placeholder {0}: Math.floor(cooldownHours / 24)
-#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:145
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:127
 msgid "{0} days cooldown"
 msgstr "התקררות של {0} ימים"
+
+#. placeholder {0}: percentChange(core)
+#: src/components/_political/govType/govType.frontConfig.tsx:113
+msgid "{0} development income"
+msgstr ""
+
+#. placeholder {0}: percentChange(conquered)
+#: src/components/_political/govType/govType.frontConfig.tsx:131
+msgid "{0} development income from conquered regions"
+msgstr ""
+
+#. placeholder {0}: percentChange(core)
+#: src/components/_political/govType/govType.frontConfig.tsx:118
+msgid "{0} development income from core regions"
+msgstr ""
 
 #. placeholder {0}: user.data.leveling.freeReset
 #: src/pages/user/[userId]/skills.tsx:263
@@ -188,6 +203,11 @@ msgstr ""
 msgid "{0} outbid you at ${1}/K"
 msgstr "{0} הציע לך יותר ב-${1}/K"
 
+#. placeholder {0}: percentChange(effects.incomeTaxMultiplier)
+#: src/components/_political/govType/govType.frontConfig.tsx:153
+msgid "{0} payroll and manager tax income"
+msgstr ""
+
 #. placeholder {0}: data.userId && ( <UserUsername userId={data.userId} withAvatar withFlag /> )
 #: src/components/_user/notification/notification.frontConfig.tsx:741
 msgid "{0} proposed a new law <0/>"
@@ -197,6 +217,11 @@ msgstr "{0} הציע חוק חדש <0/>"
 #: src/components/_military/battle/RoundScore.tsx:55
 msgid "{0} rounds are needed to win the battle."
 msgstr "דרושים {0} סיבובים כדי לנצח בקרב."
+
+#. placeholder {0}: percentChange(effects.strategicResourceIncomeMultiplier)
+#: src/components/_political/govType/govType.frontConfig.tsx:146
+msgid "{0} strategic resource income"
+msgstr ""
 
 #. placeholder {0}: itemName(rarity)
 #: src/components/_economy/employeeEvent/EmployeeEventEffects.tsx:244
@@ -215,7 +240,7 @@ msgid "{0}/{1} active"
 msgstr "{0}/{1} פעיל"
 
 #. placeholder {0}: userMapLootConfig.lootChancePercent
-#: src/components/_layout/LayoutMapUserMenu.tsx:376
+#: src/components/_layout/LayoutMapUserMenu.tsx:384
 msgid "{0}% base chance, plus your Luck skill"
 msgstr ""
 
@@ -809,7 +834,7 @@ msgstr ""
 msgid "{grainPerBread} <0>{0}</0> make one <1>{1}</1>, {ironPerSteel} <2>{2}</2> one <3>{3}</3> and {limestonePerConcrete} <4>{4}</4> one <5>{5}</5>."
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:268
+#: src/components/_layout/LayoutMapUserMenu.tsx:276
 msgid "{homeRegionsAway, plural, one {# region away} other {# regions away}}"
 msgstr ""
 
@@ -909,7 +934,7 @@ msgstr ""
 msgid "{partnerName} learns fast."
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:225
+#: src/components/_layout/LayoutMapUserMenu.tsx:234
 #: src/components/_political/map/MapMenu.tsx:191
 msgid "{quantity} wooden cases collected!"
 msgstr ""
@@ -922,7 +947,7 @@ msgstr ""
 msgid "{raw} of the company's good, {product} if it is a product"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:297
+#: src/components/_layout/LayoutMapUserMenu.tsx:305
 #: src/components/_political/map/MapMenu.tsx:652
 msgid "{regionsAway, plural, one {# region away} other {# regions away}}"
 msgstr ""
@@ -984,7 +1009,7 @@ msgstr ""
 msgid "{value} days of experience"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:108
+#: src/components/_layout/LayoutMapUserMenu.tsx:118
 msgid "{value} km"
 msgstr ""
 
@@ -1104,7 +1129,7 @@ msgstr "*עלול להישרף"
 #: src/components/_economy/employee/EstimatedProfit.tsx:148
 #: src/components/_economy/employee/WorkforceSummary.tsx:488
 #: src/components/_economy/employee/WorkforceSummary.tsx:523
-#: src/components/_political/government/Government.tsx:222
+#: src/components/_political/government/Government.tsx:221
 msgid "/day"
 msgstr "/יום"
 
@@ -1127,6 +1152,16 @@ msgstr ""
 
 #: src/components/_economy/manager/ManagerOfferFormModal.tsx:164
 msgid "/h per point"
+msgstr ""
+
+#. placeholder {0}: effects.allianceBonusDelta
+#: src/components/_political/govType/govType.frontConfig.tsx:171
+msgid "+{0}% alliance bonus when fighting for an ally"
+msgstr ""
+
+#. placeholder {0}: effects.bunkerBonusDelta
+#: src/components/_political/govType/govType.frontConfig.tsx:178
+msgid "+{0}% bunker bonus"
 msgstr ""
 
 #: src/components/_military/battle/MyBattlesRecapCard.tsx:203
@@ -1221,12 +1256,12 @@ msgid "<0/> bought your banner{0}!"
 msgstr "<0/> קנה את הבאנר שלך{0}!"
 
 #. placeholder {0}: law.data.amount ?? 0
-#: src/components/_political/law/law.frontConfig.tsx:443
+#: src/components/_political/law/law.frontConfig.tsx:447
 msgid "<0/> buys <1/> for <2>{0}</2>"
 msgstr "<0/> קונה <1/> עבור <2>{0}</2>"
 
 #. placeholder {0}: law.data.amount ?? 0
-#: src/components/_political/law/law.frontConfig.tsx:454
+#: src/components/_political/law/law.frontConfig.tsx:458
 msgid "<0/> buys your region <1/> for <2>{0}</2>"
 msgstr "<0/> קונה את האזור שלך <1/> עבור <2>{0}</2>"
 
@@ -1364,7 +1399,7 @@ msgstr "<0/> מימנה התנגדות ב<1/>"
 msgid "<0/> has formed an alliance with <1/>"
 msgstr "<0/> יצר ברית עם <1/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:392
+#: src/components/_political/law/law.frontConfig.tsx:396
 msgid "<0/> has invited your country to join."
 msgstr "<0/> הזמינה את המדינה שלך להצטרף."
 
@@ -1492,7 +1527,7 @@ msgstr "<0/> בתשלום"
 msgid "<0/> Priority ends in <1/>"
 msgstr "<0/> העדיפות מסתיימת ב-<1/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:296
+#: src/components/_political/law/law.frontConfig.tsx:300
 msgid "<0/> proposed a mutual defensive pact to your country."
 msgstr "<0/> הציע ברית הגנה הדדית למדינה שלך."
 
@@ -1551,11 +1586,11 @@ msgstr "<0/> השתלט על <1/>"
 msgid "<0/> vs <1/> war"
 msgstr "<0/> נגד <1/> מלחמה"
 
-#: src/components/_political/law/law.frontConfig.tsx:94
+#: src/components/_political/law/law.frontConfig.tsx:98
 msgid "<0/> wants peace"
 msgstr "<0/> רוצה שלום"
 
-#: src/components/_political/law/law.frontConfig.tsx:104
+#: src/components/_political/law/law.frontConfig.tsx:108
 msgid "<0/> wants to make peace with your country"
 msgstr "<0/> רוצה לעשות שלום עם המדינה שלך"
 
@@ -1604,6 +1639,11 @@ msgstr "<0/> זכה בסיבוב <1>#{0}</1> ב<2/>!"
 #. placeholder {0}: ts[data.itemCode]
 #: src/components/_user/notification/notification.frontConfig.tsx:708
 msgid "<0/> won your {0}."
+msgstr ""
+
+#. placeholder {0}: ts.paper
+#: src/components/_military/battle/SetOrderFormModal.tsx:465
+msgid "<0/>: this order costs ×{orderCostMult} <1>{0}</1> and gives ×{orderDamageMult} damage bonus"
 msgstr ""
 
 #: src/pages/war/[warId]/index.tsx:55
@@ -1687,15 +1727,13 @@ msgstr "<0>{0}</0> מברית הגנה עם <1/>"
 msgid "<0>{0}</0> from deposit resources."
 msgstr "<0>{0}</0> ממשאבי מרבץ."
 
-#. placeholder {0}: sideBonus.pacificationDefenseBonusPercent
 #: src/components/_military/battle/BattleDamageBonuses.tsx:273
-msgid "<0>{0}</0> from Fanatic Expansionist ethics (Pacification Center)"
-msgstr "<0>{0}</0> מאתיקה אקספנסיוניסטית קנאית (מרכז פסיפיקציה)"
+#~ msgid "<0>{0}</0> from Fanatic Expansionist ethics (Pacification Center)"
+#~ msgstr "<0>{0}</0> מאתיקה אקספנסיוניסטית קנאית (מרכז פסיפיקציה)"
 
-#. placeholder {0}: sideBonus.revoltBunkerCopyBonusPercent
 #: src/components/_military/battle/BattleDamageBonuses.tsx:263
-msgid "<0>{0}</0> from Fanatic Pacifist ethics (revolt copies enemy bunker)"
-msgstr "<0>{0}</0> מאתיקה פציפיסטית קנאית (מרד מעתיק בונקר אויב)"
+#~ msgid "<0>{0}</0> from Fanatic Pacifist ethics (revolt copies enemy bunker)"
+#~ msgstr "<0>{0}</0> מאתיקה פציפיסטית קנאית (מרד מעתיק בונקר אויב)"
 
 #. placeholder {0}: sideBonus.patrioticBonusPercent
 #: src/components/_military/battle/BattleDamageBonuses.tsx:73
@@ -1748,11 +1786,11 @@ msgstr ""
 msgid "<0>Armor</0> and <1>Dodge</1> have diminishing returns: each point is worth a bit less than the one before."
 msgstr ""
 
-#: src/components/_political/country/CountryHeader.tsx:276
+#: src/components/_political/country/CountryHeader.tsx:292
 msgid "<0>Average development</0> is the average of <1>Core development</1> and <2>Current development</2>."
 msgstr "<0>התפתחות ממוצעת</0> היא הממוצע של <1>התפתחות ליבה</1> ו<2>התפתחות נוכחית</2>."
 
-#: src/components/_political/country/CountryHeader.tsx:240
+#: src/components/_political/country/CountryHeader.tsx:256
 msgid "<0>Core development</0> is calculated depending on the country's <1>Population</1> and average <2>Level</2>. then distributed equally among the country's <3>Core regions</3>."
 msgstr "<0>התפתחות ליבה</0> מחושבת בהתאם ל<1>אוכלוסיית</1> המדינה ורמה <2>ממוצעת</2>, ולאחר מכן מתחלקת שווה בשווה בין <3>אזורי הליבה</3> של המדינה."
 
@@ -1760,7 +1798,7 @@ msgstr "<0>התפתחות ליבה</0> מחושבת בהתאם ל<1>אוכלוס
 msgid "<0>Critical chance</0> caps at 100%: every point above turns into <1>{criticalOverflow}</1> critical damages."
 msgstr ""
 
-#: src/components/_political/country/CountryHeader.tsx:304
+#: src/components/_political/country/CountryHeader.tsx:320
 msgid "<0>Current development</0> is the total development of the <1>regions</1> the country currently controls, including conquered territory."
 msgstr "<0>התפתחות נוכחית</0> היא סך ההתפתחות של <1>האזורים</1> שהמדינה שולטת בהם כעת, כולל שטח כבוש."
 
@@ -2532,7 +2570,7 @@ msgstr "להימנע"
 msgid "Abusing or spamming the report system may lead to sanctions."
 msgstr "שימוש לרעה או ספאם במערכת הדיווח עלול להוביל לסנקציות."
 
-#: src/pages/country/[countryId]/index.tsx:131
+#: src/pages/country/[countryId]/index.tsx:133
 msgid "Abusing this power to advantage another country will lead to a <0>ban.</0>"
 msgstr "ניצול לרעה של כוח זה לטובת מדינה אחרת יוביל ל-<0>באן.</0>"
 
@@ -2544,11 +2582,11 @@ msgstr "ניצול לרעה של כוח זה לטובת מדינה אחרת יו
 msgid "Accept"
 msgstr "לקבל"
 
-#: src/components/_political/law/law.frontConfig.tsx:287
+#: src/components/_political/law/law.frontConfig.tsx:291
 msgid "Accept a defensive pact with <0/>"
 msgstr "קבל ברית הגנה עם <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:281
+#: src/components/_political/law/law.frontConfig.tsx:285
 #: src/components/_political/law/lawNames.tsx:41
 msgid "Accept defensive pact"
 msgstr "קבל ברית הגנה"
@@ -2557,16 +2595,16 @@ msgstr "קבל ברית הגנה"
 msgid "Accept its command"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:439
+#: src/components/_political/law/law.frontConfig.tsx:443
 msgid "Accept or reject a region buy offer"
 msgstr "קבל או דחה הצעת רכישה באזור"
 
-#: src/components/_political/law/law.frontConfig.tsx:89
+#: src/components/_political/law/law.frontConfig.tsx:93
 #: src/components/_political/law/lawNames.tsx:13
 msgid "Accept peace"
 msgstr "קבל שלום"
 
-#: src/components/_political/law/law.frontConfig.tsx:90
+#: src/components/_political/law/law.frontConfig.tsx:94
 msgid "Accept to make peace with the other country"
 msgstr "קבל לעשות שלום עם המדינה האחרת"
 
@@ -2578,16 +2616,16 @@ msgstr "מקובל"
 msgid "Access granted"
 msgstr "הגישה אושרה"
 
-#: src/components/_military/battle/BattleHeader.tsx:124
+#: src/components/_military/battle/BattleHeader.tsx:178
 msgid "Access war"
 msgstr "גישה למלחמה"
 
 #: src/components/_military/mu/MuHeader.tsx:161
-#: src/components/_political/country/CountryHeader.tsx:98
+#: src/components/_political/country/CountryHeader.tsx:102
 #: src/components/_political/party/PartyHeader.tsx:117
 #: src/components/_user/user/UserHeader.tsx:186
 #: src/pages/country/[countryId]/account.tsx:43
-#: src/pages/country/[countryId]/index.tsx:256
+#: src/pages/country/[countryId]/index.tsx:257
 #: src/pages/user/[userId]/account.tsx:32
 #: src/pages/user/[userId]/index.tsx:166
 msgid "Account"
@@ -2615,7 +2653,7 @@ msgstr "פעיל"
 msgid "Active battle"
 msgstr "קרב פעיל"
 
-#: src/pages/country/[countryId]/index.tsx:206
+#: src/pages/country/[countryId]/index.tsx:208
 msgid "Active battles"
 msgstr "קרבות פעילים"
 
@@ -2624,7 +2662,7 @@ msgid "Active Citizens"
 msgstr "אזרחים פעילים"
 
 #. placeholder {0}: staticGameConfig.user.activeCitizenMinLevel
-#: src/components/_political/country/CountryHeader.tsx:220
+#: src/components/_political/country/CountryHeader.tsx:236
 msgid "Active citizens (citizenship of this country, active and level {0}+)"
 msgstr "אזרחים פעילים (אזרחות במדינה זו, פעילים ומרמה {0}+)"
 
@@ -2636,7 +2674,7 @@ msgstr "בנייה פעילה"
 msgid "Active War"
 msgstr "מלחמה פעילה"
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:269
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:248
 msgid "Active wars"
 msgstr "מלחמות פעילות"
 
@@ -2657,9 +2695,9 @@ msgid "Add User"
 msgstr "הוסף משתמש"
 
 #: src/components/_political/law/Law.tsx:110
-#: src/components/_political/law/LawFormModal.tsx:329
+#: src/components/_political/law/LawFormModal.tsx:383
 #: src/components/_political/partyMotion/PartyMotion.tsx:116
-#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:170
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:146
 msgid "Additional cost"
 msgstr "עלות נוספת"
 
@@ -2735,8 +2773,8 @@ msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:341
 #: src/components/_political/party/party.frontConfig.tsx:346
-msgid "Agrarian"
-msgstr "חקלאי"
+#~ msgid "Agrarian"
+#~ msgstr "חקלאי"
 
 #: src/components/_economy/inventory/ItemGridFilters.tsx:183
 #: src/components/_economy/inventory/ItemGridFilters.tsx:221
@@ -2775,7 +2813,7 @@ msgstr "כל השפות"
 msgid "All Mobile"
 msgstr "הכל נייד"
 
-#: src/pages/party/[partyId]/index.tsx:113
+#: src/pages/party/[partyId]/index.tsx:90
 msgid "All Parties"
 msgstr "כל המפלגות"
 
@@ -2799,10 +2837,9 @@ msgstr ""
 msgid "All transactions must stay fair and balanced."
 msgstr "כל העסקאות חייבות להישאר הוגנות ומאוזנות."
 
-#. placeholder {0}: formatMultiplierDelta( ethicsBonuses.isolationism['-2'].treatyMaintenanceMultiplier, )
 #: src/components/_political/party/party.frontConfig.tsx:160
-msgid "All treaty maintenance costs are increased by <0>{0}</0>."
-msgstr "כל עלויות אחזקת ההסכמים גדלות ב-<0>{0}</0>."
+#~ msgid "All treaty maintenance costs are increased by <0>{0}</0>."
+#~ msgstr "כל עלויות אחזקת ההסכמים גדלות ב-<0>{0}</0>."
 
 #: src/components/_economy/transaction/TransactionList.tsx:70
 msgid "All types"
@@ -2810,9 +2847,9 @@ msgstr "כל הסוגים"
 
 #: src/components/_layout/map.frontConfig.tsx:37
 #: src/components/_political/alliance/AllianceHeader.tsx:68
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:203
-#: src/components/_political/country/CountryHeader.tsx:208
-#: src/components/_political/country/CountryTooltip.tsx:103
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:182
+#: src/components/_political/country/CountryHeader.tsx:224
+#: src/components/_political/country/CountryTooltip.tsx:115
 #: src/components/_political/map/MapMenu.tsx:449
 msgid "Alliance"
 msgstr "ברית"
@@ -2820,6 +2857,15 @@ msgstr "ברית"
 #: src/components/_political/alliance/AllianceBattleBonus.tsx:70
 msgid "Alliance <0/> (<1/>)"
 msgstr "ברית <0/> (<1/>)"
+
+#. placeholder {0}: effects.allianceUpkeepMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:301
+msgid "Alliance and pact upkeep x{0}"
+msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:62
+msgid "Alliance backbone"
+msgstr ""
 
 #: src/components/_political/alliance/AllianceBattleBonus.tsx:94
 msgid "Alliance battle damage bonus"
@@ -2842,10 +2888,15 @@ msgstr "חוק ברית הוצע"
 msgid "Alliance laws"
 msgstr "חוקי ברית"
 
-#: src/components/_political/law/LawFormModal.tsx:212
-#: src/components/_political/law/LawFormModal.tsx:213
+#: src/components/_political/law/LawFormModal.tsx:232
+#: src/components/_political/law/LawFormModal.tsx:233
 msgid "Alliance name"
 msgstr "שם הברית"
+
+#. placeholder {0}: effects.allianceUpkeepMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:309
+msgid "Alliance upkeep x{0}"
+msgstr ""
 
 #: src/components/_military/battle/ActiveBattlesList.tsx:101
 #: src/components/_military/battle/ActiveBattlesList.tsx:155
@@ -2885,8 +2936,8 @@ msgstr "תחמושת"
 msgid "Ammo:"
 msgstr "תחמושת:"
 
-#: src/components/_political/law/LawFormModal.tsx:286
-#: src/components/_political/law/LawFormModal.tsx:287
+#: src/components/_political/law/LawFormModal.tsx:306
+#: src/components/_political/law/LawFormModal.tsx:307
 msgid "Amount"
 msgstr "סכום"
 
@@ -2911,7 +2962,7 @@ msgstr "ברית נפרצה"
 msgid "An alliance has been formed"
 msgstr "נוצרה ברית"
 
-#: src/components/_political/law/law.frontConfig.tsx:379
+#: src/components/_political/law/law.frontConfig.tsx:383
 msgid "An alliance has invited your country to join"
 msgstr "ברית הזמינה את המדינה שלך להצטרף"
 
@@ -2935,6 +2986,10 @@ msgstr ""
 msgid "An item has no market value yet, so it has no max price and can't be auctioned. Remove it from the selection."
 msgstr ""
 
+#: src/components/_political/govType/govType.frontConfig.tsx:254
+msgid "An occupied capital revolts on its own at full resistance"
+msgstr ""
+
 #: src/components/_user/premium/PremiumFeatureList.tsx:113
 msgid "Animated <0>GIF</0> as avatar"
 msgstr "מונפשת <0>GIF</0> כדמות"
@@ -2947,7 +3002,7 @@ msgstr ""
 msgid "Announcements"
 msgstr "הודעות"
 
-#: src/components/_political/law/law.frontConfig.tsx:282
+#: src/components/_political/law/law.frontConfig.tsx:286
 msgid "Another country proposed a defensive pact to yours"
 msgstr "מדינה אחרת הציעה ברית הגנה למדינה שלך"
 
@@ -3108,7 +3163,7 @@ msgstr "האם אתה בטוח שברצונך להעביר בעלות לחבר �
 msgid "Armor"
 msgstr "שריון"
 
-#: src/components/_political/law/LawFormModal.tsx:253
+#: src/components/_political/law/LawFormModal.tsx:273
 msgid "Article ID"
 msgstr "מזהה מאמר"
 
@@ -3222,7 +3277,7 @@ msgstr "אפוד טקטי AT"
 msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
 msgstr "בסוף הטיימר <0>{actualTickPoints}</0> יוקצה לצד עם הכי הרבה נזקים."
 
-#: src/components/_political/country/CountryTooltip.tsx:135
+#: src/components/_political/country/CountryTooltip.tsx:147
 msgid "At war with"
 msgstr "במלחמה עם"
 
@@ -3230,11 +3285,11 @@ msgstr "במלחמה עם"
 msgid "At your Management level"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:420
+#: src/components/_layout/LayoutMapUserMenu.tsx:428
 msgid "Atlas"
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:535
+#: src/components/_military/hit/HitButton.tsx:491
 #: src/components/_political/map/MapMenu.tsx:457
 #: src/components/_user/user/skills.frontConfig.tsx:59
 #: src/components/_user/user/skills.frontConfig.tsx:60
@@ -3244,6 +3299,11 @@ msgstr "לתקוף"
 #: src/components/_user/user/MilitaryRank.tsx:123
 msgid "Attack bonus:"
 msgstr "בונוס התקפה:"
+
+#. placeholder {0}: effects.nonCoreAttackOrderCostMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:221
+msgid "Attack orders outside its core regions cost x{0}"
+msgstr ""
 
 #: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:193
 #: src/components/_military/war/WarComparison.tsx:41
@@ -3287,7 +3347,7 @@ msgid "Auction Won"
 msgstr "זכה במכירה פומבית"
 
 #: src/components/_economy/market/MarketHeader.tsx:20
-#: src/components/_military/battle/BattleHeader.tsx:322
+#: src/components/_military/battle/BattleHeader.tsx:358
 #: src/components/_military/battle/BattlesHeader.tsx:39
 #: src/components/_military/battle/BattleSideContractsModal.tsx:37
 #: src/pages/market/index.tsx:80
@@ -3319,6 +3379,10 @@ msgstr "יוצר אוטומטית <0>נקודות הפקה</0> לאורך זמן
 msgid "Autobuy when empty"
 msgstr "רכישה אוטומטית כאשר ריק"
 
+#: src/components/_political/govType/govType.frontConfig.tsx:73
+msgid "Autocracy"
+msgstr ""
+
 #: src/components/_economy/company/CompanyTags.tsx:123
 msgid "Automated engine"
 msgstr "מנוע אוטומטי"
@@ -3328,7 +3392,7 @@ msgstr "מנוע אוטומטי"
 msgid "Automated Engine"
 msgstr "מנוע אוטומטי"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:264
+#: src/components/_layout/LayoutMapUserMenu.tsx:272
 msgid "Available in"
 msgstr ""
 
@@ -3341,8 +3405,8 @@ msgid "Avatar removed"
 msgstr "האווטאר הוסר"
 
 #: src/components/_political/alliance/AllianceHeader.tsx:83
-#: src/components/_political/country/CountryHeader.tsx:267
-#: src/components/_political/country/CountryHeader.tsx:272
+#: src/components/_political/country/CountryHeader.tsx:283
+#: src/components/_political/country/CountryHeader.tsx:288
 #: src/components/_political/law/LawCostExplanation.tsx:44
 msgid "Average development"
 msgstr "התפתחות ממוצעת"
@@ -3371,7 +3435,7 @@ msgstr "בייבי בומר"
 msgid "Back the reinvention"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:326
+#: src/components/_layout/LayoutMapUserMenu.tsx:334
 msgid "Back to home region"
 msgstr ""
 
@@ -3387,18 +3451,18 @@ msgstr "תגים שהתקבלו"
 msgid "Badge Won"
 msgstr "זכית בתג!"
 
-#: src/pages/country/[countryId]/index.tsx:263
+#: src/pages/country/[countryId]/index.tsx:264
 #: src/pages/user/[userId]/index.tsx:143
 msgid "Badges"
 msgstr "תגים"
 
 #: src/components/_political/party/party.frontConfig.tsx:393
-msgid "Balanced"
-msgstr "מאוזן"
+#~ msgid "Balanced"
+#~ msgstr "מאוזן"
 
 #: src/components/_political/party/party.frontConfig.tsx:394
-msgid "Balanced - No modifiers"
-msgstr "מאוזן - ללא שינויים"
+#~ msgid "Balanced - No modifiers"
+#~ msgstr "מאוזן - ללא שינויים"
 
 #: src/components/_other/shop/skin.frontConfig.tsx:359
 msgid "Ball"
@@ -3523,24 +3587,21 @@ msgstr "פקודות קרב"
 msgid "Battle Orders"
 msgstr "פקודות קרב"
 
-#. placeholder {0}: formatMultiplierDelta( ethicsBonuses.isolationism['-2'].enemyBattleOrderMultiplier, )
 #: src/components/_political/party/party.frontConfig.tsx:151
-msgid "Battle orders against your sworn enemy cost <0>{0}</0> less."
-msgstr "פקודות קרב נגד האויב המושבע שלך עולות <0>{0}</0> פחות."
+#~ msgid "Battle orders against your sworn enemy cost <0>{0}</0> less."
+#~ msgstr "פקודות קרב נגד האויב המושבע שלך עולות <0>{0}</0> פחות."
 
-#. placeholder {0}: formatMultiplierDelta( ethicsBonuses.isolationism[2].pactBattleOrderMultiplier, )
 #: src/components/_political/party/party.frontConfig.tsx:223
-msgid "Battle orders supporting a defensive pact partner cost <0>{0}</0> less."
-msgstr "פקודות קרב התומכות בשותף ברית הגנה עולות <0>{0}</0> פחות."
+#~ msgid "Battle orders supporting a defensive pact partner cost <0>{0}</0> less."
+#~ msgstr "פקודות קרב התומכות בשותף ברית הגנה עולות <0>{0}</0> פחות."
 
 #: src/components/_political/party/party.frontConfig.tsx:59
-msgid "Battle orders to defend your core regions and revolts are free."
-msgstr "פקודות קרב להגנה על אזורי הליבה שלך ומרידות הן חינם."
+#~ msgid "Battle orders to defend your core regions and revolts are free."
+#~ msgstr "פקודות קרב להגנה על אזורי הליבה שלך ומרידות הן חינם."
 
-#. placeholder {0}: formatMultiplierDelta( ethicsBonuses.militarism['-1'].defendCoreRevoltOrderMultiplier, )
 #: src/components/_political/party/party.frontConfig.tsx:74
-msgid "Battle orders to defend your core regions and revolts cost <0>{0}</0> less."
-msgstr "פקודות קרב להגנה על אזורי הליבה שלך ומרידות עולות <0>{0}</0> פחות."
+#~ msgid "Battle orders to defend your core regions and revolts cost <0>{0}</0> less."
+#~ msgstr "פקודות קרב להגנה על אזורי הליבה שלך ומרידות עולות <0>{0}</0> פחות."
 
 #: src/components/_user/mission/mission.frontConfig.tsx:327
 msgid "Battlefield Loot"
@@ -3649,6 +3710,10 @@ msgstr ""
 msgid "Bids are shown before tax: when you bid, your country <0/> adds its {0}% market tax. A bid at the max price wins at once."
 msgstr ""
 
+#: src/components/_political/govType/govType.frontConfig.tsx:38
+msgid "Big peaceful population"
+msgstr ""
+
 #: src/components/_political/region/RegionHeader.tsx:147
 msgid "Biome"
 msgstr "ביומה"
@@ -3678,7 +3743,7 @@ msgid "Bone Club"
 msgstr "אלת עצם"
 
 #: src/components/_military/battle/BattleDamageBonuses.tsx:62
-#: src/components/_political/law/law.frontConfig.tsx:235
+#: src/components/_political/law/law.frontConfig.tsx:239
 msgid "Bonus damages"
 msgstr "נזקי בונוס"
 
@@ -3727,7 +3792,7 @@ msgstr ""
 msgid "Bread"
 msgstr "לחם"
 
-#: src/components/_political/law/law.frontConfig.tsx:306
+#: src/components/_political/law/law.frontConfig.tsx:310
 #: src/components/_political/law/lawNames.tsx:42
 msgid "Break defensive pact"
 msgstr "שבור ברית הגנה"
@@ -3737,7 +3802,7 @@ msgstr "שבור ברית הגנה"
 msgid "Break room"
 msgstr "חדר הפסקה"
 
-#: src/components/_political/law/law.frontConfig.tsx:312
+#: src/components/_political/law/law.frontConfig.tsx:316
 msgid "Break the defensive pact with <0/>"
 msgstr "שבור את ברית ההגנה עם <0/>"
 
@@ -3817,7 +3882,7 @@ msgid "Buy <0/>"
 msgstr "קנה <0/>"
 
 #. placeholder {0}: law.data.amount ?? 0
-#: src/components/_political/law/law.frontConfig.tsx:471
+#: src/components/_political/law/law.frontConfig.tsx:475
 msgid "Buy <0/> from <1/> for <2>{0}</2>"
 msgstr "קנה <0/> מ-<1/> עבור <2>{0}</2>"
 
@@ -3891,6 +3956,18 @@ msgstr "קישור למאמר בקמפיין (אופציונלי)"
 msgid "Can happen to anyone."
 msgstr ""
 
+#: src/components/_political/govType/govType.frontConfig.tsx:335
+msgid "Can't have a sworn enemy"
+msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:329
+msgid "Can't join an alliance"
+msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:332
+msgid "Can't sign defensive pacts"
+msgstr ""
+
 #: src/components/_military/order/BattleOrderList.tsx:210
 #: src/components/_political/election/CandidateFormModal.tsx:79
 #: src/components/_social/poll/PollEditorModal.tsx:284
@@ -3955,16 +4032,16 @@ msgid "Candidates"
 msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:314
-msgid "Cannot have a vice president or ministers."
-msgstr "לא יכול להיות סגן נשיא או שרים."
+#~ msgid "Cannot have a vice president or ministers."
+#~ msgstr "לא יכול להיות סגן נשיא או שרים."
 
 #: src/components/_political/party/party.frontConfig.tsx:382
-msgid "Cannot have any treaty (sworn enemy, defensive pact or alliance)."
-msgstr "לא ניתן להחזיק בהסכם כלשהו (אויב מושבע, ברית הגנה או ברית)."
+#~ msgid "Cannot have any treaty (sworn enemy, defensive pact or alliance)."
+#~ msgstr "לא ניתן להחזיק בהסכם כלשהו (אויב מושבע, ברית הגנה או ברית)."
 
 #: src/components/_political/party/party.frontConfig.tsx:66
-msgid "Cannot have sworn enemies."
-msgstr "לא יכול להיות אויבים מושבעים."
+#~ msgid "Cannot have sworn enemies."
+#~ msgstr "לא יכול להיות אויבים מושבעים."
 
 #: src/components/_political/region/RegionTooltip.tsx:79
 msgid "Capital"
@@ -4063,11 +4140,11 @@ msgid "Chance to hit the target.<0/>Misses cannot crit, and deal half damage."
 msgstr "סיכוי לפגוע במטרה.<0/>החמצות אינן יכולות לתקוף, ולגרום לחצי נזק."
 
 #. placeholder {0}: law.data.taxType
-#: src/components/_political/law/law.frontConfig.tsx:65
+#: src/components/_political/law/law.frontConfig.tsx:69
 msgid "Change {0} tax to <0/>"
 msgstr "שנה מס {0} ל-<0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:61
+#: src/components/_political/law/law.frontConfig.tsx:65
 msgid "Change a country tax"
 msgstr "שנה מס במדינה"
 
@@ -4102,7 +4179,7 @@ msgstr "שנה פריט שיוצר"
 msgid "Change production"
 msgstr "שנה ייצור"
 
-#: src/components/_political/law/law.frontConfig.tsx:60
+#: src/components/_political/law/law.frontConfig.tsx:64
 #: src/components/_political/law/lawNames.tsx:12
 msgid "Change tax"
 msgstr "שנה מס"
@@ -4116,22 +4193,30 @@ msgstr "שנה את ערכת הצבעים של הברית ל-<0>{0}</0> מיד �
 msgid "Change the color scheme of the alliance."
 msgstr "שנה את ערכת הצבעים של הברית."
 
-#: src/components/_political/law/law.frontConfig.tsx:545
+#: src/components/_political/law/law.frontConfig.tsx:549
 msgid "Change the country color scheme"
 msgstr "שנה את ערכת הצבעים של המדינה"
 
 #. placeholder {0}: law.data.scheme
 #. placeholder {1}: law.data.mapAccent
-#: src/components/_political/law/law.frontConfig.tsx:551
+#: src/components/_political/law/law.frontConfig.tsx:555
 msgid "Change the country color scheme to <0>{0}</0> with a <1>{1}</1> map accent"
 msgstr "שנה את ערכת הצבעים של המדינה ל-<0>{0}</0> עם גוון מפה של <1>{1}</1>"
+
+#: src/components/_political/law/law.frontConfig.tsx:633
+msgid "Change the government type to <0/>. It can't change again for {GOV_TYPE_CHANGE_COOLDOWN_DAYS} days."
+msgstr ""
+
+#: src/components/_political/law/law.frontConfig.tsx:619
+msgid "Change the government type, then wait {GOV_TYPE_CHANGE_COOLDOWN_DAYS} days before the next change"
+msgstr ""
 
 #: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:121
 msgid "Change the name of the alliance."
 msgstr "שנה את שם הברית."
 
 #. placeholder {0}: law.data.taxType
-#: src/components/_political/law/law.frontConfig.tsx:76
+#: src/components/_political/law/law.frontConfig.tsx:80
 msgid "Change the tax of {0} to"
 msgstr "שנה את המס של {0} ל"
 
@@ -4201,16 +4286,16 @@ msgstr "בחירת פריט ספציפי עולה פי 2 פלדה:"
 msgid "Citizen since"
 msgstr "אזרח מאז"
 
-#: src/components/_political/country/CountryHeader.tsx:148
-#: src/components/_political/country/CountryHeader.tsx:216
+#: src/components/_political/country/CountryHeader.tsx:152
+#: src/components/_political/country/CountryHeader.tsx:232
 msgid "Citizens"
 msgstr "אזרחים"
 
-#: src/pages/country/[countryId]/index.tsx:193
+#: src/pages/country/[countryId]/index.tsx:195
 msgid "Citizens get a bonus when fighting for allies, or against the sworn enemy"
 msgstr "אזרחים מקבלים בונוס כאשר הם נלחמים למען בעלי ברית, או נגד האויב המושבע"
 
-#: src/components/_political/country/CountryHeader.tsx:135
+#: src/components/_political/country/CountryHeader.tsx:139
 msgid "Citizenship"
 msgstr "אזרחות"
 
@@ -4313,7 +4398,7 @@ msgstr "לחץ כדי לחשוף מה יש בפנים. אולי תקבל משה�
 msgid "Click to select law"
 msgstr "לחץ לבחירת חוק"
 
-#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:50
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:49
 msgid "Click to select motion"
 msgstr "לחץ כדי לבחור הצעה"
 
@@ -4579,9 +4664,17 @@ msgstr "התחבר עם קוד דוא״ל"
 msgid "Connect with Google"
 msgstr "התחבר לגוגל"
 
+#: src/components/_political/govType/govType.frontConfig.tsx:44
+msgid "Conquer and hold"
+msgstr ""
+
 #: src/pages/country/[countryId]/regions.tsx:45
 msgid "Conquered regions"
 msgstr "אזורים שנכבשו"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:125
+msgid "Conquered regions give no development income"
+msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:91
 msgid "Conqueror"
@@ -4638,12 +4731,12 @@ msgstr "החוזה פג"
 msgid "Contract rolled back"
 msgstr "החוזה הוחזר"
 
-#: src/components/_military/battle/BattleHeader.tsx:329
+#: src/components/_military/battle/BattleHeader.tsx:365
 #: src/components/_military/battle/BattlesHeader.tsx:45
 #: src/components/_military/battle/BattleSideContractsModal.tsx:47
 #: src/components/_military/battle/LootSummaryCard.tsx:113
 #: src/components/_military/mu/MuHeader.tsx:181
-#: src/components/_political/country/CountryHeader.tsx:156
+#: src/components/_political/country/CountryHeader.tsx:160
 msgid "Contracts"
 msgstr "חוזים"
 
@@ -4706,13 +4799,13 @@ msgid "Copy this token now. You won't be able to see it again! Use it in the <0>
 msgstr "העתק את האסימון הזה עכשיו. אתה לא תוכל לראות את זה שוב! השתמש בו בכותרת <0>X-API-Key</0>."
 
 #: src/components/_political/alliance/AllianceHeader.tsx:78
-#: src/components/_political/country/CountryHeader.tsx:231
-#: src/components/_political/country/CountryHeader.tsx:236
-#: src/components/_political/government/Government.tsx:206
+#: src/components/_political/country/CountryHeader.tsx:247
+#: src/components/_political/country/CountryHeader.tsx:252
+#: src/components/_political/government/Government.tsx:205
 msgid "Core development"
 msgstr "התפתחות ליבה"
 
-#: src/pages/country/[countryId]/index.tsx:373
+#: src/pages/country/[countryId]/index.tsx:374
 msgid "Core development of <0/>"
 msgstr ""
 
@@ -4737,7 +4830,7 @@ msgstr ""
 msgid "Cost per production point"
 msgstr ""
 
-#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:132
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:123
 msgid "Council member to remove"
 msgstr "חבר מועצה להסיר"
 
@@ -4759,7 +4852,7 @@ msgstr "מדינות"
 #: src/components/_military/battle/BattleCountrySide.tsx:73
 #: src/components/_military/tournament/TournamentHeader.tsx:55
 #: src/components/_military/tournament/TournamentItem.tsx:54
-#: src/components/_political/country/CountryHeader.tsx:77
+#: src/components/_political/country/CountryHeader.tsx:81
 #: src/components/_political/map/MapMenu.tsx:430
 #: src/components/_political/party/PartyHeader.tsx:84
 msgid "Country"
@@ -4856,7 +4949,7 @@ msgstr "צור חברה"
 
 #. placeholder {0}: law.data.name
 #. placeholder {1}: law.data.scheme
-#: src/components/_political/law/law.frontConfig.tsx:342
+#: src/components/_political/law/law.frontConfig.tsx:346
 msgid "Create a new alliance named <0>{0}</0> with <1>{1}</1> color scheme."
 msgstr "צור ברית חדשה בשם <0>{0}</0> עם ערכת צבעים <1>{1}</1>."
 
@@ -4869,13 +4962,13 @@ msgstr "צור חברה חדשה"
 msgid "Create a party"
 msgstr "צור מפלגה"
 
-#: src/components/_political/law/law.frontConfig.tsx:331
+#: src/components/_political/law/law.frontConfig.tsx:335
 #: src/components/_political/law/lawNames.tsx:25
 msgid "Create alliance"
 msgstr "צור ברית"
 
 #. placeholder {0}: law.data.name
-#: src/components/_political/law/law.frontConfig.tsx:336
+#: src/components/_political/law/law.frontConfig.tsx:340
 msgid "Create alliance {0}"
 msgstr "צור ברית {0}"
 
@@ -4955,8 +5048,8 @@ msgid "Current bid"
 msgstr ""
 
 #: src/components/_political/alliance/AllianceHeader.tsx:88
-#: src/components/_political/country/CountryHeader.tsx:296
-#: src/components/_political/country/CountryHeader.tsx:301
+#: src/components/_political/country/CountryHeader.tsx:312
+#: src/components/_political/country/CountryHeader.tsx:317
 msgid "Current development"
 msgstr "התפתחות נוכחית"
 
@@ -5012,13 +5105,13 @@ msgstr "ד. כל צורה של אפליה, גזענות, שנאת זרים, אנ
 msgid "Daily"
 msgstr "יומי"
 
-#: src/components/_political/country/CountryHeader.tsx:187
+#: src/components/_political/country/CountryHeader.tsx:191
 #: src/components/_political/region/RegionHeader.tsx:80
 msgid "Daily income"
 msgstr ""
 
 #: src/components/_political/alliance/AllianceMemberRow.tsx:59
-#: src/components/_political/law/LawTypeSelect.tsx:189
+#: src/components/_political/law/LawTypeSelect.tsx:187
 msgid "Daily maintenance"
 msgstr "תחזוקה יומית"
 
@@ -5050,13 +5143,17 @@ msgstr ""
 msgid "Daily wage"
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:199
+#: src/components/_political/government/Government.tsx:198
 msgid "Daily wage paid from the country treasury."
 msgstr "שכר יומי המשולם מאוצר המדינה."
 
 #: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:156
 msgid "Damage by user"
 msgstr "נזק על ידי משתמש"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:80
+msgid "Damage farmer"
+msgstr ""
 
 #: src/components/_military/damageRanking/DamageRankingSides.tsx:127
 msgid "Damage ranking"
@@ -5084,8 +5181,8 @@ msgstr "לעזאזל אתה בר מזל"
 msgid "Danger zone"
 msgstr "אזור סכנה"
 
-#: src/components/_political/law/LawFormModal.tsx:228
-#: src/components/_political/law/LawFormModal.tsx:306
+#: src/components/_political/law/LawFormModal.tsx:248
+#: src/components/_political/law/LawFormModal.tsx:326
 msgid "Dark"
 msgstr "כהה"
 
@@ -5174,17 +5271,17 @@ msgstr "השפעות שליליות:"
 msgid "Decides on its own in <0/>"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:114
+#: src/components/_political/law/law.frontConfig.tsx:118
 #: src/components/_political/law/lawNames.tsx:14
 msgid "Declare war"
 msgstr "הכריז מלחמה"
 
-#: src/components/_political/law/law.frontConfig.tsx:119
-#: src/components/_political/law/law.frontConfig.tsx:128
+#: src/components/_political/law/law.frontConfig.tsx:123
+#: src/components/_political/law/law.frontConfig.tsx:132
 msgid "Declare war to <0/>"
 msgstr "הכריז מלחמה ל<0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:115
+#: src/components/_political/law/law.frontConfig.tsx:119
 msgid "Declare war to another country"
 msgstr "להכריז מלחמה על מדינה אחרת"
 
@@ -5201,6 +5298,10 @@ msgstr "להקטין"
 msgid "Decrease unrest"
 msgstr "להפחית אי שקט"
 
+#: src/components/_political/law/Law.tsx:68
+#~ msgid "Decree"
+#~ msgstr ""
+
 #: src/utils/translations.tsx:252
 msgid "Deepcut Pickaxe"
 msgstr ""
@@ -5209,9 +5310,13 @@ msgstr ""
 msgid "Deeply disappointed, but still here."
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:538
+#: src/components/_military/hit/HitButton.tsx:494
 msgid "Defend"
 msgstr "להגן"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:56
+msgid "Defend and liberate"
+msgstr ""
 
 #: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:192
 #: src/components/_military/war/WarComparison.tsx:49
@@ -5222,47 +5327,49 @@ msgstr "מגן"
 msgid "Defenders"
 msgstr "מגינים"
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:344
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:318
 msgid "Defensive pact"
 msgstr "ברית הגנה"
+
+#. placeholder {0}: effects.pactBonusPerDayPercent
+#: src/components/_political/govType/govType.frontConfig.tsx:293
+msgid "Defensive pact bonus ramps +{0}%/day"
+msgstr ""
 
 #: src/components/_political/event/EventList.tsx:137
 msgid "Defensive pact broken"
 msgstr "ברית ההגנה נשברה"
 
-#. placeholder {0}: formatMultiplierDelta( ethicsBonuses.isolationism[1].pactMaintenanceMultiplier, )
-#. placeholder {0}: formatMultiplierDelta( ethicsBonuses.isolationism[2].pactMaintenanceMultiplier, )
 #: src/components/_political/party/party.frontConfig.tsx:198
 #: src/components/_political/party/party.frontConfig.tsx:214
-msgid "Defensive pact maintenance costs are reduced by <0>{0}</0>."
-msgstr "עלויות אחזקת ברית ההגנה מופחתות ב-<0>{0}</0>."
+#~ msgid "Defensive pact maintenance costs are reduced by <0>{0}</0>."
+#~ msgstr "עלויות אחזקת ברית ההגנה מופחתות ב-<0>{0}</0>."
 
 #: src/components/_political/event/EventList.tsx:133
 msgid "Defensive pact signed"
 msgstr "ברית הגנה נחתמה"
 
-#. placeholder {0}: ts.paper
 #: src/components/_military/battle/SetOrderFormModal.tsx:532
-msgid "Defensive pact: orders supporting your pact partner cost {orderDiscountPercent}% less <0>{0}</0>"
-msgstr "ברית הגנה: פקודות התומכות בשותף שלך עולות {orderDiscountPercent}% פחות <0>{0}</0>"
+#~ msgid "Defensive pact: orders supporting your pact partner cost {orderDiscountPercent}% less <0>{0}</0>"
+#~ msgstr "ברית הגנה: פקודות התומכות בשותף שלך עולות {orderDiscountPercent}% פחות <0>{0}</0>"
 
-#: src/components/_political/country/CountryTooltip.tsx:121
+#: src/components/_political/country/CountryTooltip.tsx:133
 msgid "Defensive pacts"
 msgstr "בריתות הגנה"
 
-#: src/components/_political/law/law.frontConfig.tsx:228
+#: src/components/_political/law/law.frontConfig.tsx:232
 msgid "Define <0/> as an enemy, increasing damages when fighting them"
 msgstr "הגדר את <0/> כאויב, הגדלת הנזקים בעת הלחימה בהם"
 
-#: src/components/_political/law/law.frontConfig.tsx:218
+#: src/components/_political/law/law.frontConfig.tsx:222
 msgid "Define <0/> as enemy"
 msgstr "הגדר את <0/> כאויב"
 
-#: src/components/_political/law/law.frontConfig.tsx:214
+#: src/components/_political/law/law.frontConfig.tsx:218
 msgid "Define a country as an enemy to get bonus against"
 msgstr "הגדירו מדינה כאויב שאפשר לקבל נגדה בונוס"
 
-#: src/components/_political/law/law.frontConfig.tsx:213
+#: src/components/_political/law/law.frontConfig.tsx:217
 #: src/components/_political/law/lawNames.tsx:24
 msgid "Define a sworn enemy"
 msgstr "הגדירו אויב מושבע"
@@ -5345,7 +5452,7 @@ msgstr "תאר את המטרות והערכים של המפלגה שלך"
 #: src/components/_economy/manager/ManagerOfferRow.tsx:204
 #: src/components/_political/party/PartyDescriptionModal.tsx:61
 #: src/components/_political/party/PartyFormModal.tsx:102
-#: src/pages/party/[partyId]/index.tsx:41
+#: src/pages/party/[partyId]/index.tsx:39
 msgid "Description"
 msgstr "תיאור"
 
@@ -5443,19 +5550,18 @@ msgstr "הקטנת <0/> קיבלה נזקים עם <1>שריון</1> בקרבו�
 msgid "Diminish Received Damages"
 msgstr "הפחת נזקים שהתקבלו"
 
-#: src/pages/country/[countryId]/index.tsx:199
+#: src/pages/country/[countryId]/index.tsx:201
 msgid "Diplomacy"
 msgstr "דיפלומטיה"
 
 #: src/components/_political/party/party.frontConfig.tsx:194
 #: src/components/_political/party/party.frontConfig.tsx:243
-msgid "Diplomatic"
-msgstr "דיפלומטי"
+#~ msgid "Diplomatic"
+#~ msgstr "דיפלומטי"
 
-#. placeholder {0}: ts.paper
 #: src/components/_political/law/LawEthicEffects.tsx:152
-msgid "Diplomatic: defensive pact maintenance costs {less}% less <0>{0}</0>."
-msgstr "דיפלומטי: עלויות אחזקת ברית הגנה נמוכות ב-{less}% <0>{0}</0>."
+#~ msgid "Diplomatic: defensive pact maintenance costs {less}% less <0>{0}</0>."
+#~ msgstr "דיפלומטי: עלויות אחזקת ברית הגנה נמוכות ב-{less}% <0>{0}</0>."
 
 #: src/components/_economy/company/CompanyDropdown.tsx:323
 msgid "Disable company"
@@ -5556,7 +5662,7 @@ msgid "Donation Summary"
 msgstr "סיכום תרומות"
 
 #: src/components/_military/mu/MuHeader.tsx:173
-#: src/components/_political/country/CountryHeader.tsx:110
+#: src/components/_political/country/CountryHeader.tsx:114
 #: src/components/_political/party/PartyHeader.tsx:123
 #: src/pages/country/[countryId]/donations.tsx:17
 #: src/pages/mu/[muId]/donations.tsx:17
@@ -5644,7 +5750,7 @@ msgstr "כל נקודת פרסטיז׳ מעניקה את המקבילה של {sk
 msgid "Each region you cross costs <0>{MOVE_STAMINA_PER_REGION}</0>. When the bar runs dry, the trip costs <1>{MOVE_OIL_PER_REGION}</1> per region instead."
 msgstr ""
 
-#: src/pages/country/[countryId]/index.tsx:416
+#: src/pages/country/[countryId]/index.tsx:417
 msgid "Each strategic resource pays the country holding it, every day, the core <0>Development</0> of the country it originally belonged to."
 msgstr ""
 
@@ -5689,6 +5795,10 @@ msgstr "כישורים כלכליים"
 msgid "Economy & Companies"
 msgstr "כלכלה וחברות"
 
+#: src/components/_political/govType/govType.frontConfig.tsx:68
+msgid "Economy first"
+msgstr ""
+
 #: src/components/_military/battle/BattleOrderActionsDropdown.tsx:148
 msgid "Edit country order"
 msgstr "ערוך פקודת מדינה"
@@ -5729,11 +5839,11 @@ msgstr ""
 msgid "Edit the position"
 msgstr ""
 
-#: src/components/_military/battle/SetOrderFormModal.tsx:493
+#: src/components/_military/battle/SetOrderFormModal.tsx:426
 msgid "Editing an existing order"
 msgstr "עריכת פקודה קיימת"
 
-#: src/components/_military/battle/SetOrderFormModal.tsx:491
+#: src/components/_military/battle/SetOrderFormModal.tsx:424
 msgid "Editing another order"
 msgstr "עריכת פקודה אחרת"
 
@@ -5753,11 +5863,11 @@ msgstr "הבחירות הסתיימו"
 msgid "Election vote open"
 msgstr "הצבעת בחירות נפתחה"
 
-#: src/components/_political/country/CountryHeader.tsx:129
+#: src/components/_political/country/CountryHeader.tsx:133
 #: src/pages/country/[countryId]/elections.tsx:28
-#: src/pages/country/[countryId]/index.tsx:284
+#: src/pages/country/[countryId]/index.tsx:285
 #: src/pages/events/index.tsx:398
-#: src/pages/party/[partyId]/index.tsx:101
+#: src/pages/party/[partyId]/index.tsx:78
 msgid "Elections"
 msgstr "בחירות"
 
@@ -5792,6 +5902,10 @@ msgstr "קסדת עילית"
 #: src/utils/translations.tsx:234
 msgid "Elite Pants"
 msgstr "מכנסי עילית"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:43
+msgid "Empire"
+msgstr ""
 
 #: src/components/_economy/employee/employeeCards.tsx:221
 #: src/components/_economy/employee/EmployeeListMini.tsx:44
@@ -5860,9 +5974,9 @@ msgstr "אפשר חברה"
 #: src/components/_political/allianceLaw/AllianceLawTypeSelect.tsx:103
 #: src/components/_political/law/Law.tsx:92
 #: src/components/_political/law/Law.tsx:95
-#: src/components/_political/law/LawTypeSelect.tsx:177
+#: src/components/_political/law/LawTypeSelect.tsx:175
 #: src/components/_political/partyMotion/PartyMotion.tsx:106
-#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:133
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:115
 msgid "Enacting cost"
 msgstr "עלות חקיקה"
 
@@ -5875,7 +5989,7 @@ msgstr "מכנסיים מכושפים"
 msgid "Encourage it"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:307
+#: src/components/_political/law/law.frontConfig.tsx:311
 msgid "End an existing defensive pact with another country"
 msgstr "סיים ברית הגנה קיימת עם מדינה אחרת"
 
@@ -5883,7 +5997,7 @@ msgstr "סיים ברית הגנה קיימת עם מדינה אחרת"
 msgid "End poll"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:321
+#: src/components/_political/law/law.frontConfig.tsx:325
 msgid "End the defensive pact with <0/>."
 msgstr "סיים את ברית ההגנה עם <0/>."
 
@@ -5945,7 +6059,7 @@ msgstr ""
 msgid "Enter an amount"
 msgstr ""
 
-#: src/components/_political/law/LawFormModal.tsx:254
+#: src/components/_political/law/LawFormModal.tsx:274
 msgid "Enter article ID"
 msgstr "הזן מזהה מאמר"
 
@@ -6000,7 +6114,7 @@ msgstr "שגיאה"
 msgid "Est. daily income"
 msgstr ""
 
-#: src/components/_political/country/CountryHeader.tsx:191
+#: src/components/_political/country/CountryHeader.tsx:195
 #: src/components/_political/map/MapMenu.tsx:533
 #: src/components/_political/region/RegionHeader.tsx:84
 msgid "Estimated daily income"
@@ -6030,20 +6144,20 @@ msgstr "ערך משוער"
 
 #: src/components/_political/party/PartyTooltip.tsx:162
 #: src/pages/party/[partyId]/index.tsx:57
-msgid "Ethics"
-msgstr "אתיקה"
+#~ msgid "Ethics"
+#~ msgstr "אתיקה"
 
 #: src/pages/party/[partyId]/index.tsx:51
-msgid "Ethics are bonuses from the party, applied when the president is a member of this party."
-msgstr "האתיקה היא בונוסים מהמפלגה, המיושמים כאשר הנשיא חבר במפלגה זו."
+#~ msgid "Ethics are bonuses from the party, applied when the president is a member of this party."
+#~ msgstr "האתיקה היא בונוסים מהמפלגה, המיושמים כאשר הנשיא חבר במפלגה זו."
 
 #: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:83
-msgid "Ethics motions"
-msgstr "הצעות אתיקה"
+#~ msgid "Ethics motions"
+#~ msgstr "הצעות אתיקה"
 
 #: src/components/_political/government/PoliticalEthics.tsx:533
-msgid "Ethics Points:"
-msgstr "נקודות אתיקה:"
+#~ msgid "Ethics Points:"
+#~ msgstr "נקודות אתיקה:"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:246
 msgid "Eureka"
@@ -6052,7 +6166,7 @@ msgstr ""
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:173
 #: src/components/_layout/LayoutRightIcons.tsx:243
 #: src/components/_layout/MoreButtonNav.tsx:91
-#: src/pages/country/[countryId]/index.tsx:269
+#: src/pages/country/[countryId]/index.tsx:270
 msgid "Events"
 msgstr "אירועים"
 
@@ -6140,8 +6254,8 @@ msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:90
 #: src/components/_political/party/party.frontConfig.tsx:129
-msgid "Expansionist"
-msgstr "אקספנסיוניסט"
+#~ msgid "Expansionist"
+#~ msgstr "אקספנסיוניסט"
 
 #: src/components/_military/battle/MyBattlesRecapCard.tsx:248
 msgid "Expected loot"
@@ -6238,59 +6352,56 @@ msgid "Family Group"
 msgstr "קבוצה משפחתית"
 
 #: src/components/_political/party/party.frontConfig.tsx:335
-msgid "Fanatic Agrarian"
-msgstr "חקלאי קנאי"
+#~ msgid "Fanatic Agrarian"
+#~ msgstr "חקלאי קנאי"
 
 #: src/components/_political/party/party.frontConfig.tsx:210
-msgid "Fanatic Diplomatic"
-msgstr "דיפלומטי קנאי"
+#~ msgid "Fanatic Diplomatic"
+#~ msgstr "דיפלומטי קנאי"
 
-#. placeholder {0}: ts.paper
 #: src/components/_political/law/LawEthicEffects.tsx:139
-msgid "Fanatic Diplomatic: defensive pact maintenance costs {less}% less <0>{0}</0>."
-msgstr "דיפלומטי קנאי: עלויות אחזקת ברית הגנה נמוכות ב-{less}% <0>{0}</0>."
+#~ msgid "Fanatic Diplomatic: defensive pact maintenance costs {less}% less <0>{0}</0>."
+#~ msgstr "דיפלומטי קנאי: עלויות אחזקת ברית הגנה נמוכות ב-{less}% <0>{0}</0>."
 
-#. placeholder {0}: ts.paper
 #: src/components/_political/law/LawEthicEffects.tsx:122
-msgid "Fanatic Diplomatic: sworn enemy maintenance costs {more}% more <0>{0}</0>."
-msgstr "דיפלומטי קנאי: עלויות אחזקת אויב מושבע גבוהות ב-{more}% <0>{0}</0>."
+#~ msgid "Fanatic Diplomatic: sworn enemy maintenance costs {more}% more <0>{0}</0>."
+#~ msgstr "דיפלומטי קנאי: עלויות אחזקת אויב מושבע גבוהות ב-{more}% <0>{0}</0>."
 
 #: src/components/_political/party/party.frontConfig.tsx:104
-msgid "Fanatic Expansionist"
-msgstr "אקספנסיוניסט קנאי"
+#~ msgid "Fanatic Expansionist"
+#~ msgstr "אקספנסיוניסט קנאי"
 
 #: src/components/_political/party/party.frontConfig.tsx:303
-msgid "Fanatic Imperialist"
-msgstr "אימפריאליסט פנאטי"
+#~ msgid "Fanatic Imperialist"
+#~ msgstr "אימפריאליסט פנאטי"
 
 #: src/components/_political/party/party.frontConfig.tsx:357
-msgid "Fanatic Industrialist"
-msgstr "תעשיין קנאי"
+#~ msgid "Fanatic Industrialist"
+#~ msgstr "תעשיין קנאי"
 
 #: src/components/_political/party/party.frontConfig.tsx:136
-msgid "Fanatic Isolationist"
-msgstr "בידוד קנאי"
+#~ msgid "Fanatic Isolationist"
+#~ msgstr "בידוד קנאי"
 
-#. placeholder {0}: ts.paper
 #: src/components/_political/law/LawEthicEffects.tsx:167
-msgid "Fanatic Isolationist: all treaty maintenance costs {more}% more <0>{0}</0>."
-msgstr "בידוד קנאי: כל עלויות אחזקת ההסכמים גבוהות ב-{more}% <0>{0}</0>."
+#~ msgid "Fanatic Isolationist: all treaty maintenance costs {more}% more <0>{0}</0>."
+#~ msgstr "בידוד קנאי: כל עלויות אחזקת ההסכמים גבוהות ב-{more}% <0>{0}</0>."
 
 #: src/components/_political/law/LawEthicEffects.tsx:93
-msgid "Fanatic Isolationist: this sworn enemy starts at {start}% bonus and grows +{perDay}% per day."
-msgstr "בידוד קנאי: אויב מושבע זה מתחיל בבונוס של {start}% וגדל ב-{perDay}% ליום."
+#~ msgid "Fanatic Isolationist: this sworn enemy starts at {start}% bonus and grows +{perDay}% per day."
+#~ msgstr "בידוד קנאי: אויב מושבע זה מתחיל בבונוס של {start}% וגדל ב-{perDay}% ליום."
 
 #: src/components/_political/party/party.frontConfig.tsx:55
-msgid "Fanatic Pacifist"
-msgstr "פציפיסט קנאי"
+#~ msgid "Fanatic Pacifist"
+#~ msgstr "פציפיסט קנאי"
 
 #: src/components/_political/law/LawEthicEffects.tsx:73
-msgid "Fanatic Pacifist countries cannot have sworn enemies — this law cannot be enacted."
-msgstr "מדינות פציפיסט קנאי לא יכולות להחזיק באויבים מושבעים — לא ניתן לחוקק חוק זה."
+#~ msgid "Fanatic Pacifist countries cannot have sworn enemies — this law cannot be enacted."
+#~ msgstr "מדינות פציפיסט קנאי לא יכולות להחזיק באויבים מושבעים — לא ניתן לחוקק חוק זה."
 
 #: src/components/_political/party/party.frontConfig.tsx:250
-msgid "Fanatic Republican"
-msgstr "רפובליקני פנאטי"
+#~ msgid "Fanatic Republican"
+#~ msgstr "רפובליקני פנאטי"
 
 #: src/components/_other/shop/skinPack.frontConfig.tsx:21
 msgid "Farmer"
@@ -6328,6 +6439,10 @@ msgstr ""
 #: src/components/_military/battle/ActiveBattlesList.tsx:169
 msgid "Favorites"
 msgstr "מועדפים"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:61
+msgid "Federation"
+msgstr ""
 
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:238
 #: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:108
@@ -6379,32 +6494,32 @@ msgstr "סנן לפי סוג עסקה"
 msgid "Finally above average!"
 msgstr "סוף סוף מעל הממוצע!"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:129
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:113
 msgid "Finance a resistance battle in <0/>"
 msgstr "לממן קרב התנגדות ב<0/>"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:123
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:107
 msgid "Finance a resistance battle in an occupied region of your country"
 msgstr "תממן קרב התנגדות באזור כבוש בארצך"
 
-#: src/components/_political/law/law.frontConfig.tsx:614
+#: src/components/_political/law/law.frontConfig.tsx:647
 msgid "Finance a resistance to liberate an occupied region"
 msgstr "לממן התנגדות לשחרור אזור כבוש"
 
-#: src/components/_political/law/law.frontConfig.tsx:627
+#: src/components/_political/law/law.frontConfig.tsx:660
 msgid "Finance a revolt to liberate <0/>"
 msgstr "לממן מרד לשחרור <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:613
+#: src/components/_political/law/law.frontConfig.tsx:646
 #: src/components/_political/law/lawNames.tsx:38
 msgid "Finance foreign resistance"
 msgstr "לממן התנגדות זרה"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:122
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:106
 msgid "Finance local resistance"
 msgstr "לממן התנגדות מקומית"
 
-#: src/components/_political/law/law.frontConfig.tsx:618
+#: src/components/_political/law/law.frontConfig.tsx:651
 msgid "Finance resistance in <0/>"
 msgstr "לממן התנגדות ב<0/>"
 
@@ -6428,7 +6543,7 @@ msgstr ""
 #: src/components/_economy/employee/employeeCards.tsx:332
 #: src/components/_economy/employee/EmployeeModal.tsx:390
 #: src/components/_economy/manager/CompanyManagerSlot.tsx:261
-#: src/components/_political/government/Government.tsx:253
+#: src/components/_political/government/Government.tsx:252
 #: src/components/_user/user/UserEffectSelector.tsx:61
 msgid "Fire"
 msgstr "פטר"
@@ -6437,7 +6552,7 @@ msgstr "פטר"
 msgid "Fire employee?"
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:265
+#: src/components/_political/government/Government.tsx:264
 msgid "Fire government member"
 msgstr "פטר חבר ממשלה"
 
@@ -6473,7 +6588,7 @@ msgstr "אלת שרשרת"
 msgid "Flask"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:316
+#: src/components/_layout/LayoutMapUserMenu.tsx:324
 msgid "Focus on you"
 msgstr ""
 
@@ -6538,7 +6653,7 @@ msgstr ""
 msgid "Found a bug? Report it instead of using it: valuable reports earn the Bug Finder badge."
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:333
+#: src/components/_political/law/law.frontConfig.tsx:337
 msgid "Found a new alliance with your country as founding member"
 msgstr "ייסד ברית חדשה עם המדינה שלך כחברה מייסדת"
 
@@ -6557,6 +6672,10 @@ msgstr "אב מייסד"
 #: src/pages/shop/index.tsx:180
 msgid "Free daily reward"
 msgstr "תגמול יומי חינם"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:201
+msgid "Free national orders to defend, revolt in or retake its core regions"
+msgstr ""
 
 #: src/components/_economy/manager/ManagerRateReductionAlert.tsx:46
 msgid "from"
@@ -6769,8 +6888,10 @@ msgstr "זהב"
 msgid "Gone"
 msgstr ""
 
-#: src/components/_political/country/CountryHeader.tsx:116
-#: src/pages/country/[countryId]/index.tsx:179
+#: src/components/_political/country/CountryHeader.tsx:120
+#: src/components/_political/country/CountryHeader.tsx:212
+#: src/components/_political/country/CountryTooltip.tsx:103
+#: src/pages/country/[countryId]/index.tsx:181
 msgid "Government"
 msgstr "ממשלה"
 
@@ -6787,7 +6908,12 @@ msgstr "חבר ממשלה"
 msgid "Government penalty"
 msgstr "עונש ממשלתי"
 
-#: src/components/_political/government/Government.tsx:210
+#: src/components/_political/law/LawFormModal.tsx:342
+#: src/pages/country/[countryId]/index.tsx:238
+msgid "Government type"
+msgstr ""
+
+#: src/components/_political/government/Government.tsx:209
 msgid "Government wage"
 msgstr "שכר ממשלתי"
 
@@ -7180,12 +7306,16 @@ msgstr ""
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:95
 #: src/components/_other/shop/ShopHeader.tsx:17
 #: src/components/_political/alliance/AllianceHeader.tsx:108
-#: src/components/_political/country/CountryHeader.tsx:85
+#: src/components/_political/country/CountryHeader.tsx:89
 #: src/components/_political/party/PartyHeader.tsx:99
 #: src/components/_political/region/RegionHeader.tsx:62
 #: src/components/_user/user/UserHeader.tsx:172
 msgid "Home"
 msgstr "בית"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:55
+msgid "Homeland Front"
+msgstr ""
 
 #: src/utils/translations.tsx:242
 msgid "Honed Sickle"
@@ -7250,8 +7380,8 @@ msgid "If the new nominee is already in government, their positions will be swap
 msgstr "אם המועמד החדש כבר בממשלה, תפקידיו יוחלפו. אחרת החבר הנוכחי יפוטר ולא יוכל להיות מועמד שוב למשך {cooldownDays} ימים."
 
 #: src/components/_political/party/party.frontConfig.tsx:385
-msgid "If your capital is occupied, national orders give only the regular bonus and the capital automatically revolts at full resistance."
-msgstr "אם הבירה שלך כבושה, פקודות לאומיות מעניקות רק את הבונוס הרגיל והבירה מתקוממת אוטומטית בהתנגדות מלאה."
+#~ msgid "If your capital is occupied, national orders give only the regular bonus and the capital automatically revolts at full resistance."
+#~ msgstr "אם הבירה שלך כבושה, פקודות לאומיות מעניקות רק את הבונוס הרגיל והבירה מתקוממת אוטומטית בהתנגדות מלאה."
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1331
 msgid "Ignore the leaflets"
@@ -7269,37 +7399,37 @@ msgstr "תארו לעצמכם אם תעצרו ממש לפני המיתוס"
 msgid "Imagine wasting your click on this"
 msgstr "תאר לעצמך לבזבז את הקליק שלך על זה"
 
-#: src/components/_political/law/law.frontConfig.tsx:190
+#: src/components/_political/law/law.frontConfig.tsx:194
 msgid "Impeach <0/>"
 msgstr "הדחה <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:184
+#: src/components/_political/law/law.frontConfig.tsx:188
 #: src/components/_political/law/lawNames.tsx:22
 msgid "Impeach congress member"
 msgstr "להדיח את חבר הקונגרס"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:59
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:58
 msgid "Impeach party leader"
 msgstr "להדיח את מנהיג המפלגה"
 
-#: src/components/_political/law/law.frontConfig.tsx:176
+#: src/components/_political/law/law.frontConfig.tsx:180
 #: src/components/_political/law/lawNames.tsx:20
 msgid "Impeach president"
 msgstr "להדיח את הנשיא"
 
-#: src/components/_political/law/law.frontConfig.tsx:177
-#: src/components/_political/law/law.frontConfig.tsx:179
+#: src/components/_political/law/law.frontConfig.tsx:181
+#: src/components/_political/law/law.frontConfig.tsx:183
 msgid "Impeach the current president"
 msgstr "להדיח את הנשיא הנוכחי"
 
 #: src/components/_political/party/party.frontConfig.tsx:286
-msgid "Imperialism vs Republicanism"
-msgstr "אימפריאליזם מול רפובליקני"
+#~ msgid "Imperialism vs Republicanism"
+#~ msgstr "אימפריאליזם מול רפובליקני"
 
 #: src/components/_political/party/party.frontConfig.tsx:289
 #: src/components/_political/party/party.frontConfig.tsx:326
-msgid "Imperialist"
-msgstr "אימפריאליסטית"
+#~ msgid "Imperialist"
+#~ msgstr "אימפריאליסטית"
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:52
 msgid "Impressive"
@@ -7322,23 +7452,19 @@ msgstr "לא פעיל"
 msgid "Income"
 msgstr "הכנסה"
 
-#. placeholder {0}: formatPercent( ethicsBonuses.imperialism['-1'].developmentIncomeBonus, )
-#. placeholder {0}: formatPercent( ethicsBonuses.imperialism['-2'].developmentIncomeBonus, )
 #: src/components/_political/party/party.frontConfig.tsx:254
 #: src/components/_political/party/party.frontConfig.tsx:273
-msgid "Income from development increases by <0>{0}</0>."
-msgstr "ההכנסה מפיתוח עולה ב-<0>{0}</0>."
+#~ msgid "Income from development increases by <0>{0}</0>."
+#~ msgstr "ההכנסה מפיתוח עולה ב-<0>{0}</0>."
 
-#. placeholder {0}: formatPercent(ethicsBonuses.imperialism[1].taxIncomeBonus)
-#. placeholder {0}: formatPercent(ethicsBonuses.imperialism[2].taxIncomeBonus)
 #: src/components/_political/party/party.frontConfig.tsx:293
 #: src/components/_political/party/party.frontConfig.tsx:307
-msgid "Income from taxes increases by <0>{0}</0>."
-msgstr "ההכנסה ממסים גדלה ב-<0>{0}</0>."
+#~ msgid "Income from taxes increases by <0>{0}</0>."
+#~ msgstr "ההכנסה ממסים גדלה ב-<0>{0}</0>."
 
 #: src/components/_economy/manager/CompanyManagerSlot.tsx:434
 #: src/components/_political/country/CountryTaxes.tsx:21
-#: src/components/_political/law/LawFormModal.tsx:264
+#: src/components/_political/law/LawFormModal.tsx:284
 msgid "Income tax"
 msgstr "מס הכנסה"
 
@@ -7357,13 +7483,13 @@ msgid "Increase unrest"
 msgstr "להגביר את אי השקט"
 
 #: src/components/_political/party/party.frontConfig.tsx:348
-msgid "Industrialism vs Agrarianism"
-msgstr "תעשייתיות מול אגרריות"
+#~ msgid "Industrialism vs Agrarianism"
+#~ msgstr "תעשייתיות מול אגרריות"
 
 #: src/components/_political/party/party.frontConfig.tsx:351
 #: src/components/_political/party/party.frontConfig.tsx:362
-msgid "Industrialist"
-msgstr "תעשיין"
+#~ msgid "Industrialist"
+#~ msgstr "תעשיין"
 
 #: src/components/_political/map/MapMenu.tsx:437
 msgid "Initial country"
@@ -7428,17 +7554,17 @@ msgid "Iron Pickaxe"
 msgstr ""
 
 #: src/components/_political/party/party.frontConfig.tsx:191
-msgid "Isolationism vs Diplomacy"
-msgstr "בידודיות מול דיפלומטיה"
+#~ msgid "Isolationism vs Diplomacy"
+#~ msgstr "בידודיות מול דיפלומטיה"
 
 #: src/components/_political/party/party.frontConfig.tsx:172
 #: src/components/_political/party/party.frontConfig.tsx:189
-msgid "Isolationist"
-msgstr "בדלן"
+#~ msgid "Isolationist"
+#~ msgstr "בדלן"
 
 #: src/components/_political/law/LawEthicEffects.tsx:107
-msgid "Isolationist: this sworn enemy starts at {start}% bonus and grows +{perDay}% per day."
-msgstr "בדלן: אויב מושבע זה מתחיל בבונוס של {start}% וגדל ב-{perDay}% ליום."
+#~ msgid "Isolationist: this sworn enemy starts at {start}% bonus and grows +{perDay}% per day."
+#~ msgstr "בדלן: אויב מושבע זה מתחיל בבונוס של {start}% וגדל ב-{perDay}% ליום."
 
 #: src/components/_economy/manager/ManagerRateFormModal.tsx:89
 msgid "It applies right away, and they can resign over it."
@@ -7539,7 +7665,7 @@ msgstr ""
 msgid "Jobs"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:384
+#: src/components/_political/law/law.frontConfig.tsx:388
 msgid "Join <0/>"
 msgstr "הצטרף ל-<0/>"
 
@@ -7559,7 +7685,7 @@ msgstr ""
 msgid "Join a political party"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:378
+#: src/components/_political/law/law.frontConfig.tsx:382
 #: src/components/_political/law/lawNames.tsx:27
 msgid "Join alliance"
 msgstr "הצטרף לברית"
@@ -7712,15 +7838,15 @@ msgstr "החבילה האחרונה"
 msgid "Laugh along"
 msgstr ""
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:50
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:49
 msgid "Launch council election"
 msgstr "פתח את הבחירות למועצה"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:70
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:69
 msgid "Launch leader election"
 msgstr "השקת בחירת מנהיג"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:104
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:88
 msgid "Launch primary election"
 msgstr "פתחו בבחירות המקדימות"
 
@@ -7729,15 +7855,15 @@ msgstr "פתחו בבחירות המקדימות"
 msgid "Law failed"
 msgstr "החוק נכשל"
 
-#: src/components/_political/law/LawFormModal.tsx:79
+#: src/components/_political/law/LawFormModal.tsx:93
 #: src/components/_user/notification/notification.frontConfig.tsx:2268
 msgid "Law proposed"
 msgstr "חוק שהוצע"
 
 #: src/components/_political/alliance/AllianceHeader.tsx:114
-#: src/components/_political/country/CountryHeader.tsx:91
+#: src/components/_political/country/CountryHeader.tsx:95
 #: src/pages/alliance/[allianceId]/index.tsx:95
-#: src/pages/country/[countryId]/index.tsx:185
+#: src/pages/country/[countryId]/index.tsx:187
 #: src/pages/country/[countryId]/laws.tsx:26
 msgid "Laws"
 msgstr "חוקים"
@@ -7747,7 +7873,7 @@ msgid "Lead"
 msgstr "עופרת"
 
 #: src/components/_political/alliance/AllianceHeader.tsx:100
-#: src/components/_political/party/PartyTooltip.tsx:127
+#: src/components/_political/party/PartyTooltip.tsx:82
 msgid "Leader"
 msgstr "מנהיג"
 
@@ -7768,15 +7894,15 @@ msgstr "קלע עור"
 msgid "Leave"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:359
+#: src/components/_political/law/law.frontConfig.tsx:363
 msgid "Leave <0/>"
 msgstr "עזוב את <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:368
+#: src/components/_political/law/law.frontConfig.tsx:372
 msgid "Leave <0/>."
 msgstr "עזוב את <0/>."
 
-#: src/components/_political/law/law.frontConfig.tsx:353
+#: src/components/_political/law/law.frontConfig.tsx:357
 #: src/components/_political/law/lawNames.tsx:26
 msgid "Leave alliance"
 msgstr "עזוב ברית"
@@ -7799,7 +7925,7 @@ msgstr "עזוב את הממשלה"
 msgid "Leave it"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:354
+#: src/components/_political/law/law.frontConfig.tsx:358
 msgid "Leave the alliance your country belongs to"
 msgstr "עזוב את הברית שהמדינה שלך שייכת אליה"
 
@@ -7915,15 +8041,15 @@ msgstr "העלו את הכישורים שלכם ברמה!"
 msgid "Level up!"
 msgstr "עלה רמה!"
 
-#: src/components/_political/law/law.frontConfig.tsx:498
+#: src/components/_political/law/law.frontConfig.tsx:502
 msgid "Liberate <0/>"
 msgstr "לשחרר <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:507
+#: src/components/_political/law/law.frontConfig.tsx:511
 msgid "Liberate <0/> and return it to its original country"
 msgstr "שחררו את <0/> והחזירו אותו לארצו המקורית"
 
-#: src/components/_political/law/law.frontConfig.tsx:493
+#: src/components/_political/law/law.frontConfig.tsx:497
 #: src/components/_political/law/lawNames.tsx:32
 msgid "Liberate a region"
 msgstr "לשחרר אזור"
@@ -7944,8 +8070,8 @@ msgstr ""
 msgid "Lifetime goals. Reach a tier, claim its XP, and the next one unlocks right away."
 msgstr ""
 
-#: src/components/_political/law/LawFormModal.tsx:226
-#: src/components/_political/law/LawFormModal.tsx:304
+#: src/components/_political/law/LawFormModal.tsx:246
+#: src/components/_political/law/LawFormModal.tsx:324
 msgid "Light"
 msgstr "בהיר"
 
@@ -8055,6 +8181,10 @@ msgstr ""
 #: src/components/_user/user/MyAvatar.tsx:59
 msgid "Logout"
 msgstr "התנתק"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:50
+#~ msgid "Lone military country"
+#~ msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:86
 msgid "Long Sword"
@@ -8210,8 +8340,8 @@ msgstr "מפה"
 msgid "Map"
 msgstr "מפה"
 
-#: src/components/_political/law/LawFormModal.tsx:223
-#: src/components/_political/law/LawFormModal.tsx:301
+#: src/components/_political/law/LawFormModal.tsx:243
+#: src/components/_political/law/LawFormModal.tsx:321
 msgid "Map Accent"
 msgstr "גוון מפה"
 
@@ -8241,7 +8371,7 @@ msgid "Market rate"
 msgstr ""
 
 #: src/components/_political/country/CountryTaxes.tsx:24
-#: src/components/_political/law/LawFormModal.tsx:268
+#: src/components/_political/law/LawFormModal.tsx:288
 msgid "Market tax"
 msgstr "מס שוק"
 
@@ -8412,8 +8542,8 @@ msgstr "חבר הועלה למפקד"
 #: src/components/_political/alliance/AllianceHeader.tsx:72
 #: src/components/_political/party/PartyHeader.tsx:78
 #: src/components/_political/party/PartyHeader.tsx:105
-#: src/components/_political/party/PartyTooltip.tsx:119
-#: src/pages/party/[partyId]/index.tsx:76
+#: src/components/_political/party/PartyTooltip.tsx:74
+#: src/pages/party/[partyId]/index.tsx:53
 #: src/pages/party/[partyId]/members.tsx:21
 msgid "Members"
 msgstr "חברים"
@@ -8435,12 +8565,12 @@ msgid "Mentoring"
 msgstr ""
 
 #: src/pages/country/[countryId]/auctions.tsx:25
-#: src/pages/country/[countryId]/index.tsx:307
+#: src/pages/country/[countryId]/index.tsx:308
 msgid "Mercenary Auctions"
 msgstr "מכירות פומביות של שכירי חרב"
 
 #: src/pages/country/[countryId]/contracts.tsx:25
-#: src/pages/country/[countryId]/index.tsx:295
+#: src/pages/country/[countryId]/index.tsx:296
 #: src/pages/mu/[muId]/contracts.tsx:25
 msgid "Mercenary Contracts"
 msgstr "חוזי שכירי חרב"
@@ -8461,6 +8591,10 @@ msgstr "רפוטציה של שכיר חרב"
 #: src/components/_military/mercenaryContract/MercenaryReputationTooltip.tsx:15
 msgid "Mercenary Reputation"
 msgstr "רפוטציה שכיר חרב"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:79
+msgid "Mercenary State"
+msgstr ""
 
 #: src/components/_political/region/SetResistanceFocusModal.tsx:129
 msgid "Message"
@@ -8557,12 +8691,18 @@ msgstr "צבא וקרבות"
 msgid "Military base"
 msgstr "בסיס צבאי"
 
-#. placeholder {0}: ethicsBonuses.militarism[1].regionUpgradeCooldownHours
-#. placeholder {0}: ethicsBonuses.militarism[2].regionUpgradeCooldownHours
 #: src/components/_political/party/party.frontConfig.tsx:94
 #: src/components/_political/party/party.frontConfig.tsx:108
-msgid "Military bases can be upgraded or downgraded every <0>{0} hours</0>."
-msgstr "בסיסים צבאיים ניתנים לשדרוג או הורדת דרגה כל <0>{0} שעות</0>."
+#~ msgid "Military bases can be upgraded or downgraded every <0>{0} hours</0>."
+#~ msgstr "בסיסים צבאיים ניתנים לשדרוג או הורדת דרגה כל <0>{0} שעות</0>."
+
+#: src/components/_political/govType/govType.frontConfig.tsx:228
+msgid "Military bases can't be activated"
+msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:49
+#~ msgid "Military Junta"
+#~ msgstr ""
 
 #: src/components/_political/law/LawTypeSelect.tsx:76
 msgid "Military laws"
@@ -8655,17 +8795,17 @@ msgstr ""
 msgid "Minimum Management"
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:100
+#: src/components/_political/government/Government.tsx:99
 #: src/components/_political/government/GovernmentScroll.tsx:54
 msgid "Minister of Defense"
 msgstr "שר הביטחון"
 
-#: src/components/_political/government/Government.tsx:109
+#: src/components/_political/government/Government.tsx:108
 #: src/components/_political/government/GovernmentScroll.tsx:61
 msgid "Minister of Economy"
 msgstr "שר הכלכלה"
 
-#: src/components/_political/government/Government.tsx:118
+#: src/components/_political/government/Government.tsx:117
 #: src/components/_political/government/GovernmentScroll.tsx:68
 msgid "Minister of Foreign Affairs"
 msgstr "שר החוץ"
@@ -8780,12 +8920,12 @@ msgstr ""
 msgid "Motion failed"
 msgstr "ההצעה נכשלה"
 
-#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:49
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:45
 msgid "Motion proposed"
 msgstr "הצעה הוצעה"
 
 #: src/components/_political/party/PartyHeader.tsx:111
-#: src/pages/party/[partyId]/index.tsx:94
+#: src/pages/party/[partyId]/index.tsx:71
 #: src/pages/party/[partyId]/motions.tsx:19
 msgid "Motions"
 msgstr "הצעות"
@@ -8977,17 +9117,36 @@ msgid "Name"
 msgstr "שם"
 
 #: src/components/_political/party/party.frontConfig.tsx:381
-msgid "National battle orders cost double."
-msgstr "פקודות קרב לאומיות עולות כפול."
+#~ msgid "National battle orders cost double."
+#~ msgstr "פקודות קרב לאומיות עולות כפול."
 
 #: src/components/_political/party/party.frontConfig.tsx:376
-msgid "National battle orders give <0>double</0> the priority damage bonus (<1>+10%</1> / <2>+20%</2> / <3>+30%</3>)."
-msgstr "פקודות קרב לאומיות מעניקות <0>כפול</0> מבונוס נזק העדיפות (<1>+10%</1> / <2>+20%</2> / <3>+30%</3>)."
+#~ msgid "National battle orders give <0>double</0> the priority damage bonus (<1>+10%</1> / <2>+20%</2> / <3>+30%</3>)."
+#~ msgstr "פקודות קרב לאומיות מעניקות <0>כפול</0> מבונוס נזק העדיפות (<1>+10%</1> / <2>+20%</2> / <3>+30%</3>)."
 
 #: src/components/_military/battle/BattleBountySideIndicators.tsx:44
 #: src/components/_military/battle/BattleSystem.tsx:895
 msgid "National bounty"
 msgstr "באונטי לאומי"
+
+#. placeholder {0}: effects.orderCostMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:194
+msgid "National orders cost x{0}"
+msgstr ""
+
+#. placeholder {0}: effects.coreOrderCostMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:207
+msgid "National orders for its core regions cost x{0}"
+msgstr ""
+
+#. placeholder {0}: effects.orderBonusMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:185
+msgid "National orders give x{0} bonus (normal bonus while the capital is occupied)"
+msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:49
+msgid "Nationalist State"
+msgstr ""
 
 #: src/components/_military/mu/MuHeader.tsx:104
 msgid "Nationality"
@@ -8997,7 +9156,7 @@ msgstr "לאום"
 msgid "Nationality updated"
 msgstr "הלאום עודכן"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:281
+#: src/components/_layout/LayoutMapUserMenu.tsx:289
 msgid "Nearest wooden case"
 msgstr ""
 
@@ -9087,8 +9246,8 @@ msgid "New employee"
 msgstr ""
 
 #: src/components/_political/partyMotion/PartyMotionFormModal.tsx:155
-msgid "New ethics configuration"
-msgstr "תצורת אתיקה חדשה"
+#~ msgid "New ethics configuration"
+#~ msgstr "תצורת אתיקה חדשה"
 
 #: src/components/_economy/employee/training.frontConfig.tsx:93
 msgid "New habit"
@@ -9239,14 +9398,14 @@ msgid "No active battles"
 msgstr "אין קרבות פעילים"
 
 #: src/components/_political/government/PoliticalEthics.tsx:563
-msgid "No active ethics - Balanced"
-msgstr "אין אתיקה פעילה - מאוזן"
+#~ msgid "No active ethics - Balanced"
+#~ msgstr "אין אתיקה פעילה - מאוזן"
 
 #: src/components/_military/order/BattleOrderList.tsx:160
 msgid "No active order"
 msgstr "אין פקודה פעילה"
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:277
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:256
 msgid "No active wars"
 msgstr "אין מלחמות פעילות"
 
@@ -9306,6 +9465,10 @@ msgstr ""
 msgid "No congress members"
 msgstr "אין חברי קונגרס"
 
+#: src/components/_political/govType/govType.frontConfig.tsx:353
+msgid "No congress: only the president and vice president vote laws"
+msgstr ""
+
 #: src/components/_political/contribution/ContributionList.tsx:221
 msgid "No contributions yet"
 msgstr "עדיין אין תרומות"
@@ -9322,13 +9485,17 @@ msgstr "עדיין אין דירוג נזקים."
 msgid "No days worked yet"
 msgstr ""
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:403
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:377
 msgid "No defensive pact"
 msgstr "אין ברית הגנה"
 
 #: src/components/_economy/donation/DonationList.tsx:81
 msgid "No donations yet"
 msgstr "עדיין אין תרומות"
+
+#: src/components/_political/govType/GovTypeEffects.tsx:32
+msgid "No effects"
+msgstr ""
 
 #: src/components/_economy/employee/EmployeeList.tsx:306
 #: src/components/_economy/employee/EmployeeListV2.tsx:135
@@ -9343,6 +9510,10 @@ msgstr ""
 msgid "No ended auction yet"
 msgstr ""
 
+#: src/components/_political/govType/govType.frontConfig.tsx:32
+msgid "No government type chosen yet"
+msgstr ""
+
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1116
 msgid "No grapes"
 msgstr ""
@@ -9351,7 +9522,7 @@ msgstr ""
 msgid "No ground ranking yet."
 msgstr "עדיין אין דירוג קרקע."
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:259
+#: src/components/_layout/LayoutMapUserMenu.tsx:267
 msgid "No home region set"
 msgstr ""
 
@@ -9409,6 +9580,14 @@ msgstr "לא נמצאו יחידות צבאיות"
 msgid "No minimum"
 msgstr ""
 
+#: src/components/_political/govType/govType.frontConfig.tsx:348
+msgid "No ministers (vice president only)"
+msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:343
+msgid "No ministers and no congress: only the president and vice president vote laws"
+msgstr ""
+
 #: src/components/_user/mission/MissionsList.tsx:330
 msgid "No missions available"
 msgstr "אין משימות זמינות"
@@ -9425,7 +9604,7 @@ msgstr "עדיין אין הצעות"
 msgid "No MU has registered yet. Be the first."
 msgstr "אף יחידה צבאית עדיין לא נרשמה. היה הראשון."
 
-#: src/components/_political/government/Government.tsx:230
+#: src/components/_political/government/Government.tsx:229
 msgid "No one nominated yet"
 msgstr "אף אחד עדיין לא מועמד"
 
@@ -9473,7 +9652,7 @@ msgstr ""
 msgid "No skins equipped"
 msgstr "אין סקינים מצוידים"
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:336
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:310
 msgid "No sworn enemy"
 msgstr "אין אויב מושבע"
 
@@ -9497,6 +9676,10 @@ msgstr "אין הזמנות מסחר"
 #: src/components/_economy/transaction/TransactionList.tsx:153
 msgid "No transactions found"
 msgstr "לא נמצאו עסקאות"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:326
+msgid "No treaties (alliance, pacts, sworn enemy)"
+msgstr ""
 
 #: src/components/_social/poll/PollVotersModal.tsx:42
 msgid "No votes yet"
@@ -9543,7 +9726,7 @@ msgstr ""
 msgid "Nobody yet"
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:244
+#: src/components/_political/government/Government.tsx:243
 #: src/components/_political/government/NominateForm.tsx:80
 msgid "Nominate"
 msgstr "למנות"
@@ -9552,7 +9735,7 @@ msgstr "למנות"
 msgid "Nominate <0/> as leader"
 msgstr "מנה את <0/> למנהיג"
 
-#: src/components/_political/government/Government.tsx:282
+#: src/components/_political/government/Government.tsx:281
 msgid "Nominate a {title}"
 msgstr "מנה {title}"
 
@@ -9573,8 +9756,8 @@ msgstr "מועמד בממשלה"
 msgid "None"
 msgstr ""
 
-#: src/components/_political/law/LawFormModal.tsx:227
-#: src/components/_political/law/LawFormModal.tsx:305
+#: src/components/_political/law/LawFormModal.tsx:247
+#: src/components/_political/law/LawFormModal.tsx:325
 msgid "Normal"
 msgstr "נורמלי"
 
@@ -9602,7 +9785,7 @@ msgstr "אין מספיק משתתפים"
 msgid "Not impressive, but not shameful"
 msgstr "לא מרשים, אבל לא מביש"
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:218
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:197
 msgid "Not in any alliance"
 msgstr "לא בברית כלשהי"
 
@@ -9680,7 +9863,7 @@ msgstr ""
 msgid "Occupied by"
 msgstr "כבוש על ידי"
 
-#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:140
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:131
 msgid "Occupied region"
 msgstr "אזור כבוש"
 
@@ -9688,7 +9871,7 @@ msgstr "אזור כבוש"
 msgid "Odds"
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:204
+#: src/components/_political/government/Government.tsx:203
 msgid "of"
 msgstr "של"
 
@@ -9754,6 +9937,10 @@ msgstr ""
 msgid "One account per player. Multi-accounting can get you permanently banned."
 msgstr ""
 
+#: src/components/_political/govType/govType.frontConfig.tsx:74
+msgid "One ruler, fast decisions"
+msgstr ""
+
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:70
 msgid "One step away from legendary..."
 msgstr "צעד אחד מהאגדי..."
@@ -9814,8 +10001,8 @@ msgid "Only the owner and commanders can change the nationality."
 msgstr "רק הבעלים והמפקדים יכולים לשנות את הלאום."
 
 #: src/components/_political/party/party.frontConfig.tsx:263
-msgid "Only your core regions generate development income."
-msgstr "רק אזורי הליבה שלך מייצרים הכנסת התפתחות."
+#~ msgid "Only your core regions generate development income."
+#~ msgstr "רק אזורי הליבה שלך מייצרים הכנסת התפתחות."
 
 #: src/components/_economy/inventory/case/OpenCaseModal.tsx:171
 #: src/components/_economy/inventory/case/OpenCaseModal.tsx:587
@@ -9915,6 +10102,11 @@ msgstr "הזמנות בוטלו"
 msgid "Orders of <0/>"
 msgstr "פקודות של <0/>"
 
+#. placeholder {0}: effects.allyOrderCostMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:214
+msgid "Orders on allies' and pact partners' battles cost x{0}"
+msgstr ""
+
 #: src/components/_political/map/MapMenu.tsx:440
 msgid "Origin"
 msgstr "מקור"
@@ -9951,6 +10143,10 @@ msgstr "סקירה כללית"
 
 #: src/components/_user/user/SkillPresetsModal.tsx:273
 msgid "Overwrite with current"
+msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:50
+msgid "Own country first, no alliance"
 msgstr ""
 
 #: src/components/_other/shop/SkinPackItem.tsx:108
@@ -9991,23 +10187,27 @@ msgid "Pacification Center"
 msgstr "מרכז פסיפיקציה"
 
 #: src/components/_political/party/party.frontConfig.tsx:87
-msgid "Pacifism vs Expansionism"
-msgstr "פציפיזם מול אקספנסיוניזם"
+#~ msgid "Pacifism vs Expansionism"
+#~ msgstr "פציפיזם מול אקספנסיוניזם"
 
 #: src/components/_political/party/party.frontConfig.tsx:70
 #: src/components/_political/party/party.frontConfig.tsx:85
-msgid "Pacifist"
-msgstr "פציפיסט"
+#~ msgid "Pacifist"
+#~ msgstr "פציפיסט"
 
-#. placeholder {0}: ts.paper
 #: src/components/_military/battle/SetOrderFormModal.tsx:544
-msgid "Pacifist: orders defending your core regions or revolts cost {orderDiscountPercent}% less <0>{0}</0>"
-msgstr "פציפיסט: פקודות המגינות על אזורי הליבה שלך או על מרידות עולות {orderDiscountPercent}% פחות <0>{0}</0>"
+#~ msgid "Pacifist: orders defending your core regions or revolts cost {orderDiscountPercent}% less <0>{0}</0>"
+#~ msgstr "פציפיסט: פקודות המגינות על אזורי הליבה שלך או על מרידות עולות {orderDiscountPercent}% פחות <0>{0}</0>"
 
 #: src/components/_other/shop/ShopHeader.tsx:30
 #: src/components/_other/shop/SkinCollectionModal.tsx:194
 msgid "Packs"
 msgstr "חבילות"
+
+#. placeholder {0}: effects.pactUpkeepMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:316
+msgid "Pact upkeep x{0}"
+msgstr ""
 
 #: src/components/_economy/employeeEvent/EmployeeEventEffects.tsx:491
 msgid "Paid back in full"
@@ -10099,6 +10299,10 @@ msgstr "הבחירות למפלגה הסתיימו"
 msgid "Party election vote open"
 msgstr "הבחירות למפלגה נפתחות"
 
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:79
+msgid "Party ethics were replaced by government types"
+msgstr ""
+
 #: src/components/_political/election/election.frontConfig.tsx:33
 msgid "Party Leader election"
 msgstr "בחירות לראשות המפלגה"
@@ -10127,9 +10331,17 @@ msgstr "הבחירות המקדימות של המפלגה הסתיימו ב-<0/>
 msgid "Party Primary election voting is now open in <0/>"
 msgstr "ההצבעה בבחירות המקדימות של המפלגה פתוחה כעת ב<0/>"
 
+#: src/components/_political/law/LawFormModal.tsx:402
+#~ msgid "Pass it by decree, without a vote (once every {0} hours)"
+#~ msgstr ""
+
 #: src/components/_political/election/CandidateFormModal.tsx:72
 msgid "Paste a link to your campaign article, or leave empty."
 msgstr "הדבק קישור למאמר מסע הפרסום שלך, או השאר ריק."
+
+#: src/components/_political/govType/govType.frontConfig.tsx:164
+msgid "Patriotic bonus {base}% → {next}%"
+msgstr ""
 
 #: src/components/_user/user/Level.tsx:194
 msgid "Paused"
@@ -10210,11 +10422,11 @@ msgid "People are angry, an auto revolt has started in <0/>"
 msgstr "אנשים כועסים, החל מרד אוטומטי ב<0/>"
 
 #: src/components/_political/region/IncomeEstimateBreakdown.tsx:74
-#: src/pages/country/[countryId]/index.tsx:393
+#: src/pages/country/[countryId]/index.tsx:394
 msgid "Per day"
 msgstr ""
 
-#: src/pages/country/[countryId]/index.tsx:428
+#: src/pages/country/[countryId]/index.tsx:429
 msgid "per day to <0/>."
 msgstr ""
 
@@ -10334,7 +10546,7 @@ msgstr "שחקנים מוגבלים לחשבון בודד. יצירת מספר �
 msgid "Players can share an IP address if they have been registered as a \"Family Group\". This status must be requested in advance to an admin on our Discord. Group members are prohibited from:"
 msgstr "שחקנים יכולים לשתף כתובת IP אם הם נרשמו כ״קבוצה משפחתית״. יש לבקש את הסטטוס הזה מראש למנהל בדיסקורד שלנו. לחברי הקבוצה אסור:"
 
-#: src/components/_military/battle/BattleHeader.tsx:214
+#: src/components/_military/battle/BattleHeader.tsx:268
 msgid "Players watching this battle right now (refreshes every 30 seconds)."
 msgstr ""
 
@@ -10349,6 +10561,10 @@ msgstr "נא להשלים את ה-CAPTCHA."
 msgid "Please select a region"
 msgstr "אנא בחר אזור"
 
+#: src/components/_political/govType/govType.frontConfig.tsx:67
+msgid "Plutocracy"
+msgstr ""
+
 #: src/components/_economy/employee/employee.frontConfig.tsx:99
 msgid "Poached"
 msgstr ""
@@ -10361,7 +10577,7 @@ msgstr "פוליטי"
 msgid "Political laws"
 msgstr "חוקים פוליטיים"
 
-#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:66
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:65
 msgid "Political motions"
 msgstr "הצעות פוליטיות"
 
@@ -10480,11 +10696,15 @@ msgstr ""
 msgid "Presets"
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:82
+#: src/components/_political/government/Government.tsx:81
 #: src/components/_political/government/GovernmentScroll.tsx:40
 #: src/components/_user/user/UserBadges.tsx:190
 msgid "President"
 msgstr "נשיא"
+
+#: src/components/_political/govType/govType.frontConfig.tsx:336
+#~ msgid "President decree: 1 law per {0}h without a vote (tax, enemy, pacts, peace)"
+#~ msgstr ""
 
 #: src/components/_user/user/UserBadges.tsx:193
 msgid "President of <0/>"
@@ -10663,20 +10883,20 @@ msgstr "קדם למפקד"
 msgid "Promoted to Commander"
 msgstr "הועלה למפקד"
 
-#: src/components/_political/law/law.frontConfig.tsx:259
+#: src/components/_political/law/law.frontConfig.tsx:263
 msgid "Propose a defensive pact with <0/>"
 msgstr "הצע ברית הגנה עם <0/>"
 
-#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:123
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:114
 #: src/components/_political/partyMotion/PartyMotionList.tsx:48
 msgid "Propose a motion"
 msgstr "להציע הצעה"
 
-#: src/components/_political/law/law.frontConfig.tsx:268
+#: src/components/_political/law/law.frontConfig.tsx:272
 msgid "Propose a mutual defensive pact with <0/>. Once accepted, defenders of either country get a bonus that starts at 1% and grows +1% per day up to 10%."
 msgstr "הצע ברית הגנה הדדית עם <0/>. לאחר האישור, מגינים משתי המדינות יקבלו בונוס שמתחיל ב-1% וגדל ב-1% ליום עד ל-10%."
 
-#: src/components/_political/law/law.frontConfig.tsx:254
+#: src/components/_political/law/law.frontConfig.tsx:258
 msgid "Propose a mutual defensive pact with another country to get a growing defensive bonus"
 msgstr "הצע ברית הגנה הדדית עם מדינה אחרת כדי לקבל בונוס הגנה הולך וגדל"
 
@@ -10685,45 +10905,45 @@ msgstr "הצע ברית הגנה הדדית עם מדינה אחרת כדי לק
 msgid "Propose alliance law"
 msgstr "הצע חוק ברית"
 
-#: src/components/_political/law/law.frontConfig.tsx:252
+#: src/components/_political/law/law.frontConfig.tsx:256
 #: src/components/_political/law/lawNames.tsx:40
 msgid "Propose defensive pact"
 msgstr "הצע ברית הגנה"
 
 #: src/components/_political/allianceLaw/AllianceLawFormModal.tsx:198
-#: src/components/_political/law/LawFormModal.tsx:349
+#: src/components/_political/law/LawFormModal.tsx:403
 msgid "Propose law"
 msgstr "הצעת חוק"
 
-#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:187
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:163
 msgid "Propose motion"
 msgstr "הצע הצעה"
 
-#: src/components/_political/law/law.frontConfig.tsx:137
+#: src/components/_political/law/law.frontConfig.tsx:141
 #: src/components/_political/law/lawNames.tsx:15
 msgid "Propose peace"
 msgstr "תציע שלום"
 
-#: src/components/_political/law/law.frontConfig.tsx:142
-#: src/components/_political/law/law.frontConfig.tsx:151
+#: src/components/_political/law/law.frontConfig.tsx:146
+#: src/components/_political/law/law.frontConfig.tsx:155
 msgid "Propose peace to <0/>"
 msgstr "הצע שלום ל<0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:138
+#: src/components/_political/law/law.frontConfig.tsx:142
 msgid "Propose peace to another country"
 msgstr "להציע שלום למדינה אחרת"
 
 #. placeholder {0}: law.data.amount ?? 0
-#: src/components/_political/law/law.frontConfig.tsx:482
+#: src/components/_political/law/law.frontConfig.tsx:486
 msgid "Propose to buy <0/> from <1/> for <2>{0}</2>"
 msgstr "הצע לקנות <0/> מ-<1/> עבור <2>{0}</2>"
 
-#: src/components/_political/law/law.frontConfig.tsx:466
+#: src/components/_political/law/law.frontConfig.tsx:470
 #: src/components/_political/law/lawNames.tsx:31
 msgid "Propose to buy a region"
 msgstr "מציע לקנות אזור"
 
-#: src/components/_political/law/law.frontConfig.tsx:467
+#: src/components/_political/law/law.frontConfig.tsx:471
 msgid "Propose to buy a region from another country"
 msgstr "מציע לקנות אזור ממדינה אחרת"
 
@@ -10733,6 +10953,10 @@ msgstr "הצעות"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1088
 msgid "Provide the grapes"
+msgstr ""
+
+#: src/components/_political/govType/govType.frontConfig.tsx:31
+msgid "Provisional"
 msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:362
@@ -10788,7 +11012,7 @@ msgstr "פירוק מהיר"
 msgid "Quick equip best items of any tier"
 msgstr "לצייד במהירות את הפריטים הטובים ביותר בכל שכבה"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:401
+#: src/components/_layout/LayoutMapUserMenu.tsx:409
 msgid "Quick move & collect on case click"
 msgstr ""
 
@@ -10824,7 +11048,7 @@ msgstr ""
 msgid "Rank"
 msgstr "דרגה"
 
-#: src/components/_military/battle/BattleHeader.tsx:316
+#: src/components/_military/battle/BattleHeader.tsx:352
 #: src/pages/battle/[battleId]/index.tsx:65
 msgid "Ranking"
 msgstr "דירוג"
@@ -10835,7 +11059,7 @@ msgstr "תגמול דירוג"
 
 #: src/components/_layout/MoreButtonNav.tsx:117
 #: src/pages/alliance/[allianceId]/index.tsx:48
-#: src/pages/country/[countryId]/index.tsx:170
+#: src/pages/country/[countryId]/index.tsx:172
 #: src/pages/user/[userId]/index.tsx:131
 msgid "Rankings"
 msgstr "דירוגים"
@@ -11001,11 +11225,11 @@ msgstr "תת-אדמירל"
 #: src/components/_political/allianceLaw/AllianceLaw.tsx:79
 #: src/components/_political/allianceLaw/AllianceLawFormModal.tsx:133
 #: src/components/_political/law/Law.tsx:84
-#: src/components/_political/law/LawFormModal.tsx:189
+#: src/components/_political/law/LawFormModal.tsx:209
 msgid "Reason"
 msgstr "סיבה"
 
-#: src/pages/party/[partyId]/index.tsx:86
+#: src/pages/party/[partyId]/index.tsx:63
 msgid "Recent Applications"
 msgstr "בקשות אחרונות"
 
@@ -11100,11 +11324,11 @@ msgstr "משחזר <0>{0}</0> כאשר נצרך"
 #: src/components/_political/map/MapMenu.tsx:424
 #: src/components/_political/party/PartyFormModal.tsx:107
 #: src/components/_political/party/PartyHeader.tsx:90
-#: src/components/_political/party/PartyTooltip.tsx:145
+#: src/components/_political/party/PartyTooltip.tsx:100
 msgid "Region"
 msgstr "אזור"
 
-#: src/components/_political/law/law.frontConfig.tsx:438
+#: src/components/_political/law/law.frontConfig.tsx:442
 #: src/components/_political/law/lawNames.tsx:30
 msgid "Region buy offer"
 msgstr "הצעת רכישה באזור"
@@ -11125,16 +11349,15 @@ msgstr "אזור של"
 msgid "Region transfer"
 msgstr "העברת אזור"
 
-#. placeholder {0}: formatMultiplierDelta( ethicsBonuses.imperialism[2].upgradeMaintenanceMultiplier, )
 #: src/components/_political/party/party.frontConfig.tsx:315
-msgid "Region upgrade maintenance costs are increased by <0>{0}</0>."
-msgstr "עלויות אחזקת שדרוג אזור גדלות ב-<0>{0}</0>."
+#~ msgid "Region upgrade maintenance costs are increased by <0>{0}</0>."
+#~ msgstr "עלויות אחזקת שדרוג אזור גדלות ב-<0>{0}</0>."
 
 #: src/components/_layout/LoadingScreenContent.tsx:24
 msgid "regions"
 msgstr "אזורים"
 
-#: src/components/_political/country/CountryHeader.tsx:142
+#: src/components/_political/country/CountryHeader.tsx:146
 msgid "Regions"
 msgstr "אזורים"
 
@@ -11142,9 +11365,13 @@ msgstr "אזורים"
 msgid "Regions Crossed"
 msgstr ""
 
+#: src/components/_political/govType/govType.frontConfig.tsx:139
+msgid "Regions not linked to the capital keep their full development income"
+msgstr ""
+
 #: src/components/_political/party/party.frontConfig.tsx:124
-msgid "Regions you occupy generate double the amount of resistance."
-msgstr "אזורים שאתה כובש מייצרים כפול כמות ההתנגדות."
+#~ msgid "Regions you occupy generate double the amount of resistance."
+#~ msgstr "אזורים שאתה כובש מייצרים כפול כמות ההתנגדות."
 
 #: src/pages/index.tsx:149
 msgid "Register"
@@ -11223,7 +11450,7 @@ msgstr "משך הדיבאף שנותר"
 msgid "Remove <0/>"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:201
+#: src/components/_political/law/law.frontConfig.tsx:205
 msgid "Remove <0/> from congress due to inactivity"
 msgstr "הסר את <0/> מהקונגרס עקב חוסר פעילות"
 
@@ -11231,7 +11458,7 @@ msgstr "הסר את <0/> מהקונגרס עקב חוסר פעילות"
 msgid "Remove <0/> from the alliance immediately on acceptance."
 msgstr "הסר את <0/> מהברית מיד עם האישור."
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:38
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:37
 msgid "Remove <0/> from the party council"
 msgstr "הסר את <0/> ממועצת המפלגה"
 
@@ -11239,7 +11466,7 @@ msgstr "הסר את <0/> ממועצת המפלגה"
 msgid "Remove a member country from the alliance."
 msgstr "הסר מדינה חברה מהברית."
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:32
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:31
 msgid "Remove a member from the party council"
 msgstr "הסר חבר ממועצת המפלגה"
 
@@ -11248,7 +11475,7 @@ msgstr "הסר חבר ממועצת המפלגה"
 msgid "Remove all"
 msgstr "הסר הכל"
 
-#: src/components/_political/law/law.frontConfig.tsx:185
+#: src/components/_political/law/law.frontConfig.tsx:189
 msgid "Remove an inactive congress member from its position"
 msgstr "הסר חבר קונגרס לא פעיל מתפקידו"
 
@@ -11265,7 +11492,7 @@ msgstr "הסר את אווטאר"
 msgid "Remove bounty"
 msgstr "הסר את הבאונטי"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:31
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:30
 msgid "Remove council member"
 msgstr "הסר את חבר המועצה"
 
@@ -11273,7 +11500,7 @@ msgstr "הסר את חבר המועצה"
 msgid "Remove Description"
 msgstr "הסר תיאור"
 
-#: src/components/_political/law/law.frontConfig.tsx:428
+#: src/components/_political/law/law.frontConfig.tsx:432
 #: src/components/_political/law/lawNames.tsx:29
 msgid "Remove enemy"
 msgstr "הסר אויב"
@@ -11290,8 +11517,8 @@ msgstr ""
 msgid "Remove position"
 msgstr ""
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:60
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:63
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:59
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:62
 msgid "Remove the current party leader from their position"
 msgstr "הסר את מנהיג המפלגה הנוכחי מתפקידו"
 
@@ -11334,17 +11561,17 @@ msgstr ""
 msgid "Rename the alliance to \"{0}\" immediately on acceptance."
 msgstr "שנה את שם הברית ל-״{0}״ מיד עם האישור."
 
-#: src/components/_political/government/Government.tsx:244
+#: src/components/_political/government/Government.tsx:243
 msgid "Replace"
 msgstr "להחליף"
 
-#: src/components/_political/government/Government.tsx:282
+#: src/components/_political/government/Government.tsx:281
 msgid "Replace {title}"
 msgstr "החלף {title}"
 
 #: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:80
-msgid "Replace all party ethics with a new configuration"
-msgstr "החלף את כל האתיקה של המפלגה בתצורה חדשה"
+#~ msgid "Replace all party ethics with a new configuration"
+#~ msgstr "החלף את כל האתיקה של המפלגה בתצורה חדשה"
 
 #: src/components/_political/government/NominateForm.tsx:62
 msgid "Replacing a member"
@@ -11362,10 +11589,14 @@ msgstr "דווח על משתמש"
 msgid "Reports"
 msgstr "דוחות"
 
+#: src/components/_political/govType/govType.frontConfig.tsx:37
+msgid "Republic"
+msgstr ""
+
 #: src/components/_political/party/party.frontConfig.tsx:269
 #: src/components/_political/party/party.frontConfig.tsx:284
-msgid "Republican"
-msgstr "רפובליקני"
+#~ msgid "Republican"
+#~ msgstr "רפובליקני"
 
 #: src/components/_military/mercenaryContract/MercenaryReputationTooltip.tsx:34
 msgid "Reputation decays 20% toward 0 every week (minimum 1 point)."
@@ -11452,7 +11683,7 @@ msgstr ""
 msgid "Resign from this position?"
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:533
+#: src/components/_military/hit/HitButton.tsx:489
 #: src/components/_user/mission/mission.frontConfig.tsx:605
 msgid "Resist"
 msgstr "להתנגד"
@@ -11462,6 +11693,16 @@ msgstr "להתנגד"
 #: src/pages/region/[regionId]/index.tsx:129
 msgid "Resistance"
 msgstr "התנגדות"
+
+#. placeholder {0}: effects.coreResistanceBattleCostMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:240
+msgid "Resistance battles cost x{0} in its occupied core regions"
+msgstr ""
+
+#. placeholder {0}: effects.coreResistanceContributionMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:233
+msgid "Resistance contributions x{0} in its occupied core regions"
+msgstr ""
 
 #: src/components/_political/contribution/ContributionList.tsx:194
 msgid "Resistance Contributors"
@@ -11479,12 +11720,17 @@ msgstr ""
 msgid "Resistance for {regionName} {score}"
 msgstr "התנגדות עבור {regionName} {score}"
 
+#. placeholder {0}: effects.conqueredResistanceGrowthMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:247
+msgid "Resistance grows x{0} faster in conquered regions"
+msgstr ""
+
 #: src/components/_political/region/RegionTooltip.tsx:119
 msgid "Resource"
 msgstr "משאב"
 
-#: src/components/_political/country/CountryTooltip.tsx:153
-#: src/pages/country/[countryId]/index.tsx:229
+#: src/components/_political/country/CountryTooltip.tsx:165
+#: src/pages/country/[countryId]/index.tsx:231
 #: src/pages/region/[regionId]/index.tsx:53
 msgid "Resources"
 msgstr "משאבים"
@@ -11517,7 +11763,7 @@ msgstr ""
 msgid "Retired at the end of a long career."
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:494
+#: src/components/_political/law/law.frontConfig.tsx:498
 msgid "Return a region to its original country"
 msgstr "להחזיר אזור לארצו המקורית"
 
@@ -11557,7 +11803,7 @@ msgstr "רובה"
 msgid "Right after you pick {answer} in {source}."
 msgstr ""
 
-#: src/components/_political/government/Government.tsx:179
+#: src/components/_political/government/Government.tsx:178
 msgid "Rights"
 msgstr "זכויות"
 
@@ -11646,7 +11892,7 @@ msgstr "סיבובים שנוצחו"
 msgid "Rules"
 msgstr "כללים"
 
-#: src/pages/country/[countryId]/index.tsx:237
+#: src/pages/country/[countryId]/index.tsx:248
 msgid "Ruling Party"
 msgstr "מפלגת שלטון"
 
@@ -11765,6 +12011,10 @@ msgstr ""
 msgid "Select a country"
 msgstr "בחר מדינה"
 
+#: src/components/_political/law/LawFormModal.tsx:343
+msgid "Select a government type"
+msgstr ""
+
 #: src/components/_military/mu/MuFormModal.tsx:112
 msgid "Select a location"
 msgstr "בחר מיקום"
@@ -11782,7 +12032,7 @@ msgstr ""
 msgid "Select an item"
 msgstr ""
 
-#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:141
+#: src/components/_political/partyMotion/PartyMotionFormModal.tsx:132
 msgid "Select an occupied region"
 msgstr "בחר אזור כבוש"
 
@@ -11795,12 +12045,12 @@ msgstr "בחר באנר"
 msgid "Select law type"
 msgstr "בחר סוג חוק"
 
-#: src/components/_political/law/LawFormModal.tsx:224
-#: src/components/_political/law/LawFormModal.tsx:302
+#: src/components/_political/law/LawFormModal.tsx:244
+#: src/components/_political/law/LawFormModal.tsx:322
 msgid "Select map accent"
 msgstr "בחר גוון מפה"
 
-#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:59
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:58
 msgid "Select motion type"
 msgstr "בחר סוג הצעה"
 
@@ -11867,7 +12117,7 @@ msgstr "מוכר"
 msgid "Send <0/> messages"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:418
+#: src/components/_political/law/law.frontConfig.tsx:422
 msgid "Send <0/> to <1/>"
 msgstr "שלח <0/> אל <1/>"
 
@@ -11893,7 +12143,7 @@ msgstr "שלח הודעה"
 
 #. placeholder {0}: staticGameConfig.law[ELawType.SEND_MONEY_TO_COUNTRY].allianceTaxRate * 100
 #. placeholder {1}: staticGameConfig.law[ELawType.SEND_MONEY_TO_COUNTRY].externalTaxRate * 100
-#: src/components/_political/law/law.frontConfig.tsx:404
+#: src/components/_political/law/law.frontConfig.tsx:408
 msgid "Send money to another country. Paper tax on top: {0}% within your alliance, {1}% for external transfers."
 msgstr "שלח כסף למדינה אחרת. מס נייר נוסף: {0}% בתוך הברית שלך, {1}% להעברות חיצוניות."
 
@@ -11917,11 +12167,11 @@ msgstr "הגדר <0>תיאור</0>"
 msgid "Set a referrer"
 msgstr "הגדר מפנה"
 
-#: src/components/_political/law/law.frontConfig.tsx:518
+#: src/components/_political/law/law.frontConfig.tsx:522
 msgid "Set a welcome article for your country"
 msgstr "הגדר מאמר ברוכים הבאים למדינה שלך"
 
-#: src/components/_political/law/law.frontConfig.tsx:523
+#: src/components/_political/law/law.frontConfig.tsx:527
 msgid "Set a welcome article for your country<0/>"
 msgstr "הגדר מאמר ברוכים הבאים למדינה שלך<0/>"
 
@@ -11929,25 +12179,38 @@ msgstr "הגדר מאמר ברוכים הבאים למדינה שלך<0/>"
 msgid "Set bounty"
 msgstr "הגדר באונטי"
 
-#: src/components/_political/law/law.frontConfig.tsx:544
+#: src/components/_political/law/law.frontConfig.tsx:548
 #: src/components/_political/law/lawNames.tsx:34
 msgid "Set country color"
 msgstr "הגדר צבע מדינה"
 
 #. placeholder {0}: law.data.scheme
-#: src/components/_political/law/law.frontConfig.tsx:536
+#: src/components/_political/law/law.frontConfig.tsx:540
 msgid "Set country color to <0>{0}</0> "
 msgstr "הגדר את צבע המדינה ל-<0>{0}</0> "
 
+#: src/components/_political/law/law.frontConfig.tsx:617
+#: src/components/_political/law/lawNames.tsx:43
+msgid "Set government type"
+msgstr ""
+
+#: src/components/_political/law/law.frontConfig.tsx:623
+msgid "Set government type to <0/>"
+msgstr ""
+
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:82
+msgid "Set new party ethics (no longer in the game)"
+msgstr ""
+
 #: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:88
-msgid "Set new party ethics configuration:"
-msgstr "הגדר תצורה חדשה של אתיקה של המפלגה:"
+#~ msgid "Set new party ethics configuration:"
+#~ msgstr "הגדר תצורה חדשה של אתיקה של המפלגה:"
 
 #: src/components/_military/battle/BattleOrderActionsDropdown.tsx:139
 msgid "Set order"
 msgstr "קבע פקודה"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:79
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:78
 msgid "Set party ethics"
 msgstr "קבע את האתיקה של המפלגה"
 
@@ -11955,17 +12218,17 @@ msgstr "קבע את האתיקה של המפלגה"
 msgid "Set Profile Picture"
 msgstr "הגדר תמונת פרופיל"
 
-#: src/components/_political/law/law.frontConfig.tsx:590
+#: src/components/_political/law/law.frontConfig.tsx:594
 #: src/components/_political/law/lawNames.tsx:36
 msgid "Set specialization item"
 msgstr "הגדר פריט התמחות"
 
 #. placeholder {0}: ts[law.data.itemCode]
-#: src/components/_political/law/law.frontConfig.tsx:596
+#: src/components/_political/law/law.frontConfig.tsx:600
 msgid "Set the country's specialized item to <0>{0}</0>.<1/>The country strategic resources <2>Production Bonus</2> will be available for local companies producing this item."
 msgstr "הגדר את הפריט המיוחד של המדינה ל-<0>{0}</0>.<1/>המשאבים האסטרטגיים של המדינה <2>בונוס הפקה</2> יהיו זמינים עבור חברות מקומיות המייצרות פריט זה."
 
-#: src/components/_political/law/law.frontConfig.tsx:591
+#: src/components/_political/law/law.frontConfig.tsx:595
 msgid "Set the country's specialized production item"
 msgstr "הגדר את פריט הייצור המיוחד של המדינה"
 
@@ -11973,7 +12236,7 @@ msgstr "הגדר את פריט הייצור המיוחד של המדינה"
 msgid "Set Username"
 msgstr "הגדר שם משתמש"
 
-#: src/components/_political/law/law.frontConfig.tsx:517
+#: src/components/_political/law/law.frontConfig.tsx:521
 #: src/components/_political/law/lawNames.tsx:33
 msgid "Set welcome article"
 msgstr "הגדר מאמר ברוכים הבאים"
@@ -12165,7 +12428,7 @@ msgstr ""
 msgid "Skip Tutorial"
 msgstr "דלג על הדרכה"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:379
+#: src/components/_layout/LayoutMapUserMenu.tsx:387
 msgid "Skipped"
 msgstr ""
 
@@ -12292,7 +12555,7 @@ msgstr ""
 msgid "Spent when moving on the map: 10 points per region crossed. The regions your stamina can't cover are paid in oil. It refills 10 points an hour and cannot be raised with skill points."
 msgstr ""
 
-#: src/components/_political/country/CountryHeader.tsx:255
+#: src/components/_political/country/CountryHeader.tsx:271
 msgid "Stable, conquest-proof strength. Still used for unrest, government wages and revolution cost. Other costs use <0>Average development</0>."
 msgstr "עוצמה יציבה ועמידה בפני כיבוש. עדיין משמשת לאי שקט, שכר ממשלתי ועלות מהפכה. עלויות אחרות משתמשות ב<0>התפתחות ממוצעת</0>."
 
@@ -12309,33 +12572,33 @@ msgstr ""
 msgid "Starforge Hammer"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:169
-#: src/components/_political/law/law.frontConfig.tsx:171
+#: src/components/_political/law/law.frontConfig.tsx:173
+#: src/components/_political/law/law.frontConfig.tsx:175
 msgid "Start a congress election, now"
 msgstr "התחל בחירות לקונגרס, עכשיו"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:51
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:53
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:50
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:52
 msgid "Start a party council election immediately"
 msgstr "התחל בחירות למועצת המפלגה מיד"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:71
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:73
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:70
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:72
 msgid "Start a party leader election immediately"
 msgstr "התחל מיד בבחירות לראשות המפלגה"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:105
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:107
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:89
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:91
 msgid "Start a party primary election immediately"
 msgstr "התחל בחירות מקדימות במפלגה מיד"
 
-#: src/components/_political/law/law.frontConfig.tsx:161
-#: src/components/_political/law/law.frontConfig.tsx:163
+#: src/components/_political/law/law.frontConfig.tsx:165
+#: src/components/_political/law/law.frontConfig.tsx:167
 msgid "Start a presidential election, now"
 msgstr "התחל בחירות לנשיאות, עכשיו"
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:114
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:116
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:98
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:100
 msgid "Start a revolution to overthrow the government"
 msgstr "להתחיל מהפכה כדי להפיל את הממשלה"
 
@@ -12343,12 +12606,12 @@ msgstr "להתחיל מהפכה כדי להפיל את הממשלה"
 msgid "Start an auction"
 msgstr ""
 
-#: src/components/_political/law/law.frontConfig.tsx:168
+#: src/components/_political/law/law.frontConfig.tsx:172
 #: src/components/_political/law/lawNames.tsx:19
 msgid "Start congress election"
 msgstr "התחל את הבחירות לקונגרס"
 
-#: src/components/_political/law/law.frontConfig.tsx:160
+#: src/components/_political/law/law.frontConfig.tsx:164
 #: src/components/_political/law/lawNames.tsx:17
 msgid "Start presidential election"
 msgstr "להתחיל בבחירות לנשיאות"
@@ -12357,7 +12620,7 @@ msgstr "להתחיל בבחירות לנשיאות"
 msgid "Start price"
 msgstr ""
 
-#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:113
+#: src/components/_political/partyMotion/partyMotion.frontConfig.tsx:97
 msgid "Start revolution"
 msgstr "להתחיל מהפכה"
 
@@ -12370,7 +12633,7 @@ msgstr "התחיל"
 msgid "Started <0/>"
 msgstr "התחיל <0/>"
 
-#: src/components/_military/battle/BattleHeader.tsx:201
+#: src/components/_military/battle/BattleHeader.tsx:255
 msgid "Started<0/><1/>"
 msgstr "התחיל<0/><1/>"
 
@@ -12400,7 +12663,7 @@ msgid "Starts"
 msgstr "מתחיל"
 
 #. placeholder {0}: gameConfig?.battle.enemyDamagesBonusPercent
-#: src/components/_political/law/law.frontConfig.tsx:237
+#: src/components/_political/law/law.frontConfig.tsx:241
 msgid "starts at 1% and grows +1% per day up to <0>{0}</0>"
 msgstr "מתחיל ב-1% וגדל ב-1% ליום עד ל-<0>{0}</0>"
 
@@ -12480,7 +12743,7 @@ msgstr "משאבים אסטרטגיים"
 msgid "Strategic resources have been reshuffled across the whole map."
 msgstr "משאבים אסטרטגיים נערכו מחדש על פני כל המפה."
 
-#: src/pages/country/[countryId]/index.tsx:414
+#: src/pages/country/[countryId]/index.tsx:415
 msgid "Strategic resources income"
 msgstr ""
 
@@ -12512,7 +12775,7 @@ msgstr "התחבר בהצלחה!"
 msgid "Sugar Daddy"
 msgstr "מאהב זקן"
 
-#: src/components/_political/country/CountryHeader.tsx:196
+#: src/components/_political/country/CountryHeader.tsx:200
 msgid "Sum of the regions the country currently controls. Market taxes and other income are not included."
 msgstr ""
 
@@ -12595,29 +12858,27 @@ msgstr ""
 msgid "Switched back to the flat map."
 msgstr ""
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:286
-#: src/components/_political/country/CountryTooltip.tsx:112
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:265
+#: src/components/_political/country/CountryTooltip.tsx:124
 msgid "Sworn enemy"
 msgstr "אויב מושבע"
 
-#. placeholder {0}: formatMultiplierDelta( ethicsBonuses.isolationism[2].enemyMaintenanceMultiplier, )
-#: src/components/_political/party/party.frontConfig.tsx:232
-msgid "Sworn enemy maintenance costs are increased by <0>{0}</0>."
-msgstr "עלויות אחזקת אויב מושבע גדלות ב-<0>{0}</0>."
+#: src/components/_political/govType/govType.frontConfig.tsx:286
+msgid "Sworn enemy bonus starts at {start}%, +{perDay}%/day, up to {cap}%"
+msgstr ""
 
-#. placeholder {0}: ethicsBonuses.isolationism['-1'].enemyFidelityStart
-#. placeholder {0}: ethicsBonuses.isolationism['-2'].enemyFidelityStart
-#. placeholder {1}: ethicsBonuses.isolationism['-1'].enemyFidelityPerDay
-#. placeholder {1}: ethicsBonuses.isolationism['-2'].enemyFidelityPerDay
+#: src/components/_political/party/party.frontConfig.tsx:232
+#~ msgid "Sworn enemy maintenance costs are increased by <0>{0}</0>."
+#~ msgstr "עלויות אחזקת אויב מושבע גדלות ב-<0>{0}</0>."
+
 #: src/components/_political/party/party.frontConfig.tsx:140
 #: src/components/_political/party/party.frontConfig.tsx:176
-msgid "Sworn enemy treaties start at <0>{0} fidelity</0> and gain <1>{1}</1> each day."
-msgstr "הסכמי אויב מושבע מתחילים ב-<0>{0} נאמנות</0> ומרוויחים <1>{1}</1> בכל יום."
+#~ msgid "Sworn enemy treaties start at <0>{0} fidelity</0> and gain <1>{1}</1> each day."
+#~ msgstr "הסכמי אויב מושבע מתחילים ב-<0>{0} נאמנות</0> ומרוויחים <1>{1}</1> בכל יום."
 
-#. placeholder {0}: ts.paper
 #: src/components/_military/battle/SetOrderFormModal.tsx:538
-msgid "Sworn enemy: orders against your sworn enemy cost {orderDiscountPercent}% less <0>{0}</0>"
-msgstr "אויב מושבע: פקודות נגד האויב המושבע שלך עולות {orderDiscountPercent}% פחות <0>{0}</0>"
+#~ msgid "Sworn enemy: orders against your sworn enemy cost {orderDiscountPercent}% less <0>{0}</0>"
+#~ msgstr "אויב מושבע: פקודות נגד האויב המושבע שלך עולות {orderDiscountPercent}% פחות <0>{0}</0>"
 
 #: src/components/_political/event/EventList.tsx:115
 msgid "System revolt"
@@ -12644,9 +12905,9 @@ msgstr ""
 msgid "Take care of an employee <0/> times in the company you manage"
 msgstr ""
 
-#: src/pages/country/[countryId]/index.tsx:120
-#: src/pages/country/[countryId]/index.tsx:144
-#: src/pages/country/[countryId]/index.tsx:149
+#: src/pages/country/[countryId]/index.tsx:122
+#: src/pages/country/[countryId]/index.tsx:146
+#: src/pages/country/[countryId]/index.tsx:151
 msgid "Take control"
 msgstr "להשתלט"
 
@@ -12687,19 +12948,19 @@ msgstr ""
 msgid "Tap for the full tier breakdown"
 msgstr ""
 
-#: src/components/_political/law/LawFormModal.tsx:203
+#: src/components/_political/law/LawFormModal.tsx:223
 msgid "Target country"
 msgstr "מדינת היעד"
 
-#: src/components/_political/law/LawFormModal.tsx:241
+#: src/components/_political/law/LawFormModal.tsx:261
 msgid "Target region"
 msgstr "אזור היעד"
 
-#: src/components/_political/law/LawFormModal.tsx:315
+#: src/components/_political/law/LawFormModal.tsx:335
 msgid "Target user"
 msgstr "משתמש יעד"
 
-#: src/components/_political/law/LawFormModal.tsx:261
+#: src/components/_political/law/LawFormModal.tsx:281
 msgid "Tax type"
 msgstr "סוג מס"
 
@@ -12930,6 +13191,22 @@ msgstr "הבונוס המלא של <0/> חל עד לחלק של <1/> מתוך ה
 msgid "The General retreats in good order."
 msgstr ""
 
+#: src/components/_political/law/LawFormModal.tsx:363
+msgid "The government type changed less than {GOV_TYPE_CHANGE_COOLDOWN_DAYS} days ago. It can change again <0/>."
+msgstr ""
+
+#: src/components/_political/law/LawGovTypeAlert.tsx:41
+msgid "The government type of this country forbids a sworn enemy."
+msgstr ""
+
+#: src/components/_political/law/LawGovTypeAlert.tsx:24
+msgid "The government type of this country forbids alliances."
+msgstr ""
+
+#: src/components/_political/law/LawGovTypeAlert.tsx:32
+msgid "The government type of this country forbids defensive pacts."
+msgstr ""
+
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1764
 msgid "The great soup debate"
 msgstr ""
@@ -13049,7 +13326,7 @@ msgstr "המהפכה ב-<0/> דוכאה. הממשלה נשארת בשלטון."
 msgid "The revolution in <0/> has succeeded! The government has been overthrown."
 msgstr "המהפכה ב-<0/> הצליחה! הממשלה הופלה."
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:375
+#: src/components/_layout/LayoutMapUserMenu.tsx:383
 msgid "The roll is skipped while you hold {maxLoots} uncollected cases"
 msgstr ""
 
@@ -13242,13 +13519,21 @@ msgstr ""
 msgid "This company is disabled because the owner reached the company limit."
 msgstr "החברה הזו מושבתת כי הבעלים הגיע למגבלת החברה."
 
-#: src/pages/country/[countryId]/index.tsx:124
+#: src/pages/country/[countryId]/index.tsx:126
 msgid "This country has no president or active congress member, you can take control of it."
 msgstr "למדינה הזו אין נשיא או חבר קונגרס פעיל, אתה יכול להשתלט עליה."
 
 #: src/components/_political/government/Government.tsx:72
-msgid "This country is Fanatic Imperialist: it cannot have ministers, only a president and vice president. Minister nominations will be rejected."
-msgstr "מדינה זו היא אימפריאליסטית קנאית: אין לה שרים, רק נשיא וסגן נשיא. מינויי שרים יידחו."
+#~ msgid "This country is Fanatic Imperialist: it cannot have ministers, only a president and vice president. Minister nominations will be rejected."
+#~ msgstr "מדינה זו היא אימפריאליסטית קנאית: אין לה שרים, רק נשיא וסגן נשיא. מינויי שרים יידחו."
+
+#: src/components/_political/government/Government.tsx:71
+msgid "This country's government type has no ministers and no congress, only a president and vice president. The president takes over the ministers' powers and they alone vote laws."
+msgstr ""
+
+#: src/components/_political/government/Government.tsx:71
+#~ msgid "This country's government type has no ministers, only a president and vice president. The president takes over the ministers' powers."
+#~ msgstr ""
 
 #: src/components/_political/map/MapLibreErrorBoundary.tsx:66
 msgid "This device can't display the map"
@@ -13290,7 +13575,7 @@ msgstr ""
 msgid "This is a summary of the loot you received from this battle. It includes any cases you got as well as the most valuable items from the shared loot pool."
 msgstr "זהו סיכום השלל שקיבלת מהקרב הזה. זה כולל את כל התיבות שקיבלת, כמו גם את הפריטים היקרים ביותר ממאגר השלל המשותף."
 
-#: src/components/_political/country/CountryHeader.tsx:284
+#: src/components/_political/country/CountryHeader.tsx:300
 msgid "This is the value used to calculate most costs: battle orders, alliance, sworn enemy and defensive pact maintenance, laws and upgrade upkeep."
 msgstr "זהו הערך המשמש לחישוב רוב העלויות: פקודות קרב, אחזקת ברית, אויב מושבע וברית הגנה, חוקים ואחזקת שדרוגים."
 
@@ -13302,20 +13587,20 @@ msgstr "זה מרכז החברה שלך. כאן אתה יכול לייצר פר�
 msgid "This is your team"
 msgstr "זו הקבוצה שלך"
 
-#: src/components/_political/law/LawTypeSelect.tsx:201
+#: src/components/_political/law/LawTypeSelect.tsx:199
 msgid "This law can be abusive and requires 5+ possible voters in the country."
 msgstr "החוק הזה יכול להיות פוגעני ומחייב 5+ מצביעים אפשריים במדינה."
 
-#: src/components/_political/law/LawTypeSelect.tsx:195
-#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:139
+#: src/components/_political/law/LawTypeSelect.tsx:193
+#: src/components/_political/partyMotion/PartyMotionTypeSelect.tsx:121
 msgid "This law has an additional variable cost"
 msgstr "לחוק זה עלות משתנה נוספת"
 
-#: src/components/_political/law/LawTypeSelect.tsx:210
+#: src/components/_political/law/LawTypeSelect.tsx:208
 msgid "This law requires at least {minActiveCitizen} active citizens (level 10+) in the country."
 msgstr "חוק זה מחייב לפחות {minActiveCitizen} אזרחים פעילים (רמה 10+) במדינה."
 
-#: src/components/_political/government/Government.tsx:266
+#: src/components/_political/government/Government.tsx:265
 msgid "This member won't be able to be nominated again for {cooldownDays} days."
 msgstr "חבר זה לא יוכל להיות מועמד שוב למשך {cooldownDays} ימים."
 
@@ -13384,7 +13669,7 @@ msgstr "הגיע הזמן לייצר!"
 msgid "Time to retire"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:385
+#: src/components/_layout/LayoutMapUserMenu.tsx:393
 msgid "Time until the next case roll"
 msgstr ""
 
@@ -13609,7 +13894,7 @@ msgstr "סך התרומות:"
 msgid "Total of <0/>"
 msgstr "סך הכל <0/>"
 
-#: src/components/_political/country/CountryDiplomacyGrid.tsx:409
+#: src/components/_political/country/CountryDiplomacyGrid.tsx:383
 msgid "Total of <0>{totalMaintenanceCostPerDay}</0>/day"
 msgstr "סך הכל <0>{totalMaintenanceCostPerDay}</0>/יום"
 
@@ -13779,18 +14064,18 @@ msgid "Transac."
 msgstr "עסק׳"
 
 #: src/components/_military/mu/MuHeader.tsx:167
-#: src/components/_political/country/CountryHeader.tsx:104
+#: src/components/_political/country/CountryHeader.tsx:108
 #: src/components/_political/party/PartyHeader.tsx:129
 #: src/pages/market/index.tsx:86
 #: src/pages/user/[userId]/index.tsx:237
 msgid "Transactions"
 msgstr "עסקאות"
 
-#: src/components/_political/law/law.frontConfig.tsx:408
+#: src/components/_political/law/law.frontConfig.tsx:412
 msgid "Transfer <0/> to <1/>"
 msgstr "העבר <0/> אל <1/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:402
+#: src/components/_political/law/law.frontConfig.tsx:406
 #: src/components/_political/law/lawNames.tsx:28
 msgid "Transfer money"
 msgstr "העבר כסף"
@@ -13811,7 +14096,7 @@ msgstr ""
 msgid "Travel to another region <0/> times"
 msgstr ""
 
-#: src/components/_political/party/PartyTooltip.tsx:136
+#: src/components/_political/party/PartyTooltip.tsx:91
 msgid "Treasurer"
 msgstr ""
 
@@ -13879,7 +14164,7 @@ msgstr "ממשק משתמש"
 msgid "Unblock (show content)"
 msgstr "בטל חסימה (הצג תוכן)"
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:363
+#: src/components/_layout/LayoutMapUserMenu.tsx:371
 msgid "Uncollected cases waiting on the map, out of {maxLoots}"
 msgstr ""
 
@@ -13896,22 +14181,20 @@ msgid "Unequip all"
 msgstr "בטל את כל הציוד"
 
 #: src/components/_political/party/party.frontConfig.tsx:372
-msgid "Unethical"
-msgstr "לא אתי"
+#~ msgid "Unethical"
+#~ msgstr "לא אתי"
 
 #: src/components/_political/law/LawEthicEffects.tsx:58
-msgid "Unethical countries cannot hold any treaty — this law cannot be enacted."
-msgstr "מדינות לא אתיות לא יכולות להחזיק בהסכם כלשהו — לא ניתן לחוקק חוק זה."
+#~ msgid "Unethical countries cannot hold any treaty — this law cannot be enacted."
+#~ msgstr "מדינות לא אתיות לא יכולות להחזיק בהסכם כלשהו — לא ניתן לחוקק חוק זה."
 
-#. placeholder {0}: ts.paper
 #: src/components/_military/battle/SetOrderFormModal.tsx:562
-msgid "Unethical: capital occupied, national orders give only the regular bonus but still cost ×2 <0>{0}</0>"
-msgstr "לא אתי: הבירה כבושה, פקודות לאומיות מעניקות רק את הבונוס הרגיל אך עדיין עולות פי 2 <0>{0}</0>"
+#~ msgid "Unethical: capital occupied, national orders give only the regular bonus but still cost ×2 <0>{0}</0>"
+#~ msgstr "לא אתי: הבירה כבושה, פקודות לאומיות מעניקות רק את הבונוס הרגיל אך עדיין עולות פי 2 <0>{0}</0>"
 
-#. placeholder {0}: ts.paper
 #: src/components/_military/battle/SetOrderFormModal.tsx:557
-msgid "Unethical: national orders deal ×2 damage but cost ×2 <0>{0}</0>"
-msgstr "לא אתי: פקודות לאומיות גורמות פי 2 נזק אך עולות פי 2 <0>{0}</0>"
+#~ msgid "Unethical: national orders deal ×2 damage but cost ×2 <0>{0}</0>"
+#~ msgstr "לא אתי: פקודות לאומיות גורמות פי 2 נזק אך עולות פי 2 <0>{0}</0>"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1788
 msgid "United in outrage against you, {name} and {partnerName} are inseparable now."
@@ -13959,9 +14242,19 @@ msgstr "בוטלה השתקה <0/>"
 msgid "Unreal. This doesn't happen"
 msgstr "דמיוני. זה לא קורה"
 
-#: src/pages/country/[countryId]/index.tsx:220
+#: src/pages/country/[countryId]/index.tsx:222
 msgid "Unrest"
 msgstr "אי שקט"
+
+#. placeholder {0}: effects.unrestCapMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:268
+msgid "Unrest bar x{0}"
+msgstr ""
+
+#. placeholder {0}: effects.unrestIncreaseMultiplier
+#: src/components/_political/govType/govType.frontConfig.tsx:261
+msgid "Unrest contributions x{0} when pushing the bar up"
+msgstr ""
 
 #: src/components/_political/contribution/ContributionList.tsx:196
 msgid "Unrest Contributors"
@@ -13971,8 +14264,8 @@ msgstr "תורמים לתסיסה"
 msgid "Unselect all"
 msgstr "בטל את הבחירה בכולם"
 
-#: src/components/_political/law/law.frontConfig.tsx:429
-#: src/components/_political/law/law.frontConfig.tsx:431
+#: src/components/_political/law/law.frontConfig.tsx:433
+#: src/components/_political/law/law.frontConfig.tsx:435
 msgid "Unset the sworn enemy country"
 msgstr "בטל את מדינת האויב המושבעת"
 
@@ -14366,7 +14659,7 @@ msgstr ""
 msgid "Vice Admiral"
 msgstr "סגן אדמירל"
 
-#: src/components/_political/government/Government.tsx:91
+#: src/components/_political/government/Government.tsx:90
 #: src/components/_political/government/GovernmentScroll.tsx:47
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:65
 #: src/components/_user/user/UserBadges.tsx:214
@@ -14381,11 +14674,11 @@ msgstr ""
 msgid "View details"
 msgstr "הצג פרטים"
 
-#: src/components/_military/battle/BattleHeader.tsx:131
+#: src/components/_military/battle/BattleHeader.tsx:185
 msgid "View on map"
 msgstr "צפה במפה"
 
-#: src/components/_military/battle/BattleHeader.tsx:213
+#: src/components/_military/battle/BattleHeader.tsx:267
 msgid "Viewers"
 msgstr ""
 
@@ -14468,7 +14761,7 @@ msgstr "אזהרה"
 msgid "Warrant Officer"
 msgstr "רב-נגד"
 
-#: src/components/_political/country/CountryHeader.tsx:122
+#: src/components/_political/country/CountryHeader.tsx:126
 msgid "Wars"
 msgstr "מלחמות"
 
@@ -14569,14 +14862,13 @@ msgstr "מה שהקרבות שאתה נלחם בהם שילמו לך עד כה (
 msgid "What your employees' Luck is expected to find in a day, at their current Luck and traits. Only hours that bank production roll a find, so a full storage or a disabled company finds nothing (Salvagers keep looking while the storage is full)."
 msgstr ""
 
-#. placeholder {0}: formatPercent( ethicsBonuses.militarism[2].pacificationDefenseBonusPerLevel, )
 #: src/components/_political/party/party.frontConfig.tsx:115
-msgid "When defending a revolt, gain an additional <0>{0}</0> battle bonus per Pacification Center level."
-msgstr "בעת הגנה על מרד, קבל בונוס קרב נוסף של <0>{0}</0> לכל רמת מרכז פסיפיקציה."
+#~ msgid "When defending a revolt, gain an additional <0>{0}</0> battle bonus per Pacification Center level."
+#~ msgstr "בעת הגנה על מרד, קבל בונוס קרב נוסף של <0>{0}</0> לכל רמת מרכז פסיפיקציה."
 
 #: src/components/_political/party/party.frontConfig.tsx:62
-msgid "When revolting, you copy the enemy's defensive battle bonus from Bunker region upgrades."
-msgstr "בעת מרד, אתה מעתיק את בונוס הקרב ההגנתי של האויב משדרוגי אזור הבונקר."
+#~ msgid "When revolting, you copy the enemy's defensive battle bonus from Bunker region upgrades."
+#~ msgstr "בעת מרד, אתה מעתיק את בונוס הקרב ההגנתי של האויב משדרוגי אזור הבונקר."
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:197
 msgid "When your <0>Health</0> runs out, open this menu to restore it with food."
@@ -14591,7 +14883,7 @@ msgid "White suit, gold everything"
 msgstr ""
 
 #: src/components/_political/allianceLaw/AllianceLawFormModal.tsx:134
-#: src/components/_political/law/LawFormModal.tsx:190
+#: src/components/_political/law/LawFormModal.tsx:210
 msgid "Why do you want to propose this law?"
 msgstr "למה אתה רוצה להציע את החוק הזה?"
 
@@ -14649,7 +14941,7 @@ msgstr "עץ"
 msgid "Wooden Case"
 msgstr ""
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:226
+#: src/components/_layout/LayoutMapUserMenu.tsx:235
 #: src/components/_political/map/MapMenu.tsx:192
 msgid "Wooden case collected!"
 msgstr ""
@@ -14726,7 +15018,7 @@ msgstr "גרוע ביותר"
 msgid "Wow congratulations! Anyway have you considered buying premium?"
 msgstr "וואו מזל טוב! בכל מקרה שקלת לקנות פרימיום?"
 
-#: src/components/_political/law/LawFormModal.tsx:179
+#: src/components/_political/law/LawFormModal.tsx:199
 #: src/components/_political/law/LawList.tsx:52
 msgid "Write a law"
 msgstr "כתוב חוק"
@@ -14772,19 +15064,19 @@ msgstr "אתה אדם יפה"
 msgid "You are a lucky bastard"
 msgstr "אתה ממזר בר מזל"
 
-#: src/pages/country/[countryId]/index.tsx:114
+#: src/pages/country/[countryId]/index.tsx:116
 msgid "You are already congress member of another country. Resign first."
 msgstr "אתה כבר חבר קונגרס של מדינה אחרת. קודם כל תתפטר."
 
-#: src/components/_layout/LayoutMapUserMenu.tsx:261
+#: src/components/_layout/LayoutMapUserMenu.tsx:269
 msgid "You are already home"
 msgstr ""
 
-#: src/pages/country/[countryId]/index.tsx:110
+#: src/pages/country/[countryId]/index.tsx:112
 msgid "You are already president of another country. Resign first."
 msgstr "אתה כבר נשיא של מדינה אחרת. קודם כל תתפטר."
 
-#: src/pages/country/[countryId]/index.tsx:112
+#: src/pages/country/[countryId]/index.tsx:114
 msgid "You are already vice president of another country. Resign first."
 msgstr "אתה כבר סגן נשיא של מדינה אחרת. קודם כל תתפטר."
 
@@ -14826,7 +15118,7 @@ msgstr "אתה לא משתתף"
 msgid "You are paid hourly and can resign after 24h."
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:473
+#: src/components/_military/hit/HitButton.tsx:429
 msgid "You are standing in this region, so you can fight here."
 msgstr ""
 
@@ -14986,12 +15278,12 @@ msgid "You have the highest bid. Your <0>{0}</0> is held until the auction ends.
 msgstr ""
 
 #. placeholder {0}: gameConfig?.user.canTakeControlAtLevel
-#: src/pages/country/[countryId]/index.tsx:106
+#: src/pages/country/[countryId]/index.tsx:108
 msgid "You have to be level {0} to take control of a country."
 msgstr "אתה צריך להיות ברמה {0} כדי להשתלט על מדינה."
 
 #. placeholder {0}: gameConfig?.user.takeControlCooldownInDays
-#: src/pages/country/[countryId]/index.tsx:108
+#: src/pages/country/[countryId]/index.tsx:110
 msgid "You have to wait {0} days before taking control of a country again."
 msgstr "עליך להמתין {0} ימים לפני שתשתלט שוב על מדינה."
 
@@ -15035,8 +15327,8 @@ msgid "You must be at least level {0} to vote."
 msgstr "עליך להיות לפחות ברמה {0} כדי להצביע."
 
 #: src/components/_political/government/PoliticalEthicsSelect.tsx:115
-msgid "You must spend all 3 ethics points ({pointsRemaining} remaining)"
-msgstr "עליך להוציא את כל 3 נקודות האתיקה ({pointsRemaining} נותרו)"
+#~ msgid "You must spend all 3 ethics points ({pointsRemaining} remaining)"
+#~ msgstr "עליך להוציא את כל 3 נקודות האתיקה ({pointsRemaining} נותרו)"
 
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:155
 msgid "You need a country to take part"
@@ -15308,7 +15600,7 @@ msgstr "הבאפ(ים) שלך יפוג תוך פחות משעה. שלב הדיב
 msgid "Your citizens will see <0/> in their battle list, with this message. It gives no bonus: it tells people where to spend their contributions."
 msgstr ""
 
-#: src/pages/country/[countryId]/index.tsx:145
+#: src/pages/country/[countryId]/index.tsx:147
 msgid "Your citizenship is going to change"
 msgstr "אזרחותך עומדת להשתנות"
 
@@ -15403,7 +15695,7 @@ msgstr ""
 msgid "Your Leadership {value}"
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:472
+#: src/components/_military/hit/HitButton.tsx:428
 msgid "Your location"
 msgstr ""
 
