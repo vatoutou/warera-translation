@@ -115,7 +115,7 @@ Translations should communicate the same meaning as the original while sounding 
 
 If you're unsure about a string, check its context or ask for clarification in your Pull Request or in WarEra discord
 
-### 5. Leave Untranslated Strings Empty
+### 5. Untranslated Strings Empty
 
 An empty `msgstr` indicates that a string has not yet been translated.
 
