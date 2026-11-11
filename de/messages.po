@@ -137,7 +137,7 @@ msgid "{0, plural, one {# winner} other {# winners}}"
 msgstr "{0, plural, one {# Gewinner} other {# Gewinner}}"
 
 #. placeholder {0}: totalBattles - maxBattles
-#: src/components/_layout/LayoutBattles.tsx:139
+#: src/components/_layout/LayoutBattles.tsx:142
 msgid "{0, plural, one {Battle} other {Battles}}"
 msgstr "{0, plural, one {Kampf} other {Kämpfe}}"
 
@@ -198,6 +198,8 @@ msgid "{0} days cooldown"
 msgstr "{0} Tage Abklingzeit"
 
 #. placeholder {0}: developmentPercent(core)
+#. placeholder {0}: developmentValue(total, '2xs')
+#: src/components/_economy/strategicResource/StrategicResourceBloc.tsx:143
 #: src/components/_political/govType/govType.frontConfig.tsx:178
 msgid "{0} development income"
 msgstr "{0} Entwicklungseinnahmen"
@@ -264,6 +266,11 @@ msgstr "{0} hat dich mit ${1}/K überboten"
 #: src/components/_political/govType/govType.frontConfig.tsx:221
 msgid "{0} payroll and manager tax income"
 msgstr "{0} Einnahmen aus Lohn- und Managersteuern"
+
+#. placeholder {0}: developmentValue(perCopy)
+#: src/components/_economy/strategicResource/StrategicResourceBloc.tsx:130
+msgid "{0} per strategic resource"
+msgstr ""
 
 #. placeholder {0}: data.userId && ( <UserUsername userId={data.userId} withAvatar withFlag /> )
 #: src/components/_user/notification/notification.frontConfig.tsx:699
@@ -342,6 +349,10 @@ msgstr "{completedCount}/{totalCount} abgeschlossen"
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:303
 msgid "{contribution} when anyone in the event has it."
 msgstr "{contribution}, wenn jemand im Ereignis darüber verfügt."
+
+#: src/components/_economy/strategicResource/StrategicResourceBloc.tsx:133
+msgid "{copies, plural, one {Currently # strategic resource.} other {Currently # strategic resources.}}"
+msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:820
 msgid "{count, plural, one {<0>Answer <1/> employee event</0>} other {<2>Answer <3/> employee events</2>}}"
@@ -1742,7 +1753,7 @@ msgstr "{named} und {counted}"
 msgid "{names}: decided while you were away"
 msgstr "{names}: während deiner Abwesenheit entschieden"
 
-#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:162
+#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:177
 msgid "{needed}+ copies"
 msgstr ""
 
@@ -2505,7 +2516,7 @@ msgid "<0/> won the round <1>#{0}</1> in <2/>!"
 msgstr "<0/> hat die Runde <1>#{0}</1> in <2/> gewonnen!"
 
 #. placeholder {0}: ts.paper
-#: src/components/_military/battle/SetOrderFormModal.tsx:462
+#: src/components/_military/battle/SetOrderFormModal.tsx:469
 msgid "<0/>: this order costs ×{orderCostMult} <1>{0}</1> and gives ×{orderDamageMult} damage bonus"
 msgstr "<0/>: dieser Befehl kostet ×{orderCostMult} <1>{0}</1> und gibt ×{orderDamageMult} Schadensbonus"
 
@@ -3979,7 +3990,7 @@ msgstr "Benutzer hinzufügen"
 msgid "Additional cost"
 msgstr "Zusatzkosten"
 
-#: src/components/_layout/LayoutRightIcons.tsx:153
+#: src/components/_layout/LayoutRightIcons.tsx:154
 #: src/components/_layout/MoreButtonNav.tsx:62
 #: src/components/_user/user/UserBadges.tsx:141
 msgid "Admin"
@@ -4411,7 +4422,7 @@ msgstr "Bist du sicher, dass du die Pille einnehmen möchtest?"
 msgid "Are you sure you want to demote this commander?"
 msgstr "Bist du sicher, dass du diesen Kommandeur degradieren möchtest?"
 
-#: src/components/_military/order/BattleOrderActions.tsx:73
+#: src/components/_military/order/useDisableBattleOrder.ts:41
 msgid "Are you sure you want to disable this battle order? This action cannot be undone."
 msgstr "Möchtest du diesen Schlachtbefehl wirklich deaktivieren? Diese Aktion kann nicht rückgängig gemacht werden."
 
@@ -4587,7 +4598,7 @@ msgstr "AT taktisches Schild"
 msgid "AT Tactical Vest"
 msgstr "AT taktische Weste"
 
-#: src/components/_military/battle/BattleSystem.tsx:716
+#: src/components/_military/battle/BattleSystem.tsx:718
 msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
 msgstr "Am Ende des Timers werden <0>{actualTickPoints}</0> der Seite mit dem meisten Schaden zugewiesen."
 
@@ -4603,7 +4614,7 @@ msgstr "Auf deiner Managementstufe"
 msgid "Atlas"
 msgstr "Atlas"
 
-#: src/components/_military/hit/HitButton.tsx:527
+#: src/components/_military/hit/HitButton.tsx:484
 #: src/components/_political/map/MapMenu.tsx:468
 #: src/components/_user/user/skills.frontConfig.tsx:57
 #: src/components/_user/user/skills.frontConfig.tsx:58
@@ -4908,7 +4919,7 @@ msgstr "Schlachtbefehle"
 msgid "Battlefield Loot"
 msgstr "Schlachtfeldbeute"
 
-#: src/components/_layout/LayoutMenu.tsx:149
+#: src/components/_layout/LayoutMenu.tsx:153
 #: src/components/_military/battle/BattlesHeader.tsx:22
 #: src/components/_military/war/WarHeader.tsx:55
 #: src/components/_military/war/WarHeader.tsx:85
@@ -5071,8 +5082,8 @@ msgstr "Beide drehen den falschen Regler den ganzen Tag und fühlen sich dabei p
 msgid "Bounty"
 msgstr "Kopfgeld"
 
-#: src/components/_military/battle/BattleSystem.tsx:953
-#: src/components/_military/battle/BattleSystem.tsx:963
+#: src/components/_military/battle/BattleSystem.tsx:955
+#: src/components/_military/battle/BattleSystem.tsx:965
 msgid "Bounty cooldown"
 msgstr "Kopfgeld-Abklingzeit"
 
@@ -5080,7 +5091,7 @@ msgstr "Kopfgeld-Abklingzeit"
 msgid "Bounty earned"
 msgstr "Verdientes Kopfgeld"
 
-#: src/components/_military/battle/BattleSystem.tsx:939
+#: src/components/_military/battle/BattleSystem.tsx:941
 msgid "Bounty will be available in"
 msgstr "Kopfgeld verfügbar in"
 
@@ -5127,7 +5138,7 @@ msgstr "kaputt"
 msgid "Broken"
 msgstr "Kaputt"
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:234
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:256
 msgid "Broken: no longer boosts Production"
 msgstr "Kaputt: steigert die Produktion nicht mehr"
 
@@ -5687,11 +5698,11 @@ msgstr "Staatsbürgerschaftsanträge"
 msgid "Citizenship of this country, active and level {0}+"
 msgstr "Aktive Staatsbürgerschaft dieses Landes, Stufe {0}+"
 
-#: src/components/_military/battle/BattleSystem.tsx:395
+#: src/components/_military/battle/BattleSystem.tsx:397
 msgid "Civil war"
 msgstr "Bürgerkrieg"
 
-#: src/components/_other/tour/TutorialFloatingGuide.tsx:55
+#: src/components/_other/tour/TutorialFloatingGuide.tsx:56
 #: src/components/_other/tour/TutorialGuidesList.tsx:58
 #: src/components/_user/milestone/MilestoneItem.tsx:324
 #: src/components/_user/mission/MissionItem.tsx:268
@@ -5793,7 +5804,7 @@ msgstr "Klima"
 msgid "Climber"
 msgstr "Karrierist"
 
-#: ../__ui/src/components/Modal/Modal.tsx:349
+#: ../__ui/src/components/Modal/Modal.tsx:355
 #: src/components/_economy/company/CompanyCardHeader.tsx:141
 #: src/components/_other/tour/TutorialChapterEndModal.tsx:322
 #: src/components/_political/map/MapMenu.tsx:277
@@ -5893,7 +5904,7 @@ msgstr ""
 msgid "Community"
 msgstr "Community"
 
-#: src/components/_layout/LayoutMenu.tsx:193
+#: src/components/_layout/LayoutMenu.tsx:197
 #: src/components/_political/region/RegionHeader.tsx:112
 #: src/components/_user/user/MyAvatar.tsx:47
 #: src/components/_user/user/UserHeader.tsx:227
@@ -6247,7 +6258,7 @@ msgid "Countries"
 msgstr "Länder"
 
 #: src/components/_economy/company/RecommendedCompanyRegions.tsx:155
-#: src/components/_layout/LayoutRightIcons.tsx:233
+#: src/components/_layout/LayoutRightIcons.tsx:234
 #: src/components/_layout/MoreButtonNav.tsx:128
 #: src/components/_military/battle/ActiveBattlesList.tsx:146
 #: src/components/_military/battle/BattleCountrySide.tsx:73
@@ -6474,7 +6485,7 @@ msgstr "Aktuelle Militäreinheit"
 msgid "Current nationality"
 msgstr "Aktuelle Staatsbürgerschaft"
 
-#: src/components/_military/battle/BattleSystem.tsx:735
+#: src/components/_military/battle/BattleSystem.tsx:737
 msgid "Current tick:"
 msgstr "Aktueller Tick:"
 
@@ -6482,7 +6493,7 @@ msgstr "Aktueller Tick:"
 msgid "Current tier"
 msgstr "Aktuelle Stufe"
 
-#: src/components/_military/battle/BattleSystem.tsx:725
+#: src/components/_military/battle/BattleSystem.tsx:727
 msgid "Current total:"
 msgstr "Aktuelle Gesamtsumme:"
 
@@ -6732,7 +6743,7 @@ msgstr "Deepcut-Spitzhacke"
 msgid "Deeply disappointed, but still here."
 msgstr "Tief enttäuscht, aber immer noch da."
 
-#: src/components/_military/hit/HitButton.tsx:530
+#: src/components/_military/hit/HitButton.tsx:487
 msgid "Defend"
 msgstr "Verteidigen"
 
@@ -6976,7 +6987,8 @@ msgstr "Erlittenen Schaden verringern"
 msgid "Diplomacy"
 msgstr "Diplomatie"
 
-#: src/components/_military/order/BattleOrderActions.tsx:98
+#: src/components/_military/battle/SetOrderFormModal.tsx:504
+#: src/components/_military/order/BattleOrderActions.tsx:71
 msgid "Disable"
 msgstr "Deaktivieren"
 
@@ -6984,7 +6996,7 @@ msgstr "Deaktivieren"
 msgid "Disable company"
 msgstr "Unternehmen deaktivieren"
 
-#: src/components/_military/order/BattleOrderActions.tsx:72
+#: src/components/_military/order/useDisableBattleOrder.ts:40
 msgid "Disable Order"
 msgstr "Befehl deaktivieren"
 
@@ -7267,7 +7279,7 @@ msgstr "Wirtschaft & Unternehmen"
 msgid "Economy first"
 msgstr "Wirtschaft zuerst"
 
-#: src/components/_military/order/BattleOrderActions.tsx:91
+#: src/components/_military/order/BattleOrderActions.tsx:64
 #: src/components/_political/party/PartyCongressList.tsx:65
 msgid "Edit"
 msgstr "Bearbeiten"
@@ -7320,11 +7332,11 @@ msgstr "Die Position bearbeiten"
 msgid "Edit title and rights"
 msgstr ""
 
-#: src/components/_military/battle/SetOrderFormModal.tsx:423
+#: src/components/_military/battle/SetOrderFormModal.tsx:430
 msgid "Editing an existing order"
 msgstr "Vorhandenen Befehl bearbeiten"
 
-#: src/components/_military/battle/SetOrderFormModal.tsx:421
+#: src/components/_military/battle/SetOrderFormModal.tsx:428
 msgid "Editing another order"
 msgstr "Einen anderen Befehl bearbeiten"
 
@@ -7518,7 +7530,7 @@ msgstr "Verteidigungsbündnis mit <0/> auflösen."
 msgid "End this poll?"
 msgstr "Diese Umfrage beenden?"
 
-#: src/components/_military/battle/BattleSystem.tsx:847
+#: src/components/_military/battle/BattleSystem.tsx:849
 #: src/components/_military/tournament/TournamentHeader.tsx:85
 #: src/components/_military/war/WarHeader.tsx:70
 msgid "Ended"
@@ -7632,8 +7644,8 @@ msgstr "Geschätztes tägliches Einkommen"
 msgid "Estimated from current development, rosters, managers and tax rates. Updated hourly."
 msgstr "Schätzung anhand der aktuellen Entwicklung, Mitarbeiterlisten, Manager und Steuersätze. Wird stündlich aktualisiert."
 
-#: src/components/_military/battle/BattleSystem.tsx:520
-#: src/components/_military/battle/BattleSystem.tsx:560
+#: src/components/_military/battle/BattleSystem.tsx:522
+#: src/components/_military/battle/BattleSystem.tsx:562
 msgid "Estimated minimum time for this side to win the current round if all ticks are won."
 msgstr "Geschätzte Mindestzeit, bis diese Seite die Runde gewinnt, wenn sie alle Ticks holt."
 
@@ -7667,7 +7679,7 @@ msgid "Event Luck checks"
 msgstr "Glücksprüfungen bei Ereignissen"
 
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:181
-#: src/components/_layout/LayoutRightIcons.tsx:266
+#: src/components/_layout/LayoutRightIcons.tsx:267
 #: src/components/_layout/MoreButtonNav.tsx:91
 #: src/pages/country/[countryId]/index.tsx:254
 msgid "Events"
@@ -7964,7 +7976,7 @@ msgstr "Föderation"
 msgid "Fee"
 msgstr "Kaution"
 
-#: src/components/_layout/LayoutRightIcons.tsx:276
+#: src/components/_layout/LayoutRightIcons.tsx:277
 #: src/components/_layout/MoreButtonNav.tsx:83
 msgid "Feed"
 msgstr "Feed"
@@ -8550,7 +8562,7 @@ msgstr "Regierungsbekanntmachung"
 msgid "Government Member"
 msgstr "Regierungsmitglied"
 
-#: src/components/_military/battle/BattleSystem.tsx:913
+#: src/components/_military/battle/BattleSystem.tsx:915
 msgid "Government penalty"
 msgstr "Regierungsstrafe"
 
@@ -8669,13 +8681,17 @@ msgstr "Grimdark-Panzer"
 msgid "Ground"
 msgstr "Boden"
 
-#: src/components/_military/battle/BattleSystem.tsx:774
+#: src/components/_military/battle/BattleSystem.tsx:776
 msgid "ground per tick"
 msgstr "Boden pro Tick"
 
 #: src/components/_military/damageRanking/DamageRankingSides.tsx:147
 msgid "Ground points"
 msgstr "Bodenpunkte"
+
+#: src/components/_political/region/ResistanceBar.tsx:43
+msgid "Grows <0>{growthMin}-{growthMax}%</0> per hour while the region is occupied, decays <1>{decay}%</1> per hour once it is back with its owner.<2/><3/>Spend <4>{cost}</4> or <5>{cost}</5> to add <6>{value}</6>, or <7>{citizenValue}</7> as a citizen of the original country.<8/><9/>Once full, the original country's government can start a liberation battle for <10>development × {startCost}</10>. Its citizens deal up to <11>+{citizenBonus}%</11> and allies up to <12>+{allyBonus}%</12>, scaled by how full the bar is.<13/><14/>The battle empties the bar. If it is lost, the country's other regions held by the same occupier lose {otherRegionsLoss}% of theirs."
+msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:338
 msgid "GSG9 Armored Tank"
@@ -8725,7 +8741,7 @@ msgstr "GSG9 Schlagstock"
 msgid "GSG9 Tactical Vest"
 msgstr "GSG9 taktische Weste"
 
-#: src/components/_other/tour/TutorialFloatingGuide.tsx:55
+#: src/components/_other/tour/TutorialFloatingGuide.tsx:56
 msgid "Guide"
 msgstr "Anleitung"
 
@@ -9005,7 +9021,7 @@ msgid "Hit until your <0>Health</0> runs out again."
 msgstr "Schlage zu, bis deine <0>Gesundheit</0> wieder aufgebraucht ist."
 
 #. placeholder {0}: staticGameConfig.battle.govMemberBountyRewardPercent
-#: src/components/_military/battle/BattleSystem.tsx:915
+#: src/components/_military/battle/BattleSystem.tsx:917
 msgid "Hitting for your own country while in government gives {0}% bounty efficiency."
 msgstr "Das Kämpfen für das eigene Land, während man in der Regierung ist, gibt {0}% Kopfgeld-Effizienz."
 
@@ -9250,8 +9266,8 @@ msgstr "Ihn interviewen"
 msgid "Introduce yourself!"
 msgstr "Stell dich vor!"
 
-#: src/components/_layout/LayoutMenu.tsx:99
-#: src/components/_layout/LayoutUserMenu.tsx:174
+#: src/components/_layout/LayoutMenu.tsx:103
+#: src/components/_layout/LayoutUserMenu.tsx:178
 #: src/components/_user/user/MyAvatar.tsx:35
 #: src/components/_user/user/UserHeader.tsx:166
 #: src/pages/companies.tsx:136
@@ -10298,7 +10314,7 @@ msgid "Map textures"
 msgstr "Kartentexturen"
 
 #: src/components/_economy/market/MarketHeader.tsx:38
-#: src/components/_layout/LayoutMenu.tsx:182
+#: src/components/_layout/LayoutMenu.tsx:186
 #: src/components/_user/level/levelTrack.frontConfig.tsx:61
 #: src/pages/country/[countryId]/account.tsx:31
 #: src/pages/party/[partyId]/account.tsx:24
@@ -10832,7 +10848,7 @@ msgstr ""
 msgid "Morale is set live by traits and conditions."
 msgstr "Die Moral wird laufend durch Eigenschaften und Bedingungen bestimmt."
 
-#: src/components/_layout/LayoutLeftIcons.tsx:234
+#: src/components/_layout/LayoutLeftIcons.tsx:235
 #: src/components/_layout/MoreButtonNav.tsx:191
 msgid "More"
 msgstr "Mehr"
@@ -10966,7 +10982,7 @@ msgstr ""
 msgid "Moving your home to another region costs <0>{homeMoveConcreteCost}</0>."
 msgstr "Deinen Wohnsitz in eine andere Region zu verlegen kostet <0>{homeMoveConcreteCost}</0>."
 
-#: src/components/_layout/LayoutMenu.tsx:133
+#: src/components/_layout/LayoutMenu.tsx:137
 #: src/components/_military/tournament/TournamentHeader.tsx:55
 #: src/components/_military/tournament/TournamentItem.tsx:54
 msgid "MU"
@@ -11079,7 +11095,7 @@ msgstr "Name"
 msgid "Name reset"
 msgstr "Name zurückgesetzt"
 
-#: src/components/_military/battle/BattleSystem.tsx:901
+#: src/components/_military/battle/BattleSystem.tsx:903
 msgid "National bounty"
 msgstr "Nationales Kopfgeld"
 
@@ -11310,7 +11326,7 @@ msgstr "Neuer Arbeiter"
 msgid "Newest"
 msgstr "Neueste"
 
-#: src/components/_layout/LayoutRightIcons.tsx:216
+#: src/components/_layout/LayoutRightIcons.tsx:217
 #: src/components/_layout/MoreButtonNav.tsx:109
 msgid "News"
 msgstr "News"
@@ -11340,7 +11356,7 @@ msgstr "Kosten des nächsten Punktes"
 msgid "Next reward"
 msgstr "Nächste Belohnung"
 
-#: src/components/_military/battle/BattleSystem.tsx:711
+#: src/components/_military/battle/BattleSystem.tsx:713
 msgid "Next tick"
 msgstr "Nächster Tick"
 
@@ -11877,7 +11893,7 @@ msgstr "Nicht begonnen"
 msgid "not usable in this company"
 msgstr "in diesem Unternehmen nicht verwendbar"
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:236
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:258
 msgid "Not usable in this company"
 msgstr "In diesem Unternehmen nicht verwendbar"
 
@@ -12222,7 +12238,7 @@ msgstr "oder"
 msgid "Or swap with"
 msgstr "Oder tauschen mit"
 
-#: src/components/_military/order/BattleOrderTags.tsx:28
+#: src/components/_military/order/BattleOrderTags.tsx:30
 msgid "Order"
 msgstr "Befehl"
 
@@ -12230,7 +12246,7 @@ msgstr "Befehl"
 msgid "Order a crate for everyone"
 msgstr "Eine Kiste für alle bestellen"
 
-#: src/components/_military/order/BattleOrderActions.tsx:49
+#: src/components/_military/order/useDisableBattleOrder.ts:20
 msgid "Order disabled successfully!"
 msgstr "Befehl erfolgreich deaktiviert!"
 
@@ -12398,7 +12414,7 @@ msgstr "Parteien"
 msgid "Parties can no longer start resistance"
 msgstr "Parteien können keinen Widerstand mehr beginnen"
 
-#: src/components/_layout/LayoutRightIcons.tsx:243
+#: src/components/_layout/LayoutRightIcons.tsx:244
 #: src/components/_layout/MoreButtonNav.tsx:137
 #: src/components/_political/party/PartyHeader.tsx:74
 #: src/components/_user/notification/notificationPrefs.categories.ts:169
@@ -12597,6 +12613,11 @@ msgstr "Ausstehend"
 #: src/components/_political/event/event.frontConfig.tsx:422
 msgid "People are angry, an auto revolt has started in <0/>"
 msgstr "Die Menschen sind wütend, eine automatische Revolte hat in <0/> begonnen"
+
+#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:139
+#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:229
+msgid "per copy"
+msgstr ""
 
 #: src/components/_political/region/IncomeEstimateBreakdown.tsx:90
 #: src/pages/country/[countryId]/index.tsx:405
@@ -13125,7 +13146,7 @@ msgstr "Gewinn"
 msgid "Program Article Link (optional)"
 msgstr ""
 
-#: src/components/_layout/LayoutRightIcons.tsx:182
+#: src/components/_layout/LayoutRightIcons.tsx:183
 #: src/components/_layout/MoreButtonNav.tsx:100
 #: src/components/_other/tour/tuto.frontConfig.tsx:582
 #: src/components/_user/mission/ProgressHeader.tsx:61
@@ -13350,7 +13371,7 @@ msgstr "Ranglistenbelohnung"
 msgid "Rankings"
 msgstr "Ranglisten"
 
-#: src/components/_layout/LayoutRightIcons.tsx:254
+#: src/components/_layout/LayoutRightIcons.tsx:255
 msgid "Ranks"
 msgstr "Ränge"
 
@@ -13618,7 +13639,7 @@ msgstr "Ablehnen"
 msgid "Refuse and leave?"
 msgstr "Ablehnen und gehen?"
 
-#: src/components/_layout/LayoutUserMenu.tsx:225
+#: src/components/_layout/LayoutUserMenu.tsx:229
 msgid "Regen in..."
 msgstr "Regen. in..."
 
@@ -13766,11 +13787,11 @@ msgstr "Ihn ablehnen"
 msgid "Rejected"
 msgstr "Abgelehnt"
 
-#: src/components/_layout/LayoutUserMenu.tsx:251
+#: src/components/_layout/LayoutUserMenu.tsx:255
 msgid "Remaining buff duration"
 msgstr "Verbleibende Buff-Dauer"
 
-#: src/components/_layout/LayoutUserMenu.tsx:264
+#: src/components/_layout/LayoutUserMenu.tsx:268
 msgid "Remaining debuff duration"
 msgstr "Verbleibende Debuff-Dauer"
 
@@ -14045,7 +14066,7 @@ msgstr "Einwohner (hier wohnhaft)"
 msgid "Resign from this position?"
 msgstr "Von dieser Position zurücktreten?"
 
-#: src/components/_military/hit/HitButton.tsx:525
+#: src/components/_military/hit/HitButton.tsx:482
 #: src/components/_user/mission/mission.frontConfig.tsx:873
 msgid "Resist"
 msgstr "Widersetzen"
@@ -14108,7 +14129,7 @@ msgstr "Auf Nationalität beschränken"
 msgid "Resume"
 msgstr "Fortsetzen"
 
-#: src/components/_other/tour/TutorialFloatingGuide.tsx:55
+#: src/components/_other/tour/TutorialFloatingGuide.tsx:56
 msgid "Resume guide"
 msgstr "Anleitung fortsetzen"
 
@@ -14251,8 +14272,8 @@ msgstr "Runde endet bald"
 msgid "Round ended"
 msgstr "Runde beendet"
 
-#: src/components/_military/battle/BattleSystem.tsx:518
-#: src/components/_military/battle/BattleSystem.tsx:558
+#: src/components/_military/battle/BattleSystem.tsx:520
+#: src/components/_military/battle/BattleSystem.tsx:560
 msgid "Round ETA"
 msgstr "Runden-ETA"
 
@@ -14273,7 +14294,7 @@ msgstr "Gewonnene Runden"
 msgid "Rounds Won"
 msgstr "Gewonnene Runden"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:225
+#: src/components/_layout/LayoutLeftIcons.tsx:226
 #: src/components/_user/auth/WelcomeModal.tsx:308
 msgid "Rules"
 msgstr "Regeln"
@@ -14685,7 +14706,7 @@ msgstr "Lege dein Profilbild fest"
 msgid "Set your username"
 msgstr "Lege deinen Benutzernamen fest"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:212
+#: src/components/_layout/LayoutLeftIcons.tsx:213
 #: src/components/_layout/SettingsModal.tsx:13
 #: src/components/_military/mu/MuHeader.tsx:191
 #: src/components/_user/user/MyAvatar.tsx:53
@@ -14697,7 +14718,7 @@ msgstr "Einstellungen"
 msgid "Share of active players who reached each tier, refreshed daily."
 msgstr "Anteil aktiver Spieler, die jede Stufe erreicht haben; tägliche Aktualisierung."
 
-#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:173
+#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:235
 msgid "Shared with the whole alliance."
 msgstr ""
 
@@ -14709,7 +14730,7 @@ msgstr "Glanz"
 msgid "Shoo it away"
 msgstr "Es verscheuchen"
 
-#: src/components/_layout/LayoutRightIcons.tsx:195
+#: src/components/_layout/LayoutRightIcons.tsx:196
 #: src/components/_layout/MoreButtonNav.tsx:70
 #: src/components/_other/shop/ShopHeader.tsx:53
 msgid "Shop"
@@ -15170,7 +15191,7 @@ msgstr "Statistisch manipuliert"
 msgid "Stats"
 msgstr "Statistiken"
 
-#: src/components/_layout/LayoutUserMenu.tsx:226
+#: src/components/_layout/LayoutUserMenu.tsx:230
 msgid "Stats regenerate every hour"
 msgstr "Statistiken regenerieren sich jede Stunde"
 
@@ -16345,7 +16366,7 @@ msgstr "Sie arbeiten jede Stunde für dich, auch wenn du offline bist."
 msgid "This action will submit your MU bid for this contract."
 msgstr "Damit gibst du das Gebot deiner ME für diesen Vertrag ab."
 
-#: src/components/_military/battle/BattleSystem.tsx:902
+#: src/components/_military/battle/BattleSystem.tsx:904
 msgid "This bounty is reserved for nationals only."
 msgstr "Dieses Kopfgeld ist nur für Staatsbürger verfügbar."
 
@@ -16659,7 +16680,7 @@ msgid "Took a job offer from a rival firm."
 msgstr "Hat ein Jobangebot eines Konkurrenzunternehmens angenommen."
 
 #: src/components/_economy/employee/employee.traitMeta.ts:87
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:272
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:294
 #: src/components/_economy/employee/EmployeeTooltip.tsx:177
 #: src/components/_economy/employee/EmployeeTooltip.tsx:188
 #: src/components/_economy/employee/ToolSelectorModal.tsx:130
@@ -16671,11 +16692,11 @@ msgstr "Werkzeug"
 msgid "Tool <0>fully repaired</0>"
 msgstr "Werkzeug <0>vollständig repariert</0>"
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:80
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:85
 msgid "Tool given"
 msgstr "Werkzeug übergeben"
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:85
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:107
 #: src/components/_economy/inventory/Inventory.tsx:704
 msgid "Tool taken back"
 msgstr "Werkzeug zurückgenommen"
@@ -16707,7 +16728,7 @@ msgstr "Werkzeugkisten pro Stunde"
 msgid "Tools"
 msgstr "Werkzeuge"
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:222
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:244
 msgid "Tools give a boost to <0>Production</0>. They come out of <1>Toolboxes</1>, found by your employees' Luck."
 msgstr "Werkzeuge steigern die <0>Produktion</0>. Sie stammen aus <1>Werkzeugkisten</1>, die deine Mitarbeiter dank ihres Glücks finden."
 
@@ -16769,7 +16790,7 @@ msgstr "Klassenbester: Jetzt gibt es viel mehr zu trainieren."
 msgid "Top of the hill"
 msgstr "Gipfelstürmer"
 
-#: src/components/_military/battle/BattleSystem.tsx:765
+#: src/components/_military/battle/BattleSystem.tsx:767
 msgid "total"
 msgstr "Gesamt"
 
@@ -17399,7 +17420,7 @@ msgstr "Benutzername entfernt"
 msgid "Users"
 msgstr "Benutzer"
 
-#: src/components/_layout/LayoutUserMenu.tsx:277
+#: src/components/_layout/LayoutUserMenu.tsx:281
 msgid "Users online"
 msgstr "Spieler online"
 
@@ -17812,7 +17833,7 @@ msgstr "Willkommen in deiner Wirtschaft!"
 msgid "Well done! Here is your reward."
 msgstr "Gut gemacht! Hier ist deine Belohnung."
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:247
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:269
 msgid "What a day of the extra production this tool gives is worth at the market value of a point. An estimate: what you really earn depends on what you make and the price you sell it at."
 msgstr "Der Marktwert der zusätzlichen Tagesproduktion, die dieses Werkzeug ermöglicht. Ein Schätzwert: Was du tatsächlich verdienst, hängt davon ab, was du herstellst und zu welchem Preis du es verkaufst."
 
@@ -18127,7 +18148,7 @@ msgstr "Du nimmst nicht teil"
 msgid "You are paid hourly and can resign after 24h."
 msgstr "Du wirst stündlich bezahlt und kannst nach 24 Stunden kündigen."
 
-#: src/components/_military/hit/HitButton.tsx:464
+#: src/components/_military/hit/HitButton.tsx:429
 msgid "You are standing in this region, so you can fight here."
 msgstr "Du befindest dich in dieser Region und kannst hier kämpfen."
 
@@ -18722,7 +18743,7 @@ msgstr "Deine Regierung bittet dich hier den Widerstand zu unterstützen."
 msgid "Your infos have been saved."
 msgstr "Deine Informationen wurden gespeichert."
 
-#: src/components/_military/hit/HitButton.tsx:463
+#: src/components/_military/hit/HitButton.tsx:428
 msgid "Your location"
 msgstr "Dein Standort"
 
@@ -18889,10 +18910,10 @@ msgstr "deine@email.de"
 msgid "Yours"
 msgstr "Deine"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:159
+#: src/components/_layout/LayoutLeftIcons.tsx:160
 msgid "Zoom in"
 msgstr "Vergrößern"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:167
+#: src/components/_layout/LayoutLeftIcons.tsx:168
 msgid "Zoom out"
 msgstr "Verkleinern"

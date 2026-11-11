@@ -137,7 +137,7 @@ msgid "{0, plural, one {# winner} other {# winners}}"
 msgstr "{0, plural, one {# победник} few {# победника} other {# победника}}"
 
 #. placeholder {0}: totalBattles - maxBattles
-#: src/components/_layout/LayoutBattles.tsx:139
+#: src/components/_layout/LayoutBattles.tsx:142
 msgid "{0, plural, one {Battle} other {Battles}}"
 msgstr "{0, plural, one {битка} few {битке} other {битака}}"
 
@@ -198,6 +198,8 @@ msgid "{0} days cooldown"
 msgstr "Период чекања: {0} дана"
 
 #. placeholder {0}: developmentPercent(core)
+#. placeholder {0}: developmentValue(total, '2xs')
+#: src/components/_economy/strategicResource/StrategicResourceBloc.tsx:143
 #: src/components/_political/govType/govType.frontConfig.tsx:178
 msgid "{0} development income"
 msgstr "{0} прихода од развоја"
@@ -264,6 +266,11 @@ msgstr "{0} те је надмашио ценом од ${1}/К"
 #: src/components/_political/govType/govType.frontConfig.tsx:221
 msgid "{0} payroll and manager tax income"
 msgstr "{0} прихода од пореза на запослене и менаџере"
+
+#. placeholder {0}: developmentValue(perCopy)
+#: src/components/_economy/strategicResource/StrategicResourceBloc.tsx:130
+msgid "{0} per strategic resource"
+msgstr ""
 
 #. placeholder {0}: data.userId && ( <UserUsername userId={data.userId} withAvatar withFlag /> )
 #: src/components/_user/notification/notification.frontConfig.tsx:699
@@ -342,6 +349,10 @@ msgstr "{completedCount}/{totalCount} завршено"
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:303
 msgid "{contribution} when anyone in the event has it."
 msgstr "{contribution} ако ову особину има било ко од учесника."
+
+#: src/components/_economy/strategicResource/StrategicResourceBloc.tsx:133
+msgid "{copies, plural, one {Currently # strategic resource.} other {Currently # strategic resources.}}"
+msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:820
 msgid "{count, plural, one {<0>Answer <1/> employee event</0>} other {<2>Answer <3/> employee events</2>}}"
@@ -1742,7 +1753,7 @@ msgstr "{named} и {counted}"
 msgid "{names}: decided while you were away"
 msgstr "{names}: одлучено док те није било"
 
-#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:162
+#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:177
 msgid "{needed}+ copies"
 msgstr ""
 
@@ -2505,7 +2516,7 @@ msgid "<0/> won the round <1>#{0}</1> in <2/>!"
 msgstr "<0/> је остварио победу у рунди <1>#{0}</1> у <2/>!"
 
 #. placeholder {0}: ts.paper
-#: src/components/_military/battle/SetOrderFormModal.tsx:462
+#: src/components/_military/battle/SetOrderFormModal.tsx:469
 msgid "<0/>: this order costs ×{orderCostMult} <1>{0}</1> and gives ×{orderDamageMult} damage bonus"
 msgstr "<0/>: ово наређење кошта ×{orderCostMult} <1>{0}</1> и даје ×{orderDamageMult} бонус на штету"
 
@@ -3979,7 +3990,7 @@ msgstr "Додај корисника"
 msgid "Additional cost"
 msgstr "Додатни трошак"
 
-#: src/components/_layout/LayoutRightIcons.tsx:153
+#: src/components/_layout/LayoutRightIcons.tsx:154
 #: src/components/_layout/MoreButtonNav.tsx:62
 #: src/components/_user/user/UserBadges.tsx:141
 msgid "Admin"
@@ -4411,7 +4422,7 @@ msgstr "Да ли сигурно желиш да попијеш пилулу?"
 msgid "Are you sure you want to demote this commander?"
 msgstr "Да ли сигурно желиш да смениш овог команданта?"
 
-#: src/components/_military/order/BattleOrderActions.tsx:73
+#: src/components/_military/order/useDisableBattleOrder.ts:41
 msgid "Are you sure you want to disable this battle order? This action cannot be undone."
 msgstr "Да ли сигурно желиш да онемогућиш ово наређење? Ова радња се не може поништити."
 
@@ -4587,7 +4598,7 @@ msgstr "AT тактички штит"
 msgid "AT Tactical Vest"
 msgstr "AT тактички прслук"
 
-#: src/components/_military/battle/BattleSystem.tsx:716
+#: src/components/_military/battle/BattleSystem.tsx:718
 msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
 msgstr "По истеку тајмера, страна са највише нанете штете добија <0>{actualTickPoints}</0>."
 
@@ -4603,7 +4614,7 @@ msgstr "На твом нивоу Менаџмента"
 msgid "Atlas"
 msgstr "Атлас"
 
-#: src/components/_military/hit/HitButton.tsx:527
+#: src/components/_military/hit/HitButton.tsx:484
 #: src/components/_political/map/MapMenu.tsx:468
 #: src/components/_user/user/skills.frontConfig.tsx:57
 #: src/components/_user/user/skills.frontConfig.tsx:58
@@ -4908,7 +4919,7 @@ msgstr "Наређења"
 msgid "Battlefield Loot"
 msgstr "Плен са бојишта"
 
-#: src/components/_layout/LayoutMenu.tsx:149
+#: src/components/_layout/LayoutMenu.tsx:153
 #: src/components/_military/battle/BattlesHeader.tsx:22
 #: src/components/_military/war/WarHeader.tsx:55
 #: src/components/_military/war/WarHeader.tsx:85
@@ -5071,8 +5082,8 @@ msgstr "Цео дан врте лажни регулатор и савршено
 msgid "Bounty"
 msgstr "Награда"
 
-#: src/components/_military/battle/BattleSystem.tsx:953
-#: src/components/_military/battle/BattleSystem.tsx:963
+#: src/components/_military/battle/BattleSystem.tsx:955
+#: src/components/_military/battle/BattleSystem.tsx:965
 msgid "Bounty cooldown"
 msgstr "Период чекања за награду"
 
@@ -5080,7 +5091,7 @@ msgstr "Период чекања за награду"
 msgid "Bounty earned"
 msgstr "Зарађене награде"
 
-#: src/components/_military/battle/BattleSystem.tsx:939
+#: src/components/_military/battle/BattleSystem.tsx:941
 msgid "Bounty will be available in"
 msgstr "Награда ће бити доступна за"
 
@@ -5127,7 +5138,7 @@ msgstr "покварен"
 msgid "Broken"
 msgstr "Покварено"
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:234
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:256
 msgid "Broken: no longer boosts Production"
 msgstr ""
 
@@ -5687,11 +5698,11 @@ msgstr "Пријаве за држављанство"
 msgid "Citizenship of this country, active and level {0}+"
 msgstr "Држављани ове земље који су активни и имају ниво {0}+"
 
-#: src/components/_military/battle/BattleSystem.tsx:395
+#: src/components/_military/battle/BattleSystem.tsx:397
 msgid "Civil war"
 msgstr "Грађански рат"
 
-#: src/components/_other/tour/TutorialFloatingGuide.tsx:55
+#: src/components/_other/tour/TutorialFloatingGuide.tsx:56
 #: src/components/_other/tour/TutorialGuidesList.tsx:58
 #: src/components/_user/milestone/MilestoneItem.tsx:324
 #: src/components/_user/mission/MissionItem.tsx:268
@@ -5793,7 +5804,7 @@ msgstr "Клима"
 msgid "Climber"
 msgstr "Каријериста"
 
-#: ../__ui/src/components/Modal/Modal.tsx:349
+#: ../__ui/src/components/Modal/Modal.tsx:355
 #: src/components/_economy/company/CompanyCardHeader.tsx:141
 #: src/components/_other/tour/TutorialChapterEndModal.tsx:322
 #: src/components/_political/map/MapMenu.tsx:277
@@ -5893,7 +5904,7 @@ msgstr ""
 msgid "Community"
 msgstr "Заједница"
 
-#: src/components/_layout/LayoutMenu.tsx:193
+#: src/components/_layout/LayoutMenu.tsx:197
 #: src/components/_political/region/RegionHeader.tsx:112
 #: src/components/_user/user/MyAvatar.tsx:47
 #: src/components/_user/user/UserHeader.tsx:227
@@ -6247,7 +6258,7 @@ msgid "Countries"
 msgstr "Земље"
 
 #: src/components/_economy/company/RecommendedCompanyRegions.tsx:155
-#: src/components/_layout/LayoutRightIcons.tsx:233
+#: src/components/_layout/LayoutRightIcons.tsx:234
 #: src/components/_layout/MoreButtonNav.tsx:128
 #: src/components/_military/battle/ActiveBattlesList.tsx:146
 #: src/components/_military/battle/BattleCountrySide.tsx:73
@@ -6474,7 +6485,7 @@ msgstr "Тренутна војна јединица"
 msgid "Current nationality"
 msgstr "Тренутна националност"
 
-#: src/components/_military/battle/BattleSystem.tsx:735
+#: src/components/_military/battle/BattleSystem.tsx:737
 msgid "Current tick:"
 msgstr "Тренутни тик:"
 
@@ -6482,7 +6493,7 @@ msgstr "Тренутни тик:"
 msgid "Current tier"
 msgstr "Тренутни степен"
 
-#: src/components/_military/battle/BattleSystem.tsx:725
+#: src/components/_military/battle/BattleSystem.tsx:727
 msgid "Current total:"
 msgstr "Тренутно укупно:"
 
@@ -6732,7 +6743,7 @@ msgstr "Дубински крамп"
 msgid "Deeply disappointed, but still here."
 msgstr "Велико разочарење, али остаје."
 
-#: src/components/_military/hit/HitButton.tsx:530
+#: src/components/_military/hit/HitButton.tsx:487
 msgid "Defend"
 msgstr "Одбрани"
 
@@ -6976,7 +6987,8 @@ msgstr "Умањи примљену штету"
 msgid "Diplomacy"
 msgstr "Дипломатија"
 
-#: src/components/_military/order/BattleOrderActions.tsx:98
+#: src/components/_military/battle/SetOrderFormModal.tsx:504
+#: src/components/_military/order/BattleOrderActions.tsx:71
 msgid "Disable"
 msgstr "Онемогући"
 
@@ -6984,7 +6996,7 @@ msgstr "Онемогући"
 msgid "Disable company"
 msgstr "Онемогући компанију"
 
-#: src/components/_military/order/BattleOrderActions.tsx:72
+#: src/components/_military/order/useDisableBattleOrder.ts:40
 msgid "Disable Order"
 msgstr "Онемогући наређење"
 
@@ -7267,7 +7279,7 @@ msgstr "Економија и компаније"
 msgid "Economy first"
 msgstr "Економија пре свега"
 
-#: src/components/_military/order/BattleOrderActions.tsx:91
+#: src/components/_military/order/BattleOrderActions.tsx:64
 #: src/components/_political/party/PartyCongressList.tsx:65
 msgid "Edit"
 msgstr "Измени"
@@ -7320,11 +7332,11 @@ msgstr "Измена позиције"
 msgid "Edit title and rights"
 msgstr ""
 
-#: src/components/_military/battle/SetOrderFormModal.tsx:423
+#: src/components/_military/battle/SetOrderFormModal.tsx:430
 msgid "Editing an existing order"
 msgstr "Измена постојећег наређења"
 
-#: src/components/_military/battle/SetOrderFormModal.tsx:421
+#: src/components/_military/battle/SetOrderFormModal.tsx:428
 msgid "Editing another order"
 msgstr "Измена другог наређења"
 
@@ -7518,7 +7530,7 @@ msgstr "Прекини одбрамбени пакт са <0/>."
 msgid "End this poll?"
 msgstr "Завршити анкету?"
 
-#: src/components/_military/battle/BattleSystem.tsx:847
+#: src/components/_military/battle/BattleSystem.tsx:849
 #: src/components/_military/tournament/TournamentHeader.tsx:85
 #: src/components/_military/war/WarHeader.tsx:70
 msgid "Ended"
@@ -7632,8 +7644,8 @@ msgstr "Процењени дневни приход"
 msgid "Estimated from current development, rosters, managers and tax rates. Updated hourly."
 msgstr "Процена на основу тренутног развоја, спискова запослених, менаџера и пореских стопа. Ажурира се сваког сата."
 
-#: src/components/_military/battle/BattleSystem.tsx:520
-#: src/components/_military/battle/BattleSystem.tsx:560
+#: src/components/_military/battle/BattleSystem.tsx:522
+#: src/components/_military/battle/BattleSystem.tsx:562
 msgid "Estimated minimum time for this side to win the current round if all ticks are won."
 msgstr "Процењено минимално време потребно овој страни да освоји тренутну рунду ако се освоје сви тикови."
 
@@ -7667,7 +7679,7 @@ msgid "Event Luck checks"
 msgstr ""
 
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:181
-#: src/components/_layout/LayoutRightIcons.tsx:266
+#: src/components/_layout/LayoutRightIcons.tsx:267
 #: src/components/_layout/MoreButtonNav.tsx:91
 #: src/pages/country/[countryId]/index.tsx:254
 msgid "Events"
@@ -7964,7 +7976,7 @@ msgstr "Федерација"
 msgid "Fee"
 msgstr "Такса"
 
-#: src/components/_layout/LayoutRightIcons.tsx:276
+#: src/components/_layout/LayoutRightIcons.tsx:277
 #: src/components/_layout/MoreButtonNav.tsx:83
 msgid "Feed"
 msgstr "Новости"
@@ -8550,7 +8562,7 @@ msgstr "Владино обавештење"
 msgid "Government Member"
 msgstr "Члан владе"
 
-#: src/components/_military/battle/BattleSystem.tsx:913
+#: src/components/_military/battle/BattleSystem.tsx:915
 msgid "Government penalty"
 msgstr "Казна за чланове владе"
 
@@ -8669,13 +8681,17 @@ msgstr "Гримдарк тенк"
 msgid "Ground"
 msgstr "Терен"
 
-#: src/components/_military/battle/BattleSystem.tsx:774
+#: src/components/_military/battle/BattleSystem.tsx:776
 msgid "ground per tick"
 msgstr "терена по тику"
 
 #: src/components/_military/damageRanking/DamageRankingSides.tsx:147
 msgid "Ground points"
 msgstr "Поени терена"
+
+#: src/components/_political/region/ResistanceBar.tsx:43
+msgid "Grows <0>{growthMin}-{growthMax}%</0> per hour while the region is occupied, decays <1>{decay}%</1> per hour once it is back with its owner.<2/><3/>Spend <4>{cost}</4> or <5>{cost}</5> to add <6>{value}</6>, or <7>{citizenValue}</7> as a citizen of the original country.<8/><9/>Once full, the original country's government can start a liberation battle for <10>development × {startCost}</10>. Its citizens deal up to <11>+{citizenBonus}%</11> and allies up to <12>+{allyBonus}%</12>, scaled by how full the bar is.<13/><14/>The battle empties the bar. If it is lost, the country's other regions held by the same occupier lose {otherRegionsLoss}% of theirs."
+msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:338
 msgid "GSG9 Armored Tank"
@@ -8725,7 +8741,7 @@ msgstr "GSG9 тактички штит"
 msgid "GSG9 Tactical Vest"
 msgstr "GSG9 тактички прслук"
 
-#: src/components/_other/tour/TutorialFloatingGuide.tsx:55
+#: src/components/_other/tour/TutorialFloatingGuide.tsx:56
 msgid "Guide"
 msgstr "Водич"
 
@@ -9005,7 +9021,7 @@ msgid "Hit until your <0>Health</0> runs out again."
 msgstr "Ударај док ти опет не нестане <0>здравља</0>."
 
 #. placeholder {0}: staticGameConfig.battle.govMemberBountyRewardPercent
-#: src/components/_military/battle/BattleSystem.tsx:915
+#: src/components/_military/battle/BattleSystem.tsx:917
 msgid "Hitting for your own country while in government gives {0}% bounty efficiency."
 msgstr "Ударање за своју земљу док си у влади даје {0}% ефикасности награде."
 
@@ -9250,8 +9266,8 @@ msgstr "Позови га на разговор"
 msgid "Introduce yourself!"
 msgstr "Представи се!"
 
-#: src/components/_layout/LayoutMenu.tsx:99
-#: src/components/_layout/LayoutUserMenu.tsx:174
+#: src/components/_layout/LayoutMenu.tsx:103
+#: src/components/_layout/LayoutUserMenu.tsx:178
 #: src/components/_user/user/MyAvatar.tsx:35
 #: src/components/_user/user/UserHeader.tsx:166
 #: src/pages/companies.tsx:136
@@ -10298,7 +10314,7 @@ msgid "Map textures"
 msgstr "Текстуре мапе"
 
 #: src/components/_economy/market/MarketHeader.tsx:38
-#: src/components/_layout/LayoutMenu.tsx:182
+#: src/components/_layout/LayoutMenu.tsx:186
 #: src/components/_user/level/levelTrack.frontConfig.tsx:61
 #: src/pages/country/[countryId]/account.tsx:31
 #: src/pages/party/[partyId]/account.tsx:24
@@ -10832,7 +10848,7 @@ msgstr ""
 msgid "Morale is set live by traits and conditions."
 msgstr "Морал у сваком тренутку зависи од особина и услова."
 
-#: src/components/_layout/LayoutLeftIcons.tsx:234
+#: src/components/_layout/LayoutLeftIcons.tsx:235
 #: src/components/_layout/MoreButtonNav.tsx:191
 msgid "More"
 msgstr "Више"
@@ -10966,7 +10982,7 @@ msgstr ""
 msgid "Moving your home to another region costs <0>{homeMoveConcreteCost}</0>."
 msgstr "Пресељење дома у други регион кошта <0>{homeMoveConcreteCost}</0>."
 
-#: src/components/_layout/LayoutMenu.tsx:133
+#: src/components/_layout/LayoutMenu.tsx:137
 #: src/components/_military/tournament/TournamentHeader.tsx:55
 #: src/components/_military/tournament/TournamentItem.tsx:54
 msgid "MU"
@@ -11079,7 +11095,7 @@ msgstr "Име"
 msgid "Name reset"
 msgstr "Име враћено"
 
-#: src/components/_military/battle/BattleSystem.tsx:901
+#: src/components/_military/battle/BattleSystem.tsx:903
 msgid "National bounty"
 msgstr "Награда за држављане"
 
@@ -11310,7 +11326,7 @@ msgstr "Нови радник"
 msgid "Newest"
 msgstr "Најновије"
 
-#: src/components/_layout/LayoutRightIcons.tsx:216
+#: src/components/_layout/LayoutRightIcons.tsx:217
 #: src/components/_layout/MoreButtonNav.tsx:109
 msgid "News"
 msgstr "Вести"
@@ -11340,7 +11356,7 @@ msgstr "Следећи поен кошта"
 msgid "Next reward"
 msgstr "Следећа награда"
 
-#: src/components/_military/battle/BattleSystem.tsx:711
+#: src/components/_military/battle/BattleSystem.tsx:713
 msgid "Next tick"
 msgstr "Следећи тик"
 
@@ -11877,7 +11893,7 @@ msgstr "Није започето"
 msgid "not usable in this company"
 msgstr "неупотребљив у овој компанији"
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:236
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:258
 msgid "Not usable in this company"
 msgstr ""
 
@@ -12222,7 +12238,7 @@ msgstr "или"
 msgid "Or swap with"
 msgstr "Или замени са"
 
-#: src/components/_military/order/BattleOrderTags.tsx:28
+#: src/components/_military/order/BattleOrderTags.tsx:30
 msgid "Order"
 msgstr "Наређење"
 
@@ -12230,7 +12246,7 @@ msgstr "Наређење"
 msgid "Order a crate for everyone"
 msgstr "Наручи гајбу за све"
 
-#: src/components/_military/order/BattleOrderActions.tsx:49
+#: src/components/_military/order/useDisableBattleOrder.ts:20
 msgid "Order disabled successfully!"
 msgstr "Наређење је онемогућено!"
 
@@ -12398,7 +12414,7 @@ msgstr "Странке"
 msgid "Parties can no longer start resistance"
 msgstr "Странке више не могу да покрећу отпор"
 
-#: src/components/_layout/LayoutRightIcons.tsx:243
+#: src/components/_layout/LayoutRightIcons.tsx:244
 #: src/components/_layout/MoreButtonNav.tsx:137
 #: src/components/_political/party/PartyHeader.tsx:74
 #: src/components/_user/notification/notificationPrefs.categories.ts:169
@@ -12597,6 +12613,11 @@ msgstr "На чекању"
 #: src/components/_political/event/event.frontConfig.tsx:422
 msgid "People are angry, an auto revolt has started in <0/>"
 msgstr "Људи су љути: у <0/> је избио аутоматски револт"
+
+#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:139
+#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:229
+msgid "per copy"
+msgstr ""
 
 #: src/components/_political/region/IncomeEstimateBreakdown.tsx:90
 #: src/pages/country/[countryId]/index.tsx:405
@@ -13125,7 +13146,7 @@ msgstr "Профит"
 msgid "Program Article Link (optional)"
 msgstr ""
 
-#: src/components/_layout/LayoutRightIcons.tsx:182
+#: src/components/_layout/LayoutRightIcons.tsx:183
 #: src/components/_layout/MoreButtonNav.tsx:100
 #: src/components/_other/tour/tuto.frontConfig.tsx:582
 #: src/components/_user/mission/ProgressHeader.tsx:61
@@ -13350,7 +13371,7 @@ msgstr "Награда са ранг-листе"
 msgid "Rankings"
 msgstr "Рангирања"
 
-#: src/components/_layout/LayoutRightIcons.tsx:254
+#: src/components/_layout/LayoutRightIcons.tsx:255
 msgid "Ranks"
 msgstr "Рангирања"
 
@@ -13618,7 +13639,7 @@ msgstr "Одбиј"
 msgid "Refuse and leave?"
 msgstr "Одбити и отићи?"
 
-#: src/components/_layout/LayoutUserMenu.tsx:225
+#: src/components/_layout/LayoutUserMenu.tsx:229
 msgid "Regen in..."
 msgstr "Регенерација за..."
 
@@ -13766,11 +13787,11 @@ msgstr "Одбиј га"
 msgid "Rejected"
 msgstr "Одбијено"
 
-#: src/components/_layout/LayoutUserMenu.tsx:251
+#: src/components/_layout/LayoutUserMenu.tsx:255
 msgid "Remaining buff duration"
 msgstr "Преостало трајање ојачања"
 
-#: src/components/_layout/LayoutUserMenu.tsx:264
+#: src/components/_layout/LayoutUserMenu.tsx:268
 msgid "Remaining debuff duration"
 msgstr "Преостало трајање ослабљења"
 
@@ -14045,7 +14066,7 @@ msgstr "Становници (живе овде)"
 msgid "Resign from this position?"
 msgstr "Дати отказ на овој позицији?"
 
-#: src/components/_military/hit/HitButton.tsx:525
+#: src/components/_military/hit/HitButton.tsx:482
 #: src/components/_user/mission/mission.frontConfig.tsx:873
 msgid "Resist"
 msgstr "Отпор"
@@ -14108,7 +14129,7 @@ msgstr "Ограничи по држављанству"
 msgid "Resume"
 msgstr "Настави"
 
-#: src/components/_other/tour/TutorialFloatingGuide.tsx:55
+#: src/components/_other/tour/TutorialFloatingGuide.tsx:56
 msgid "Resume guide"
 msgstr "Настави водич"
 
@@ -14251,8 +14272,8 @@ msgstr "Рунда се ускоро завршава"
 msgid "Round ended"
 msgstr "Рунда завршена"
 
-#: src/components/_military/battle/BattleSystem.tsx:518
-#: src/components/_military/battle/BattleSystem.tsx:558
+#: src/components/_military/battle/BattleSystem.tsx:520
+#: src/components/_military/battle/BattleSystem.tsx:560
 msgid "Round ETA"
 msgstr "Процена краја рунде"
 
@@ -14273,7 +14294,7 @@ msgstr "Добијене рунде"
 msgid "Rounds Won"
 msgstr "Добијене рунде"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:225
+#: src/components/_layout/LayoutLeftIcons.tsx:226
 #: src/components/_user/auth/WelcomeModal.tsx:308
 msgid "Rules"
 msgstr "Правила"
@@ -14685,7 +14706,7 @@ msgstr "Постави своју профилну слику"
 msgid "Set your username"
 msgstr "Постави своје корисничко име"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:212
+#: src/components/_layout/LayoutLeftIcons.tsx:213
 #: src/components/_layout/SettingsModal.tsx:13
 #: src/components/_military/mu/MuHeader.tsx:191
 #: src/components/_user/user/MyAvatar.tsx:53
@@ -14697,7 +14718,7 @@ msgstr "Подешавања"
 msgid "Share of active players who reached each tier, refreshed daily."
 msgstr "Удео активних играча који су достигли сваки степен, освежава се дневно."
 
-#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:173
+#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:235
 msgid "Shared with the whole alliance."
 msgstr ""
 
@@ -14709,7 +14730,7 @@ msgstr "Сјај"
 msgid "Shoo it away"
 msgstr "Отерај је"
 
-#: src/components/_layout/LayoutRightIcons.tsx:195
+#: src/components/_layout/LayoutRightIcons.tsx:196
 #: src/components/_layout/MoreButtonNav.tsx:70
 #: src/components/_other/shop/ShopHeader.tsx:53
 msgid "Shop"
@@ -15170,7 +15191,7 @@ msgstr "Статистички намештено"
 msgid "Stats"
 msgstr "Статистика"
 
-#: src/components/_layout/LayoutUserMenu.tsx:226
+#: src/components/_layout/LayoutUserMenu.tsx:230
 msgid "Stats regenerate every hour"
 msgstr "Атрибути се обнављају сваког сата"
 
@@ -16345,7 +16366,7 @@ msgstr "Ради за тебе сваког сата, чак и кад ниси 
 msgid "This action will submit your MU bid for this contract."
 msgstr "Овим шаљеш понуду своје ВЈ за овај уговор."
 
-#: src/components/_military/battle/BattleSystem.tsx:902
+#: src/components/_military/battle/BattleSystem.tsx:904
 msgid "This bounty is reserved for nationals only."
 msgstr "Ова награда је резервисана само за држављане."
 
@@ -16659,7 +16680,7 @@ msgid "Took a job offer from a rival firm."
 msgstr "Прихваћена понуда конкурентске фирме."
 
 #: src/components/_economy/employee/employee.traitMeta.ts:87
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:272
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:294
 #: src/components/_economy/employee/EmployeeTooltip.tsx:177
 #: src/components/_economy/employee/EmployeeTooltip.tsx:188
 #: src/components/_economy/employee/ToolSelectorModal.tsx:130
@@ -16671,11 +16692,11 @@ msgstr "Алат"
 msgid "Tool <0>fully repaired</0>"
 msgstr "Алат је <0>потпуно поправљен</0>"
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:80
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:85
 msgid "Tool given"
 msgstr "Алат додељен"
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:85
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:107
 #: src/components/_economy/inventory/Inventory.tsx:704
 msgid "Tool taken back"
 msgstr "Алат враћен"
@@ -16707,7 +16728,7 @@ msgstr ""
 msgid "Tools"
 msgstr "Алати"
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:222
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:244
 msgid "Tools give a boost to <0>Production</0>. They come out of <1>Toolboxes</1>, found by your employees' Luck."
 msgstr "Алати повећавају <0>Производњу</0>. Добијају се из <1>кутија с алатом</1>, које твоји запослени проналазе захваљујући Срећи."
 
@@ -16769,7 +16790,7 @@ msgstr "Прво место у класи: сада има много више �
 msgid "Top of the hill"
 msgstr "Врх брда"
 
-#: src/components/_military/battle/BattleSystem.tsx:765
+#: src/components/_military/battle/BattleSystem.tsx:767
 msgid "total"
 msgstr "укупно"
 
@@ -17399,7 +17420,7 @@ msgstr "Корисничко име уклоњено"
 msgid "Users"
 msgstr "Корисници"
 
-#: src/components/_layout/LayoutUserMenu.tsx:277
+#: src/components/_layout/LayoutUserMenu.tsx:281
 msgid "Users online"
 msgstr "Корисника на мрежи"
 
@@ -17812,7 +17833,7 @@ msgstr "Добродошао у твоју економију!"
 msgid "Well done! Here is your reward."
 msgstr "Браво! Ево твоје награде."
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:247
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:269
 msgid "What a day of the extra production this tool gives is worth at the market value of a point. An estimate: what you really earn depends on what you make and the price you sell it at."
 msgstr ""
 
@@ -18127,7 +18148,7 @@ msgstr "Не учествујеш"
 msgid "You are paid hourly and can resign after 24h."
 msgstr "Плата се исплаћује по сату, а отказ можеш дати после 24ч."
 
-#: src/components/_military/hit/HitButton.tsx:464
+#: src/components/_military/hit/HitButton.tsx:429
 msgid "You are standing in this region, so you can fight here."
 msgstr "Налазиш се у овом региону, па можеш да се бориш овде."
 
@@ -18722,7 +18743,7 @@ msgstr "Твоја влада тражи да подржиш отпор у ов�
 msgid "Your infos have been saved."
 msgstr "Твоји подаци су сачувани."
 
-#: src/components/_military/hit/HitButton.tsx:463
+#: src/components/_military/hit/HitButton.tsx:428
 msgid "Your location"
 msgstr "Твоја локација"
 
@@ -18889,10 +18910,10 @@ msgstr "твој@мејл.com"
 msgid "Yours"
 msgstr "Твоје"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:159
+#: src/components/_layout/LayoutLeftIcons.tsx:160
 msgid "Zoom in"
 msgstr "Увећај"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:167
+#: src/components/_layout/LayoutLeftIcons.tsx:168
 msgid "Zoom out"
 msgstr "Умањи"

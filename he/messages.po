@@ -138,7 +138,7 @@ msgid "{0, plural, one {# winner} other {# winners}}"
 msgstr ""
 
 #. placeholder {0}: totalBattles - maxBattles
-#: src/components/_layout/LayoutBattles.tsx:139
+#: src/components/_layout/LayoutBattles.tsx:142
 msgid "{0, plural, one {Battle} other {Battles}}"
 msgstr ""
 
@@ -199,6 +199,8 @@ msgid "{0} days cooldown"
 msgstr "התקררות של {0} ימים"
 
 #. placeholder {0}: developmentPercent(core)
+#. placeholder {0}: developmentValue(total, '2xs')
+#: src/components/_economy/strategicResource/StrategicResourceBloc.tsx:143
 #: src/components/_political/govType/govType.frontConfig.tsx:178
 msgid "{0} development income"
 msgstr ""
@@ -264,6 +266,11 @@ msgstr "{0} הציע לך יותר ב-${1}/K"
 #. placeholder {0}: moneyPercent(effects.incomeTaxMultiplier)
 #: src/components/_political/govType/govType.frontConfig.tsx:221
 msgid "{0} payroll and manager tax income"
+msgstr ""
+
+#. placeholder {0}: developmentValue(perCopy)
+#: src/components/_economy/strategicResource/StrategicResourceBloc.tsx:130
+msgid "{0} per strategic resource"
 msgstr ""
 
 #. placeholder {0}: data.userId && ( <UserUsername userId={data.userId} withAvatar withFlag /> )
@@ -342,6 +349,10 @@ msgstr "{completedCount}/{totalCount} הושלם"
 
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:303
 msgid "{contribution} when anyone in the event has it."
+msgstr ""
+
+#: src/components/_economy/strategicResource/StrategicResourceBloc.tsx:133
+msgid "{copies, plural, one {Currently # strategic resource.} other {Currently # strategic resources.}}"
 msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:820
@@ -1743,7 +1754,7 @@ msgstr ""
 msgid "{names}: decided while you were away"
 msgstr ""
 
-#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:162
+#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:177
 msgid "{needed}+ copies"
 msgstr ""
 
@@ -2506,7 +2517,7 @@ msgid "<0/> won the round <1>#{0}</1> in <2/>!"
 msgstr "<0/> זכה בסיבוב <1>#{0}</1> ב<2/>!"
 
 #. placeholder {0}: ts.paper
-#: src/components/_military/battle/SetOrderFormModal.tsx:462
+#: src/components/_military/battle/SetOrderFormModal.tsx:469
 msgid "<0/>: this order costs ×{orderCostMult} <1>{0}</1> and gives ×{orderDamageMult} damage bonus"
 msgstr ""
 
@@ -3980,7 +3991,7 @@ msgstr "הוסף משתמש"
 msgid "Additional cost"
 msgstr "עלות נוספת"
 
-#: src/components/_layout/LayoutRightIcons.tsx:153
+#: src/components/_layout/LayoutRightIcons.tsx:154
 #: src/components/_layout/MoreButtonNav.tsx:62
 #: src/components/_user/user/UserBadges.tsx:141
 msgid "Admin"
@@ -4412,7 +4423,7 @@ msgstr "האם אתה בטוח שאתה רוצה לצרוך גלולה?"
 msgid "Are you sure you want to demote this commander?"
 msgstr "האם אתה בטוח שאתה רוצה להוריד את המפקד הזה בדרגה?"
 
-#: src/components/_military/order/BattleOrderActions.tsx:73
+#: src/components/_military/order/useDisableBattleOrder.ts:41
 msgid "Are you sure you want to disable this battle order? This action cannot be undone."
 msgstr ""
 
@@ -4588,7 +4599,7 @@ msgstr "מגן טקטי AT"
 msgid "AT Tactical Vest"
 msgstr "אפוד טקטי AT"
 
-#: src/components/_military/battle/BattleSystem.tsx:716
+#: src/components/_military/battle/BattleSystem.tsx:718
 msgid "At the end of the timer <0>{actualTickPoints}</0> will be assigned to the side with the most damages."
 msgstr "בסוף הטיימר <0>{actualTickPoints}</0> יוקצה לצד עם הכי הרבה נזקים."
 
@@ -4604,7 +4615,7 @@ msgstr ""
 msgid "Atlas"
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:527
+#: src/components/_military/hit/HitButton.tsx:484
 #: src/components/_political/map/MapMenu.tsx:468
 #: src/components/_user/user/skills.frontConfig.tsx:57
 #: src/components/_user/user/skills.frontConfig.tsx:58
@@ -4909,7 +4920,7 @@ msgstr "פקודות קרב"
 msgid "Battlefield Loot"
 msgstr ""
 
-#: src/components/_layout/LayoutMenu.tsx:149
+#: src/components/_layout/LayoutMenu.tsx:153
 #: src/components/_military/battle/BattlesHeader.tsx:22
 #: src/components/_military/war/WarHeader.tsx:55
 #: src/components/_military/war/WarHeader.tsx:85
@@ -5072,8 +5083,8 @@ msgstr ""
 msgid "Bounty"
 msgstr "באונטי"
 
-#: src/components/_military/battle/BattleSystem.tsx:953
-#: src/components/_military/battle/BattleSystem.tsx:963
+#: src/components/_military/battle/BattleSystem.tsx:955
+#: src/components/_military/battle/BattleSystem.tsx:965
 msgid "Bounty cooldown"
 msgstr "זמן טעינת הבאונטי"
 
@@ -5081,7 +5092,7 @@ msgstr "זמן טעינת הבאונטי"
 msgid "Bounty earned"
 msgstr ""
 
-#: src/components/_military/battle/BattleSystem.tsx:939
+#: src/components/_military/battle/BattleSystem.tsx:941
 msgid "Bounty will be available in"
 msgstr "הבאונטי יהיה זמין ב"
 
@@ -5128,7 +5139,7 @@ msgstr ""
 msgid "Broken"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:234
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:256
 msgid "Broken: no longer boosts Production"
 msgstr ""
 
@@ -5688,11 +5699,11 @@ msgstr "בקשות לאזרחות"
 msgid "Citizenship of this country, active and level {0}+"
 msgstr ""
 
-#: src/components/_military/battle/BattleSystem.tsx:395
+#: src/components/_military/battle/BattleSystem.tsx:397
 msgid "Civil war"
 msgstr "מלחמת אזרחים"
 
-#: src/components/_other/tour/TutorialFloatingGuide.tsx:55
+#: src/components/_other/tour/TutorialFloatingGuide.tsx:56
 #: src/components/_other/tour/TutorialGuidesList.tsx:58
 #: src/components/_user/milestone/MilestoneItem.tsx:324
 #: src/components/_user/mission/MissionItem.tsx:268
@@ -5794,7 +5805,7 @@ msgstr "אקלים"
 msgid "Climber"
 msgstr ""
 
-#: ../__ui/src/components/Modal/Modal.tsx:349
+#: ../__ui/src/components/Modal/Modal.tsx:355
 #: src/components/_economy/company/CompanyCardHeader.tsx:141
 #: src/components/_other/tour/TutorialChapterEndModal.tsx:322
 #: src/components/_political/map/MapMenu.tsx:277
@@ -5894,7 +5905,7 @@ msgstr ""
 msgid "Community"
 msgstr "קהילה"
 
-#: src/components/_layout/LayoutMenu.tsx:193
+#: src/components/_layout/LayoutMenu.tsx:197
 #: src/components/_political/region/RegionHeader.tsx:112
 #: src/components/_user/user/MyAvatar.tsx:47
 #: src/components/_user/user/UserHeader.tsx:227
@@ -6248,7 +6259,7 @@ msgid "Countries"
 msgstr "מדינות"
 
 #: src/components/_economy/company/RecommendedCompanyRegions.tsx:155
-#: src/components/_layout/LayoutRightIcons.tsx:233
+#: src/components/_layout/LayoutRightIcons.tsx:234
 #: src/components/_layout/MoreButtonNav.tsx:128
 #: src/components/_military/battle/ActiveBattlesList.tsx:146
 #: src/components/_military/battle/BattleCountrySide.tsx:73
@@ -6475,7 +6486,7 @@ msgstr "היחידה הצבאית הנוכחית"
 msgid "Current nationality"
 msgstr "לאום נוכחי"
 
-#: src/components/_military/battle/BattleSystem.tsx:735
+#: src/components/_military/battle/BattleSystem.tsx:737
 msgid "Current tick:"
 msgstr "סימון נוכחי:"
 
@@ -6483,7 +6494,7 @@ msgstr "סימון נוכחי:"
 msgid "Current tier"
 msgstr ""
 
-#: src/components/_military/battle/BattleSystem.tsx:725
+#: src/components/_military/battle/BattleSystem.tsx:727
 msgid "Current total:"
 msgstr "סך הכל נוכחי:"
 
@@ -6733,7 +6744,7 @@ msgstr ""
 msgid "Deeply disappointed, but still here."
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:530
+#: src/components/_military/hit/HitButton.tsx:487
 msgid "Defend"
 msgstr "להגן"
 
@@ -6977,7 +6988,8 @@ msgstr "הפחת נזקים שהתקבלו"
 msgid "Diplomacy"
 msgstr "דיפלומטיה"
 
-#: src/components/_military/order/BattleOrderActions.tsx:98
+#: src/components/_military/battle/SetOrderFormModal.tsx:504
+#: src/components/_military/order/BattleOrderActions.tsx:71
 msgid "Disable"
 msgstr ""
 
@@ -6985,7 +6997,7 @@ msgstr ""
 msgid "Disable company"
 msgstr "השבת את החברה"
 
-#: src/components/_military/order/BattleOrderActions.tsx:72
+#: src/components/_military/order/useDisableBattleOrder.ts:40
 msgid "Disable Order"
 msgstr ""
 
@@ -7268,7 +7280,7 @@ msgstr "כלכלה וחברות"
 msgid "Economy first"
 msgstr ""
 
-#: src/components/_military/order/BattleOrderActions.tsx:91
+#: src/components/_military/order/BattleOrderActions.tsx:64
 #: src/components/_political/party/PartyCongressList.tsx:65
 msgid "Edit"
 msgstr ""
@@ -7321,11 +7333,11 @@ msgstr ""
 msgid "Edit title and rights"
 msgstr ""
 
-#: src/components/_military/battle/SetOrderFormModal.tsx:423
+#: src/components/_military/battle/SetOrderFormModal.tsx:430
 msgid "Editing an existing order"
 msgstr "עריכת פקודה קיימת"
 
-#: src/components/_military/battle/SetOrderFormModal.tsx:421
+#: src/components/_military/battle/SetOrderFormModal.tsx:428
 msgid "Editing another order"
 msgstr "עריכת פקודה אחרת"
 
@@ -7519,7 +7531,7 @@ msgstr "סיים את ברית ההגנה עם <0/>."
 msgid "End this poll?"
 msgstr ""
 
-#: src/components/_military/battle/BattleSystem.tsx:847
+#: src/components/_military/battle/BattleSystem.tsx:849
 #: src/components/_military/tournament/TournamentHeader.tsx:85
 #: src/components/_military/war/WarHeader.tsx:70
 msgid "Ended"
@@ -7633,8 +7645,8 @@ msgstr ""
 msgid "Estimated from current development, rosters, managers and tax rates. Updated hourly."
 msgstr ""
 
-#: src/components/_military/battle/BattleSystem.tsx:520
-#: src/components/_military/battle/BattleSystem.tsx:560
+#: src/components/_military/battle/BattleSystem.tsx:522
+#: src/components/_military/battle/BattleSystem.tsx:562
 msgid "Estimated minimum time for this side to win the current round if all ticks are won."
 msgstr "זמן מינימלי משוער עבור צד זה כדי לנצח את הסיבוב הנוכחי אם כל הסימונים מנצחים."
 
@@ -7668,7 +7680,7 @@ msgid "Event Luck checks"
 msgstr ""
 
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:181
-#: src/components/_layout/LayoutRightIcons.tsx:266
+#: src/components/_layout/LayoutRightIcons.tsx:267
 #: src/components/_layout/MoreButtonNav.tsx:91
 #: src/pages/country/[countryId]/index.tsx:254
 msgid "Events"
@@ -7965,7 +7977,7 @@ msgstr ""
 msgid "Fee"
 msgstr "תשלום"
 
-#: src/components/_layout/LayoutRightIcons.tsx:276
+#: src/components/_layout/LayoutRightIcons.tsx:277
 #: src/components/_layout/MoreButtonNav.tsx:83
 msgid "Feed"
 msgstr "פיד"
@@ -8551,7 +8563,7 @@ msgstr "הודעת ממשלה"
 msgid "Government Member"
 msgstr "חבר ממשלה"
 
-#: src/components/_military/battle/BattleSystem.tsx:913
+#: src/components/_military/battle/BattleSystem.tsx:915
 msgid "Government penalty"
 msgstr "עונש ממשלתי"
 
@@ -8670,13 +8682,17 @@ msgstr "טנק גרימדרק"
 msgid "Ground"
 msgstr "קרקע"
 
-#: src/components/_military/battle/BattleSystem.tsx:774
+#: src/components/_military/battle/BattleSystem.tsx:776
 msgid "ground per tick"
 msgstr "קרקע לכל סימון"
 
 #: src/components/_military/damageRanking/DamageRankingSides.tsx:147
 msgid "Ground points"
 msgstr "נקודות קרקע"
+
+#: src/components/_political/region/ResistanceBar.tsx:43
+msgid "Grows <0>{growthMin}-{growthMax}%</0> per hour while the region is occupied, decays <1>{decay}%</1> per hour once it is back with its owner.<2/><3/>Spend <4>{cost}</4> or <5>{cost}</5> to add <6>{value}</6>, or <7>{citizenValue}</7> as a citizen of the original country.<8/><9/>Once full, the original country's government can start a liberation battle for <10>development × {startCost}</10>. Its citizens deal up to <11>+{citizenBonus}%</11> and allies up to <12>+{allyBonus}%</12>, scaled by how full the bar is.<13/><14/>The battle empties the bar. If it is lost, the country's other regions held by the same occupier lose {otherRegionsLoss}% of theirs."
+msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:338
 msgid "GSG9 Armored Tank"
@@ -8726,7 +8742,7 @@ msgstr "מגן טקטי GSG9"
 msgid "GSG9 Tactical Vest"
 msgstr "אפוד טקטי GSG9"
 
-#: src/components/_other/tour/TutorialFloatingGuide.tsx:55
+#: src/components/_other/tour/TutorialFloatingGuide.tsx:56
 msgid "Guide"
 msgstr ""
 
@@ -9006,7 +9022,7 @@ msgid "Hit until your <0>Health</0> runs out again."
 msgstr ""
 
 #. placeholder {0}: staticGameConfig.battle.govMemberBountyRewardPercent
-#: src/components/_military/battle/BattleSystem.tsx:915
+#: src/components/_military/battle/BattleSystem.tsx:917
 msgid "Hitting for your own country while in government gives {0}% bounty efficiency."
 msgstr "פגיעה עבור המדינה שלך בזמן הממשל נותן יעילות של {0}% בבאונטי."
 
@@ -9251,8 +9267,8 @@ msgstr ""
 msgid "Introduce yourself!"
 msgstr ""
 
-#: src/components/_layout/LayoutMenu.tsx:99
-#: src/components/_layout/LayoutUserMenu.tsx:174
+#: src/components/_layout/LayoutMenu.tsx:103
+#: src/components/_layout/LayoutUserMenu.tsx:178
 #: src/components/_user/user/MyAvatar.tsx:35
 #: src/components/_user/user/UserHeader.tsx:166
 #: src/pages/companies.tsx:136
@@ -10299,7 +10315,7 @@ msgid "Map textures"
 msgstr ""
 
 #: src/components/_economy/market/MarketHeader.tsx:38
-#: src/components/_layout/LayoutMenu.tsx:182
+#: src/components/_layout/LayoutMenu.tsx:186
 #: src/components/_user/level/levelTrack.frontConfig.tsx:61
 #: src/pages/country/[countryId]/account.tsx:31
 #: src/pages/party/[partyId]/account.tsx:24
@@ -10833,7 +10849,7 @@ msgstr ""
 msgid "Morale is set live by traits and conditions."
 msgstr ""
 
-#: src/components/_layout/LayoutLeftIcons.tsx:234
+#: src/components/_layout/LayoutLeftIcons.tsx:235
 #: src/components/_layout/MoreButtonNav.tsx:191
 msgid "More"
 msgstr "יותר"
@@ -10967,7 +10983,7 @@ msgstr ""
 msgid "Moving your home to another region costs <0>{homeMoveConcreteCost}</0>."
 msgstr ""
 
-#: src/components/_layout/LayoutMenu.tsx:133
+#: src/components/_layout/LayoutMenu.tsx:137
 #: src/components/_military/tournament/TournamentHeader.tsx:55
 #: src/components/_military/tournament/TournamentItem.tsx:54
 msgid "MU"
@@ -11080,7 +11096,7 @@ msgstr "שם"
 msgid "Name reset"
 msgstr ""
 
-#: src/components/_military/battle/BattleSystem.tsx:901
+#: src/components/_military/battle/BattleSystem.tsx:903
 msgid "National bounty"
 msgstr "באונטי לאומי"
 
@@ -11311,7 +11327,7 @@ msgstr "עובד חדש"
 msgid "Newest"
 msgstr "הכי חדש"
 
-#: src/components/_layout/LayoutRightIcons.tsx:216
+#: src/components/_layout/LayoutRightIcons.tsx:217
 #: src/components/_layout/MoreButtonNav.tsx:109
 msgid "News"
 msgstr "חדשות"
@@ -11341,7 +11357,7 @@ msgstr "הנקודה הבאה עולה"
 msgid "Next reward"
 msgstr "הפרס הבא"
 
-#: src/components/_military/battle/BattleSystem.tsx:711
+#: src/components/_military/battle/BattleSystem.tsx:713
 msgid "Next tick"
 msgstr "סימון הבא"
 
@@ -11878,7 +11894,7 @@ msgstr ""
 msgid "not usable in this company"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:236
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:258
 msgid "Not usable in this company"
 msgstr ""
 
@@ -12223,7 +12239,7 @@ msgstr ""
 msgid "Or swap with"
 msgstr ""
 
-#: src/components/_military/order/BattleOrderTags.tsx:28
+#: src/components/_military/order/BattleOrderTags.tsx:30
 msgid "Order"
 msgstr "פקודה"
 
@@ -12231,7 +12247,7 @@ msgstr "פקודה"
 msgid "Order a crate for everyone"
 msgstr ""
 
-#: src/components/_military/order/BattleOrderActions.tsx:49
+#: src/components/_military/order/useDisableBattleOrder.ts:20
 msgid "Order disabled successfully!"
 msgstr ""
 
@@ -12399,7 +12415,7 @@ msgstr "מפלגות"
 msgid "Parties can no longer start resistance"
 msgstr ""
 
-#: src/components/_layout/LayoutRightIcons.tsx:243
+#: src/components/_layout/LayoutRightIcons.tsx:244
 #: src/components/_layout/MoreButtonNav.tsx:137
 #: src/components/_political/party/PartyHeader.tsx:74
 #: src/components/_user/notification/notificationPrefs.categories.ts:169
@@ -12598,6 +12614,11 @@ msgstr "תלוי ועומד"
 #: src/components/_political/event/event.frontConfig.tsx:422
 msgid "People are angry, an auto revolt has started in <0/>"
 msgstr "אנשים כועסים, החל מרד אוטומטי ב<0/>"
+
+#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:139
+#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:229
+msgid "per copy"
+msgstr ""
 
 #: src/components/_political/region/IncomeEstimateBreakdown.tsx:90
 #: src/pages/country/[countryId]/index.tsx:405
@@ -13126,7 +13147,7 @@ msgstr ""
 msgid "Program Article Link (optional)"
 msgstr ""
 
-#: src/components/_layout/LayoutRightIcons.tsx:182
+#: src/components/_layout/LayoutRightIcons.tsx:183
 #: src/components/_layout/MoreButtonNav.tsx:100
 #: src/components/_other/tour/tuto.frontConfig.tsx:582
 #: src/components/_user/mission/ProgressHeader.tsx:61
@@ -13351,7 +13372,7 @@ msgstr "תגמול דירוג"
 msgid "Rankings"
 msgstr "דירוגים"
 
-#: src/components/_layout/LayoutRightIcons.tsx:254
+#: src/components/_layout/LayoutRightIcons.tsx:255
 msgid "Ranks"
 msgstr "מדרג"
 
@@ -13619,7 +13640,7 @@ msgstr ""
 msgid "Refuse and leave?"
 msgstr ""
 
-#: src/components/_layout/LayoutUserMenu.tsx:225
+#: src/components/_layout/LayoutUserMenu.tsx:229
 msgid "Regen in..."
 msgstr "ריגן ב..."
 
@@ -13767,11 +13788,11 @@ msgstr ""
 msgid "Rejected"
 msgstr "נדחה"
 
-#: src/components/_layout/LayoutUserMenu.tsx:251
+#: src/components/_layout/LayoutUserMenu.tsx:255
 msgid "Remaining buff duration"
 msgstr "משך הבאף שנותר"
 
-#: src/components/_layout/LayoutUserMenu.tsx:264
+#: src/components/_layout/LayoutUserMenu.tsx:268
 msgid "Remaining debuff duration"
 msgstr "משך הדיבאף שנותר"
 
@@ -14046,7 +14067,7 @@ msgstr ""
 msgid "Resign from this position?"
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:525
+#: src/components/_military/hit/HitButton.tsx:482
 #: src/components/_user/mission/mission.frontConfig.tsx:873
 msgid "Resist"
 msgstr "להתנגד"
@@ -14109,7 +14130,7 @@ msgstr ""
 msgid "Resume"
 msgstr ""
 
-#: src/components/_other/tour/TutorialFloatingGuide.tsx:55
+#: src/components/_other/tour/TutorialFloatingGuide.tsx:56
 msgid "Resume guide"
 msgstr ""
 
@@ -14252,8 +14273,8 @@ msgstr "סיבוב לקראת סיום"
 msgid "Round ended"
 msgstr "הסיבוב הסתיים"
 
-#: src/components/_military/battle/BattleSystem.tsx:518
-#: src/components/_military/battle/BattleSystem.tsx:558
+#: src/components/_military/battle/BattleSystem.tsx:520
+#: src/components/_military/battle/BattleSystem.tsx:560
 msgid "Round ETA"
 msgstr "ETA לסיבוב"
 
@@ -14274,7 +14295,7 @@ msgstr "סיבובים שנוצחו"
 msgid "Rounds Won"
 msgstr "סיבובים שנוצחו"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:225
+#: src/components/_layout/LayoutLeftIcons.tsx:226
 #: src/components/_user/auth/WelcomeModal.tsx:308
 msgid "Rules"
 msgstr "כללים"
@@ -14686,7 +14707,7 @@ msgstr "הגדר את תמונת הפרופיל שלך"
 msgid "Set your username"
 msgstr "הגדר את שם המשתמש שלך"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:212
+#: src/components/_layout/LayoutLeftIcons.tsx:213
 #: src/components/_layout/SettingsModal.tsx:13
 #: src/components/_military/mu/MuHeader.tsx:191
 #: src/components/_user/user/MyAvatar.tsx:53
@@ -14698,7 +14719,7 @@ msgstr "הגדרות"
 msgid "Share of active players who reached each tier, refreshed daily."
 msgstr ""
 
-#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:173
+#: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:235
 msgid "Shared with the whole alliance."
 msgstr ""
 
@@ -14710,7 +14731,7 @@ msgstr ""
 msgid "Shoo it away"
 msgstr ""
 
-#: src/components/_layout/LayoutRightIcons.tsx:195
+#: src/components/_layout/LayoutRightIcons.tsx:196
 #: src/components/_layout/MoreButtonNav.tsx:70
 #: src/components/_other/shop/ShopHeader.tsx:53
 msgid "Shop"
@@ -15171,7 +15192,7 @@ msgstr "מזויפת סטטיסטית"
 msgid "Stats"
 msgstr "סטטיסטיקות"
 
-#: src/components/_layout/LayoutUserMenu.tsx:226
+#: src/components/_layout/LayoutUserMenu.tsx:230
 msgid "Stats regenerate every hour"
 msgstr "הסטטיסטיקה מתחדשת כל שעה"
 
@@ -16346,7 +16367,7 @@ msgstr ""
 msgid "This action will submit your MU bid for this contract."
 msgstr "פעולה זו תגיש את הצעת ה-MU שלך לחוזה זה."
 
-#: src/components/_military/battle/BattleSystem.tsx:902
+#: src/components/_military/battle/BattleSystem.tsx:904
 msgid "This bounty is reserved for nationals only."
 msgstr "הבאונטי הזה שמור לאזרחים בלבד."
 
@@ -16660,7 +16681,7 @@ msgid "Took a job offer from a rival firm."
 msgstr ""
 
 #: src/components/_economy/employee/employee.traitMeta.ts:87
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:272
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:294
 #: src/components/_economy/employee/EmployeeTooltip.tsx:177
 #: src/components/_economy/employee/EmployeeTooltip.tsx:188
 #: src/components/_economy/employee/ToolSelectorModal.tsx:130
@@ -16672,11 +16693,11 @@ msgstr ""
 msgid "Tool <0>fully repaired</0>"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:80
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:85
 msgid "Tool given"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:85
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:107
 #: src/components/_economy/inventory/Inventory.tsx:704
 msgid "Tool taken back"
 msgstr ""
@@ -16708,7 +16729,7 @@ msgstr ""
 msgid "Tools"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:222
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:244
 msgid "Tools give a boost to <0>Production</0>. They come out of <1>Toolboxes</1>, found by your employees' Luck."
 msgstr ""
 
@@ -16770,7 +16791,7 @@ msgstr ""
 msgid "Top of the hill"
 msgstr "ראש הגבעה"
 
-#: src/components/_military/battle/BattleSystem.tsx:765
+#: src/components/_military/battle/BattleSystem.tsx:767
 msgid "total"
 msgstr "סך הכל"
 
@@ -17400,7 +17421,7 @@ msgstr "שם המשתמש הוסר"
 msgid "Users"
 msgstr "משתמשים"
 
-#: src/components/_layout/LayoutUserMenu.tsx:277
+#: src/components/_layout/LayoutUserMenu.tsx:281
 msgid "Users online"
 msgstr "משתמשים מחוברים"
 
@@ -17813,7 +17834,7 @@ msgstr "ברוך הבא לכלכלה שלך!"
 msgid "Well done! Here is your reward."
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeToolSlot.tsx:247
+#: src/components/_economy/employee/EmployeeToolSlot.tsx:269
 msgid "What a day of the extra production this tool gives is worth at the market value of a point. An estimate: what you really earn depends on what you make and the price you sell it at."
 msgstr ""
 
@@ -18128,7 +18149,7 @@ msgstr "אתה לא משתתף"
 msgid "You are paid hourly and can resign after 24h."
 msgstr ""
 
-#: src/components/_military/hit/HitButton.tsx:464
+#: src/components/_military/hit/HitButton.tsx:429
 msgid "You are standing in this region, so you can fight here."
 msgstr ""
 
@@ -18723,7 +18744,7 @@ msgstr ""
 msgid "Your infos have been saved."
 msgstr "המידע שלך נשמר."
 
-#: src/components/_military/hit/HitButton.tsx:463
+#: src/components/_military/hit/HitButton.tsx:428
 msgid "Your location"
 msgstr ""
 
@@ -18890,10 +18911,10 @@ msgstr "your@email.com"
 msgid "Yours"
 msgstr "שלך"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:159
+#: src/components/_layout/LayoutLeftIcons.tsx:160
 msgid "Zoom in"
 msgstr "הגדל"
 
-#: src/components/_layout/LayoutLeftIcons.tsx:167
+#: src/components/_layout/LayoutLeftIcons.tsx:168
 msgid "Zoom out"
 msgstr "הקטן"
