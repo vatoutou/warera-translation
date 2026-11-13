@@ -115,7 +115,7 @@ Translations should communicate the same meaning as the original while sounding 
 
 If you're unsure about a string, check its context or ask for clarification in your Pull Request or in WarEra discord
 
-### 5. Leave Untranslated Strings Empty
+### 5. Untranslated Strings Empty
 
 An empty `msgstr` indicates that a string has not yet been translated.
 
@@ -123,10 +123,10 @@ An empty `msgstr` indicates that a string has not yet been translated.
 msgid "New feature"
 msgstr ""
 ```
+### 6. Finding Untraslated Strings
 
-If you cannot translate a string confidently, it is better to leave it untranslated than to submit an incorrect or misleading translation.
 
-Do not fill missing translations with guesses or unrelated text.
+Instead of searching through the file manually, use your editor's search function to search for "" (two quotation marks). This will help you find entries/strings with empty translations (msgstr ""). Check the matching entries to make sure you're editing the correct untranslated strings and not msgid/source strings.
 
 ## Adding a New Language
 
