@@ -54,7 +54,7 @@ msgstr " - Herhaaldelijk fooien geven aan artikels"
 msgid " - Using outside market standards or manipulated trade prices"
 msgstr " - Gebruik van externe marktstandaarden of gemanipuleerde handelsprijzen"
 
-#: src/components/_user/premium/PremiumActions.tsx:74
+#: src/components/_user/premium/PremiumActions.tsx:65
 msgid " Gift a sub"
 msgstr " Doneer een abonnement"
 
@@ -132,6 +132,11 @@ msgstr "{0, plural, one {Te koop zetten} other {# items te koop zetten}}"
 #: src/components/_other/shop/SkinPackModal.tsx:313
 msgid "{0, plural, one {Unlock # skin} other {Unlock # skins}}"
 msgstr "{0, plural, one {Ontgrendel # skin} other {Ontgrendel # skins}}"
+
+#. placeholder {0}: giveaway.winnersQuantity ?? 0
+#: src/components/_other/events/EventGiveaway.tsx:71
+msgid "{0, plural, one {x # winner} other {x # winners}}"
+msgstr ""
 
 #. placeholder {0}: damagesPercent(effects.bunkerBonusDelta)
 #. placeholder {1}: upgradeName(EUpgrade.BUNKER)
@@ -1784,11 +1789,11 @@ msgstr ""
 msgid "{regionLootCount, plural, =1 {Collect the wooden case lying on this region} one {Collect the # wooden case lying on this region} other {Collect the # wooden cases lying on this region}}"
 msgstr ""
 
-#: src/pages/events/index.tsx:97
+#: src/components/_other/events/EventTournament.tsx:80
 msgid "{registeredCount} countries registered"
 msgstr "{registeredCount} landen geregistreerd"
 
-#: src/pages/events/index.tsx:95
+#: src/components/_other/events/EventTournament.tsx:78
 msgid "{registeredCount} MUs registered"
 msgstr "{registeredCount} MEs geregistreerd"
 
@@ -3810,8 +3815,8 @@ msgid "Accepted"
 msgstr "Geaccepteerd"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:413
-msgid "Access granted"
-msgstr "Toegang gegeven"
+#~ msgid "Access granted"
+#~ msgstr "Toegang gegeven"
 
 #: src/components/_military/battle/BattleHeader.tsx:183
 msgid "Access war"
@@ -3840,8 +3845,9 @@ msgstr "Acties"
 #: src/components/_military/mercenaryContract/MercenaryAuctionList.tsx:144
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:85
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:47
+#: src/components/_other/events/EventGiveaway.tsx:48
+#: src/components/_other/events/EventTournament.tsx:131
 #: src/components/_user/user/Level.tsx:193
-#: src/pages/events/index.tsx:148
 #: src/utils/translations.tsx:342
 msgid "Active"
 msgstr "Actief"
@@ -4316,7 +4322,7 @@ msgstr "API-token is opnieuw gegenereerd"
 msgid "API token revoked"
 msgstr "API-token ingetrokken"
 
-#: src/pages/user/[userId]/settings.tsx:151
+#: src/pages/user/[userId]/settings.tsx:154
 msgid "API Tokens"
 msgstr "API-tokens"
 
@@ -4328,7 +4334,7 @@ msgstr "API-tokens stellen externe applicaties in staat om namens jou toegang te
 msgid "App pattern"
 msgstr "App-patroon"
 
-#: src/pages/user/[userId]/settings.tsx:129
+#: src/pages/user/[userId]/settings.tsx:132
 msgid "App settings"
 msgstr "App-instellingen"
 
@@ -4336,7 +4342,7 @@ msgstr "App-instellingen"
 msgid "Appeal to their loyalty"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:99
+#: src/pages/user/[userId]/settings.tsx:102
 msgid "Appearance"
 msgstr "Uiterlijk"
 
@@ -4620,7 +4626,7 @@ msgstr "Veiling gewonnen"
 msgid "Auctions"
 msgstr "Veilingen"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:244
+#: src/components/_user/auth/ConnectFromModal.tsx:203
 msgid "Authentication failed. Please try again."
 msgstr "Authenticatie mislukt. Probeer het opnieuw."
 
@@ -5287,7 +5293,7 @@ msgstr ""
 msgid "By Company"
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:536
+#: src/components/_user/auth/ConnectFromModal.tsx:389
 msgid "By continuing, you agree to our <0>Terms of Service</0>."
 msgstr "Door door te gaan, ga je akkoord met onze <0>Servicevoorwaarden</0>."
 
@@ -5402,7 +5408,7 @@ msgid "Cancel Mercenary Contract"
 msgstr "Huurlingencontract annuleren"
 
 #: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:240
-#: src/pages/events/index.tsx:156
+#: src/components/_other/events/EventTournament.tsx:139
 #: src/utils/translations.tsx:337
 msgid "Cancelled"
 msgstr "Geannuleerd"
@@ -5879,7 +5885,7 @@ msgid "Colonel"
 msgstr "Kolonel"
 
 #: src/components/_user/user/UserDropdown.tsx:243
-#: src/pages/user/[userId]/settings.tsx:105
+#: src/pages/user/[userId]/settings.tsx:108
 msgid "Color scheme"
 msgstr "Kleurenschema"
 
@@ -6096,15 +6102,15 @@ msgstr ""
 msgid "Congress members"
 msgstr "Congresleden"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:464
+#: src/components/_user/auth/ConnectFromModal.tsx:317
 msgid "Connect with Discord"
 msgstr "Verbinden via Discord"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:521
+#: src/components/_user/auth/ConnectFromModal.tsx:374
 msgid "Connect with email code"
 msgstr "Verbinden met e-mailcode"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:483
+#: src/components/_user/auth/ConnectFromModal.tsx:336
 msgid "Connect with Google"
 msgstr "Verbinden via Google"
 
@@ -6700,7 +6706,7 @@ msgstr "Verdomme, ziet er goed uit"
 msgid "Damn you lucky"
 msgstr "Verdomme, jij hebt geluk"
 
-#: src/pages/user/[userId]/settings.tsx:171
+#: src/pages/user/[userId]/settings.tsx:174
 msgid "Danger zone"
 msgstr "Gevarenzone"
 
@@ -6913,7 +6919,7 @@ msgstr "Verklaar een gezworen vijand"
 msgid "Delete"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:174
+#: src/pages/user/[userId]/settings.tsx:177
 msgid "Delete account"
 msgstr "Account verwijderen"
 
@@ -7502,10 +7508,10 @@ msgstr "Verkiezing afgelopen"
 msgid "Election vote open"
 msgstr "Stemming geopend"
 
+#: src/components/_other/events/EventElections.tsx:23
 #: src/components/_political/country/CountryHeader.tsx:135
 #: src/pages/country/[countryId]/elections.tsx:28
 #: src/pages/country/[countryId]/index.tsx:269
-#: src/pages/events/index.tsx:398
 #: src/pages/party/[partyId]/index.tsx:88
 msgid "Elections"
 msgstr "Verkiezingen"
@@ -7731,10 +7737,14 @@ msgstr "Voer een prijs in"
 msgid "Enter article ID"
 msgstr "Voer artikel ID in"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:269
-#: src/components/_user/auth/ConnectFromModal.tsx:274
+#: src/components/_user/auth/ConnectFromModal.tsx:228
+#: src/components/_user/auth/ConnectFromModal.tsx:233
 msgid "Enter the code we sent to your email."
 msgstr "Voer de code in die we naar je e-mail hebben verzonden."
+
+#: src/components/_other/events/EventGiveaway.tsx:95
+msgid "Entered"
+msgstr ""
 
 #: src/components/_user/auth/CitizenIdCard.tsx:58
 msgid "Entry · Admitted"
@@ -8068,21 +8078,21 @@ msgstr "Niet gekopieerd"
 msgid "Failed to copy text: "
 msgstr "Tekst kopiëren mislukt: "
 
-#: src/components/_user/auth/ConnectFromModal.tsx:160
+#: src/components/_user/auth/ConnectFromModal.tsx:119
 msgid "Failed to start Discord login."
 msgstr "Discord-login is niet gestart."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:158
+#: src/components/_user/auth/ConnectFromModal.tsx:117
 msgid "Failed to start Discord login. Please retry the CAPTCHA."
 msgstr "Discord-login is niet gestart. Probeer de CAPTCHA alsjeblieft opnieuw."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:183
-#: src/components/_user/auth/ConnectFromModal.tsx:202
-#: src/components/_user/auth/ConnectFromModal.tsx:228
+#: src/components/_user/auth/ConnectFromModal.tsx:142
+#: src/components/_user/auth/ConnectFromModal.tsx:161
+#: src/components/_user/auth/ConnectFromModal.tsx:187
 msgid "Failed to start Google login."
 msgstr "Google-login is niet gestart."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:226
+#: src/components/_user/auth/ConnectFromModal.tsx:185
 msgid "Failed to start Google login. Please retry the CAPTCHA."
 msgstr "Google-login is niet gestart. Probeer de CAPTCHA alsjeblieft opnieuw."
 
@@ -8437,7 +8447,7 @@ msgstr ""
 msgid "Founding Father"
 msgstr "Oprichtende Vader"
 
-#: src/pages/shop/index.tsx:187
+#: src/pages/shop/index.tsx:190
 msgid "Free daily reward"
 msgstr "Gratis dagelijkse beloning"
 
@@ -8564,11 +8574,11 @@ msgstr ""
 msgid "Gear up!"
 msgstr ""
 
-#: src/pages/shop/index.tsx:196
+#: src/pages/shop/index.tsx:200
 msgid "Gems"
 msgstr "Edelstenen"
 
-#: src/pages/shop/index.tsx:194
+#: src/pages/shop/index.tsx:198
 msgid "Gems are used to buy assets in the shop and to gift supporter months to other players"
 msgstr "Edelstenen worden gebruikt om extra's in de winkel te kopen en om Supportersmaanden aan andere spelers te schenken"
 
@@ -8662,7 +8672,7 @@ msgstr "Cadeau van Vatou, niet doorvertellen"
 msgid "Gift sent! Skin pack unlocked for recipient!"
 msgstr "Cadeau verzonden! Skinpack ontgrendeld voor ontvanger!"
 
-#: src/pages/shop/index.tsx:67
+#: src/pages/shop/index.tsx:68
 msgid "Gift sent! Thanks for supporting the game <3"
 msgstr "Cadeau verzonden! Bedankt voor het steunen van het spel <3"
 
@@ -8674,8 +8684,8 @@ msgstr "Doe Supportersplan cadeau"
 msgid "Gift this pack to someone"
 msgstr "Geef dit pakket aan iemand anders"
 
-#: src/pages/shop/index.tsx:115
-#: src/pages/shop/index.tsx:141
+#: src/pages/shop/index.tsx:118
+#: src/pages/shop/index.tsx:144
 msgid "gifted"
 msgstr "gegeven"
 
@@ -8706,6 +8716,14 @@ msgstr ""
 #: src/components/_user/apiToken/ApiTokenList.tsx:251
 msgid "Give your token a descriptive name so you can identify it later."
 msgstr "Geef je token een beschrijvende naam zodat je hem later kunt herkennen."
+
+#: src/components/_other/events/EventGiveaway.tsx:61
+msgid "Giveaway"
+msgstr ""
+
+#: src/components/_other/events/EventGiveaway.tsx:34
+msgid "Giveaway entered"
+msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:199
 msgid "Giveaway Winner"
@@ -9207,7 +9225,7 @@ msgstr "Help het spel te groeien"
 msgid "Hide cards"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Hide email"
 msgstr ""
 
@@ -9781,6 +9799,10 @@ msgstr "Sluit je aan bij een militaire Unit"
 msgid "Join a military unit to take part"
 msgstr "Word lid van een militaire eenheid om deel te nemen"
 
+#: src/components/_other/events/EventMuLeague.tsx:60
+msgid "Join a Military Unit to take part"
+msgstr ""
+
 #: src/components/_user/mission/mission.frontConfig.tsx:680
 msgid "Join a Party"
 msgstr "Word lid van een Partij"
@@ -9986,7 +10008,7 @@ msgstr "Laatste verbinding"
 msgid "Last earned"
 msgstr ""
 
-#: src/pages/shop/index.tsx:103
+#: src/pages/shop/index.tsx:106
 msgid "Last gifts"
 msgstr "Laatste geschenken"
 
@@ -9994,13 +10016,13 @@ msgstr "Laatste geschenken"
 msgid "Last one! Tap Milestones."
 msgstr ""
 
-#: src/pages/shop/index.tsx:129
+#: src/pages/shop/index.tsx:132
 msgid "Last skin gifts"
 msgstr "Laatste skin-geschenken"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:467
-#: src/components/_user/auth/ConnectFromModal.tsx:486
-#: src/components/_user/auth/ConnectFromModal.tsx:524
+#: src/components/_user/auth/ConnectFromModal.tsx:320
+#: src/components/_user/auth/ConnectFromModal.tsx:339
+#: src/components/_user/auth/ConnectFromModal.tsx:377
 msgid "Last used"
 msgstr "Laatst gebruikt"
 
@@ -10020,7 +10042,7 @@ msgstr ""
 msgid "Later"
 msgstr "Later"
 
-#: src/pages/shop/index.tsx:209
+#: src/pages/shop/index.tsx:214
 msgid "Latest Pack"
 msgstr "Laatste pakket"
 
@@ -10079,6 +10101,7 @@ msgstr ""
 #: src/components/_layout/layoutInfos.frontConfig.tsx:55
 #: src/components/_military/mu/MuHeader.tsx:114
 #: src/components/_military/mu/MuHeader.tsx:180
+#: src/components/_other/events/EventLeague.tsx:45
 #: src/components/_user/league/LeagueTopInfoCard.tsx:69
 #: src/components/_user/user/UserHeader.tsx:229
 #: src/components/_user/user/UserHeader.tsx:326
@@ -10087,6 +10110,10 @@ msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:215
 msgid "League Champion"
+msgstr ""
+
+#: src/components/_other/events/EventLeague.tsx:69
+msgid "Leagues are being drawn"
 msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:248
@@ -10603,8 +10630,8 @@ msgstr ""
 msgid "Make room for more staff!"
 msgstr ""
 
-#: src/components/_user/premium/PremiumActions.tsx:84
-#: src/pages/user/[userId]/settings.tsx:165
+#: src/components/_user/premium/PremiumActions.tsx:75
+#: src/pages/user/[userId]/settings.tsx:168
 msgid "Manage Subscription"
 msgstr "Beheer Abonnement"
 
@@ -11417,6 +11444,7 @@ msgstr "MU-donatie ontvangen"
 #: src/components/_layout/layoutInfos.frontConfig.tsx:60
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:118
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:136
+#: src/components/_other/events/EventMuLeague.tsx:48
 #: src/components/_user/notification/notification.frontConfig.tsx:2465
 #: src/pages/mu/[muId]/league.tsx:19
 msgid "MU league"
@@ -11755,7 +11783,7 @@ msgstr "Nieuwe werver"
 msgid "New subscriber"
 msgstr "Nieuwe abonnee"
 
-#: src/pages/shop/index.tsx:168
+#: src/pages/shop/index.tsx:171
 msgid "New supporters"
 msgstr "Nieuwe supporters"
 
@@ -11869,7 +11897,7 @@ msgstr "Nog geen aankondigingen"
 msgid "No API tokens yet. Create one to get started."
 msgstr "Nog geen API-tokens. Maak er een aan om te beginnen."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:243
+#: src/components/_user/auth/ConnectFromModal.tsx:202
 msgid "No authorization code provided."
 msgstr "Geen autorisatiecode opgegeven."
 
@@ -12329,7 +12357,7 @@ msgstr ""
 msgid "Not enough paper for the daily maintenance: alliance damage bonuses are off until it pays."
 msgstr ""
 
-#: src/pages/events/index.tsx:113
+#: src/components/_other/events/EventTournament.tsx:96
 msgid "Not enough participants"
 msgstr "Niet genoeg deelnemers"
 
@@ -12410,7 +12438,7 @@ msgid "Nothing while alone."
 msgstr ""
 
 #: src/pages/notifications.tsx:38
-#: src/pages/user/[userId]/settings.tsx:145
+#: src/pages/user/[userId]/settings.tsx:148
 msgid "Notification preferences"
 msgstr "Meldingsvoorkeuren"
 
@@ -12794,7 +12822,7 @@ msgid "Operative"
 msgstr "Operatief"
 
 #: src/components/_political/unrest/UnrestBar.tsx:40
-#: src/components/_user/auth/ConnectFromModal.tsx:498
+#: src/components/_user/auth/ConnectFromModal.tsx:351
 msgid "or"
 msgstr "of"
 
@@ -12971,8 +12999,13 @@ msgid "Paramilitary"
 msgstr ""
 
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:76
+#: src/components/_other/events/EventGiveaway.tsx:82
 msgid "Participants"
 msgstr "Deelnemers"
+
+#: src/components/_other/events/EventGiveaway.tsx:105
+msgid "Participate"
+msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:328
 msgid "Participate in Battle"
@@ -13181,7 +13214,7 @@ msgstr ""
 msgid "Pay the “inspection fee”"
 msgstr ""
 
-#: src/pages/shop/index.tsx:54
+#: src/pages/shop/index.tsx:55
 msgid "Payment successful! Thanks for supporting the game <3"
 msgstr "Betaling geslaagd! Bedankt voor het steunen van het spel <3"
 
@@ -13440,9 +13473,9 @@ msgstr ""
 msgid "Playing this division this week."
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:147
-#: src/components/_user/auth/ConnectFromModal.tsx:211
-#: src/components/_user/auth/ConnectFromModal.tsx:296
+#: src/components/_user/auth/ConnectFromModal.tsx:106
+#: src/components/_user/auth/ConnectFromModal.tsx:170
+#: src/components/_user/auth/ConnectFromModal.tsx:255
 msgid "Please complete the CAPTCHA."
 msgstr "Voltooi de CAPTCHA alsjeblieft."
 
@@ -13542,7 +13575,7 @@ msgstr ""
 msgid "Prehistoric Pack"
 msgstr "Prehistorische pakket"
 
-#: src/pages/shop/index.tsx:226
+#: src/pages/shop/index.tsx:231
 msgid "Premium"
 msgstr "Premium"
 
@@ -14721,8 +14754,8 @@ msgid "Reset"
 msgstr "Reset"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:447
-msgid "Reset CAPTCHA"
-msgstr "Reset CAPTCHA"
+#~ msgid "Reset CAPTCHA"
+#~ msgstr "Reset CAPTCHA"
 
 #: src/components/_economy/employee/EmployeeModal.tsx:549
 msgid "Reset name"
@@ -14740,7 +14773,7 @@ msgstr "Reset Vaardigheden"
 msgid "Reset Survivor"
 msgstr "Reset overlevende"
 
-#: src/pages/user/[userId]/settings.tsx:140
+#: src/pages/user/[userId]/settings.tsx:143
 msgid "Reset tutorials"
 msgstr "Tutorial resetten"
 
@@ -15189,8 +15222,8 @@ msgid "Second wind"
 msgstr ""
 
 #: src/components/_user/auth/ConnectFromModal.tsx:428
-msgid "Security check failed. Turn off your VPN or ad blocker, or try another browser."
-msgstr ""
+#~ msgid "Security check failed. Turn off your VPN or ad blocker, or try another browser."
+#~ msgstr ""
 
 #: src/pages/party/[partyId]/index.tsx:100
 msgid "See all parties"
@@ -15509,7 +15542,7 @@ msgstr "Toon alle {0} biedingen"
 msgid "Show cards"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Show email"
 msgstr ""
 
@@ -15665,7 +15698,7 @@ msgid "Skin Reward"
 msgstr "Skin Beloning"
 
 #: src/components/_other/shop/ShopHeader.tsx:23
-#: src/pages/shop/index.tsx:202
+#: src/pages/shop/index.tsx:207
 #: src/pages/user/[userId]/index.tsx:112
 msgid "Skins"
 msgstr "Skins"
@@ -16095,8 +16128,8 @@ msgstr "Abonnees"
 msgid "Success"
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:199
-#: src/components/_user/auth/ConnectFromModal.tsx:250
+#: src/components/_user/auth/ConnectFromModal.tsx:158
+#: src/components/_user/auth/ConnectFromModal.tsx:209
 msgid "Successfully logged in!"
 msgstr "Succesvol ingelogd!"
 
@@ -16108,7 +16141,7 @@ msgstr "Suiker Papa"
 msgid "Support"
 msgstr ""
 
-#: src/components/_user/premium/PremiumActions.tsx:60
+#: src/components/_user/premium/PremiumActions.tsx:51
 msgid "Support the game"
 msgstr "Steun het spel"
 
@@ -16152,12 +16185,12 @@ msgstr "Supportersmaanden"
 msgid "Supporter of the game for <0>{0, plural, one {# month} other {# months}}</0>"
 msgstr ""
 
-#: src/components/_user/premium/PremiumCard.tsx:60
+#: src/components/_user/premium/PremiumCard.tsx:62
 msgid "Supporter plan"
 msgstr "Supportersplan"
 
 #: src/components/_user/modals/PremiumModal.tsx:31
-#: src/pages/user/[userId]/settings.tsx:158
+#: src/pages/user/[userId]/settings.tsx:161
 msgid "Supporter Plan"
 msgstr "Supportersplan"
 
@@ -16435,7 +16468,7 @@ msgstr "Beëindigd"
 msgid "Terms"
 msgstr "Voorwaarden"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:563
+#: src/components/_user/auth/ConnectFromModal.tsx:416
 msgid "Terms of Service"
 msgstr "Servicevoorwaarden"
 
@@ -17485,7 +17518,7 @@ msgstr ""
 msgid "Title font"
 msgstr ""
 
-#: src/pages/shop/index.tsx:154
+#: src/pages/shop/index.tsx:157
 msgid "to"
 msgstr "aan"
 
@@ -17626,7 +17659,7 @@ msgstr ""
 msgid "Top Donors"
 msgstr "Hoogste donateurs"
 
-#: src/pages/shop/index.tsx:97
+#: src/pages/shop/index.tsx:100
 msgid "Top gift givers of the month"
 msgstr "Meeste cadeaus gegeven deze maand"
 
@@ -17716,7 +17749,7 @@ msgstr ""
 #: src/components/_military/battle/ActiveBattlesList.tsx:81
 #: src/components/_military/battle/ActiveBattlesList.tsx:187
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:65
-#: src/pages/events/index.tsx:190
+#: src/components/_other/events/EventTournament.tsx:31
 msgid "Tournament"
 msgstr "Toernooi"
 
@@ -17916,11 +17949,11 @@ msgstr ""
 msgid "Try it"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:137
+#: src/pages/user/[userId]/settings.tsx:140
 msgid "Tutorials"
 msgstr "Uitleg"
 
-#: src/pages/user/[userId]/settings.tsx:59
+#: src/pages/user/[userId]/settings.tsx:62
 msgid "Tutorials reseted"
 msgstr "Uitleg gereset"
 
@@ -18094,7 +18127,7 @@ msgstr "Wijzig focus"
 msgid "Update gift"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:91
+#: src/pages/user/[userId]/settings.tsx:94
 msgid "Update infos"
 msgstr "Wijzig informatie"
 
@@ -18275,7 +18308,7 @@ msgid "Username"
 msgstr "Gebruikersnaam"
 
 #: src/components/_user/user/UserDropdown.tsx:261
-#: src/pages/user/[userId]/settings.tsx:120
+#: src/pages/user/[userId]/settings.tsx:123
 msgid "Username effect"
 msgstr "Gebruikersnaam effect"
 
@@ -18291,7 +18324,7 @@ msgstr "Gebruikersnaam effect geüpdatet"
 msgid "Username effects are a Supporter Plan feature."
 msgstr "Gebruikersnaam effecten vallen onder het Supportersplan"
 
-#: src/pages/user/[userId]/settings.tsx:113
+#: src/pages/user/[userId]/settings.tsx:116
 msgid "Username font"
 msgstr "Gebruikersnaam stijl"
 
@@ -18486,8 +18519,8 @@ msgid "Verify"
 msgstr "Bevestigen"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:405
-msgid "Verifying you're human..."
-msgstr "Aan het bewijzen dat je een mens bent…"
+#~ msgid "Verifying you're human..."
+#~ msgstr "Aan het bewijzen dat je een mens bent…"
 
 #: src/components/_economy/employee/employee.traitMeta.ts:122
 msgid "Veteran"
@@ -18846,7 +18879,7 @@ msgid "Won"
 msgstr ""
 
 #: src/components/_military/tournament/TournamentHeader.tsx:91
-#: src/pages/events/index.tsx:116
+#: src/components/_other/events/EventTournament.tsx:99
 msgid "Won by"
 msgstr "Gewonnen door"
 
@@ -19048,7 +19081,7 @@ msgstr "Je bent niet langer de manager van  <0/>. Je overblijvende <1>{0}</1> we
 msgid "You are not a council member of this party"
 msgstr "Je bent geen raadslid van deze partij"
 
-#: src/pages/events/index.tsx:110
+#: src/components/_other/events/EventTournament.tsx:93
 msgid "You are not participating"
 msgstr "Je doet niet mee"
 
@@ -19457,7 +19490,7 @@ msgstr "Je hebt een ME-toernooi gewonnen"
 msgid "You worked 100 times"
 msgstr "Je hebt 100 keer gewerkt"
 
-#: src/components/_user/premium/PremiumCard.tsx:55
+#: src/components/_user/premium/PremiumCard.tsx:57
 msgid "You're already a supporter <0/>"
 msgstr "Je bent al een supporter <0/>"
 
@@ -19603,7 +19636,7 @@ msgstr ""
 msgid "Your daily missions have been reset! Complete them to earn rewards."
 msgstr "Je dagelijkse missies zijn gereset! Voltooi ze om beloningen te verdienen."
 
-#: src/pages/user/[userId]/settings.tsx:68
+#: src/pages/user/[userId]/settings.tsx:71
 msgid "Your email"
 msgstr "Je e-mailadres"
 
@@ -19705,6 +19738,10 @@ msgstr ""
 msgid "Your MU has <0/> reputation and cannot bid on mercenary contracts. Pay to buy back reputation (once per day)."
 msgstr "Je ME heeft <0/> reputatie en kan niet bieden op huurlingencontracten. Betaal om reputatie terug te kopen (eenkeer per dag)."
 
+#: src/components/_other/events/EventMuLeague.tsx:75
+msgid "Your MU has no league this week"
+msgstr ""
+
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:107
 msgid "Your MU is registered"
 msgstr "Je ME is geregistreerd"
@@ -19795,7 +19832,7 @@ msgstr "Je team <0/> is geëlimineerd uit de <1/>"
 msgid "Your team <0/> won a round in <1/>!"
 msgstr "Je team <0/> won een ronde in <1/>!"
 
-#: src/pages/events/index.tsx:102
+#: src/components/_other/events/EventTournament.tsx:85
 msgid "Your team:"
 msgstr "Je team:"
 
@@ -19850,7 +19887,7 @@ msgstr "Je wekelijkse missies zijn opnieuw ingesteld! Voltooi ze om beloningen t
 msgid "Your workforce"
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:508
+#: src/components/_user/auth/ConnectFromModal.tsx:361
 msgid "your@email.com"
 msgstr "jouw@email.com"
 

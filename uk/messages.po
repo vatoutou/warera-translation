@@ -54,7 +54,7 @@ msgstr " - Повторюване надсилання чайових за ст�
 msgid " - Using outside market standards or manipulated trade prices"
 msgstr " - Використання позаринкових стандартів або маніпульованих торгових цін"
 
-#: src/components/_user/premium/PremiumActions.tsx:74
+#: src/components/_user/premium/PremiumActions.tsx:65
 msgid " Gift a sub"
 msgstr " Подарувати підписку"
 
@@ -131,6 +131,11 @@ msgstr "{0, plural, one {Виставити на продаж} other {Виста
 #. placeholder {0}: estimate.notOwnedCount
 #: src/components/_other/shop/SkinPackModal.tsx:313
 msgid "{0, plural, one {Unlock # skin} other {Unlock # skins}}"
+msgstr ""
+
+#. placeholder {0}: giveaway.winnersQuantity ?? 0
+#: src/components/_other/events/EventGiveaway.tsx:71
+msgid "{0, plural, one {x # winner} other {x # winners}}"
 msgstr ""
 
 #. placeholder {0}: damagesPercent(effects.bunkerBonusDelta)
@@ -1784,11 +1789,11 @@ msgstr "{quantity, plural, =1 {Дерев'яний кейс зібрано!} one
 msgid "{regionLootCount, plural, =1 {Collect the wooden case lying on this region} one {Collect the # wooden case lying on this region} other {Collect the # wooden cases lying on this region}}"
 msgstr ""
 
-#: src/pages/events/index.tsx:97
+#: src/components/_other/events/EventTournament.tsx:80
 msgid "{registeredCount} countries registered"
 msgstr "Країн зареєстровано: {registeredCount}"
 
-#: src/pages/events/index.tsx:95
+#: src/components/_other/events/EventTournament.tsx:78
 msgid "{registeredCount} MUs registered"
 msgstr "Підрозділів зареєстровано: {registeredCount}"
 
@@ -3810,8 +3815,8 @@ msgid "Accepted"
 msgstr "Прийнято"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:413
-msgid "Access granted"
-msgstr "Доступ надано"
+#~ msgid "Access granted"
+#~ msgstr "Доступ надано"
 
 #: src/components/_military/battle/BattleHeader.tsx:183
 msgid "Access war"
@@ -3840,8 +3845,9 @@ msgstr "Дії"
 #: src/components/_military/mercenaryContract/MercenaryAuctionList.tsx:144
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:85
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:47
+#: src/components/_other/events/EventGiveaway.tsx:48
+#: src/components/_other/events/EventTournament.tsx:131
 #: src/components/_user/user/Level.tsx:193
-#: src/pages/events/index.tsx:148
 #: src/utils/translations.tsx:342
 msgid "Active"
 msgstr "Активно"
@@ -4316,7 +4322,7 @@ msgstr "API токен перестворено"
 msgid "API token revoked"
 msgstr "API токен відкликано"
 
-#: src/pages/user/[userId]/settings.tsx:151
+#: src/pages/user/[userId]/settings.tsx:154
 msgid "API Tokens"
 msgstr "API токени"
 
@@ -4328,7 +4334,7 @@ msgstr "API токени дозволяють зовнішнім застосу�
 msgid "App pattern"
 msgstr "Схема застосунку"
 
-#: src/pages/user/[userId]/settings.tsx:129
+#: src/pages/user/[userId]/settings.tsx:132
 msgid "App settings"
 msgstr "Налаштування застосунку"
 
@@ -4336,7 +4342,7 @@ msgstr "Налаштування застосунку"
 msgid "Appeal to their loyalty"
 msgstr "Зіграти на їх вірності"
 
-#: src/pages/user/[userId]/settings.tsx:99
+#: src/pages/user/[userId]/settings.tsx:102
 msgid "Appearance"
 msgstr "Вигляд"
 
@@ -4620,7 +4626,7 @@ msgstr "Виграний аукціон"
 msgid "Auctions"
 msgstr "Аукціони"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:244
+#: src/components/_user/auth/ConnectFromModal.tsx:203
 msgid "Authentication failed. Please try again."
 msgstr "Аутентифікацію провалено. Спробуйте знову."
 
@@ -5287,7 +5293,7 @@ msgstr ""
 msgid "By Company"
 msgstr "За фабриками"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:536
+#: src/components/_user/auth/ConnectFromModal.tsx:389
 msgid "By continuing, you agree to our <0>Terms of Service</0>."
 msgstr "Продовжуючи, ви погоджуєтесь з нашими <0>Умовами використання</0>"
 
@@ -5402,7 +5408,7 @@ msgid "Cancel Mercenary Contract"
 msgstr "Скасувати найманський контракт"
 
 #: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:240
-#: src/pages/events/index.tsx:156
+#: src/components/_other/events/EventTournament.tsx:139
 #: src/utils/translations.tsx:337
 msgid "Cancelled"
 msgstr "Скасовано"
@@ -5879,7 +5885,7 @@ msgid "Colonel"
 msgstr "Полковник"
 
 #: src/components/_user/user/UserDropdown.tsx:243
-#: src/pages/user/[userId]/settings.tsx:105
+#: src/pages/user/[userId]/settings.tsx:108
 msgid "Color scheme"
 msgstr "Колірна схема"
 
@@ -6096,15 +6102,15 @@ msgstr "Член парламенту <0/>"
 msgid "Congress members"
 msgstr "Парламентарі"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:464
+#: src/components/_user/auth/ConnectFromModal.tsx:317
 msgid "Connect with Discord"
 msgstr "Увійти через Діскорд"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:521
+#: src/components/_user/auth/ConnectFromModal.tsx:374
 msgid "Connect with email code"
 msgstr "Увійти через електронну пошту"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:483
+#: src/components/_user/auth/ConnectFromModal.tsx:336
 msgid "Connect with Google"
 msgstr "Увійти через Google"
 
@@ -6700,7 +6706,7 @@ msgstr "Виглядає просто шикарно"
 msgid "Damn you lucky"
 msgstr "Ого, щасливчик"
 
-#: src/pages/user/[userId]/settings.tsx:171
+#: src/pages/user/[userId]/settings.tsx:174
 msgid "Danger zone"
 msgstr "Небезпечна зона"
 
@@ -6913,7 +6919,7 @@ msgstr "Визначити заклятого ворога"
 msgid "Delete"
 msgstr "Видалити"
 
-#: src/pages/user/[userId]/settings.tsx:174
+#: src/pages/user/[userId]/settings.tsx:177
 msgid "Delete account"
 msgstr "Видалити обліковий запис"
 
@@ -7502,10 +7508,10 @@ msgstr "Вибори скінчились"
 msgid "Election vote open"
 msgstr "Розпочалось голосування"
 
+#: src/components/_other/events/EventElections.tsx:23
 #: src/components/_political/country/CountryHeader.tsx:135
 #: src/pages/country/[countryId]/elections.tsx:28
 #: src/pages/country/[countryId]/index.tsx:269
-#: src/pages/events/index.tsx:398
 #: src/pages/party/[partyId]/index.tsx:88
 msgid "Elections"
 msgstr "Вибори"
@@ -7731,10 +7737,14 @@ msgstr "Вкажіть ціну"
 msgid "Enter article ID"
 msgstr "Введіть ID статті"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:269
-#: src/components/_user/auth/ConnectFromModal.tsx:274
+#: src/components/_user/auth/ConnectFromModal.tsx:228
+#: src/components/_user/auth/ConnectFromModal.tsx:233
 msgid "Enter the code we sent to your email."
 msgstr "Введіть код, який ми надіслали на вашу пошту."
+
+#: src/components/_other/events/EventGiveaway.tsx:95
+msgid "Entered"
+msgstr ""
 
 #: src/components/_user/auth/CitizenIdCard.tsx:58
 msgid "Entry · Admitted"
@@ -8068,21 +8078,21 @@ msgstr "Не вдалося скопіювати"
 msgid "Failed to copy text: "
 msgstr "Не вдалося скопіювати текст: "
 
-#: src/components/_user/auth/ConnectFromModal.tsx:160
+#: src/components/_user/auth/ConnectFromModal.tsx:119
 msgid "Failed to start Discord login."
 msgstr "Не вдалося розпочати вхід через Discord."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:158
+#: src/components/_user/auth/ConnectFromModal.tsx:117
 msgid "Failed to start Discord login. Please retry the CAPTCHA."
 msgstr "Не вдалося розпочати вхід через Discord. Спробуйте пройти CAPTCHA ще раз."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:183
-#: src/components/_user/auth/ConnectFromModal.tsx:202
-#: src/components/_user/auth/ConnectFromModal.tsx:228
+#: src/components/_user/auth/ConnectFromModal.tsx:142
+#: src/components/_user/auth/ConnectFromModal.tsx:161
+#: src/components/_user/auth/ConnectFromModal.tsx:187
 msgid "Failed to start Google login."
 msgstr "Не вдалось розпочати вхід через Google."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:226
+#: src/components/_user/auth/ConnectFromModal.tsx:185
 msgid "Failed to start Google login. Please retry the CAPTCHA."
 msgstr "Не вдалось розпочати вхід через Google. Повторно пройдіть CAPTCHA."
 
@@ -8437,7 +8447,7 @@ msgstr "Знаходиться на карті. Відкрийте, щоб от�
 msgid "Founding Father"
 msgstr "Батько-засновник"
 
-#: src/pages/shop/index.tsx:187
+#: src/pages/shop/index.tsx:190
 msgid "Free daily reward"
 msgstr "Дармова щоденна нагорода"
 
@@ -8564,11 +8574,11 @@ msgstr "Спорядження"
 msgid "Gear up!"
 msgstr "Одягнись!"
 
-#: src/pages/shop/index.tsx:196
+#: src/pages/shop/index.tsx:200
 msgid "Gems"
 msgstr "Самоцвіти"
 
-#: src/pages/shop/index.tsx:194
+#: src/pages/shop/index.tsx:198
 msgid "Gems are used to buy assets in the shop and to gift supporter months to other players"
 msgstr "Самоцвіти використовуються для купівлі у магазині та дарування підписок іншим гравцям"
 
@@ -8662,7 +8672,7 @@ msgstr "Подарунок від Vatou, нікому не кажи"
 msgid "Gift sent! Skin pack unlocked for recipient!"
 msgstr "Подарунок надіслано! Набір скінів розблоковано для одержувача!"
 
-#: src/pages/shop/index.tsx:67
+#: src/pages/shop/index.tsx:68
 msgid "Gift sent! Thanks for supporting the game <3"
 msgstr "Подарунок відправлено! Дякуємо за підтримку гри <3"
 
@@ -8674,8 +8684,8 @@ msgstr "Подарувати підписку"
 msgid "Gift this pack to someone"
 msgstr "Подарувати комусь цей набір"
 
-#: src/pages/shop/index.tsx:115
-#: src/pages/shop/index.tsx:141
+#: src/pages/shop/index.tsx:118
+#: src/pages/shop/index.tsx:144
 msgid "gifted"
 msgstr "подарував"
 
@@ -8706,6 +8716,14 @@ msgstr "Дати їм два вихідні дні"
 #: src/components/_user/apiToken/ApiTokenList.tsx:251
 msgid "Give your token a descriptive name so you can identify it later."
 msgstr "Дай токену зрозумілу назву, щоб легко впізнати його пізніше."
+
+#: src/components/_other/events/EventGiveaway.tsx:61
+msgid "Giveaway"
+msgstr ""
+
+#: src/components/_other/events/EventGiveaway.tsx:34
+msgid "Giveaway entered"
+msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:199
 msgid "Giveaway Winner"
@@ -9207,7 +9225,7 @@ msgstr "Підтримай розвиток гри"
 msgid "Hide cards"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Hide email"
 msgstr "Приховати електронну пошту"
 
@@ -9781,6 +9799,10 @@ msgstr "Приєднайтесь до військового підрозділ�
 msgid "Join a military unit to take part"
 msgstr "Приєднайтесь до підрозділу щоб взяти участь"
 
+#: src/components/_other/events/EventMuLeague.tsx:60
+msgid "Join a Military Unit to take part"
+msgstr ""
+
 #: src/components/_user/mission/mission.frontConfig.tsx:680
 msgid "Join a Party"
 msgstr "Приєднайтесь до партії"
@@ -9986,7 +10008,7 @@ msgstr "Востаннє в мережі"
 msgid "Last earned"
 msgstr ""
 
-#: src/pages/shop/index.tsx:103
+#: src/pages/shop/index.tsx:106
 msgid "Last gifts"
 msgstr "Останні подаровані підписки"
 
@@ -9994,13 +10016,13 @@ msgstr "Останні подаровані підписки"
 msgid "Last one! Tap Milestones."
 msgstr "Наостанок! Натисніть кнопку «Відзнаки»"
 
-#: src/pages/shop/index.tsx:129
+#: src/pages/shop/index.tsx:132
 msgid "Last skin gifts"
 msgstr "Останні подаровані скіни"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:467
-#: src/components/_user/auth/ConnectFromModal.tsx:486
-#: src/components/_user/auth/ConnectFromModal.tsx:524
+#: src/components/_user/auth/ConnectFromModal.tsx:320
+#: src/components/_user/auth/ConnectFromModal.tsx:339
+#: src/components/_user/auth/ConnectFromModal.tsx:377
 msgid "Last used"
 msgstr "Останній вхід"
 
@@ -10020,7 +10042,7 @@ msgstr "Пізня пташка"
 msgid "Later"
 msgstr "Пізніше"
 
-#: src/pages/shop/index.tsx:209
+#: src/pages/shop/index.tsx:214
 msgid "Latest Pack"
 msgstr "Останній набір"
 
@@ -10079,6 +10101,7 @@ msgstr "Листівки з неба"
 #: src/components/_layout/layoutInfos.frontConfig.tsx:55
 #: src/components/_military/mu/MuHeader.tsx:114
 #: src/components/_military/mu/MuHeader.tsx:180
+#: src/components/_other/events/EventLeague.tsx:45
 #: src/components/_user/league/LeagueTopInfoCard.tsx:69
 #: src/components/_user/user/UserHeader.tsx:229
 #: src/components/_user/user/UserHeader.tsx:326
@@ -10087,6 +10110,10 @@ msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:215
 msgid "League Champion"
+msgstr ""
+
+#: src/components/_other/events/EventLeague.tsx:69
+msgid "Leagues are being drawn"
 msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:248
@@ -10603,8 +10630,8 @@ msgstr ""
 msgid "Make room for more staff!"
 msgstr "Додайте простору!"
 
-#: src/components/_user/premium/PremiumActions.tsx:84
-#: src/pages/user/[userId]/settings.tsx:165
+#: src/components/_user/premium/PremiumActions.tsx:75
+#: src/pages/user/[userId]/settings.tsx:168
 msgid "Manage Subscription"
 msgstr "Керування підпискою"
 
@@ -11417,6 +11444,7 @@ msgstr "Отримано пожертву до ВП"
 #: src/components/_layout/layoutInfos.frontConfig.tsx:60
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:118
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:136
+#: src/components/_other/events/EventMuLeague.tsx:48
 #: src/components/_user/notification/notification.frontConfig.tsx:2465
 #: src/pages/mu/[muId]/league.tsx:19
 msgid "MU league"
@@ -11755,7 +11783,7 @@ msgstr "Новий залучальник"
 msgid "New subscriber"
 msgstr "Новий підписник"
 
-#: src/pages/shop/index.tsx:168
+#: src/pages/shop/index.tsx:171
 msgid "New supporters"
 msgstr "Нові підписники"
 
@@ -11869,7 +11897,7 @@ msgstr "Оголошень немає"
 msgid "No API tokens yet. Create one to get started."
 msgstr "API токенів немає. Створи якийсь, аби розпочати."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:243
+#: src/components/_user/auth/ConnectFromModal.tsx:202
 msgid "No authorization code provided."
 msgstr "Код авторизації не було надано."
 
@@ -12329,7 +12357,7 @@ msgstr ""
 msgid "Not enough paper for the daily maintenance: alliance damage bonuses are off until it pays."
 msgstr ""
 
-#: src/pages/events/index.tsx:113
+#: src/components/_other/events/EventTournament.tsx:96
 msgid "Not enough participants"
 msgstr "Недостатньо учасників"
 
@@ -12410,7 +12438,7 @@ msgid "Nothing while alone."
 msgstr "Не діє, поки наодинці."
 
 #: src/pages/notifications.tsx:38
-#: src/pages/user/[userId]/settings.tsx:145
+#: src/pages/user/[userId]/settings.tsx:148
 msgid "Notification preferences"
 msgstr "Вподобання щодо сповіщень"
 
@@ -12794,7 +12822,7 @@ msgid "Operative"
 msgstr "Оперативник"
 
 #: src/components/_political/unrest/UnrestBar.tsx:40
-#: src/components/_user/auth/ConnectFromModal.tsx:498
+#: src/components/_user/auth/ConnectFromModal.tsx:351
 msgid "or"
 msgstr "або"
 
@@ -12971,8 +12999,13 @@ msgid "Paramilitary"
 msgstr ""
 
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:76
+#: src/components/_other/events/EventGiveaway.tsx:82
 msgid "Participants"
 msgstr "Учасники"
+
+#: src/components/_other/events/EventGiveaway.tsx:105
+msgid "Participate"
+msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:328
 msgid "Participate in Battle"
@@ -13181,7 +13214,7 @@ msgstr ""
 msgid "Pay the “inspection fee”"
 msgstr ""
 
-#: src/pages/shop/index.tsx:54
+#: src/pages/shop/index.tsx:55
 msgid "Payment successful! Thanks for supporting the game <3"
 msgstr "Успішна оплата! Дякую за підтримку гри <3"
 
@@ -13440,9 +13473,9 @@ msgstr ""
 msgid "Playing this division this week."
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:147
-#: src/components/_user/auth/ConnectFromModal.tsx:211
-#: src/components/_user/auth/ConnectFromModal.tsx:296
+#: src/components/_user/auth/ConnectFromModal.tsx:106
+#: src/components/_user/auth/ConnectFromModal.tsx:170
+#: src/components/_user/auth/ConnectFromModal.tsx:255
 msgid "Please complete the CAPTCHA."
 msgstr "Будь ласка, завершіть CAPTCHA."
 
@@ -13542,7 +13575,7 @@ msgstr ""
 msgid "Prehistoric Pack"
 msgstr "Доісторичний набір"
 
-#: src/pages/shop/index.tsx:226
+#: src/pages/shop/index.tsx:231
 msgid "Premium"
 msgstr "Преміум"
 
@@ -14721,8 +14754,8 @@ msgid "Reset"
 msgstr "Скинути"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:447
-msgid "Reset CAPTCHA"
-msgstr "Скинути CAPTCHA"
+#~ msgid "Reset CAPTCHA"
+#~ msgstr "Скинути CAPTCHA"
 
 #: src/components/_economy/employee/EmployeeModal.tsx:549
 msgid "Reset name"
@@ -14740,7 +14773,7 @@ msgstr "Скиньте навички"
 msgid "Reset Survivor"
 msgstr "Свідок скидання"
 
-#: src/pages/user/[userId]/settings.tsx:140
+#: src/pages/user/[userId]/settings.tsx:143
 msgid "Reset tutorials"
 msgstr "Скинути навчання"
 
@@ -15189,8 +15222,8 @@ msgid "Second wind"
 msgstr "Друге дихання"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:428
-msgid "Security check failed. Turn off your VPN or ad blocker, or try another browser."
-msgstr ""
+#~ msgid "Security check failed. Turn off your VPN or ad blocker, or try another browser."
+#~ msgstr ""
 
 #: src/pages/party/[partyId]/index.tsx:100
 msgid "See all parties"
@@ -15509,7 +15542,7 @@ msgstr "Показати всі {0} ставок"
 msgid "Show cards"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Show email"
 msgstr ""
 
@@ -15665,7 +15698,7 @@ msgid "Skin Reward"
 msgstr "Нагорода скіном"
 
 #: src/components/_other/shop/ShopHeader.tsx:23
-#: src/pages/shop/index.tsx:202
+#: src/pages/shop/index.tsx:207
 #: src/pages/user/[userId]/index.tsx:112
 msgid "Skins"
 msgstr "Скіни"
@@ -16095,8 +16128,8 @@ msgstr "Підписники"
 msgid "Success"
 msgstr "Успіх"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:199
-#: src/components/_user/auth/ConnectFromModal.tsx:250
+#: src/components/_user/auth/ConnectFromModal.tsx:158
+#: src/components/_user/auth/ConnectFromModal.tsx:209
 msgid "Successfully logged in!"
 msgstr "Успішний вхід!"
 
@@ -16108,7 +16141,7 @@ msgstr "Шугар дедді"
 msgid "Support"
 msgstr "Підтримати"
 
-#: src/components/_user/premium/PremiumActions.tsx:60
+#: src/components/_user/premium/PremiumActions.tsx:51
 msgid "Support the game"
 msgstr "Підтримати гру"
 
@@ -16152,12 +16185,12 @@ msgstr "Місяці підписки"
 msgid "Supporter of the game for <0>{0, plural, one {# month} other {# months}}</0>"
 msgstr ""
 
-#: src/components/_user/premium/PremiumCard.tsx:60
+#: src/components/_user/premium/PremiumCard.tsx:62
 msgid "Supporter plan"
 msgstr "План підписки"
 
 #: src/components/_user/modals/PremiumModal.tsx:31
-#: src/pages/user/[userId]/settings.tsx:158
+#: src/pages/user/[userId]/settings.tsx:161
 msgid "Supporter Plan"
 msgstr "План підписки"
 
@@ -16435,7 +16468,7 @@ msgstr "Завершено"
 msgid "Terms"
 msgstr "Умови"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:563
+#: src/components/_user/auth/ConnectFromModal.tsx:416
 msgid "Terms of Service"
 msgstr "Умови використання"
 
@@ -17485,7 +17518,7 @@ msgstr ""
 msgid "Title font"
 msgstr ""
 
-#: src/pages/shop/index.tsx:154
+#: src/pages/shop/index.tsx:157
 msgid "to"
 msgstr "гравцю"
 
@@ -17626,7 +17659,7 @@ msgstr ""
 msgid "Top Donors"
 msgstr "Найбільші донори"
 
-#: src/pages/shop/index.tsx:97
+#: src/pages/shop/index.tsx:100
 msgid "Top gift givers of the month"
 msgstr "Найбільші дарувальники цього місяця"
 
@@ -17716,7 +17749,7 @@ msgstr ""
 #: src/components/_military/battle/ActiveBattlesList.tsx:81
 #: src/components/_military/battle/ActiveBattlesList.tsx:187
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:65
-#: src/pages/events/index.tsx:190
+#: src/components/_other/events/EventTournament.tsx:31
 msgid "Tournament"
 msgstr "Турнір"
 
@@ -17916,11 +17949,11 @@ msgstr ""
 msgid "Try it"
 msgstr "Спробувати його"
 
-#: src/pages/user/[userId]/settings.tsx:137
+#: src/pages/user/[userId]/settings.tsx:140
 msgid "Tutorials"
 msgstr "Навчання"
 
-#: src/pages/user/[userId]/settings.tsx:59
+#: src/pages/user/[userId]/settings.tsx:62
 msgid "Tutorials reseted"
 msgstr "Навчання скинуто"
 
@@ -18094,7 +18127,7 @@ msgstr "Оновити фокус"
 msgid "Update gift"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:91
+#: src/pages/user/[userId]/settings.tsx:94
 msgid "Update infos"
 msgstr "Оновити інфо"
 
@@ -18275,7 +18308,7 @@ msgid "Username"
 msgstr "Прізвисько"
 
 #: src/components/_user/user/UserDropdown.tsx:261
-#: src/pages/user/[userId]/settings.tsx:120
+#: src/pages/user/[userId]/settings.tsx:123
 msgid "Username effect"
 msgstr "Ефекти прізвиська"
 
@@ -18291,7 +18324,7 @@ msgstr "Ефект прізвиська змінено"
 msgid "Username effects are a Supporter Plan feature."
 msgstr "Ефекти прізвиська доступні власникам підписки."
 
-#: src/pages/user/[userId]/settings.tsx:113
+#: src/pages/user/[userId]/settings.tsx:116
 msgid "Username font"
 msgstr "Шрифт прізивська"
 
@@ -18486,8 +18519,8 @@ msgid "Verify"
 msgstr "Підтвердити"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:405
-msgid "Verifying you're human..."
-msgstr "Підтверджуємо, що ви людина..."
+#~ msgid "Verifying you're human..."
+#~ msgstr "Підтверджуємо, що ви людина..."
 
 #: src/components/_economy/employee/employee.traitMeta.ts:122
 msgid "Veteran"
@@ -18846,7 +18879,7 @@ msgid "Won"
 msgstr ""
 
 #: src/components/_military/tournament/TournamentHeader.tsx:91
-#: src/pages/events/index.tsx:116
+#: src/components/_other/events/EventTournament.tsx:99
 msgid "Won by"
 msgstr "Виграно"
 
@@ -19048,7 +19081,7 @@ msgstr "Ви більше не менеджер <0/>. Залишкові <1>{0}<
 msgid "You are not a council member of this party"
 msgstr "Ви не член партійної ради"
 
-#: src/pages/events/index.tsx:110
+#: src/components/_other/events/EventTournament.tsx:93
 msgid "You are not participating"
 msgstr "Ви не бере участь"
 
@@ -19457,7 +19490,7 @@ msgstr "Ви перемогли у турнірі між ВП"
 msgid "You worked 100 times"
 msgstr "Ви попрацювали 100 разів"
 
-#: src/components/_user/premium/PremiumCard.tsx:55
+#: src/components/_user/premium/PremiumCard.tsx:57
 msgid "You're already a supporter <0/>"
 msgstr "Ви вже підписник <0/>"
 
@@ -19603,7 +19636,7 @@ msgstr "Ваша поточна посада"
 msgid "Your daily missions have been reset! Complete them to earn rewards."
 msgstr "Ваші щоденні місії було скинуто! Завершіть їх, аби отримати нагороду."
 
-#: src/pages/user/[userId]/settings.tsx:68
+#: src/pages/user/[userId]/settings.tsx:71
 msgid "Your email"
 msgstr "Ваша пошта"
 
@@ -19705,6 +19738,10 @@ msgstr ""
 msgid "Your MU has <0/> reputation and cannot bid on mercenary contracts. Pay to buy back reputation (once per day)."
 msgstr "Ваш ВП має <0/> репутації і не може робити ставки на найманські контракти. Оплатіть покупку репутації (один раз на день)."
 
+#: src/components/_other/events/EventMuLeague.tsx:75
+msgid "Your MU has no league this week"
+msgstr ""
+
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:107
 msgid "Your MU is registered"
 msgstr "Ваш підрозділ зареєстровано"
@@ -19795,7 +19832,7 @@ msgstr "Ваша команда <0/> вибула з <1/>"
 msgid "Your team <0/> won a round in <1/>!"
 msgstr "Ваша команда <0/> виграла раунд у <1/>!"
 
-#: src/pages/events/index.tsx:102
+#: src/components/_other/events/EventTournament.tsx:85
 msgid "Your team:"
 msgstr "Ваша команда:"
 
@@ -19850,7 +19887,7 @@ msgstr "Ваші щотижневі місії було скинуто! Заве
 msgid "Your workforce"
 msgstr "Ваша робоча сила"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:508
+#: src/components/_user/auth/ConnectFromModal.tsx:361
 msgid "your@email.com"
 msgstr "ваш@email.com"
 

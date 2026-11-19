@@ -54,7 +54,7 @@ msgstr " - 重複給予文章小費"
 msgid " - Using outside market standards or manipulated trade prices"
 msgstr " - 使用市場外機制或操控交易價格"
 
-#: src/components/_user/premium/PremiumActions.tsx:74
+#: src/components/_user/premium/PremiumActions.tsx:65
 msgid " Gift a sub"
 msgstr " 贈送訂閱"
 
@@ -131,6 +131,11 @@ msgstr "{0, plural, one {放在販賣} other {放 # 物品在販賣}}"
 #. placeholder {0}: estimate.notOwnedCount
 #: src/components/_other/shop/SkinPackModal.tsx:313
 msgid "{0, plural, one {Unlock # skin} other {Unlock # skins}}"
+msgstr ""
+
+#. placeholder {0}: giveaway.winnersQuantity ?? 0
+#: src/components/_other/events/EventGiveaway.tsx:71
+msgid "{0, plural, one {x # winner} other {x # winners}}"
 msgstr ""
 
 #. placeholder {0}: damagesPercent(effects.bunkerBonusDelta)
@@ -1784,11 +1789,11 @@ msgstr ""
 msgid "{regionLootCount, plural, =1 {Collect the wooden case lying on this region} one {Collect the # wooden case lying on this region} other {Collect the # wooden cases lying on this region}}"
 msgstr ""
 
-#: src/pages/events/index.tsx:97
+#: src/components/_other/events/EventTournament.tsx:80
 msgid "{registeredCount} countries registered"
 msgstr "{registeredCount} 國家已報名"
 
-#: src/pages/events/index.tsx:95
+#: src/components/_other/events/EventTournament.tsx:78
 msgid "{registeredCount} MUs registered"
 msgstr "{registeredCount} 軍團已報名"
 
@@ -3810,8 +3815,8 @@ msgid "Accepted"
 msgstr "已通過"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:413
-msgid "Access granted"
-msgstr "已獲准進入"
+#~ msgid "Access granted"
+#~ msgstr "已獲准進入"
 
 #: src/components/_military/battle/BattleHeader.tsx:183
 msgid "Access war"
@@ -3840,8 +3845,9 @@ msgstr "行動"
 #: src/components/_military/mercenaryContract/MercenaryAuctionList.tsx:144
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:85
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:47
+#: src/components/_other/events/EventGiveaway.tsx:48
+#: src/components/_other/events/EventTournament.tsx:131
 #: src/components/_user/user/Level.tsx:193
-#: src/pages/events/index.tsx:148
 #: src/utils/translations.tsx:342
 msgid "Active"
 msgstr "進行中"
@@ -4316,7 +4322,7 @@ msgstr "重新生成 API token"
 msgid "API token revoked"
 msgstr "已廢除 API token"
 
-#: src/pages/user/[userId]/settings.tsx:151
+#: src/pages/user/[userId]/settings.tsx:154
 msgid "API Tokens"
 msgstr "API Tokens"
 
@@ -4328,7 +4334,7 @@ msgstr "API token 允許外部應用程式使用你的身分存取。請在 <0>X
 msgid "App pattern"
 msgstr "App 背景"
 
-#: src/pages/user/[userId]/settings.tsx:129
+#: src/pages/user/[userId]/settings.tsx:132
 msgid "App settings"
 msgstr "App 設定"
 
@@ -4336,7 +4342,7 @@ msgstr "App 設定"
 msgid "Appeal to their loyalty"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:99
+#: src/pages/user/[userId]/settings.tsx:102
 msgid "Appearance"
 msgstr "外觀"
 
@@ -4620,7 +4626,7 @@ msgstr "贏得競標"
 msgid "Auctions"
 msgstr "競標"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:244
+#: src/components/_user/auth/ConnectFromModal.tsx:203
 msgid "Authentication failed. Please try again."
 msgstr "認證失敗。請重新嘗試。"
 
@@ -5287,7 +5293,7 @@ msgstr ""
 msgid "By Company"
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:536
+#: src/components/_user/auth/ConnectFromModal.tsx:389
 msgid "By continuing, you agree to our <0>Terms of Service</0>."
 msgstr "欲繼續，將視為你同意我們的<0>服務條款</0>。"
 
@@ -5402,7 +5408,7 @@ msgid "Cancel Mercenary Contract"
 msgstr "取消傭兵合約"
 
 #: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:240
-#: src/pages/events/index.tsx:156
+#: src/components/_other/events/EventTournament.tsx:139
 #: src/utils/translations.tsx:337
 msgid "Cancelled"
 msgstr "已取消"
@@ -5879,7 +5885,7 @@ msgid "Colonel"
 msgstr "上校"
 
 #: src/components/_user/user/UserDropdown.tsx:243
-#: src/pages/user/[userId]/settings.tsx:105
+#: src/pages/user/[userId]/settings.tsx:108
 msgid "Color scheme"
 msgstr "顏色主題"
 
@@ -6096,15 +6102,15 @@ msgstr ""
 msgid "Congress members"
 msgstr "國會議員"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:464
+#: src/components/_user/auth/ConnectFromModal.tsx:317
 msgid "Connect with Discord"
 msgstr "使用 Discord 登入"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:521
+#: src/components/_user/auth/ConnectFromModal.tsx:374
 msgid "Connect with email code"
 msgstr "使用電子郵件驗證碼登入"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:483
+#: src/components/_user/auth/ConnectFromModal.tsx:336
 msgid "Connect with Google"
 msgstr "使用 Google 登入"
 
@@ -6700,7 +6706,7 @@ msgstr "可惡，看起來真棒"
 msgid "Damn you lucky"
 msgstr "可惡，你真幸運"
 
-#: src/pages/user/[userId]/settings.tsx:171
+#: src/pages/user/[userId]/settings.tsx:174
 msgid "Danger zone"
 msgstr "危險區域"
 
@@ -6913,7 +6919,7 @@ msgstr "設定為宿敵"
 msgid "Delete"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:174
+#: src/pages/user/[userId]/settings.tsx:177
 msgid "Delete account"
 msgstr "刪除帳號"
 
@@ -7502,10 +7508,10 @@ msgstr "選舉結束"
 msgid "Election vote open"
 msgstr "投票開始"
 
+#: src/components/_other/events/EventElections.tsx:23
 #: src/components/_political/country/CountryHeader.tsx:135
 #: src/pages/country/[countryId]/elections.tsx:28
 #: src/pages/country/[countryId]/index.tsx:269
-#: src/pages/events/index.tsx:398
 #: src/pages/party/[partyId]/index.tsx:88
 msgid "Elections"
 msgstr "選舉"
@@ -7731,10 +7737,14 @@ msgstr "輸入價格"
 msgid "Enter article ID"
 msgstr "輸入文章ID"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:269
-#: src/components/_user/auth/ConnectFromModal.tsx:274
+#: src/components/_user/auth/ConnectFromModal.tsx:228
+#: src/components/_user/auth/ConnectFromModal.tsx:233
 msgid "Enter the code we sent to your email."
 msgstr "輸入我們傳送至你電子郵件的驗證碼。"
+
+#: src/components/_other/events/EventGiveaway.tsx:95
+msgid "Entered"
+msgstr ""
 
 #: src/components/_user/auth/CitizenIdCard.tsx:58
 msgid "Entry · Admitted"
@@ -8068,21 +8078,21 @@ msgstr "複製失敗"
 msgid "Failed to copy text: "
 msgstr "無法複製文字："
 
-#: src/components/_user/auth/ConnectFromModal.tsx:160
+#: src/components/_user/auth/ConnectFromModal.tsx:119
 msgid "Failed to start Discord login."
 msgstr "無法開始 Discord 登入。"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:158
+#: src/components/_user/auth/ConnectFromModal.tsx:117
 msgid "Failed to start Discord login. Please retry the CAPTCHA."
 msgstr "無法開始 Discord 登入，請重試 CAPTCHA。"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:183
-#: src/components/_user/auth/ConnectFromModal.tsx:202
-#: src/components/_user/auth/ConnectFromModal.tsx:228
+#: src/components/_user/auth/ConnectFromModal.tsx:142
+#: src/components/_user/auth/ConnectFromModal.tsx:161
+#: src/components/_user/auth/ConnectFromModal.tsx:187
 msgid "Failed to start Google login."
 msgstr "無法開始 Google 登入。"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:226
+#: src/components/_user/auth/ConnectFromModal.tsx:185
 msgid "Failed to start Google login. Please retry the CAPTCHA."
 msgstr "無法開始 Google 登入。請重試 CAPTCHA。"
 
@@ -8437,7 +8447,7 @@ msgstr ""
 msgid "Founding Father"
 msgstr "國父"
 
-#: src/pages/shop/index.tsx:187
+#: src/pages/shop/index.tsx:190
 msgid "Free daily reward"
 msgstr "免費每日獎勵"
 
@@ -8564,11 +8574,11 @@ msgstr ""
 msgid "Gear up!"
 msgstr ""
 
-#: src/pages/shop/index.tsx:196
+#: src/pages/shop/index.tsx:200
 msgid "Gems"
 msgstr "寶石"
 
-#: src/pages/shop/index.tsx:194
+#: src/pages/shop/index.tsx:198
 msgid "Gems are used to buy assets in the shop and to gift supporter months to other players"
 msgstr "寶石是用來在商店中購買資產，以及贈送支持者給其他玩家"
 
@@ -8662,7 +8672,7 @@ msgstr "來自 Vatou 的禮物，別告訴任何人"
 msgid "Gift sent! Skin pack unlocked for recipient!"
 msgstr "禮物已送出！造型包已為接收者解鎖！"
 
-#: src/pages/shop/index.tsx:67
+#: src/pages/shop/index.tsx:68
 msgid "Gift sent! Thanks for supporting the game <3"
 msgstr "禮物已送出！謝謝你支持這個遊戲 <3"
 
@@ -8674,8 +8684,8 @@ msgstr "贈送支持者計畫"
 msgid "Gift this pack to someone"
 msgstr "贈送這個組合包給某人"
 
-#: src/pages/shop/index.tsx:115
-#: src/pages/shop/index.tsx:141
+#: src/pages/shop/index.tsx:118
+#: src/pages/shop/index.tsx:144
 msgid "gifted"
 msgstr "已贈送"
 
@@ -8706,6 +8716,14 @@ msgstr ""
 #: src/components/_user/apiToken/ApiTokenList.tsx:251
 msgid "Give your token a descriptive name so you can identify it later."
 msgstr "給你的 token 一個描述，這樣你待會才能識別它。"
+
+#: src/components/_other/events/EventGiveaway.tsx:61
+msgid "Giveaway"
+msgstr ""
+
+#: src/components/_other/events/EventGiveaway.tsx:34
+msgid "Giveaway entered"
+msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:199
 msgid "Giveaway Winner"
@@ -9207,7 +9225,7 @@ msgstr "幫助遊戲發展"
 msgid "Hide cards"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Hide email"
 msgstr ""
 
@@ -9781,6 +9799,10 @@ msgstr "加入軍團"
 msgid "Join a military unit to take part"
 msgstr "加入一個軍團以參與"
 
+#: src/components/_other/events/EventMuLeague.tsx:60
+msgid "Join a Military Unit to take part"
+msgstr ""
+
 #: src/components/_user/mission/mission.frontConfig.tsx:680
 msgid "Join a Party"
 msgstr "加入政黨"
@@ -9986,7 +10008,7 @@ msgstr "最近連線"
 msgid "Last earned"
 msgstr ""
 
-#: src/pages/shop/index.tsx:103
+#: src/pages/shop/index.tsx:106
 msgid "Last gifts"
 msgstr "最近的禮物"
 
@@ -9994,13 +10016,13 @@ msgstr "最近的禮物"
 msgid "Last one! Tap Milestones."
 msgstr ""
 
-#: src/pages/shop/index.tsx:129
+#: src/pages/shop/index.tsx:132
 msgid "Last skin gifts"
 msgstr "最後材質包禮物"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:467
-#: src/components/_user/auth/ConnectFromModal.tsx:486
-#: src/components/_user/auth/ConnectFromModal.tsx:524
+#: src/components/_user/auth/ConnectFromModal.tsx:320
+#: src/components/_user/auth/ConnectFromModal.tsx:339
+#: src/components/_user/auth/ConnectFromModal.tsx:377
 msgid "Last used"
 msgstr "最近使用"
 
@@ -10020,7 +10042,7 @@ msgstr ""
 msgid "Later"
 msgstr "晚點"
 
-#: src/pages/shop/index.tsx:209
+#: src/pages/shop/index.tsx:214
 msgid "Latest Pack"
 msgstr "最新的組合包"
 
@@ -10079,6 +10101,7 @@ msgstr ""
 #: src/components/_layout/layoutInfos.frontConfig.tsx:55
 #: src/components/_military/mu/MuHeader.tsx:114
 #: src/components/_military/mu/MuHeader.tsx:180
+#: src/components/_other/events/EventLeague.tsx:45
 #: src/components/_user/league/LeagueTopInfoCard.tsx:69
 #: src/components/_user/user/UserHeader.tsx:229
 #: src/components/_user/user/UserHeader.tsx:326
@@ -10087,6 +10110,10 @@ msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:215
 msgid "League Champion"
+msgstr ""
+
+#: src/components/_other/events/EventLeague.tsx:69
+msgid "Leagues are being drawn"
 msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:248
@@ -10603,8 +10630,8 @@ msgstr ""
 msgid "Make room for more staff!"
 msgstr ""
 
-#: src/components/_user/premium/PremiumActions.tsx:84
-#: src/pages/user/[userId]/settings.tsx:165
+#: src/components/_user/premium/PremiumActions.tsx:75
+#: src/pages/user/[userId]/settings.tsx:168
 msgid "Manage Subscription"
 msgstr "管理訂閱"
 
@@ -11417,6 +11444,7 @@ msgstr "已收到軍團捐款"
 #: src/components/_layout/layoutInfos.frontConfig.tsx:60
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:118
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:136
+#: src/components/_other/events/EventMuLeague.tsx:48
 #: src/components/_user/notification/notification.frontConfig.tsx:2465
 #: src/pages/mu/[muId]/league.tsx:19
 msgid "MU league"
@@ -11755,7 +11783,7 @@ msgstr "新推薦人"
 msgid "New subscriber"
 msgstr "新訂閱者"
 
-#: src/pages/shop/index.tsx:168
+#: src/pages/shop/index.tsx:171
 msgid "New supporters"
 msgstr "新支持者們"
 
@@ -11869,7 +11897,7 @@ msgstr "還沒有公告"
 msgid "No API tokens yet. Create one to get started."
 msgstr "還沒有 API token。建立一個以開始。"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:243
+#: src/components/_user/auth/ConnectFromModal.tsx:202
 msgid "No authorization code provided."
 msgstr "沒有提供的授權碼。"
 
@@ -12329,7 +12357,7 @@ msgstr ""
 msgid "Not enough paper for the daily maintenance: alliance damage bonuses are off until it pays."
 msgstr ""
 
-#: src/pages/events/index.tsx:113
+#: src/components/_other/events/EventTournament.tsx:96
 msgid "Not enough participants"
 msgstr "沒有足夠參與者"
 
@@ -12410,7 +12438,7 @@ msgid "Nothing while alone."
 msgstr ""
 
 #: src/pages/notifications.tsx:38
-#: src/pages/user/[userId]/settings.tsx:145
+#: src/pages/user/[userId]/settings.tsx:148
 msgid "Notification preferences"
 msgstr "偏好通知"
 
@@ -12794,7 +12822,7 @@ msgid "Operative"
 msgstr "作戰兵"
 
 #: src/components/_political/unrest/UnrestBar.tsx:40
-#: src/components/_user/auth/ConnectFromModal.tsx:498
+#: src/components/_user/auth/ConnectFromModal.tsx:351
 msgid "or"
 msgstr "或"
 
@@ -12971,8 +12999,13 @@ msgid "Paramilitary"
 msgstr ""
 
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:76
+#: src/components/_other/events/EventGiveaway.tsx:82
 msgid "Participants"
 msgstr "參與者"
+
+#: src/components/_other/events/EventGiveaway.tsx:105
+msgid "Participate"
+msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:328
 msgid "Participate in Battle"
@@ -13181,7 +13214,7 @@ msgstr ""
 msgid "Pay the “inspection fee”"
 msgstr ""
 
-#: src/pages/shop/index.tsx:54
+#: src/pages/shop/index.tsx:55
 msgid "Payment successful! Thanks for supporting the game <3"
 msgstr "付款成功！謝謝支持遊戲 <3"
 
@@ -13440,9 +13473,9 @@ msgstr ""
 msgid "Playing this division this week."
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:147
-#: src/components/_user/auth/ConnectFromModal.tsx:211
-#: src/components/_user/auth/ConnectFromModal.tsx:296
+#: src/components/_user/auth/ConnectFromModal.tsx:106
+#: src/components/_user/auth/ConnectFromModal.tsx:170
+#: src/components/_user/auth/ConnectFromModal.tsx:255
 msgid "Please complete the CAPTCHA."
 msgstr "請完成 CAPTCHA。"
 
@@ -13542,7 +13575,7 @@ msgstr ""
 msgid "Prehistoric Pack"
 msgstr "史前組合"
 
-#: src/pages/shop/index.tsx:226
+#: src/pages/shop/index.tsx:231
 msgid "Premium"
 msgstr "高級帳號"
 
@@ -14721,8 +14754,8 @@ msgid "Reset"
 msgstr "重置"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:447
-msgid "Reset CAPTCHA"
-msgstr "重置 CAPTCHA"
+#~ msgid "Reset CAPTCHA"
+#~ msgstr "重置 CAPTCHA"
 
 #: src/components/_economy/employee/EmployeeModal.tsx:549
 msgid "Reset name"
@@ -14740,7 +14773,7 @@ msgstr "重置技能"
 msgid "Reset Survivor"
 msgstr "重置存活者"
 
-#: src/pages/user/[userId]/settings.tsx:140
+#: src/pages/user/[userId]/settings.tsx:143
 msgid "Reset tutorials"
 msgstr "重置教學"
 
@@ -15189,8 +15222,8 @@ msgid "Second wind"
 msgstr ""
 
 #: src/components/_user/auth/ConnectFromModal.tsx:428
-msgid "Security check failed. Turn off your VPN or ad blocker, or try another browser."
-msgstr ""
+#~ msgid "Security check failed. Turn off your VPN or ad blocker, or try another browser."
+#~ msgstr ""
 
 #: src/pages/party/[partyId]/index.tsx:100
 msgid "See all parties"
@@ -15509,7 +15542,7 @@ msgstr "顯示所有 {0} 出價"
 msgid "Show cards"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Show email"
 msgstr ""
 
@@ -15665,7 +15698,7 @@ msgid "Skin Reward"
 msgstr "造型獎勵"
 
 #: src/components/_other/shop/ShopHeader.tsx:23
-#: src/pages/shop/index.tsx:202
+#: src/pages/shop/index.tsx:207
 #: src/pages/user/[userId]/index.tsx:112
 msgid "Skins"
 msgstr "造型"
@@ -16095,8 +16128,8 @@ msgstr "訂閱者"
 msgid "Success"
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:199
-#: src/components/_user/auth/ConnectFromModal.tsx:250
+#: src/components/_user/auth/ConnectFromModal.tsx:158
+#: src/components/_user/auth/ConnectFromModal.tsx:209
 msgid "Successfully logged in!"
 msgstr "成功登入！"
 
@@ -16108,7 +16141,7 @@ msgstr "乾爹"
 msgid "Support"
 msgstr ""
 
-#: src/components/_user/premium/PremiumActions.tsx:60
+#: src/components/_user/premium/PremiumActions.tsx:51
 msgid "Support the game"
 msgstr "支持這個遊戲"
 
@@ -16152,12 +16185,12 @@ msgstr "支持月份"
 msgid "Supporter of the game for <0>{0, plural, one {# month} other {# months}}</0>"
 msgstr ""
 
-#: src/components/_user/premium/PremiumCard.tsx:60
+#: src/components/_user/premium/PremiumCard.tsx:62
 msgid "Supporter plan"
 msgstr "支持者計劃"
 
 #: src/components/_user/modals/PremiumModal.tsx:31
-#: src/pages/user/[userId]/settings.tsx:158
+#: src/pages/user/[userId]/settings.tsx:161
 msgid "Supporter Plan"
 msgstr "支持者計劃"
 
@@ -16435,7 +16468,7 @@ msgstr "已結束"
 msgid "Terms"
 msgstr "期限"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:563
+#: src/components/_user/auth/ConnectFromModal.tsx:416
 msgid "Terms of Service"
 msgstr "服務條款"
 
@@ -17485,7 +17518,7 @@ msgstr ""
 msgid "Title font"
 msgstr ""
 
-#: src/pages/shop/index.tsx:154
+#: src/pages/shop/index.tsx:157
 msgid "to"
 msgstr "往"
 
@@ -17626,7 +17659,7 @@ msgstr ""
 msgid "Top Donors"
 msgstr "捐獻榜首"
 
-#: src/pages/shop/index.tsx:97
+#: src/pages/shop/index.tsx:100
 msgid "Top gift givers of the month"
 msgstr "本月送禮數最多者"
 
@@ -17716,7 +17749,7 @@ msgstr ""
 #: src/components/_military/battle/ActiveBattlesList.tsx:81
 #: src/components/_military/battle/ActiveBattlesList.tsx:187
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:65
-#: src/pages/events/index.tsx:190
+#: src/components/_other/events/EventTournament.tsx:31
 msgid "Tournament"
 msgstr "錦標賽"
 
@@ -17916,11 +17949,11 @@ msgstr ""
 msgid "Try it"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:137
+#: src/pages/user/[userId]/settings.tsx:140
 msgid "Tutorials"
 msgstr "教學"
 
-#: src/pages/user/[userId]/settings.tsx:59
+#: src/pages/user/[userId]/settings.tsx:62
 msgid "Tutorials reseted"
 msgstr "重置教學"
 
@@ -18094,7 +18127,7 @@ msgstr "更新焦點"
 msgid "Update gift"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:91
+#: src/pages/user/[userId]/settings.tsx:94
 msgid "Update infos"
 msgstr "更新資訊"
 
@@ -18275,7 +18308,7 @@ msgid "Username"
 msgstr "用戶名"
 
 #: src/components/_user/user/UserDropdown.tsx:261
-#: src/pages/user/[userId]/settings.tsx:120
+#: src/pages/user/[userId]/settings.tsx:123
 msgid "Username effect"
 msgstr "用戶名效果"
 
@@ -18291,7 +18324,7 @@ msgstr "用戶名效果已更新"
 msgid "Username effects are a Supporter Plan feature."
 msgstr "用戶名效果是支持者功能。"
 
-#: src/pages/user/[userId]/settings.tsx:113
+#: src/pages/user/[userId]/settings.tsx:116
 msgid "Username font"
 msgstr "用戶名字體"
 
@@ -18486,8 +18519,8 @@ msgid "Verify"
 msgstr "驗證"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:405
-msgid "Verifying you're human..."
-msgstr "正在驗證是否為人類..."
+#~ msgid "Verifying you're human..."
+#~ msgstr "正在驗證是否為人類..."
 
 #: src/components/_economy/employee/employee.traitMeta.ts:122
 msgid "Veteran"
@@ -18846,7 +18879,7 @@ msgid "Won"
 msgstr ""
 
 #: src/components/_military/tournament/TournamentHeader.tsx:91
-#: src/pages/events/index.tsx:116
+#: src/components/_other/events/EventTournament.tsx:99
 msgid "Won by"
 msgstr "贏家"
 
@@ -19048,7 +19081,7 @@ msgstr ""
 msgid "You are not a council member of this party"
 msgstr "你不是這個政黨的中常委"
 
-#: src/pages/events/index.tsx:110
+#: src/components/_other/events/EventTournament.tsx:93
 msgid "You are not participating"
 msgstr "你並未參與"
 
@@ -19457,7 +19490,7 @@ msgstr "你贏得了軍團錦標賽"
 msgid "You worked 100 times"
 msgstr "你工作了100次"
 
-#: src/components/_user/premium/PremiumCard.tsx:55
+#: src/components/_user/premium/PremiumCard.tsx:57
 msgid "You're already a supporter <0/>"
 msgstr "你已經是支持者了"
 
@@ -19603,7 +19636,7 @@ msgstr ""
 msgid "Your daily missions have been reset! Complete them to earn rewards."
 msgstr "你的每日任務已重置！完成它們以賺取獎勵。"
 
-#: src/pages/user/[userId]/settings.tsx:68
+#: src/pages/user/[userId]/settings.tsx:71
 msgid "Your email"
 msgstr "你的電子信箱"
 
@@ -19705,6 +19738,10 @@ msgstr ""
 msgid "Your MU has <0/> reputation and cannot bid on mercenary contracts. Pay to buy back reputation (once per day)."
 msgstr "你的軍團有 <0/> 名聲，無法在這個傭兵合約中出價。付費以買回名聲（每日一次）。"
 
+#: src/components/_other/events/EventMuLeague.tsx:75
+msgid "Your MU has no league this week"
+msgstr ""
+
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:107
 msgid "Your MU is registered"
 msgstr "你的軍團已登記"
@@ -19795,7 +19832,7 @@ msgstr "你的隊伍 <0/>已在 <1/> 中被淘汰"
 msgid "Your team <0/> won a round in <1/>!"
 msgstr "你的隊伍 <0/> 在 <1/> 贏了回合！"
 
-#: src/pages/events/index.tsx:102
+#: src/components/_other/events/EventTournament.tsx:85
 msgid "Your team:"
 msgstr "你的隊伍："
 
@@ -19850,7 +19887,7 @@ msgstr "你的每週任務已重置！完成它們以賺取獎勵。"
 msgid "Your workforce"
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:508
+#: src/components/_user/auth/ConnectFromModal.tsx:361
 msgid "your@email.com"
 msgstr "your@email.com"
 

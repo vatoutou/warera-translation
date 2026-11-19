@@ -54,7 +54,7 @@ msgstr " - Nuolatinis straipsnių rėmimas arbatpinigiais"
 msgid " - Using outside market standards or manipulated trade prices"
 msgstr " - Ne rinkos standartų ar manipuliuotų prekybos kainų naudojimas"
 
-#: src/components/_user/premium/PremiumActions.tsx:74
+#: src/components/_user/premium/PremiumActions.tsx:65
 msgid " Gift a sub"
 msgstr " Padovanoti prenumeratą"
 
@@ -132,6 +132,11 @@ msgstr "{0, plural, one {Parduoti} few {Parduoti # daiktus} many {Parduoti # dai
 #: src/components/_other/shop/SkinPackModal.tsx:313
 msgid "{0, plural, one {Unlock # skin} other {Unlock # skins}}"
 msgstr "{0, plural, one {Atrakinti # skiną} few {Atrakinti # skinus} many {Atrakinti # skino} other {Atrakinti # skinų}}"
+
+#. placeholder {0}: giveaway.winnersQuantity ?? 0
+#: src/components/_other/events/EventGiveaway.tsx:71
+msgid "{0, plural, one {x # winner} other {x # winners}}"
+msgstr ""
 
 #. placeholder {0}: damagesPercent(effects.bunkerBonusDelta)
 #. placeholder {1}: upgradeName(EUpgrade.BUNKER)
@@ -1784,11 +1789,11 @@ msgstr "{quantity, plural, =1 {Medinė dėžė surinkta!} one {Surinkta # medin�
 msgid "{regionLootCount, plural, =1 {Collect the wooden case lying on this region} one {Collect the # wooden case lying on this region} other {Collect the # wooden cases lying on this region}}"
 msgstr "{regionLootCount, plural, =1 {Surink šiame regione gulinčią medinę dėžę} one {Surink šiame regione gulinčią # medinę dėžę} few {Surink šiame regione gulinčias # medines dėžes} many {Surink šiame regione gulinčios # medinės dėžės} other {Surink šiame regione gulinčių # medinių dėžių}}"
 
-#: src/pages/events/index.tsx:97
+#: src/components/_other/events/EventTournament.tsx:80
 msgid "{registeredCount} countries registered"
 msgstr "Užsiregistravo šalių: {registeredCount}"
 
-#: src/pages/events/index.tsx:95
+#: src/components/_other/events/EventTournament.tsx:78
 msgid "{registeredCount} MUs registered"
 msgstr "Užsiregistravo MU: {registeredCount}"
 
@@ -3810,8 +3815,8 @@ msgid "Accepted"
 msgstr "Priimtas"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:413
-msgid "Access granted"
-msgstr "Prieiga suteikta"
+#~ msgid "Access granted"
+#~ msgstr "Prieiga suteikta"
 
 #: src/components/_military/battle/BattleHeader.tsx:183
 msgid "Access war"
@@ -3840,8 +3845,9 @@ msgstr "Veiksmai"
 #: src/components/_military/mercenaryContract/MercenaryAuctionList.tsx:144
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:85
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:47
+#: src/components/_other/events/EventGiveaway.tsx:48
+#: src/components/_other/events/EventTournament.tsx:131
 #: src/components/_user/user/Level.tsx:193
-#: src/pages/events/index.tsx:148
 #: src/utils/translations.tsx:342
 msgid "Active"
 msgstr "Aktyvūs"
@@ -4316,7 +4322,7 @@ msgstr "API raktas sugeneruotas iš naujo"
 msgid "API token revoked"
 msgstr "API prieigos raktas panaikintas"
 
-#: src/pages/user/[userId]/settings.tsx:151
+#: src/pages/user/[userId]/settings.tsx:154
 msgid "API Tokens"
 msgstr "API Raktai"
 
@@ -4328,7 +4334,7 @@ msgstr "API raktai leidžia išorinėms programoms pasiekti API tavo vardu. Naud
 msgid "App pattern"
 msgstr "Programėlės raštas"
 
-#: src/pages/user/[userId]/settings.tsx:129
+#: src/pages/user/[userId]/settings.tsx:132
 msgid "App settings"
 msgstr "Programėlės nustatymai"
 
@@ -4336,7 +4342,7 @@ msgstr "Programėlės nustatymai"
 msgid "Appeal to their loyalty"
 msgstr "Apeliuoti į lojalumą"
 
-#: src/pages/user/[userId]/settings.tsx:99
+#: src/pages/user/[userId]/settings.tsx:102
 msgid "Appearance"
 msgstr "Išvaizda"
 
@@ -4620,7 +4626,7 @@ msgstr "Aukcionas Laimėtas"
 msgid "Auctions"
 msgstr "Aukcionai"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:244
+#: src/components/_user/auth/ConnectFromModal.tsx:203
 msgid "Authentication failed. Please try again."
 msgstr "Nepavyko patvirtinti tapatybės. Bandyk dar kartą."
 
@@ -5287,7 +5293,7 @@ msgstr "Pirkėjai iš tavo šalies mato <0>{buyerTotal}</0>"
 msgid "By Company"
 msgstr "Pagal Įmonę"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:536
+#: src/components/_user/auth/ConnectFromModal.tsx:389
 msgid "By continuing, you agree to our <0>Terms of Service</0>."
 msgstr "Tęsdamas sutinki su mūsų <0>Paslaugų teikimo sąlygomis</0>."
 
@@ -5402,7 +5408,7 @@ msgid "Cancel Mercenary Contract"
 msgstr "Nutraukti Samdinio Kontraktą"
 
 #: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:240
-#: src/pages/events/index.tsx:156
+#: src/components/_other/events/EventTournament.tsx:139
 #: src/utils/translations.tsx:337
 msgid "Cancelled"
 msgstr "Atšaukta"
@@ -5879,7 +5885,7 @@ msgid "Colonel"
 msgstr "Pulkininkas"
 
 #: src/components/_user/user/UserDropdown.tsx:243
-#: src/pages/user/[userId]/settings.tsx:105
+#: src/pages/user/[userId]/settings.tsx:108
 msgid "Color scheme"
 msgstr "Spalvų schema"
 
@@ -6096,15 +6102,15 @@ msgstr "Šalies <0/> kongreso narys"
 msgid "Congress members"
 msgstr "Kongreso nariai"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:464
+#: src/components/_user/auth/ConnectFromModal.tsx:317
 msgid "Connect with Discord"
 msgstr "Prisijungti per Discord"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:521
+#: src/components/_user/auth/ConnectFromModal.tsx:374
 msgid "Connect with email code"
 msgstr "Prisijungti su kodu iš el. pašto"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:483
+#: src/components/_user/auth/ConnectFromModal.tsx:336
 msgid "Connect with Google"
 msgstr "Prisijungti per Google"
 
@@ -6700,7 +6706,7 @@ msgstr "Velniškai gerai atrodo"
 msgid "Damn you lucky"
 msgstr "Po velnių, tau pasisekė"
 
-#: src/pages/user/[userId]/settings.tsx:171
+#: src/pages/user/[userId]/settings.tsx:174
 msgid "Danger zone"
 msgstr "Pavojinga zona"
 
@@ -6913,7 +6919,7 @@ msgstr "Paskelbti prisiekusį priešą"
 msgid "Delete"
 msgstr "Ištrinti"
 
-#: src/pages/user/[userId]/settings.tsx:174
+#: src/pages/user/[userId]/settings.tsx:177
 msgid "Delete account"
 msgstr "Ištrinti paskyrą"
 
@@ -7502,10 +7508,10 @@ msgstr "Rinkimai baigėsi"
 msgid "Election vote open"
 msgstr "Prasidėjo balsavimas rinkimuose"
 
+#: src/components/_other/events/EventElections.tsx:23
 #: src/components/_political/country/CountryHeader.tsx:135
 #: src/pages/country/[countryId]/elections.tsx:28
 #: src/pages/country/[countryId]/index.tsx:269
-#: src/pages/events/index.tsx:398
 #: src/pages/party/[partyId]/index.tsx:88
 msgid "Elections"
 msgstr "Rinkimai"
@@ -7731,10 +7737,14 @@ msgstr "Įvesk kainą"
 msgid "Enter article ID"
 msgstr "Įvesk straipsnio ID"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:269
-#: src/components/_user/auth/ConnectFromModal.tsx:274
+#: src/components/_user/auth/ConnectFromModal.tsx:228
+#: src/components/_user/auth/ConnectFromModal.tsx:233
 msgid "Enter the code we sent to your email."
 msgstr "Įvesk kodą, kurį išsiuntėme į tavo el. paštą."
+
+#: src/components/_other/events/EventGiveaway.tsx:95
+msgid "Entered"
+msgstr ""
 
 #: src/components/_user/auth/CitizenIdCard.tsx:58
 msgid "Entry · Admitted"
@@ -8068,21 +8078,21 @@ msgstr "Nepavyko nukopijuoti"
 msgid "Failed to copy text: "
 msgstr "Nepavyko nukopijuoti teksto: "
 
-#: src/components/_user/auth/ConnectFromModal.tsx:160
+#: src/components/_user/auth/ConnectFromModal.tsx:119
 msgid "Failed to start Discord login."
 msgstr "Nepavyko pradėti prisijungimo per Discord."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:158
+#: src/components/_user/auth/ConnectFromModal.tsx:117
 msgid "Failed to start Discord login. Please retry the CAPTCHA."
 msgstr "Nepavyko pradėti prisijungimo per Discord. Pakartok CAPTCHA."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:183
-#: src/components/_user/auth/ConnectFromModal.tsx:202
-#: src/components/_user/auth/ConnectFromModal.tsx:228
+#: src/components/_user/auth/ConnectFromModal.tsx:142
+#: src/components/_user/auth/ConnectFromModal.tsx:161
+#: src/components/_user/auth/ConnectFromModal.tsx:187
 msgid "Failed to start Google login."
 msgstr "Nepavyko pradėti prisijungimo per Google."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:226
+#: src/components/_user/auth/ConnectFromModal.tsx:185
 msgid "Failed to start Google login. Please retry the CAPTCHA."
 msgstr "Nepavyko pradėti prisijungimo per Google. Bandyk iš naujo įvykdyti CAPTCHA."
 
@@ -8437,7 +8447,7 @@ msgstr "Randama žemėlapyje. Atidaryk ją ir gauk atsitiktinių išteklių, o k
 msgid "Founding Father"
 msgstr "Steigėjas"
 
-#: src/pages/shop/index.tsx:187
+#: src/pages/shop/index.tsx:190
 msgid "Free daily reward"
 msgstr "Nemokamas kasdienis atlygis"
 
@@ -8564,11 +8574,11 @@ msgstr "Ekipuotė"
 msgid "Gear up!"
 msgstr "Užsidėk įrangą!"
 
-#: src/pages/shop/index.tsx:196
+#: src/pages/shop/index.tsx:200
 msgid "Gems"
 msgstr "Brangakmeniai"
 
-#: src/pages/shop/index.tsx:194
+#: src/pages/shop/index.tsx:198
 msgid "Gems are used to buy assets in the shop and to gift supporter months to other players"
 msgstr "Brangakmeniai naudojami turtui parduotuvėje pirkti ir rėmėjo mėnesiams dovanoti kitiems žaidėjams"
 
@@ -8662,7 +8672,7 @@ msgstr "Dovana nuo Vatou, niekam nesakyk"
 msgid "Gift sent! Skin pack unlocked for recipient!"
 msgstr "Dovana išsiųsta! Gavėjui atrakintas skinų rinkinys!"
 
-#: src/pages/shop/index.tsx:67
+#: src/pages/shop/index.tsx:68
 msgid "Gift sent! Thanks for supporting the game <3"
 msgstr "Dovana išsiųsta! Ačiū, kad palaikai žaidimą <3"
 
@@ -8674,8 +8684,8 @@ msgstr "Padovanoti Rėmėjo Planą"
 msgid "Gift this pack to someone"
 msgstr "Padovanok šį rinkinį kam nors"
 
-#: src/pages/shop/index.tsx:115
-#: src/pages/shop/index.tsx:141
+#: src/pages/shop/index.tsx:118
+#: src/pages/shop/index.tsx:144
 msgid "gifted"
 msgstr "padovanojo"
 
@@ -8706,6 +8716,14 @@ msgstr "Duoti dvi laisvas dienas"
 #: src/components/_user/apiToken/ApiTokenList.tsx:251
 msgid "Give your token a descriptive name so you can identify it later."
 msgstr "Suteik prieigos raktui aiškų pavadinimą, kad vėliau galėtum jį atpažinti."
+
+#: src/components/_other/events/EventGiveaway.tsx:61
+msgid "Giveaway"
+msgstr ""
+
+#: src/components/_other/events/EventGiveaway.tsx:34
+msgid "Giveaway entered"
+msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:199
 msgid "Giveaway Winner"
@@ -9207,7 +9225,7 @@ msgstr "Padėk žaidimui augti"
 msgid "Hide cards"
 msgstr "Slėpti kortas"
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Hide email"
 msgstr "Slėpti el. paštą"
 
@@ -9781,6 +9799,10 @@ msgstr "Įstok į Karinį Vienetą"
 msgid "Join a military unit to take part"
 msgstr "Kad dalyvautum, įstok į karinį vienetą"
 
+#: src/components/_other/events/EventMuLeague.tsx:60
+msgid "Join a Military Unit to take part"
+msgstr ""
+
 #: src/components/_user/mission/mission.frontConfig.tsx:680
 msgid "Join a Party"
 msgstr "Įstoti į Partiją"
@@ -9986,7 +10008,7 @@ msgstr "Paskutinis prisijungimas"
 msgid "Last earned"
 msgstr "Paskutinį kartą gauta"
 
-#: src/pages/shop/index.tsx:103
+#: src/pages/shop/index.tsx:106
 msgid "Last gifts"
 msgstr "Naujausios dovanos"
 
@@ -9994,13 +10016,13 @@ msgstr "Naujausios dovanos"
 msgid "Last one! Tap Milestones."
 msgstr "Paskutinis! Spustelėk „Etapai“."
 
-#: src/pages/shop/index.tsx:129
+#: src/pages/shop/index.tsx:132
 msgid "Last skin gifts"
 msgstr "Naujausios skinų dovanos"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:467
-#: src/components/_user/auth/ConnectFromModal.tsx:486
-#: src/components/_user/auth/ConnectFromModal.tsx:524
+#: src/components/_user/auth/ConnectFromModal.tsx:320
+#: src/components/_user/auth/ConnectFromModal.tsx:339
+#: src/components/_user/auth/ConnectFromModal.tsx:377
 msgid "Last used"
 msgstr "Paskutinį kartą naudota"
 
@@ -10020,7 +10042,7 @@ msgstr "Vėlai Pražydęs"
 msgid "Later"
 msgstr "Vėliau"
 
-#: src/pages/shop/index.tsx:209
+#: src/pages/shop/index.tsx:214
 msgid "Latest Pack"
 msgstr "Naujausias Rinkinys"
 
@@ -10079,6 +10101,7 @@ msgstr "Lapeliai iš dangaus"
 #: src/components/_layout/layoutInfos.frontConfig.tsx:55
 #: src/components/_military/mu/MuHeader.tsx:114
 #: src/components/_military/mu/MuHeader.tsx:180
+#: src/components/_other/events/EventLeague.tsx:45
 #: src/components/_user/league/LeagueTopInfoCard.tsx:69
 #: src/components/_user/user/UserHeader.tsx:229
 #: src/components/_user/user/UserHeader.tsx:326
@@ -10088,6 +10111,10 @@ msgstr "Lyga"
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:215
 msgid "League Champion"
 msgstr "Lygos Čempionas"
+
+#: src/components/_other/events/EventLeague.tsx:69
+msgid "Leagues are being drawn"
+msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:248
 msgid "Leather Sling"
@@ -10603,8 +10630,8 @@ msgstr "Visus paskirti Aukščiausiaisiais Vadais"
 msgid "Make room for more staff!"
 msgstr "Padaryk vietos daugiau darbuotojų!"
 
-#: src/components/_user/premium/PremiumActions.tsx:84
-#: src/pages/user/[userId]/settings.tsx:165
+#: src/components/_user/premium/PremiumActions.tsx:75
+#: src/pages/user/[userId]/settings.tsx:168
 msgid "Manage Subscription"
 msgstr "Tvarkyti Prenumeratą"
 
@@ -11417,6 +11444,7 @@ msgstr "Gauta MU Parama"
 #: src/components/_layout/layoutInfos.frontConfig.tsx:60
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:118
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:136
+#: src/components/_other/events/EventMuLeague.tsx:48
 #: src/components/_user/notification/notification.frontConfig.tsx:2465
 #: src/pages/mu/[muId]/league.tsx:19
 msgid "MU league"
@@ -11755,7 +11783,7 @@ msgstr "Naujas rekomenduotojas"
 msgid "New subscriber"
 msgstr "Naujas prenumeratorius"
 
-#: src/pages/shop/index.tsx:168
+#: src/pages/shop/index.tsx:171
 msgid "New supporters"
 msgstr "Nauji šalininkai"
 
@@ -11869,7 +11897,7 @@ msgstr "Skelbimų dar nėra"
 msgid "No API tokens yet. Create one to get started."
 msgstr "API prieigos raktų dar nėra. Sukurk vieną, kad galėtum pradėti."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:243
+#: src/components/_user/auth/ConnectFromModal.tsx:202
 msgid "No authorization code provided."
 msgstr "Nepateiktas autorizacijos kodas."
 
@@ -12329,7 +12357,7 @@ msgstr "Kelias dienas neprisijungta: jokio bonuso ir atlyginimo, kol sugrįš."
 msgid "Not enough paper for the daily maintenance: alliance damage bonuses are off until it pays."
 msgstr "Nepakanka popieriaus kasdieniam išlaikymui: aljanso žalos bonusai išjungti, kol jis bus sumokėtas."
 
-#: src/pages/events/index.tsx:113
+#: src/components/_other/events/EventTournament.tsx:96
 msgid "Not enough participants"
 msgstr "Per mažai dalyvių"
 
@@ -12410,7 +12438,7 @@ msgid "Nothing while alone."
 msgstr "Dirbant vienam – nieko."
 
 #: src/pages/notifications.tsx:38
-#: src/pages/user/[userId]/settings.tsx:145
+#: src/pages/user/[userId]/settings.tsx:148
 msgid "Notification preferences"
 msgstr "Pranešimų nustatymai"
 
@@ -12794,7 +12822,7 @@ msgid "Operative"
 msgstr "Operatyvininkas"
 
 #: src/components/_political/unrest/UnrestBar.tsx:40
-#: src/components/_user/auth/ConnectFromModal.tsx:498
+#: src/components/_user/auth/ConnectFromModal.tsx:351
 msgid "or"
 msgstr "arba"
 
@@ -12971,8 +12999,13 @@ msgid "Paramilitary"
 msgstr "Paramilitarinis"
 
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:76
+#: src/components/_other/events/EventGiveaway.tsx:82
 msgid "Participants"
 msgstr "Dalyviai"
+
+#: src/components/_other/events/EventGiveaway.tsx:105
+msgid "Participate"
+msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:328
 msgid "Participate in Battle"
@@ -13181,7 +13214,7 @@ msgstr "Atlyginimas padidintas"
 msgid "Pay the “inspection fee”"
 msgstr "Sumokėti „patikrinimo mokestį“"
 
-#: src/pages/shop/index.tsx:54
+#: src/pages/shop/index.tsx:55
 msgid "Payment successful! Thanks for supporting the game <3"
 msgstr "Mokėjimas sėkmingas! Ačiū, kad palaikai žaidimą <3"
 
@@ -13440,9 +13473,9 @@ msgstr "Žaidėjai, kurių namai yra šiame regione."
 msgid "Playing this division this week."
 msgstr "Šią savaitę žaidžia šiame divizione."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:147
-#: src/components/_user/auth/ConnectFromModal.tsx:211
-#: src/components/_user/auth/ConnectFromModal.tsx:296
+#: src/components/_user/auth/ConnectFromModal.tsx:106
+#: src/components/_user/auth/ConnectFromModal.tsx:170
+#: src/components/_user/auth/ConnectFromModal.tsx:255
 msgid "Please complete the CAPTCHA."
 msgstr "Užpildyk CAPTCHA."
 
@@ -13542,7 +13575,7 @@ msgstr "Tikslusis Slankmatis"
 msgid "Prehistoric Pack"
 msgstr "Priešistorinis Rinkinys"
 
-#: src/pages/shop/index.tsx:226
+#: src/pages/shop/index.tsx:231
 msgid "Premium"
 msgstr "Premium"
 
@@ -14721,8 +14754,8 @@ msgid "Reset"
 msgstr "Atstatyti"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:447
-msgid "Reset CAPTCHA"
-msgstr "Atkurti CAPTCHA"
+#~ msgid "Reset CAPTCHA"
+#~ msgstr "Atkurti CAPTCHA"
 
 #: src/components/_economy/employee/EmployeeModal.tsx:549
 msgid "Reset name"
@@ -14740,7 +14773,7 @@ msgstr "Atstatyti Įgūdžius"
 msgid "Reset Survivor"
 msgstr "Išgyvenęs Restartą"
 
-#: src/pages/user/[userId]/settings.tsx:140
+#: src/pages/user/[userId]/settings.tsx:143
 msgid "Reset tutorials"
 msgstr "Atkurti mokymus"
 
@@ -15189,8 +15222,8 @@ msgid "Second wind"
 msgstr "Naujos jėgos"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:428
-msgid "Security check failed. Turn off your VPN or ad blocker, or try another browser."
-msgstr "Saugumo patikra nepavyko. Išjunk VPN ar reklamų blokatorių arba pabandyk kitą naršyklę."
+#~ msgid "Security check failed. Turn off your VPN or ad blocker, or try another browser."
+#~ msgstr "Saugumo patikra nepavyko. Išjunk VPN ar reklamų blokatorių arba pabandyk kitą naršyklę."
 
 #: src/pages/party/[partyId]/index.tsx:100
 msgid "See all parties"
@@ -15509,7 +15542,7 @@ msgstr "Rodyti visus {0} statymus"
 msgid "Show cards"
 msgstr "Rodyti kortas"
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Show email"
 msgstr "Rodyti el. paštą"
 
@@ -15665,7 +15698,7 @@ msgid "Skin Reward"
 msgstr "Skino Apdovanojimas"
 
 #: src/components/_other/shop/ShopHeader.tsx:23
-#: src/pages/shop/index.tsx:202
+#: src/pages/shop/index.tsx:207
 #: src/pages/user/[userId]/index.tsx:112
 msgid "Skins"
 msgstr "Skinai"
@@ -16095,8 +16128,8 @@ msgstr "Prenumeratoriai"
 msgid "Success"
 msgstr "Pasisekimas"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:199
-#: src/components/_user/auth/ConnectFromModal.tsx:250
+#: src/components/_user/auth/ConnectFromModal.tsx:158
+#: src/components/_user/auth/ConnectFromModal.tsx:209
 msgid "Successfully logged in!"
 msgstr "Sėkmingai prisijungei!"
 
@@ -16108,7 +16141,7 @@ msgstr "Dosnus Rėmėjas"
 msgid "Support"
 msgstr "Pagalba"
 
-#: src/components/_user/premium/PremiumActions.tsx:60
+#: src/components/_user/premium/PremiumActions.tsx:51
 msgid "Support the game"
 msgstr "Palaikyk žaidimą"
 
@@ -16152,12 +16185,12 @@ msgstr "Rėmėjo mėnesiai"
 msgid "Supporter of the game for <0>{0, plural, one {# month} other {# months}}</0>"
 msgstr "Žaidimą remia jau <0>{0, plural, one {# mėnesį} few {# mėnesius} many {# mėnesio} other {# mėnesių}}</0>"
 
-#: src/components/_user/premium/PremiumCard.tsx:60
+#: src/components/_user/premium/PremiumCard.tsx:62
 msgid "Supporter plan"
 msgstr "Rėmėjo planas"
 
 #: src/components/_user/modals/PremiumModal.tsx:31
-#: src/pages/user/[userId]/settings.tsx:158
+#: src/pages/user/[userId]/settings.tsx:161
 msgid "Supporter Plan"
 msgstr "Rėmėjo Planas"
 
@@ -16435,7 +16468,7 @@ msgstr "Nutraukta"
 msgid "Terms"
 msgstr "Sąlygos"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:563
+#: src/components/_user/auth/ConnectFromModal.tsx:416
 msgid "Terms of Service"
 msgstr "Paslaugų Teikimo Sąlygos"
 
@@ -17485,7 +17518,7 @@ msgstr "Pareigos"
 msgid "Title font"
 msgstr "Antraščių šriftas"
 
-#: src/pages/shop/index.tsx:154
+#: src/pages/shop/index.tsx:157
 msgid "to"
 msgstr "žaidėjui"
 
@@ -17626,7 +17659,7 @@ msgstr "Daugiausia žalos"
 msgid "Top Donors"
 msgstr "Didžiausi Aukotojai"
 
-#: src/pages/shop/index.tsx:97
+#: src/pages/shop/index.tsx:100
 msgid "Top gift givers of the month"
 msgstr "Daugiausia dovanų šį mėnesį padovanoję žaidėjai"
 
@@ -17716,7 +17749,7 @@ msgstr "Iš viso pagal šiandienos kainas"
 #: src/components/_military/battle/ActiveBattlesList.tsx:81
 #: src/components/_military/battle/ActiveBattlesList.tsx:187
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:65
-#: src/pages/events/index.tsx:190
+#: src/components/_other/events/EventTournament.tsx:31
 msgid "Tournament"
 msgstr "Turnyras"
 
@@ -17916,11 +17949,11 @@ msgstr "Debesys rojuje"
 msgid "Try it"
 msgstr "Paragauti"
 
-#: src/pages/user/[userId]/settings.tsx:137
+#: src/pages/user/[userId]/settings.tsx:140
 msgid "Tutorials"
 msgstr "Pamokos"
 
-#: src/pages/user/[userId]/settings.tsx:59
+#: src/pages/user/[userId]/settings.tsx:62
 msgid "Tutorials reseted"
 msgstr "Pamokos nustatytos iš naujo"
 
@@ -18094,7 +18127,7 @@ msgstr "Atnaujinti prioritetą"
 msgid "Update gift"
 msgstr "Atnaujinimo dovana"
 
-#: src/pages/user/[userId]/settings.tsx:91
+#: src/pages/user/[userId]/settings.tsx:94
 msgid "Update infos"
 msgstr "Atnaujinti informaciją"
 
@@ -18275,7 +18308,7 @@ msgid "Username"
 msgstr "Vartotojo vardas"
 
 #: src/components/_user/user/UserDropdown.tsx:261
-#: src/pages/user/[userId]/settings.tsx:120
+#: src/pages/user/[userId]/settings.tsx:123
 msgid "Username effect"
 msgstr "Vartotojo vardo efektas"
 
@@ -18291,7 +18324,7 @@ msgstr "Vartotojo vardo efektas atnaujintas"
 msgid "Username effects are a Supporter Plan feature."
 msgstr "Vartotojo vardo efektai yra Rėmėjo Plano funkcija."
 
-#: src/pages/user/[userId]/settings.tsx:113
+#: src/pages/user/[userId]/settings.tsx:116
 msgid "Username font"
 msgstr "Vartotojo vardo šriftas"
 
@@ -18486,8 +18519,8 @@ msgid "Verify"
 msgstr "Patvirtinti"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:405
-msgid "Verifying you're human..."
-msgstr "Tikrinama, ar tu žmogus..."
+#~ msgid "Verifying you're human..."
+#~ msgstr "Tikrinama, ar tu žmogus..."
 
 #: src/components/_economy/employee/employee.traitMeta.ts:122
 msgid "Veteran"
@@ -18846,7 +18879,7 @@ msgid "Won"
 msgstr "Laimėta"
 
 #: src/components/_military/tournament/TournamentHeader.tsx:91
-#: src/pages/events/index.tsx:116
+#: src/components/_other/events/EventTournament.tsx:99
 msgid "Won by"
 msgstr "Laimėjo"
 
@@ -19048,7 +19081,7 @@ msgstr "Tu nebevadovauji įmonei <0/>. Likusi suma <1>{0}</1> buvo surinkta už 
 msgid "You are not a council member of this party"
 msgstr "Nesi šios partijos tarybos narys"
 
-#: src/pages/events/index.tsx:110
+#: src/components/_other/events/EventTournament.tsx:93
 msgid "You are not participating"
 msgstr "Nedalyvauji"
 
@@ -19457,7 +19490,7 @@ msgstr "Laimėjai MU turnyrą"
 msgid "You worked 100 times"
 msgstr "Dirbai 100 kartų"
 
-#: src/components/_user/premium/PremiumCard.tsx:55
+#: src/components/_user/premium/PremiumCard.tsx:57
 msgid "You're already a supporter <0/>"
 msgstr "Jau esi rėmėjas <0/>"
 
@@ -19603,7 +19636,7 @@ msgstr "Tavo dabartinės pareigos"
 msgid "Your daily missions have been reset! Complete them to earn rewards."
 msgstr "Tavo dienos misijos buvo atnaujintos! Įvykdyk jas ir gauk apdovanojimų."
 
-#: src/pages/user/[userId]/settings.tsx:68
+#: src/pages/user/[userId]/settings.tsx:71
 msgid "Your email"
 msgstr "Tavo el. paštas"
 
@@ -19705,6 +19738,10 @@ msgstr "Tavo MU savaitinėje lygoje užėmė #{rank} vietą."
 msgid "Your MU has <0/> reputation and cannot bid on mercenary contracts. Pay to buy back reputation (once per day)."
 msgstr "Tavo MU turi <0/> reputacijos ir negali dalyvauti samdinių kontraktų aukcionuose. Sumokėk, kad išsipirktum reputaciją (kartą per dieną)."
 
+#: src/components/_other/events/EventMuLeague.tsx:75
+msgid "Your MU has no league this week"
+msgstr ""
+
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:107
 msgid "Your MU is registered"
 msgstr "Tavo MU užregistruotas"
@@ -19795,7 +19832,7 @@ msgstr "Tavo komanda <0/> buvo pašalinta iš <1/>"
 msgid "Your team <0/> won a round in <1/>!"
 msgstr "Tavo komanda <0/> laimėjo raundą žaidime <1/>!"
 
-#: src/pages/events/index.tsx:102
+#: src/components/_other/events/EventTournament.tsx:85
 msgid "Your team:"
 msgstr "Tavo komanda:"
 
@@ -19850,7 +19887,7 @@ msgstr "Tavo savaitinės misijos buvo atnaujintos! Įvykdyk jas ir gauk apdovano
 msgid "Your workforce"
 msgstr "Tavo darbo jėga"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:508
+#: src/components/_user/auth/ConnectFromModal.tsx:361
 msgid "your@email.com"
 msgstr "tavo@email.com"
 

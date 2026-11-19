@@ -52,7 +52,7 @@ msgstr ""
 msgid " - Using outside market standards or manipulated trade prices"
 msgstr ""
 
-#: src/components/_user/premium/PremiumActions.tsx:74
+#: src/components/_user/premium/PremiumActions.tsx:65
 msgid " Gift a sub"
 msgstr " Oferă un abonament"
 
@@ -129,6 +129,11 @@ msgstr ""
 #. placeholder {0}: estimate.notOwnedCount
 #: src/components/_other/shop/SkinPackModal.tsx:313
 msgid "{0, plural, one {Unlock # skin} other {Unlock # skins}}"
+msgstr ""
+
+#. placeholder {0}: giveaway.winnersQuantity ?? 0
+#: src/components/_other/events/EventGiveaway.tsx:71
+msgid "{0, plural, one {x # winner} other {x # winners}}"
 msgstr ""
 
 #. placeholder {0}: damagesPercent(effects.bunkerBonusDelta)
@@ -1782,11 +1787,11 @@ msgstr ""
 msgid "{regionLootCount, plural, =1 {Collect the wooden case lying on this region} one {Collect the # wooden case lying on this region} other {Collect the # wooden cases lying on this region}}"
 msgstr ""
 
-#: src/pages/events/index.tsx:97
+#: src/components/_other/events/EventTournament.tsx:80
 msgid "{registeredCount} countries registered"
 msgstr ""
 
-#: src/pages/events/index.tsx:95
+#: src/components/_other/events/EventTournament.tsx:78
 msgid "{registeredCount} MUs registered"
 msgstr ""
 
@@ -3808,8 +3813,8 @@ msgid "Accepted"
 msgstr "Acceptată"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:413
-msgid "Access granted"
-msgstr ""
+#~ msgid "Access granted"
+#~ msgstr ""
 
 #: src/components/_military/battle/BattleHeader.tsx:183
 msgid "Access war"
@@ -3838,8 +3843,9 @@ msgstr "Acțiuni"
 #: src/components/_military/mercenaryContract/MercenaryAuctionList.tsx:144
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:85
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:47
+#: src/components/_other/events/EventGiveaway.tsx:48
+#: src/components/_other/events/EventTournament.tsx:131
 #: src/components/_user/user/Level.tsx:193
-#: src/pages/events/index.tsx:148
 #: src/utils/translations.tsx:342
 msgid "Active"
 msgstr "Active"
@@ -4314,7 +4320,7 @@ msgstr "Token API regenerat"
 msgid "API token revoked"
 msgstr "Token API revocat"
 
-#: src/pages/user/[userId]/settings.tsx:151
+#: src/pages/user/[userId]/settings.tsx:154
 msgid "API Tokens"
 msgstr "Tokeni API"
 
@@ -4326,7 +4332,7 @@ msgstr "Tokenii API permit aplicațiilor externe să acceseze API-ul în numele 
 msgid "App pattern"
 msgstr "Textură"
 
-#: src/pages/user/[userId]/settings.tsx:129
+#: src/pages/user/[userId]/settings.tsx:132
 msgid "App settings"
 msgstr ""
 
@@ -4334,7 +4340,7 @@ msgstr ""
 msgid "Appeal to their loyalty"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:99
+#: src/pages/user/[userId]/settings.tsx:102
 msgid "Appearance"
 msgstr ""
 
@@ -4618,7 +4624,7 @@ msgstr "Licitație câștigată"
 msgid "Auctions"
 msgstr "Licitații"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:244
+#: src/components/_user/auth/ConnectFromModal.tsx:203
 msgid "Authentication failed. Please try again."
 msgstr "Autentificarea a eșuat. Te rugăm să încerci din nou."
 
@@ -5285,7 +5291,7 @@ msgstr ""
 msgid "By Company"
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:536
+#: src/components/_user/auth/ConnectFromModal.tsx:389
 msgid "By continuing, you agree to our <0>Terms of Service</0>."
 msgstr "Continuând, accepți <0>Termenii de Utilizare</0>."
 
@@ -5400,7 +5406,7 @@ msgid "Cancel Mercenary Contract"
 msgstr "Anulează Contract Mercenar"
 
 #: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:240
-#: src/pages/events/index.tsx:156
+#: src/components/_other/events/EventTournament.tsx:139
 #: src/utils/translations.tsx:337
 msgid "Cancelled"
 msgstr "Anulat"
@@ -5877,7 +5883,7 @@ msgid "Colonel"
 msgstr "Colonel"
 
 #: src/components/_user/user/UserDropdown.tsx:243
-#: src/pages/user/[userId]/settings.tsx:105
+#: src/pages/user/[userId]/settings.tsx:108
 msgid "Color scheme"
 msgstr "Culoare"
 
@@ -6094,15 +6100,15 @@ msgstr ""
 msgid "Congress members"
 msgstr "Parlamentari"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:464
+#: src/components/_user/auth/ConnectFromModal.tsx:317
 msgid "Connect with Discord"
 msgstr "Conectează-te cu Discord"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:521
+#: src/components/_user/auth/ConnectFromModal.tsx:374
 msgid "Connect with email code"
 msgstr "Conectează-te prin cod email"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:483
+#: src/components/_user/auth/ConnectFromModal.tsx:336
 msgid "Connect with Google"
 msgstr "Conectează-te cu Google"
 
@@ -6698,7 +6704,7 @@ msgstr "Arată bine, ce să zic"
 msgid "Damn you lucky"
 msgstr "Cât noroc să ai?!"
 
-#: src/pages/user/[userId]/settings.tsx:171
+#: src/pages/user/[userId]/settings.tsx:174
 msgid "Danger zone"
 msgstr "Zona periculoasă"
 
@@ -6911,7 +6917,7 @@ msgstr "Declară un inamic principal"
 msgid "Delete"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:174
+#: src/pages/user/[userId]/settings.tsx:177
 msgid "Delete account"
 msgstr "Șterge contul"
 
@@ -7500,10 +7506,10 @@ msgstr "Alegerile s-au încheiat"
 msgid "Election vote open"
 msgstr "Votarea a început"
 
+#: src/components/_other/events/EventElections.tsx:23
 #: src/components/_political/country/CountryHeader.tsx:135
 #: src/pages/country/[countryId]/elections.tsx:28
 #: src/pages/country/[countryId]/index.tsx:269
-#: src/pages/events/index.tsx:398
 #: src/pages/party/[partyId]/index.tsx:88
 msgid "Elections"
 msgstr "Alegeri"
@@ -7729,10 +7735,14 @@ msgstr ""
 msgid "Enter article ID"
 msgstr "Introdu ID articol"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:269
-#: src/components/_user/auth/ConnectFromModal.tsx:274
+#: src/components/_user/auth/ConnectFromModal.tsx:228
+#: src/components/_user/auth/ConnectFromModal.tsx:233
 msgid "Enter the code we sent to your email."
 msgstr "Introdu codul pe care ți l-am trimis pe email."
+
+#: src/components/_other/events/EventGiveaway.tsx:95
+msgid "Entered"
+msgstr ""
 
 #: src/components/_user/auth/CitizenIdCard.tsx:58
 msgid "Entry · Admitted"
@@ -8066,21 +8076,21 @@ msgstr "Eroare la copiere"
 msgid "Failed to copy text: "
 msgstr "Eroare la copiere: "
 
-#: src/components/_user/auth/ConnectFromModal.tsx:160
+#: src/components/_user/auth/ConnectFromModal.tsx:119
 msgid "Failed to start Discord login."
 msgstr "Eroare în pornirea autentificării cu Discord."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:158
+#: src/components/_user/auth/ConnectFromModal.tsx:117
 msgid "Failed to start Discord login. Please retry the CAPTCHA."
 msgstr "Eroare în pornirea autentificării cu Discord. Refă testul CAPTCHA."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:183
-#: src/components/_user/auth/ConnectFromModal.tsx:202
-#: src/components/_user/auth/ConnectFromModal.tsx:228
+#: src/components/_user/auth/ConnectFromModal.tsx:142
+#: src/components/_user/auth/ConnectFromModal.tsx:161
+#: src/components/_user/auth/ConnectFromModal.tsx:187
 msgid "Failed to start Google login."
 msgstr "Eroareîn pornirea autentificării cu Google. "
 
-#: src/components/_user/auth/ConnectFromModal.tsx:226
+#: src/components/_user/auth/ConnectFromModal.tsx:185
 msgid "Failed to start Google login. Please retry the CAPTCHA."
 msgstr "Eroare în pornirea autentificării cu Google. Refă testul CAPTCHA."
 
@@ -8435,7 +8445,7 @@ msgstr ""
 msgid "Founding Father"
 msgstr "Founding Father"
 
-#: src/pages/shop/index.tsx:187
+#: src/pages/shop/index.tsx:190
 msgid "Free daily reward"
 msgstr "Recompensă zilnică gratuită"
 
@@ -8562,11 +8572,11 @@ msgstr ""
 msgid "Gear up!"
 msgstr ""
 
-#: src/pages/shop/index.tsx:196
+#: src/pages/shop/index.tsx:200
 msgid "Gems"
 msgstr "Diamante"
 
-#: src/pages/shop/index.tsx:194
+#: src/pages/shop/index.tsx:198
 msgid "Gems are used to buy assets in the shop and to gift supporter months to other players"
 msgstr "Diamantele sunt folosite pentru a cumpăra resurse cosmetice din magazin și pentru a oferi planuri Susținător altor jucători"
 
@@ -8660,7 +8670,7 @@ msgstr "Cadou de la Vatou, nu spune nimănui"
 msgid "Gift sent! Skin pack unlocked for recipient!"
 msgstr "Cadou trimis! Pachetul de skinuri a fost deblocat pentru destinatar."
 
-#: src/pages/shop/index.tsx:67
+#: src/pages/shop/index.tsx:68
 msgid "Gift sent! Thanks for supporting the game <3"
 msgstr "Cadou trimis! Mulțumim că susții jocul <3"
 
@@ -8672,8 +8682,8 @@ msgstr "Oferă Plan Susținător"
 msgid "Gift this pack to someone"
 msgstr "Dăruiește acest pachet cuiva"
 
-#: src/pages/shop/index.tsx:115
-#: src/pages/shop/index.tsx:141
+#: src/pages/shop/index.tsx:118
+#: src/pages/shop/index.tsx:144
 msgid "gifted"
 msgstr "a oferit"
 
@@ -8704,6 +8714,14 @@ msgstr ""
 #: src/components/_user/apiToken/ApiTokenList.tsx:251
 msgid "Give your token a descriptive name so you can identify it later."
 msgstr "Dă tokenului un nume descriptiv pentru a-l identifica mai târziu."
+
+#: src/components/_other/events/EventGiveaway.tsx:61
+msgid "Giveaway"
+msgstr ""
+
+#: src/components/_other/events/EventGiveaway.tsx:34
+msgid "Giveaway entered"
+msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:199
 msgid "Giveaway Winner"
@@ -9205,7 +9223,7 @@ msgstr "Ajută jocul să crească"
 msgid "Hide cards"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Hide email"
 msgstr ""
 
@@ -9779,6 +9797,10 @@ msgstr "Alătură-te unei Unități Militare"
 msgid "Join a military unit to take part"
 msgstr ""
 
+#: src/components/_other/events/EventMuLeague.tsx:60
+msgid "Join a Military Unit to take part"
+msgstr ""
+
 #: src/components/_user/mission/mission.frontConfig.tsx:680
 msgid "Join a Party"
 msgstr ""
@@ -9984,7 +10006,7 @@ msgstr ""
 msgid "Last earned"
 msgstr ""
 
-#: src/pages/shop/index.tsx:103
+#: src/pages/shop/index.tsx:106
 msgid "Last gifts"
 msgstr "Ultimele cadouri"
 
@@ -9992,13 +10014,13 @@ msgstr "Ultimele cadouri"
 msgid "Last one! Tap Milestones."
 msgstr ""
 
-#: src/pages/shop/index.tsx:129
+#: src/pages/shop/index.tsx:132
 msgid "Last skin gifts"
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:467
-#: src/components/_user/auth/ConnectFromModal.tsx:486
-#: src/components/_user/auth/ConnectFromModal.tsx:524
+#: src/components/_user/auth/ConnectFromModal.tsx:320
+#: src/components/_user/auth/ConnectFromModal.tsx:339
+#: src/components/_user/auth/ConnectFromModal.tsx:377
 msgid "Last used"
 msgstr "Ultima utilizare"
 
@@ -10018,7 +10040,7 @@ msgstr ""
 msgid "Later"
 msgstr "Mai târziu"
 
-#: src/pages/shop/index.tsx:209
+#: src/pages/shop/index.tsx:214
 msgid "Latest Pack"
 msgstr "Cel mai nou pachet"
 
@@ -10077,6 +10099,7 @@ msgstr ""
 #: src/components/_layout/layoutInfos.frontConfig.tsx:55
 #: src/components/_military/mu/MuHeader.tsx:114
 #: src/components/_military/mu/MuHeader.tsx:180
+#: src/components/_other/events/EventLeague.tsx:45
 #: src/components/_user/league/LeagueTopInfoCard.tsx:69
 #: src/components/_user/user/UserHeader.tsx:229
 #: src/components/_user/user/UserHeader.tsx:326
@@ -10085,6 +10108,10 @@ msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:215
 msgid "League Champion"
+msgstr ""
+
+#: src/components/_other/events/EventLeague.tsx:69
+msgid "Leagues are being drawn"
 msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:248
@@ -10601,8 +10628,8 @@ msgstr ""
 msgid "Make room for more staff!"
 msgstr ""
 
-#: src/components/_user/premium/PremiumActions.tsx:84
-#: src/pages/user/[userId]/settings.tsx:165
+#: src/components/_user/premium/PremiumActions.tsx:75
+#: src/pages/user/[userId]/settings.tsx:168
 msgid "Manage Subscription"
 msgstr "Gestionează abonamentul"
 
@@ -11415,6 +11442,7 @@ msgstr "Donație UM primită"
 #: src/components/_layout/layoutInfos.frontConfig.tsx:60
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:118
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:136
+#: src/components/_other/events/EventMuLeague.tsx:48
 #: src/components/_user/notification/notification.frontConfig.tsx:2465
 #: src/pages/mu/[muId]/league.tsx:19
 msgid "MU league"
@@ -11753,7 +11781,7 @@ msgstr "Recomandator nou"
 msgid "New subscriber"
 msgstr "Abonat nou"
 
-#: src/pages/shop/index.tsx:168
+#: src/pages/shop/index.tsx:171
 msgid "New supporters"
 msgstr "Noi susținători"
 
@@ -11867,7 +11895,7 @@ msgstr ""
 msgid "No API tokens yet. Create one to get started."
 msgstr "Niciun token API. Creează unul pentru a începe."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:243
+#: src/components/_user/auth/ConnectFromModal.tsx:202
 msgid "No authorization code provided."
 msgstr "Nu ai introdus niciun cod de autorizare."
 
@@ -12327,7 +12355,7 @@ msgstr ""
 msgid "Not enough paper for the daily maintenance: alliance damage bonuses are off until it pays."
 msgstr ""
 
-#: src/pages/events/index.tsx:113
+#: src/components/_other/events/EventTournament.tsx:96
 msgid "Not enough participants"
 msgstr ""
 
@@ -12408,7 +12436,7 @@ msgid "Nothing while alone."
 msgstr ""
 
 #: src/pages/notifications.tsx:38
-#: src/pages/user/[userId]/settings.tsx:145
+#: src/pages/user/[userId]/settings.tsx:148
 msgid "Notification preferences"
 msgstr "Setări notificări"
 
@@ -12792,7 +12820,7 @@ msgid "Operative"
 msgstr "Agent"
 
 #: src/components/_political/unrest/UnrestBar.tsx:40
-#: src/components/_user/auth/ConnectFromModal.tsx:498
+#: src/components/_user/auth/ConnectFromModal.tsx:351
 msgid "or"
 msgstr ""
 
@@ -12969,7 +12997,12 @@ msgid "Paramilitary"
 msgstr ""
 
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:76
+#: src/components/_other/events/EventGiveaway.tsx:82
 msgid "Participants"
+msgstr ""
+
+#: src/components/_other/events/EventGiveaway.tsx:105
+msgid "Participate"
 msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:328
@@ -13179,7 +13212,7 @@ msgstr ""
 msgid "Pay the “inspection fee”"
 msgstr ""
 
-#: src/pages/shop/index.tsx:54
+#: src/pages/shop/index.tsx:55
 msgid "Payment successful! Thanks for supporting the game <3"
 msgstr "Plată reușită! Mulțumim că susții jocul <3"
 
@@ -13438,9 +13471,9 @@ msgstr ""
 msgid "Playing this division this week."
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:147
-#: src/components/_user/auth/ConnectFromModal.tsx:211
-#: src/components/_user/auth/ConnectFromModal.tsx:296
+#: src/components/_user/auth/ConnectFromModal.tsx:106
+#: src/components/_user/auth/ConnectFromModal.tsx:170
+#: src/components/_user/auth/ConnectFromModal.tsx:255
 msgid "Please complete the CAPTCHA."
 msgstr "Completează testul CAPTCHA."
 
@@ -13540,7 +13573,7 @@ msgstr ""
 msgid "Prehistoric Pack"
 msgstr ""
 
-#: src/pages/shop/index.tsx:226
+#: src/pages/shop/index.tsx:231
 msgid "Premium"
 msgstr "Plan Susținător"
 
@@ -14719,8 +14752,8 @@ msgid "Reset"
 msgstr "Reset"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:447
-msgid "Reset CAPTCHA"
-msgstr "Resetează testul CAPTCHA"
+#~ msgid "Reset CAPTCHA"
+#~ msgstr "Resetează testul CAPTCHA"
 
 #: src/components/_economy/employee/EmployeeModal.tsx:549
 msgid "Reset name"
@@ -14738,7 +14771,7 @@ msgstr ""
 msgid "Reset Survivor"
 msgstr "Reset Survivor"
 
-#: src/pages/user/[userId]/settings.tsx:140
+#: src/pages/user/[userId]/settings.tsx:143
 msgid "Reset tutorials"
 msgstr "Resetează tutorialele"
 
@@ -15187,8 +15220,8 @@ msgid "Second wind"
 msgstr ""
 
 #: src/components/_user/auth/ConnectFromModal.tsx:428
-msgid "Security check failed. Turn off your VPN or ad blocker, or try another browser."
-msgstr ""
+#~ msgid "Security check failed. Turn off your VPN or ad blocker, or try another browser."
+#~ msgstr ""
 
 #: src/pages/party/[partyId]/index.tsx:100
 msgid "See all parties"
@@ -15507,7 +15540,7 @@ msgstr "Arată toate {0} oferte"
 msgid "Show cards"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Show email"
 msgstr ""
 
@@ -15663,7 +15696,7 @@ msgid "Skin Reward"
 msgstr "Recompensă Skin"
 
 #: src/components/_other/shop/ShopHeader.tsx:23
-#: src/pages/shop/index.tsx:202
+#: src/pages/shop/index.tsx:207
 #: src/pages/user/[userId]/index.tsx:112
 msgid "Skins"
 msgstr "Skinuri"
@@ -16093,8 +16126,8 @@ msgstr "Abonați"
 msgid "Success"
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:199
-#: src/components/_user/auth/ConnectFromModal.tsx:250
+#: src/components/_user/auth/ConnectFromModal.tsx:158
+#: src/components/_user/auth/ConnectFromModal.tsx:209
 msgid "Successfully logged in!"
 msgstr "Conectat cu succes!"
 
@@ -16106,7 +16139,7 @@ msgstr "Sugar Daddy"
 msgid "Support"
 msgstr ""
 
-#: src/components/_user/premium/PremiumActions.tsx:60
+#: src/components/_user/premium/PremiumActions.tsx:51
 msgid "Support the game"
 msgstr "Susține jocul"
 
@@ -16150,12 +16183,12 @@ msgstr "Luni Susținător"
 msgid "Supporter of the game for <0>{0, plural, one {# month} other {# months}}</0>"
 msgstr ""
 
-#: src/components/_user/premium/PremiumCard.tsx:60
+#: src/components/_user/premium/PremiumCard.tsx:62
 msgid "Supporter plan"
 msgstr "Plan Susținător"
 
 #: src/components/_user/modals/PremiumModal.tsx:31
-#: src/pages/user/[userId]/settings.tsx:158
+#: src/pages/user/[userId]/settings.tsx:161
 msgid "Supporter Plan"
 msgstr "Plan Susținător"
 
@@ -16433,7 +16466,7 @@ msgstr ""
 msgid "Terms"
 msgstr "Termeni"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:563
+#: src/components/_user/auth/ConnectFromModal.tsx:416
 msgid "Terms of Service"
 msgstr "Termeni de Utilizare"
 
@@ -17483,7 +17516,7 @@ msgstr ""
 msgid "Title font"
 msgstr ""
 
-#: src/pages/shop/index.tsx:154
+#: src/pages/shop/index.tsx:157
 msgid "to"
 msgstr ""
 
@@ -17624,7 +17657,7 @@ msgstr ""
 msgid "Top Donors"
 msgstr "Principalii donatori"
 
-#: src/pages/shop/index.tsx:97
+#: src/pages/shop/index.tsx:100
 msgid "Top gift givers of the month"
 msgstr "Top donatori ai lunii"
 
@@ -17714,7 +17747,7 @@ msgstr ""
 #: src/components/_military/battle/ActiveBattlesList.tsx:81
 #: src/components/_military/battle/ActiveBattlesList.tsx:187
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:65
-#: src/pages/events/index.tsx:190
+#: src/components/_other/events/EventTournament.tsx:31
 msgid "Tournament"
 msgstr "Turneu"
 
@@ -17914,11 +17947,11 @@ msgstr ""
 msgid "Try it"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:137
+#: src/pages/user/[userId]/settings.tsx:140
 msgid "Tutorials"
 msgstr "Tutoriale"
 
-#: src/pages/user/[userId]/settings.tsx:59
+#: src/pages/user/[userId]/settings.tsx:62
 msgid "Tutorials reseted"
 msgstr "Tutoriale resetate"
 
@@ -18092,7 +18125,7 @@ msgstr ""
 msgid "Update gift"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:91
+#: src/pages/user/[userId]/settings.tsx:94
 msgid "Update infos"
 msgstr "Actualizază informațiile"
 
@@ -18273,7 +18306,7 @@ msgid "Username"
 msgstr "Nume de utilizator"
 
 #: src/components/_user/user/UserDropdown.tsx:261
-#: src/pages/user/[userId]/settings.tsx:120
+#: src/pages/user/[userId]/settings.tsx:123
 msgid "Username effect"
 msgstr ""
 
@@ -18289,7 +18322,7 @@ msgstr ""
 msgid "Username effects are a Supporter Plan feature."
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:113
+#: src/pages/user/[userId]/settings.tsx:116
 msgid "Username font"
 msgstr ""
 
@@ -18484,8 +18517,8 @@ msgid "Verify"
 msgstr "Verifică"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:405
-msgid "Verifying you're human..."
-msgstr ""
+#~ msgid "Verifying you're human..."
+#~ msgstr ""
 
 #: src/components/_economy/employee/employee.traitMeta.ts:122
 msgid "Veteran"
@@ -18844,7 +18877,7 @@ msgid "Won"
 msgstr ""
 
 #: src/components/_military/tournament/TournamentHeader.tsx:91
-#: src/pages/events/index.tsx:116
+#: src/components/_other/events/EventTournament.tsx:99
 msgid "Won by"
 msgstr "Câștigat de"
 
@@ -19046,7 +19079,7 @@ msgstr ""
 msgid "You are not a council member of this party"
 msgstr "Nu ești un membru al consiliului în acest partid"
 
-#: src/pages/events/index.tsx:110
+#: src/components/_other/events/EventTournament.tsx:93
 msgid "You are not participating"
 msgstr "Nu participi"
 
@@ -19455,7 +19488,7 @@ msgstr "Ai câștigat un turneu pe UM"
 msgid "You worked 100 times"
 msgstr "Ai muncit de 100 de ori"
 
-#: src/components/_user/premium/PremiumCard.tsx:55
+#: src/components/_user/premium/PremiumCard.tsx:57
 msgid "You're already a supporter <0/>"
 msgstr "Ești deja un Susținător <0/>"
 
@@ -19601,7 +19634,7 @@ msgstr ""
 msgid "Your daily missions have been reset! Complete them to earn rewards."
 msgstr "Misiunile tale zilnice au fost resetate! Completează-le pentru a câștiga recompense."
 
-#: src/pages/user/[userId]/settings.tsx:68
+#: src/pages/user/[userId]/settings.tsx:71
 msgid "Your email"
 msgstr "Adresa ta de email"
 
@@ -19703,6 +19736,10 @@ msgstr ""
 msgid "Your MU has <0/> reputation and cannot bid on mercenary contracts. Pay to buy back reputation (once per day)."
 msgstr ""
 
+#: src/components/_other/events/EventMuLeague.tsx:75
+msgid "Your MU has no league this week"
+msgstr ""
+
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:107
 msgid "Your MU is registered"
 msgstr ""
@@ -19793,7 +19830,7 @@ msgstr "Echipa ta <0/> a fost eliminată din <1/>"
 msgid "Your team <0/> won a round in <1/>!"
 msgstr "Echipa ta <0/> a câștigat o rundă în <1/>!"
 
-#: src/pages/events/index.tsx:102
+#: src/components/_other/events/EventTournament.tsx:85
 msgid "Your team:"
 msgstr "Echipa ta:"
 
@@ -19848,7 +19885,7 @@ msgstr "Misiunile tale săptămânale au fost resetate! Completează-le pentru a
 msgid "Your workforce"
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:508
+#: src/components/_user/auth/ConnectFromModal.tsx:361
 msgid "your@email.com"
 msgstr "adresa_ta@email.com"
 

@@ -54,7 +54,7 @@ msgstr " - مضامین کو بار بار بخشش دینا"
 msgid " - Using outside market standards or manipulated trade prices"
 msgstr " - منڈی سے باہر کے معیارات یا ہیرا پھیری والی تجارتی قیمتیں استعمال کرنا"
 
-#: src/components/_user/premium/PremiumActions.tsx:74
+#: src/components/_user/premium/PremiumActions.tsx:65
 msgid " Gift a sub"
 msgstr " رکنیت تحفے میں دیں"
 
@@ -132,6 +132,11 @@ msgstr "{0, plural, one {فروخت کے لیے پیش کریں} other {# اشی
 #: src/components/_other/shop/SkinPackModal.tsx:313
 msgid "{0, plural, one {Unlock # skin} other {Unlock # skins}}"
 msgstr "{0, plural, one {# روپ کھولیں} other {# روپ کھولیں}}"
+
+#. placeholder {0}: giveaway.winnersQuantity ?? 0
+#: src/components/_other/events/EventGiveaway.tsx:71
+msgid "{0, plural, one {x # winner} other {x # winners}}"
+msgstr ""
 
 #. placeholder {0}: damagesPercent(effects.bunkerBonusDelta)
 #. placeholder {1}: upgradeName(EUpgrade.BUNKER)
@@ -1784,11 +1789,11 @@ msgstr "{quantity, plural, =1 {لکڑی کا صندوق اٹھا لیا!} one {�
 msgid "{regionLootCount, plural, =1 {Collect the wooden case lying on this region} one {Collect the # wooden case lying on this region} other {Collect the # wooden cases lying on this region}}"
 msgstr "{regionLootCount, plural, =1 {اس علاقے میں پڑا لکڑی کا صندوق اٹھائیں} one {اس علاقے میں پڑا لکڑی کا # صندوق اٹھائیں} other {اس علاقے میں پڑے لکڑی کے # صندوق اٹھائیں}}"
 
-#: src/pages/events/index.tsx:97
+#: src/components/_other/events/EventTournament.tsx:80
 msgid "{registeredCount} countries registered"
 msgstr "{registeredCount} ممالک درج ہوئے"
 
-#: src/pages/events/index.tsx:95
+#: src/components/_other/events/EventTournament.tsx:78
 msgid "{registeredCount} MUs registered"
 msgstr "{registeredCount} عسکری دستے درج ہوئے"
 
@@ -3810,8 +3815,8 @@ msgid "Accepted"
 msgstr "قبول شدہ"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:413
-msgid "Access granted"
-msgstr "رسائی مل گئی"
+#~ msgid "Access granted"
+#~ msgstr "رسائی مل گئی"
 
 #: src/components/_military/battle/BattleHeader.tsx:183
 msgid "Access war"
@@ -3840,8 +3845,9 @@ msgstr "اقدامات"
 #: src/components/_military/mercenaryContract/MercenaryAuctionList.tsx:144
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:85
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:47
+#: src/components/_other/events/EventGiveaway.tsx:48
+#: src/components/_other/events/EventTournament.tsx:131
 #: src/components/_user/user/Level.tsx:193
-#: src/pages/events/index.tsx:148
 #: src/utils/translations.tsx:342
 msgid "Active"
 msgstr "فعال"
@@ -4316,7 +4322,7 @@ msgstr "API ٹوکن دوبارہ بنا دیا گیا"
 msgid "API token revoked"
 msgstr "API ٹوکن منسوخ کر دیا گیا"
 
-#: src/pages/user/[userId]/settings.tsx:151
+#: src/pages/user/[userId]/settings.tsx:154
 msgid "API Tokens"
 msgstr "API ٹوکن"
 
@@ -4328,7 +4334,7 @@ msgstr "API ٹوکن بیرونی پروگراموں کو آپ کی طرف سے 
 msgid "App pattern"
 msgstr "ایپ کا نقش"
 
-#: src/pages/user/[userId]/settings.tsx:129
+#: src/pages/user/[userId]/settings.tsx:132
 msgid "App settings"
 msgstr "ایپ کی ترتیبات"
 
@@ -4336,7 +4342,7 @@ msgstr "ایپ کی ترتیبات"
 msgid "Appeal to their loyalty"
 msgstr "ان کی وفاداری کا واسطہ دیں"
 
-#: src/pages/user/[userId]/settings.tsx:99
+#: src/pages/user/[userId]/settings.tsx:102
 msgid "Appearance"
 msgstr "ظاہری صورت"
 
@@ -4620,7 +4626,7 @@ msgstr "نیلامی جیت لی"
 msgid "Auctions"
 msgstr "نیلامیاں"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:244
+#: src/components/_user/auth/ConnectFromModal.tsx:203
 msgid "Authentication failed. Please try again."
 msgstr "تصدیق ناکام ہو گئی۔ براہِ مہربانی دوبارہ کوشش کریں۔"
 
@@ -5287,7 +5293,7 @@ msgstr "آپ کے ملک کے خریداروں کو <0>{buyerTotal}</0> نظر �
 msgid "By Company"
 msgstr "کمپنی کے لحاظ سے"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:536
+#: src/components/_user/auth/ConnectFromModal.tsx:389
 msgid "By continuing, you agree to our <0>Terms of Service</0>."
 msgstr "جاری رکھ کر آپ ہماری <0>شرائطِ خدمت</0> سے اتفاق کرتے ہیں۔"
 
@@ -5402,7 +5408,7 @@ msgid "Cancel Mercenary Contract"
 msgstr "کرائے کے سپاہیوں کا معاہدہ منسوخ کریں"
 
 #: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:240
-#: src/pages/events/index.tsx:156
+#: src/components/_other/events/EventTournament.tsx:139
 #: src/utils/translations.tsx:337
 msgid "Cancelled"
 msgstr "منسوخ شدہ"
@@ -5879,7 +5885,7 @@ msgid "Colonel"
 msgstr "زعیم"
 
 #: src/components/_user/user/UserDropdown.tsx:243
-#: src/pages/user/[userId]/settings.tsx:105
+#: src/pages/user/[userId]/settings.tsx:108
 msgid "Color scheme"
 msgstr "رنگوں کی ترتیب"
 
@@ -6096,15 +6102,15 @@ msgstr "<0/> کے کانگریس رکن"
 msgid "Congress members"
 msgstr "کانگریس ارکان"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:464
+#: src/components/_user/auth/ConnectFromModal.tsx:317
 msgid "Connect with Discord"
 msgstr "Discord کے ذریعے داخل ہوں"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:521
+#: src/components/_user/auth/ConnectFromModal.tsx:374
 msgid "Connect with email code"
 msgstr "برقی ڈاک کوڈ کے ذریعے داخل ہوں"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:483
+#: src/components/_user/auth/ConnectFromModal.tsx:336
 msgid "Connect with Google"
 msgstr "Google کے ذریعے داخل ہوں"
 
@@ -6700,7 +6706,7 @@ msgstr "واہ! زبردست لگ رہا ہے"
 msgid "Damn you lucky"
 msgstr "یار تم تو بڑے خوش قسمت ہو"
 
-#: src/pages/user/[userId]/settings.tsx:171
+#: src/pages/user/[userId]/settings.tsx:174
 msgid "Danger zone"
 msgstr "خطرناک حصہ"
 
@@ -6913,7 +6919,7 @@ msgstr "جانی دشمن قرار دیں"
 msgid "Delete"
 msgstr "حذف کریں"
 
-#: src/pages/user/[userId]/settings.tsx:174
+#: src/pages/user/[userId]/settings.tsx:177
 msgid "Delete account"
 msgstr "کھاتا حذف کریں"
 
@@ -7502,10 +7508,10 @@ msgstr "انتخابات ختم ہو گئے"
 msgid "Election vote open"
 msgstr "انتخابی رائے دہی شروع"
 
+#: src/components/_other/events/EventElections.tsx:23
 #: src/components/_political/country/CountryHeader.tsx:135
 #: src/pages/country/[countryId]/elections.tsx:28
 #: src/pages/country/[countryId]/index.tsx:269
-#: src/pages/events/index.tsx:398
 #: src/pages/party/[partyId]/index.tsx:88
 msgid "Elections"
 msgstr "انتخابات"
@@ -7731,10 +7737,14 @@ msgstr "قیمت درج کریں"
 msgid "Enter article ID"
 msgstr "مضمون کا شناختی نمبر درج کریں"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:269
-#: src/components/_user/auth/ConnectFromModal.tsx:274
+#: src/components/_user/auth/ConnectFromModal.tsx:228
+#: src/components/_user/auth/ConnectFromModal.tsx:233
 msgid "Enter the code we sent to your email."
 msgstr "ہم نے آپ کی برقی ڈاک پر جو کوڈ بھیجا ہے وہ درج کریں۔"
+
+#: src/components/_other/events/EventGiveaway.tsx:95
+msgid "Entered"
+msgstr ""
 
 #: src/components/_user/auth/CitizenIdCard.tsx:58
 msgid "Entry · Admitted"
@@ -8068,21 +8078,21 @@ msgstr "نقل نہیں ہو سکا"
 msgid "Failed to copy text: "
 msgstr "متن نقل نہیں ہو سکا: "
 
-#: src/components/_user/auth/ConnectFromModal.tsx:160
+#: src/components/_user/auth/ConnectFromModal.tsx:119
 msgid "Failed to start Discord login."
 msgstr "Discord سے داخلہ شروع نہیں ہو سکا۔"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:158
+#: src/components/_user/auth/ConnectFromModal.tsx:117
 msgid "Failed to start Discord login. Please retry the CAPTCHA."
 msgstr "Discord سے داخلہ شروع نہیں ہو سکا۔ براہِ مہربانی کیپچا دوبارہ کریں۔"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:183
-#: src/components/_user/auth/ConnectFromModal.tsx:202
-#: src/components/_user/auth/ConnectFromModal.tsx:228
+#: src/components/_user/auth/ConnectFromModal.tsx:142
+#: src/components/_user/auth/ConnectFromModal.tsx:161
+#: src/components/_user/auth/ConnectFromModal.tsx:187
 msgid "Failed to start Google login."
 msgstr "Google سے داخلہ شروع نہیں ہو سکا۔"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:226
+#: src/components/_user/auth/ConnectFromModal.tsx:185
 msgid "Failed to start Google login. Please retry the CAPTCHA."
 msgstr "Google سے داخلہ شروع نہیں ہو سکا۔ براہِ مہربانی کیپچا دوبارہ کریں۔"
 
@@ -8437,7 +8447,7 @@ msgstr "نقشے پر ملتا ہے۔ اسے کھولیں تو بے ترتیب �
 msgid "Founding Father"
 msgstr "بانی"
 
-#: src/pages/shop/index.tsx:187
+#: src/pages/shop/index.tsx:190
 msgid "Free daily reward"
 msgstr "مفت روزانہ انعام"
 
@@ -8564,11 +8574,11 @@ msgstr "سامان"
 msgid "Gear up!"
 msgstr "سامان سے لیس ہو جائیں!"
 
-#: src/pages/shop/index.tsx:196
+#: src/pages/shop/index.tsx:200
 msgid "Gems"
 msgstr "جواہر"
 
-#: src/pages/shop/index.tsx:194
+#: src/pages/shop/index.tsx:198
 msgid "Gems are used to buy assets in the shop and to gift supporter months to other players"
 msgstr "جواہر دکان سے اشیا خریدنے اور دوسرے کھلاڑیوں کو حامی رکنیت کے مہینے تحفے میں دینے کے کام آتے ہیں"
 
@@ -8662,7 +8672,7 @@ msgstr "واتو کی طرف سے تحفہ، کسی کو بتانا مت"
 msgid "Gift sent! Skin pack unlocked for recipient!"
 msgstr "تحفہ بھیج دیا گیا! وصول کنندہ کے لیے روپوں کا مجموعہ کھل گیا!"
 
-#: src/pages/shop/index.tsx:67
+#: src/pages/shop/index.tsx:68
 msgid "Gift sent! Thanks for supporting the game <3"
 msgstr "تحفہ بھیج دیا گیا! گیم کی حمایت کرنے کا شکریہ <3"
 
@@ -8674,8 +8684,8 @@ msgstr "حامی رکنیت تحفے میں دیں"
 msgid "Gift this pack to someone"
 msgstr "یہ مجموعہ کسی کو تحفے میں دیں"
 
-#: src/pages/shop/index.tsx:115
-#: src/pages/shop/index.tsx:141
+#: src/pages/shop/index.tsx:118
+#: src/pages/shop/index.tsx:144
 msgid "gifted"
 msgstr "تحفے میں دیا"
 
@@ -8706,6 +8716,14 @@ msgstr "انہیں دو دن کی چھٹی دیں"
 #: src/components/_user/apiToken/ApiTokenList.tsx:251
 msgid "Give your token a descriptive name so you can identify it later."
 msgstr "اپنے ٹوکن کو کوئی واضح نام دیں تاکہ بعد میں اسے پہچان سکیں۔"
+
+#: src/components/_other/events/EventGiveaway.tsx:61
+msgid "Giveaway"
+msgstr ""
+
+#: src/components/_other/events/EventGiveaway.tsx:34
+msgid "Giveaway entered"
+msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:199
 msgid "Giveaway Winner"
@@ -9207,7 +9225,7 @@ msgstr "گیم کو بڑھنے میں مدد دیں"
 msgid "Hide cards"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Hide email"
 msgstr "برقی ڈاک چھپائیں"
 
@@ -9781,6 +9799,10 @@ msgstr "عسکری دستے میں شامل ہوں"
 msgid "Join a military unit to take part"
 msgstr "حصہ لینے کے لیے عسکری دستے میں شامل ہوں"
 
+#: src/components/_other/events/EventMuLeague.tsx:60
+msgid "Join a Military Unit to take part"
+msgstr ""
+
 #: src/components/_user/mission/mission.frontConfig.tsx:680
 msgid "Join a Party"
 msgstr "جماعت میں شامل ہوں"
@@ -9986,7 +10008,7 @@ msgstr "آخری رابطہ"
 msgid "Last earned"
 msgstr ""
 
-#: src/pages/shop/index.tsx:103
+#: src/pages/shop/index.tsx:106
 msgid "Last gifts"
 msgstr "آخری تحفے"
 
@@ -9994,13 +10016,13 @@ msgstr "آخری تحفے"
 msgid "Last one! Tap Milestones."
 msgstr "آخری والا! سنگِ میل پر دبائیں۔"
 
-#: src/pages/shop/index.tsx:129
+#: src/pages/shop/index.tsx:132
 msgid "Last skin gifts"
 msgstr "روپ کے آخری تحفے"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:467
-#: src/components/_user/auth/ConnectFromModal.tsx:486
-#: src/components/_user/auth/ConnectFromModal.tsx:524
+#: src/components/_user/auth/ConnectFromModal.tsx:320
+#: src/components/_user/auth/ConnectFromModal.tsx:339
+#: src/components/_user/auth/ConnectFromModal.tsx:377
 msgid "Last used"
 msgstr "آخری استعمال"
 
@@ -10020,7 +10042,7 @@ msgstr "دیر سے نکھرنے والا"
 msgid "Later"
 msgstr "بعد میں"
 
-#: src/pages/shop/index.tsx:209
+#: src/pages/shop/index.tsx:214
 msgid "Latest Pack"
 msgstr "تازہ ترین مجموعہ"
 
@@ -10079,6 +10101,7 @@ msgstr "آسمان سے گرتے پرچے"
 #: src/components/_layout/layoutInfos.frontConfig.tsx:55
 #: src/components/_military/mu/MuHeader.tsx:114
 #: src/components/_military/mu/MuHeader.tsx:180
+#: src/components/_other/events/EventLeague.tsx:45
 #: src/components/_user/league/LeagueTopInfoCard.tsx:69
 #: src/components/_user/user/UserHeader.tsx:229
 #: src/components/_user/user/UserHeader.tsx:326
@@ -10087,6 +10110,10 @@ msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:215
 msgid "League Champion"
+msgstr ""
+
+#: src/components/_other/events/EventLeague.tsx:69
+msgid "Leagues are being drawn"
 msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:248
@@ -10603,8 +10630,8 @@ msgstr "سب کو کمان دارِ اعظم بنا دیں"
 msgid "Make room for more staff!"
 msgstr "مزید عملے کے لیے جگہ بنائیں!"
 
-#: src/components/_user/premium/PremiumActions.tsx:84
-#: src/pages/user/[userId]/settings.tsx:165
+#: src/components/_user/premium/PremiumActions.tsx:75
+#: src/pages/user/[userId]/settings.tsx:168
 msgid "Manage Subscription"
 msgstr "رکنیت کا انتظام کریں"
 
@@ -11417,6 +11444,7 @@ msgstr "عسکری دستے کو عطیہ موصول ہوا"
 #: src/components/_layout/layoutInfos.frontConfig.tsx:60
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:118
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:136
+#: src/components/_other/events/EventMuLeague.tsx:48
 #: src/components/_user/notification/notification.frontConfig.tsx:2465
 #: src/pages/mu/[muId]/league.tsx:19
 msgid "MU league"
@@ -11755,7 +11783,7 @@ msgstr "نیا حوالہ دہندہ"
 msgid "New subscriber"
 msgstr "نیا پیروکار"
 
-#: src/pages/shop/index.tsx:168
+#: src/pages/shop/index.tsx:171
 msgid "New supporters"
 msgstr "نئے حامی"
 
@@ -11869,7 +11897,7 @@ msgstr "ابھی تک کوئی اعلان نہیں"
 msgid "No API tokens yet. Create one to get started."
 msgstr "ابھی تک کوئی API ٹوکن نہیں۔ شروع کرنے کے لیے ایک بنائیں۔"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:243
+#: src/components/_user/auth/ConnectFromModal.tsx:202
 msgid "No authorization code provided."
 msgstr "اجازت کا کوئی کوڈ فراہم نہیں کیا گیا۔"
 
@@ -12329,7 +12357,7 @@ msgstr ""
 msgid "Not enough paper for the daily maintenance: alliance damage bonuses are off until it pays."
 msgstr ""
 
-#: src/pages/events/index.tsx:113
+#: src/components/_other/events/EventTournament.tsx:96
 msgid "Not enough participants"
 msgstr "شرکا کافی نہیں"
 
@@ -12410,7 +12438,7 @@ msgid "Nothing while alone."
 msgstr "اکیلے ہوں تو کچھ نہیں۔"
 
 #: src/pages/notifications.tsx:38
-#: src/pages/user/[userId]/settings.tsx:145
+#: src/pages/user/[userId]/settings.tsx:148
 msgid "Notification preferences"
 msgstr "اطلاعات کی ترجیحات"
 
@@ -12794,7 +12822,7 @@ msgid "Operative"
 msgstr "جاسوس"
 
 #: src/components/_political/unrest/UnrestBar.tsx:40
-#: src/components/_user/auth/ConnectFromModal.tsx:498
+#: src/components/_user/auth/ConnectFromModal.tsx:351
 msgid "or"
 msgstr "یا"
 
@@ -12971,8 +12999,13 @@ msgid "Paramilitary"
 msgstr ""
 
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:76
+#: src/components/_other/events/EventGiveaway.tsx:82
 msgid "Participants"
 msgstr "شرکا"
+
+#: src/components/_other/events/EventGiveaway.tsx:105
+msgid "Participate"
+msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:328
 msgid "Participate in Battle"
@@ -13181,7 +13214,7 @@ msgstr "تنخواہ بڑھ گئی"
 msgid "Pay the “inspection fee”"
 msgstr "“معائنے کی فیس” ادا کریں"
 
-#: src/pages/shop/index.tsx:54
+#: src/pages/shop/index.tsx:55
 msgid "Payment successful! Thanks for supporting the game <3"
 msgstr "ادائیگی کامیاب! گیم کی حمایت کرنے کا شکریہ <3"
 
@@ -13440,9 +13473,9 @@ msgstr ""
 msgid "Playing this division this week."
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:147
-#: src/components/_user/auth/ConnectFromModal.tsx:211
-#: src/components/_user/auth/ConnectFromModal.tsx:296
+#: src/components/_user/auth/ConnectFromModal.tsx:106
+#: src/components/_user/auth/ConnectFromModal.tsx:170
+#: src/components/_user/auth/ConnectFromModal.tsx:255
 msgid "Please complete the CAPTCHA."
 msgstr "براہِ مہربانی کیپچا مکمل کریں۔"
 
@@ -13542,7 +13575,7 @@ msgstr "درست پیمانہ"
 msgid "Prehistoric Pack"
 msgstr "ما قبل تاریخ کا مجموعہ"
 
-#: src/pages/shop/index.tsx:226
+#: src/pages/shop/index.tsx:231
 msgid "Premium"
 msgstr "اعلی رکنیت"
 
@@ -14721,8 +14754,8 @@ msgid "Reset"
 msgstr "ترتیب نو کریں"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:447
-msgid "Reset CAPTCHA"
-msgstr "کیپچا کی ترتیب نو کریں"
+#~ msgid "Reset CAPTCHA"
+#~ msgstr "کیپچا کی ترتیب نو کریں"
 
 #: src/components/_economy/employee/EmployeeModal.tsx:549
 msgid "Reset name"
@@ -14740,7 +14773,7 @@ msgstr "مہارتوں کی ترتیب نو"
 msgid "Reset Survivor"
 msgstr "ترتیب نو سے بچ جانے والا"
 
-#: src/pages/user/[userId]/settings.tsx:140
+#: src/pages/user/[userId]/settings.tsx:143
 msgid "Reset tutorials"
 msgstr "رہنمائی کی ترتیب نو کریں"
 
@@ -15189,8 +15222,8 @@ msgid "Second wind"
 msgstr "نیا دم"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:428
-msgid "Security check failed. Turn off your VPN or ad blocker, or try another browser."
-msgstr ""
+#~ msgid "Security check failed. Turn off your VPN or ad blocker, or try another browser."
+#~ msgstr ""
 
 #: src/pages/party/[partyId]/index.tsx:100
 msgid "See all parties"
@@ -15509,7 +15542,7 @@ msgstr "تمام {0} بولیاں دکھائیں"
 msgid "Show cards"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Show email"
 msgstr "برقی ڈاک دکھائیں"
 
@@ -15665,7 +15698,7 @@ msgid "Skin Reward"
 msgstr "روپ کا انعام"
 
 #: src/components/_other/shop/ShopHeader.tsx:23
-#: src/pages/shop/index.tsx:202
+#: src/pages/shop/index.tsx:207
 #: src/pages/user/[userId]/index.tsx:112
 msgid "Skins"
 msgstr "روپ"
@@ -16095,8 +16128,8 @@ msgstr "پیروکار"
 msgid "Success"
 msgstr "کامیابی"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:199
-#: src/components/_user/auth/ConnectFromModal.tsx:250
+#: src/components/_user/auth/ConnectFromModal.tsx:158
+#: src/components/_user/auth/ConnectFromModal.tsx:209
 msgid "Successfully logged in!"
 msgstr "کامیابی سے داخل ہو گئے!"
 
@@ -16108,7 +16141,7 @@ msgstr "سخی داتا"
 msgid "Support"
 msgstr "حمایت"
 
-#: src/components/_user/premium/PremiumActions.tsx:60
+#: src/components/_user/premium/PremiumActions.tsx:51
 msgid "Support the game"
 msgstr "گیم کی حمایت کریں"
 
@@ -16152,12 +16185,12 @@ msgstr "حامی رکنیت کے مہینے"
 msgid "Supporter of the game for <0>{0, plural, one {# month} other {# months}}</0>"
 msgstr "<0>{0, plural, one {# مہینے} other {# مہینوں}}</0> سے گیم کے حامی"
 
-#: src/components/_user/premium/PremiumCard.tsx:60
+#: src/components/_user/premium/PremiumCard.tsx:62
 msgid "Supporter plan"
 msgstr "حامی رکنیت"
 
 #: src/components/_user/modals/PremiumModal.tsx:31
-#: src/pages/user/[userId]/settings.tsx:158
+#: src/pages/user/[userId]/settings.tsx:161
 msgid "Supporter Plan"
 msgstr "حامی رکنیت"
 
@@ -16435,7 +16468,7 @@ msgstr "ختم کر دیا گیا"
 msgid "Terms"
 msgstr "شرائط"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:563
+#: src/components/_user/auth/ConnectFromModal.tsx:416
 msgid "Terms of Service"
 msgstr "شرائطِ خدمت"
 
@@ -17485,7 +17518,7 @@ msgstr ""
 msgid "Title font"
 msgstr ""
 
-#: src/pages/shop/index.tsx:154
+#: src/pages/shop/index.tsx:157
 msgid "to"
 msgstr "تک"
 
@@ -17626,7 +17659,7 @@ msgstr ""
 msgid "Top Donors"
 msgstr "سرفہرست عطیہ دہندگان"
 
-#: src/pages/shop/index.tsx:97
+#: src/pages/shop/index.tsx:100
 msgid "Top gift givers of the month"
 msgstr "مہینے کے سب سے زیادہ تحفے دینے والے"
 
@@ -17716,7 +17749,7 @@ msgstr ""
 #: src/components/_military/battle/ActiveBattlesList.tsx:81
 #: src/components/_military/battle/ActiveBattlesList.tsx:187
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:65
-#: src/pages/events/index.tsx:190
+#: src/components/_other/events/EventTournament.tsx:31
 msgid "Tournament"
 msgstr "مبارزہ"
 
@@ -17916,11 +17949,11 @@ msgstr "جنت میں دراڑ"
 msgid "Try it"
 msgstr "آزما کر دیکھیں"
 
-#: src/pages/user/[userId]/settings.tsx:137
+#: src/pages/user/[userId]/settings.tsx:140
 msgid "Tutorials"
 msgstr "رہنمائی"
 
-#: src/pages/user/[userId]/settings.tsx:59
+#: src/pages/user/[userId]/settings.tsx:62
 msgid "Tutorials reseted"
 msgstr "رہنمائی کی ترتیب نو ہو گئی ہے"
 
@@ -18094,7 +18127,7 @@ msgstr "توجہ کی تجدید کریں"
 msgid "Update gift"
 msgstr "تازہ کاری کا تحفہ"
 
-#: src/pages/user/[userId]/settings.tsx:91
+#: src/pages/user/[userId]/settings.tsx:94
 msgid "Update infos"
 msgstr "معلومات کی تجدید کریں"
 
@@ -18275,7 +18308,7 @@ msgid "Username"
 msgstr "صارف نام"
 
 #: src/components/_user/user/UserDropdown.tsx:261
-#: src/pages/user/[userId]/settings.tsx:120
+#: src/pages/user/[userId]/settings.tsx:123
 msgid "Username effect"
 msgstr "صارف نام کا اثر"
 
@@ -18291,7 +18324,7 @@ msgstr "صارف نام کے اثر کی تجدید ہو گئی"
 msgid "Username effects are a Supporter Plan feature."
 msgstr "صارف نام کے اثرات حامی رکنیت کی سہولت ہیں۔"
 
-#: src/pages/user/[userId]/settings.tsx:113
+#: src/pages/user/[userId]/settings.tsx:116
 msgid "Username font"
 msgstr "صارف نام کا خط"
 
@@ -18486,8 +18519,8 @@ msgid "Verify"
 msgstr "تصدیق کریں"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:405
-msgid "Verifying you're human..."
-msgstr "تصدیق ہو رہی ہے کہ آپ انسان ہیں۔۔۔"
+#~ msgid "Verifying you're human..."
+#~ msgstr "تصدیق ہو رہی ہے کہ آپ انسان ہیں۔۔۔"
 
 #: src/components/_economy/employee/employee.traitMeta.ts:122
 msgid "Veteran"
@@ -18846,7 +18879,7 @@ msgid "Won"
 msgstr ""
 
 #: src/components/_military/tournament/TournamentHeader.tsx:91
-#: src/pages/events/index.tsx:116
+#: src/components/_other/events/EventTournament.tsx:99
 msgid "Won by"
 msgstr "جیتنے والا"
 
@@ -19048,7 +19081,7 @@ msgstr "آپ اب <0/> کے منتظم نہیں رہے۔ آپ کی باقی <1>{
 msgid "You are not a council member of this party"
 msgstr "آپ اس جماعت کے کونسل رکن نہیں ہیں"
 
-#: src/pages/events/index.tsx:110
+#: src/components/_other/events/EventTournament.tsx:93
 msgid "You are not participating"
 msgstr "آپ حصہ نہیں لے رہے"
 
@@ -19457,7 +19490,7 @@ msgstr "آپ نے عسکری دستوں کا ایک مبارزہ جیتا"
 msgid "You worked 100 times"
 msgstr "آپ نے 100 دفعہ کام کیا"
 
-#: src/components/_user/premium/PremiumCard.tsx:55
+#: src/components/_user/premium/PremiumCard.tsx:57
 msgid "You're already a supporter <0/>"
 msgstr "آپ پہلے سے حامی <0/> ہیں"
 
@@ -19603,7 +19636,7 @@ msgstr "آپ کا موجودہ عہدہ"
 msgid "Your daily missions have been reset! Complete them to earn rewards."
 msgstr "آپ کے روزانہ مشن کی ترتیب نو ہو گئی ہے! انعامات کمانے کے لیے انہیں مکمل کریں۔"
 
-#: src/pages/user/[userId]/settings.tsx:68
+#: src/pages/user/[userId]/settings.tsx:71
 msgid "Your email"
 msgstr "آپ کی برقی ڈاک"
 
@@ -19705,6 +19738,10 @@ msgstr ""
 msgid "Your MU has <0/> reputation and cannot bid on mercenary contracts. Pay to buy back reputation (once per day)."
 msgstr "آپ کے عسکری دستے کی ساکھ <0/> ہے اور وہ کرائے کے سپاہیوں کے معاہدوں پر بولی نہیں لگا سکتا۔ ساکھ واپس خریدنے کے لیے ادائیگی کریں (دن میں ایک بار)۔"
 
+#: src/components/_other/events/EventMuLeague.tsx:75
+msgid "Your MU has no league this week"
+msgstr ""
+
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:107
 msgid "Your MU is registered"
 msgstr "آپ کا عسکری دستہ درج ہو گیا ہے"
@@ -19795,7 +19832,7 @@ msgstr "آپ کا جتھا <0/> <1/> سے نکل گیا ہے"
 msgid "Your team <0/> won a round in <1/>!"
 msgstr "آپ کے جتھے <0/> نے <1/> میں ایک چال جیت لی ہے!"
 
-#: src/pages/events/index.tsx:102
+#: src/components/_other/events/EventTournament.tsx:85
 msgid "Your team:"
 msgstr "آپ کا جتھا:"
 
@@ -19850,7 +19887,7 @@ msgstr "آپ کے ہفتہ وار مشن کی ترتیب نو ہو گئی ہے! 
 msgid "Your workforce"
 msgstr "آپ کی افرادی قوت"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:508
+#: src/components/_user/auth/ConnectFromModal.tsx:361
 msgid "your@email.com"
 msgstr "your@email.com"
 
