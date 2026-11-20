@@ -54,7 +54,7 @@ msgstr " - Memberikan tip pada artikel secara berulang"
 msgid " - Using outside market standards or manipulated trade prices"
 msgstr " - Menggunakan standar diluar harga pasar atau memanipulasi harga transaksi"
 
-#: src/components/_user/premium/PremiumActions.tsx:74
+#: src/components/_user/premium/PremiumActions.tsx:65
 msgid " Gift a sub"
 msgstr " Hadiahkan langganan"
 
@@ -94,12 +94,12 @@ msgid "{0, plural, one {# employee changes company.} other {# employees change c
 msgstr "{0, plural, one {# karyawan pindah perusahaan.} other {# karyawan pindah perusahaan.}} Lama mereka di perusahaan dihitung dari awal lagi."
 
 #. placeholder {0}: data.employeeCount
-#: src/components/_economy/employee/WorkforceSummary.tsx:513
+#: src/components/_economy/employee/WorkforceSummary.tsx:536
 msgid "{0, plural, one {# employee} other {# employees}}"
 msgstr "{0, plural, one {# karyawan} other {# karyawan}}"
 
 #. placeholder {0}: data.managerCount
-#: src/components/_economy/employee/WorkforceSummary.tsx:532
+#: src/components/_economy/employee/WorkforceSummary.tsx:555
 msgid "{0, plural, one {# manager} other {# managers}}"
 msgstr "{0, plural, one {# manajer} other {# manajer}}"
 
@@ -132,6 +132,11 @@ msgstr "{0, plural, one {Jual} other {Jual # item}}"
 #: src/components/_other/shop/SkinPackModal.tsx:313
 msgid "{0, plural, one {Unlock # skin} other {Unlock # skins}}"
 msgstr "{0, plural, one {Buka # skin} other {Buka # skin}}"
+
+#. placeholder {0}: giveaway.winnersQuantity ?? 0
+#: src/components/_other/events/EventGiveaway.tsx:71
+msgid "{0, plural, one {x # winner} other {x # winners}}"
+msgstr ""
 
 #. placeholder {0}: damagesPercent(effects.bunkerBonusDelta)
 #. placeholder {1}: upgradeName(EUpgrade.BUNKER)
@@ -1784,11 +1789,11 @@ msgstr "{quantity, plural, =1 {Peti kayu dikumpulkan!} one {# peti kayu dikumpul
 msgid "{regionLootCount, plural, =1 {Collect the wooden case lying on this region} one {Collect the # wooden case lying on this region} other {Collect the # wooden cases lying on this region}}"
 msgstr "{regionLootCount, plural, =1 {Kumpulkan peti kayu yang ada di wilayah ini} one {Kumpulkan # peti kayu yang ada di wilayah ini} other {Kumpulkan # peti kayu yang ada di wilayah ini}}"
 
-#: src/pages/events/index.tsx:97
+#: src/components/_other/events/EventTournament.tsx:80
 msgid "{registeredCount} countries registered"
 msgstr "{registeredCount} negara terdaftar"
 
-#: src/pages/events/index.tsx:95
+#: src/components/_other/events/EventTournament.tsx:78
 msgid "{registeredCount} MUs registered"
 msgstr "{registeredCount} MU terdaftar"
 
@@ -1829,8 +1834,8 @@ msgstr "{toolsReturned, plural, one {# perkakas tidak cocok dengan perusahaan ba
 msgid "{total} seats"
 msgstr "{total} kursi"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:324
-#: src/components/_economy/employee/WorkforceSummary.tsx:490
+#: src/components/_economy/employee/WorkforceSummary.tsx:325
+#: src/components/_economy/employee/WorkforceSummary.tsx:511
 msgid "{trainable} to train"
 msgstr "{trainable} untuk dilatih"
 
@@ -1978,8 +1983,8 @@ msgstr "/{max, plural, one {# slot} other {# slot}}"
 #: src/components/_economy/employee/EstimatedProfit.tsx:203
 #: src/components/_economy/employee/EstimatedProfit.tsx:369
 #: src/components/_economy/employee/EstimatedProfit.tsx:399
-#: src/components/_economy/employee/WorkforceSummary.tsx:580
-#: src/components/_economy/employee/WorkforceSummary.tsx:609
+#: src/components/_economy/employee/WorkforceSummary.tsx:603
+#: src/components/_economy/employee/WorkforceSummary.tsx:629
 #: src/components/_economy/manager/ManagerProfitEstimate.tsx:95
 #: src/components/_political/government/Government.tsx:305
 #: src/components/_political/stateArmy/StateArmyList.tsx:88
@@ -3809,10 +3814,6 @@ msgstr "Terima untuk berdamai dengan negara lain"
 msgid "Accepted"
 msgstr "Diterima"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:413
-msgid "Access granted"
-msgstr "Akses berhasil diberikan"
-
 #: src/components/_military/battle/BattleHeader.tsx:183
 msgid "Access war"
 msgstr "Buka perang"
@@ -3840,8 +3841,9 @@ msgstr "Aksi"
 #: src/components/_military/mercenaryContract/MercenaryAuctionList.tsx:144
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:85
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:47
+#: src/components/_other/events/EventGiveaway.tsx:48
+#: src/components/_other/events/EventTournament.tsx:131
 #: src/components/_user/user/Level.tsx:193
-#: src/pages/events/index.tsx:148
 #: src/utils/translations.tsx:342
 msgid "Active"
 msgstr "Aktif"
@@ -4018,7 +4020,7 @@ msgstr "Berusia maksimal 40 tahun dan masih memiliki potensi pelatihan."
 msgid "Aged 45 to 55."
 msgstr "Berusia 45–55 tahun."
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:159
+#: src/components/_economy/employee/WorkforceSummary.tsx:160
 msgid "Aging"
 msgstr ""
 
@@ -4316,7 +4318,7 @@ msgstr "Token API dibuat ulang"
 msgid "API token revoked"
 msgstr "Token API dicabut"
 
-#: src/pages/user/[userId]/settings.tsx:151
+#: src/pages/user/[userId]/settings.tsx:154
 msgid "API Tokens"
 msgstr "Token API"
 
@@ -4328,7 +4330,7 @@ msgstr "Token API memungkinkan aplikasi eksternal mengakses API atas nama kamu. 
 msgid "App pattern"
 msgstr "Pola aplikasi"
 
-#: src/pages/user/[userId]/settings.tsx:129
+#: src/pages/user/[userId]/settings.tsx:132
 msgid "App settings"
 msgstr "Pengaturan Aplikasi"
 
@@ -4336,7 +4338,7 @@ msgstr "Pengaturan Aplikasi"
 msgid "Appeal to their loyalty"
 msgstr "Memohon kesetiaan mereka"
 
-#: src/pages/user/[userId]/settings.tsx:99
+#: src/pages/user/[userId]/settings.tsx:102
 msgid "Appearance"
 msgstr "Tampilan"
 
@@ -4620,7 +4622,7 @@ msgstr "Lelang dimenangkan"
 msgid "Auctions"
 msgstr "Lelang"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:244
+#: src/components/_user/auth/ConnectFromModal.tsx:276
 msgid "Authentication failed. Please try again."
 msgstr "Autentikasi gagal. Silakan coba lagi."
 
@@ -5283,11 +5285,11 @@ msgstr "Yakin ingin membeli item ini seharga {total}?"
 msgid "Buyers from your country see <0>{buyerTotal}</0>"
 msgstr "Pembeli dari negaramu akan melihat harga <0>{buyerTotal}</0>"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:347
+#: src/components/_economy/employee/WorkforceSummary.tsx:348
 msgid "By Company"
 msgstr "Berdasarkan perusahaan"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:536
+#: src/components/_user/auth/ConnectFromModal.tsx:480
 msgid "By continuing, you agree to our <0>Terms of Service</0>."
 msgstr "Dengan melanjutkan, kamu menyetujui <0>Ketentuan Layanan</0> kami."
 
@@ -5402,7 +5404,7 @@ msgid "Cancel Mercenary Contract"
 msgstr "Batalkan Kontrak Tentara Bayaran"
 
 #: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:240
-#: src/pages/events/index.tsx:156
+#: src/components/_other/events/EventTournament.tsx:139
 #: src/utils/translations.tsx:337
 msgid "Cancelled"
 msgstr "Dibatalkan"
@@ -5835,7 +5837,7 @@ msgid "Climber"
 msgstr "Pendaki Karier"
 
 #: ../__ui/src/components/Modal/Modal.tsx:360
-#: src/components/_economy/company/CompanyCardHeader.tsx:141
+#: src/components/_economy/company/CompanyCardHeader.tsx:137
 #: src/components/_other/tour/TutorialChapterEndModal.tsx:322
 #: src/components/_political/map/MapMenu.tsx:240
 msgid "Close"
@@ -5879,7 +5881,7 @@ msgid "Colonel"
 msgstr "Kolonel"
 
 #: src/components/_user/user/UserDropdown.tsx:243
-#: src/pages/user/[userId]/settings.tsx:105
+#: src/pages/user/[userId]/settings.tsx:108
 msgid "Color scheme"
 msgstr "Skema warna"
 
@@ -5942,7 +5944,7 @@ msgstr "Komunitas"
 #: src/components/_user/user/MyAvatar.tsx:47
 #: src/components/_user/user/UserHeader.tsx:242
 #: src/components/_user/user/WealthPanel.tsx:42
-#: src/pages/companies.tsx:153
+#: src/pages/companies.tsx:147
 msgid "Companies"
 msgstr "Industri"
 
@@ -5961,7 +5963,7 @@ msgstr "Perusahaan dihancurkan!"
 
 #: src/components/_economy/company/CompanyTags.tsx:61
 #: src/components/_economy/employee/EmployeeModal.tsx:386
-#: src/components/_economy/employee/WorkforceSummary.tsx:143
+#: src/components/_economy/employee/WorkforceSummary.tsx:144
 #: src/components/_economy/manager/ManagerOfferRow.tsx:177
 msgid "Company disabled"
 msgstr "Perusahaan dinonaktifkan"
@@ -6096,15 +6098,15 @@ msgstr "Anggota kongres dari <0/>"
 msgid "Congress members"
 msgstr "Anggota kongres"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:464
+#: src/components/_user/auth/ConnectFromModal.tsx:390
 msgid "Connect with Discord"
 msgstr "Hubungkan dengan Discord"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:521
+#: src/components/_user/auth/ConnectFromModal.tsx:465
 msgid "Connect with email code"
 msgstr "Hubungkan dengan kode email"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:483
+#: src/components/_user/auth/ConnectFromModal.tsx:409
 msgid "Connect with Google"
 msgstr "Hubungkan dengan Google"
 
@@ -6154,6 +6156,10 @@ msgstr "Batas kontekstual"
 #: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:692
 msgid "Continue"
 msgstr "Lanjutkan"
+
+#: src/components/_user/auth/ConnectFromModal.tsx:428
+msgid "Continue with Apple"
+msgstr ""
 
 #: src/components/_layout/layoutInfos.frontConfig.tsx:50
 #: src/components/_military/battle/BattleDamageBonuses.tsx:180
@@ -6228,7 +6234,7 @@ msgid "Cooldown"
 msgstr ""
 
 #: src/components/_user/apiToken/ApiTokenList.tsx:90
-#: src/components/_user/userReports/UserReportListItem.tsx:235
+#: src/components/_user/userReports/UserReportListItem.tsx:244
 msgid "Copied to clipboard"
 msgstr "Tersalin ke clipboard"
 
@@ -6700,7 +6706,7 @@ msgstr "Wah, keren"
 msgid "Damn you lucky"
 msgstr "Gila, kamu beruntung"
 
-#: src/pages/user/[userId]/settings.tsx:171
+#: src/pages/user/[userId]/settings.tsx:174
 msgid "Danger zone"
 msgstr "Zona berbahaya"
 
@@ -6913,7 +6919,7 @@ msgstr "Tetapkan musuh bebuyutan"
 msgid "Delete"
 msgstr "Hapus"
 
-#: src/pages/user/[userId]/settings.tsx:174
+#: src/pages/user/[userId]/settings.tsx:177
 msgid "Delete account"
 msgstr "Hapus akun"
 
@@ -7121,7 +7127,7 @@ msgstr "Nonaktifkan Perintah"
 
 #: src/components/_economy/company/CompanyTags.tsx:80
 #: src/components/_economy/employee/WorkforceReorganize.tsx:272
-#: src/components/_economy/employee/WorkforceSummary.tsx:169
+#: src/components/_economy/employee/WorkforceSummary.tsx:170
 #: src/components/_economy/manager/ManagerOfferRow.tsx:181
 msgid "Disabled"
 msgstr "Dinonaktifkan"
@@ -7502,10 +7508,10 @@ msgstr "Pemilu berakhir"
 msgid "Election vote open"
 msgstr "Pemungutan suara dibuka"
 
+#: src/components/_other/events/EventElections.tsx:23
 #: src/components/_political/country/CountryHeader.tsx:135
 #: src/pages/country/[countryId]/elections.tsx:28
 #: src/pages/country/[countryId]/index.tsx:269
-#: src/pages/events/index.tsx:398
 #: src/pages/party/[partyId]/index.tsx:88
 msgid "Elections"
 msgstr "Pemilu"
@@ -7599,7 +7605,7 @@ msgid "Employee tax"
 msgstr "Pajak karyawan"
 
 #: src/components/_economy/company/CompanyTags.tsx:70
-#: src/components/_economy/employee/WorkforceSummary.tsx:338
+#: src/components/_economy/employee/WorkforceSummary.tsx:339
 #: src/components/_economy/work/WorkChart.tsx:252
 #: src/components/_layout/map.frontConfig.tsx:69
 #: src/components/_political/map/MapMenu.tsx:536
@@ -7731,10 +7737,14 @@ msgstr "Masukkan harga"
 msgid "Enter article ID"
 msgstr "Masukkan ID artikel"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:269
-#: src/components/_user/auth/ConnectFromModal.tsx:274
+#: src/components/_user/auth/ConnectFromModal.tsx:301
+#: src/components/_user/auth/ConnectFromModal.tsx:306
 msgid "Enter the code we sent to your email."
 msgstr "Masukkan kode yang kami kirim ke emailmu."
+
+#: src/components/_other/events/EventGiveaway.tsx:95
+msgid "Entered"
+msgstr ""
 
 #: src/components/_user/auth/CitizenIdCard.tsx:58
 msgid "Entry · Admitted"
@@ -7802,7 +7812,7 @@ msgstr "Estimasi pendapatan harian"
 msgid "Estimated daily income"
 msgstr "Estimasi pendapatan harian"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:599
+#: src/components/_economy/employee/WorkforceSummary.tsx:619
 msgid "Estimated from your employees' Luck, on hours that bank production."
 msgstr ""
 
@@ -8060,7 +8070,7 @@ msgid "f. Glorification/apology of hateful ideologies such as nazism, neo-nazism
 msgstr "f. Pemuliaan atau pembenaran ideologi kebencian, seperti Nazisme, neo-Nazisme, fasisme, terorisme, serta kelompok dan gerakan teroris (yang dikategorikan demikian oleh Perserikatan Bangsa-Bangsa, Uni Eropa, atau Prancis), penyangkalan genosida, kejahatan perang, kejahatan terhadap kemanusiaan, Putinisme, dan komunisme."
 
 #: src/components/_user/apiToken/ApiTokenList.tsx:92
-#: src/components/_user/userReports/UserReportListItem.tsx:237
+#: src/components/_user/userReports/UserReportListItem.tsx:246
 msgid "Failed to copy"
 msgstr "Gagal menyalin"
 
@@ -8068,21 +8078,31 @@ msgstr "Gagal menyalin"
 msgid "Failed to copy text: "
 msgstr "Gagal menyalin teks: "
 
-#: src/components/_user/auth/ConnectFromModal.tsx:160
+#: src/components/_user/auth/ConnectFromModal.tsx:215
+#: src/components/_user/auth/ConnectFromModal.tsx:234
+#: src/components/_user/auth/ConnectFromModal.tsx:260
+msgid "Failed to start Apple login."
+msgstr ""
+
+#: src/components/_user/auth/ConnectFromModal.tsx:258
+msgid "Failed to start Apple login. Please retry the CAPTCHA."
+msgstr ""
+
+#: src/components/_user/auth/ConnectFromModal.tsx:124
 msgid "Failed to start Discord login."
 msgstr "Gagal memulai login Discord."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:158
+#: src/components/_user/auth/ConnectFromModal.tsx:122
 msgid "Failed to start Discord login. Please retry the CAPTCHA."
 msgstr "Gagal memulai login Discord. Silakan ulangi CAPTCHA."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:183
-#: src/components/_user/auth/ConnectFromModal.tsx:202
-#: src/components/_user/auth/ConnectFromModal.tsx:228
+#: src/components/_user/auth/ConnectFromModal.tsx:147
+#: src/components/_user/auth/ConnectFromModal.tsx:166
+#: src/components/_user/auth/ConnectFromModal.tsx:192
 msgid "Failed to start Google login."
 msgstr "Gagal memulai login Google."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:226
+#: src/components/_user/auth/ConnectFromModal.tsx:190
 msgid "Failed to start Google login. Please retry the CAPTCHA."
 msgstr "Gagal memulai login Google. Silakan ulangi CAPTCHA."
 
@@ -8235,7 +8255,7 @@ msgstr "Danai perlawanan di <0/>"
 msgid "Find a better horoscope"
 msgstr "Cari ramalan bintang yang lebih baik"
 
-#: src/pages/companies.tsx:86
+#: src/pages/companies.tsx:85
 msgid "Find a job"
 msgstr "Cari pekerjaan"
 
@@ -8437,7 +8457,7 @@ msgstr "Ditemukan di peta. Buka untuk mendapatkan sumber daya acak, atau terkada
 msgid "Founding Father"
 msgstr "Bapak Pendiri"
 
-#: src/pages/shop/index.tsx:187
+#: src/pages/shop/index.tsx:190
 msgid "Free daily reward"
 msgstr "Hadiah harian gratis"
 
@@ -8564,11 +8584,11 @@ msgstr "Perlengkapan"
 msgid "Gear up!"
 msgstr "Lengkapi perlengkapanmu!"
 
-#: src/pages/shop/index.tsx:196
+#: src/pages/shop/index.tsx:200
 msgid "Gems"
 msgstr "Permata"
 
-#: src/pages/shop/index.tsx:194
+#: src/pages/shop/index.tsx:198
 msgid "Gems are used to buy assets in the shop and to gift supporter months to other players"
 msgstr "Permata digunakan untuk membeli aset di toko dan menghadiahkan bulan supporter kepada pemain lain"
 
@@ -8662,7 +8682,7 @@ msgstr "Hadiah dari Vatou, jangan bilang siapa-siapa"
 msgid "Gift sent! Skin pack unlocked for recipient!"
 msgstr "Hadiah terkirim! Paket skin terbuka untuk penerima!"
 
-#: src/pages/shop/index.tsx:67
+#: src/pages/shop/index.tsx:68
 msgid "Gift sent! Thanks for supporting the game <3"
 msgstr "Hadiah terkirim! Terima kasih sudah mendukung game ini <3"
 
@@ -8674,8 +8694,8 @@ msgstr "Hadiahkan Paket Supporter"
 msgid "Gift this pack to someone"
 msgstr "Hadiahkan paket ini ke seseorang"
 
-#: src/pages/shop/index.tsx:115
-#: src/pages/shop/index.tsx:141
+#: src/pages/shop/index.tsx:118
+#: src/pages/shop/index.tsx:144
 msgid "gifted"
 msgstr "menghadiahkan"
 
@@ -8706,6 +8726,14 @@ msgstr "Beri mereka libur selama dua hari"
 #: src/components/_user/apiToken/ApiTokenList.tsx:251
 msgid "Give your token a descriptive name so you can identify it later."
 msgstr "Beri tokenmu nama yang jelas agar mudah dikenali nanti."
+
+#: src/components/_other/events/EventGiveaway.tsx:61
+msgid "Giveaway"
+msgstr ""
+
+#: src/components/_other/events/EventGiveaway.tsx:34
+msgid "Giveaway entered"
+msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:199
 msgid "Giveaway Winner"
@@ -9056,7 +9084,7 @@ msgstr "Tetap bertahan"
 #: src/components/_economy/employee/employeeStats.tsx:880
 #: src/components/_economy/employee/EmployeeTooltip.tsx:113
 #: src/components/_economy/employee/TrainingCard.tsx:77
-#: src/components/_economy/employee/WorkforceSummary.tsx:368
+#: src/components/_economy/employee/WorkforceSummary.tsx:369
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:151
 msgid "Happiness"
 msgstr "Kebahagiaan"
@@ -9207,7 +9235,7 @@ msgstr "Bantu game ini berkembang"
 msgid "Hide cards"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Hide email"
 msgstr "Sembunyikan email"
 
@@ -9572,7 +9600,7 @@ msgstr "Perkenalkan dirimu!"
 #: src/components/_layout/LayoutUserMenu.tsx:178
 #: src/components/_user/user/MyAvatar.tsx:35
 #: src/components/_user/user/UserHeader.tsx:175
-#: src/pages/companies.tsx:136
+#: src/pages/companies.tsx:132
 #: src/pages/country/[countryId]/account.tsx:25
 #: src/pages/market/index.tsx:55
 #: src/pages/user/[userId]/account.tsx:20
@@ -9737,7 +9765,7 @@ msgstr ""
 msgid "Its damage counts for no country"
 msgstr ""
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:145
+#: src/components/_economy/employee/WorkforceSummary.tsx:146
 msgid "Its employees are paused until it is enabled again."
 msgstr ""
 
@@ -9757,7 +9785,7 @@ msgstr "Tank Kotak Kejutan"
 msgid "Jinx"
 msgstr "Pembawa Sial"
 
-#: src/pages/companies.tsx:67
+#: src/pages/companies.tsx:66
 msgid "Job"
 msgstr "Pekerjaan"
 
@@ -9780,6 +9808,10 @@ msgstr "Gabung ke Unit Militer"
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:153
 msgid "Join a military unit to take part"
 msgstr "Bergabung dengan Unit Militer untuk berpartisipasi"
+
+#: src/components/_other/events/EventMuLeague.tsx:60
+msgid "Join a Military Unit to take part"
+msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:680
 msgid "Join a Party"
@@ -9986,7 +10018,7 @@ msgstr "Koneksi terakhir"
 msgid "Last earned"
 msgstr ""
 
-#: src/pages/shop/index.tsx:103
+#: src/pages/shop/index.tsx:106
 msgid "Last gifts"
 msgstr "Hadiah terbaru"
 
@@ -9994,13 +10026,14 @@ msgstr "Hadiah terbaru"
 msgid "Last one! Tap Milestones."
 msgstr "Tinggal satu lagi! Ketuk menu Pencapaian."
 
-#: src/pages/shop/index.tsx:129
+#: src/pages/shop/index.tsx:132
 msgid "Last skin gifts"
 msgstr "Hadiah skin terbaru"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:467
-#: src/components/_user/auth/ConnectFromModal.tsx:486
-#: src/components/_user/auth/ConnectFromModal.tsx:524
+#: src/components/_user/auth/ConnectFromModal.tsx:393
+#: src/components/_user/auth/ConnectFromModal.tsx:412
+#: src/components/_user/auth/ConnectFromModal.tsx:431
+#: src/components/_user/auth/ConnectFromModal.tsx:468
 msgid "Last used"
 msgstr "Terakhir digunakan"
 
@@ -10020,7 +10053,7 @@ msgstr "Berkembang Belakangan"
 msgid "Later"
 msgstr "Nanti"
 
-#: src/pages/shop/index.tsx:209
+#: src/pages/shop/index.tsx:214
 msgid "Latest Pack"
 msgstr "Paket terbaru"
 
@@ -10079,6 +10112,7 @@ msgstr "Selebaran dari langit"
 #: src/components/_layout/layoutInfos.frontConfig.tsx:55
 #: src/components/_military/mu/MuHeader.tsx:114
 #: src/components/_military/mu/MuHeader.tsx:180
+#: src/components/_other/events/EventLeague.tsx:45
 #: src/components/_user/league/LeagueTopInfoCard.tsx:69
 #: src/components/_user/user/UserHeader.tsx:229
 #: src/components/_user/user/UserHeader.tsx:326
@@ -10088,6 +10122,10 @@ msgstr "Liga"
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:215
 msgid "League Champion"
 msgstr "Juara Liga"
+
+#: src/components/_other/events/EventLeague.tsx:69
+msgid "Leagues are being drawn"
+msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:248
 msgid "Leather Sling"
@@ -10603,8 +10641,8 @@ msgstr "Jadikan semua orang Panglima Tertinggi"
 msgid "Make room for more staff!"
 msgstr "Sediakan ruang untuk lebih banyak karyawan!"
 
-#: src/components/_user/premium/PremiumActions.tsx:84
-#: src/pages/user/[userId]/settings.tsx:165
+#: src/components/_user/premium/PremiumActions.tsx:75
+#: src/pages/user/[userId]/settings.tsx:168
 msgid "Manage Subscription"
 msgstr "Kelola Langganan"
 
@@ -11417,6 +11455,7 @@ msgstr "Donasi MU diterima"
 #: src/components/_layout/layoutInfos.frontConfig.tsx:60
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:118
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:136
+#: src/components/_other/events/EventMuLeague.tsx:48
 #: src/components/_user/notification/notification.frontConfig.tsx:2465
 #: src/pages/mu/[muId]/league.tsx:19
 msgid "MU league"
@@ -11492,7 +11531,7 @@ msgstr "Daftar calon dari partaiku"
 msgid "My tier {0}"
 msgstr "Tingkatku {0}"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:295
+#: src/components/_economy/employee/WorkforceSummary.tsx:296
 msgid "My workforce"
 msgstr "Tenaga kerjaku"
 
@@ -11755,7 +11794,7 @@ msgstr "Referrer Baru"
 msgid "New subscriber"
 msgstr "Pelanggan baru"
 
-#: src/pages/shop/index.tsx:168
+#: src/pages/shop/index.tsx:171
 msgid "New supporters"
 msgstr "Supporter baru"
 
@@ -11869,7 +11908,7 @@ msgstr "Belum ada pengumuman"
 msgid "No API tokens yet. Create one to get started."
 msgstr "Belum ada token API. Buat satu untuk mulai."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:243
+#: src/components/_user/auth/ConnectFromModal.tsx:275
 msgid "No authorization code provided."
 msgstr "Kode otorisasi tidak diberikan."
 
@@ -12329,7 +12368,7 @@ msgstr ""
 msgid "Not enough paper for the daily maintenance: alliance damage bonuses are off until it pays."
 msgstr ""
 
-#: src/pages/events/index.tsx:113
+#: src/components/_other/events/EventTournament.tsx:96
 msgid "Not enough participants"
 msgstr "Peserta tidak cukup"
 
@@ -12410,7 +12449,7 @@ msgid "Nothing while alone."
 msgstr "Tidak ada efek saat sendirian."
 
 #: src/pages/notifications.tsx:38
-#: src/pages/user/[userId]/settings.tsx:145
+#: src/pages/user/[userId]/settings.tsx:148
 msgid "Notification preferences"
 msgstr "Pengaturan Notifikasi"
 
@@ -12706,7 +12745,7 @@ msgstr "Hanya pemilik dan komandan yang dapat mengubah kewarganegaraan."
 msgid "Only the owner can change the unit type."
 msgstr ""
 
-#: src/components/_economy/company/CompanyCardHeader.tsx:141
+#: src/components/_economy/company/CompanyCardHeader.tsx:137
 #: src/components/_economy/inventory/case/OpenCaseModal.tsx:176
 #: src/components/_economy/inventory/case/OpenCaseModal.tsx:610
 msgid "Open"
@@ -12794,7 +12833,7 @@ msgid "Operative"
 msgstr "Operative"
 
 #: src/components/_political/unrest/UnrestBar.tsx:40
-#: src/components/_user/auth/ConnectFromModal.tsx:498
+#: src/components/_user/auth/ConnectFromModal.tsx:442
 msgid "or"
 msgstr "atau"
 
@@ -12971,8 +13010,13 @@ msgid "Paramilitary"
 msgstr ""
 
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:76
+#: src/components/_other/events/EventGiveaway.tsx:82
 msgid "Participants"
 msgstr "Peserta"
+
+#: src/components/_other/events/EventGiveaway.tsx:105
+msgid "Participate"
+msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:328
 msgid "Participate in Battle"
@@ -13104,9 +13148,9 @@ msgstr ""
 msgid "Patriotic bonus {0} → {1}"
 msgstr "Bonus patriotik {0} → {1}"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:153
-#: src/components/_economy/employee/WorkforceSummary.tsx:156
-#: src/components/_economy/employee/WorkforceSummary.tsx:162
+#: src/components/_economy/employee/WorkforceSummary.tsx:154
+#: src/components/_economy/employee/WorkforceSummary.tsx:157
+#: src/components/_economy/employee/WorkforceSummary.tsx:163
 #: src/components/_other/tour/TutorialGuidesList.tsx:51
 #: src/components/_user/user/Level.tsx:189
 msgid "Paused"
@@ -13181,7 +13225,7 @@ msgstr "Gaji naik"
 msgid "Pay the “inspection fee”"
 msgstr "Bayar “biaya inspeksi”"
 
-#: src/pages/shop/index.tsx:54
+#: src/pages/shop/index.tsx:55
 msgid "Payment successful! Thanks for supporting the game <3"
 msgstr "Pembayaran berhasil! Terima kasih sudah mendukung game ini <3"
 
@@ -13194,7 +13238,7 @@ msgstr "Pembayaran"
 msgid "Payroll"
 msgstr "Total gaji"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:561
+#: src/components/_economy/employee/WorkforceSummary.tsx:584
 msgid "Payroll of all your companies, employees and managers, divided by the production it banks."
 msgstr ""
 
@@ -13440,9 +13484,10 @@ msgstr ""
 msgid "Playing this division this week."
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:147
-#: src/components/_user/auth/ConnectFromModal.tsx:211
-#: src/components/_user/auth/ConnectFromModal.tsx:296
+#: src/components/_user/auth/ConnectFromModal.tsx:111
+#: src/components/_user/auth/ConnectFromModal.tsx:175
+#: src/components/_user/auth/ConnectFromModal.tsx:243
+#: src/components/_user/auth/ConnectFromModal.tsx:328
 msgid "Please complete the CAPTCHA."
 msgstr "Silakan selesaikan CAPTCHA."
 
@@ -13542,7 +13587,7 @@ msgstr "Jangka Sorong Presisi"
 msgid "Prehistoric Pack"
 msgstr "Paket Prasejarah"
 
-#: src/pages/shop/index.tsx:226
+#: src/pages/shop/index.tsx:231
 msgid "Premium"
 msgstr "Fitur Premium"
 
@@ -13758,7 +13803,7 @@ msgstr "Item produksi diganti!"
 #: src/components/_economy/employee/employeeStats.tsx:455
 #: src/components/_economy/employee/employeeStats.tsx:765
 #: src/components/_economy/employee/TrainingCard.tsx:75
-#: src/components/_economy/employee/WorkforceSummary.tsx:354
+#: src/components/_economy/employee/WorkforceSummary.tsx:355
 #: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:51
 #: src/components/_economy/work/WorkChart.tsx:232
 #: src/components/_user/user/skills.frontConfig.tsx:125
@@ -13822,7 +13867,7 @@ msgstr "Profil"
 
 #: src/components/_economy/employee/EstimatedProfit.tsx:167
 #: src/components/_economy/employee/EstimatedProfit.tsx:341
-#: src/components/_economy/employee/WorkforceSummary.tsx:361
+#: src/components/_economy/employee/WorkforceSummary.tsx:362
 msgid "Profit"
 msgstr "Laba"
 
@@ -14631,11 +14676,11 @@ msgstr "Ganti nama karyawan"
 msgid "Rename the alliance to \"{0}\" immediately on acceptance."
 msgstr "Ganti nama aliansi menjadi \"{0}\" segera setelah disetujui."
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:406
+#: src/components/_economy/employee/WorkforceSummary.tsx:407
 msgid "Reorganize"
 msgstr "Susun ulang"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:284
+#: src/components/_economy/employee/WorkforceSummary.tsx:285
 msgid "Reorganize workforce"
 msgstr "Susun ulang tenaga kerja"
 
@@ -14691,7 +14736,7 @@ msgstr "Minta verifikasi telepon"
 msgid "Requests:"
 msgstr "Permintaan:"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:313
+#: src/components/_economy/employee/WorkforceSummary.tsx:314
 msgid "Require attention"
 msgstr "Perlu perhatian"
 
@@ -14720,10 +14765,6 @@ msgstr "Acak ulang misi"
 msgid "Reset"
 msgstr "Atur ulang"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:447
-msgid "Reset CAPTCHA"
-msgstr "Atur ulang CAPTCHA"
-
 #: src/components/_economy/employee/EmployeeModal.tsx:549
 msgid "Reset name"
 msgstr "Reset nama"
@@ -14740,7 +14781,7 @@ msgstr "Reset Skill"
 msgid "Reset Survivor"
 msgstr "Penyintas Reset"
 
-#: src/pages/user/[userId]/settings.tsx:140
+#: src/pages/user/[userId]/settings.tsx:143
 msgid "Reset tutorials"
 msgstr "Atur ulang tutorial"
 
@@ -15188,10 +15229,6 @@ msgstr "Kursi yang dimenangkan"
 msgid "Second wind"
 msgstr "Tenaga kedua"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:428
-msgid "Security check failed. Turn off your VPN or ad blocker, or try another browser."
-msgstr ""
-
 #: src/pages/party/[partyId]/index.tsx:100
 msgid "See all parties"
 msgstr "Lihat semua partai"
@@ -15509,7 +15546,7 @@ msgstr "Tampilkan semua {0} tawaran"
 msgid "Show cards"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Show email"
 msgstr "Tampilkan email"
 
@@ -15665,7 +15702,7 @@ msgid "Skin Reward"
 msgstr "Hadiah Skin"
 
 #: src/components/_other/shop/ShopHeader.tsx:23
-#: src/pages/shop/index.tsx:202
+#: src/pages/shop/index.tsx:207
 #: src/pages/user/[userId]/index.tsx:112
 msgid "Skins"
 msgstr "Skin"
@@ -16095,8 +16132,9 @@ msgstr "Pelanggan"
 msgid "Success"
 msgstr "Sukses"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:199
-#: src/components/_user/auth/ConnectFromModal.tsx:250
+#: src/components/_user/auth/ConnectFromModal.tsx:163
+#: src/components/_user/auth/ConnectFromModal.tsx:231
+#: src/components/_user/auth/ConnectFromModal.tsx:282
 msgid "Successfully logged in!"
 msgstr "Berhasil masuk!"
 
@@ -16108,7 +16146,7 @@ msgstr "Sultan Dermawan"
 msgid "Support"
 msgstr "Dukungan"
 
-#: src/components/_user/premium/PremiumActions.tsx:60
+#: src/components/_user/premium/PremiumActions.tsx:51
 msgid "Support the game"
 msgstr "Dukung game"
 
@@ -16152,12 +16190,12 @@ msgstr "Bulan supporter"
 msgid "Supporter of the game for <0>{0, plural, one {# month} other {# months}}</0>"
 msgstr "Telah mendukung game ini selama <0>{0, plural, one {# bulan} other {# bulan}}</0>"
 
-#: src/components/_user/premium/PremiumCard.tsx:60
+#: src/components/_user/premium/PremiumCard.tsx:62
 msgid "Supporter plan"
 msgstr "Paket Supporter"
 
 #: src/components/_user/modals/PremiumModal.tsx:31
-#: src/pages/user/[userId]/settings.tsx:158
+#: src/pages/user/[userId]/settings.tsx:161
 msgid "Supporter Plan"
 msgstr "Paket Supporter"
 
@@ -16435,7 +16473,7 @@ msgstr "Dihentikan"
 msgid "Terms"
 msgstr "Ketentuan"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:563
+#: src/components/_user/auth/ConnectFromModal.tsx:507
 msgid "Terms of Service"
 msgstr "Ketentuan Layanan"
 
@@ -17485,7 +17523,7 @@ msgstr "Jabatan"
 msgid "Title font"
 msgstr ""
 
-#: src/pages/shop/index.tsx:154
+#: src/pages/shop/index.tsx:157
 msgid "to"
 msgstr "ke"
 
@@ -17569,7 +17607,7 @@ msgstr "Kotak Perkakas ditemukan"
 msgid "Toolbox per hour"
 msgstr "Kotak Perkakas per jam kerja"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:597
+#: src/components/_economy/employee/WorkforceSummary.tsx:617
 msgid "Toolboxes per day"
 msgstr ""
 
@@ -17626,7 +17664,7 @@ msgstr ""
 msgid "Top Donors"
 msgstr "Donatur Teratas"
 
-#: src/pages/shop/index.tsx:97
+#: src/pages/shop/index.tsx:100
 msgid "Top gift givers of the month"
 msgstr "Pemberi hadiah terbanyak bulan ini"
 
@@ -17716,7 +17754,7 @@ msgstr ""
 #: src/components/_military/battle/ActiveBattlesList.tsx:81
 #: src/components/_military/battle/ActiveBattlesList.tsx:187
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:65
-#: src/pages/events/index.tsx:190
+#: src/components/_other/events/EventTournament.tsx:31
 msgid "Tournament"
 msgstr "Turnamen"
 
@@ -17854,7 +17892,7 @@ msgstr "Sisa potensi pelatihan"
 msgid "Training raises them all."
 msgstr "Pelatihan meningkatkan semuanya."
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:160
+#: src/components/_economy/employee/WorkforceSummary.tsx:161
 msgid "Training still ages them"
 msgstr ""
 
@@ -17916,11 +17954,11 @@ msgstr "Ada masalah di surga"
 msgid "Try it"
 msgstr "Cobalah"
 
-#: src/pages/user/[userId]/settings.tsx:137
+#: src/pages/user/[userId]/settings.tsx:140
 msgid "Tutorials"
 msgstr "Tutorial"
 
-#: src/pages/user/[userId]/settings.tsx:59
+#: src/pages/user/[userId]/settings.tsx:62
 msgid "Tutorials reseted"
 msgstr "Tutorials have been reset"
 
@@ -18094,7 +18132,7 @@ msgstr "Perbarui fokus"
 msgid "Update gift"
 msgstr "Perbarui hadiah"
 
-#: src/pages/user/[userId]/settings.tsx:91
+#: src/pages/user/[userId]/settings.tsx:94
 msgid "Update infos"
 msgstr "Perbarui info"
 
@@ -18275,7 +18313,7 @@ msgid "Username"
 msgstr "Nama pengguna"
 
 #: src/components/_user/user/UserDropdown.tsx:261
-#: src/pages/user/[userId]/settings.tsx:120
+#: src/pages/user/[userId]/settings.tsx:123
 msgid "Username effect"
 msgstr "Efek Nama Pengguna"
 
@@ -18291,7 +18329,7 @@ msgstr "Efek nama pengguna diperbarui"
 msgid "Username effects are a Supporter Plan feature."
 msgstr "Efek nama pengguna merupakan fitur Supporter Plan."
 
-#: src/pages/user/[userId]/settings.tsx:113
+#: src/pages/user/[userId]/settings.tsx:116
 msgid "Username font"
 msgstr "Font nama pengguna"
 
@@ -18485,10 +18523,6 @@ msgstr "Kode verifikasi terkirim!"
 msgid "Verify"
 msgstr "Verifikasi"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:405
-msgid "Verifying you're human..."
-msgstr "Memverifikasi bahwa kamu manusia..."
-
 #: src/components/_economy/employee/employee.traitMeta.ts:122
 msgid "Veteran"
 msgstr "Veteran"
@@ -18588,7 +18622,7 @@ msgid "Wage reduction proposed"
 msgstr "Pengurangan upah diusulkan"
 
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:61
-#: src/components/_economy/employee/WorkforceSummary.tsx:155
+#: src/components/_economy/employee/WorkforceSummary.tsx:156
 msgid "Wages"
 msgstr "Upah"
 
@@ -18846,7 +18880,7 @@ msgid "Won"
 msgstr ""
 
 #: src/components/_military/tournament/TournamentHeader.tsx:91
-#: src/pages/events/index.tsx:116
+#: src/components/_other/events/EventTournament.tsx:99
 msgid "Won by"
 msgstr "Dimenangkan oleh"
 
@@ -18872,7 +18906,7 @@ msgstr "Mamut Berbulu"
 
 #: src/components/_economy/company/WorkButton.tsx:173
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:48
-#: src/components/_economy/employee/WorkforceSummary.tsx:152
+#: src/components/_economy/employee/WorkforceSummary.tsx:153
 #: src/components/_user/mission/mission.frontConfig.tsx:133
 msgid "Work"
 msgstr "Kerja"
@@ -18893,7 +18927,7 @@ msgstr "Pekerja keluar"
 msgid "Workers"
 msgstr "Pekerja"
 
-#: src/pages/companies.tsx:109
+#: src/components/_economy/employee/WorkforceSummary.tsx:445
 msgid "Workforce"
 msgstr "Tenaga kerja"
 
@@ -19031,7 +19065,7 @@ msgstr "Kamu sudah menjadi wakil presiden di negara lain. Mundur dulu."
 msgid "You are here"
 msgstr "Kamu di sini"
 
-#: src/pages/companies.tsx:82
+#: src/pages/companies.tsx:81
 msgid "You are jobless"
 msgstr "Kamu sedang menganggur"
 
@@ -19048,7 +19082,7 @@ msgstr "Kamu tidak lagi menjabat sebagai manajer di <0/>. Sisa uangmu sebesar <1
 msgid "You are not a council member of this party"
 msgstr "Kamu bukan anggota dewan partai ini"
 
-#: src/pages/events/index.tsx:110
+#: src/components/_other/events/EventTournament.tsx:93
 msgid "You are not participating"
 msgstr "Kamu tidak berpartisipasi"
 
@@ -19202,7 +19236,7 @@ msgstr "Kamu mengonsumsi <0>{0}</0>, efeknya mulai sekarang dan berakhir dalam <
 msgid "You have enough Concrete for one."
 msgstr "Betonmu cukup untuk membuat satu unit."
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:306
+#: src/components/_economy/employee/WorkforceSummary.tsx:307
 msgid "You have no employees yet"
 msgstr "Kamu belum punya karyawan"
 
@@ -19457,7 +19491,7 @@ msgstr "Kamu memenangkan turnamen MU"
 msgid "You worked 100 times"
 msgstr "Kamu bekerja 100 kali"
 
-#: src/components/_user/premium/PremiumCard.tsx:55
+#: src/components/_user/premium/PremiumCard.tsx:57
 msgid "You're already a supporter <0/>"
 msgstr "Kamu sudah menjadi seorang supporter <0/>"
 
@@ -19603,7 +19637,7 @@ msgstr "Posisimu saat ini"
 msgid "Your daily missions have been reset! Complete them to earn rewards."
 msgstr "Misi harianmu sudah direset! Selesaikan untuk mendapatkan hadiah."
 
-#: src/pages/user/[userId]/settings.tsx:68
+#: src/pages/user/[userId]/settings.tsx:71
 msgid "Your email"
 msgstr "Emailmu"
 
@@ -19705,6 +19739,10 @@ msgstr ""
 msgid "Your MU has <0/> reputation and cannot bid on mercenary contracts. Pay to buy back reputation (once per day)."
 msgstr "MU milikmu memiliki reputasi <0/> dan tidak dapat mengajukan penawaran pada kontrak tentara bayaran. Bayar untuk membeli kembali reputasi (sekali sehari)"
 
+#: src/components/_other/events/EventMuLeague.tsx:75
+msgid "Your MU has no league this week"
+msgstr ""
+
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:107
 msgid "Your MU is registered"
 msgstr "MU milikmu terdaftar"
@@ -19795,7 +19833,7 @@ msgstr "Timmu <0/> telah tersingkir dari <1/>"
 msgid "Your team <0/> won a round in <1/>!"
 msgstr "Timmu <0/> memenangkan satu ronde di <1/>!"
 
-#: src/pages/events/index.tsx:102
+#: src/components/_other/events/EventTournament.tsx:85
 msgid "Your team:"
 msgstr "Timmu:"
 
@@ -19850,7 +19888,7 @@ msgstr "Misi mingguanmu sudah direset! Selesaikan untuk mendapatkan hadiah."
 msgid "Your workforce"
 msgstr "Tenaga kerjamu"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:508
+#: src/components/_user/auth/ConnectFromModal.tsx:452
 msgid "your@email.com"
 msgstr "emailanda@email.com"
 

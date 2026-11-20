@@ -54,7 +54,7 @@ msgstr " - लेखों को बार-बार टिप देना"
 msgid " - Using outside market standards or manipulated trade prices"
 msgstr " - बाहरी बाज़ार मानकों या हेरफेर किए गए व्यापार मूल्यों का उपयोग करना।"
 
-#: src/components/_user/premium/PremiumActions.tsx:74
+#: src/components/_user/premium/PremiumActions.tsx:65
 msgid " Gift a sub"
 msgstr " सदस्यता उपहार दें"
 
@@ -94,12 +94,12 @@ msgid "{0, plural, one {# employee changes company.} other {# employees change c
 msgstr ""
 
 #. placeholder {0}: data.employeeCount
-#: src/components/_economy/employee/WorkforceSummary.tsx:513
+#: src/components/_economy/employee/WorkforceSummary.tsx:536
 msgid "{0, plural, one {# employee} other {# employees}}"
 msgstr ""
 
 #. placeholder {0}: data.managerCount
-#: src/components/_economy/employee/WorkforceSummary.tsx:532
+#: src/components/_economy/employee/WorkforceSummary.tsx:555
 msgid "{0, plural, one {# manager} other {# managers}}"
 msgstr ""
 
@@ -131,6 +131,11 @@ msgstr ""
 #. placeholder {0}: estimate.notOwnedCount
 #: src/components/_other/shop/SkinPackModal.tsx:313
 msgid "{0, plural, one {Unlock # skin} other {Unlock # skins}}"
+msgstr ""
+
+#. placeholder {0}: giveaway.winnersQuantity ?? 0
+#: src/components/_other/events/EventGiveaway.tsx:71
+msgid "{0, plural, one {x # winner} other {x # winners}}"
 msgstr ""
 
 #. placeholder {0}: damagesPercent(effects.bunkerBonusDelta)
@@ -1784,11 +1789,11 @@ msgstr ""
 msgid "{regionLootCount, plural, =1 {Collect the wooden case lying on this region} one {Collect the # wooden case lying on this region} other {Collect the # wooden cases lying on this region}}"
 msgstr ""
 
-#: src/pages/events/index.tsx:97
+#: src/components/_other/events/EventTournament.tsx:80
 msgid "{registeredCount} countries registered"
 msgstr ""
 
-#: src/pages/events/index.tsx:95
+#: src/components/_other/events/EventTournament.tsx:78
 msgid "{registeredCount} MUs registered"
 msgstr ""
 
@@ -1829,8 +1834,8 @@ msgstr ""
 msgid "{total} seats"
 msgstr ""
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:324
-#: src/components/_economy/employee/WorkforceSummary.tsx:490
+#: src/components/_economy/employee/WorkforceSummary.tsx:325
+#: src/components/_economy/employee/WorkforceSummary.tsx:511
 msgid "{trainable} to train"
 msgstr ""
 
@@ -1978,8 +1983,8 @@ msgstr ""
 #: src/components/_economy/employee/EstimatedProfit.tsx:203
 #: src/components/_economy/employee/EstimatedProfit.tsx:369
 #: src/components/_economy/employee/EstimatedProfit.tsx:399
-#: src/components/_economy/employee/WorkforceSummary.tsx:580
-#: src/components/_economy/employee/WorkforceSummary.tsx:609
+#: src/components/_economy/employee/WorkforceSummary.tsx:603
+#: src/components/_economy/employee/WorkforceSummary.tsx:629
 #: src/components/_economy/manager/ManagerProfitEstimate.tsx:95
 #: src/components/_political/government/Government.tsx:305
 #: src/components/_political/stateArmy/StateArmyList.tsx:88
@@ -3809,10 +3814,6 @@ msgstr "दूसरे देश के साथ शांति स्था�
 msgid "Accepted"
 msgstr "स्वीकृत"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:413
-msgid "Access granted"
-msgstr ""
-
 #: src/components/_military/battle/BattleHeader.tsx:183
 msgid "Access war"
 msgstr "युद्ध देखें"
@@ -3840,8 +3841,9 @@ msgstr "कार्यवाही"
 #: src/components/_military/mercenaryContract/MercenaryAuctionList.tsx:144
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:85
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:47
+#: src/components/_other/events/EventGiveaway.tsx:48
+#: src/components/_other/events/EventTournament.tsx:131
 #: src/components/_user/user/Level.tsx:193
-#: src/pages/events/index.tsx:148
 #: src/utils/translations.tsx:342
 msgid "Active"
 msgstr "सक्रिय"
@@ -4018,7 +4020,7 @@ msgstr "आयु 40 वर्ष या उससे कम हो और प�
 msgid "Aged 45 to 55."
 msgstr "आयु 45 से 55 वर्ष हो।"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:159
+#: src/components/_economy/employee/WorkforceSummary.tsx:160
 msgid "Aging"
 msgstr ""
 
@@ -4316,7 +4318,7 @@ msgstr "API टोकन पुनः उत्पन्न किया गय�
 msgid "API token revoked"
 msgstr "API टोकन निरस्त किया गया"
 
-#: src/pages/user/[userId]/settings.tsx:151
+#: src/pages/user/[userId]/settings.tsx:154
 msgid "API Tokens"
 msgstr "API टोकन"
 
@@ -4328,7 +4330,7 @@ msgstr "API टोकन बाहरी अनुप्रयोगों क�
 msgid "App pattern"
 msgstr "ऐप पैटर्न"
 
-#: src/pages/user/[userId]/settings.tsx:129
+#: src/pages/user/[userId]/settings.tsx:132
 msgid "App settings"
 msgstr "ऐप सेटिंग्स"
 
@@ -4336,7 +4338,7 @@ msgstr "ऐप सेटिंग्स"
 msgid "Appeal to their loyalty"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:99
+#: src/pages/user/[userId]/settings.tsx:102
 msgid "Appearance"
 msgstr ""
 
@@ -4620,7 +4622,7 @@ msgstr "नीलामी जीती"
 msgid "Auctions"
 msgstr "नीलामियाँ"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:244
+#: src/components/_user/auth/ConnectFromModal.tsx:276
 msgid "Authentication failed. Please try again."
 msgstr "प्रमाणीकरण विफल रहा। कृपया पुनः प्रयास करें।"
 
@@ -5283,11 +5285,11 @@ msgstr ""
 msgid "Buyers from your country see <0>{buyerTotal}</0>"
 msgstr ""
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:347
+#: src/components/_economy/employee/WorkforceSummary.tsx:348
 msgid "By Company"
 msgstr ""
 
-#: src/components/_user/auth/ConnectFromModal.tsx:536
+#: src/components/_user/auth/ConnectFromModal.tsx:480
 msgid "By continuing, you agree to our <0>Terms of Service</0>."
 msgstr "आगे बढ़कर, आप हमारी <0>सेवा की शर्तों</0> से सहमत होते हैं।"
 
@@ -5402,7 +5404,7 @@ msgid "Cancel Mercenary Contract"
 msgstr "भाड़े के सैनिक का अनुबंध रद्द करें"
 
 #: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:240
-#: src/pages/events/index.tsx:156
+#: src/components/_other/events/EventTournament.tsx:139
 #: src/utils/translations.tsx:337
 msgid "Cancelled"
 msgstr "रद्द किया गया"
@@ -5835,7 +5837,7 @@ msgid "Climber"
 msgstr ""
 
 #: ../__ui/src/components/Modal/Modal.tsx:360
-#: src/components/_economy/company/CompanyCardHeader.tsx:141
+#: src/components/_economy/company/CompanyCardHeader.tsx:137
 #: src/components/_other/tour/TutorialChapterEndModal.tsx:322
 #: src/components/_political/map/MapMenu.tsx:240
 msgid "Close"
@@ -5879,7 +5881,7 @@ msgid "Colonel"
 msgstr "कर्नल"
 
 #: src/components/_user/user/UserDropdown.tsx:243
-#: src/pages/user/[userId]/settings.tsx:105
+#: src/pages/user/[userId]/settings.tsx:108
 msgid "Color scheme"
 msgstr "रंग योजना"
 
@@ -5942,7 +5944,7 @@ msgstr "समुदाय"
 #: src/components/_user/user/MyAvatar.tsx:47
 #: src/components/_user/user/UserHeader.tsx:242
 #: src/components/_user/user/WealthPanel.tsx:42
-#: src/pages/companies.tsx:153
+#: src/pages/companies.tsx:147
 msgid "Companies"
 msgstr "कंपनियाँ"
 
@@ -5961,7 +5963,7 @@ msgstr "कंपनी नष्ट कर दी गई!"
 
 #: src/components/_economy/company/CompanyTags.tsx:61
 #: src/components/_economy/employee/EmployeeModal.tsx:386
-#: src/components/_economy/employee/WorkforceSummary.tsx:143
+#: src/components/_economy/employee/WorkforceSummary.tsx:144
 #: src/components/_economy/manager/ManagerOfferRow.tsx:177
 msgid "Company disabled"
 msgstr "कंपनी निष्क्रिय"
@@ -6096,15 +6098,15 @@ msgstr ""
 msgid "Congress members"
 msgstr "कांग्रेस सदस्य"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:464
+#: src/components/_user/auth/ConnectFromModal.tsx:390
 msgid "Connect with Discord"
 msgstr "Discord से जुड़ें"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:521
+#: src/components/_user/auth/ConnectFromModal.tsx:465
 msgid "Connect with email code"
 msgstr "ईमेल कोड से जुड़ें"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:483
+#: src/components/_user/auth/ConnectFromModal.tsx:409
 msgid "Connect with Google"
 msgstr "Google से जुड़ें"
 
@@ -6153,6 +6155,10 @@ msgstr "प्रासंगिक सीमाएँ"
 #: src/components/_economy/employee/TrainingDraftModal.tsx:494
 #: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:692
 msgid "Continue"
+msgstr ""
+
+#: src/components/_user/auth/ConnectFromModal.tsx:428
+msgid "Continue with Apple"
 msgstr ""
 
 #: src/components/_layout/layoutInfos.frontConfig.tsx:50
@@ -6228,7 +6234,7 @@ msgid "Cooldown"
 msgstr ""
 
 #: src/components/_user/apiToken/ApiTokenList.tsx:90
-#: src/components/_user/userReports/UserReportListItem.tsx:235
+#: src/components/_user/userReports/UserReportListItem.tsx:244
 msgid "Copied to clipboard"
 msgstr "क्लिपबोर्ड में कॉपी किया गया"
 
@@ -6700,7 +6706,7 @@ msgstr "वाह, यह तो शानदार दिखता है"
 msgid "Damn you lucky"
 msgstr "वाह, आपकी किस्मत तो कमाल की है"
 
-#: src/pages/user/[userId]/settings.tsx:171
+#: src/pages/user/[userId]/settings.tsx:174
 msgid "Danger zone"
 msgstr "खतरे का क्षेत्र"
 
@@ -6913,7 +6919,7 @@ msgstr "एक शपथबद्ध शत्रु घोषित करे�
 msgid "Delete"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:174
+#: src/pages/user/[userId]/settings.tsx:177
 msgid "Delete account"
 msgstr "खाता हटाएँ"
 
@@ -7121,7 +7127,7 @@ msgstr ""
 
 #: src/components/_economy/company/CompanyTags.tsx:80
 #: src/components/_economy/employee/WorkforceReorganize.tsx:272
-#: src/components/_economy/employee/WorkforceSummary.tsx:169
+#: src/components/_economy/employee/WorkforceSummary.tsx:170
 #: src/components/_economy/manager/ManagerOfferRow.tsx:181
 msgid "Disabled"
 msgstr "निष्क्रिय"
@@ -7502,10 +7508,10 @@ msgstr "चुनाव समाप्त हुआ"
 msgid "Election vote open"
 msgstr "चुनाव मतदान शुरू"
 
+#: src/components/_other/events/EventElections.tsx:23
 #: src/components/_political/country/CountryHeader.tsx:135
 #: src/pages/country/[countryId]/elections.tsx:28
 #: src/pages/country/[countryId]/index.tsx:269
-#: src/pages/events/index.tsx:398
 #: src/pages/party/[partyId]/index.tsx:88
 msgid "Elections"
 msgstr "चुनाव"
@@ -7599,7 +7605,7 @@ msgid "Employee tax"
 msgstr "कर्मचारी कर"
 
 #: src/components/_economy/company/CompanyTags.tsx:70
-#: src/components/_economy/employee/WorkforceSummary.tsx:338
+#: src/components/_economy/employee/WorkforceSummary.tsx:339
 #: src/components/_economy/work/WorkChart.tsx:252
 #: src/components/_layout/map.frontConfig.tsx:69
 #: src/components/_political/map/MapMenu.tsx:536
@@ -7731,10 +7737,14 @@ msgstr "कीमत दर्ज करें"
 msgid "Enter article ID"
 msgstr "लेख आईडी दर्ज करें"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:269
-#: src/components/_user/auth/ConnectFromModal.tsx:274
+#: src/components/_user/auth/ConnectFromModal.tsx:301
+#: src/components/_user/auth/ConnectFromModal.tsx:306
 msgid "Enter the code we sent to your email."
 msgstr "आपके ईमेल पर भेजा गया कोड दर्ज करें।"
+
+#: src/components/_other/events/EventGiveaway.tsx:95
+msgid "Entered"
+msgstr ""
 
 #: src/components/_user/auth/CitizenIdCard.tsx:58
 msgid "Entry · Admitted"
@@ -7802,7 +7812,7 @@ msgstr ""
 msgid "Estimated daily income"
 msgstr ""
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:599
+#: src/components/_economy/employee/WorkforceSummary.tsx:619
 msgid "Estimated from your employees' Luck, on hours that bank production."
 msgstr ""
 
@@ -8060,7 +8070,7 @@ msgid "f. Glorification/apology of hateful ideologies such as nazism, neo-nazism
 msgstr "f. नाज़ीवाद, नव-नाज़ीवाद, फासीवाद, आतंकवाद, आतंकवादी समूहों एवं आंदोलनों (जिन्हें संयुक्त राष्ट्र, यूरोपीय संघ या फ्रांस द्वारा ऐसा माना गया हो), नरसंहार से इनकार, युद्ध अपराध, मानवता के विरुद्ध अपराध, पुतिनवाद तथा साम्यवाद जैसी घृणास्पद विचारधाराओं का महिमामंडन या समर्थन"
 
 #: src/components/_user/apiToken/ApiTokenList.tsx:92
-#: src/components/_user/userReports/UserReportListItem.tsx:237
+#: src/components/_user/userReports/UserReportListItem.tsx:246
 msgid "Failed to copy"
 msgstr "कॉपी करने में विफल"
 
@@ -8068,21 +8078,31 @@ msgstr "कॉपी करने में विफल"
 msgid "Failed to copy text: "
 msgstr "पाठ कॉपी करने में विफल: "
 
-#: src/components/_user/auth/ConnectFromModal.tsx:160
+#: src/components/_user/auth/ConnectFromModal.tsx:215
+#: src/components/_user/auth/ConnectFromModal.tsx:234
+#: src/components/_user/auth/ConnectFromModal.tsx:260
+msgid "Failed to start Apple login."
+msgstr ""
+
+#: src/components/_user/auth/ConnectFromModal.tsx:258
+msgid "Failed to start Apple login. Please retry the CAPTCHA."
+msgstr ""
+
+#: src/components/_user/auth/ConnectFromModal.tsx:124
 msgid "Failed to start Discord login."
 msgstr "Discord लॉगिन शुरू करने में विफल।"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:158
+#: src/components/_user/auth/ConnectFromModal.tsx:122
 msgid "Failed to start Discord login. Please retry the CAPTCHA."
 msgstr "Discord लॉगिन शुरू करने में विफल। कृपया CAPTCHA दोबारा पूरा करें।"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:183
-#: src/components/_user/auth/ConnectFromModal.tsx:202
-#: src/components/_user/auth/ConnectFromModal.tsx:228
+#: src/components/_user/auth/ConnectFromModal.tsx:147
+#: src/components/_user/auth/ConnectFromModal.tsx:166
+#: src/components/_user/auth/ConnectFromModal.tsx:192
 msgid "Failed to start Google login."
 msgstr "Google लॉगिन शुरू करने में विफल।"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:226
+#: src/components/_user/auth/ConnectFromModal.tsx:190
 msgid "Failed to start Google login. Please retry the CAPTCHA."
 msgstr "Google लॉगिन शुरू करने में विफल। कृपया CAPTCHA दोबारा पूरा करें।"
 
@@ -8235,7 +8255,7 @@ msgstr "<0/> में प्रतिरोध को वित्तपोष�
 msgid "Find a better horoscope"
 msgstr ""
 
-#: src/pages/companies.tsx:86
+#: src/pages/companies.tsx:85
 msgid "Find a job"
 msgstr "नौकरी खोजें"
 
@@ -8437,7 +8457,7 @@ msgstr ""
 msgid "Founding Father"
 msgstr "संस्थापक पिता"
 
-#: src/pages/shop/index.tsx:187
+#: src/pages/shop/index.tsx:190
 msgid "Free daily reward"
 msgstr "निःशुल्क दैनिक पुरस्कार"
 
@@ -8564,11 +8584,11 @@ msgstr "Gear"
 msgid "Gear up!"
 msgstr "गियर उप !"
 
-#: src/pages/shop/index.tsx:196
+#: src/pages/shop/index.tsx:200
 msgid "Gems"
 msgstr "रत्न"
 
-#: src/pages/shop/index.tsx:194
+#: src/pages/shop/index.tsx:198
 msgid "Gems are used to buy assets in the shop and to gift supporter months to other players"
 msgstr "रत्नों का उपयोग दुकान में वस्तुएँ खरीदने और अन्य खिलाड़ियों को समर्थक सदस्यता के महीने उपहार में देने के लिए किया जाता है।"
 
@@ -8662,7 +8682,7 @@ msgstr "Vatou की ओर से उपहार, किसी को मत �
 msgid "Gift sent! Skin pack unlocked for recipient!"
 msgstr "उपहार भेज दिया गया! प्राप्तकर्ता के लिए स्किन पैक अनलॉक हो गया!"
 
-#: src/pages/shop/index.tsx:67
+#: src/pages/shop/index.tsx:68
 msgid "Gift sent! Thanks for supporting the game <3"
 msgstr "उपहार भेज दिया गया! गेम का समर्थन करने के लिए धन्यवाद <3"
 
@@ -8674,8 +8694,8 @@ msgstr "समर्थक योजना उपहार में दें"
 msgid "Gift this pack to someone"
 msgstr "यह पैक किसी को उपहार में दें"
 
-#: src/pages/shop/index.tsx:115
-#: src/pages/shop/index.tsx:141
+#: src/pages/shop/index.tsx:118
+#: src/pages/shop/index.tsx:144
 msgid "gifted"
 msgstr "उपहार दिया गया"
 
@@ -8706,6 +8726,14 @@ msgstr "उन्हें दो दिन की छुट्टी दे द
 #: src/components/_user/apiToken/ApiTokenList.tsx:251
 msgid "Give your token a descriptive name so you can identify it later."
 msgstr "अपने टोकन को एक वर्णनात्मक नाम दें ताकि आप बाद में उसे पहचान सकें।"
+
+#: src/components/_other/events/EventGiveaway.tsx:61
+msgid "Giveaway"
+msgstr ""
+
+#: src/components/_other/events/EventGiveaway.tsx:34
+msgid "Giveaway entered"
+msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:199
 msgid "Giveaway Winner"
@@ -9056,7 +9084,7 @@ msgstr "वहाँ पर लटका हुआ"
 #: src/components/_economy/employee/employeeStats.tsx:880
 #: src/components/_economy/employee/EmployeeTooltip.tsx:113
 #: src/components/_economy/employee/TrainingCard.tsx:77
-#: src/components/_economy/employee/WorkforceSummary.tsx:368
+#: src/components/_economy/employee/WorkforceSummary.tsx:369
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:151
 msgid "Happiness"
 msgstr "खुशी"
@@ -9207,7 +9235,7 @@ msgstr "गेम को बढ़ने में सहायता करे�
 msgid "Hide cards"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Hide email"
 msgstr "ईमेल छिपाएँ"
 
@@ -9572,7 +9600,7 @@ msgstr "अपना परिचय दें!"
 #: src/components/_layout/LayoutUserMenu.tsx:178
 #: src/components/_user/user/MyAvatar.tsx:35
 #: src/components/_user/user/UserHeader.tsx:175
-#: src/pages/companies.tsx:136
+#: src/pages/companies.tsx:132
 #: src/pages/country/[countryId]/account.tsx:25
 #: src/pages/market/index.tsx:55
 #: src/pages/user/[userId]/account.tsx:20
@@ -9737,7 +9765,7 @@ msgstr "इसका देश मुख्यालय को तेल दे�
 msgid "Its damage counts for no country"
 msgstr "इससे होने वाला नुकसान किसी भी देश के लिए मायने नहीं रखता।"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:145
+#: src/components/_economy/employee/WorkforceSummary.tsx:146
 msgid "Its employees are paused until it is enabled again."
 msgstr "इसके कर्मचारियों को तब तक रोक दिया गया है, जब तक कि इसे फिर से चालू नहीं कर दिया जाता।"
 
@@ -9757,7 +9785,7 @@ msgstr "जैक-इन-द-बॉक्स टैंक"
 msgid "Jinx"
 msgstr "बदकिस्मती"
 
-#: src/pages/companies.tsx:67
+#: src/pages/companies.tsx:66
 msgid "Job"
 msgstr "नौकरी"
 
@@ -9780,6 +9808,10 @@ msgstr "किसी सैन्य इकाई में शामिल ह�
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:153
 msgid "Join a military unit to take part"
 msgstr "भाग लेने के लिए मिलिट्री यूनिट में शामिल हों"
+
+#: src/components/_other/events/EventMuLeague.tsx:60
+msgid "Join a Military Unit to take part"
+msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:680
 msgid "Join a Party"
@@ -9986,7 +10018,7 @@ msgstr "अंतिम कनेक्शन"
 msgid "Last earned"
 msgstr "पिछली कमाई"
 
-#: src/pages/shop/index.tsx:103
+#: src/pages/shop/index.tsx:106
 msgid "Last gifts"
 msgstr "हाल के उपहार"
 
@@ -9994,13 +10026,14 @@ msgstr "हाल के उपहार"
 msgid "Last one! Tap Milestones."
 msgstr "आखिरी वाला! माइलस्टोन्स पर टैप करें।"
 
-#: src/pages/shop/index.tsx:129
+#: src/pages/shop/index.tsx:132
 msgid "Last skin gifts"
 msgstr "आखिरी स्किन उपहार"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:467
-#: src/components/_user/auth/ConnectFromModal.tsx:486
-#: src/components/_user/auth/ConnectFromModal.tsx:524
+#: src/components/_user/auth/ConnectFromModal.tsx:393
+#: src/components/_user/auth/ConnectFromModal.tsx:412
+#: src/components/_user/auth/ConnectFromModal.tsx:431
+#: src/components/_user/auth/ConnectFromModal.tsx:468
 msgid "Last used"
 msgstr "अंतिम उपयोग"
 
@@ -10020,7 +10053,7 @@ msgstr "देर से चूक"
 msgid "Later"
 msgstr "बाद में"
 
-#: src/pages/shop/index.tsx:209
+#: src/pages/shop/index.tsx:214
 msgid "Latest Pack"
 msgstr "नवीनतम पैक"
 
@@ -10079,6 +10112,7 @@ msgstr "आसमान से पर्चे"
 #: src/components/_layout/layoutInfos.frontConfig.tsx:55
 #: src/components/_military/mu/MuHeader.tsx:114
 #: src/components/_military/mu/MuHeader.tsx:180
+#: src/components/_other/events/EventLeague.tsx:45
 #: src/components/_user/league/LeagueTopInfoCard.tsx:69
 #: src/components/_user/user/UserHeader.tsx:229
 #: src/components/_user/user/UserHeader.tsx:326
@@ -10088,6 +10122,10 @@ msgstr "लीग"
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:215
 msgid "League Champion"
 msgstr "लीग चैंपियन"
+
+#: src/components/_other/events/EventLeague.tsx:69
+msgid "Leagues are being drawn"
+msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:248
 msgid "Leather Sling"
@@ -10592,8 +10630,8 @@ msgid "Make <0/> the new alliance leader. The leader can edit the alliance avata
 msgstr "<0/> को नया गठबंधन लीडर बनाएं। लीडर सीधे गठबंधन के अवतार और रंग योजना में बदलाव कर सकता है।"
 
 #: src/components/_political/law/law.frontConfig.tsx:670
-msgid "Make everyone a Supreme Commander"
-msgstr "हर किसी को सुप्रीम कमांडर बना दें"
+msgid "Make a military unit of your nationality a State Army"
+msgstr ""
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1959
 msgid "Make everyone a Supreme Commander"
@@ -10603,8 +10641,8 @@ msgstr "हर किसी को सुप्रीम कमांडर ब�
 msgid "Make room for more staff!"
 msgstr "और कर्मचारियों के लिए जगह बनाएं!"
 
-#: src/components/_user/premium/PremiumActions.tsx:84
-#: src/pages/user/[userId]/settings.tsx:165
+#: src/components/_user/premium/PremiumActions.tsx:75
+#: src/pages/user/[userId]/settings.tsx:168
 msgid "Manage Subscription"
 msgstr "सदस्यता प्रबंधित करें"
 
@@ -11417,6 +11455,7 @@ msgstr "MU दान प्राप्त हुआ"
 #: src/components/_layout/layoutInfos.frontConfig.tsx:60
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:118
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:136
+#: src/components/_other/events/EventMuLeague.tsx:48
 #: src/components/_user/notification/notification.frontConfig.tsx:2465
 #: src/pages/mu/[muId]/league.tsx:19
 msgid "MU league"
@@ -11492,7 +11531,7 @@ msgstr "मेरी पार्टी सूची"
 msgid "My tier {0}"
 msgstr "मेरा टियर {0}"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:295
+#: src/components/_economy/employee/WorkforceSummary.tsx:296
 msgid "My workforce"
 msgstr "मेरा कार्यबल"
 
@@ -11755,7 +11794,7 @@ msgstr "नया रेफरर"
 msgid "New subscriber"
 msgstr "नया सदस्य"
 
-#: src/pages/shop/index.tsx:168
+#: src/pages/shop/index.tsx:171
 msgid "New supporters"
 msgstr "नए समर्थक"
 
@@ -11869,7 +11908,7 @@ msgstr "अभी तक कोई घोषणा नहीं"
 msgid "No API tokens yet. Create one to get started."
 msgstr "अभी तक कोई API टोकन नहीं है। शुरुआत करने के लिए एक बनाएँ।"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:243
+#: src/components/_user/auth/ConnectFromModal.tsx:275
 msgid "No authorization code provided."
 msgstr "कोई प्राधिकरण कोड प्रदान नहीं किया गया।"
 
@@ -12329,7 +12368,7 @@ msgstr "कई दिनों तक कनेक्ट नहीं रहे:
 msgid "Not enough paper for the daily maintenance: alliance damage bonuses are off until it pays."
 msgstr "रोज़मर्रा के रखरखाव के लिए पर्याप्त कागज़ नहीं हैं: जब तक भुगतान नहीं हो जाता, तब तक एलायंस डैमेज बोनस बंद रहेंगे।"
 
-#: src/pages/events/index.tsx:113
+#: src/components/_other/events/EventTournament.tsx:96
 msgid "Not enough participants"
 msgstr "पर्याप्त प्रतिभागी नहीं हैं"
 
@@ -12410,7 +12449,7 @@ msgid "Nothing while alone."
 msgstr "अकेले होने पर कुछ नहीं"
 
 #: src/pages/notifications.tsx:38
-#: src/pages/user/[userId]/settings.tsx:145
+#: src/pages/user/[userId]/settings.tsx:148
 msgid "Notification preferences"
 msgstr "सूचना प्राथमिकताएँ"
 
@@ -12706,7 +12745,7 @@ msgstr "केवल मालिक और कमांडर ही राष�
 msgid "Only the owner can change the unit type."
 msgstr "केवल मालिक ही यूनिट का प्रकार बदल सकता है।"
 
-#: src/components/_economy/company/CompanyCardHeader.tsx:141
+#: src/components/_economy/company/CompanyCardHeader.tsx:137
 #: src/components/_economy/inventory/case/OpenCaseModal.tsx:176
 #: src/components/_economy/inventory/case/OpenCaseModal.tsx:610
 msgid "Open"
@@ -12794,7 +12833,7 @@ msgid "Operative"
 msgstr "ऑपरेटिव"
 
 #: src/components/_political/unrest/UnrestBar.tsx:40
-#: src/components/_user/auth/ConnectFromModal.tsx:498
+#: src/components/_user/auth/ConnectFromModal.tsx:442
 msgid "or"
 msgstr "या"
 
@@ -12971,8 +13010,13 @@ msgid "Paramilitary"
 msgstr "अर्द्धसैनिक"
 
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:76
+#: src/components/_other/events/EventGiveaway.tsx:82
 msgid "Participants"
 msgstr "प्रतिभागियों"
+
+#: src/components/_other/events/EventGiveaway.tsx:105
+msgid "Participate"
+msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:328
 msgid "Participate in Battle"
@@ -13104,9 +13148,9 @@ msgstr "देशभक्तिपूर्ण"
 msgid "Patriotic bonus {0} → {1}"
 msgstr "देशभक्ति बोनस {0} → {1}"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:153
-#: src/components/_economy/employee/WorkforceSummary.tsx:156
-#: src/components/_economy/employee/WorkforceSummary.tsx:162
+#: src/components/_economy/employee/WorkforceSummary.tsx:154
+#: src/components/_economy/employee/WorkforceSummary.tsx:157
+#: src/components/_economy/employee/WorkforceSummary.tsx:163
 #: src/components/_other/tour/TutorialGuidesList.tsx:51
 #: src/components/_user/user/Level.tsx:189
 msgid "Paused"
@@ -13181,7 +13225,7 @@ msgstr "वेतन बढ़ गया"
 msgid "Pay the “inspection fee”"
 msgstr "“निरीक्षण शुल्क” का भुगतान करें"
 
-#: src/pages/shop/index.tsx:54
+#: src/pages/shop/index.tsx:55
 msgid "Payment successful! Thanks for supporting the game <3"
 msgstr "भुगतान सफल! खेल का समर्थन करने के लिए धन्यवाद <3"
 
@@ -13194,7 +13238,7 @@ msgstr "भुगतान"
 msgid "Payroll"
 msgstr "पेरोल"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:561
+#: src/components/_economy/employee/WorkforceSummary.tsx:584
 msgid "Payroll of all your companies, employees and managers, divided by the production it banks."
 msgstr "आपकी सभी कंपनियों, कर्मचारियों और प्रबंधकों का पेरोल, जिसे उससे होने वाले उत्पादन से विभाजित किया गया है।"
 
@@ -13440,9 +13484,10 @@ msgstr "खिलाड़ी जिनका घर यह क्षेत्�
 msgid "Playing this division this week."
 msgstr "इस हफ्ते इस डिवीजन में खेल रहा हूँ।"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:147
-#: src/components/_user/auth/ConnectFromModal.tsx:211
-#: src/components/_user/auth/ConnectFromModal.tsx:296
+#: src/components/_user/auth/ConnectFromModal.tsx:111
+#: src/components/_user/auth/ConnectFromModal.tsx:175
+#: src/components/_user/auth/ConnectFromModal.tsx:243
+#: src/components/_user/auth/ConnectFromModal.tsx:328
 msgid "Please complete the CAPTCHA."
 msgstr "कृपया CAPTCHA पूरा करें।"
 
@@ -13542,7 +13587,7 @@ msgstr "सटीक कैलिपर"
 msgid "Prehistoric Pack"
 msgstr "प्रागैतिहासिक पैक"
 
-#: src/pages/shop/index.tsx:226
+#: src/pages/shop/index.tsx:231
 msgid "Premium"
 msgstr "प्रीमियम"
 
@@ -13758,7 +13803,7 @@ msgstr "उत्पादित वस्तु बदल दी गई!"
 #: src/components/_economy/employee/employeeStats.tsx:455
 #: src/components/_economy/employee/employeeStats.tsx:765
 #: src/components/_economy/employee/TrainingCard.tsx:75
-#: src/components/_economy/employee/WorkforceSummary.tsx:354
+#: src/components/_economy/employee/WorkforceSummary.tsx:355
 #: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:51
 #: src/components/_economy/work/WorkChart.tsx:232
 #: src/components/_user/user/skills.frontConfig.tsx:125
@@ -13822,7 +13867,7 @@ msgstr "प्रोफ़ाइल"
 
 #: src/components/_economy/employee/EstimatedProfit.tsx:167
 #: src/components/_economy/employee/EstimatedProfit.tsx:341
-#: src/components/_economy/employee/WorkforceSummary.tsx:361
+#: src/components/_economy/employee/WorkforceSummary.tsx:362
 msgid "Profit"
 msgstr "लाभ"
 
@@ -14631,11 +14676,11 @@ msgstr "कर्मचारी का नाम बदलें"
 msgid "Rename the alliance to \"{0}\" immediately on acceptance."
 msgstr "स्वीकार किए जाने पर तुरंत गठबंधन का नाम बदलकर \"{0}\" कर दें।"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:406
+#: src/components/_economy/employee/WorkforceSummary.tsx:407
 msgid "Reorganize"
 msgstr "पुनर्निर्माण करना"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:284
+#: src/components/_economy/employee/WorkforceSummary.tsx:285
 msgid "Reorganize workforce"
 msgstr "कार्यबल को पुनर्गठित करें"
 
@@ -14691,7 +14736,7 @@ msgstr "फोन सत्यापन का अनुरोध करें"
 msgid "Requests:"
 msgstr "अनुरोध:"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:313
+#: src/components/_economy/employee/WorkforceSummary.tsx:314
 msgid "Require attention"
 msgstr "ध्यान देने की आवश्यकता है"
 
@@ -14720,10 +14765,6 @@ msgstr "मिशन पुनः रोल करें"
 msgid "Reset"
 msgstr "रीसेट"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:447
-msgid "Reset CAPTCHA"
-msgstr "CAPTCHA रीसेट करें"
-
 #: src/components/_economy/employee/EmployeeModal.tsx:549
 msgid "Reset name"
 msgstr "नाम पहले जैसा करें"
@@ -14740,7 +14781,7 @@ msgstr "कौशल रीसेट करें"
 msgid "Reset Survivor"
 msgstr "रीसेट सर्वाइवर"
 
-#: src/pages/user/[userId]/settings.tsx:140
+#: src/pages/user/[userId]/settings.tsx:143
 msgid "Reset tutorials"
 msgstr "ट्यूटोरियल रीसेट करें"
 
@@ -15188,10 +15229,6 @@ msgstr "जीती गई सीटें"
 msgid "Second wind"
 msgstr "दूसरी पवन"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:428
-msgid "Security check failed. Turn off your VPN or ad blocker, or try another browser."
-msgstr ""
-
 #: src/pages/party/[partyId]/index.tsx:100
 msgid "See all parties"
 msgstr "सभी पार्टियां देखें"
@@ -15509,7 +15546,7 @@ msgstr "सभी {0} बोलियाँ दिखाएँ"
 msgid "Show cards"
 msgstr ""
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Show email"
 msgstr "ईमेल दिखाएँ"
 
@@ -15665,7 +15702,7 @@ msgid "Skin Reward"
 msgstr "स्किन पुरस्कार"
 
 #: src/components/_other/shop/ShopHeader.tsx:23
-#: src/pages/shop/index.tsx:202
+#: src/pages/shop/index.tsx:207
 #: src/pages/user/[userId]/index.tsx:112
 msgid "Skins"
 msgstr "स्किन्स"
@@ -15757,7 +15794,7 @@ msgstr "जल्द ही कुछ आने वाला है"
 
 #: src/components/_economy/employeeEvent/EmployeeEventCatalog.tsx:1016
 msgid "Something happens to an employee, or to two coworkers, and you choose what to do: up to {maxPerDay} a day. Left unanswered, an event picks its “If ignored” answer after {expires}. The odds depend on the employee and your skills, and show when it happens."
-msgstr "किसी कर्मचारी या दो सहकर्मियों के साथ कुछ घटित होता है, और आप तय करते हैं कि क्या करना है: एक दिन में अधिकतम {maxPerDay} तक। यदि कोई घटना अनुत्तरित रहती है, तो {expires} के बाद उसका "यदि अनदेखा किया जाए" वाला उत्तर अपने आप चुन लिया जाता है। संभावनाएँ कर्मचारी और आपके कौशल पर निर्भर करती हैं, और यह दर्शाती हैं कि घटना कब घटित होती है।"
+msgstr "किसी कर्मचारी या दो सहकर्मियों के साथ कुछ घटित होता है, और आप तय करते हैं कि क्या करना है: एक दिन में अधिकतम {maxPerDay} तक। यदि कोई घटना अनुत्तरित रहती है, तो {expires} के बाद उसका \"यदि अनदेखा किया जाए\" वाला उत्तर अपने आप चुन लिया जाता है। संभावनाएँ कर्मचारी और आपके कौशल पर निर्भर करती हैं, और यह दर्शाती हैं कि घटना कब घटित होती है।"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:608
 msgid "Something in the storeroom"
@@ -16095,8 +16132,9 @@ msgstr "सदस्य"
 msgid "Success"
 msgstr "सफलता"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:199
-#: src/components/_user/auth/ConnectFromModal.tsx:250
+#: src/components/_user/auth/ConnectFromModal.tsx:163
+#: src/components/_user/auth/ConnectFromModal.tsx:231
+#: src/components/_user/auth/ConnectFromModal.tsx:282
 msgid "Successfully logged in!"
 msgstr "सफलतापूर्वक लॉग इन किया गया!"
 
@@ -16108,7 +16146,7 @@ msgstr "शुगर डैडी"
 msgid "Support"
 msgstr "समर्थक"
 
-#: src/components/_user/premium/PremiumActions.tsx:60
+#: src/components/_user/premium/PremiumActions.tsx:51
 msgid "Support the game"
 msgstr "खेल का समर्थन करें"
 
@@ -16152,12 +16190,12 @@ msgstr "समर्थक महीने"
 msgid "Supporter of the game for <0>{0, plural, one {# month} other {# months}}</0>"
 msgstr "<0>गेम का {0, plural, one {# month} other {# months}} से समर्थक</0>"
 
-#: src/components/_user/premium/PremiumCard.tsx:60
+#: src/components/_user/premium/PremiumCard.tsx:62
 msgid "Supporter plan"
 msgstr "समर्थक योजना"
 
 #: src/components/_user/modals/PremiumModal.tsx:31
-#: src/pages/user/[userId]/settings.tsx:158
+#: src/pages/user/[userId]/settings.tsx:161
 msgid "Supporter Plan"
 msgstr "समर्थक योजना"
 
@@ -16435,7 +16473,7 @@ msgstr "समाप्त"
 msgid "Terms"
 msgstr "शर्तें"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:563
+#: src/components/_user/auth/ConnectFromModal.tsx:507
 msgid "Terms of Service"
 msgstr "सेवा की शर्तें"
 
@@ -17485,7 +17523,7 @@ msgstr "टाइटल"
 msgid "Title font"
 msgstr "टाइटल का फ़ॉन्ट"
 
-#: src/pages/shop/index.tsx:154
+#: src/pages/shop/index.tsx:157
 msgid "to"
 msgstr "को"
 
@@ -17569,7 +17607,7 @@ msgstr "टूलबॉक्स मिल गया"
 msgid "Toolbox per hour"
 msgstr "प्रति घंटा टूलबॉक्स"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:597
+#: src/components/_economy/employee/WorkforceSummary.tsx:617
 msgid "Toolboxes per day"
 msgstr "प्रति दिन टूल बॉक्स"
 
@@ -17626,7 +17664,7 @@ msgstr "सबसे ज़्यादा नुकसान पहुँचा
 msgid "Top Donors"
 msgstr "शीर्ष दानदाता"
 
-#: src/pages/shop/index.tsx:97
+#: src/pages/shop/index.tsx:100
 msgid "Top gift givers of the month"
 msgstr "महीने के शीर्ष उपहारदाता"
 
@@ -17716,7 +17754,7 @@ msgstr "कुल, आज की कीमतों के हिसाब स�
 #: src/components/_military/battle/ActiveBattlesList.tsx:81
 #: src/components/_military/battle/ActiveBattlesList.tsx:187
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:65
-#: src/pages/events/index.tsx:190
+#: src/components/_other/events/EventTournament.tsx:31
 msgid "Tournament"
 msgstr "टूर्नामेंट"
 
@@ -17854,7 +17892,7 @@ msgstr "बाकी बची ट्रेनिंग क्षमता"
 msgid "Training raises them all."
 msgstr "ट्रेनिंग से ये सभी बढ़ते हैं।"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:160
+#: src/components/_economy/employee/WorkforceSummary.tsx:161
 msgid "Training still ages them"
 msgstr "ट्रेनिंग से भी उनकी उम्र बढ़ती है।"
 
@@ -17916,11 +17954,11 @@ msgstr "स्वर्ग में हंगामा"
 msgid "Try it"
 msgstr "आज़माएँ"
 
-#: src/pages/user/[userId]/settings.tsx:137
+#: src/pages/user/[userId]/settings.tsx:140
 msgid "Tutorials"
 msgstr "ट्यूटोरियल"
 
-#: src/pages/user/[userId]/settings.tsx:59
+#: src/pages/user/[userId]/settings.tsx:62
 msgid "Tutorials reseted"
 msgstr "ट्यूटोरियल रीसेट किए गए"
 
@@ -18094,7 +18132,7 @@ msgstr "फोकस अपडेट करें"
 msgid "Update gift"
 msgstr "गिफ्ट अपडेट करें"
 
-#: src/pages/user/[userId]/settings.tsx:91
+#: src/pages/user/[userId]/settings.tsx:94
 msgid "Update infos"
 msgstr "जानकारी अपडेट करें"
 
@@ -18275,7 +18313,7 @@ msgid "Username"
 msgstr "उपयोगकर्ता नाम"
 
 #: src/components/_user/user/UserDropdown.tsx:261
-#: src/pages/user/[userId]/settings.tsx:120
+#: src/pages/user/[userId]/settings.tsx:123
 msgid "Username effect"
 msgstr "यूज़रनेम इफेक्ट"
 
@@ -18291,7 +18329,7 @@ msgstr "यूज़रनेम इफेक्ट अपडेट हो ग�
 msgid "Username effects are a Supporter Plan feature."
 msgstr "यूज़रनेम इफेक्ट्स, सपोर्टर प्लान का एक फीचर है।"
 
-#: src/pages/user/[userId]/settings.tsx:113
+#: src/pages/user/[userId]/settings.tsx:116
 msgid "Username font"
 msgstr "यूज़रनेम का फ़ॉन्ट"
 
@@ -18485,10 +18523,6 @@ msgstr "सत्यापन कोड भेज दिया गया!"
 msgid "Verify"
 msgstr "सत्यापित करें"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:405
-msgid "Verifying you're human..."
-msgstr "यह पुष्टि की जा रही है कि आप इंसान हैं..."
-
 #: src/components/_economy/employee/employee.traitMeta.ts:122
 msgid "Veteran"
 msgstr "अनुभवी खिलाड़ी"
@@ -18588,7 +18622,7 @@ msgid "Wage reduction proposed"
 msgstr "वेतन कटौती का प्रस्ताव"
 
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:61
-#: src/components/_economy/employee/WorkforceSummary.tsx:155
+#: src/components/_economy/employee/WorkforceSummary.tsx:156
 msgid "Wages"
 msgstr "वेतन"
 
@@ -18846,7 +18880,7 @@ msgid "Won"
 msgstr "जीत गया"
 
 #: src/components/_military/tournament/TournamentHeader.tsx:91
-#: src/pages/events/index.tsx:116
+#: src/components/_other/events/EventTournament.tsx:99
 msgid "Won by"
 msgstr "विजेता"
 
@@ -18872,7 +18906,7 @@ msgstr "ऊनी मैमथ"
 
 #: src/components/_economy/company/WorkButton.tsx:173
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:48
-#: src/components/_economy/employee/WorkforceSummary.tsx:152
+#: src/components/_economy/employee/WorkforceSummary.tsx:153
 #: src/components/_user/mission/mission.frontConfig.tsx:133
 msgid "Work"
 msgstr "कार्य"
@@ -18893,7 +18927,7 @@ msgstr "कर्मचारी चला गया"
 msgid "Workers"
 msgstr "कर्मचारी"
 
-#: src/pages/companies.tsx:109
+#: src/components/_economy/employee/WorkforceSummary.tsx:445
 msgid "Workforce"
 msgstr "कार्यबल"
 
@@ -19031,7 +19065,7 @@ msgstr "आप पहले से किसी अन्य देश के �
 msgid "You are here"
 msgstr "आप यहाँ हैं।"
 
-#: src/pages/companies.tsx:82
+#: src/pages/companies.tsx:81
 msgid "You are jobless"
 msgstr "आप बेरोजगार हैं"
 
@@ -19048,7 +19082,7 @@ msgstr "अब आप <0/> के मैनेजर नहीं हैं। �
 msgid "You are not a council member of this party"
 msgstr "आप इस पार्टी के परिषद सदस्य नहीं हैं"
 
-#: src/pages/events/index.tsx:110
+#: src/components/_other/events/EventTournament.tsx:93
 msgid "You are not participating"
 msgstr "आप भाग नहीं ले रहे हैं"
 
@@ -19202,7 +19236,7 @@ msgstr "आपने <0>{0}</0> का उपयोग किया है, इ�
 msgid "You have enough Concrete for one."
 msgstr "आपके पास एक के लिए पर्याप्त कंक्रीट है।"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:306
+#: src/components/_economy/employee/WorkforceSummary.tsx:307
 msgid "You have no employees yet"
 msgstr "आपके पास अभी तक कोई कर्मचारी नहीं है।"
 
@@ -19457,7 +19491,7 @@ msgstr "आपने एक MU टूर्नामेंट जीता"
 msgid "You worked 100 times"
 msgstr "आपने 100 बार कार्य किया"
 
-#: src/components/_user/premium/PremiumCard.tsx:55
+#: src/components/_user/premium/PremiumCard.tsx:57
 msgid "You're already a supporter <0/>"
 msgstr "आप पहले से ही एक समर्थक हैं <0/>"
 
@@ -19603,7 +19637,7 @@ msgstr "आपका वर्तमान पद"
 msgid "Your daily missions have been reset! Complete them to earn rewards."
 msgstr "आपके दैनिक मिशन रीसेट कर दिए गए हैं! पुरस्कार पाने के लिए उन्हें पूरा करें।"
 
-#: src/pages/user/[userId]/settings.tsx:68
+#: src/pages/user/[userId]/settings.tsx:71
 msgid "Your email"
 msgstr "आपका ईमेल"
 
@@ -19705,6 +19739,10 @@ msgstr "आपकी MU ने अपनी साप्ताहिक ली�
 msgid "Your MU has <0/> reputation and cannot bid on mercenary contracts. Pay to buy back reputation (once per day)."
 msgstr "आपकी MU की प्रतिष्ठा <0/> है और वह भाड़े के अनुबंधों पर बोली नहीं लगा सकती। प्रतिष्ठा वापस खरीदने के लिए भुगतान करें (दिन में एक बार)।"
 
+#: src/components/_other/events/EventMuLeague.tsx:75
+msgid "Your MU has no league this week"
+msgstr ""
+
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:107
 msgid "Your MU is registered"
 msgstr "आपकी MU पंजीकृत है।"
@@ -19795,7 +19833,7 @@ msgstr "आपकी टीम <0/> को <1/> से बाहर कर द�
 msgid "Your team <0/> won a round in <1/>!"
 msgstr "आपकी टीम <0/> ने <1/> में एक राउंड जीत लिया है!"
 
-#: src/pages/events/index.tsx:102
+#: src/components/_other/events/EventTournament.tsx:85
 msgid "Your team:"
 msgstr "आपकी टीम:"
 
@@ -19850,7 +19888,7 @@ msgstr "आपके साप्ताहिक मिशन रीसेट �
 msgid "Your workforce"
 msgstr "आपकी कार्यबल"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:508
+#: src/components/_user/auth/ConnectFromModal.tsx:452
 msgid "your@email.com"
 msgstr "your@email.com"
 

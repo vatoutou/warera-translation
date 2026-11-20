@@ -54,7 +54,7 @@ msgstr " - Opetovano davanje napojnice za članke"
 msgid " - Using outside market standards or manipulated trade prices"
 msgstr " - Korištenje trećih tržišnih standarda i manipuliranih trgovačkih cijena"
 
-#: src/components/_user/premium/PremiumActions.tsx:74
+#: src/components/_user/premium/PremiumActions.tsx:65
 msgid " Gift a sub"
 msgstr " Pokloni pretplatu"
 
@@ -94,12 +94,12 @@ msgid "{0, plural, one {# employee changes company.} other {# employees change c
 msgstr "{0, plural, one {# zaposlenik mijenja kompaniju.} other {# zaposlenika mijenja kompaniju.} } Njihov staž u kompaniji počinje ispočetka."
 
 #. placeholder {0}: data.employeeCount
-#: src/components/_economy/employee/WorkforceSummary.tsx:513
+#: src/components/_economy/employee/WorkforceSummary.tsx:536
 msgid "{0, plural, one {# employee} other {# employees}}"
 msgstr "{0, plural, one {# zaposlenik} other {# zaposlenika}}"
 
 #. placeholder {0}: data.managerCount
-#: src/components/_economy/employee/WorkforceSummary.tsx:532
+#: src/components/_economy/employee/WorkforceSummary.tsx:555
 msgid "{0, plural, one {# manager} other {# managers}}"
 msgstr "{0, plural, one {# upravitelj} other {# upravitelji}}"
 
@@ -132,6 +132,11 @@ msgstr "{0, plural, one {Stavite na prodaju} other {Stavite # predmeta na prodaj
 #: src/components/_other/shop/SkinPackModal.tsx:313
 msgid "{0, plural, one {Unlock # skin} other {Unlock # skins}}"
 msgstr "{0, plural, one {Otključajte # skin} other {Otključajte # skinove}}"
+
+#. placeholder {0}: giveaway.winnersQuantity ?? 0
+#: src/components/_other/events/EventGiveaway.tsx:71
+msgid "{0, plural, one {x # winner} other {x # winners}}"
+msgstr ""
 
 #. placeholder {0}: damagesPercent(effects.bunkerBonusDelta)
 #. placeholder {1}: upgradeName(EUpgrade.BUNKER)
@@ -1784,11 +1789,11 @@ msgstr "{quantity, plural, =1 {Drvena kutija pokupljena!} one {# drvena kutija p
 msgid "{regionLootCount, plural, =1 {Collect the wooden case lying on this region} one {Collect the # wooden case lying on this region} other {Collect the # wooden cases lying on this region}}"
 msgstr "{regionLootCount, plural, =1 {Pokupite drvenu kutiju u ovoj regiji} one {Pokupite # drvenu kutiju u ovoj regiji} other {Pokupite # drvene kutije u ovoj regiji}}"
 
-#: src/pages/events/index.tsx:97
+#: src/components/_other/events/EventTournament.tsx:80
 msgid "{registeredCount} countries registered"
 msgstr "{registeredCount} registriranih država"
 
-#: src/pages/events/index.tsx:95
+#: src/components/_other/events/EventTournament.tsx:78
 msgid "{registeredCount} MUs registered"
 msgstr "{registeredCount} registriranih VJ"
 
@@ -1829,8 +1834,8 @@ msgstr "{toolsReturned, plural, one {# alat ne odgovara novoj tvrtki pa se vrać
 msgid "{total} seats"
 msgstr "{total} mandata"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:324
-#: src/components/_economy/employee/WorkforceSummary.tsx:490
+#: src/components/_economy/employee/WorkforceSummary.tsx:325
+#: src/components/_economy/employee/WorkforceSummary.tsx:511
 msgid "{trainable} to train"
 msgstr "Još {trainable} zaposlenika čeka obuku"
 
@@ -1978,8 +1983,8 @@ msgstr "/{max, plural, one {# slot} other {# slotova}}"
 #: src/components/_economy/employee/EstimatedProfit.tsx:203
 #: src/components/_economy/employee/EstimatedProfit.tsx:369
 #: src/components/_economy/employee/EstimatedProfit.tsx:399
-#: src/components/_economy/employee/WorkforceSummary.tsx:580
-#: src/components/_economy/employee/WorkforceSummary.tsx:609
+#: src/components/_economy/employee/WorkforceSummary.tsx:603
+#: src/components/_economy/employee/WorkforceSummary.tsx:629
 #: src/components/_economy/manager/ManagerProfitEstimate.tsx:95
 #: src/components/_political/government/Government.tsx:305
 #: src/components/_political/stateArmy/StateArmyList.tsx:88
@@ -3809,10 +3814,6 @@ msgstr "Prihvatite sklapanje mira sa drugom državom"
 msgid "Accepted"
 msgstr "Prihvaćen"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:413
-msgid "Access granted"
-msgstr "Pristup odobren"
-
 #: src/components/_military/battle/BattleHeader.tsx:183
 msgid "Access war"
 msgstr "Pogledaj rat"
@@ -3840,8 +3841,9 @@ msgstr "Akcije"
 #: src/components/_military/mercenaryContract/MercenaryAuctionList.tsx:144
 #: src/components/_military/mercenaryContract/MercenaryContractList.tsx:85
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:47
+#: src/components/_other/events/EventGiveaway.tsx:48
+#: src/components/_other/events/EventTournament.tsx:131
 #: src/components/_user/user/Level.tsx:193
-#: src/pages/events/index.tsx:148
 #: src/utils/translations.tsx:342
 msgid "Active"
 msgstr "Aktivni/e"
@@ -4018,7 +4020,7 @@ msgstr "Događaj je moguć: kad su zaposleni do 40. godine sa potencijalom za ob
 msgid "Aged 45 to 55."
 msgstr "Događaj je moguć: kad je zaposlenik od 45. do 55. godine."
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:159
+#: src/components/_economy/employee/WorkforceSummary.tsx:160
 msgid "Aging"
 msgstr "Starenje"
 
@@ -4316,7 +4318,7 @@ msgstr "API token regeneriran"
 msgid "API token revoked"
 msgstr "API token ukinut"
 
-#: src/pages/user/[userId]/settings.tsx:151
+#: src/pages/user/[userId]/settings.tsx:154
 msgid "API Tokens"
 msgstr "API Tokeni"
 
@@ -4328,7 +4330,7 @@ msgstr "API tokeni omogućuju trećim aplikacijama pristup API-ju u vaše ime. K
 msgid "App pattern"
 msgstr "Uzorak aplikacije"
 
-#: src/pages/user/[userId]/settings.tsx:129
+#: src/pages/user/[userId]/settings.tsx:132
 msgid "App settings"
 msgstr "Postavke aplikacije"
 
@@ -4336,7 +4338,7 @@ msgstr "Postavke aplikacije"
 msgid "Appeal to their loyalty"
 msgstr "Apelirajte na njihovu lojalnost"
 
-#: src/pages/user/[userId]/settings.tsx:99
+#: src/pages/user/[userId]/settings.tsx:102
 msgid "Appearance"
 msgstr "Izgled"
 
@@ -4620,7 +4622,7 @@ msgstr "Aukcija Dobivena"
 msgid "Auctions"
 msgstr "Aukcije"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:244
+#: src/components/_user/auth/ConnectFromModal.tsx:276
 msgid "Authentication failed. Please try again."
 msgstr "Verifikacija neuspješna. Molimo vas pokušajte ponovo."
 
@@ -5283,11 +5285,11 @@ msgstr "Kupiti za {total}?"
 msgid "Buyers from your country see <0>{buyerTotal}</0>"
 msgstr "Kupci iz vaše države vide <0>{buyerTotal}</0>"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:347
+#: src/components/_economy/employee/WorkforceSummary.tsx:348
 msgid "By Company"
 msgstr "Prema kompanijama"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:536
+#: src/components/_user/auth/ConnectFromModal.tsx:480
 msgid "By continuing, you agree to our <0>Terms of Service</0>."
 msgstr "Nastavkom, prihvaćate naše <0>Usluge korištenja Usluge</0>."
 
@@ -5402,7 +5404,7 @@ msgid "Cancel Mercenary Contract"
 msgstr "Otkaži Plaćenički ugovor"
 
 #: src/components/_military/mercenaryContract/MercenaryContractItemContent.tsx:240
-#: src/pages/events/index.tsx:156
+#: src/components/_other/events/EventTournament.tsx:139
 #: src/utils/translations.tsx:337
 msgid "Cancelled"
 msgstr "Otkazano"
@@ -5835,7 +5837,7 @@ msgid "Climber"
 msgstr "Ambiciozan"
 
 #: ../__ui/src/components/Modal/Modal.tsx:360
-#: src/components/_economy/company/CompanyCardHeader.tsx:141
+#: src/components/_economy/company/CompanyCardHeader.tsx:137
 #: src/components/_other/tour/TutorialChapterEndModal.tsx:322
 #: src/components/_political/map/MapMenu.tsx:240
 msgid "Close"
@@ -5879,7 +5881,7 @@ msgid "Colonel"
 msgstr "Pukovnik"
 
 #: src/components/_user/user/UserDropdown.tsx:243
-#: src/pages/user/[userId]/settings.tsx:105
+#: src/pages/user/[userId]/settings.tsx:108
 msgid "Color scheme"
 msgstr "Šema boja"
 
@@ -5942,7 +5944,7 @@ msgstr "Stup Zajednice"
 #: src/components/_user/user/MyAvatar.tsx:47
 #: src/components/_user/user/UserHeader.tsx:242
 #: src/components/_user/user/WealthPanel.tsx:42
-#: src/pages/companies.tsx:153
+#: src/pages/companies.tsx:147
 msgid "Companies"
 msgstr "Kompanije"
 
@@ -5961,7 +5963,7 @@ msgstr "Kompanija uništena!"
 
 #: src/components/_economy/company/CompanyTags.tsx:61
 #: src/components/_economy/employee/EmployeeModal.tsx:386
-#: src/components/_economy/employee/WorkforceSummary.tsx:143
+#: src/components/_economy/employee/WorkforceSummary.tsx:144
 #: src/components/_economy/manager/ManagerOfferRow.tsx:177
 msgid "Company disabled"
 msgstr "Kompanija obustavljena"
@@ -6096,15 +6098,15 @@ msgstr "Kongresni član <0/>"
 msgid "Congress members"
 msgstr "Članovi kongresa"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:464
+#: src/components/_user/auth/ConnectFromModal.tsx:390
 msgid "Connect with Discord"
 msgstr "Povežite se putem Discorda"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:521
+#: src/components/_user/auth/ConnectFromModal.tsx:465
 msgid "Connect with email code"
 msgstr "Povežite se putem maila"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:483
+#: src/components/_user/auth/ConnectFromModal.tsx:409
 msgid "Connect with Google"
 msgstr "Povežite se putem Google"
 
@@ -6154,6 +6156,10 @@ msgstr "Kontekstualne granice"
 #: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:692
 msgid "Continue"
 msgstr "Nastavi"
+
+#: src/components/_user/auth/ConnectFromModal.tsx:428
+msgid "Continue with Apple"
+msgstr ""
 
 #: src/components/_layout/layoutInfos.frontConfig.tsx:50
 #: src/components/_military/battle/BattleDamageBonuses.tsx:180
@@ -6228,7 +6234,7 @@ msgid "Cooldown"
 msgstr "Vrijeme čekanja"
 
 #: src/components/_user/apiToken/ApiTokenList.tsx:90
-#: src/components/_user/userReports/UserReportListItem.tsx:235
+#: src/components/_user/userReports/UserReportListItem.tsx:244
 msgid "Copied to clipboard"
 msgstr "Kopirano u međuspremnik"
 
@@ -6700,7 +6706,7 @@ msgstr "Prokleto dobro izgleda."
 msgid "Damn you lucky"
 msgstr "Proklet bio, sretniče!"
 
-#: src/pages/user/[userId]/settings.tsx:171
+#: src/pages/user/[userId]/settings.tsx:174
 msgid "Danger zone"
 msgstr "Opasna zona"
 
@@ -6913,7 +6919,7 @@ msgstr "Proglasi zakletog neprijatelja"
 msgid "Delete"
 msgstr "Obriši"
 
-#: src/pages/user/[userId]/settings.tsx:174
+#: src/pages/user/[userId]/settings.tsx:177
 msgid "Delete account"
 msgstr "Izbriši račun"
 
@@ -7121,7 +7127,7 @@ msgstr "Onemogućite Naredbu"
 
 #: src/components/_economy/company/CompanyTags.tsx:80
 #: src/components/_economy/employee/WorkforceReorganize.tsx:272
-#: src/components/_economy/employee/WorkforceSummary.tsx:169
+#: src/components/_economy/employee/WorkforceSummary.tsx:170
 #: src/components/_economy/manager/ManagerOfferRow.tsx:181
 msgid "Disabled"
 msgstr "Onemogućeno"
@@ -7502,10 +7508,10 @@ msgstr "Izbori su završeni"
 msgid "Election vote open"
 msgstr "Otvorena birališta"
 
+#: src/components/_other/events/EventElections.tsx:23
 #: src/components/_political/country/CountryHeader.tsx:135
 #: src/pages/country/[countryId]/elections.tsx:28
 #: src/pages/country/[countryId]/index.tsx:269
-#: src/pages/events/index.tsx:398
 #: src/pages/party/[partyId]/index.tsx:88
 msgid "Elections"
 msgstr "Izbori"
@@ -7599,7 +7605,7 @@ msgid "Employee tax"
 msgstr "Porez za zaposlenike"
 
 #: src/components/_economy/company/CompanyTags.tsx:70
-#: src/components/_economy/employee/WorkforceSummary.tsx:338
+#: src/components/_economy/employee/WorkforceSummary.tsx:339
 #: src/components/_economy/work/WorkChart.tsx:252
 #: src/components/_layout/map.frontConfig.tsx:69
 #: src/components/_political/map/MapMenu.tsx:536
@@ -7731,10 +7737,14 @@ msgstr "Unesite cijenu"
 msgid "Enter article ID"
 msgstr "Unesi ID članka"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:269
-#: src/components/_user/auth/ConnectFromModal.tsx:274
+#: src/components/_user/auth/ConnectFromModal.tsx:301
+#: src/components/_user/auth/ConnectFromModal.tsx:306
 msgid "Enter the code we sent to your email."
 msgstr "Unesi kod koji smo poslali na vaš email."
+
+#: src/components/_other/events/EventGiveaway.tsx:95
+msgid "Entered"
+msgstr ""
 
 #: src/components/_user/auth/CitizenIdCard.tsx:58
 msgid "Entry · Admitted"
@@ -7802,7 +7812,7 @@ msgstr "Proc. dnevni prihod"
 msgid "Estimated daily income"
 msgstr "Procijenjeni dnevni prihod"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:599
+#: src/components/_economy/employee/WorkforceSummary.tsx:619
 msgid "Estimated from your employees' Luck, on hours that bank production."
 msgstr "Procjena izračunata od sreće vaših aktivnih zaposlenika."
 
@@ -8060,7 +8070,7 @@ msgid "f. Glorification/apology of hateful ideologies such as nazism, neo-nazism
 msgstr "f. Glorifikacija/apologetičnost prema ideologijama koje promiću mržnju; poput nacizma, neo-nacizma, fašizma, komunizma, terorizma i terorističkih grupacija i pokreta (prepoznate od strane UN-a, Europske Unije ili Francuske države), poricanje genocida, ratnih zločina, ili zločina protiv humanosti."
 
 #: src/components/_user/apiToken/ApiTokenList.tsx:92
-#: src/components/_user/userReports/UserReportListItem.tsx:237
+#: src/components/_user/userReports/UserReportListItem.tsx:246
 msgid "Failed to copy"
 msgstr "Kopiranje neuspješno"
 
@@ -8068,21 +8078,31 @@ msgstr "Kopiranje neuspješno"
 msgid "Failed to copy text: "
 msgstr "Neuspješno kopiranje teksta: "
 
-#: src/components/_user/auth/ConnectFromModal.tsx:160
+#: src/components/_user/auth/ConnectFromModal.tsx:215
+#: src/components/_user/auth/ConnectFromModal.tsx:234
+#: src/components/_user/auth/ConnectFromModal.tsx:260
+msgid "Failed to start Apple login."
+msgstr ""
+
+#: src/components/_user/auth/ConnectFromModal.tsx:258
+msgid "Failed to start Apple login. Please retry the CAPTCHA."
+msgstr ""
+
+#: src/components/_user/auth/ConnectFromModal.tsx:124
 msgid "Failed to start Discord login."
 msgstr "Neuspješno pokretanje Discord prijave."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:158
+#: src/components/_user/auth/ConnectFromModal.tsx:122
 msgid "Failed to start Discord login. Please retry the CAPTCHA."
 msgstr "Neuspješno pokretanje Discord prijave. Molimo ponovite CAPTCHU."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:183
-#: src/components/_user/auth/ConnectFromModal.tsx:202
-#: src/components/_user/auth/ConnectFromModal.tsx:228
+#: src/components/_user/auth/ConnectFromModal.tsx:147
+#: src/components/_user/auth/ConnectFromModal.tsx:166
+#: src/components/_user/auth/ConnectFromModal.tsx:192
 msgid "Failed to start Google login."
 msgstr "Neuspješna prijava putem Googla."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:226
+#: src/components/_user/auth/ConnectFromModal.tsx:190
 msgid "Failed to start Google login. Please retry the CAPTCHA."
 msgstr "Neuspješan pokušaj Google logina. Potvrdite CAPTCHU."
 
@@ -8235,7 +8255,7 @@ msgstr "Financirajte otpor u <0/>"
 msgid "Find a better horoscope"
 msgstr "Potražite bolji horoskop"
 
-#: src/pages/companies.tsx:86
+#: src/pages/companies.tsx:85
 msgid "Find a job"
 msgstr "Pronađite posao"
 
@@ -8437,7 +8457,7 @@ msgstr "Nalazi se na mapi. Otvorite je da biste dobili nasumične resurse, a pon
 msgid "Founding Father"
 msgstr "Praotac"
 
-#: src/pages/shop/index.tsx:187
+#: src/pages/shop/index.tsx:190
 msgid "Free daily reward"
 msgstr "Besplatna dnevna nagrada"
 
@@ -8564,11 +8584,11 @@ msgstr "Oprema"
 msgid "Gear up!"
 msgstr "Opremite se!"
 
-#: src/pages/shop/index.tsx:196
+#: src/pages/shop/index.tsx:200
 msgid "Gems"
 msgstr "Gemovi"
 
-#: src/pages/shop/index.tsx:194
+#: src/pages/shop/index.tsx:198
 msgid "Gems are used to buy assets in the shop and to gift supporter months to other players"
 msgstr "Gemovi se koriste za kupnju u trgovini i za darovanje Supportera drugim igračima"
 
@@ -8662,7 +8682,7 @@ msgstr "Poklon od Vatoua, nemoj reći nikome!"
 msgid "Gift sent! Skin pack unlocked for recipient!"
 msgstr "Poklon poslan! Skin paket je otključen za primatelja!"
 
-#: src/pages/shop/index.tsx:67
+#: src/pages/shop/index.tsx:68
 msgid "Gift sent! Thanks for supporting the game <3"
 msgstr "Poklon poslan! Hvala što podržavate igru."
 
@@ -8674,8 +8694,8 @@ msgstr "Pokloni Supporter pretplatu"
 msgid "Gift this pack to someone"
 msgstr "Poklonite ovaj paket nekome"
 
-#: src/pages/shop/index.tsx:115
-#: src/pages/shop/index.tsx:141
+#: src/pages/shop/index.tsx:118
+#: src/pages/shop/index.tsx:144
 msgid "gifted"
 msgstr "poklanja"
 
@@ -8706,6 +8726,14 @@ msgstr "Dajte im dva slobodna dana"
 #: src/components/_user/apiToken/ApiTokenList.tsx:251
 msgid "Give your token a descriptive name so you can identify it later."
 msgstr "Tokenu dodajte opisno ime za lakšu identifikaciju."
+
+#: src/components/_other/events/EventGiveaway.tsx:61
+msgid "Giveaway"
+msgstr ""
+
+#: src/components/_other/events/EventGiveaway.tsx:34
+msgid "Giveaway entered"
+msgstr ""
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:199
 msgid "Giveaway Winner"
@@ -9056,7 +9084,7 @@ msgstr "Drži se tamo"
 #: src/components/_economy/employee/employeeStats.tsx:880
 #: src/components/_economy/employee/EmployeeTooltip.tsx:113
 #: src/components/_economy/employee/TrainingCard.tsx:77
-#: src/components/_economy/employee/WorkforceSummary.tsx:368
+#: src/components/_economy/employee/WorkforceSummary.tsx:369
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:151
 msgid "Happiness"
 msgstr "Zadovoljstvo"
@@ -9207,7 +9235,7 @@ msgstr "Pomozite igri da raste i napreduje"
 msgid "Hide cards"
 msgstr "Sakrijte kartice"
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Hide email"
 msgstr "Sakrijte email"
 
@@ -9572,7 +9600,7 @@ msgstr "Predstavite se!"
 #: src/components/_layout/LayoutUserMenu.tsx:178
 #: src/components/_user/user/MyAvatar.tsx:35
 #: src/components/_user/user/UserHeader.tsx:175
-#: src/pages/companies.tsx:136
+#: src/pages/companies.tsx:132
 #: src/pages/country/[countryId]/account.tsx:25
 #: src/pages/market/index.tsx:55
 #: src/pages/user/[userId]/account.tsx:20
@@ -9737,7 +9765,7 @@ msgstr "Država plaća održavanje zapovjedništva"
 msgid "Its damage counts for no country"
 msgstr "Nanesena šteta se ne pribraja ni jednoj državi"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:145
+#: src/components/_economy/employee/WorkforceSummary.tsx:146
 msgid "Its employees are paused until it is enabled again."
 msgstr "Rad zaposlenika je obustavljen do pokretanje kompanije."
 
@@ -9757,7 +9785,7 @@ msgstr "Jack-in-the-Box Tenk"
 msgid "Jinx"
 msgstr "Baksuz"
 
-#: src/pages/companies.tsx:67
+#: src/pages/companies.tsx:66
 msgid "Job"
 msgstr "Posao"
 
@@ -9780,6 +9808,10 @@ msgstr "Pridružite se Vojnoj Jedinici"
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:153
 msgid "Join a military unit to take part"
 msgstr "Pridružite se vojnoj jedinici kako biste sudjelovali"
+
+#: src/components/_other/events/EventMuLeague.tsx:60
+msgid "Join a Military Unit to take part"
+msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:680
 msgid "Join a Party"
@@ -9986,7 +10018,7 @@ msgstr "Zadnje viđen/a"
 msgid "Last earned"
 msgstr "Zadnje zarađena"
 
-#: src/pages/shop/index.tsx:103
+#: src/pages/shop/index.tsx:106
 msgid "Last gifts"
 msgstr "Zadnji pokloni"
 
@@ -9994,13 +10026,14 @@ msgstr "Zadnji pokloni"
 msgid "Last one! Tap Milestones."
 msgstr "I konačno, dodirnite Ciljevi."
 
-#: src/pages/shop/index.tsx:129
+#: src/pages/shop/index.tsx:132
 msgid "Last skin gifts"
 msgstr "Nedavni skin pokloni"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:467
-#: src/components/_user/auth/ConnectFromModal.tsx:486
-#: src/components/_user/auth/ConnectFromModal.tsx:524
+#: src/components/_user/auth/ConnectFromModal.tsx:393
+#: src/components/_user/auth/ConnectFromModal.tsx:412
+#: src/components/_user/auth/ConnectFromModal.tsx:431
+#: src/components/_user/auth/ConnectFromModal.tsx:468
 msgid "Last used"
 msgstr "Zadnji put korišteno"
 
@@ -10020,7 +10053,7 @@ msgstr "Kasni Bloomer"
 msgid "Later"
 msgstr "Kasnije"
 
-#: src/pages/shop/index.tsx:209
+#: src/pages/shop/index.tsx:214
 msgid "Latest Pack"
 msgstr "Najnoviji Paket"
 
@@ -10079,6 +10112,7 @@ msgstr "Kiša letaka"
 #: src/components/_layout/layoutInfos.frontConfig.tsx:55
 #: src/components/_military/mu/MuHeader.tsx:114
 #: src/components/_military/mu/MuHeader.tsx:180
+#: src/components/_other/events/EventLeague.tsx:45
 #: src/components/_user/league/LeagueTopInfoCard.tsx:69
 #: src/components/_user/user/UserHeader.tsx:229
 #: src/components/_user/user/UserHeader.tsx:326
@@ -10088,6 +10122,10 @@ msgstr "Liga"
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:215
 msgid "League Champion"
 msgstr "Šampion Lige"
+
+#: src/components/_other/events/EventLeague.tsx:69
+msgid "Leagues are being drawn"
+msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:248
 msgid "Leather Sling"
@@ -10603,8 +10641,8 @@ msgstr "Imenujte sve Vrhovnim Zapovjednikom"
 msgid "Make room for more staff!"
 msgstr "Napravite mjesta za više članova osoblja!"
 
-#: src/components/_user/premium/PremiumActions.tsx:84
-#: src/pages/user/[userId]/settings.tsx:165
+#: src/components/_user/premium/PremiumActions.tsx:75
+#: src/pages/user/[userId]/settings.tsx:168
 msgid "Manage Subscription"
 msgstr "Upravljaj Pretplatom"
 
@@ -11417,6 +11455,7 @@ msgstr "Donacije za VJ"
 #: src/components/_layout/layoutInfos.frontConfig.tsx:60
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:118
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:136
+#: src/components/_other/events/EventMuLeague.tsx:48
 #: src/components/_user/notification/notification.frontConfig.tsx:2465
 #: src/pages/mu/[muId]/league.tsx:19
 msgid "MU league"
@@ -11492,7 +11531,7 @@ msgstr "Moja stranačka lista"
 msgid "My tier {0}"
 msgstr "Trenutna etapa: {0}"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:295
+#: src/components/_economy/employee/WorkforceSummary.tsx:296
 msgid "My workforce"
 msgstr "Prikaz radne snage"
 
@@ -11755,7 +11794,7 @@ msgstr "Novi preporučitelj"
 msgid "New subscriber"
 msgstr "Novi pretplatnik"
 
-#: src/pages/shop/index.tsx:168
+#: src/pages/shop/index.tsx:171
 msgid "New supporters"
 msgstr "Novi supporteri"
 
@@ -11869,7 +11908,7 @@ msgstr "Još nema objava"
 msgid "No API tokens yet. Create one to get started."
 msgstr "Još nema API tokena. Kreiraj jedan da počneš."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:243
+#: src/components/_user/auth/ConnectFromModal.tsx:275
 msgid "No authorization code provided."
 msgstr "Nije unesen verifikacijski kod."
 
@@ -12329,7 +12368,7 @@ msgstr "Nije se povezao nekoliko dana: nema bonusa ni isplate plaće do povratka
 msgid "Not enough paper for the daily maintenance: alliance damage bonuses are off until it pays."
 msgstr "Nema dovoljno papira za dnevne troškove održavanja: bonus šteta za saveznike su onemogućene do podmirenja."
 
-#: src/pages/events/index.tsx:113
+#: src/components/_other/events/EventTournament.tsx:96
 msgid "Not enough participants"
 msgstr "Nedovoljno sudionika"
 
@@ -12410,7 +12449,7 @@ msgid "Nothing while alone."
 msgstr "Bez učinka ako radi sam."
 
 #: src/pages/notifications.tsx:38
-#: src/pages/user/[userId]/settings.tsx:145
+#: src/pages/user/[userId]/settings.tsx:148
 msgid "Notification preferences"
 msgstr "Podešavanja obavijesti"
 
@@ -12706,7 +12745,7 @@ msgstr "Samo vlasnik ili zapovjednik mogu mijenjati nacionalnost vojne jedinice.
 msgid "Only the owner can change the unit type."
 msgstr "Samo vlasnik može promijeniti tip jedinice."
 
-#: src/components/_economy/company/CompanyCardHeader.tsx:141
+#: src/components/_economy/company/CompanyCardHeader.tsx:137
 #: src/components/_economy/inventory/case/OpenCaseModal.tsx:176
 #: src/components/_economy/inventory/case/OpenCaseModal.tsx:610
 msgid "Open"
@@ -12794,7 +12833,7 @@ msgid "Operative"
 msgstr "Operativac"
 
 #: src/components/_political/unrest/UnrestBar.tsx:40
-#: src/components/_user/auth/ConnectFromModal.tsx:498
+#: src/components/_user/auth/ConnectFromModal.tsx:442
 msgid "or"
 msgstr "ili"
 
@@ -12971,8 +13010,13 @@ msgid "Paramilitary"
 msgstr "Paravojska"
 
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:76
+#: src/components/_other/events/EventGiveaway.tsx:82
 msgid "Participants"
 msgstr "Sudionici"
+
+#: src/components/_other/events/EventGiveaway.tsx:105
+msgid "Participate"
+msgstr ""
 
 #: src/components/_user/mission/mission.frontConfig.tsx:328
 msgid "Participate in Battle"
@@ -13104,9 +13148,9 @@ msgstr "Patriotski"
 msgid "Patriotic bonus {0} → {1}"
 msgstr "Patriotski bonus {0} → {1}"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:153
-#: src/components/_economy/employee/WorkforceSummary.tsx:156
-#: src/components/_economy/employee/WorkforceSummary.tsx:162
+#: src/components/_economy/employee/WorkforceSummary.tsx:154
+#: src/components/_economy/employee/WorkforceSummary.tsx:157
+#: src/components/_economy/employee/WorkforceSummary.tsx:163
 #: src/components/_other/tour/TutorialGuidesList.tsx:51
 #: src/components/_user/user/Level.tsx:189
 msgid "Paused"
@@ -13181,7 +13225,7 @@ msgstr "Plaća povišena"
 msgid "Pay the “inspection fee”"
 msgstr "Platite “naknadu inspekcije”"
 
-#: src/pages/shop/index.tsx:54
+#: src/pages/shop/index.tsx:55
 msgid "Payment successful! Thanks for supporting the game <3"
 msgstr "Plaćanje uspješno! Hvala što podržavate igru."
 
@@ -13194,7 +13238,7 @@ msgstr "Isplata"
 msgid "Payroll"
 msgstr "Dnevnica"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:561
+#: src/components/_economy/employee/WorkforceSummary.tsx:584
 msgid "Payroll of all your companies, employees and managers, divided by the production it banks."
 msgstr "Plaća u svim vašim kompanijama, zaposlenika i upravitelja podijeljena sa proizvodnjom koju pohranjuje."
 
@@ -13440,9 +13484,10 @@ msgstr "Korisnici čije je prebivalište ova regija."
 msgid "Playing this division this week."
 msgstr "Broj VJ koji se natječe u ovoj diviziji."
 
-#: src/components/_user/auth/ConnectFromModal.tsx:147
-#: src/components/_user/auth/ConnectFromModal.tsx:211
-#: src/components/_user/auth/ConnectFromModal.tsx:296
+#: src/components/_user/auth/ConnectFromModal.tsx:111
+#: src/components/_user/auth/ConnectFromModal.tsx:175
+#: src/components/_user/auth/ConnectFromModal.tsx:243
+#: src/components/_user/auth/ConnectFromModal.tsx:328
 msgid "Please complete the CAPTCHA."
 msgstr "Molimo riješite CAPTCHU."
 
@@ -13542,7 +13587,7 @@ msgstr "Precizni Šubler"
 msgid "Prehistoric Pack"
 msgstr "Prapovijesni Paket"
 
-#: src/pages/shop/index.tsx:226
+#: src/pages/shop/index.tsx:231
 msgid "Premium"
 msgstr "Premium"
 
@@ -13758,7 +13803,7 @@ msgstr "Predmet proizvodnje promijenjen!"
 #: src/components/_economy/employee/employeeStats.tsx:455
 #: src/components/_economy/employee/employeeStats.tsx:765
 #: src/components/_economy/employee/TrainingCard.tsx:75
-#: src/components/_economy/employee/WorkforceSummary.tsx:354
+#: src/components/_economy/employee/WorkforceSummary.tsx:355
 #: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:51
 #: src/components/_economy/work/WorkChart.tsx:232
 #: src/components/_user/user/skills.frontConfig.tsx:125
@@ -13822,7 +13867,7 @@ msgstr "Profil"
 
 #: src/components/_economy/employee/EstimatedProfit.tsx:167
 #: src/components/_economy/employee/EstimatedProfit.tsx:341
-#: src/components/_economy/employee/WorkforceSummary.tsx:361
+#: src/components/_economy/employee/WorkforceSummary.tsx:362
 msgid "Profit"
 msgstr "Zarada"
 
@@ -14631,11 +14676,11 @@ msgstr "Preimenujte zaposlenika"
 msgid "Rename the alliance to \"{0}\" immediately on acceptance."
 msgstr "Odmah promijenite naziv saveza u \"{0}\" nakon izglasavanja."
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:406
+#: src/components/_economy/employee/WorkforceSummary.tsx:407
 msgid "Reorganize"
 msgstr "Preustrojite"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:284
+#: src/components/_economy/employee/WorkforceSummary.tsx:285
 msgid "Reorganize workforce"
 msgstr "Preustrojite radnu snagu"
 
@@ -14691,7 +14736,7 @@ msgstr "Zahtijev za Verifikaciju Telefona"
 msgid "Requests:"
 msgstr "Zahtjevi:"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:313
+#: src/components/_economy/employee/WorkforceSummary.tsx:314
 msgid "Require attention"
 msgstr "Zahtijevaju pažnju"
 
@@ -14720,10 +14765,6 @@ msgstr "Zamijenite Misiju"
 msgid "Reset"
 msgstr "Resetirajte"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:447
-msgid "Reset CAPTCHA"
-msgstr "Resetirajte CAPTCHU"
-
 #: src/components/_economy/employee/EmployeeModal.tsx:549
 msgid "Reset name"
 msgstr "Resetirajte ime"
@@ -14740,7 +14781,7 @@ msgstr "Resetirajte vještine"
 msgid "Reset Survivor"
 msgstr "Žrtva Reseta"
 
-#: src/pages/user/[userId]/settings.tsx:140
+#: src/pages/user/[userId]/settings.tsx:143
 msgid "Reset tutorials"
 msgstr "Resetirajte tutorijal"
 
@@ -15188,10 +15229,6 @@ msgstr "Osvojenih mandata"
 msgid "Second wind"
 msgstr "Druga šansa"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:428
-msgid "Security check failed. Turn off your VPN or ad blocker, or try another browser."
-msgstr ""
-
 #: src/pages/party/[partyId]/index.tsx:100
 msgid "See all parties"
 msgstr "Prikaži sve stranke"
@@ -15509,7 +15546,7 @@ msgstr "Prikaži sve {0} ponude"
 msgid "Show cards"
 msgstr "Prikaži kartice"
 
-#: src/pages/user/[userId]/settings.tsx:82
+#: src/pages/user/[userId]/settings.tsx:85
 msgid "Show email"
 msgstr "Prikažite email"
 
@@ -15665,7 +15702,7 @@ msgid "Skin Reward"
 msgstr "Skin nagrada"
 
 #: src/components/_other/shop/ShopHeader.tsx:23
-#: src/pages/shop/index.tsx:202
+#: src/pages/shop/index.tsx:207
 #: src/pages/user/[userId]/index.tsx:112
 msgid "Skins"
 msgstr "Skinovi"
@@ -16095,8 +16132,9 @@ msgstr "Pretplatnici"
 msgid "Success"
 msgstr "Uspjeh"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:199
-#: src/components/_user/auth/ConnectFromModal.tsx:250
+#: src/components/_user/auth/ConnectFromModal.tsx:163
+#: src/components/_user/auth/ConnectFromModal.tsx:231
+#: src/components/_user/auth/ConnectFromModal.tsx:282
 msgid "Successfully logged in!"
 msgstr "Uspješna prijava!"
 
@@ -16108,7 +16146,7 @@ msgstr "Bogati Tatica"
 msgid "Support"
 msgstr "Osobine podrške"
 
-#: src/components/_user/premium/PremiumActions.tsx:60
+#: src/components/_user/premium/PremiumActions.tsx:51
 msgid "Support the game"
 msgstr "Podržite igru"
 
@@ -16152,12 +16190,12 @@ msgstr "Mjeseca supporter"
 msgid "Supporter of the game for <0>{0, plural, one {# month} other {# months}}</0>"
 msgstr "Supporter of the game for <0>{0, plural, one {# mjesec} other {# mjeseca}}</0>"
 
-#: src/components/_user/premium/PremiumCard.tsx:60
+#: src/components/_user/premium/PremiumCard.tsx:62
 msgid "Supporter plan"
 msgstr "Supporter plan"
 
 #: src/components/_user/modals/PremiumModal.tsx:31
-#: src/pages/user/[userId]/settings.tsx:158
+#: src/pages/user/[userId]/settings.tsx:161
 msgid "Supporter Plan"
 msgstr "Supporter plan"
 
@@ -16435,7 +16473,7 @@ msgstr "Prekinuti/e"
 msgid "Terms"
 msgstr "Uvjet"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:563
+#: src/components/_user/auth/ConnectFromModal.tsx:507
 msgid "Terms of Service"
 msgstr "Uvjeti Servisa"
 
@@ -17485,7 +17523,7 @@ msgstr "Naziv"
 msgid "Title font"
 msgstr "Font naslova"
 
-#: src/pages/shop/index.tsx:154
+#: src/pages/shop/index.tsx:157
 msgid "to"
 msgstr "za"
 
@@ -17569,7 +17607,7 @@ msgstr "Kutija s alatom pronađena"
 msgid "Toolbox per hour"
 msgstr "Kutija s alatom po satu"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:597
+#: src/components/_economy/employee/WorkforceSummary.tsx:617
 msgid "Toolboxes per day"
 msgstr "Kutija s alatom po danu"
 
@@ -17626,7 +17664,7 @@ msgstr "Top štete"
 msgid "Top Donors"
 msgstr "Top Donatori"
 
-#: src/pages/shop/index.tsx:97
+#: src/pages/shop/index.tsx:100
 msgid "Top gift givers of the month"
 msgstr "Najveći darivatelji mjeseca"
 
@@ -17716,7 +17754,7 @@ msgstr "Ukupno, prema današnjim cijenama"
 #: src/components/_military/battle/ActiveBattlesList.tsx:81
 #: src/components/_military/battle/ActiveBattlesList.tsx:187
 #: src/components/_military/tournament/TournamentTeamHeader.tsx:65
-#: src/pages/events/index.tsx:190
+#: src/components/_other/events/EventTournament.tsx:31
 msgid "Tournament"
 msgstr "Turnir"
 
@@ -17854,7 +17892,7 @@ msgstr "Preostalo prilika za obuku"
 msgid "Training raises them all."
 msgstr "Obuka povećava iznos vještina zaposlenika."
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:160
+#: src/components/_economy/employee/WorkforceSummary.tsx:161
 msgid "Training still ages them"
 msgstr "I dalje stare kod obuke"
 
@@ -17916,11 +17954,11 @@ msgstr "Problemi u raju"
 msgid "Try it"
 msgstr "Probajte"
 
-#: src/pages/user/[userId]/settings.tsx:137
+#: src/pages/user/[userId]/settings.tsx:140
 msgid "Tutorials"
 msgstr "Vodiči"
 
-#: src/pages/user/[userId]/settings.tsx:59
+#: src/pages/user/[userId]/settings.tsx:62
 msgid "Tutorials reseted"
 msgstr "Vodiči su resetirani"
 
@@ -18094,7 +18132,7 @@ msgstr "Ažurirajte fokus"
 msgid "Update gift"
 msgstr "Poklon za čekanje"
 
-#: src/pages/user/[userId]/settings.tsx:91
+#: src/pages/user/[userId]/settings.tsx:94
 msgid "Update infos"
 msgstr "Ažurirajte informacije"
 
@@ -18275,7 +18313,7 @@ msgid "Username"
 msgstr "Korisničko ime"
 
 #: src/components/_user/user/UserDropdown.tsx:261
-#: src/pages/user/[userId]/settings.tsx:120
+#: src/pages/user/[userId]/settings.tsx:123
 msgid "Username effect"
 msgstr "Efekt korisničkog imena"
 
@@ -18291,7 +18329,7 @@ msgstr "Efekt ažuriran"
 msgid "Username effects are a Supporter Plan feature."
 msgstr "Efekti korisničkog imena su značajka Supportera."
 
-#: src/pages/user/[userId]/settings.tsx:113
+#: src/pages/user/[userId]/settings.tsx:116
 msgid "Username font"
 msgstr "Font koristničkog imena"
 
@@ -18485,10 +18523,6 @@ msgstr "Verifikacijski kod je poslan!"
 msgid "Verify"
 msgstr "Verificiraj"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:405
-msgid "Verifying you're human..."
-msgstr "Potvrđujemo da ste čovjek..."
-
 #: src/components/_economy/employee/employee.traitMeta.ts:122
 msgid "Veteran"
 msgstr "Veteran"
@@ -18588,7 +18622,7 @@ msgid "Wage reduction proposed"
 msgstr "Prijedlog smanjenja plaće"
 
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:61
-#: src/components/_economy/employee/WorkforceSummary.tsx:155
+#: src/components/_economy/employee/WorkforceSummary.tsx:156
 msgid "Wages"
 msgstr "Platna očekivanja"
 
@@ -18846,7 +18880,7 @@ msgid "Won"
 msgstr "Pobjeda"
 
 #: src/components/_military/tournament/TournamentHeader.tsx:91
-#: src/pages/events/index.tsx:116
+#: src/components/_other/events/EventTournament.tsx:99
 msgid "Won by"
 msgstr "Pobjedio"
 
@@ -18872,7 +18906,7 @@ msgstr "Mamut"
 
 #: src/components/_economy/company/WorkButton.tsx:173
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:48
-#: src/components/_economy/employee/WorkforceSummary.tsx:152
+#: src/components/_economy/employee/WorkforceSummary.tsx:153
 #: src/components/_user/mission/mission.frontConfig.tsx:133
 msgid "Work"
 msgstr "Radi"
@@ -18893,7 +18927,7 @@ msgstr "Otkaz radnika"
 msgid "Workers"
 msgstr "Radnici"
 
-#: src/pages/companies.tsx:109
+#: src/components/_economy/employee/WorkforceSummary.tsx:445
 msgid "Workforce"
 msgstr "Radna snaga"
 
@@ -19031,7 +19065,7 @@ msgstr "Već si potpredsjednik druge države. Prvo podnesite ostavku na trenutno
 msgid "You are here"
 msgstr "Vi ste ovdje"
 
-#: src/pages/companies.tsx:82
+#: src/pages/companies.tsx:81
 msgid "You are jobless"
 msgstr "Nezaposleni ste"
 
@@ -19048,7 +19082,7 @@ msgstr "Više niste upravitelj <0/>. Vaših preostalih <1>{0}</1> je isplaćeno"
 msgid "You are not a council member of this party"
 msgstr "Nisi član vijeća ove stranke"
 
-#: src/pages/events/index.tsx:110
+#: src/components/_other/events/EventTournament.tsx:93
 msgid "You are not participating"
 msgstr "Ne sudjeluješ"
 
@@ -19202,7 +19236,7 @@ msgstr "Konzumirao si <0>{0}</0>, efekt počinje sada i završava se za <1>{buff
 msgid "You have enough Concrete for one."
 msgstr "Imate dovoljno Betona na raspolaganju."
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:306
+#: src/components/_economy/employee/WorkforceSummary.tsx:307
 msgid "You have no employees yet"
 msgstr "Još nemate zaposlenika"
 
@@ -19457,7 +19491,7 @@ msgstr "Korisnik je osvojio turnir vojnih jedinica."
 msgid "You worked 100 times"
 msgstr "Korisnik je radio 100 puta."
 
-#: src/components/_user/premium/PremiumCard.tsx:55
+#: src/components/_user/premium/PremiumCard.tsx:57
 msgid "You're already a supporter <0/>"
 msgstr "Već ste Supporter <0/>"
 
@@ -19603,7 +19637,7 @@ msgstr "Vaša trenutna pozicija"
 msgid "Your daily missions have been reset! Complete them to earn rewards."
 msgstr "Vaše dnevne misije su resetirane! Završite ih da zaradite nagrade."
 
-#: src/pages/user/[userId]/settings.tsx:68
+#: src/pages/user/[userId]/settings.tsx:71
 msgid "Your email"
 msgstr "Vaš email"
 
@@ -19705,6 +19739,10 @@ msgstr "Vaša VJ je završila #{rank} u tjednoj ligi."
 msgid "Your MU has <0/> reputation and cannot bid on mercenary contracts. Pay to buy back reputation (once per day)."
 msgstr "Vaša vojna jedinica ima <0/> reputacije i nemože licitirati za plaćeničke ugovore. Plati kako bi povratio reputaciju (jednom dnevno)."
 
+#: src/components/_other/events/EventMuLeague.tsx:75
+msgid "Your MU has no league this week"
+msgstr ""
+
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:107
 msgid "Your MU is registered"
 msgstr "Vaša VJ je već prijavljena"
@@ -19795,7 +19833,7 @@ msgstr "Vaš tim <0/> je eliminiran sa <1/>"
 msgid "Your team <0/> won a round in <1/>!"
 msgstr "Vaš tim <0/> je osvojio rundu u <1/>!"
 
-#: src/pages/events/index.tsx:102
+#: src/components/_other/events/EventTournament.tsx:85
 msgid "Your team:"
 msgstr "Vaš tim:"
 
@@ -19850,7 +19888,7 @@ msgstr "Vaše tjedne misije su resetirane! Završi ih da zaradiš nagrade."
 msgid "Your workforce"
 msgstr "Vaša radna snaga"
 
-#: src/components/_user/auth/ConnectFromModal.tsx:508
+#: src/components/_user/auth/ConnectFromModal.tsx:452
 msgid "your@email.com"
 msgstr "vaš@email.com"
 
