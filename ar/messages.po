@@ -109,7 +109,7 @@ msgid "{0, plural, one {# member} other {# members}}"
 msgstr "{0, plural, one {عضو واحد} two {عضوين} few {# أعضاء} many {# عضوًا} other {# عضو}}"
 
 #. placeholder {0}: poll.totalVoters
-#: src/components/_social/poll/PollCard.tsx:406
+#: src/components/_social/poll/PollCard.tsx:464
 msgid "{0, plural, one {# vote} other {# votes}}"
 msgstr "{0, plural, one {صوت واحد} two {صوتين} few {# أصوات} many {# صوتًا} other {# صوت}}"
 
@@ -119,9 +119,11 @@ msgid "{0, plural, one {# win} other {# wins}}"
 msgstr ""
 
 #. placeholder {0}: data.count
+#. placeholder {0}: giveaway.count
 #. placeholder {0}: giveaway.winnersQuantity ?? 0
 #: src/components/_other/giveaway/GiveawayItem.tsx:31
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:168
+#: src/components/_political/chat/ChatRunningButton.tsx:300
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:171
 msgid "{0, plural, one {# winner} other {# winners}}"
 msgstr "{0, plural, one {فائز واحد} two {فائزين} few {# فائزين} many {# فائزًا} other {# فائز}}"
 
@@ -246,7 +248,7 @@ msgid "{0} is waiting for your decision."
 msgstr "{0} في انتظار قرارك"
 
 #. placeholder {0}: data.entrantsCount
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:201
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:209
 msgid "{0} joined"
 msgstr ""
 
@@ -462,7 +464,7 @@ msgstr "{count, plural, zero {لا توجد عناصر خرافية لتفكيك
 msgid "{count, plural, one {You are about to dismantle # RARE item} other {You are about to dismantle # RARE items}}"
 msgstr "{count, plural, zero {لا توجد عناصر نادرة لتفكيكها} one {أنت على وشك تفكيك عنصر نادر واحد} two {أنت على وشك تفكيك عنصرين نادرين} few {أنت على وشك تفكيك # عناصر نادرة} many {أنت على وشك تفكيك # عنصرًا نادرًا} other {أنت على وشك تفكيك # عنصر نادر}}"
 
-#: src/components/_common/OverflowCount.tsx:58
+#: src/components/_common/OverflowCount.tsx:64
 msgid "{count} more"
 msgstr "المزيد: {count}"
 
@@ -477,6 +479,10 @@ msgstr "{daysAgo, plural, one {منذ يوم واحد} two {منذ يومين} f
 #: src/components/_economy/employeeEvent/EmployeeEventCatalog.tsx:632
 msgid "{delay} after you pick {answer} in {source}."
 msgstr "{delay} بعد اختيارك {answer} في {source}."
+
+#: src/components/_user/subGiftDrop/GiveawayEntrantsModal.tsx:36
+msgid "{entrantsCount} joined"
+msgstr ""
 
 #: src/components/_economy/inventory/DismantleModal.tsx:262
 msgid "{equippedCount, plural, one {# of them is equipped} other {# of them are equipped}}"
@@ -1873,7 +1879,7 @@ msgstr "{selectedCount, plural, one {تفكيك # عنصر مقابل} other {ت
 msgid "{selectedCount} selected"
 msgstr "{selectedCount} محدد"
 
-#: src/components/_social/poll/PollCard.tsx:222
+#: src/components/_social/poll/PollCard.tsx:280
 msgid "{timeLeft} left"
 msgstr "متبقي {timeLeft}"
 
@@ -2773,7 +2779,7 @@ msgid "<0>{0}</0> prestige point to spend on a skill."
 msgstr "<0>{0}</0> نقطة هيبة للإنفاق على مهارة."
 
 #. placeholder {0}: data.refundedGems
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:208
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:221
 msgid "<0>{0}</0> returned to <1/>"
 msgstr ""
 
@@ -4387,7 +4393,7 @@ msgstr "العاصمة المحتلة تثور من تلقاء نفسها عند
 msgid "Anchor"
 msgstr "المرساة"
 
-#: src/components/_common/OverflowCount.tsx:69
+#: src/components/_common/OverflowCount.tsx:75
 msgid "And {rest} more"
 msgstr "و {rest} آخرين"
 
@@ -7426,7 +7432,7 @@ msgstr "اسحب لإعادة الترتيب"
 msgid "Dragon"
 msgstr "تنين"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:137
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:140
 msgid "Draw"
 msgstr ""
 
@@ -7438,7 +7444,7 @@ msgstr ""
 msgid "Draw odds"
 msgstr "احتمالات السحب"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:149
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:152
 msgid "Drawing"
 msgstr ""
 
@@ -7848,7 +7854,7 @@ msgstr "شجعه"
 msgid "End an existing defensive pact with another country"
 msgstr "إنهاء ميثاق دفاع مشترك قائم مع دولة أخرى"
 
-#: src/components/_social/poll/PollCard.tsx:454
+#: src/components/_social/poll/PollCard.tsx:512
 msgid "End poll"
 msgstr "إنهاء الاستطلاع"
 
@@ -7860,14 +7866,14 @@ msgstr "إنهاء ميثاق الدفاع المشترك مع <0/>"
 msgid "End the sponsorship of one of your State Armies"
 msgstr "إنهاء رعاية أحد جيوشك النظامية"
 
-#: src/components/_social/poll/PollCard.tsx:449
+#: src/components/_social/poll/PollCard.tsx:507
 msgid "End this poll?"
 msgstr "هل تريد إنهاء هذا الاستطلاع؟"
 
 #: src/components/_military/battle/BattleSystem.tsx:808
 #: src/components/_military/tournament/TournamentHeader.tsx:85
 #: src/components/_military/war/WarHeader.tsx:70
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:161
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:164
 msgid "Ended"
 msgstr "انتهت"
 
@@ -8959,7 +8965,7 @@ msgstr "أعطِ الرمز الخاص بك اسماً وصفياً لتتمكن
 #: src/components/_other/events/EventGiveaway.tsx:61
 #: src/components/_political/chat/ConversationDropdown.tsx:223
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:108
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:123
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:126
 msgid "Giveaway"
 msgstr "مسابقة"
 
@@ -8986,6 +8992,14 @@ msgstr ""
 #: src/components/_user/notification/notification.frontConfig.tsx:2506
 msgid "Giveaway Won!"
 msgstr "فزت في السحب!"
+
+#: src/components/_political/chat/ChatRunningButton.tsx:181
+msgid "Giveaways"
+msgstr ""
+
+#: src/components/_political/chat/ChatRunningButton.tsx:166
+msgid "Giveaways and polls"
+msgstr ""
 
 #: src/components/_economy/employee/employee.frontConfig.tsx:920
 msgid "Given at 00:00 UTC to whoever works beside them then, and kept until the next reset, even if someone changes company."
@@ -9495,7 +9509,7 @@ msgstr "اخفاء البطاقات"
 msgid "Hide email"
 msgstr "إخفاء البريد الإلكتروني"
 
-#: src/components/_social/poll/PollCard.tsx:421
+#: src/components/_social/poll/PollCard.tsx:479
 msgid "Hide results"
 msgstr "إخفاء النتائج"
 
@@ -10098,7 +10112,7 @@ msgstr "الانضمام إلى التحالف"
 msgid "Join Discord"
 msgstr "انضم للديسكورد"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:276
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:295
 msgid "Join giveaway"
 msgstr ""
 
@@ -10142,7 +10156,8 @@ msgstr "انضم إلى الاضطرابات"
 msgid "Joinable"
 msgstr "تستطيع دخولها"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:102
+#: src/components/_political/chat/ChatRunningButton.tsx:205
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:105
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:68
 msgid "Joined"
 msgstr ""
@@ -10595,7 +10610,7 @@ msgstr "{level} المستوى"
 msgid "Level {level} opens {0}. Claim missions to get there."
 msgstr "يفتح المستوى {level} العنصر {0}. أكمل المهام للوصول إليه."
 
-#: src/components/_social/poll/PollCard.tsx:324
+#: src/components/_social/poll/PollCard.tsx:382
 msgid "Level {minLevel}+"
 msgstr "المستوى {minLevel} فما فوق"
 
@@ -10736,11 +10751,11 @@ msgstr "تحميل إعداد مسبق"
 msgid "Loading {status}..."
 msgstr "جارِ تحميل {status}..."
 
-#: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:63
+#: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:97
 msgid "Loading giveaway..."
 msgstr ""
 
-#: src/components/_social/poll/PollCard.tsx:166
+#: src/components/_social/poll/PollCard.tsx:224
 msgid "Loading poll..."
 msgstr "جارٍ تحميل استطلاع الرأي..."
 
@@ -10766,7 +10781,7 @@ msgstr "<0/> مقيّد بالقوات شبه العسكرية لمدة"
 msgid "Locked until <0/> while <1/> can reclaim the unit."
 msgstr ""
 
-#: src/components/_social/poll/PollCard.tsx:228
+#: src/components/_social/poll/PollCard.tsx:286
 msgid "Log in to vote."
 msgstr "سجّل الدخول للتصويت."
 
@@ -12562,7 +12577,7 @@ msgstr "لا يوجد اسلحة او عتاد لتفكيكهم"
 msgid "No welcome gifts left today"
 msgstr ""
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:193
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:196
 msgid "No winners"
 msgstr ""
 
@@ -12585,6 +12600,10 @@ msgstr "لا ينجز أحد شيئًا. ولا يمانع أحد."
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1557
 msgid "Nobody is happy about it."
 msgstr "لا أحد سعيد بهذا الأمر."
+
+#: src/components/_user/subGiftDrop/GiveawayEntrantsModal.tsx:43
+msgid "Nobody joined yet"
+msgstr ""
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:3584
 msgid "Nobody knows who the party is for. It is a great party."
@@ -12733,7 +12752,7 @@ msgid "Not paid"
 msgstr "غير مدفوع"
 
 #: src/components/_other/tour/TutorialGuidesList.tsx:54
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:129
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:132
 msgid "Not started"
 msgstr "لم يبدأ"
 
@@ -13038,7 +13057,7 @@ msgstr "هو مجرد مؤشر على ما يدعمه الحزب، ويُختا�
 msgid "Only citizens can fight"
 msgstr "يمكن للمواطنين فقط المشاركة في القتال"
 
-#: src/components/_social/poll/PollCard.tsx:233
+#: src/components/_social/poll/PollCard.tsx:291
 msgid "Only citizens of <0/> can vote."
 msgstr "لا يمكن التصويت إلا لمواطني <0/>."
 
@@ -13064,7 +13083,7 @@ msgstr "⁧لا يمكن رعاية سوى الوحدات شبه العسكري�
 msgid "Only players who are already citizens when the poll starts can vote."
 msgstr "لا يمكن التصويت إلا للاعبين الذين كانوا مواطنين بالفعل عند بدء الاستطلاع."
 
-#: src/components/_social/poll/PollCard.tsx:245
+#: src/components/_social/poll/PollCard.tsx:303
 msgid "Only players who were already citizens of <0/> when the poll started can vote."
 msgstr "لا يمكن التصويت إلا للاعبين الذين كانوا بالفعل من مواطني <0/> عند بدء الاستطلاع."
 
@@ -13817,6 +13836,7 @@ msgstr "ازرع شجرة في مركز البيانات"
 msgid "Platinum MU League Champion"
 msgstr ""
 
+#: src/components/_political/chat/ChatRunningButton.tsx:208
 #: src/components/_user/milestone/MilestoneItem.tsx:262
 msgid "Players"
 msgstr "لاعبين"
@@ -13906,13 +13926,17 @@ msgstr ""
 msgid "Poll deleted"
 msgstr ""
 
-#: src/components/_social/poll/PollCard.tsx:155
-#: src/components/_social/poll/PollCard.tsx:221
+#: src/components/_social/poll/PollCard.tsx:213
+#: src/components/_social/poll/PollCard.tsx:279
 msgid "Poll ended"
 msgstr "انتهى الاستطلاع"
 
 #: src/components/_social/poll/PollEditorModal.tsx:110
 msgid "Poll posted"
+msgstr ""
+
+#: src/components/_political/chat/ChatRunningButton.tsx:228
+msgid "Polls"
 msgstr ""
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1682
@@ -14556,7 +14580,7 @@ msgid "Reach a tier, claim its XP."
 msgstr "بلوغ مستوى واجمع نقاط خبرته."
 
 #. placeholder {0}: subGiftDropConfig.entrantMinLevel
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:264
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:283
 msgid "Reach level {0} to join"
 msgstr ""
 
@@ -15023,7 +15047,7 @@ msgstr "إزالة المنصب"
 msgid "Remove the current party leader from their position"
 msgstr "إزالة رئيس الحزب الحالي من منصبه"
 
-#: src/components/_social/poll/PollCard.tsx:436
+#: src/components/_social/poll/PollCard.tsx:494
 msgid "Remove vote"
 msgstr "إزالة التصويت"
 
@@ -15740,11 +15764,11 @@ msgstr "اختر تمييز الخريطة"
 msgid "Select motion type"
 msgstr "اختر نوع المقترح"
 
-#: src/components/_social/poll/PollCard.tsx:310
+#: src/components/_social/poll/PollCard.tsx:368
 msgid "Select one answer"
 msgstr "اختر إجابة واحدة"
 
-#: src/components/_social/poll/PollCard.tsx:308
+#: src/components/_social/poll/PollCard.tsx:366
 msgid "Select one or more answers"
 msgstr "اختر إجابة واحدة أو أكثر"
 
@@ -16019,7 +16043,7 @@ msgstr "عرض المزيد ({0} متبقية)"
 msgid "Show only articles with positive score (score >= -5)"
 msgstr "إظهار المقالات ذات التقييم الإيجابي فقط (التقييم >= -5)"
 
-#: src/components/_social/poll/PollCard.tsx:423
+#: src/components/_social/poll/PollCard.tsx:481
 msgid "Show results"
 msgstr "إظهار النتيجة"
 
@@ -16446,7 +16470,7 @@ msgstr ""
 msgid "starts at 1% and grows +1% per day up to <0>{0}</0>"
 msgstr "يبدأ عند 1% ويزداد +1% يوميًا حتى يصل إلى <0>{0}</0>"
 
-#: src/components/_social/poll/PollCard.tsx:219
+#: src/components/_social/poll/PollCard.tsx:277
 msgid "Starts when the article is published"
 msgstr "يبدأ عند نشر المقال"
 
@@ -16669,9 +16693,10 @@ msgstr "داعم للعبة لمدة <0>{0, plural, one {شهر واحد} two {�
 msgid "Supporter plan"
 msgstr "خطة الدعم"
 
+#: src/components/_political/chat/ChatRunningButton.tsx:308
 #: src/components/_user/modals/PremiumModal.tsx:31
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:127
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:179
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:182
 #: src/pages/user/[userId]/settings.tsx:161
 msgid "Supporter Plan"
 msgstr "خطة الدعم"
@@ -17796,7 +17821,7 @@ msgstr "هذه المعدات خضراء والعشب ايضاً"
 msgid "This feels good, huh?"
 msgstr "شعور جيد، هاه؟"
 
-#: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:65
+#: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:99
 msgid "This giveaway is not available."
 msgstr ""
 
@@ -17888,11 +17913,11 @@ msgstr ".ليس لدى هذا اللاعب دوري هذا الأسبوع"
 msgid "This player is no longer a newcomer"
 msgstr ""
 
-#: src/components/_social/poll/PollCard.tsx:168
+#: src/components/_social/poll/PollCard.tsx:226
 msgid "This poll is not available."
 msgstr "هذا الاستطلاع غير متاح."
 
-#: src/components/_social/poll/PollCard.tsx:256
+#: src/components/_social/poll/PollCard.tsx:314
 msgid "This poll was removed by a moderator."
 msgstr ""
 
@@ -17960,6 +17985,10 @@ msgstr "الوقت"
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:157
 msgid "Time in company"
 msgstr "الوقت في الشركة"
+
+#: src/components/_political/chat/ChatRunningButton.tsx:361
+msgid "Time left"
+msgstr ""
 
 #: src/components/_economy/transaction/TransactionItem.tsx:295
 msgid "Time on market"
@@ -19111,9 +19140,17 @@ msgstr "صوت في انتخابات"
 msgid "Vote in elections"
 msgstr "التصويت في الإنتخابات"
 
+#: src/components/_political/chat/ChatRunningButton.tsx:251
+msgid "Voted"
+msgstr ""
+
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:104
 msgid "Voter"
 msgstr "ناخب"
+
+#: src/components/_political/chat/ChatRunningButton.tsx:253
+msgid "Voters"
+msgstr ""
 
 #: src/components/_political/election/CongressListElection.tsx:155
 #: src/components/_political/election/CongressListElection.tsx:371
@@ -19126,7 +19163,7 @@ msgstr "الأصوات"
 msgid "Votes for the party give seats in this order. Drag the members to change their rank."
 msgstr "تُمنح مقاعد الحزب بناءً على الأصوات وفق هذا الترتيب. اسحب الأعضاء لتغيير ترتيبهم."
 
-#: src/components/_social/poll/PollCard.tsx:450
+#: src/components/_social/poll/PollCard.tsx:508
 msgid "Voting closes now for everyone. This can't be undone."
 msgstr "تم غلق التصويت للجميع. لا يمكن التراجع عن الأمر."
 
@@ -19390,7 +19427,7 @@ msgstr "الفائز"
 msgid "Winners"
 msgstr ""
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:138
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:141
 msgid "Winners are drawn at random among the players who joined."
 msgstr ""
 
@@ -19456,13 +19493,13 @@ msgid "Women only."
 msgstr "نساء فقط"
 
 #: src/components/_political/region/ResistanceBar.tsx:121
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:157
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:160
 msgid "Won"
 msgstr "فاز"
 
 #: src/components/_military/tournament/TournamentHeader.tsx:91
 #: src/components/_other/events/EventTournament.tsx:99
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:191
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:194
 msgid "Won by"
 msgstr "فاز بها"
 
@@ -19629,7 +19666,7 @@ msgstr "لقد حصلت على مكافأته بالفعل."
 msgid "You already have {0} active companies. Disable one first."
 msgstr "لديك بالفعل {0} شركات نشطة. قم بتعطيل واحدة أولاً."
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:257
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:276
 msgid "You already have the Supporter Plan"
 msgstr ""
 
@@ -19908,7 +19945,7 @@ msgstr "لقد ساعدت في ترجمة اللعبة إلى لغة أخرى"
 msgid "You invited a friend or spammed forum posts. After they reach level {0}, you will get the badge + {1}% of all your referrals' badge rewards"
 msgstr "لقد قمت بدعوة صديق أو نشرت مشاركات مكثفة في المنتديات. بعد وصولهم إلى المستوى {0}، ستحصل على الوسام + {1}% من جميع مكافآت أوسمة المدعوين من قبلك"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:250
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:269
 msgid "You joined, good luck"
 msgstr ""
 
@@ -19946,7 +19983,7 @@ msgstr "يجب أن يكون مستواك {minLevel} لشراء المعدات."
 msgid "You need to be level {minLevel} to sell equipment"
 msgstr "كي تبيع المعتاد {minLevel} يجب ان تكون في المستوى"
 
-#: src/components/_social/poll/PollCard.tsx:230
+#: src/components/_social/poll/PollCard.tsx:288
 msgid "You need to be level {minLevel} to vote."
 msgstr "يجب أن يكون مستواك {minLevel} للتصويت."
 

@@ -109,7 +109,7 @@ msgid "{0, plural, one {# member} other {# members}}"
 msgstr "{0, plural, one {# anggota} other {# anggota}}"
 
 #. placeholder {0}: poll.totalVoters
-#: src/components/_social/poll/PollCard.tsx:406
+#: src/components/_social/poll/PollCard.tsx:464
 msgid "{0, plural, one {# vote} other {# votes}}"
 msgstr "{0, plural, one {# suara} other {# suara}}"
 
@@ -119,9 +119,11 @@ msgid "{0, plural, one {# win} other {# wins}}"
 msgstr ""
 
 #. placeholder {0}: data.count
+#. placeholder {0}: giveaway.count
 #. placeholder {0}: giveaway.winnersQuantity ?? 0
 #: src/components/_other/giveaway/GiveawayItem.tsx:31
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:168
+#: src/components/_political/chat/ChatRunningButton.tsx:300
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:171
 msgid "{0, plural, one {# winner} other {# winners}}"
 msgstr "{0, plural, one {# pemenang} other {# pemenang}}"
 
@@ -246,7 +248,7 @@ msgid "{0} is waiting for your decision."
 msgstr "{0} sedang menunggu keputusanmu."
 
 #. placeholder {0}: data.entrantsCount
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:201
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:209
 msgid "{0} joined"
 msgstr ""
 
@@ -462,7 +464,7 @@ msgstr ""
 msgid "{count, plural, one {You are about to dismantle # RARE item} other {You are about to dismantle # RARE items}}"
 msgstr ""
 
-#: src/components/_common/OverflowCount.tsx:58
+#: src/components/_common/OverflowCount.tsx:64
 msgid "{count} more"
 msgstr ""
 
@@ -477,6 +479,10 @@ msgstr "{daysAgo, plural, one {# hari lalu} other {# hari lalu}}"
 #: src/components/_economy/employeeEvent/EmployeeEventCatalog.tsx:632
 msgid "{delay} after you pick {answer} in {source}."
 msgstr "{delay} setelah kamu memilih {answer} di {source}."
+
+#: src/components/_user/subGiftDrop/GiveawayEntrantsModal.tsx:36
+msgid "{entrantsCount} joined"
+msgstr ""
 
 #: src/components/_economy/inventory/DismantleModal.tsx:262
 msgid "{equippedCount, plural, one {# of them is equipped} other {# of them are equipped}}"
@@ -1873,7 +1879,7 @@ msgstr "{selectedCount, plural, one {Bongkar # item untuk} other {Bongkar # item
 msgid "{selectedCount} selected"
 msgstr "{selectedCount} dipilih"
 
-#: src/components/_social/poll/PollCard.tsx:222
+#: src/components/_social/poll/PollCard.tsx:280
 msgid "{timeLeft} left"
 msgstr "{timeLeft} tersisa"
 
@@ -2773,7 +2779,7 @@ msgid "<0>{0}</0> prestige point to spend on a skill."
 msgstr "<0>{0}</0> poin prestise yang bisa kamu gunakan untuk skill."
 
 #. placeholder {0}: data.refundedGems
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:208
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:221
 msgid "<0>{0}</0> returned to <1/>"
 msgstr ""
 
@@ -4387,7 +4393,7 @@ msgstr "Ibu kota yang diduduki akan memberontak secara otomatis saat tingkat per
 msgid "Anchor"
 msgstr "Andalan"
 
-#: src/components/_common/OverflowCount.tsx:69
+#: src/components/_common/OverflowCount.tsx:75
 msgid "And {rest} more"
 msgstr ""
 
@@ -7426,7 +7432,7 @@ msgstr "Seret untuk mengubah urutan"
 msgid "Dragon"
 msgstr "Naga"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:137
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:140
 msgid "Draw"
 msgstr ""
 
@@ -7438,7 +7444,7 @@ msgstr ""
 msgid "Draw odds"
 msgstr "Peluang mendapatkan kartu"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:149
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:152
 msgid "Drawing"
 msgstr ""
 
@@ -7848,7 +7854,7 @@ msgstr "Dorong hal tersebut"
 msgid "End an existing defensive pact with another country"
 msgstr "Akhiri pakta pertahanan yang ada dengan negara lain"
 
-#: src/components/_social/poll/PollCard.tsx:454
+#: src/components/_social/poll/PollCard.tsx:512
 msgid "End poll"
 msgstr "Akhiri poll pendapat"
 
@@ -7860,14 +7866,14 @@ msgstr "Akhiri pakta pertahanan dengan <0/>."
 msgid "End the sponsorship of one of your State Armies"
 msgstr ""
 
-#: src/components/_social/poll/PollCard.tsx:449
+#: src/components/_social/poll/PollCard.tsx:507
 msgid "End this poll?"
 msgstr "Akhiri poll pendapat ini?"
 
 #: src/components/_military/battle/BattleSystem.tsx:808
 #: src/components/_military/tournament/TournamentHeader.tsx:85
 #: src/components/_military/war/WarHeader.tsx:70
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:161
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:164
 msgid "Ended"
 msgstr "Selesai"
 
@@ -8959,7 +8965,7 @@ msgstr "Beri tokenmu nama yang jelas agar mudah dikenali nanti."
 #: src/components/_other/events/EventGiveaway.tsx:61
 #: src/components/_political/chat/ConversationDropdown.tsx:223
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:108
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:123
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:126
 msgid "Giveaway"
 msgstr ""
 
@@ -8986,6 +8992,14 @@ msgstr ""
 #: src/components/_user/notification/notification.frontConfig.tsx:2506
 msgid "Giveaway Won!"
 msgstr "Giveaway Dimenangkan!"
+
+#: src/components/_political/chat/ChatRunningButton.tsx:181
+msgid "Giveaways"
+msgstr ""
+
+#: src/components/_political/chat/ChatRunningButton.tsx:166
+msgid "Giveaways and polls"
+msgstr ""
 
 #: src/components/_economy/employee/employee.frontConfig.tsx:920
 msgid "Given at 00:00 UTC to whoever works beside them then, and kept until the next reset, even if someone changes company."
@@ -9495,7 +9509,7 @@ msgstr ""
 msgid "Hide email"
 msgstr "Sembunyikan email"
 
-#: src/components/_social/poll/PollCard.tsx:421
+#: src/components/_social/poll/PollCard.tsx:479
 msgid "Hide results"
 msgstr "Sembunyikan hasil"
 
@@ -10098,7 +10112,7 @@ msgstr "Bergabung dengan aliansi"
 msgid "Join Discord"
 msgstr "Bergabung dengan Discord"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:276
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:295
 msgid "Join giveaway"
 msgstr ""
 
@@ -10142,7 +10156,8 @@ msgstr "Ikut dalam kerusuhan"
 msgid "Joinable"
 msgstr "Dapat diikuti"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:102
+#: src/components/_political/chat/ChatRunningButton.tsx:205
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:105
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:68
 msgid "Joined"
 msgstr ""
@@ -10595,7 +10610,7 @@ msgstr "Level: {level}"
 msgid "Level {level} opens {0}. Claim missions to get there."
 msgstr "Level {level} membuka {0}. Klaim misi untuk mencapai level tersebut."
 
-#: src/components/_social/poll/PollCard.tsx:324
+#: src/components/_social/poll/PollCard.tsx:382
 msgid "Level {minLevel}+"
 msgstr "Level {minLevel} ke atas"
 
@@ -10736,11 +10751,11 @@ msgstr "Muat preset"
 msgid "Loading {status}..."
 msgstr "Memuat {status}..."
 
-#: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:63
+#: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:97
 msgid "Loading giveaway..."
 msgstr ""
 
-#: src/components/_social/poll/PollCard.tsx:166
+#: src/components/_social/poll/PollCard.tsx:224
 msgid "Loading poll..."
 msgstr "Memuat polling pendapat..."
 
@@ -10766,7 +10781,7 @@ msgstr ""
 msgid "Locked until <0/> while <1/> can reclaim the unit."
 msgstr ""
 
-#: src/components/_social/poll/PollCard.tsx:228
+#: src/components/_social/poll/PollCard.tsx:286
 msgid "Log in to vote."
 msgstr "Masuk untuk memberikan suara."
 
@@ -12562,7 +12577,7 @@ msgstr "Tidak ada senjata atau perlengkapan untuk dibongkar"
 msgid "No welcome gifts left today"
 msgstr ""
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:193
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:196
 msgid "No winners"
 msgstr ""
 
@@ -12585,6 +12600,10 @@ msgstr "Tidak ada yang menyelesaikan apa pun. Tidak ada yang keberatan."
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1557
 msgid "Nobody is happy about it."
 msgstr "Tidak ada yang senang soal itu."
+
+#: src/components/_user/subGiftDrop/GiveawayEntrantsModal.tsx:43
+msgid "Nobody joined yet"
+msgstr ""
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:3584
 msgid "Nobody knows who the party is for. It is a great party."
@@ -12733,7 +12752,7 @@ msgid "Not paid"
 msgstr "Tidak dibayar"
 
 #: src/components/_other/tour/TutorialGuidesList.tsx:54
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:129
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:132
 msgid "Not started"
 msgstr "Belum dimulai"
 
@@ -13038,7 +13057,7 @@ msgstr "Ini hanya menunjukkan bentuk pemerintahan yang didukung partai, berdasar
 msgid "Only citizens can fight"
 msgstr ""
 
-#: src/components/_social/poll/PollCard.tsx:233
+#: src/components/_social/poll/PollCard.tsx:291
 msgid "Only citizens of <0/> can vote."
 msgstr "Hanya warga <0/> yang dapat memilih."
 
@@ -13064,7 +13083,7 @@ msgstr ""
 msgid "Only players who are already citizens when the poll starts can vote."
 msgstr "Hanya pemain yang sudah menjadi warga saat polling dimulai yang dapat memilih."
 
-#: src/components/_social/poll/PollCard.tsx:245
+#: src/components/_social/poll/PollCard.tsx:303
 msgid "Only players who were already citizens of <0/> when the poll started can vote."
 msgstr "Hanya pemain yang sudah menjadi warga <0/> saat polling dimulai yang dapat memilih."
 
@@ -13817,6 +13836,7 @@ msgstr "Tanam pohon di data center"
 msgid "Platinum MU League Champion"
 msgstr ""
 
+#: src/components/_political/chat/ChatRunningButton.tsx:208
 #: src/components/_user/milestone/MilestoneItem.tsx:262
 msgid "Players"
 msgstr "Pemain"
@@ -13906,13 +13926,17 @@ msgstr ""
 msgid "Poll deleted"
 msgstr ""
 
-#: src/components/_social/poll/PollCard.tsx:155
-#: src/components/_social/poll/PollCard.tsx:221
+#: src/components/_social/poll/PollCard.tsx:213
+#: src/components/_social/poll/PollCard.tsx:279
 msgid "Poll ended"
 msgstr "Polling berakhir"
 
 #: src/components/_social/poll/PollEditorModal.tsx:110
 msgid "Poll posted"
+msgstr ""
+
+#: src/components/_political/chat/ChatRunningButton.tsx:228
+msgid "Polls"
 msgstr ""
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1682
@@ -14556,7 +14580,7 @@ msgid "Reach a tier, claim its XP."
 msgstr "Capai sebuah tier, klaim XP-nya."
 
 #. placeholder {0}: subGiftDropConfig.entrantMinLevel
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:264
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:283
 msgid "Reach level {0} to join"
 msgstr ""
 
@@ -15023,7 +15047,7 @@ msgstr "Hapus posisi"
 msgid "Remove the current party leader from their position"
 msgstr "Copot ketua partai saat ini dari jabatannya"
 
-#: src/components/_social/poll/PollCard.tsx:436
+#: src/components/_social/poll/PollCard.tsx:494
 msgid "Remove vote"
 msgstr "Hapus suara"
 
@@ -15740,11 +15764,11 @@ msgstr "Pilih aksen peta"
 msgid "Select motion type"
 msgstr "Pilih jenis mosi"
 
-#: src/components/_social/poll/PollCard.tsx:310
+#: src/components/_social/poll/PollCard.tsx:368
 msgid "Select one answer"
 msgstr "Pilih satu jawaban"
 
-#: src/components/_social/poll/PollCard.tsx:308
+#: src/components/_social/poll/PollCard.tsx:366
 msgid "Select one or more answers"
 msgstr "Pilih satu atau beberapa jawaban"
 
@@ -16019,7 +16043,7 @@ msgstr "Tampilkan lebih banyak (sisa {0})"
 msgid "Show only articles with positive score (score >= -5)"
 msgstr "Hanya tampilkan artikel dengan skor positif (skor >= -5)"
 
-#: src/components/_social/poll/PollCard.tsx:423
+#: src/components/_social/poll/PollCard.tsx:481
 msgid "Show results"
 msgstr "Tampilkan hasil"
 
@@ -16446,7 +16470,7 @@ msgstr ""
 msgid "starts at 1% and grows +1% per day up to <0>{0}</0>"
 msgstr "dimulai dari 1% dan naik +1% per hari hingga <0>{0}</0>"
 
-#: src/components/_social/poll/PollCard.tsx:219
+#: src/components/_social/poll/PollCard.tsx:277
 msgid "Starts when the article is published"
 msgstr "Dimulai saat artikel diterbitkan"
 
@@ -16669,9 +16693,10 @@ msgstr "Telah mendukung game ini selama <0>{0, plural, one {# bulan} other {# bu
 msgid "Supporter plan"
 msgstr "Paket Supporter"
 
+#: src/components/_political/chat/ChatRunningButton.tsx:308
 #: src/components/_user/modals/PremiumModal.tsx:31
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:127
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:179
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:182
 #: src/pages/user/[userId]/settings.tsx:161
 msgid "Supporter Plan"
 msgstr "Paket Supporter"
@@ -17796,7 +17821,7 @@ msgstr "Perlengkapan ini hijau, seperti rumput"
 msgid "This feels good, huh?"
 msgstr "Enak, kan?"
 
-#: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:65
+#: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:99
 msgid "This giveaway is not available."
 msgstr ""
 
@@ -17888,11 +17913,11 @@ msgstr ""
 msgid "This player is no longer a newcomer"
 msgstr ""
 
-#: src/components/_social/poll/PollCard.tsx:168
+#: src/components/_social/poll/PollCard.tsx:226
 msgid "This poll is not available."
 msgstr "Polling ini tidak tersedia."
 
-#: src/components/_social/poll/PollCard.tsx:256
+#: src/components/_social/poll/PollCard.tsx:314
 msgid "This poll was removed by a moderator."
 msgstr ""
 
@@ -17959,6 +17984,10 @@ msgstr ""
 
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:157
 msgid "Time in company"
+msgstr ""
+
+#: src/components/_political/chat/ChatRunningButton.tsx:361
+msgid "Time left"
 msgstr ""
 
 #: src/components/_economy/transaction/TransactionItem.tsx:295
@@ -19111,9 +19140,17 @@ msgstr "memilih dalam sebuah pemilihan"
 msgid "Vote in elections"
 msgstr "memilih dalam pemilihan"
 
+#: src/components/_political/chat/ChatRunningButton.tsx:251
+msgid "Voted"
+msgstr ""
+
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:104
 msgid "Voter"
 msgstr "Pemilih"
+
+#: src/components/_political/chat/ChatRunningButton.tsx:253
+msgid "Voters"
+msgstr ""
 
 #: src/components/_political/election/CongressListElection.tsx:155
 #: src/components/_political/election/CongressListElection.tsx:371
@@ -19126,7 +19163,7 @@ msgstr "Suara"
 msgid "Votes for the party give seats in this order. Drag the members to change their rank."
 msgstr "Kursi yang diperoleh dari suara partai akan dibagikan sesuai urutan ini. Seret anggota untuk mengubah urutan mereka."
 
-#: src/components/_social/poll/PollCard.tsx:450
+#: src/components/_social/poll/PollCard.tsx:508
 msgid "Voting closes now for everyone. This can't be undone."
 msgstr "Pemungutan suara ditutup untuk semua orang. Tindakan ini tidak dapat dibatalkan."
 
@@ -19390,7 +19427,7 @@ msgstr "Pemenang"
 msgid "Winners"
 msgstr ""
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:138
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:141
 msgid "Winners are drawn at random among the players who joined."
 msgstr ""
 
@@ -19456,13 +19493,13 @@ msgid "Women only."
 msgstr "Khusus wanita."
 
 #: src/components/_political/region/ResistanceBar.tsx:121
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:157
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:160
 msgid "Won"
 msgstr ""
 
 #: src/components/_military/tournament/TournamentHeader.tsx:91
 #: src/components/_other/events/EventTournament.tsx:99
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:191
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:194
 msgid "Won by"
 msgstr "Dimenangkan oleh"
 
@@ -19629,7 +19666,7 @@ msgstr "Kamu sudah menerima hadiahnya."
 msgid "You already have {0} active companies. Disable one first."
 msgstr "Kamu sudah punya {0} perusahaan aktif. Nonaktifkan satu dulu."
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:257
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:276
 msgid "You already have the Supporter Plan"
 msgstr ""
 
@@ -19908,7 +19945,7 @@ msgstr "Kamu membantu menerjemahkan game ke bahasa lain"
 msgid "You invited a friend or spammed forum posts. After they reach level {0}, you will get the badge + {1}% of all your referrals' badge rewards"
 msgstr "Kamu mengundang teman atau spam posting di forum. Setelah mereka mencapai level {0}, kamu akan mendapatkan badge + {1}% dari semua hadiah badge referralmu"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:250
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:269
 msgid "You joined, good luck"
 msgstr ""
 
@@ -19946,7 +19983,7 @@ msgstr "Kamu harus mencapai level {minLevel} untuk bisa membeli perlengkapan."
 msgid "You need to be level {minLevel} to sell equipment"
 msgstr "Kamu harus mencapai level {minLevel} untuk bisa menjual perlengkapan"
 
-#: src/components/_social/poll/PollCard.tsx:230
+#: src/components/_social/poll/PollCard.tsx:288
 msgid "You need to be level {minLevel} to vote."
 msgstr "Kamu harus mencapai level {minLevel} untuk bisa ikut memilih."
 

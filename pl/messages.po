@@ -109,7 +109,7 @@ msgid "{0, plural, one {# member} other {# members}}"
 msgstr "{0, plural, one {# członek} other {# członków}}"
 
 #. placeholder {0}: poll.totalVoters
-#: src/components/_social/poll/PollCard.tsx:406
+#: src/components/_social/poll/PollCard.tsx:464
 msgid "{0, plural, one {# vote} other {# votes}}"
 msgstr "{0, plural, one {# głos} other {# głosów}}"
 
@@ -119,9 +119,11 @@ msgid "{0, plural, one {# win} other {# wins}}"
 msgstr ""
 
 #. placeholder {0}: data.count
+#. placeholder {0}: giveaway.count
 #. placeholder {0}: giveaway.winnersQuantity ?? 0
 #: src/components/_other/giveaway/GiveawayItem.tsx:31
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:168
+#: src/components/_political/chat/ChatRunningButton.tsx:300
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:171
 msgid "{0, plural, one {# winner} other {# winners}}"
 msgstr "{0, plural, one {# zwycięzca} other {# zwycięzców}}"
 
@@ -246,7 +248,7 @@ msgid "{0} is waiting for your decision."
 msgstr "{0} czeka na Twoją decyzje."
 
 #. placeholder {0}: data.entrantsCount
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:201
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:209
 msgid "{0} joined"
 msgstr ""
 
@@ -462,7 +464,7 @@ msgstr "{count, plural, one {Masz zamiar zdemontować # MITYCZNY przedmiot!!!} o
 msgid "{count, plural, one {You are about to dismantle # RARE item} other {You are about to dismantle # RARE items}}"
 msgstr "{count, plural, one {Masz zamiar zdemontować # RZADKI przedmiot} other {Masz zamiar zdemontować # RZADKIE przedmioty}}"
 
-#: src/components/_common/OverflowCount.tsx:58
+#: src/components/_common/OverflowCount.tsx:64
 msgid "{count} more"
 msgstr "{count} więcej"
 
@@ -477,6 +479,10 @@ msgstr "{daysAgo, plural, one {# dzień temu} other {# dni temu}}"
 #: src/components/_economy/employeeEvent/EmployeeEventCatalog.tsx:632
 msgid "{delay} after you pick {answer} in {source}."
 msgstr "{delay} po Twoim wyborze {answer} w {source}."
+
+#: src/components/_user/subGiftDrop/GiveawayEntrantsModal.tsx:36
+msgid "{entrantsCount} joined"
+msgstr ""
 
 #: src/components/_economy/inventory/DismantleModal.tsx:262
 msgid "{equippedCount, plural, one {# of them is equipped} other {# of them are equipped}}"
@@ -1873,7 +1879,7 @@ msgstr "{selectedCount, plural, one {Rozmontuj # przedmiot za} few {Rozmontuj # 
 msgid "{selectedCount} selected"
 msgstr "{selectedCount} wybrano"
 
-#: src/components/_social/poll/PollCard.tsx:222
+#: src/components/_social/poll/PollCard.tsx:280
 msgid "{timeLeft} left"
 msgstr "pozostało {timeLeft}"
 
@@ -2773,7 +2779,7 @@ msgid "<0>{0}</0> prestige point to spend on a skill."
 msgstr "<0>{0}</0> punktu prestiżu do wydania na umiejętność."
 
 #. placeholder {0}: data.refundedGems
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:208
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:221
 msgid "<0>{0}</0> returned to <1/>"
 msgstr ""
 
@@ -4387,7 +4393,7 @@ msgstr "Okupowana stolica buntuje się sama z siebie przy maksymalnym oporze"
 msgid "Anchor"
 msgstr "Kotwica"
 
-#: src/components/_common/OverflowCount.tsx:69
+#: src/components/_common/OverflowCount.tsx:75
 msgid "And {rest} more"
 msgstr "I {rest} więcej"
 
@@ -7426,7 +7432,7 @@ msgstr "Przeciągnij, aby zmienić kolejność"
 msgid "Dragon"
 msgstr "Smok"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:137
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:140
 msgid "Draw"
 msgstr ""
 
@@ -7438,7 +7444,7 @@ msgstr ""
 msgid "Draw odds"
 msgstr "Szanse losowania"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:149
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:152
 msgid "Drawing"
 msgstr ""
 
@@ -7848,7 +7854,7 @@ msgstr "Wspieraj to"
 msgid "End an existing defensive pact with another country"
 msgstr "Zakończ istniejący pakt obronny z innym krajem"
 
-#: src/components/_social/poll/PollCard.tsx:454
+#: src/components/_social/poll/PollCard.tsx:512
 msgid "End poll"
 msgstr "Zakończ ankietę"
 
@@ -7860,14 +7866,14 @@ msgstr "Zakończ pakt obronny z <0/>."
 msgid "End the sponsorship of one of your State Armies"
 msgstr "Zakończ sponsorowanie jednej z Armii Krajowych"
 
-#: src/components/_social/poll/PollCard.tsx:449
+#: src/components/_social/poll/PollCard.tsx:507
 msgid "End this poll?"
 msgstr "Zakończyć ankietę?"
 
 #: src/components/_military/battle/BattleSystem.tsx:808
 #: src/components/_military/tournament/TournamentHeader.tsx:85
 #: src/components/_military/war/WarHeader.tsx:70
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:161
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:164
 msgid "Ended"
 msgstr "Zakończona"
 
@@ -8959,7 +8965,7 @@ msgstr "Nadaj tokenowi opisową nazwę, aby móc go później zidentyfikować."
 #: src/components/_other/events/EventGiveaway.tsx:61
 #: src/components/_political/chat/ConversationDropdown.tsx:223
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:108
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:123
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:126
 msgid "Giveaway"
 msgstr "Konkurs"
 
@@ -8986,6 +8992,14 @@ msgstr ""
 #: src/components/_user/notification/notification.frontConfig.tsx:2506
 msgid "Giveaway Won!"
 msgstr "Wygrana w konkursie!"
+
+#: src/components/_political/chat/ChatRunningButton.tsx:181
+msgid "Giveaways"
+msgstr ""
+
+#: src/components/_political/chat/ChatRunningButton.tsx:166
+msgid "Giveaways and polls"
+msgstr ""
 
 #: src/components/_economy/employee/employee.frontConfig.tsx:920
 msgid "Given at 00:00 UTC to whoever works beside them then, and kept until the next reset, even if someone changes company."
@@ -9495,7 +9509,7 @@ msgstr "Ukryj karty"
 msgid "Hide email"
 msgstr "Ukryj emial"
 
-#: src/components/_social/poll/PollCard.tsx:421
+#: src/components/_social/poll/PollCard.tsx:479
 msgid "Hide results"
 msgstr "Ukryj wyniki"
 
@@ -10098,7 +10112,7 @@ msgstr "Dołącz do sojuszu"
 msgid "Join Discord"
 msgstr "Dołącz do Discorda"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:276
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:295
 msgid "Join giveaway"
 msgstr ""
 
@@ -10142,7 +10156,8 @@ msgstr "Wzburz niepokój"
 msgid "Joinable"
 msgstr "Można dołączyć"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:102
+#: src/components/_political/chat/ChatRunningButton.tsx:205
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:105
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:68
 msgid "Joined"
 msgstr ""
@@ -10595,7 +10610,7 @@ msgstr "Poziom {level}"
 msgid "Level {level} opens {0}. Claim missions to get there."
 msgstr "Poziom {level} otwiera {0}. Odbierz misje, aby tam dotrzeć."
 
-#: src/components/_social/poll/PollCard.tsx:324
+#: src/components/_social/poll/PollCard.tsx:382
 msgid "Level {minLevel}+"
 msgstr "Poziom {minLevel}+"
 
@@ -10736,11 +10751,11 @@ msgstr "Wczytaj szablon"
 msgid "Loading {status}..."
 msgstr "Ładowanie {status}..."
 
-#: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:63
+#: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:97
 msgid "Loading giveaway..."
 msgstr ""
 
-#: src/components/_social/poll/PollCard.tsx:166
+#: src/components/_social/poll/PollCard.tsx:224
 msgid "Loading poll..."
 msgstr "Ładowanie ankiety..."
 
@@ -10766,7 +10781,7 @@ msgstr "Zablokowana jako Paramilitarna na <0/>"
 msgid "Locked until <0/> while <1/> can reclaim the unit."
 msgstr ""
 
-#: src/components/_social/poll/PollCard.tsx:228
+#: src/components/_social/poll/PollCard.tsx:286
 msgid "Log in to vote."
 msgstr "Zaloguj się, by głosować"
 
@@ -12562,7 +12577,7 @@ msgstr "Brak broni bądź wyposażenia do rozmotowania"
 msgid "No welcome gifts left today"
 msgstr ""
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:193
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:196
 msgid "No winners"
 msgstr ""
 
@@ -12585,6 +12600,10 @@ msgstr "Nikt nic nie robi. Nikomu to nie przeszkadza."
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1557
 msgid "Nobody is happy about it."
 msgstr "Nikt nie jest z tego powodu szczęśliwy."
+
+#: src/components/_user/subGiftDrop/GiveawayEntrantsModal.tsx:43
+msgid "Nobody joined yet"
+msgstr ""
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:3584
 msgid "Nobody knows who the party is for. It is a great party."
@@ -12733,7 +12752,7 @@ msgid "Not paid"
 msgstr "Nieopłacony"
 
 #: src/components/_other/tour/TutorialGuidesList.tsx:54
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:129
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:132
 msgid "Not started"
 msgstr "Nieropoczęty"
 
@@ -13038,7 +13057,7 @@ msgstr "Wskazuje jedynie stanowisko partii uchwalone przez radę. Nie wpływa na
 msgid "Only citizens can fight"
 msgstr "Tylko obywatele mogą walczyć"
 
-#: src/components/_social/poll/PollCard.tsx:233
+#: src/components/_social/poll/PollCard.tsx:291
 msgid "Only citizens of <0/> can vote."
 msgstr "Tylko obywatele <0/> mogą głosować."
 
@@ -13064,7 +13083,7 @@ msgstr "Wyłącznie jednostki Paramilitarne Twojej narodowości mogą być spons
 msgid "Only players who are already citizens when the poll starts can vote."
 msgstr "Tylko gracze, którzy są już obywatelami podczas rozpoczęcia głosowania mogą wziąć udział."
 
-#: src/components/_social/poll/PollCard.tsx:245
+#: src/components/_social/poll/PollCard.tsx:303
 msgid "Only players who were already citizens of <0/> when the poll started can vote."
 msgstr "Tylko gracze, którz są już obywatelami <0/> podczas rozpoczęcia głosowania mogą wziąć udział."
 
@@ -13817,6 +13836,7 @@ msgstr "Zasadź drzewo w centrum danych"
 msgid "Platinum MU League Champion"
 msgstr ""
 
+#: src/components/_political/chat/ChatRunningButton.tsx:208
 #: src/components/_user/milestone/MilestoneItem.tsx:262
 msgid "Players"
 msgstr "Gracze"
@@ -13906,13 +13926,17 @@ msgstr ""
 msgid "Poll deleted"
 msgstr ""
 
-#: src/components/_social/poll/PollCard.tsx:155
-#: src/components/_social/poll/PollCard.tsx:221
+#: src/components/_social/poll/PollCard.tsx:213
+#: src/components/_social/poll/PollCard.tsx:279
 msgid "Poll ended"
 msgstr "Ankieta zakończona"
 
 #: src/components/_social/poll/PollEditorModal.tsx:110
 msgid "Poll posted"
+msgstr ""
+
+#: src/components/_political/chat/ChatRunningButton.tsx:228
+msgid "Polls"
 msgstr ""
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1682
@@ -14556,7 +14580,7 @@ msgid "Reach a tier, claim its XP."
 msgstr "Osiągnij szczebel, zdobądź XP."
 
 #. placeholder {0}: subGiftDropConfig.entrantMinLevel
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:264
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:283
 msgid "Reach level {0} to join"
 msgstr ""
 
@@ -15023,7 +15047,7 @@ msgstr "Usuń stanowisko"
 msgid "Remove the current party leader from their position"
 msgstr "Usuń obecnego lidera partii z jego stanowiska"
 
-#: src/components/_social/poll/PollCard.tsx:436
+#: src/components/_social/poll/PollCard.tsx:494
 msgid "Remove vote"
 msgstr "Usuń głos"
 
@@ -15740,11 +15764,11 @@ msgstr "Wybierz akcent mapy"
 msgid "Select motion type"
 msgstr "Wybierz typ uchwały"
 
-#: src/components/_social/poll/PollCard.tsx:310
+#: src/components/_social/poll/PollCard.tsx:368
 msgid "Select one answer"
 msgstr "Wybierz jedną odpowiedź"
 
-#: src/components/_social/poll/PollCard.tsx:308
+#: src/components/_social/poll/PollCard.tsx:366
 msgid "Select one or more answers"
 msgstr "Wybierz jedną lub więcej odpowiedzi"
 
@@ -16019,7 +16043,7 @@ msgstr "Pokaż więcej ({0} pozostałych)"
 msgid "Show only articles with positive score (score >= -5)"
 msgstr "Pokaż wyłącznie artykuły o dodatniej ocenie (score >= -5)"
 
-#: src/components/_social/poll/PollCard.tsx:423
+#: src/components/_social/poll/PollCard.tsx:481
 msgid "Show results"
 msgstr "Pokaż wyniki"
 
@@ -16446,7 +16470,7 @@ msgstr ""
 msgid "starts at 1% and grows +1% per day up to <0>{0}</0>"
 msgstr "zaczyna się od 1% i rośnie +1% każdego dnia aż do <0>{0}</0>"
 
-#: src/components/_social/poll/PollCard.tsx:219
+#: src/components/_social/poll/PollCard.tsx:277
 msgid "Starts when the article is published"
 msgstr "Zaczyna się, gdy artykuł zostaje upubliczniony"
 
@@ -16669,9 +16693,10 @@ msgstr "Wspierajacy grę od <0>{0, plural, one {# miesiąca} other {# miesięcy}
 msgid "Supporter plan"
 msgstr "Plan Wspierającego"
 
+#: src/components/_political/chat/ChatRunningButton.tsx:308
 #: src/components/_user/modals/PremiumModal.tsx:31
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:127
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:179
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:182
 #: src/pages/user/[userId]/settings.tsx:161
 msgid "Supporter Plan"
 msgstr "Plan Wspierającego"
@@ -17796,7 +17821,7 @@ msgstr "Ten przedmiot jest zielony jak trawa"
 msgid "This feels good, huh?"
 msgstr "Miłe uczucie, co?"
 
-#: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:65
+#: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:99
 msgid "This giveaway is not available."
 msgstr ""
 
@@ -17888,11 +17913,11 @@ msgstr "Ten gracz nie uczestniczy w lidze w tym tygodniu."
 msgid "This player is no longer a newcomer"
 msgstr ""
 
-#: src/components/_social/poll/PollCard.tsx:168
+#: src/components/_social/poll/PollCard.tsx:226
 msgid "This poll is not available."
 msgstr "Ten wybór jest niedostępny."
 
-#: src/components/_social/poll/PollCard.tsx:256
+#: src/components/_social/poll/PollCard.tsx:314
 msgid "This poll was removed by a moderator."
 msgstr ""
 
@@ -17960,6 +17985,10 @@ msgstr "Czas"
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:157
 msgid "Time in company"
 msgstr "Czas w firmie"
+
+#: src/components/_political/chat/ChatRunningButton.tsx:361
+msgid "Time left"
+msgstr ""
 
 #: src/components/_economy/transaction/TransactionItem.tsx:295
 msgid "Time on market"
@@ -19111,9 +19140,17 @@ msgstr "Głosuj w wyborach"
 msgid "Vote in elections"
 msgstr "Zagłosuj w wyborach"
 
+#: src/components/_political/chat/ChatRunningButton.tsx:251
+msgid "Voted"
+msgstr ""
+
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:104
 msgid "Voter"
 msgstr "Głosujący"
+
+#: src/components/_political/chat/ChatRunningButton.tsx:253
+msgid "Voters"
+msgstr ""
 
 #: src/components/_political/election/CongressListElection.tsx:155
 #: src/components/_political/election/CongressListElection.tsx:371
@@ -19126,7 +19163,7 @@ msgstr "Głosy"
 msgid "Votes for the party give seats in this order. Drag the members to change their rank."
 msgstr "Mandaty przyznawane są według poniższej kolejności głosów na partię. Przeciągnij osoby, aby zmienić ich pozycję."
 
-#: src/components/_social/poll/PollCard.tsx:450
+#: src/components/_social/poll/PollCard.tsx:508
 msgid "Voting closes now for everyone. This can't be undone."
 msgstr "Głosowanie kończy się dla każdego. Nie można tego cofnąć."
 
@@ -19390,7 +19427,7 @@ msgstr "Zwycięzca"
 msgid "Winners"
 msgstr ""
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:138
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:141
 msgid "Winners are drawn at random among the players who joined."
 msgstr ""
 
@@ -19456,13 +19493,13 @@ msgid "Women only."
 msgstr "Tylko kobiety."
 
 #: src/components/_political/region/ResistanceBar.tsx:121
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:157
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:160
 msgid "Won"
 msgstr "Wygrane"
 
 #: src/components/_military/tournament/TournamentHeader.tsx:91
 #: src/components/_other/events/EventTournament.tsx:99
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:191
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:194
 msgid "Won by"
 msgstr "Wygrany przez"
 
@@ -19629,7 +19666,7 @@ msgstr "Już otrzymałeś tę nagrodę."
 msgid "You already have {0} active companies. Disable one first."
 msgstr "Masz już {0} aktywnych firm. Najpierw wyłącz jedną."
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:257
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:276
 msgid "You already have the Supporter Plan"
 msgstr ""
 
@@ -19908,7 +19945,7 @@ msgstr "Pomogłeś tłumaczyć grę na inny język"
 msgid "You invited a friend or spammed forum posts. After they reach level {0}, you will get the badge + {1}% of all your referrals' badge rewards"
 msgstr "Zaprosiłeś przyjaciela, albo spamowałeś na forum. Po osiągnięciu ich {0} poziomu otrzymasz odznakę + {1}% wszystkich nagród za odznaki zdobytych przez Twoich poleconych"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:250
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:269
 msgid "You joined, good luck"
 msgstr ""
 
@@ -19946,7 +19983,7 @@ msgstr "Musisz mieć przynajmniej {minLevel} poziom, aby kupować wyposażenie."
 msgid "You need to be level {minLevel} to sell equipment"
 msgstr "Musisz mieć przynajmniej {minLevel} poziom, aby sprzedać wyposażenie"
 
-#: src/components/_social/poll/PollCard.tsx:230
+#: src/components/_social/poll/PollCard.tsx:288
 msgid "You need to be level {minLevel} to vote."
 msgstr "Musisz mieć przynajmniej {minLevel} poziom, żeby głosować."
 
