@@ -104,12 +104,12 @@ msgid "{0, plural, one {# manager} other {# managers}}"
 msgstr "{0, plural, one {# manager} other {# managers}}"
 
 #. placeholder {0}: conversation.memberCount
-#: src/components/_political/chat/ChatConversationItem.tsx:215
+#: src/components/_political/chat/ChatConversationItem.tsx:222
 msgid "{0, plural, one {# member} other {# members}}"
 msgstr "{0, plural, one {# membre} other {# membres}}"
 
 #. placeholder {0}: poll.totalVoters
-#: src/components/_social/poll/PollCard.tsx:406
+#: src/components/_social/poll/PollCard.tsx:531
 msgid "{0, plural, one {# vote} other {# votes}}"
 msgstr "{0, plural, one {# vote} other {# votes}}"
 
@@ -119,6 +119,7 @@ msgid "{0, plural, one {# win} other {# wins}}"
 msgstr "{0, plural, one {# victoire} other {# victoires}}"
 
 #. placeholder {0}: data.count
+#. placeholder {0}: giveaway.count
 #. placeholder {0}: giveaway.winnersQuantity ?? 0
 #: src/components/_other/giveaway/GiveawayItem.tsx:31
 #: src/components/_political/chat/ChatRunningButton.tsx:312
@@ -173,7 +174,7 @@ msgid "{0} alliance bonus when fighting for an ally"
 msgstr "Bonus d'alliance de {0} en combattant pour un allié"
 
 #. placeholder {0}: data.userId && ( <UserUsername userId={data.userId} withAvatar withFlag /> )
-#: src/components/_user/notification/notification.frontConfig.tsx:695
+#: src/components/_user/notification/notification.frontConfig.tsx:699
 msgid "{0} bought your item offer"
 msgstr "{0} a acheté ton offre d'objet"
 
@@ -247,19 +248,19 @@ msgid "{0} is waiting for your decision."
 msgstr "{0} attend ta décision."
 
 #. placeholder {0}: data.entrantsCount
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:201
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:211
 msgid "{0} joined"
 msgstr "{0} a rejoint"
 
 #. placeholder {0}: data.giftsLeftToday
 #. placeholder {1}: welcomeGiftConfig.giftsPerGiverPerDay
-#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:194
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:223
 msgid "{0} of {1} gifts left today"
 msgstr "{0} cadeau(x) restant(s) sur {1} aujourd’hui"
 
 #. placeholder {0}: data.outbidByMuName
 #. placeholder {1}: toPerM(data.newPerK)
-#: src/components/_user/notification/notification.frontConfig.tsx:1969
+#: src/components/_user/notification/notification.frontConfig.tsx:2004
 msgid "{0} outbid you at ${1}/M"
 msgstr "{0} vous a surenchéri à ${1}/M"
 
@@ -269,7 +270,7 @@ msgid "{0} payroll and manager tax income"
 msgstr "{0} de recettes liées aux paies et aux taxes des managers"
 
 #. placeholder {0}: data.userId && ( <UserUsername userId={data.userId} withAvatar withFlag /> )
-#: src/components/_user/notification/notification.frontConfig.tsx:718
+#: src/components/_user/notification/notification.frontConfig.tsx:722
 msgid "{0} proposed a new law <0/>"
 msgstr "{0} a proposé une nouvelle loi <0/>"
 
@@ -463,7 +464,7 @@ msgstr "{count, plural, one {Tu es sur le point de démanteler # objet MYTHIQUE!
 msgid "{count, plural, one {You are about to dismantle # RARE item} other {You are about to dismantle # RARE items}}"
 msgstr "{count, plural, one {Tu es sur le point de démanteler # objet RARE} other {Tu es sur le point de démanteler # objets RARES}}"
 
-#: src/components/_common/OverflowCount.tsx:58
+#: src/components/_common/OverflowCount.tsx:64
 msgid "{count} more"
 msgstr "{count} de plus"
 
@@ -479,15 +480,19 @@ msgstr "{daysAgo, plural, one {il y a # jour} other {il y a # jours}}"
 msgid "{delay} after you pick {answer} in {source}."
 msgstr "{delay} après avoir choisi {answer} dans {source}."
 
+#: src/components/_user/subGiftDrop/GiveawayEntrantsModal.tsx:36
+msgid "{entrantsCount} joined"
+msgstr ""
+
 #: src/components/_economy/inventory/DismantleModal.tsx:262
 msgid "{equippedCount, plural, one {# of them is equipped} other {# of them are equipped}}"
 msgstr "{equippedCount, plural, one {# d'entre eux est équipé} other {# d'entre eux sont équipés}}"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:605
+#: src/components/_user/notification/notification.frontConfig.tsx:609
 msgid "{finder} and others found {toolboxes} for you to claim."
 msgstr "{finder} et d’autres personnes ont trouvé des {toolboxes} que tu peux récupérer."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:609
+#: src/components/_user/notification/notification.frontConfig.tsx:613
 msgid "{finder} found {toolboxes} for you to claim."
 msgstr "{finder} a trouvé des {toolboxes} que tu peux récupérer."
 
@@ -1633,7 +1638,7 @@ msgid "{gender, select, male {You told {name} he did a good job. He has been apo
 msgstr "{gender, select, male {Tu as dit à {name} qu'il avait fait du bon travail. Il n'a cessé de s'en excuser tout l'après-midi.} female {Tu as dit à {name} qu'elle avait fait du bon travail. Elle n'a cessé de s'en excuser tout l'après-midi.} other {Tu as dit à {name} qu'ils avaient fait du bon travail. Ils n'ont cessé de s'en excuser tout l'après-midi.}}"
 
 #. placeholder {0}: welcomeGiftConfig.maxGiftsPerNewcomer
-#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:93
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:109
 msgid "{gifts} of {0} received, gifts waiting to be claimed included."
 msgstr "{gifts} sur {0} reçus, incluant les cadeaux en attente d’être réclamés."
 
@@ -1675,11 +1680,11 @@ msgstr "{itemCount, plural, one {Article mis en vente} other {Articles mis en ve
 msgid "{label} of <0/>"
 msgstr "{label} de <0/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:556
+#: src/components/_user/notification/notification.frontConfig.tsx:560
 msgid "{lead} and others are waiting for your decision."
 msgstr "{lead} et d’autres attendent ta décision."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:558
+#: src/components/_user/notification/notification.frontConfig.tsx:562
 msgid "{lead} is waiting for your decision."
 msgstr "{lead} attend ta décision."
 
@@ -1874,7 +1879,7 @@ msgstr "{selectedCount, plural, one {Démonter # objet pour} other {Démonter # 
 msgid "{selectedCount} selected"
 msgstr "{selectedCount} sélectionnés"
 
-#: src/components/_social/poll/PollCard.tsx:222
+#: src/components/_social/poll/PollCard.tsx:339
 msgid "{timeLeft} left"
 msgstr "{timeLeft} restant"
 
@@ -2014,10 +2019,9 @@ msgstr "{who}: demande désormais {value} au-dessus du tarif du marché"
 msgid "{who}: training potential now {value}"
 msgstr "{who}: potentiel de formation actuel {value}"
 
-#. placeholder {0}: data.count
 #: src/components/_user/notification/notification.frontConfig.tsx:1272
-msgid "{winnersCount} of {0, plural, one {# prize} other {# prizes}} won by"
-msgstr "{winnersCount} de {0, plural, one {# prix} other {# prix}} gagné(s) par"
+#~ msgid "{winnersCount} of {0, plural, one {# prize} other {# prizes}} won by"
+#~ msgstr "{winnersCount} de {0, plural, one {# prix} other {# prix}} gagné(s) par"
 
 #: src/components/_common/GameRules.tsx:199
 msgid "* A gear merging scheme consists of buying items with very low durability at a relatively high price, merging them, and then reselling the result at a low price."
@@ -2049,9 +2053,9 @@ msgstr "/{max, plural, one {# emplacement} other {# emplacements}}"
 msgid "/day"
 msgstr "/jour"
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:452
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:474
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:490
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:459
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:481
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:497
 #: src/components/_economy/manager/ManagerBestOfferLine.tsx:41
 #: src/components/_economy/manager/ManagerOfferRow.tsx:192
 #: src/components/_economy/manager/ManagerRateReductionAlert.tsx:45
@@ -2063,7 +2067,7 @@ msgstr "/h"
 msgid "/h at {points} Management points"
 msgstr "/h à {points} points de Gestion"
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:406
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:413
 msgid "/h max"
 msgstr "/h maximum"
 
@@ -2134,8 +2138,8 @@ msgstr "<0/> et <1/>"
 msgid "<0/> and <1/>"
 msgstr "<0/> et <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:415
-#: src/components/_user/notification/notification.frontConfig.tsx:1358
+#: src/components/_user/notification/notification.frontConfig.tsx:419
+#: src/components/_user/notification/notification.frontConfig.tsx:1393
 msgid "<0/> applied to join <1/>"
 msgstr "<0/> a demandé à rejoindre <1/>"
 
@@ -2145,69 +2149,69 @@ msgstr "<0/> a demandé à rejoindre <1/>"
 msgid "<0/> at <1>{0}</1> /h.{1}"
 msgstr "<0/> à <1>{0}</1> /h.{1}"
 
-#: src/components/_political/message/systemMessage.frontConfig.tsx:56
+#: src/components/_political/message/systemMessage.frontConfig.tsx:78
 msgid "<0/> banned <1/> from the conversation"
 msgstr "<0/> a banni <1/> de la conversation"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2222
+#: src/components/_user/notification/notification.frontConfig.tsx:2257
 msgid "<0/> bought your {assetLabel} as a gift for <1/>!"
 msgstr "<0/> a acheté ton {assetLabel} en cadeau pour <1/> !"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2229
+#: src/components/_user/notification/notification.frontConfig.tsx:2264
 msgid "<0/> bought your {assetLabel}!"
 msgstr "<0/> a acheté ton {assetLabel}!"
 
 #. placeholder {0}: data.bannerTitle ? ` "${data.bannerTitle}"` : ''
-#: src/components/_user/notification/notification.frontConfig.tsx:1804
+#: src/components/_user/notification/notification.frontConfig.tsx:1839
 msgid "<0/> bought your banner{0} as a gift for <1/>!"
 msgstr "<0/> a acheté ta bannière{0} comme cadeau pour <1/>!"
 
 #. placeholder {0}: data.bannerTitle ? ` "${data.bannerTitle}"` : ''
-#: src/components/_user/notification/notification.frontConfig.tsx:1812
+#: src/components/_user/notification/notification.frontConfig.tsx:1847
 msgid "<0/> bought your banner{0}!"
 msgstr "<0/> a acheté ta bannière{0}!"
 
 #. placeholder {0}: law.data.amount ?? 0
-#: src/components/_political/law/law.frontConfig.tsx:470
+#: src/components/_political/law/law.frontConfig.tsx:508
 msgid "<0/> buys <1/> for <2>{0}</2>"
 msgstr "<0/> achète <1/> pour <2>{0}</2>"
 
 #. placeholder {0}: law.data.amount ?? 0
-#: src/components/_political/law/law.frontConfig.tsx:481
+#: src/components/_political/law/law.frontConfig.tsx:526
 msgid "<0/> buys your region <1/> for <2>{0}</2>"
 msgstr "<0/> achète votre région <1/> pour <2>{0}</2>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1889
+#: src/components/_user/notification/notification.frontConfig.tsx:1924
 msgid "<0/> cancelled the contract."
 msgstr "<0/> a annulé le contrat."
 
-#: src/components/_political/message/systemMessage.frontConfig.tsx:192
+#: src/components/_political/message/systemMessage.frontConfig.tsx:291
 msgid "<0/> claimed the welcome gift"
 msgstr "<0/> a réclamé le cadeau de bienvenue"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:981
+#: src/components/_user/notification/notification.frontConfig.tsx:985
 msgid "<0/> commented on your article <1/>"
 msgstr "<0/> a commenté ton article <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1864
+#: src/components/_user/notification/notification.frontConfig.tsx:1899
 msgid "<0/> completed a contract, you earned <1/>"
 msgstr "<0/> a terminé un contrat, tu as gagné <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:874
+#: src/components/_user/notification/notification.frontConfig.tsx:878
 msgid "<0/> conquered the region in <1/>"
 msgstr "<0/> a conquis la région dans <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:535
+#: src/components/_user/notification/notification.frontConfig.tsx:539
 msgid "<0/> could not pay you this hour, so your bonus did not apply either. Nothing is owed for it."
 msgstr "<0/> n'a pas pu te rémunérer pour cette heure ; ta prime ne s’est donc pas appliquée non plus. Aucune somme n’est due à ce titre."
 
-#: src/components/_political/message/systemMessage.frontConfig.tsx:96
+#: src/components/_political/message/systemMessage.frontConfig.tsx:146
 msgid "<0/> created the conversation"
 msgstr "<0/> a créé la conversation"
 
 #. placeholder {0}: data.oldWage
 #. placeholder {1}: data.newWage
-#: src/components/_user/notification/notification.frontConfig.tsx:521
+#: src/components/_user/notification/notification.frontConfig.tsx:525
 msgid "<0/> cut your pay from <1>{0}</1> to <2>{1}</2> per hour. Accept it or resign."
 msgstr "<0/> réduit ta rémunération, la faisant passer de <1>{0}</1> à <2>{1}</2> par heure. Accepte ou démissionne."
 
@@ -2215,21 +2219,21 @@ msgstr "<0/> réduit ta rémunération, la faisant passer de <1>{0}</1> à <2>{1
 msgid "<0/> declared war on <1/>"
 msgstr "<0/> a déclaré la guerre à <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:869
+#: src/components/_user/notification/notification.frontConfig.tsx:873
 msgid "<0/> defended in <1/>"
 msgstr "<0/> a défendu dans <1/>"
 
 #. placeholder {0}: data.amount
-#: src/components/_user/notification/notification.frontConfig.tsx:1460
+#: src/components/_user/notification/notification.frontConfig.tsx:1495
 msgid "<0/> donated <1>{0}</1> to <2/>"
 msgstr "<0/> a donné <1>{0}</1> à <2/>"
 
 #. placeholder {0}: ts[data.caseCode]
-#: src/components/_political/message/systemMessage.frontConfig.tsx:126
+#: src/components/_political/message/systemMessage.frontConfig.tsx:181
 msgid "<0/> dropped <1/> from <2>{0}</2>"
 msgstr "<0/> a retiré <1/> de <2>{0}</2>"
 
-#: src/components/_political/message/systemMessage.frontConfig.tsx:174
+#: src/components/_political/message/systemMessage.frontConfig.tsx:260
 msgid "<0/> ended <1/>"
 msgstr "<0/> a terminé <1/>"
 
@@ -2245,29 +2249,29 @@ msgstr "<0/> a financé une révolte en <1/>"
 msgid "<0/> financed a revolt in <1/> for <2/> against <3/>"
 msgstr "<0/> a financé une révolte en <1/> pour <2/> contre <3/>"
 
-#: src/components/_political/message/systemMessage.frontConfig.tsx:67
+#: src/components/_political/message/systemMessage.frontConfig.tsx:99
 msgid "<0/> gifted a sub to <1/>"
 msgstr "<0/> a offert un abonnement à <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1234
+#: src/components/_user/notification/notification.frontConfig.tsx:1238
 msgid "<0/> gifted you a premium subscription!"
 msgstr "<0/> t'a offert un abonnement premium!"
 
 #. placeholder {0}: data.bannerTitle
-#: src/components/_user/notification/notification.frontConfig.tsx:1773
+#: src/components/_user/notification/notification.frontConfig.tsx:1808
 msgid "<0/> gifted you the banner \"{0}\"!"
 msgstr "<0/> t'a offert la bannière \"{0}\"!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2104
+#: src/components/_user/notification/notification.frontConfig.tsx:2139
 msgid "<0/> gifted you the skin \"{skinTitle}\"!"
 msgstr "<0/> t'a offert le skin \"{skinTitle}\"!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2175
+#: src/components/_user/notification/notification.frontConfig.tsx:2210
 msgid "<0/> gifted you the skin pack \"{skinPackTitle}\"!"
 msgstr "<0/> t'a offert le pack de skins « {skinPackTitle} »!"
 
 #. placeholder {0}: muTypesConfig.unitTypeLockDays
-#: src/components/_political/law/law.frontConfig.tsx:707
+#: src/components/_political/law/law.frontConfig.tsx:766
 msgid "<0/> goes back to Paramilitary and stays Paramilitary for at least {0} days."
 msgstr "<0/> redevient paramilitaire et le reste pendant au moins {0} jours."
 
@@ -2275,11 +2279,11 @@ msgstr "<0/> redevient paramilitaire et le reste pendant au moins {0} jours."
 msgid "<0/> got fee back"
 msgstr "<0/> a récupéré les frais"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1613
+#: src/components/_user/notification/notification.frontConfig.tsx:1648
 msgid "<0/> has been created, it gonna start soon!"
 msgstr "<0/> a été créé, ça va bientôt commencer!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:248
+#: src/components/_user/notification/notification.frontConfig.tsx:252
 msgid "<0/> has been elected president of <1/>"
 msgstr "<0/> a été élu président de <1/>"
 
@@ -2320,7 +2324,7 @@ msgstr "<0/> a financé la résistance en <1/>"
 msgid "<0/> has formed an alliance with <1/>"
 msgstr "<0/> a formé une alliance avec <1/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:419
+#: src/components/_political/law/law.frontConfig.tsx:454
 msgid "<0/> has invited your country to join."
 msgstr "<0/> a invité ton pays à rejoindre."
 
@@ -2340,11 +2344,11 @@ msgstr "<0/> a libéré <1/> et l'a rendu à <2/>"
 msgid "<0/> has signed a defensive pact with <1/>"
 msgstr "<0/> a ratifié un pacte de défense avec <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1155
+#: src/components/_user/notification/notification.frontConfig.tsx:1159
 msgid "<0/> has started a revolution in <1/>"
 msgstr "<0/> a lancé une révolution dans <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1626
+#: src/components/_user/notification/notification.frontConfig.tsx:1661
 msgid "<0/> has started! Let the battles begin!"
 msgstr "<0/> a commencé! Que les batailles commencent!"
 
@@ -2361,7 +2365,7 @@ msgstr "<0/> a transféré <1>{0}</1> à <2/>"
 msgid "<0/> holds regions of <1/>"
 msgstr "<0/> détient des régions de <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1111
+#: src/components/_user/notification/notification.frontConfig.tsx:1115
 msgid "<0/> is attacking <1/> in <2/>"
 msgstr "<0/> attaque <1/> dans <2/>"
 
@@ -2369,7 +2373,7 @@ msgstr "<0/> attaque <1/> dans <2/>"
 msgid "<0/> is attacking in <1/>"
 msgstr "<0/> attaque à <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1097
+#: src/components/_user/notification/notification.frontConfig.tsx:1101
 msgid "<0/> is attacking your country in <1/>"
 msgstr "<0/> attaque ton pays dans <1/>"
 
@@ -2381,11 +2385,11 @@ msgstr "<0/> a disparu"
 msgid "<0/> is in bankruptcy. Removing all alliances and disabling every region upgrades."
 msgstr "<0/> est en faillite. Suppression de toutes les alliances et désactivation de toutes les améliorations régionales."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1446
+#: src/components/_user/notification/notification.frontConfig.tsx:1481
 msgid "<0/> is no longer a State Army of <1/>. It stays Paramilitary for at least 7 days."
 msgstr "<0/> n’est plus une armée d’État de <1/>. Elle demeure paramilitaire pendant au moins 7 jours."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:470
+#: src/components/_user/notification/notification.frontConfig.tsx:474
 msgid "<0/> is now the manager of <1/>"
 msgstr "<0/> est désormais le manager de <1/>"
 
@@ -2393,24 +2397,24 @@ msgstr "<0/> est désormais le manager de <1/>"
 msgid "<0/> is revolting in <1/>"
 msgstr "<0/> se révolte à <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1126
+#: src/components/_user/notification/notification.frontConfig.tsx:1130
 msgid "<0/> is revolting in <1/> against your country"
 msgstr "<0/> se révolte dans <1/> contre ton pays"
 
-#: src/components/_political/message/systemMessage.frontConfig.tsx:27
+#: src/components/_political/message/systemMessage.frontConfig.tsx:29
 msgid "<0/> joined the conversation"
 msgstr "<0/> a rejoint la conversation"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:757
+#: src/components/_user/notification/notification.frontConfig.tsx:761
 msgid "<0/> joined the game with your referral link!"
 msgstr "<0/> a rejoint le jeu avec ton lien de parrainage !"
 
 #. placeholder {0}: data.wage
-#: src/components/_user/notification/notification.frontConfig.tsx:454
+#: src/components/_user/notification/notification.frontConfig.tsx:458
 msgid "<0/> joined your company <1/> for <2>{0}</2> wage"
 msgstr "<0/> a rejoint ton entreprise <1/> pour un salaire de <2>{0}</2>"
 
-#: src/components/_political/message/systemMessage.frontConfig.tsx:45
+#: src/components/_political/message/systemMessage.frontConfig.tsx:57
 msgid "<0/> kicked <1/> from the conversation"
 msgstr "<0/> a expulsé <1/> de la conversation"
 
@@ -2421,23 +2425,23 @@ msgid "<0/> left"
 msgstr "<0/> restant"
 
 #. placeholder {0}: data.company && <CompanyNameById companyId={data.company} />
-#: src/components/_user/notification/notification.frontConfig.tsx:635
+#: src/components/_user/notification/notification.frontConfig.tsx:639
 msgid "<0/> left his job in your company {0}"
 msgstr "<0/> a quitté son emploi dans ton entreprise {0}"
 
-#: src/components/_political/message/systemMessage.frontConfig.tsx:36
+#: src/components/_political/message/systemMessage.frontConfig.tsx:43
 msgid "<0/> left the conversation"
 msgstr "<0/> a quitté la conversation"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:966
+#: src/components/_user/notification/notification.frontConfig.tsx:970
 msgid "<0/> liked your article <1/>"
 msgstr "<0/> a aimé ton article <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1053
+#: src/components/_user/notification/notification.frontConfig.tsx:1057
 msgid "<0/> liked your message <1/>"
 msgstr "<0/> a aimé ton message <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1044
+#: src/components/_user/notification/notification.frontConfig.tsx:1048
 msgid "<0/> liked your message in <1/><2/>"
 msgstr "<0/> a aimé ton message dans <1/><2/>"
 
@@ -2449,15 +2453,15 @@ msgstr "<0/> perd {regionName}"
 msgid "<0/> made peace with <1/>"
 msgstr "<0/> a fait la paix avec <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1511
+#: src/components/_user/notification/notification.frontConfig.tsx:1546
 msgid "<0/> mentioned you <1/>"
 msgstr "<0/> t'a mentionné <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1502
+#: src/components/_user/notification/notification.frontConfig.tsx:1537
 msgid "<0/> mentioned you in <1/><2/>"
 msgstr "<0/> t'a mentionné dans <1/><2/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1432
+#: src/components/_user/notification/notification.frontConfig.tsx:1467
 msgid "<0/> offers to sponsor <1/> as a State Army. Answer it from the unit settings."
 msgstr "<0/> propose de parrainer <1/> en tant qu'armée d'État. Réponds-y depuis les paramètres de l'unité."
 
@@ -2475,7 +2479,7 @@ msgid "<0/> players"
 msgstr "<0/> joueurs"
 
 #. placeholder {0}: data.question
-#: src/components/_political/message/systemMessage.frontConfig.tsx:210
+#: src/components/_political/message/systemMessage.frontConfig.tsx:319
 msgid "<0/> posted a poll: {0}"
 msgstr "<0/> a publié un sondage: {0}"
 
@@ -2483,67 +2487,67 @@ msgstr "<0/> a publié un sondage: {0}"
 msgid "<0/> Priority ends in <1/>"
 msgstr "La priorité de <0/> se termine dans <1/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:323
+#: src/components/_political/law/law.frontConfig.tsx:355
 msgid "<0/> proposed a mutual defensive pact to your country."
 msgstr "<0/> a proposé un pacte de défense mutuel à votre pays."
 
-#: src/components/_political/message/systemMessage.frontConfig.tsx:147
+#: src/components/_political/message/systemMessage.frontConfig.tsx:217
 msgid "<0/> proposed a new alliance law: <1/>"
 msgstr "<0/> a proposé une nouvelle loi d'alliance: <1/>"
 
-#: src/components/_political/message/systemMessage.frontConfig.tsx:138
+#: src/components/_political/message/systemMessage.frontConfig.tsx:198
 msgid "<0/> proposed a new law: <1/>"
 msgstr "<0/> a proposé une nouvelle loi: <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:950
+#: src/components/_user/notification/notification.frontConfig.tsx:954
 msgid "<0/> published a new article"
 msgstr "<0/> a publié un nouvel article"
 
 #. placeholder {0}: data.level
-#: src/components/_user/notification/notification.frontConfig.tsx:1487
+#: src/components/_user/notification/notification.frontConfig.tsx:1522
 msgid "<0/> reached level {0}!"
 msgstr "<0/> a atteint le niveau {0}!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:768
+#: src/components/_user/notification/notification.frontConfig.tsx:772
 msgid "<0/> referred you to the game."
 msgstr "<0/> t'a parrainé sur le jeu."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:622
+#: src/components/_user/notification/notification.frontConfig.tsx:626
 msgid "<0/> resigned as manager of <1/>"
 msgstr "<0/> a démissionné de son poste de manager de <1/>"
 
 #. placeholder {0}: data.messageId && <MessageItemById messageId={data.messageId} />
-#: src/components/_user/notification/notification.frontConfig.tsx:1079
+#: src/components/_user/notification/notification.frontConfig.tsx:1083
 msgid "<0/> responded to your message {0}"
 msgstr "<0/> a répondu à ton message {0}"
 
 #. placeholder {0}: data.messageId && <MessageItemById messageId={data.messageId} />
-#: src/components/_user/notification/notification.frontConfig.tsx:1070
+#: src/components/_user/notification/notification.frontConfig.tsx:1074
 msgid "<0/> responded to your message in <1/>{0}"
 msgstr "<0/> a répondu à ton message dans <1/>{0}"
 
-#: src/components/_political/message/systemMessage.frontConfig.tsx:183
+#: src/components/_political/message/systemMessage.frontConfig.tsx:277
 msgid "<0/> sent a welcome gift"
 msgstr "<0/> a envoyé un cadeau de bienvenue"
 
 #. placeholder {0}: data.amount
-#: src/components/_user/notification/notification.frontConfig.tsx:1302
+#: src/components/_user/notification/notification.frontConfig.tsx:1337
 msgid "<0/> sent you a welcome gift of <1>{0}</1>, claim it in your messages"
 msgstr "<0/> t'a envoyé un cadeau de bienvenue: <1>{0}</1>, récupère-le dans tes messages."
 
-#: src/components/_political/message/systemMessage.frontConfig.tsx:201
+#: src/components/_political/message/systemMessage.frontConfig.tsx:305
 msgid "<0/> started a giveaway"
 msgstr "<0/> a lancé un tirage au sort"
 
-#: src/components/_political/message/systemMessage.frontConfig.tsx:165
+#: src/components/_political/message/systemMessage.frontConfig.tsx:248
 msgid "<0/> started, vote for your favorite candidate"
 msgstr "<0/> a commencé, votez pour votre candidat préféré"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1030
+#: src/components/_user/notification/notification.frontConfig.tsx:1034
 msgid "<0/> subscribed to you on your article <1/>"
 msgstr "<0/> s'est abonné à ton article <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:996
+#: src/components/_user/notification/notification.frontConfig.tsx:1000
 msgid "<0/> tipped your article <1/>"
 msgstr "<0/> a soutenu ton article <1/>"
 
@@ -2559,15 +2563,15 @@ msgstr "<0/> a pris possession de l’unité pendant ton absence. Tu peux la ré
 msgid "<0/> vs <1/> war"
 msgstr "Guerre <0/> vs <1/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:121
+#: src/components/_political/law/law.frontConfig.tsx:125
 msgid "<0/> wants peace"
 msgstr "<0/> veut la paix"
 
-#: src/components/_political/law/law.frontConfig.tsx:131
+#: src/components/_political/law/law.frontConfig.tsx:139
 msgid "<0/> wants to make peace with your country"
 msgstr "<0/> propose un traité de paix avec ton pays"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1653
+#: src/components/_user/notification/notification.frontConfig.tsx:1688
 msgid "<0/> was cancelled: not enough participants registered."
 msgstr "<0/> a été annulé: nombre insuffisant de participants inscrits."
 
@@ -2576,36 +2580,36 @@ msgid "<0/> was elected president of <1/>"
 msgstr "<0/> a été élu président de <1/>"
 
 #. placeholder {0}: ts[data.governmentRole]
-#: src/components/_user/notification/notification.frontConfig.tsx:734
+#: src/components/_user/notification/notification.frontConfig.tsx:738
 msgid "<0/> was nominated as <1>{0}</1>"
 msgstr "<0/> a été nommé comme <1>{0}</1>"
 
 #. placeholder {0}: data.roundNumber
-#: src/components/_political/message/systemMessage.frontConfig.tsx:77
+#: src/components/_political/message/systemMessage.frontConfig.tsx:119
 msgid "<0/> won round {0}"
 msgstr "<0/> a gagné la manche {0}"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1847
+#: src/components/_user/notification/notification.frontConfig.tsx:1882
 msgid "<0/> won the auction on a contract with <1/>"
 msgstr "<0/> a remporté l'enchère sur un contrat avec <1/>"
 
 #. placeholder {0}: data.attackerWonRoundsCount
 #. placeholder {1}: data.defenderWonRoundsCount
-#: src/components/_political/message/systemMessage.frontConfig.tsx:86
+#: src/components/_political/message/systemMessage.frontConfig.tsx:132
 msgid "<0/> won the battle ({0}-{1})"
 msgstr "<0/> a remporté la bataille ({0}-{1})"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:372
+#: src/components/_user/notification/notification.frontConfig.tsx:376
 msgid "<0/> won the primary election in <1/> and can now run for president!"
 msgstr "<0/> a remporté l'élection primaire dans <1/> et peut maintenant se présenter à la présidence!"
 
 #. placeholder {0}: data.roundNumber
-#: src/components/_user/notification/notification.frontConfig.tsx:833
+#: src/components/_user/notification/notification.frontConfig.tsx:837
 msgid "<0/> won the round <1>#{0}</1> in <2/>"
 msgstr "<0/> a gagné la manche <1>#{0}</1> dans <2/>"
 
 #. placeholder {0}: data.roundNumber
-#: src/components/_user/notification/notification.frontConfig.tsx:839
+#: src/components/_user/notification/notification.frontConfig.tsx:843
 msgid "<0/> won the round <1>#{0}</1> in <2/>!"
 msgstr "<0/> a gagné la manche <1>#{0}</1> dans <2/> !"
 
@@ -2614,17 +2618,17 @@ msgstr "<0/> a gagné la manche <1>#{0}</1> dans <2/> !"
 msgid "<0/>: this order costs ×{orderCostMult} <1>{0}</1> and gives ×{orderDamageMult} damage bonus"
 msgstr "<0/>: cet ordre coûte ×{orderCostMult} <1>{0}</1> et confère un bonus de dégâts de ×{orderDamageMult}"
 
-#: src/components/_political/message/systemMessage.frontConfig.tsx:219
+#: src/components/_political/message/systemMessage.frontConfig.tsx:333
 msgid "<0/>'s giveaway ended with no winners"
 msgstr "Le tirage au sort de <0/> s'est terminé sans gagnant."
 
 #. placeholder {0}: data.winnerUserIds.length
-#: src/components/_political/message/systemMessage.frontConfig.tsx:230
+#: src/components/_political/message/systemMessage.frontConfig.tsx:359
 msgid "<0/>'s giveaway ended: {0, plural, one {# Supporter Plan gift} other {# Supporter Plan gifts}} won by <1/>"
 msgstr "Le tirage au sort de <0/> est terminé: {0, plural, one {# Plan Supporter} other {# Plans Supporter}} remporté(s) par <1/>"
 
 #. placeholder {0}: data.gemsPerWinner ?? 0
-#: src/components/_political/message/systemMessage.frontConfig.tsx:224
+#: src/components/_political/message/systemMessage.frontConfig.tsx:343
 msgid "<0/>'s giveaway ended: <1>{0}</1> each won by <2/>"
 msgstr "Le tirage au sort de <0/> est terminé: <1>{0}</1> ont chacun été remportés par <2/>"
 
@@ -2704,7 +2708,7 @@ msgid "<0>{0}</0> Defense bonus when defending this region.<1/>Citizens get the 
 msgstr "<0>{0}</0> Bonus de défense lors de la défense de cette région.<1/>Les citoyens bénéficient du bonus complet, les pays alliés en obtiennent la moitié. Les partenaires liés par un pacte de défense n'en bénéficient pas."
 
 #. placeholder {0}: data.acceptanceFeeReturned
-#: src/components/_user/notification/notification.frontConfig.tsx:1910
+#: src/components/_user/notification/notification.frontConfig.tsx:1945
 msgid "<0>{0}</0> fee returned to MU."
 msgstr "<0>{0}</0> de frais remboursés à l'UM."
 
@@ -2774,12 +2778,17 @@ msgid "<0>{0}</0> prestige point to spend on a skill."
 msgstr "<0>{0}</0> point de prestige à dépenser dans une compétence."
 
 #. placeholder {0}: data.refundedGems
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:208
+#: src/components/_user/notification/notification.frontConfig.tsx:1317
+msgid "<0>{0}</0> refunded"
+msgstr ""
+
+#. placeholder {0}: data.refundedGems
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:223
 msgid "<0>{0}</0> returned to <1/>"
 msgstr "<0>{0}</0> est revenu à <1/>"
 
 #. placeholder {0}: data.refund
-#: src/components/_user/notification/notification.frontConfig.tsx:1902
+#: src/components/_user/notification/notification.frontConfig.tsx:1937
 msgid "<0>{0}</0> returned to <1/>."
 msgstr "<0>{0}</0> est retourné à <1/>."
 
@@ -3902,11 +3911,11 @@ msgstr "Abuser de ce pouvoir pour avantager un autre pays entraînera une <0>sus
 msgid "Accept"
 msgstr "Accepter"
 
-#: src/components/_political/law/law.frontConfig.tsx:314
+#: src/components/_political/law/law.frontConfig.tsx:343
 msgid "Accept a defensive pact with <0/>"
 msgstr "Accepter un pacte de défense avec <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:308
+#: src/components/_political/law/law.frontConfig.tsx:337
 #: src/components/_political/law/lawNames.tsx:41
 msgid "Accept defensive pact"
 msgstr "Accepter le pacte de défense"
@@ -3915,16 +3924,16 @@ msgstr "Accepter le pacte de défense"
 msgid "Accept its command"
 msgstr "Accepter son ordre"
 
-#: src/components/_political/law/law.frontConfig.tsx:466
+#: src/components/_political/law/law.frontConfig.tsx:504
 msgid "Accept or reject a region buy offer"
 msgstr "Accepter ou refuser une offre d'achat de région"
 
-#: src/components/_political/law/law.frontConfig.tsx:116
+#: src/components/_political/law/law.frontConfig.tsx:120
 #: src/components/_political/law/lawNames.tsx:13
 msgid "Accept peace"
 msgstr "Accepter la paix"
 
-#: src/components/_political/law/law.frontConfig.tsx:117
+#: src/components/_political/law/law.frontConfig.tsx:121
 msgid "Accept to make peace with the other country"
 msgstr "Accepter de faire la paix avec l'autre pays"
 
@@ -4013,6 +4022,7 @@ msgid "Active wars"
 msgstr "Guerres actives"
 
 #: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:84
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:208
 msgid "Activity"
 msgstr "Activité"
 
@@ -4057,7 +4067,7 @@ msgstr "Coût additionnel"
 msgid "Admin"
 msgstr "Administrateur"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2504
+#: src/components/_user/notification/notification.frontConfig.tsx:2539
 msgid "Admin notification"
 msgstr "Notification administrateur"
 
@@ -4117,7 +4127,7 @@ msgstr "Après une révolte"
 msgid "After a revolution"
 msgstr "Après une révolution"
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:485
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:492
 msgid "After tax"
 msgstr "Après taxes"
 
@@ -4176,6 +4186,7 @@ msgid "All companies"
 msgstr "Toutes les entreprises"
 
 #: src/components/_economy/manager/ManagerOfferFormModal.tsx:171
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:258
 msgid "All countries"
 msgstr "Tous les pays"
 
@@ -4356,7 +4367,7 @@ msgid "Amount of companies you can own"
 msgstr "Nombre d'entreprises que tu peux posséder"
 
 #. placeholder {0}: data.refund
-#: src/components/_user/notification/notification.frontConfig.tsx:1882
+#: src/components/_user/notification/notification.frontConfig.tsx:1917
 msgid "An admin cancelled the contract. <0>{0}</0> returned to <1/>."
 msgstr "Un administrateur a annulé le contrat. <0>{0}</0> a été retourné à <1/>."
 
@@ -4368,7 +4379,7 @@ msgstr "Une alliance a été brisée"
 msgid "An alliance has been formed"
 msgstr "Une alliance a été formée"
 
-#: src/components/_political/law/law.frontConfig.tsx:406
+#: src/components/_political/law/law.frontConfig.tsx:441
 msgid "An alliance has invited your country to join"
 msgstr "Une alliance a invité votre pays à rejoindre"
 
@@ -4376,7 +4387,7 @@ msgstr "Une alliance a invité votre pays à rejoindre"
 msgid "An email with the verification code has been sent to {email}"
 msgstr "Un email avec le code de vérification a été envoyé à {email}"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:581
+#: src/components/_user/notification/notification.frontConfig.tsx:585
 msgid "An event about {lead} was decided while you were away."
 msgstr "Une décision a été prise concernant {lead} pendant ton absence."
 
@@ -4388,7 +4399,7 @@ msgstr "Une capitale occupée se soulève d’elle-même, en pleine résistance"
 msgid "Anchor"
 msgstr "Ancré"
 
-#: src/components/_common/OverflowCount.tsx:69
+#: src/components/_common/OverflowCount.tsx:75
 msgid "And {rest} more"
 msgstr "Et {rest} de plus"
 
@@ -4405,7 +4416,7 @@ msgstr "Annonce"
 msgid "Announcements"
 msgstr "Annonces"
 
-#: src/components/_political/law/law.frontConfig.tsx:309
+#: src/components/_political/law/law.frontConfig.tsx:338
 msgid "Another country proposed a defensive pact to yours"
 msgstr "Un autre pays a proposé un pacte de défense à vous"
 
@@ -4583,7 +4594,7 @@ msgstr "Armure"
 msgid "Article ID"
 msgstr "ID de l'article"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2353
+#: src/components/_user/notification/notification.frontConfig.tsx:2388
 msgid "Article liked"
 msgstr "Article aimé"
 
@@ -4591,8 +4602,8 @@ msgstr "Article aimé"
 msgid "Article Tip"
 msgstr "Soutenir un article"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2355
-#: src/components/_user/notification/notification.frontConfig.tsx:2356
+#: src/components/_user/notification/notification.frontConfig.tsx:2390
+#: src/components/_user/notification/notification.frontConfig.tsx:2391
 msgid "Article tipped"
 msgstr "Article soutenu"
 
@@ -4739,7 +4750,7 @@ msgstr "Attaquants"
 msgid "Auction Duration (minutes)"
 msgstr "Durée de l'enchère (minutes)"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2488
+#: src/components/_user/notification/notification.frontConfig.tsx:2523
 msgid "Auction Outbid"
 msgstr "Surenchère dépassée"
 
@@ -4853,7 +4864,7 @@ msgstr "Motif d'arrière-plan"
 msgid "Badge won"
 msgstr "Badge gagné"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2288
+#: src/components/_user/notification/notification.frontConfig.tsx:2323
 msgid "Badge Won"
 msgstr "Badge gagné"
 
@@ -4906,15 +4917,15 @@ msgstr "Faillite"
 msgid "Banned"
 msgstr "Banni"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2309
+#: src/components/_user/notification/notification.frontConfig.tsx:2344
 msgid "Banner Accepted!"
 msgstr "Bannière acceptée!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2306
+#: src/components/_user/notification/notification.frontConfig.tsx:2341
 msgid "Banner gift received"
 msgstr "Cadeau de bannière reçu"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2304
+#: src/components/_user/notification/notification.frontConfig.tsx:2339
 msgid "Banner gift sent"
 msgstr "Cadeau de bannière envoyé"
 
@@ -4987,7 +4998,7 @@ msgid "Battle damage bonus"
 msgstr "Bonus de dégâts sur une bataille"
 
 #: src/components/_political/event/EventList.tsx:108
-#: src/components/_user/notification/notification.frontConfig.tsx:2404
+#: src/components/_user/notification/notification.frontConfig.tsx:2439
 msgid "Battle ended"
 msgstr "Bataille terminée"
 
@@ -5168,7 +5179,7 @@ msgid "Bonus capped at {cap}%, {capWithContract}% under contract"
 msgstr "Bonus plafonné à {cap}%, {capWithContract}% dans le cadre d’un contrat"
 
 #: src/components/_military/battle/BattleDamageBonuses.tsx:76
-#: src/components/_political/law/law.frontConfig.tsx:262
+#: src/components/_political/law/law.frontConfig.tsx:288
 msgid "Bonus damages"
 msgstr "Dégâts bonus"
 
@@ -5210,7 +5221,7 @@ msgstr "Tous deux manipulent le faux cadran toute la journée, et ils sont parfa
 msgid "Both sides combined"
 msgstr "Les deux camps combinés"
 
-#: src/components/_user/userReports/userReports.hooks.ts:22
+#: src/components/_user/userReports/userReports.hooks.ts:31
 msgid "Bots or exploits"
 msgstr "Bots ou exploits"
 
@@ -5236,7 +5247,7 @@ msgstr "Pied à coulisse en laiton"
 msgid "Bread"
 msgstr "Pain"
 
-#: src/components/_political/law/law.frontConfig.tsx:333
+#: src/components/_political/law/law.frontConfig.tsx:365
 #: src/components/_political/law/lawNames.tsx:42
 msgid "Break defensive pact"
 msgstr "Briser le pacte de défense"
@@ -5246,7 +5257,7 @@ msgstr "Briser le pacte de défense"
 msgid "Break room"
 msgstr "Salle de pause"
 
-#: src/components/_political/law/law.frontConfig.tsx:339
+#: src/components/_political/law/law.frontConfig.tsx:371
 msgid "Break the defensive pact with <0/>"
 msgstr "Briser le pacte de défense avec <0/>"
 
@@ -5287,7 +5298,7 @@ msgstr "Parcourir les packs"
 msgid "Budget"
 msgstr "Budget"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2493
+#: src/components/_user/notification/notification.frontConfig.tsx:2528
 msgid "Buff ended"
 msgstr "Buff terminé"
 
@@ -5296,11 +5307,11 @@ msgstr "Buff terminé"
 msgid "Buff ends"
 msgstr "Le buff se termine"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2491
+#: src/components/_user/notification/notification.frontConfig.tsx:2526
 msgid "Buff expiring soon"
 msgstr "Le buff expire bientôt"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2489
+#: src/components/_user/notification/notification.frontConfig.tsx:2524
 msgid "Buff started"
 msgstr "Le buff a démarré"
 
@@ -5370,7 +5381,7 @@ msgid "Buy <0/>"
 msgstr "Acheter <0/>"
 
 #. placeholder {0}: law.data.amount ?? 0
-#: src/components/_political/law/law.frontConfig.tsx:498
+#: src/components/_political/law/law.frontConfig.tsx:543
 msgid "Buy <0/> from <1/> for <2>{0}</2>"
 msgstr "Acheter <0/> à <1/> pour <2>{0}</2>"
 
@@ -5411,7 +5422,7 @@ msgstr "Ordres d'achat"
 msgid "Buy this item for {total}?"
 msgstr "Acheter cet article pour {total}?"
 
-#: src/components/_economy/itemOffer/CreateItemOffersModal.tsx:407
+#: src/components/_economy/itemOffer/CreateItemOffersModal.tsx:413
 msgid "Buyers from your country see <0>{buyerTotal}</0>"
 msgstr "Les acheteurs de ton pays voient <0>{buyerTotal}</0>"
 
@@ -5482,7 +5493,7 @@ msgstr "Lien vers l'article de campagne (optionnel)"
 msgid "Can happen to anyone."
 msgstr "Peut arriver à tout le monde."
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:91
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:113
 msgid "Can I join your Military Unit?"
 msgstr "Puis-je rejoindre ton unité militaire?"
 
@@ -5549,7 +5560,7 @@ msgstr "Annulé par un administrateur"
 msgid "Cancelled by Admin"
 msgstr "Annulé par un administrateur"
 
-#: src/components/_political/message/systemMessage.frontConfig.tsx:157
+#: src/components/_political/message/systemMessage.frontConfig.tsx:236
 msgid "Candidacy is open for <0/>"
 msgstr "Les candidatures sont ouvertes pour <0/>"
 
@@ -5661,25 +5672,25 @@ msgstr "Chance de partir à 0"
 msgid "Change"
 msgstr "Changement"
 
-#: src/components/_political/law/law.frontConfig.tsx:103
+#: src/components/_political/law/law.frontConfig.tsx:107
 msgid "Change {taxName} to"
 msgstr "Changer la {taxName} pour"
 
-#: src/components/_political/law/law.frontConfig.tsx:91
+#: src/components/_political/law/law.frontConfig.tsx:95
 msgid "Change {taxName} to <0/>"
 msgstr "Changer la {taxName} pour <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:86
+#: src/components/_political/law/law.frontConfig.tsx:90
 msgid "Change a country tax"
 msgstr "Changer une taxe nationale"
 
 #: src/components/_political/alliance/alliance.frontConfig.tsx:19
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:141
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:159
 msgid "Change color"
 msgstr "Changer la couleur"
 
 #. placeholder {0}: data.newScheme
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:149
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:167
 msgid "Change color to <0>{0}</0>"
 msgstr "Changer la couleur en <0>{0}</0>"
 
@@ -5704,39 +5715,39 @@ msgstr "Changer l'objet produit"
 msgid "Change production"
 msgstr "Changer la production"
 
-#: src/components/_political/law/law.frontConfig.tsx:85
+#: src/components/_political/law/law.frontConfig.tsx:89
 #: src/components/_political/law/lawNames.tsx:12
 msgid "Change tax"
 msgstr "Changer la taxe"
 
 #. placeholder {0}: data.newScheme
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:158
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:179
 msgid "Change the alliance color scheme to <0>{0}</0> immediately on acceptance."
 msgstr "Change immédiatement le schéma de couleurs de l'alliance en <0>{0}</0> dès acceptation."
 
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:142
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:160
 msgid "Change the color scheme of the alliance."
 msgstr "Changer la palette de couleurs de l'alliance."
 
-#: src/components/_political/law/law.frontConfig.tsx:572
+#: src/components/_political/law/law.frontConfig.tsx:629
 msgid "Change the country color scheme"
 msgstr "Changer la palette de couleurs du pays"
 
 #. placeholder {0}: law.data.scheme
 #. placeholder {1}: law.data.mapAccent
-#: src/components/_political/law/law.frontConfig.tsx:578
+#: src/components/_political/law/law.frontConfig.tsx:635
 msgid "Change the country color scheme to <0>{0}</0> with a <1>{1}</1> map accent"
 msgstr "Changer la palette de couleurs du pays en <0>{0}</0> avec un accent de carte <1>{1}</1>"
 
-#: src/components/_political/law/law.frontConfig.tsx:656
+#: src/components/_political/law/law.frontConfig.tsx:713
 msgid "Change the government type to <0/>. It can't change again for {GOV_TYPE_CHANGE_COOLDOWN_DAYS} days."
 msgstr "Changer le type de régime politique pour <0/>. Il ne pourra pas être modifié à nouveau avant {GOV_TYPE_CHANGE_COOLDOWN_DAYS} jours."
 
-#: src/components/_political/law/law.frontConfig.tsx:639
+#: src/components/_political/law/law.frontConfig.tsx:696
 msgid "Change the government type, then wait {GOV_TYPE_CHANGE_COOLDOWN_DAYS, plural, one {# day} other {# days}} before the next change"
 msgstr "Changer le type de régime politique, puis patienter {GOV_TYPE_CHANGE_COOLDOWN_DAYS, plural, one {# jour} other {# jours}} avant le prochain changement."
 
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:121
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:139
 msgid "Change the name of the alliance."
 msgstr "Changer le nom de l'alliance."
 
@@ -5888,7 +5899,7 @@ msgstr "Réclamer <0/>"
 msgid "Claim a mission to claim this reward."
 msgstr "Réclame une mission pour réclamer sa récompense."
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:165
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:189
 msgid "Claim gift"
 msgstr "Réclamer le cadeau"
 
@@ -5904,7 +5915,7 @@ msgstr "Réclame tes missions!"
 #: src/components/_user/mission/MissionItem.tsx:223
 #: src/components/_user/mission/MissionItem.tsx:272
 #: src/components/_user/mission/MissionsFinishedProgress.tsx:118
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:131
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:154
 msgid "Claimed"
 msgstr "Réclamé"
 
@@ -6037,7 +6048,7 @@ msgstr "Les jeux de couleurs sont une fonctionnalité du plan Supporter."
 msgid "Colorblind mode"
 msgstr "Mode daltonien"
 
-#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:130
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:146
 msgid "Comes back to you if not claimed in time."
 msgstr "Te reviens si elle n’est pas réclamée à temps."
 
@@ -6059,8 +6070,8 @@ msgstr "Commandants"
 msgid "Commission a better one"
 msgstr "En commander un meilleur"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2312
-#: src/components/_user/notification/notification.frontConfig.tsx:2325
+#: src/components/_user/notification/notification.frontConfig.tsx:2347
+#: src/components/_user/notification/notification.frontConfig.tsx:2360
 msgid "Commission earned"
 msgstr "Commission gagnée"
 
@@ -6158,43 +6169,43 @@ msgid "Congrats"
 msgstr "Félicitations"
 
 #. placeholder {0}: data.level
-#: src/components/_user/notification/notification.frontConfig.tsx:436
+#: src/components/_user/notification/notification.frontConfig.tsx:440
 msgid "Congratulations, you leveled up to level {0}!"
 msgstr "Félicitations, tu as atteint le niveau {0}!"
 
 #. placeholder {0}: data.countryName
-#: src/components/_user/notification/notification.frontConfig.tsx:235
+#: src/components/_user/notification/notification.frontConfig.tsx:239
 msgid "Congratulations! You have been elected as the new congress member of {0}"
 msgstr "Félicitations! Tu as été élu comme nouveau membre du congrès de {0}"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:339
+#: src/components/_user/notification/notification.frontConfig.tsx:343
 msgid "Congratulations! You have been elected as the new leader of <0/>"
 msgstr "Félicitations! Tu as été élu nouveau dirigeant de <0/>"
 
 #. placeholder {0}: data.countryName
-#: src/components/_user/notification/notification.frontConfig.tsx:230
+#: src/components/_user/notification/notification.frontConfig.tsx:234
 msgid "Congratulations! You have been elected as the new president of {0}"
 msgstr "Félicitations! Tu as été élu comme nouveau président de {0}"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:344
+#: src/components/_user/notification/notification.frontConfig.tsx:348
 msgid "Congratulations! You have been elected to the council of <0/>"
 msgstr "Félicitations! Tu as été élu au conseil de <0/>"
 
 #. placeholder {0}: militaryRankingConfig[data.rank].percentDamages
-#: src/components/_user/notification/notification.frontConfig.tsx:1526
+#: src/components/_user/notification/notification.frontConfig.tsx:1561
 msgid "Congratulations! You have been promoted to <0/> with an attack bonus of <1>{0}</1>"
 msgstr "Félicitations! Tu as été promu à <0/> avec un bonus d'attaque de <1>{0}</1>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1728
+#: src/components/_user/notification/notification.frontConfig.tsx:1763
 msgid "Congratulations! You won the giveaway and received cases!"
 msgstr "Félicitations! Tu as gagné le tirage au sort et reçu des caisses!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:388
-#: src/components/_user/notification/notification.frontConfig.tsx:1344
+#: src/components/_user/notification/notification.frontConfig.tsx:392
+#: src/components/_user/notification/notification.frontConfig.tsx:1379
 msgid "Congratulations! Your application to <0/> has been accepted"
 msgstr "Félicitations! Ta candidature à <0/> a été acceptée"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1594
+#: src/components/_user/notification/notification.frontConfig.tsx:1629
 msgid "Congratulations! Your team <0/> won the tournament <1/>!"
 msgstr "Félicitations! Ton équipe <0/> a gagné le tournoi <1/>!"
 
@@ -6203,15 +6214,15 @@ msgstr "Félicitations! Ton équipe <0/> a gagné le tournoi <1/>!"
 msgid "Congress election"
 msgstr "Élections législatives"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:175
+#: src/components/_user/notification/notification.frontConfig.tsx:179
 msgid "Congress election candidacy is now open in <0/>"
 msgstr "Les candidatures aux élections législatives sont ouvertes dans <0/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:215
+#: src/components/_user/notification/notification.frontConfig.tsx:219
 msgid "Congress election has ended in <0/>. Check the results!"
 msgstr "Les élections législatives sont terminées dans <0/>. Découvrez les résultats !"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:195
+#: src/components/_user/notification/notification.frontConfig.tsx:199
 msgid "Congress election voting is now open in <0/>"
 msgstr "Le vote des élections législatives est ouvert dans <0/>"
 
@@ -6311,16 +6322,16 @@ msgstr "Continuer avec Apple"
 msgid "Contract"
 msgstr "Contrat"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2480
+#: src/components/_user/notification/notification.frontConfig.tsx:2515
 msgid "Contract cancelled"
 msgstr "Contrat annulé"
 
 #: src/components/_military/mercenaryContract/MercenaryReputationTooltip.tsx:32
-#: src/components/_user/notification/notification.frontConfig.tsx:2477
+#: src/components/_user/notification/notification.frontConfig.tsx:2512
 msgid "Contract completed"
 msgstr "Contrat accompli"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2483
+#: src/components/_user/notification/notification.frontConfig.tsx:2518
 msgid "Contract expired"
 msgstr "Contrat expiré"
 
@@ -6328,7 +6339,7 @@ msgstr "Contrat expiré"
 msgid "Contract failed"
 msgstr "Contrat échoué"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2486
+#: src/components/_user/notification/notification.frontConfig.tsx:2521
 msgid "Contract rolled back"
 msgstr "Contrat annulé (rollback)"
 
@@ -6363,7 +6374,7 @@ msgstr "Propriétaire de la conversation"
 msgid "Convince them to stay {retirementStayYears, plural, one {# more year} other {# more years}}"
 msgstr "Les convaincre de rester {retirementStayYears, plural, one {# année de plus} other {# années de plus}}"
 
-#: src/components/_political/chat/ChatConversationsMenu.tsx:169
+#: src/components/_political/chat/ChatConversationsMenu.tsx:170
 msgid "Convs"
 msgstr ""
 
@@ -6382,7 +6393,7 @@ msgid "Cooldown"
 msgstr "Délai d'attente"
 
 #: src/components/_user/apiToken/ApiTokenList.tsx:90
-#: src/components/_user/userReports/UserReportListItem.tsx:267
+#: src/components/_user/userReports/UserReportListItem.tsx:269
 msgid "Copied to clipboard"
 msgstr "Copié dans le presse-papiers"
 
@@ -6516,7 +6527,7 @@ msgid "Country orders give x{multiplier} bonus"
 msgstr "Les ordres nationaux donnent x{multiplier} de bonus"
 
 #. placeholder {0}: data.partialPayout
-#: src/components/_user/notification/notification.frontConfig.tsx:1896
+#: src/components/_user/notification/notification.frontConfig.tsx:1931
 msgid "Country paid <0>{0}</0> for damages done."
 msgstr "Le pays a payé <0>{0}</0> pour les dommages causés."
 
@@ -6524,7 +6535,7 @@ msgstr "Le pays a payé <0>{0}</0> pour les dommages causés."
 msgid "Country President"
 msgstr "Président du pays"
 
-#: src/components/_political/law/law.frontConfig.tsx:618
+#: src/components/_political/law/law.frontConfig.tsx:675
 msgid "Country specializations were removed from the game"
 msgstr "Les spécialisations par pays ont été retirées du jeu"
 
@@ -6583,7 +6594,7 @@ msgstr "Artisan"
 msgid "Crayons in the corner"
 msgstr "Des crayons dans le coin"
 
-#: src/components/_political/chat/ChatConversationsMenu.tsx:201
+#: src/components/_political/chat/ChatConversationsMenu.tsx:202
 #: src/components/_user/apiToken/ApiTokenList.tsx:264
 msgid "Create"
 msgstr "Créer"
@@ -6594,7 +6605,7 @@ msgstr "Créer une entreprise"
 
 #. placeholder {0}: law.data.name
 #. placeholder {1}: law.data.scheme
-#: src/components/_political/law/law.frontConfig.tsx:369
+#: src/components/_political/law/law.frontConfig.tsx:404
 msgid "Create a new alliance named <0>{0}</0> with <1>{1}</1> color scheme."
 msgstr "Créer une nouvelle alliance nommée <0>{0}</0> avec un schéma de couleurs <1>{1}</1>."
 
@@ -6607,13 +6618,13 @@ msgstr "Créer une nouvelle entreprise"
 msgid "Create a party"
 msgstr "Créer un parti"
 
-#: src/components/_political/law/law.frontConfig.tsx:358
+#: src/components/_political/law/law.frontConfig.tsx:393
 #: src/components/_political/law/lawNames.tsx:25
 msgid "Create alliance"
 msgstr "Créer une alliance"
 
 #. placeholder {0}: law.data.name
-#: src/components/_political/law/law.frontConfig.tsx:363
+#: src/components/_political/law/law.frontConfig.tsx:398
 msgid "Create alliance {0}"
 msgstr "Créer une alliance {0}"
 
@@ -6779,7 +6790,7 @@ msgstr "Recettes quotidiennes"
 msgid "Daily maintenance"
 msgstr "Entretien quotidien"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2508
+#: src/components/_user/notification/notification.frontConfig.tsx:2543
 msgid "Daily Missions Reset"
 msgstr "Réinitialisation des missions quotidiennes"
 
@@ -6787,7 +6798,7 @@ msgstr "Réinitialisation des missions quotidiennes"
 msgid "Daily output"
 msgstr "Production quotidienne"
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:549
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:556
 msgid "Daily pay"
 msgstr "Paiement quotidien"
 
@@ -6875,7 +6886,7 @@ msgstr "Pack Ère sombre"
 msgid "Dark map"
 msgstr "Carte sombre"
 
-#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:74
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:90
 msgid "Day {day}"
 msgstr "Jour {day}"
 
@@ -6883,7 +6894,7 @@ msgstr "Jour {day}"
 msgid "Days of experience with the event's good."
 msgstr "Plusieurs jours d'expérience, et l'événement est une réussite."
 
-#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:71
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:87
 msgid "Days since they joined the game."
 msgstr "Nombre de jours depuis qu’ils ont rejoint le jeu."
 
@@ -6947,7 +6958,7 @@ msgstr "Inflige plus de dégâts"
 msgid "Deals some damages"
 msgstr "Inflige quelques dégâts"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2494
+#: src/components/_user/notification/notification.frontConfig.tsx:2529
 msgid "Debuff ended"
 msgstr "Le débuff est terminé"
 
@@ -6964,17 +6975,17 @@ msgstr "Débuffs"
 msgid "Decides on its own in <0/>"
 msgstr "Prend ses décisions de façon autonome dans <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:141
+#: src/components/_political/law/law.frontConfig.tsx:149
 #: src/components/_political/law/lawNames.tsx:14
 msgid "Declare war"
 msgstr "Déclarer la guerre"
 
-#: src/components/_political/law/law.frontConfig.tsx:146
-#: src/components/_political/law/law.frontConfig.tsx:155
+#: src/components/_political/law/law.frontConfig.tsx:154
+#: src/components/_political/law/law.frontConfig.tsx:167
 msgid "Declare war to <0/>"
 msgstr "Déclarer la guerre à <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:142
+#: src/components/_political/law/law.frontConfig.tsx:150
 msgid "Declare war to another country"
 msgstr "Déclarer la guerre à un autre pays"
 
@@ -7054,19 +7065,19 @@ msgstr "Pacte de défense ratifé"
 msgid "Defensive pacts"
 msgstr "Pactes de défense"
 
-#: src/components/_political/law/law.frontConfig.tsx:255
+#: src/components/_political/law/law.frontConfig.tsx:281
 msgid "Define <0/> as an enemy, increasing damages when fighting them"
 msgstr "Définir <0/> comme un ennemi, augmentant les dégâts lors du combat contre eux"
 
-#: src/components/_political/law/law.frontConfig.tsx:245
+#: src/components/_political/law/law.frontConfig.tsx:266
 msgid "Define <0/> as enemy"
 msgstr "Définir <0/> comme ennemi"
 
-#: src/components/_political/law/law.frontConfig.tsx:241
+#: src/components/_political/law/law.frontConfig.tsx:262
 msgid "Define a country as an enemy to get bonus against"
 msgstr "Définir un pays comme ennemi juré pour obtenir un bonus contre"
 
-#: src/components/_political/law/law.frontConfig.tsx:240
+#: src/components/_political/law/law.frontConfig.tsx:261
 #: src/components/_political/law/lawNames.tsx:24
 msgid "Define a sworn enemy"
 msgstr "Définir un ennemi juré"
@@ -7100,7 +7111,7 @@ msgstr "Rétrograder le commandant"
 msgid "Demote from Commander"
 msgstr "Rétrograder le commandant"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2459
+#: src/components/_user/notification/notification.frontConfig.tsx:2494
 msgid "Demoted from Commander"
 msgstr "Rétrogradé du rang de commandant"
 
@@ -7335,11 +7346,11 @@ msgid "Dismiss past outcomes"
 msgstr "Ne pas tenir compte des résultats passés"
 
 #: src/components/_political/alliance/alliance.frontConfig.tsx:20
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:168
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:191
 msgid "Dissolve alliance"
 msgstr "Dissoudre l'alliance"
 
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:173
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:196
 msgid "Dissolve the alliance permanently, removing every member country."
 msgstr "Dissoudre l'alliance définitivement, en supprimant tous les pays membres."
 
@@ -7431,7 +7442,7 @@ msgstr "Fais glisser pour réorganiser"
 msgid "Dragon"
 msgstr "Dragon"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:137
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:142
 msgid "Draw"
 msgstr "Égalité"
 
@@ -7443,7 +7454,7 @@ msgstr "Attirer"
 msgid "Draw odds"
 msgstr "Cotes de tirage"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:149
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:154
 msgid "Drawing"
 msgstr "Tirage"
 
@@ -7677,15 +7688,15 @@ msgstr "Élu"
 msgid "Election"
 msgstr "Élections"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2363
+#: src/components/_user/notification/notification.frontConfig.tsx:2398
 msgid "Election candidacy open"
 msgstr "Candidature à l'élection ouverte"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2368
+#: src/components/_user/notification/notification.frontConfig.tsx:2403
 msgid "Election ended"
 msgstr "Élection terminée"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2366
+#: src/components/_user/notification/notification.frontConfig.tsx:2401
 msgid "Election vote open"
 msgstr "Le vote est ouvert"
 
@@ -7747,7 +7758,7 @@ msgid "Employee cared for"
 msgstr "Employé pris en charge"
 
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:151
-#: src/components/_user/notification/notification.frontConfig.tsx:2335
+#: src/components/_user/notification/notification.frontConfig.tsx:2370
 msgid "Employee events"
 msgstr "Événements liés aux employés"
 
@@ -7755,7 +7766,7 @@ msgstr "Événements liés aux employés"
 msgid "Employee Events"
 msgstr "Événements liés aux employés"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2337
+#: src/components/_user/notification/notification.frontConfig.tsx:2372
 msgid "Employee events decided"
 msgstr "Événements liés aux employés achevés"
 
@@ -7780,7 +7791,7 @@ msgstr "Employé renommé!"
 #: src/components/_economy/company/RecommendedCompanyRegions.tsx:198
 #: src/components/_economy/employee/employeeStats.tsx:666
 #: src/components/_political/country/CountryTaxes.tsx:21
-#: src/components/_political/law/law.frontConfig.tsx:70
+#: src/components/_political/law/law.frontConfig.tsx:74
 #: src/components/_political/region/IncomeEstimateBreakdown.tsx:70
 msgid "Employee tax"
 msgstr "Taxe sur les employés"
@@ -7849,30 +7860,30 @@ msgstr "Pantalon enchanté"
 msgid "Encourage it"
 msgstr "L'encourager"
 
-#: src/components/_political/law/law.frontConfig.tsx:334
+#: src/components/_political/law/law.frontConfig.tsx:366
 msgid "End an existing defensive pact with another country"
 msgstr "Mettre fin à un pacte défensif existant avec un autre pays"
 
-#: src/components/_social/poll/PollCard.tsx:454
+#: src/components/_social/poll/PollCard.tsx:579
 msgid "End poll"
 msgstr "Clôturer le sondage"
 
-#: src/components/_political/law/law.frontConfig.tsx:348
+#: src/components/_political/law/law.frontConfig.tsx:383
 msgid "End the defensive pact with <0/>."
 msgstr "Mettre fin au pacte de défense avec <0/>."
 
-#: src/components/_political/law/law.frontConfig.tsx:694
+#: src/components/_political/law/law.frontConfig.tsx:752
 msgid "End the sponsorship of one of your State Armies"
 msgstr "Mettez fin au parrainage de l'une de vos armées d'État"
 
-#: src/components/_social/poll/PollCard.tsx:449
+#: src/components/_social/poll/PollCard.tsx:574
 msgid "End this poll?"
 msgstr "Clôturer ce sondage?"
 
 #: src/components/_military/battle/BattleSystem.tsx:808
 #: src/components/_military/tournament/TournamentHeader.tsx:85
 #: src/components/_military/war/WarHeader.tsx:70
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:161
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:166
 msgid "Ended"
 msgstr "Terminée"
 
@@ -8035,7 +8046,7 @@ msgstr "Tests de chance liés aux événements"
 msgid "Events"
 msgstr "Événements"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:577
+#: src/components/_user/notification/notification.frontConfig.tsx:581
 msgid "Events about {lead} and others were decided while you were away."
 msgstr "Des événements concernant {lead} et d’autres personnes ont été tranchés pendant votre absence."
 
@@ -8049,7 +8060,7 @@ msgstr "Toutes les 2 minutes, le camp ayant infligé le plus de <0>Dégâts</0> 
 
 #. placeholder {0}: contract.productionBonusPercent
 #. placeholder {1}: employeeConfig.skills.managementBonusPercentPerLevel
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:559
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:566
 msgid "Every employee of this company produces <0>{0}</0> more: <1>{1}</1> per Management point, and they have <2/>."
 msgstr "Chaque employé de cette entreprise génère <0>{0}</0> en plus : <1>{1}</1> par point de Gestion, et ils disposent de <2/>."
 
@@ -8171,8 +8182,8 @@ msgid "Everything you earned is paid out now."
 msgstr "Tout ce que tu as gagné t'est versé maintenant."
 
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:181
-msgid "Everywhere"
-msgstr "Partout"
+#~ msgid "Everywhere"
+#~ msgstr "Partout"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1734
 msgid "Evict the General"
@@ -8215,8 +8226,8 @@ msgstr "Expérience"
 
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:81
 #: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:146
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:139
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:143
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:162
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:166
 #: src/utils/translations.tsx:341
 msgid "Expired"
 msgstr "Expiré"
@@ -8233,8 +8244,8 @@ msgstr "Expiré: aucune offre"
 msgid "Expired: round ended"
 msgstr "Expiré: manche terminée"
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:111
-#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:129
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:134
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:145
 msgid "Expires"
 msgstr "Expire"
 
@@ -8263,7 +8274,7 @@ msgid "f. Glorification/apology of hateful ideologies such as nazism, neo-nazism
 msgstr "f. Glorification/excuses des idéologies haineuses telles que le nazisme, le néo-nazisme, le fascisme, le terrorisme et les groupes et mouvements terroristes (considérés comme tels par l'Organisation des Nations Unies, l'Union européenne ou la France), le déni de génocide, les crimes de guerre ou les crimes contre l'humanité, le Poutinisme et le communisme"
 
 #: src/components/_user/apiToken/ApiTokenList.tsx:92
-#: src/components/_user/userReports/UserReportListItem.tsx:269
+#: src/components/_user/userReports/UserReportListItem.tsx:271
 msgid "Failed to copy"
 msgstr "Échec de la copie"
 
@@ -8427,15 +8438,15 @@ msgstr "Enfin au-dessus de la moyenne!"
 msgid "Finance a resistance battle in <0/>"
 msgstr "Financer une bataille de résistance dans <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:718
+#: src/components/_political/law/law.frontConfig.tsx:777
 msgid "Finance a resistance to liberate an occupied region"
 msgstr "Financer une résistance pour libérer une région occupée"
 
-#: src/components/_political/law/law.frontConfig.tsx:731
+#: src/components/_political/law/law.frontConfig.tsx:794
 msgid "Finance a revolt to liberate <0/>"
 msgstr "Financer une révolte pour libérer <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:717
+#: src/components/_political/law/law.frontConfig.tsx:776
 #: src/components/_political/law/lawNames.tsx:38
 msgid "Finance foreign resistance"
 msgstr "Financer la résistance étrangère"
@@ -8444,7 +8455,7 @@ msgstr "Financer la résistance étrangère"
 msgid "Finance local resistance"
 msgstr "Financer la résistance locale"
 
-#: src/components/_political/law/law.frontConfig.tsx:722
+#: src/components/_political/law/law.frontConfig.tsx:781
 msgid "Finance resistance in <0/>"
 msgstr "Financer la résistance dans <0/>"
 
@@ -8540,7 +8551,7 @@ msgstr "Révoquer un ministre"
 msgid "Fire your manager?"
 msgstr "Licencier ton manager?"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2375
+#: src/components/_user/notification/notification.frontConfig.tsx:2410
 msgid "Fired from government"
 msgstr "Renvoyé du gouvernement"
 
@@ -8658,7 +8669,7 @@ msgstr "Oublie son expérience dans {good}"
 msgid "Found a bug? Report it instead of using it: valuable reports earn the Bug Finder badge."
 msgstr "Tu as trouvé un bug? Signale-le plutôt que de l'exploiter: les signalements utiles permettent d'obtenir le badge Dénicheur de bugs."
 
-#: src/components/_political/law/law.frontConfig.tsx:360
+#: src/components/_political/law/law.frontConfig.tsx:395
 msgid "Found a new alliance with your country as founding member"
 msgstr "A trouvé une nouvelle alliance avec votre pays en tant que membre fondateur"
 
@@ -8696,7 +8707,7 @@ msgstr "Venant de"
 
 #. placeholder {0}: range.min
 #. placeholder {1}: range.max
-#: src/components/_economy/itemOffer/CreateItemOffersModal.tsx:390
+#: src/components/_economy/itemOffer/CreateItemOffersModal.tsx:396
 msgid "From <0>{0}</0> to <1>{1}</1> before tax."
 msgstr "De <0>{0}</0> à <1>{1}</1> hors taxes."
 
@@ -8900,7 +8911,7 @@ msgstr "Obtiens tes points d'expérience (EXP) quotidiens pour la débloquer."
 msgid "Gets rid of a bad trait for good."
 msgstr "Élimine définitivement un mauvais trait."
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:57
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:66
 msgid "Gift claimed"
 msgstr "Cadeau réclamé"
 
@@ -8964,11 +8975,11 @@ msgstr "Donnes à ton jeton un nom descriptif pour l'identifier plus tard."
 #: src/components/_other/events/EventGiveaway.tsx:61
 #: src/components/_political/chat/ConversationDropdown.tsx:223
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:108
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:123
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:128
 msgid "Giveaway"
 msgstr "Tirage au sort"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2297
+#: src/components/_user/notification/notification.frontConfig.tsx:2332
 msgid "Giveaway ended"
 msgstr "Tirage au sort terminé"
 
@@ -8984,11 +8995,11 @@ msgstr "Tirage au sort commencé"
 msgid "Giveaway Winner"
 msgstr "Gagnant du tirage au sort"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2296
+#: src/components/_user/notification/notification.frontConfig.tsx:2331
 msgid "Giveaway won"
 msgstr "Tirage au sort gagné"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2506
+#: src/components/_user/notification/notification.frontConfig.tsx:2541
 msgid "Giveaway Won!"
 msgstr "Tirage au sort gagné!"
 
@@ -9047,7 +9058,7 @@ msgstr "Aller aux compétences"
 msgid "Go undercover yourself"
 msgstr "Va te cacher toi-même"
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:112
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:135
 msgid "Goes back to the veteran if not claimed in time."
 msgstr "Revient au vétéran si elle n’est pas réclamée à temps."
 
@@ -9508,7 +9519,7 @@ msgstr "Cacher les cartes"
 msgid "Hide email"
 msgstr "Cacher l'e-mail"
 
-#: src/components/_social/poll/PollCard.tsx:421
+#: src/components/_social/poll/PollCard.tsx:546
 msgid "Hide results"
 msgstr "Cacher les résultats"
 
@@ -9639,7 +9650,7 @@ msgstr "Honorer leur parcours professionnel"
 msgid "Hourly maintenance"
 msgstr "Entretien horaire"
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:543
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:550
 msgid "Hourly pay"
 msgstr "Rémunération horaire"
 
@@ -9737,11 +9748,11 @@ msgstr "Imagine si t'arrêtes juste avant le Mythique"
 msgid "Imagine wasting your click on this"
 msgstr "Imagine gaspiller ton clic pour ça"
 
-#: src/components/_political/law/law.frontConfig.tsx:217
+#: src/components/_political/law/law.frontConfig.tsx:233
 msgid "Impeach <0/>"
 msgstr "Destituer <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:211
+#: src/components/_political/law/law.frontConfig.tsx:227
 #: src/components/_political/law/lawNames.tsx:22
 msgid "Impeach congress member"
 msgstr "Destitution d'un parlementaire"
@@ -9750,13 +9761,13 @@ msgstr "Destitution d'un parlementaire"
 msgid "Impeach party leader"
 msgstr "Destituer le chef de parti"
 
-#: src/components/_political/law/law.frontConfig.tsx:203
+#: src/components/_political/law/law.frontConfig.tsx:219
 #: src/components/_political/law/lawNames.tsx:20
 msgid "Impeach president"
 msgstr "Destitution du président"
 
-#: src/components/_political/law/law.frontConfig.tsx:204
-#: src/components/_political/law/law.frontConfig.tsx:206
+#: src/components/_political/law/law.frontConfig.tsx:220
+#: src/components/_political/law/law.frontConfig.tsx:222
 msgid "Impeach the current president"
 msgstr "Destituer le président actuel"
 
@@ -9800,19 +9811,19 @@ msgstr "Inactif"
 msgid "Inactive ({0})"
 msgstr "Inactif ({0})"
 
-#: src/components/_user/userReports/userReports.hooks.ts:19
+#: src/components/_user/userReports/userReports.hooks.ts:28
 msgid "Inappropriate avatar"
 msgstr "Avatar inapproprié"
 
-#: src/components/_user/userReports/userReports.hooks.ts:20
+#: src/components/_user/userReports/userReports.hooks.ts:29
 msgid "Inappropriate description"
 msgstr "Description inappropriée"
 
-#: src/components/_user/userReports/userReports.hooks.ts:16
+#: src/components/_user/userReports/userReports.hooks.ts:25
 msgid "Inappropriate image"
 msgstr "Image inappropriée"
 
-#: src/components/_user/userReports/userReports.hooks.ts:18
+#: src/components/_user/userReports/userReports.hooks.ts:27
 msgid "Inappropriate name"
 msgstr "Nom inapproprié"
 
@@ -9890,24 +9901,24 @@ msgstr "L'interroger"
 msgid "Inventory"
 msgstr "Inventaire"
 
-#: src/components/_political/chat/ChatConversationsMenu.tsx:197
+#: src/components/_political/chat/ChatConversationsMenu.tsx:198
 msgid "Invitations"
 msgstr "Invitations"
 
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:46
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:50
 msgid "Invite <0/>"
 msgstr "Inviter <0/>"
 
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:55
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:63
 msgid "Invite <0/> to join the alliance. If accepted, the target country's government must also accept a system law before joining takes effect."
 msgstr "Inviter <0/> à rejoindre l'alliance. Si accepté, le gouvernement du pays cible doit également approuver une loi du système avant que l'adhésion ne prenne effet."
 
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:39
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:43
 msgid "Invite a country to join the alliance. A confirmation law is created in the target country."
 msgstr "Inviter un pays à rejoindre l'alliance. Une loi de confirmation est créée dans le pays cible."
 
 #: src/components/_political/alliance/alliance.frontConfig.tsx:15
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:37
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:41
 msgid "Invite country"
 msgstr "Inviter un pays"
 
@@ -10016,7 +10027,7 @@ msgid "It works. Conversation resumes."
 msgstr "Ça fonctionne. La conversation reprend."
 
 #: src/components/_economy/itemOffer/itemOffer.hooks.ts:36
-#: src/components/_user/notification/notification.frontConfig.tsx:2345
+#: src/components/_user/notification/notification.frontConfig.tsx:2380
 msgid "Item bought"
 msgstr "Objet acheté"
 
@@ -10078,7 +10089,7 @@ msgstr "Marché de l'emploi"
 msgid "Jobs"
 msgstr "Emplois"
 
-#: src/components/_political/law/law.frontConfig.tsx:411
+#: src/components/_political/law/law.frontConfig.tsx:446
 msgid "Join <0/>"
 msgstr "Rejoindre <0/>"
 
@@ -10102,7 +10113,7 @@ msgstr "Rejoindre un parti"
 msgid "Join a political party"
 msgstr "Rejoindre un parti politique"
 
-#: src/components/_political/law/law.frontConfig.tsx:405
+#: src/components/_political/law/law.frontConfig.tsx:440
 #: src/components/_political/law/lawNames.tsx:27
 msgid "Join alliance"
 msgstr "Rejoindre une alliance"
@@ -10111,7 +10122,7 @@ msgstr "Rejoindre une alliance"
 msgid "Join Discord"
 msgstr "Rejoindre Discord"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:276
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:297
 msgid "Join giveaway"
 msgstr "Rejoindre le tirage au sort"
 
@@ -10151,13 +10162,14 @@ msgstr "Rejoindre le monde"
 msgid "Join unrest"
 msgstr "Rejoindre l'agitation"
 
-#: src/components/_political/chat/ChatConversationsMenu.tsx:191
+#: src/components/_political/chat/ChatConversationsMenu.tsx:192
 msgid "Joinable"
 msgstr "Joignable"
 
 #: src/components/_political/chat/ChatRunningButton.tsx:217
 #: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:105
-#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:70
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:86
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:209
 msgid "Joined"
 msgstr "A rejoint"
 
@@ -10242,12 +10254,12 @@ msgstr "Kevin a retrouvé une taille raisonnable, et tout l’atelier sent les f
 msgid "Kick"
 msgstr "Exclure"
 
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:73
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:81
 msgid "Kick <0/>"
 msgstr "Exclure <0/>"
 
 #: src/components/_political/alliance/alliance.frontConfig.tsx:16
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:65
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:73
 msgid "Kick country"
 msgstr "Exclure le pays"
 
@@ -10370,7 +10382,7 @@ msgid "Law failed"
 msgstr "Loi échouée"
 
 #: src/components/_political/law/LawFormModal.tsx:107
-#: src/components/_user/notification/notification.frontConfig.tsx:2361
+#: src/components/_user/notification/notification.frontConfig.tsx:2396
 msgid "Law proposed"
 msgstr "Loi proposée"
 
@@ -10423,11 +10435,11 @@ msgstr "Lanière en cuir"
 msgid "Leave"
 msgstr "Quitter"
 
-#: src/components/_political/law/law.frontConfig.tsx:386
+#: src/components/_political/law/law.frontConfig.tsx:421
 msgid "Leave <0/>"
 msgstr "Quitter <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:395
+#: src/components/_political/law/law.frontConfig.tsx:430
 msgid "Leave <0/>."
 msgstr "Quitter <0/>."
 
@@ -10435,7 +10447,7 @@ msgstr "Quitter <0/>."
 msgid "Leave a very spicy bait lunch"
 msgstr "Laisser un déjeuner-appât très épicé"
 
-#: src/components/_political/law/law.frontConfig.tsx:380
+#: src/components/_political/law/law.frontConfig.tsx:415
 #: src/components/_political/law/lawNames.tsx:26
 msgid "Leave alliance"
 msgstr "Quitter l'alliance"
@@ -10462,7 +10474,7 @@ msgstr "Laisser tomber"
 msgid "Leave military unit?"
 msgstr "Quitter l'unité militaire?"
 
-#: src/components/_political/law/law.frontConfig.tsx:381
+#: src/components/_political/law/law.frontConfig.tsx:416
 msgid "Leave the alliance your country belongs to"
 msgstr "Quitter l'alliance à laquelle appartient votre pays"
 
@@ -10583,6 +10595,10 @@ msgstr "Les laisser régler ça"
 msgid "Let them volunteer"
 msgstr "Les laisser se porter volontaires"
 
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:210
+msgid "Level"
+msgstr ""
+
 #. placeholder {0}: leveling.level
 #: src/components/_user/user/Level.tsx:100
 msgid "Level {0}"
@@ -10609,7 +10625,7 @@ msgstr "Niveau {level}"
 msgid "Level {level} opens {0}. Claim missions to get there."
 msgstr "Le niveau {level} débloque {0}. Accomplit des missions pour y parvenir."
 
-#: src/components/_social/poll/PollCard.tsx:324
+#: src/components/_social/poll/PollCard.tsx:445
 msgid "Level {minLevel}+"
 msgstr "Niveau {minLevel}+"
 
@@ -10618,7 +10634,7 @@ msgstr "Niveau {minLevel}+"
 msgid "Level too low"
 msgstr "Niveau trop faible"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2289
+#: src/components/_user/notification/notification.frontConfig.tsx:2324
 msgid "Level up!"
 msgstr "Niveau supérieur!"
 
@@ -10626,15 +10642,15 @@ msgstr "Niveau supérieur!"
 msgid "Levels"
 msgstr "Niveaux"
 
-#: src/components/_political/law/law.frontConfig.tsx:525
+#: src/components/_political/law/law.frontConfig.tsx:578
 msgid "Liberate <0/>"
 msgstr "Libérer <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:534
+#: src/components/_political/law/law.frontConfig.tsx:591
 msgid "Liberate <0/> and return it to its original country"
 msgstr "Libérer <0/> et la rendre à son pays d'origine"
 
-#: src/components/_political/law/law.frontConfig.tsx:520
+#: src/components/_political/law/law.frontConfig.tsx:573
 #: src/components/_political/law/lawNames.tsx:32
 msgid "Liberate a region"
 msgstr "Libérer une région"
@@ -10750,11 +10766,11 @@ msgstr "Charger le préréglage"
 msgid "Loading {status}..."
 msgstr "Chargement {status}..."
 
-#: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:63
+#: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:97
 msgid "Loading giveaway..."
 msgstr "Charger le tirage au sort..."
 
-#: src/components/_social/poll/PollCard.tsx:166
+#: src/components/_social/poll/PollCard.tsx:283
 msgid "Loading poll..."
 msgstr "Charger le sondage..."
 
@@ -10780,7 +10796,7 @@ msgstr "Bloqué à Paramilitaire pour <0/>"
 msgid "Locked until <0/> while <1/> can reclaim the unit."
 msgstr "Bloqué jusqu’à <0/>, tandis que <1/> peut récupérer l’unité."
 
-#: src/components/_social/poll/PollCard.tsx:228
+#: src/components/_social/poll/PollCard.tsx:345
 msgid "Log in to vote."
 msgstr "Connecte-toi pour voter."
 
@@ -10826,7 +10842,7 @@ msgstr "Récupérer des caisses"
 msgid "Loot chance"
 msgstr "Chance de butin"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2424
+#: src/components/_user/notification/notification.frontConfig.tsx:2459
 msgid "Loot reward"
 msgstr "Récompense de butin"
 
@@ -10922,11 +10938,11 @@ msgstr "Commandant"
 msgid "majority {majority}"
 msgstr "majorité {majority}"
 
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:110
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:128
 msgid "Make <0/> the new alliance leader. The leader can edit the alliance avatar and color scheme directly."
 msgstr "Faire de <0/> le nouveau chef de l'alliance. Le chef peut modifier directement l'avatar de l'alliance et le schéma de couleurs."
 
-#: src/components/_political/law/law.frontConfig.tsx:670
+#: src/components/_political/law/law.frontConfig.tsx:727
 msgid "Make a military unit of your nationality a State Army"
 msgstr "Faire de l'unité militaire de votre nationalité une armée d'État"
 
@@ -10950,8 +10966,8 @@ msgid "Management"
 msgstr "Gestion"
 
 #: src/components/_economy/employee/employeeStats.tsx:514
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:304
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:524
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:309
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:531
 #: src/pages/company/[companyId]/index.tsx:57
 msgid "Manager"
 msgstr "Manager"
@@ -10960,7 +10976,7 @@ msgstr "Manager"
 msgid "Manager care"
 msgstr "Manager des soins"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2329
+#: src/components/_user/notification/notification.frontConfig.tsx:2364
 msgid "Manager hired"
 msgstr "Manager embauché"
 
@@ -10976,14 +10992,14 @@ msgstr "Manager bougé"
 msgid "Manager positions"
 msgstr "Postes de manager"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2331
+#: src/components/_user/notification/notification.frontConfig.tsx:2366
 msgid "Manager resigned"
 msgstr "Le manager a démissionné"
 
 #: src/components/_economy/company/RecommendedCompanyRegions.tsx:209
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:460
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:467
 #: src/components/_political/country/CountryTaxes.tsx:27
-#: src/components/_political/law/law.frontConfig.tsx:71
+#: src/components/_political/law/law.frontConfig.tsx:75
 #: src/components/_political/region/IncomeEstimateBreakdown.tsx:74
 msgid "Manager tax"
 msgstr "Taxe sur les managers"
@@ -10992,7 +11008,7 @@ msgstr "Taxe sur les managers"
 msgid "Manager Tax"
 msgstr "Taxe sur les managers"
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:401
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:408
 msgid "Manager wanted"
 msgstr "Manager recherché"
 
@@ -11048,7 +11064,7 @@ msgid "Market rate"
 msgstr "Taux du marché"
 
 #: src/components/_political/country/CountryTaxes.tsx:33
-#: src/components/_political/law/law.frontConfig.tsx:72
+#: src/components/_political/law/law.frontConfig.tsx:76
 msgid "Market tax"
 msgstr "Taxe du marché"
 
@@ -11262,7 +11278,7 @@ msgstr "Mémorandum"
 msgid "Men only."
 msgstr "Hommes seulement."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2501
+#: src/components/_user/notification/notification.frontConfig.tsx:2536
 msgid "Mentioned in message"
 msgstr "Mentionné dans un message"
 
@@ -11324,7 +11340,7 @@ msgstr "Message (Optionnel)"
 msgid "Message deleted"
 msgstr "Message supprimé"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2499
+#: src/components/_user/notification/notification.frontConfig.tsx:2534
 msgid "Message liked"
 msgstr "Message aimé"
 
@@ -11425,7 +11441,7 @@ msgstr "Rang militaire"
 msgid "Military Rank"
 msgstr "Rang militaire"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2403
+#: src/components/_user/notification/notification.frontConfig.tsx:2438
 msgid "Military Rank Up!"
 msgstr "Promotion militaire!"
 
@@ -11526,7 +11542,7 @@ msgstr "Manque <0>{missing}</0> pour produire"
 msgid "Mission tags"
 msgstr "Étiquettes de mission"
 
-#: src/components/_user/mission/MissionTag.tsx:228
+#: src/components/_user/mission/MissionTag.tsx:229
 #: src/components/_user/mission/ProgressHeader.tsx:67
 #: src/components/_user/user/UserHeader.tsx:217
 msgid "Missions"
@@ -11600,7 +11616,7 @@ msgstr "Dégâts mensuels: <0>{monthlyDamages}</0>"
 msgid "Monthly missions are not available yet"
 msgstr "Les missions mensuelles ne sont pas encore disponibles"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2514
+#: src/components/_user/notification/notification.frontConfig.tsx:2549
 msgid "Monthly Missions Reset"
 msgstr "Réinitialisation des missions mensuelles"
 
@@ -11740,7 +11756,7 @@ msgstr "Bougé récemment"
 msgid "Moved to <0/>"
 msgstr "Bougé à <0/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2341
+#: src/components/_user/notification/notification.frontConfig.tsx:2376
 msgid "Moved to a new company"
 msgstr "Transféré dans une nouvelle entreprise"
 
@@ -11759,15 +11775,15 @@ msgstr "Déménager ton domicile vers une autre région coûte <0>{homeMoveConcr
 msgid "MU"
 msgstr "UM"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2446
+#: src/components/_user/notification/notification.frontConfig.tsx:2481
 msgid "MU Application Accepted"
 msgstr "Candidature à une UM acceptée"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2443
+#: src/components/_user/notification/notification.frontConfig.tsx:2478
 msgid "MU Application Rejected"
 msgstr "Candidature à une UM rejetée"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2465
+#: src/components/_user/notification/notification.frontConfig.tsx:2500
 msgid "MU Donation Received"
 msgstr "Don à une UM reçu"
 
@@ -11775,12 +11791,12 @@ msgstr "Don à une UM reçu"
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:118
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:136
 #: src/components/_other/events/EventMuLeague.tsx:48
-#: src/components/_user/notification/notification.frontConfig.tsx:2518
+#: src/components/_user/notification/notification.frontConfig.tsx:2553
 #: src/pages/mu/[muId]/league.tsx:19
 msgid "MU league"
 msgstr "Ligue des UM"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2451
+#: src/components/_user/notification/notification.frontConfig.tsx:2486
 msgid "MU Level Up!"
 msgstr "L'UM gagne un niveau!"
 
@@ -11804,12 +11820,12 @@ msgstr "Les ordres d'UM coûtent x{multiplier} papier"
 msgid "MU orders up to {muOrderMax}%"
 msgstr "Les ordres d'UM jusqu'à {muOrderMax}%"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2462
+#: src/components/_user/notification/notification.frontConfig.tsx:2497
 msgid "MU Ownership Transferred"
 msgstr "Propriété de l'UM transférée"
 
 #. placeholder {0}: data.level
-#: src/components/_political/message/systemMessage.frontConfig.tsx:117
+#: src/components/_political/message/systemMessage.frontConfig.tsx:172
 msgid "MU reached level {0}! Reward: {rewardDisplay}"
 msgstr "L'UM a atteint le niveau {0}! Récompense: {rewardDisplay}"
 
@@ -11821,7 +11837,7 @@ msgstr "Tournoi des UM"
 msgid "MU Tournament Winner"
 msgstr "Vainqueur du tournoi des UM"
 
-#: src/components/_user/userReports/userReports.hooks.ts:21
+#: src/components/_user/userReports/userReports.hooks.ts:30
 msgid "Multiple accounts"
 msgstr "Multicomptes"
 
@@ -12007,7 +12023,7 @@ msgstr "Nouveau nom d'alliance"
 msgid "New API Token Created"
 msgstr "Nouveau Jeton API Créé"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2352
+#: src/components/_user/notification/notification.frontConfig.tsx:2387
 msgid "New article"
 msgstr "Nouvel article"
 
@@ -12015,11 +12031,11 @@ msgstr "Nouvel article"
 msgid "New candidates"
 msgstr "Nouveaux candidats"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2354
+#: src/components/_user/notification/notification.frontConfig.tsx:2389
 msgid "New comment"
 msgstr "Nouveau commentaire"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2474
+#: src/components/_user/notification/notification.frontConfig.tsx:2509
 msgid "New contract accepted"
 msgstr "Nouveau contrat accepté"
 
@@ -12051,7 +12067,7 @@ msgstr "De nouveaux tapis, de nouvelles serviettes, et une équipe plus en forme
 msgid "New Mercenary Auction"
 msgstr "Nouvelle enchère pour mercenariat"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2495
+#: src/components/_user/notification/notification.frontConfig.tsx:2530
 msgid "New message"
 msgstr "Nouveau message"
 
@@ -12063,7 +12079,7 @@ msgstr "Nouvelle unité militaire"
 msgid "New missions all the time"
 msgstr "De nouvelles missions en permanence"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2449
+#: src/components/_user/notification/notification.frontConfig.tsx:2484
 msgid "New MU Application"
 msgstr "Nouvelle candidature à l'UM"
 
@@ -12080,11 +12096,11 @@ msgstr "Nouvelle nationalité"
 msgid "New order"
 msgstr "Nouvel ordre"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2398
+#: src/components/_user/notification/notification.frontConfig.tsx:2433
 msgid "New Party Application"
 msgstr "Nouvelle candidature au parti"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2387
+#: src/components/_user/notification/notification.frontConfig.tsx:2422
 msgid "New Party Leader"
 msgstr "Nouveau chef de parti"
 
@@ -12097,19 +12113,19 @@ msgid "New preset"
 msgstr "Nouvelle configuration"
 
 #: src/components/_political/event/EventList.tsx:109
-#: src/components/_user/notification/notification.frontConfig.tsx:2370
+#: src/components/_user/notification/notification.frontConfig.tsx:2405
 msgid "New president"
 msgstr "Nouveau président"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2401
+#: src/components/_user/notification/notification.frontConfig.tsx:2436
 msgid "New referred user"
 msgstr "Nouvel utilisateur parrainé"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2402
+#: src/components/_user/notification/notification.frontConfig.tsx:2437
 msgid "New referrer"
 msgstr "Nouveau parrain"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2357
+#: src/components/_user/notification/notification.frontConfig.tsx:2392
 msgid "New subscriber"
 msgstr "Nouvel abonné"
 
@@ -12121,11 +12137,11 @@ msgstr "Nouveaux supporters"
 msgid "New type"
 msgstr "Nouveau type"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2327
+#: src/components/_user/notification/notification.frontConfig.tsx:2362
 msgid "New worker"
 msgstr "Nouveau travailleur"
 
-#: src/components/_political/chat/ChatConversationsMenu.tsx:174
+#: src/components/_political/chat/ChatConversationsMenu.tsx:175
 msgid "Newcomers"
 msgstr "Joueurs débutants"
 
@@ -12378,7 +12394,7 @@ msgstr "Plus maintenant <0/>"
 msgid "No longer on the roster."
 msgstr "Ne figure plus dans l’effectif."
 
-#: src/components/_economy/itemOffer/CreateItemOffersModal.tsx:402
+#: src/components/_economy/itemOffer/CreateItemOffersModal.tsx:408
 msgid "No market value yet: any price works."
 msgstr "Aucune valeur marchande pour l’instant : n’importe quel prix convient."
 
@@ -12446,7 +12462,7 @@ msgstr "Aucune UM ne s'est encore inscrite. Sois le premier."
 msgid "No nationality, alliance or SR skill bonus"
 msgstr "Pas de nationalité, alliance ou bonus de compétences liés aux RS"
 
-#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:203
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:278
 msgid "No newcomers to welcome right now"
 msgstr "Aucun joueur débutant à accueillir pour le moment"
 
@@ -12576,7 +12592,7 @@ msgstr "Aucunes armes ou équipement à démanteler"
 msgid "No welcome gifts left today"
 msgstr "Aucun cadeaux de bienvenue restants aujourd'hui"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:193
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:198
 msgid "No winners"
 msgstr "Aucun gagnant"
 
@@ -12600,6 +12616,10 @@ msgstr "Personne ne fait rien. Cela ne dérange personne."
 msgid "Nobody is happy about it."
 msgstr "Personne n’en est content."
 
+#: src/components/_user/subGiftDrop/GiveawayEntrantsModal.tsx:43
+msgid "Nobody joined yet"
+msgstr ""
+
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:3584
 msgid "Nobody knows who the party is for. It is a great party."
 msgstr "Personne ne sait pour qui est organisée la fête. C’est une fête formidable."
@@ -12608,7 +12628,7 @@ msgstr "Personne ne sait pour qui est organisée la fête. C’est une fête for
 msgid "Nobody manages this company yet"
 msgstr "Personne ne dirige encore cette entreprise."
 
-#: src/components/_economy/itemOffer/CreateItemOffersModal.tsx:431
+#: src/components/_economy/itemOffer/CreateItemOffersModal.tsx:437
 msgid "Nobody sells a similar one yet. The price starts at the estimated value."
 msgstr "Personne ne propose encore un article similaire. Le prix de départ correspond à la valeur estimée."
 
@@ -12629,8 +12649,8 @@ msgid "Nobody was elected"
 msgstr "Personne n'a été élu"
 
 #: src/components/_user/notification/notification.frontConfig.tsx:1284
-msgid "Nobody won."
-msgstr "Personne n'a gagné."
+#~ msgid "Nobody won."
+#~ msgstr "Personne n'a gagné."
 
 #: src/components/_economy/employee/MoveEmployeeModal.tsx:357
 msgid "Nobody works here yet"
@@ -12646,7 +12666,7 @@ msgstr "Personne encore"
 msgid "Nominate"
 msgstr "Nommer"
 
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:100
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:112
 msgid "Nominate <0/> as leader"
 msgstr "Nommer <0/> comme chef"
 
@@ -12654,7 +12674,7 @@ msgstr "Nommer <0/> comme chef"
 msgid "Nominate a {title}"
 msgstr "Nommer un {title}"
 
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:93
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:105
 msgid "Nominate a citizen of a member country as the alliance leader."
 msgstr "Nommer un citoyen d'un pays membre comme Chef de l'alliance."
 
@@ -12664,11 +12684,11 @@ msgid "Nominate a minister"
 msgstr "Nommer un ministre"
 
 #: src/components/_political/alliance/alliance.frontConfig.tsx:17
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:91
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:103
 msgid "Nominate leader"
 msgstr "Nommer un chef"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2372
+#: src/components/_user/notification/notification.frontConfig.tsx:2407
 msgid "Nominated at government"
 msgstr "Nommé au gouvernement"
 
@@ -12703,6 +12723,10 @@ msgstr "Pas mal!"
 #: src/components/_economy/manager/CompanyManagerSlot.tsx:233
 msgid "Not connected for days: no bonus and no pay until they return."
 msgstr "Absence de connexion pendant plusieurs jours: aucun bonus ni aucune rémunération jusqu’au retour."
+
+#: src/components/_user/userReports/userReports.hooks.ts:21
+msgid "Not English in global chat"
+msgstr ""
 
 #: src/components/_political/alliance/AllianceMemberRow.tsx:51
 msgid "Not enough paper for the daily maintenance: alliance damage bonuses are off until it pays."
@@ -12742,12 +12766,12 @@ msgstr "Pas maintenant"
 msgid "Not now, ask again in {retirementStayYears, plural, one {# year} other {# years}}"
 msgstr "Pas maintenant, repose la question dans {retirementStayYears, plural, one {# an} other {# ans}}"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2334
+#: src/components/_user/notification/notification.frontConfig.tsx:2369
 msgid "Not paid"
 msgstr "Non payé"
 
 #: src/components/_other/tour/TutorialGuidesList.tsx:54
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:129
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:134
 msgid "Not started"
 msgstr "Non commencé"
 
@@ -12887,7 +12911,7 @@ msgstr "Désactivé"
 msgid "Off for {0}h"
 msgstr "Arrêt pendant {0}h"
 
-#: src/components/_user/userReports/userReports.hooks.ts:17
+#: src/components/_user/userReports/userReports.hooks.ts:26
 msgid "Offensive content"
 msgstr "Contenu offensant"
 
@@ -12895,7 +12919,7 @@ msgstr "Contenu offensant"
 msgid "Offer “Senior Worker” instead"
 msgstr "Proposer plutôt un « travailleur senior »"
 
-#: src/components/_political/law/law.frontConfig.tsx:683
+#: src/components/_political/law/law.frontConfig.tsx:741
 msgid "Offer <0/> to become a State Army. The country pays its HQ oil, and its owner has to accept."
 msgstr "Proposez à <0/> de devenir une armée d'État. Le pays fournit du pétrole à son QG, et son propriétaire doit accepter."
 
@@ -13052,7 +13076,7 @@ msgstr "Il s'agit simplement d'une indication des positions défendues par le pa
 msgid "Only citizens can fight"
 msgstr "Seuls les citoyens peuvent combattre"
 
-#: src/components/_social/poll/PollCard.tsx:233
+#: src/components/_social/poll/PollCard.tsx:350
 msgid "Only citizens of <0/> can vote."
 msgstr "Seuls des citoyens de <0/> peuvent voter."
 
@@ -13078,7 +13102,7 @@ msgstr "Seules les unités paramilitaires de votre nationalité peuvent être pa
 msgid "Only players who are already citizens when the poll starts can vote."
 msgstr "Seuls les joueurs qui sont déjà citoyens au moment où le scrutin débute peuvent voter."
 
-#: src/components/_social/poll/PollCard.tsx:245
+#: src/components/_social/poll/PollCard.tsx:362
 msgid "Only players who were already citizens of <0/> when the poll started can vote."
 msgstr "Seuls les joueurs qui étaient déjà citoyens de <0/> au moment du début du scrutin peuvent voter."
 
@@ -13245,7 +13269,7 @@ msgstr "Origine"
 #: src/components/_military/battle/ActiveBattlesList.tsx:123
 #: src/components/_other/shop/SkinCollectionModal.tsx:304
 #: src/components/_user/notification/notificationPrefs.categories.ts:178
-#: src/components/_user/userReports/userReports.hooks.ts:23
+#: src/components/_user/userReports/userReports.hooks.ts:32
 msgid "Other"
 msgstr "Autres"
 
@@ -13311,7 +13335,7 @@ msgstr "Propriétaire de cette conversation."
 msgid "Owner's country or alliance"
 msgstr "Pays ou alliance du propriétaire"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1414
+#: src/components/_user/notification/notification.frontConfig.tsx:1449
 msgid "Ownership of <0/> has been transferred from <1/> to <2/>"
 msgstr "La propriété de <0/> a été transférée de <1/> à <2/>"
 
@@ -13404,11 +13428,11 @@ msgstr "Les partis ne peuvent plus initier de résistance"
 msgid "Party"
 msgstr "Parti"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2392
+#: src/components/_user/notification/notification.frontConfig.tsx:2427
 msgid "Party Application Accepted"
 msgstr "Candidature au parti acceptée"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2395
+#: src/components/_user/notification/notification.frontConfig.tsx:2430
 msgid "Party Application Rejected"
 msgstr "Candidature au parti rejetée"
 
@@ -13416,15 +13440,15 @@ msgstr "Candidature au parti rejetée"
 msgid "Party Council election"
 msgstr "Élection du conseil du parti"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:274
+#: src/components/_user/notification/notification.frontConfig.tsx:278
 msgid "Party Council election candidacy is now open in <0/>"
 msgstr "Les candidatures pour l'élection du conseil du parti sont ouvertes dans <0/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:324
+#: src/components/_user/notification/notification.frontConfig.tsx:328
 msgid "Party Council election has ended in <0/>. Check the results!"
 msgstr "L'élection du conseil du parti s'est terminée dans <0/>. Consulte les résultats !"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:299
+#: src/components/_user/notification/notification.frontConfig.tsx:303
 msgid "Party Council election voting is now open in <0/>"
 msgstr "Le vote pour l'élection du conseil du parti est ouvert dans <0/>"
 
@@ -13432,15 +13456,15 @@ msgstr "Le vote pour l'élection du conseil du parti est ouvert dans <0/>"
 msgid "Party created"
 msgstr "Parti créé"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2378
+#: src/components/_user/notification/notification.frontConfig.tsx:2413
 msgid "Party election candidacy open"
 msgstr "Candidature à l'élection du parti ouverte"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2384
+#: src/components/_user/notification/notification.frontConfig.tsx:2419
 msgid "Party election ended"
 msgstr "Les élections du parti sont terminées"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2381
+#: src/components/_user/notification/notification.frontConfig.tsx:2416
 msgid "Party election vote open"
 msgstr "Vote aux élections du parti ouvert"
 
@@ -13452,15 +13476,15 @@ msgstr "Les éthiques de parti ont été remplacées par des régimes politiques
 msgid "Party Leader election"
 msgstr "Élections de chef de parti"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:264
+#: src/components/_user/notification/notification.frontConfig.tsx:268
 msgid "Party Leader election candidacy is now open in <0/>"
 msgstr "Les candidatures pour les élections de chef de parti seront ouvertes dans <0/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:314
+#: src/components/_user/notification/notification.frontConfig.tsx:318
 msgid "Party Leader election has ended in <0/>. Check the results!"
 msgstr "Les élections de chef de parti s'est terminée dans <0/>. Consulte les résultats!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:289
+#: src/components/_user/notification/notification.frontConfig.tsx:293
 msgid "Party Leader election voting is now open in <0/>"
 msgstr "Le vote pour les élections de chef de parti est ouvert dans <0/>"
 
@@ -13476,15 +13500,15 @@ msgstr "Listes électorales"
 msgid "Party members"
 msgstr "Membres du parti"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:269
+#: src/components/_user/notification/notification.frontConfig.tsx:273
 msgid "Party Primary election candidacy is now open in <0/>"
 msgstr "Les candidatures à la primaire du parti seront ouvertes dans <0/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:319
+#: src/components/_user/notification/notification.frontConfig.tsx:323
 msgid "Party Primary election has ended in <0/>. Check the results!"
 msgstr "Les élections primaires du parti se sont terminées à <0/>. Consulte les résultats!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:294
+#: src/components/_user/notification/notification.frontConfig.tsx:298
 msgid "Party Primary election voting is now open in <0/>"
 msgstr "Le vote pour les primaires du parti sera ouvert dans <0/>"
 
@@ -13532,13 +13556,13 @@ msgstr "En pause: personne ne manage ici"
 msgid "Paused: nobody works, ages or trains here"
 msgstr "En pause: personne ne travaille, ne vieillit ni ne se forme ici"
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:469
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:476
 #: src/components/_economy/manager/ManagerOfferRow.tsx:149
 msgid "Pay"
 msgstr "Payer"
 
 #: src/components/_economy/manager/ManagerRateReductionAlert.tsx:39
-#: src/components/_user/notification/notification.frontConfig.tsx:2333
+#: src/components/_user/notification/notification.frontConfig.tsx:2368
 msgid "Pay cut"
 msgstr "Baisse de salaire"
 
@@ -13579,7 +13603,7 @@ msgstr "Dépenser moins pour réaliser un profit"
 msgid "Pay per Management point"
 msgstr "Payer par point de Gestion"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2332
+#: src/components/_user/notification/notification.frontConfig.tsx:2367
 msgid "Pay raised"
 msgstr "Augmentation de salaire"
 
@@ -13612,12 +13636,12 @@ msgstr "Masse salariale des employés et du manager, rapportée à la production
 msgid "Peace made"
 msgstr "Paix conclue"
 
-#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:209
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:232
 #: src/utils/translations.tsx:343
 msgid "Pending"
 msgstr "En attente"
 
-#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:83
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:99
 msgid "Pending gifts"
 msgstr "Cadeaux en attente"
 
@@ -13687,7 +13711,7 @@ msgstr "Des produits tout à fait corrects"
 msgid "Permanent <0>{nextBonus}</0> XP bonus, paused while you are at level {MAX_LEVEL}."
 msgstr "Bonus d'EXP permanent de <0>{nextBonus}</0>, suspendu lorsque vous atteignez le niveau {MAX_LEVEL}."
 
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:169
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:192
 msgid "Permanently dissolve the alliance."
 msgstr "Dissoudre l'alliance définitivement."
 
@@ -13921,8 +13945,8 @@ msgstr "Sondage"
 msgid "Poll deleted"
 msgstr "Sondage supprimé"
 
-#: src/components/_social/poll/PollCard.tsx:155
-#: src/components/_social/poll/PollCard.tsx:221
+#: src/components/_social/poll/PollCard.tsx:272
+#: src/components/_social/poll/PollCard.tsx:338
 msgid "Poll ended"
 msgstr "Sondage terminé"
 
@@ -13949,7 +13973,7 @@ msgstr "Article populaire"
 msgid "Population"
 msgstr "Population"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2330
+#: src/components/_user/notification/notification.frontConfig.tsx:2365
 msgid "Position ended"
 msgstr "Poste clôturé"
 
@@ -13991,23 +14015,23 @@ msgstr "Premium"
 msgid "Premium & Gifts"
 msgstr "Premium et cadeaux"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2290
+#: src/components/_user/notification/notification.frontConfig.tsx:2325
 msgid "Premium activated"
 msgstr "Premium activé"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2291
+#: src/components/_user/notification/notification.frontConfig.tsx:2326
 msgid "Premium expired"
 msgstr "Premium expiré"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2299
+#: src/components/_user/notification/notification.frontConfig.tsx:2334
 msgid "Premium gift expired"
 msgstr "Cadeau premium expiré"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2294
+#: src/components/_user/notification/notification.frontConfig.tsx:2329
 msgid "Premium gift received"
 msgstr "Cadeau premium reçu"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2292
+#: src/components/_user/notification/notification.frontConfig.tsx:2327
 msgid "Premium gift sent"
 msgstr "Cadeau premium envoyé"
 
@@ -14048,15 +14072,15 @@ msgstr "Président de <0/>"
 msgid "Presidential election"
 msgstr "Élections présidentielles"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:165
+#: src/components/_user/notification/notification.frontConfig.tsx:169
 msgid "Presidential election candidacy is now open in <0/>"
 msgstr "Les candidatures aux élections présidentielles sont ouvertes dans <0/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:210
+#: src/components/_user/notification/notification.frontConfig.tsx:214
 msgid "Presidential election has ended in <0/>. Check the results!"
 msgstr "Les élections présidentielles sont terminées dans <0/>. Découvre les résultats !"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:190
+#: src/components/_user/notification/notification.frontConfig.tsx:194
 msgid "Presidential election voting is now open in <0/>"
 msgstr "Le vote des élections présidentielles est désormais ouvert dans <0/>"
 
@@ -14079,7 +14103,7 @@ msgstr "Prestige"
 msgid "Prestige to drop levels and re-activate your XP bonus."
 msgstr "Passe au niveau de prestige supérieur pour réactiver ton bonus d'EXP."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2516
+#: src/components/_user/notification/notification.frontConfig.tsx:2551
 msgid "Prestige!"
 msgstr "Prestige!"
 
@@ -14105,7 +14129,7 @@ msgstr "Faire semblant de ne rien remarquer"
 msgid "Pretend you know nothing"
 msgstr "Faire comme si tu savais rien"
 
-#: src/components/_economy/itemOffer/CreateItemOffersModal.tsx:379
+#: src/components/_economy/itemOffer/CreateItemOffersModal.tsx:385
 msgid "Price"
 msgstr "Prix"
 
@@ -14133,7 +14157,7 @@ msgstr "Diva"
 msgid "Primary election"
 msgstr "Élections primaires"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2389
+#: src/components/_user/notification/notification.frontConfig.tsx:2424
 msgid "Primary Election Ended"
 msgstr "Élections primaires terminées"
 
@@ -14232,15 +14256,15 @@ msgstr "Production à 100"
 #: src/components/_economy/employee/employeeStats.tsx:611
 #: src/components/_economy/employee/EmployeeTooltip.tsx:129
 #: src/components/_economy/manager/CompanyManagerSlot.tsx:178
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:552
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:559
 msgid "Production bonus"
 msgstr "Bonus de production"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:785
+#: src/components/_user/notification/notification.frontConfig.tsx:789
 msgid "Production in<0/> is full, you should start production!"
 msgstr "La production dans<0/> est pleine, tu devrais lancer la production !"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2347
+#: src/components/_user/notification/notification.frontConfig.tsx:2382
 msgid "Production is full"
 msgstr "Production pleine"
 
@@ -14299,7 +14323,7 @@ msgstr "Promettre un voyage pour plus tard"
 msgid "Promote to Commander"
 msgstr "Promouvoir au rang de commandant"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2456
+#: src/components/_user/notification/notification.frontConfig.tsx:2491
 msgid "Promoted to Commander"
 msgstr "Promu Commandant"
 
@@ -14307,7 +14331,7 @@ msgstr "Promu Commandant"
 msgid "Promotion"
 msgstr "Promotion"
 
-#: src/components/_political/law/law.frontConfig.tsx:286
+#: src/components/_political/law/law.frontConfig.tsx:312
 msgid "Propose a defensive pact with <0/>"
 msgstr "Proposer un pacte de défense avec <0/>"
 
@@ -14316,11 +14340,11 @@ msgstr "Proposer un pacte de défense avec <0/>"
 msgid "Propose a motion"
 msgstr "Proposer une motion"
 
-#: src/components/_political/law/law.frontConfig.tsx:295
+#: src/components/_political/law/law.frontConfig.tsx:324
 msgid "Propose a mutual defensive pact with <0/>. Once accepted, defenders of either country get a bonus that starts at 1% and grows +1% per day up to 10%."
 msgstr "Proposer un pacte de défense mutuel avec <0/>. Une fois accepté, les défenseurs de l'un ou l'autre pays reçoivent un bonus qui commence à 1 % et augmente de +1 % par jour jusqu'à 10 %."
 
-#: src/components/_political/law/law.frontConfig.tsx:281
+#: src/components/_political/law/law.frontConfig.tsx:307
 msgid "Propose a mutual defensive pact with another country to get a growing defensive bonus"
 msgstr "Proposer un pacte de défense mutuel avec un autre pays pour obtenir un bonus de défense croissant"
 
@@ -14329,7 +14353,7 @@ msgstr "Proposer un pacte de défense mutuel avec un autre pays pour obtenir un 
 msgid "Propose alliance law"
 msgstr "Proposer une loi d'alliance"
 
-#: src/components/_political/law/law.frontConfig.tsx:279
+#: src/components/_political/law/law.frontConfig.tsx:305
 #: src/components/_political/law/lawNames.tsx:40
 msgid "Propose defensive pact"
 msgstr "Proposer un pacte de défense"
@@ -14343,31 +14367,31 @@ msgstr "Proposer une loi"
 msgid "Propose motion"
 msgstr "Proposer une motion"
 
-#: src/components/_political/law/law.frontConfig.tsx:164
+#: src/components/_political/law/law.frontConfig.tsx:176
 #: src/components/_political/law/lawNames.tsx:15
 msgid "Propose peace"
 msgstr "Proposer la paix"
 
-#: src/components/_political/law/law.frontConfig.tsx:169
-#: src/components/_political/law/law.frontConfig.tsx:178
+#: src/components/_political/law/law.frontConfig.tsx:181
+#: src/components/_political/law/law.frontConfig.tsx:194
 msgid "Propose peace to <0/>"
 msgstr "Proposer la paix avec <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:165
+#: src/components/_political/law/law.frontConfig.tsx:177
 msgid "Propose peace to another country"
 msgstr "Proposer la paix avec un autre pays"
 
 #. placeholder {0}: law.data.amount ?? 0
-#: src/components/_political/law/law.frontConfig.tsx:509
+#: src/components/_political/law/law.frontConfig.tsx:562
 msgid "Propose to buy <0/> from <1/> for <2>{0}</2>"
 msgstr "Proposer d'acheter la région <0/> à <1/> pour <2>{0}</2>"
 
-#: src/components/_political/law/law.frontConfig.tsx:493
+#: src/components/_political/law/law.frontConfig.tsx:538
 #: src/components/_political/law/lawNames.tsx:31
 msgid "Propose to buy a region"
 msgstr "Proposer d'acheter une région"
 
-#: src/components/_political/law/law.frontConfig.tsx:494
+#: src/components/_political/law/law.frontConfig.tsx:539
 msgid "Propose to buy a region from another country"
 msgstr "Proposer d'acheter une région à un autre pays"
 
@@ -14502,7 +14526,7 @@ msgstr "Rang"
 msgid "Ranking"
 msgstr "Classement"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2400
+#: src/components/_user/notification/notification.frontConfig.tsx:2435
 msgid "Ranking reward"
 msgstr "Récompense de classement"
 
@@ -14575,7 +14599,7 @@ msgid "Reach a tier, claim its XP."
 msgstr "Atteins un palier, et récupères les points d’expérience (EXP)."
 
 #. placeholder {0}: subGiftDropConfig.entrantMinLevel
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:264
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:285
 msgid "Reach level {0} to join"
 msgstr "Atteins le niveau {0} pour rejoindre"
 
@@ -14841,12 +14865,12 @@ msgstr "Régénère <0>{0}</0> lors de la consommation"
 msgid "Region"
 msgstr "Région"
 
-#: src/components/_political/law/law.frontConfig.tsx:465
+#: src/components/_political/law/law.frontConfig.tsx:503
 #: src/components/_political/law/lawNames.tsx:30
 msgid "Region buy offer"
 msgstr "Offre d'achat de région"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2416
+#: src/components/_user/notification/notification.frontConfig.tsx:2451
 msgid "Region is revolting!"
 msgstr "La région se révolte!"
 
@@ -14897,7 +14921,7 @@ msgstr "Inscrire ma UM"
 msgid "Register my party"
 msgstr "Inscrire mon parti"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:170
+#: src/components/_user/notification/notification.frontConfig.tsx:174
 msgid "Register your party for the congress election in <0/>"
 msgstr "Inscrire ton parti aux élections législatives dans <0/>"
 
@@ -14978,11 +15002,11 @@ msgstr "Supprimer"
 msgid "Remove <0/>"
 msgstr "Supprimer <0/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:228
+#: src/components/_political/law/law.frontConfig.tsx:249
 msgid "Remove <0/> from congress due to inactivity"
 msgstr "Révoquer <0/> du parlement pour inactivité"
 
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:82
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:94
 msgid "Remove <0/> from the alliance immediately on acceptance."
 msgstr "Retirer <0/> de l'alliance immédiatement après l'acceptation."
 
@@ -14990,7 +15014,7 @@ msgstr "Retirer <0/> de l'alliance immédiatement après l'acceptation."
 msgid "Remove <0/> from the party council"
 msgstr "Retirer <0/> du conseil du parti"
 
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:66
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:74
 msgid "Remove a member country from the alliance."
 msgstr "Retirer un pays membre de l'alliance."
 
@@ -15003,7 +15027,7 @@ msgstr "Retirer un membre du conseil du parti"
 msgid "Remove all"
 msgstr "Tout supprimer"
 
-#: src/components/_political/law/law.frontConfig.tsx:212
+#: src/components/_political/law/law.frontConfig.tsx:228
 msgid "Remove an inactive congress member from its position"
 msgstr "Destituer un membre inactif du parlement de ses fonctions"
 
@@ -15020,7 +15044,7 @@ msgstr "Supprimer la prime"
 msgid "Remove council member"
 msgstr "Destituer un membre du conseil"
 
-#: src/components/_political/law/law.frontConfig.tsx:455
+#: src/components/_political/law/law.frontConfig.tsx:493
 #: src/components/_political/law/lawNames.tsx:29
 msgid "Remove enemy"
 msgstr "Enlever l'ennemi juré"
@@ -15042,7 +15066,7 @@ msgstr "Supprimer le poste"
 msgid "Remove the current party leader from their position"
 msgstr "Destituer le chef de parti actuel de ses fonctions"
 
-#: src/components/_social/poll/PollCard.tsx:436
+#: src/components/_social/poll/PollCard.tsx:561
 msgid "Remove vote"
 msgstr "Supprimer le vote"
 
@@ -15050,7 +15074,7 @@ msgstr "Supprimer le vote"
 msgid "Removed"
 msgstr "Retiré"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2453
+#: src/components/_user/notification/notification.frontConfig.tsx:2488
 msgid "Removed from Military Unit"
 msgstr "Retiré de l'unité militaire"
 
@@ -15072,12 +15096,12 @@ msgid "Rename {0}"
 msgstr "Renommer {0}"
 
 #: src/components/_political/alliance/alliance.frontConfig.tsx:18
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:120
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:138
 msgid "Rename alliance"
 msgstr "Renommer l'alliance"
 
 #. placeholder {0}: data.newName
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:127
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:145
 msgid "Rename alliance to \"{0}\""
 msgstr "Renommer l'alliance en \"{0}\""
 
@@ -15091,7 +15115,7 @@ msgid "Rename employee"
 msgstr "Renommer l’employé"
 
 #. placeholder {0}: data.newName
-#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:133
+#: src/components/_political/allianceLaw/allianceLaw.frontConfig.tsx:151
 msgid "Rename the alliance to \"{0}\" immediately on acceptance."
 msgstr "Renommer l'alliance en \"{0}\" immédiatement après l'acceptation."
 
@@ -15310,7 +15334,7 @@ msgstr "Ressources"
 msgid "Resources reshuffled"
 msgstr "Ressources redistribuées"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2497
+#: src/components/_user/notification/notification.frontConfig.tsx:2532
 msgid "Response to message"
 msgstr "Réponse au message"
 
@@ -15350,13 +15374,13 @@ msgstr "À la retraite"
 msgid "Retired at the end of a long career."
 msgstr "À la retraite à l'issue d’une longue carrière."
 
-#: src/components/_political/law/law.frontConfig.tsx:521
+#: src/components/_political/law/law.frontConfig.tsx:574
 msgid "Return a region to its original country"
 msgstr "Rendre une région à son pays d'origine"
 
 #: src/components/_user/notification/notification.frontConfig.tsx:1289
-msgid "returned to you"
-msgstr "t'es revenu"
+#~ msgid "returned to you"
+#~ msgstr "t'es revenu"
 
 #: src/components/_user/apiToken/ApiTokenList.tsx:217
 msgid "Revoke API token?"
@@ -15370,12 +15394,12 @@ msgstr "Révoquer les lois"
 msgid "Revoke lock"
 msgstr "Révoquer le verrouillage"
 
-#: src/components/_political/law/law.frontConfig.tsx:693
+#: src/components/_political/law/law.frontConfig.tsx:751
 #: src/components/_political/law/lawNames.tsx:45
 msgid "Revoke MU sponsorship"
 msgstr "Révoquer le parrainage d'UM"
 
-#: src/components/_political/law/law.frontConfig.tsx:698
+#: src/components/_political/law/law.frontConfig.tsx:756
 msgid "Revoke the sponsorship of <0/>"
 msgstr "Révoquer le parrainage de <0/>"
 
@@ -15383,7 +15407,7 @@ msgstr "Révoquer le parrainage de <0/>"
 msgid "Revolt"
 msgstr "Révolte"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2419
+#: src/components/_user/notification/notification.frontConfig.tsx:2454
 msgid "Revolt started!"
 msgstr "Révolte commencée!"
 
@@ -15399,7 +15423,7 @@ msgstr "Révolution terminée"
 msgid "Revolution started"
 msgstr "Révolution démarrée"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2422
+#: src/components/_user/notification/notification.frontConfig.tsx:2457
 msgid "Revolution started!"
 msgstr "Révolution lancée!"
 
@@ -15487,15 +15511,15 @@ msgid "Round #{0}"
 msgstr "Manche #{0}"
 
 #. placeholder {0}: data.roundNumber
-#: src/components/_user/notification/notification.frontConfig.tsx:854
+#: src/components/_user/notification/notification.frontConfig.tsx:858
 msgid "Round <0>#{0}</0> in <1/> is about to end!"
 msgstr "La manche <0>#{0}</0> dans <1/> est sur le point de se terminer !"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2407
+#: src/components/_user/notification/notification.frontConfig.tsx:2442
 msgid "Round about to end"
 msgstr "Manche sur le point de se terminer"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2405
+#: src/components/_user/notification/notification.frontConfig.tsx:2440
 msgid "Round ended"
 msgstr "Manche terminée"
 
@@ -15759,11 +15783,11 @@ msgstr "Sélectionner la carte des accents"
 msgid "Select motion type"
 msgstr "Sélectionner le type de motion"
 
-#: src/components/_social/poll/PollCard.tsx:310
+#: src/components/_social/poll/PollCard.tsx:431
 msgid "Select one answer"
 msgstr "Sélectionner une réponse"
 
-#: src/components/_social/poll/PollCard.tsx:308
+#: src/components/_social/poll/PollCard.tsx:429
 msgid "Select one or more answers"
 msgstr "Sélectionner une ou plusieurs réponses"
 
@@ -15818,7 +15842,7 @@ msgstr "Les vendre aux voisins"
 msgid "sells"
 msgstr "vend"
 
-#: src/components/_political/law/law.frontConfig.tsx:445
+#: src/components/_political/law/law.frontConfig.tsx:483
 msgid "Send <0/> to <1/>"
 msgstr "Envoyer <0/> à <1/>"
 
@@ -15848,7 +15872,7 @@ msgstr "Envoyer un message"
 
 #. placeholder {0}: staticGameConfig.law[ELawType.SEND_MONEY_TO_COUNTRY].allianceTaxRate * 100
 #. placeholder {1}: staticGameConfig.law[ELawType.SEND_MONEY_TO_COUNTRY].externalTaxRate * 100
-#: src/components/_political/law/law.frontConfig.tsx:431
+#: src/components/_political/law/law.frontConfig.tsx:466
 msgid "Send money to another country. Paper tax on top: {0}% within your alliance, {1}% for external transfers."
 msgstr "Envoie de l'argent dans un autre pays. Taxe papier en supplément: {0}% au sein de votre alliance, {1}% pour les transferts externes."
 
@@ -15876,11 +15900,11 @@ msgstr "Paramétrer une <0>description</0>"
 msgid "Set a referrer"
 msgstr "Paramétrer un parrain"
 
-#: src/components/_political/law/law.frontConfig.tsx:545
+#: src/components/_political/law/law.frontConfig.tsx:602
 msgid "Set a welcome article for your country"
 msgstr "Paramétrer l'article de bienvenue pour ton pays"
 
-#: src/components/_political/law/law.frontConfig.tsx:550
+#: src/components/_political/law/law.frontConfig.tsx:607
 msgid "Set a welcome article for your country<0/>"
 msgstr "Paramétrer l'article de bienvenue pour votre pays<0/>"
 
@@ -15888,13 +15912,13 @@ msgstr "Paramétrer l'article de bienvenue pour votre pays<0/>"
 msgid "Set bounty"
 msgstr "Paramétrer la prime"
 
-#: src/components/_political/law/law.frontConfig.tsx:571
+#: src/components/_political/law/law.frontConfig.tsx:628
 #: src/components/_political/law/lawNames.tsx:34
 msgid "Set country color"
 msgstr "Paramétrer la couleur du pays"
 
 #. placeholder {0}: law.data.scheme
-#: src/components/_political/law/law.frontConfig.tsx:563
+#: src/components/_political/law/law.frontConfig.tsx:620
 msgid "Set country color to <0>{0}</0> "
 msgstr "Paramétrer la couleur du pays sur <0>{0}</0> "
 
@@ -15902,12 +15926,12 @@ msgstr "Paramétrer la couleur du pays sur <0>{0}</0> "
 msgid "Set favorite government type"
 msgstr "Paramétrer un type de régime politique préféré"
 
-#: src/components/_political/law/law.frontConfig.tsx:637
+#: src/components/_political/law/law.frontConfig.tsx:694
 #: src/components/_political/law/lawNames.tsx:43
 msgid "Set government type"
 msgstr "Paramétrer un type de régime politique"
 
-#: src/components/_political/law/law.frontConfig.tsx:646
+#: src/components/_political/law/law.frontConfig.tsx:703
 msgid "Set government type to <0/>"
 msgstr "Paramétrer un type de régime politique en tant que <0/>"
 
@@ -15931,13 +15955,13 @@ msgstr "Paramétrer les éthiques de parti"
 msgid "Set Profile Picture"
 msgstr "Paramétrer l'image de profil"
 
-#: src/components/_political/law/law.frontConfig.tsx:617
+#: src/components/_political/law/law.frontConfig.tsx:674
 #: src/components/_political/law/lawNames.tsx:36
 msgid "Set specialization item"
 msgstr "Paramétrer l'objet de spécialisation"
 
 #. placeholder {0}: ts[law.data.itemCode]
-#: src/components/_political/law/law.frontConfig.tsx:624
+#: src/components/_political/law/law.frontConfig.tsx:681
 msgid "Set the country's specialized item to <0>{0}</0> (no longer in the game)"
 msgstr "Paramétrer l'objet spécialisé du pays sur <0>{0}</0> (n'est plus présent dans le jeu)"
 
@@ -15949,7 +15973,7 @@ msgstr "Paramétrer le type de régime politique favori en tant que <0/>"
 msgid "Set Username"
 msgstr "Paramétrer le nom d'utilisateur"
 
-#: src/components/_political/law/law.frontConfig.tsx:544
+#: src/components/_political/law/law.frontConfig.tsx:601
 #: src/components/_political/law/lawNames.tsx:33
 msgid "Set welcome article"
 msgstr "Paramétrer l'article de bienvenue"
@@ -16038,7 +16062,7 @@ msgstr "Afficher plus ({0} restant)"
 msgid "Show only articles with positive score (score >= -5)"
 msgstr "Afficher uniquement les articles avec un score positif (score >= -5)"
 
-#: src/components/_social/poll/PollCard.tsx:423
+#: src/components/_social/poll/PollCard.tsx:548
 msgid "Show results"
 msgstr "Afficher les résultats"
 
@@ -16100,7 +16124,7 @@ msgstr "Champion de la ligue des UM - Argent"
 msgid "Silver not included"
 msgstr "L'argent n'est pas inclus"
 
-#: src/components/_economy/itemOffer/CreateItemOffersModal.tsx:423
+#: src/components/_economy/itemOffer/CreateItemOffersModal.tsx:429
 msgid "Similar offers, before tax"
 msgstr "Offres similaires, hors taxes"
 
@@ -16146,11 +16170,11 @@ msgstr "Compétences"
 msgid "Skills saved!"
 msgstr "Compétences enregistrées!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2316
+#: src/components/_user/notification/notification.frontConfig.tsx:2351
 msgid "Skin gift received"
 msgstr "Cadeau de skin reçu"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2314
+#: src/components/_user/notification/notification.frontConfig.tsx:2349
 msgid "Skin gift sent"
 msgstr "Cadeau de skin envoyé"
 
@@ -16158,7 +16182,7 @@ msgstr "Cadeau de skin envoyé"
 msgid "Skin pack equipped!"
 msgstr "Pack de skins équipé!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2319
+#: src/components/_user/notification/notification.frontConfig.tsx:2354
 msgid "Skin pack gift sent"
 msgstr "Cadeau de pack de skins envoyé"
 
@@ -16170,7 +16194,7 @@ msgstr "Pack de skins débloqué! Tous les skins équipés!"
 msgid "Skin Packs"
 msgstr "Packs de skins"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2519
+#: src/components/_user/notification/notification.frontConfig.tsx:2554
 msgid "Skin Reward"
 msgstr "Skin de récompense"
 
@@ -16289,7 +16313,7 @@ msgstr "La soupe est une boisson"
 msgid "Soup is food"
 msgstr "La soupe est de la nourriture"
 
-#: src/components/_user/userReports/userReports.hooks.ts:15
+#: src/components/_user/userReports/userReports.hooks.ts:24
 msgid "Spam or ads"
 msgstr "Spam ou pubs"
 
@@ -16332,7 +16356,7 @@ msgstr "Dépense des ressources pour faire fonctionner tes entreprises, embauche
 msgid "Spent when moving on the map: 10 points per region crossed. The regions your stamina can't cover are paid in oil. It refills 10 points an hour and cannot be raised with skill points."
 msgstr "Coût de déplacement sur la carte : 10 points par région traversée. Les régions que votre endurance ne permet pas de couvrir sont payées en pétrole. Elle se régénère à raison de 10 points par heure et ne peut être augmentée avec des points de compétence."
 
-#: src/components/_political/law/law.frontConfig.tsx:674
+#: src/components/_political/law/law.frontConfig.tsx:731
 msgid "Sponsor <0/> as a State Army"
 msgstr "Parrainer <0/> en tant qu'armée d'État"
 
@@ -16340,7 +16364,7 @@ msgstr "Parrainer <0/> en tant qu'armée d'État"
 msgid "Sponsor laws"
 msgstr "Lois de parrainage"
 
-#: src/components/_political/law/law.frontConfig.tsx:669
+#: src/components/_political/law/law.frontConfig.tsx:726
 #: src/components/_political/law/lawNames.tsx:44
 msgid "Sponsor MU"
 msgstr "Parrainer une UM"
@@ -16379,8 +16403,8 @@ msgstr "Marteau de la Forge stellaire"
 msgid "Start"
 msgstr "Commence"
 
-#: src/components/_political/law/law.frontConfig.tsx:196
-#: src/components/_political/law/law.frontConfig.tsx:198
+#: src/components/_political/law/law.frontConfig.tsx:212
+#: src/components/_political/law/law.frontConfig.tsx:214
 msgid "Start a congress election, now"
 msgstr "Lancer immédiamment des élections législatives anticipées"
 
@@ -16399,8 +16423,8 @@ msgstr "Lancer immédiatement des élections de chef de parti"
 msgid "Start a party primary election immediately"
 msgstr "Lancer immédiatement des élections primaires de parti"
 
-#: src/components/_political/law/law.frontConfig.tsx:188
-#: src/components/_political/law/law.frontConfig.tsx:190
+#: src/components/_political/law/law.frontConfig.tsx:204
+#: src/components/_political/law/law.frontConfig.tsx:206
 msgid "Start a presidential election, now"
 msgstr "Lancer immédiatement des élections présidentielles anticipées"
 
@@ -16409,7 +16433,7 @@ msgstr "Lancer immédiatement des élections présidentielles anticipées"
 msgid "Start a revolution to overthrow the government"
 msgstr "Lancer une révolution pour renverser le gouvernement"
 
-#: src/components/_political/law/law.frontConfig.tsx:195
+#: src/components/_political/law/law.frontConfig.tsx:211
 #: src/components/_political/law/lawNames.tsx:19
 msgid "Start congress election"
 msgstr "Lancer des élections législatives"
@@ -16422,7 +16446,7 @@ msgstr "Commencer le tirage au sort"
 msgid "Start giveaways"
 msgstr "Lancer des tirages au sort"
 
-#: src/components/_political/law/law.frontConfig.tsx:187
+#: src/components/_political/law/law.frontConfig.tsx:203
 #: src/components/_political/law/lawNames.tsx:17
 msgid "Start presidential election"
 msgstr "Lancer des élections présidentielles"
@@ -16461,11 +16485,11 @@ msgid "Starts as soon as it is posted."
 msgstr "Débute dès sa publication."
 
 #. placeholder {0}: gameConfig?.battle.enemyDamagesBonusPercent
-#: src/components/_political/law/law.frontConfig.tsx:264
+#: src/components/_political/law/law.frontConfig.tsx:290
 msgid "starts at 1% and grows +1% per day up to <0>{0}</0>"
 msgstr "commence à 1 % et augmente de +1 % par jour jusqu'à <0>{0}</0>"
 
-#: src/components/_social/poll/PollCard.tsx:219
+#: src/components/_social/poll/PollCard.tsx:336
 msgid "Starts when the article is published"
 msgstr "Débute au moment de la publication de l’article"
 
@@ -16480,11 +16504,11 @@ msgid "State Army"
 msgstr "Armée d’État"
 
 #: src/components/_military/mu/MuTypeSettings.tsx:230
-#: src/components/_user/notification/notification.frontConfig.tsx:2468
+#: src/components/_user/notification/notification.frontConfig.tsx:2503
 msgid "State Army offer"
 msgstr "Offre de l’armée d’État"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2471
+#: src/components/_user/notification/notification.frontConfig.tsx:2506
 msgid "State Army sponsorship ended"
 msgstr "Le parrainage en tant qu'armée d’État a pris fin"
 
@@ -16691,7 +16715,7 @@ msgstr "Plan Supporter"
 #: src/components/_political/chat/ChatRunningButton.tsx:320
 #: src/components/_user/modals/PremiumModal.tsx:31
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:127
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:179
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:184
 #: src/pages/user/[userId]/settings.tsx:161
 msgid "Supporter Plan"
 msgstr "Plan Supporter"
@@ -16906,11 +16930,11 @@ msgstr "Région ciblée"
 msgid "Target user"
 msgstr "Joueur ciblé"
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:477
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:484
 msgid "Tax"
 msgstr "Taxe"
 
-#: src/components/_economy/itemOffer/ItemOfferCard.tsx:68
+#: src/components/_economy/itemOffer/ItemOfferCard.tsx:74
 msgid "tax incl."
 msgstr "taxe incl."
 
@@ -16987,11 +17011,11 @@ msgstr "Conditions d'utilisation"
 msgid "Texture"
 msgstr "Texture"
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:89
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:111
 msgid "Thanks a lot!"
 msgstr "Merci beaucoup!"
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:90
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:112
 msgid "Thanks! Any tips to start?"
 msgstr "Merci! Des conseils pour commencer?"
 
@@ -17101,12 +17125,12 @@ msgid "The compliment"
 msgstr "Le compliment"
 
 #. placeholder {0}: data.refund
-#: src/components/_user/notification/notification.frontConfig.tsx:1934
+#: src/components/_user/notification/notification.frontConfig.tsx:1969
 msgid "The contract for <0/> has expired. <1>{0}</1> returned to <2/>."
 msgstr "Le contrat pour <0/> a expiré. <1>{0}</1> est retourné à <2/>."
 
 #. placeholder {0}: data.moneyRolledBack
-#: src/components/_user/notification/notification.frontConfig.tsx:1952
+#: src/components/_user/notification/notification.frontConfig.tsx:1987
 msgid "The contract has been rolled back. <0>{0}</0> sent back to <1/>."
 msgstr "Le contrat a été annulé. <0>{0}</0> renvoyé à <1/>."
 
@@ -17194,7 +17218,7 @@ msgstr "Les canards"
 msgid "The ducks go back. One of them is missing."
 msgstr "Les canards rentrent. Il en manque un."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:923
+#: src/components/_user/notification/notification.frontConfig.tsx:927
 msgid "The effect of your consumed buffs has ended. The debuff phase has begun and will last <0>{debuffDuration}h</0>."
 msgstr "L'effet de tes bonus consommés est terminé. La phase de malus a commencé et durera <0>{debuffDuration}h</0>."
 
@@ -17290,7 +17314,7 @@ msgstr "L’inventaire est de nouveau contrôlé selon une fréquence habituelle
 msgid "The inventory remains extremely well checked."
 msgstr "L’inventaire demeure extrêmement bien contrôlé."
 
-#: src/components/_economy/itemOffer/ItemOfferCard.tsx:101
+#: src/components/_economy/itemOffer/ItemOfferCard.tsx:107
 #: src/components/_economy/itemOffer/ItemOfferModal.tsx:238
 msgid "The item goes back to your inventory."
 msgstr "L'objet retourne dans ton inventaire."
@@ -17359,7 +17383,7 @@ msgstr "La carte nécessite WebGL2, ce que ton navigateur ou ton appareil ne pre
 msgid "The money is gone for good, but the gratitude is real."
 msgstr "L’argent a disparu pour de bon, mais la reconnaissance est bien réelle."
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:140
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:163
 msgid "The money went back to the veteran."
 msgstr "L'argent revient au joueur vétéran."
 
@@ -17586,7 +17610,7 @@ msgstr "La boîte à outils se retrouve dans les magasins. Ils l’ont découver
 msgid "The toolbox helped only halfway: the tool is better, not new."
 msgstr "La boîte à outils n’a été que d’une aide partielle : l’outil est meilleur, mais pas nouveau."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1639
+#: src/components/_user/notification/notification.frontConfig.tsx:1674
 msgid "The tournament has ended for your team <0/>. Check the results!"
 msgstr "Le tournoi est terminé pour ton équipe <0/>. Consulte les résultats!"
 
@@ -17816,7 +17840,7 @@ msgstr "Cet équipement est vert et l'herbe aussi"
 msgid "This feels good, huh?"
 msgstr "Ça fait du bien, hein ?"
 
-#: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:65
+#: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:99
 msgid "This giveaway is not available."
 msgstr "Ce tirage au sort n'est pas disponible."
 
@@ -17908,11 +17932,11 @@ msgstr "Ce joueur n'a pas de ligue cette semaine."
 msgid "This player is no longer a newcomer"
 msgstr "Ce joueur n’est plus un débutant"
 
-#: src/components/_social/poll/PollCard.tsx:168
+#: src/components/_social/poll/PollCard.tsx:285
 msgid "This poll is not available."
 msgstr "Ce sondage n’est pas disponible."
 
-#: src/components/_social/poll/PollCard.tsx:256
+#: src/components/_social/poll/PollCard.tsx:373
 msgid "This poll was removed by a moderator."
 msgstr "Ce sondage a été supprimé par un modérateur."
 
@@ -18086,6 +18110,10 @@ msgstr "À suivre"
 msgid "To the seller"
 msgstr "Au vendeur"
 
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:251
+msgid "To welcome"
+msgstr ""
+
 #: src/components/_economy/itemOffer/ItemOfferModal.tsx:183
 msgid "To you, the seller"
 msgstr "À toi, le vendeur"
@@ -18149,7 +18177,7 @@ msgstr "Boîte à outils"
 msgid "Toolbox Finds"
 msgstr "Trouvailles dans la boîte à outils"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2339
+#: src/components/_user/notification/notification.frontConfig.tsx:2374
 msgid "Toolbox found"
 msgstr "Boîte à outils trouvée"
 
@@ -18313,19 +18341,19 @@ msgstr "Tournoi"
 msgid "Tournament battle for {tournamentName} {score}"
 msgstr "Bataille du tournoi pour {tournamentName} {score}"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2440
+#: src/components/_user/notification/notification.frontConfig.tsx:2475
 msgid "Tournament Cancelled"
 msgstr "Le tournoi est annulé"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2430
+#: src/components/_user/notification/notification.frontConfig.tsx:2465
 msgid "Tournament Created"
 msgstr "Le tournoi est créé"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2437
+#: src/components/_user/notification/notification.frontConfig.tsx:2472
 msgid "Tournament Eliminated"
 msgstr "Éliminé du tournoi"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2435
+#: src/components/_user/notification/notification.frontConfig.tsx:2470
 msgid "Tournament Ended"
 msgstr "Le tournoi est terminé"
 
@@ -18333,11 +18361,11 @@ msgstr "Le tournoi est terminé"
 msgid "Tournament reward"
 msgstr "Récompense du tournoi"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2426
+#: src/components/_user/notification/notification.frontConfig.tsx:2461
 msgid "Tournament round won!"
 msgstr "Manche remportée!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2433
+#: src/components/_user/notification/notification.frontConfig.tsx:2468
 msgid "Tournament Started"
 msgstr "Le tournoi a commencé"
 
@@ -18345,7 +18373,7 @@ msgstr "Le tournoi a commencé"
 msgid "Tournament Winner"
 msgstr "Vainqueur du tournoi"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2428
+#: src/components/_user/notification/notification.frontConfig.tsx:2463
 msgid "Tournament Won!"
 msgstr "Tournoi gagné !"
 
@@ -18370,7 +18398,7 @@ msgstr "Échanger les rôles entre <0/> et <1/>? Chacun conserve son salaire et 
 msgid "Trading"
 msgstr "Commerce"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2350
+#: src/components/_user/notification/notification.frontConfig.tsx:2385
 msgid "Trading transaction"
 msgstr "Transaction commerciale"
 
@@ -18464,11 +18492,11 @@ msgstr "Transactions"
 msgid "Transactions"
 msgstr "Transactions"
 
-#: src/components/_political/law/law.frontConfig.tsx:435
+#: src/components/_political/law/law.frontConfig.tsx:470
 msgid "Transfer <0/> to <1/>"
 msgstr "Transférer <0/> vers <1/>"
 
-#: src/components/_political/law/law.frontConfig.tsx:429
+#: src/components/_political/law/law.frontConfig.tsx:464
 #: src/components/_political/law/lawNames.tsx:28
 msgid "Transfer money"
 msgstr "Transférer de l'argent"
@@ -18628,7 +18656,7 @@ msgstr "Débloquer ce camp?"
 msgid "Unlocked"
 msgstr "Débloqué"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2322
+#: src/components/_user/notification/notification.frontConfig.tsx:2357
 msgid "Unlocked pack"
 msgstr "Pack débloqué"
 
@@ -18670,8 +18698,8 @@ msgstr "Chat sans restriction"
 msgid "Unselect all"
 msgstr "Tout désélectionner"
 
-#: src/components/_political/law/law.frontConfig.tsx:456
-#: src/components/_political/law/law.frontConfig.tsx:458
+#: src/components/_political/law/law.frontConfig.tsx:494
+#: src/components/_political/law/law.frontConfig.tsx:496
 msgid "Unset the sworn enemy country"
 msgstr "Retirer le pays ennemi juré"
 
@@ -19158,7 +19186,7 @@ msgstr "Votes"
 msgid "Votes for the party give seats in this order. Drag the members to change their rank."
 msgstr "Les voix obtenues par le parti lui attribuent des sièges dans cet ordre. Fais glisser les membres pour modifier leur classement."
 
-#: src/components/_social/poll/PollCard.tsx:450
+#: src/components/_social/poll/PollCard.tsx:575
 msgid "Voting closes now for everyone. This can't be undone."
 msgstr "Le vote est désormais clos pour tout le monde. Cette action est irréversible."
 
@@ -19172,7 +19200,7 @@ msgstr "VS"
 msgid "Wage"
 msgstr "Salaire"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2343
+#: src/components/_user/notification/notification.frontConfig.tsx:2378
 msgid "Wage changed"
 msgstr "Salaire modifié"
 
@@ -19180,7 +19208,7 @@ msgstr "Salaire modifié"
 msgid "Wage expectation"
 msgstr "Attentes salariales"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2344
+#: src/components/_user/notification/notification.frontConfig.tsx:2379
 msgid "Wage reduction proposed"
 msgstr "Réduction de salaire proposée"
 
@@ -19197,7 +19225,7 @@ msgstr "Attendre qu’il redémarre"
 msgid "Wait it out"
 msgstr "Attendre que ça passe"
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:170
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:194
 msgid "Waiting for <0/>"
 msgstr "En attente de <0/>"
 
@@ -19299,16 +19327,16 @@ msgid "Weekly decay"
 msgstr "Déclin hebdomadaire"
 
 #: src/components/_user/league/LeagueTopInfoCard.tsx:87
-#: src/components/_user/notification/notification.frontConfig.tsx:2517
+#: src/components/_user/notification/notification.frontConfig.tsx:2552
 #: src/pages/user/[userId]/league.tsx:20
 msgid "Weekly league"
 msgstr "Ligue hebdomadaire"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2511
+#: src/components/_user/notification/notification.frontConfig.tsx:2546
 msgid "Weekly Missions Reset"
 msgstr "Réinitialisation des missions hebdomadaires"
 
-#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:147
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:163
 msgid "Welcome"
 msgstr "Bienvenue"
 
@@ -19320,16 +19348,16 @@ msgstr "Bon retour {username}!"
 msgid "Welcome back, <0/>"
 msgstr "Bon retour, <0/>"
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:102
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:125
 #: src/components/_user/welcomeGift/WelcomeGiftModal.tsx:119
 msgid "Welcome gift"
 msgstr "Cadeau de bienvenue"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2302
+#: src/components/_user/notification/notification.frontConfig.tsx:2337
 msgid "Welcome gift received"
 msgstr "Cadeau de bienvenue reçu"
 
-#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:92
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:108
 msgid "Welcome gifts"
 msgstr "Cadeaux de bienvenue"
 
@@ -19337,11 +19365,11 @@ msgstr "Cadeaux de bienvenue"
 msgid "Welcome gifts are turned off"
 msgstr "Les cadeaux de bienvenue sont désactivés"
 
-#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:84
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:100
 msgid "Welcome gifts waiting to be claimed."
 msgstr "Des cadeaux de bienvenue n’attendent que d’être réclamés."
 
-#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:190
+#: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:219
 msgid "Welcome new players with a money gift in a DM"
 msgstr "Accueille les nouveaux joueurs avec un cadeau en monnaie via un MP"
 
@@ -19426,7 +19454,7 @@ msgstr "Vainqueur"
 msgid "Winners"
 msgstr "Gagnants"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:138
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:143
 msgid "Winners are drawn at random among the players who joined."
 msgstr "Les gagnants sont tirés au sort parmi les joueurs ayant participé."
 
@@ -19450,7 +19478,7 @@ msgstr "Avec prime"
 msgid "With you sweating along, the whole shift works harder, and grumbles."
 msgstr "À force de te voir suer, toute l’équipe redouble d’efforts… et se plaint."
 
-#: src/components/_economy/itemOffer/ItemOfferCard.tsx:105
+#: src/components/_economy/itemOffer/ItemOfferCard.tsx:111
 #: src/components/_economy/itemOffer/ItemOfferModal.tsx:242
 #: src/components/_military/tournament/TournamentRegisterButton.tsx:103
 #: src/components/_political/election/CongressListElection.tsx:175
@@ -19469,12 +19497,12 @@ msgstr "Retirer toutes tes offres?"
 msgid "Withdraw the company"
 msgstr "Retirer l’entreprise"
 
-#: src/components/_economy/itemOffer/ItemOfferCard.tsx:100
+#: src/components/_economy/itemOffer/ItemOfferCard.tsx:106
 #: src/components/_economy/itemOffer/ItemOfferModal.tsx:237
 msgid "Withdraw this offer?"
 msgstr "Retirer cette offre?"
 
-#: src/components/_economy/manager/CompanyManagerSlot.tsx:462
+#: src/components/_economy/manager/CompanyManagerSlot.tsx:469
 msgid "Withheld from this pay at collection, for the company's country."
 msgstr "Retenu sur ce paiement lors de l'encaissement, pour le pays de l'entreprise."
 
@@ -19492,13 +19520,13 @@ msgid "Women only."
 msgstr "Femmes seulement."
 
 #: src/components/_political/region/ResistanceBar.tsx:121
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:157
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:162
 msgid "Won"
 msgstr "Gagné"
 
 #: src/components/_military/tournament/TournamentHeader.tsx:91
 #: src/components/_other/events/EventTournament.tsx:99
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:191
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:196
 msgid "Won by"
 msgstr "Gagné par"
 
@@ -19537,7 +19565,7 @@ msgstr "Anniversaire de travail"
 msgid "Work once to claim this reward."
 msgstr "Effectues une tâche pour obtenir cette récompense."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2328
+#: src/components/_user/notification/notification.frontConfig.tsx:2363
 msgid "Worker left"
 msgstr "Travailleur parti"
 
@@ -19611,11 +19639,11 @@ msgstr "Rédiger des articles"
 msgid "Written by players. Tap News."
 msgstr "Écrit par des joueurs. Appuie sur Actualités."
 
-#: src/components/_user/userReports/userReports.hooks.ts:14
+#: src/components/_user/userReports/userReports.hooks.ts:23
 msgid "Wrong category"
 msgstr "Mauvaise catégorie"
 
-#: src/components/_user/userReports/userReports.hooks.ts:13
+#: src/components/_user/userReports/userReports.hooks.ts:22
 msgid "Wrong language"
 msgstr "Mauvaise langue"
 
@@ -19665,7 +19693,7 @@ msgstr "Tu as déjà obtenu cette récompense."
 msgid "You already have {0} active companies. Disable one first."
 msgstr "Tu as déjà {0} entreprises actives. Désactivez-en une d'abord."
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:257
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:278
 msgid "You already have the Supporter Plan"
 msgstr "Tu as déjà le Plan Supporter"
 
@@ -19703,12 +19731,12 @@ msgstr "Tu es ici"
 msgid "You are jobless"
 msgstr "Tu es au chômage"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:494
+#: src/components/_user/notification/notification.frontConfig.tsx:498
 msgid "You are no longer the manager of <0/>"
 msgstr "Tu n’es plus le manager de <0/>"
 
 #. placeholder {0}: data.paidOut
-#: src/components/_user/notification/notification.frontConfig.tsx:485
+#: src/components/_user/notification/notification.frontConfig.tsx:489
 msgid "You are no longer the manager of <0/>. Your remaining <1>{0}</1> was collected for you"
 msgstr "Tu n’es plus le manager de <0/>. Le reliquat de <1>{0}</1> a été collecté pour toi."
 
@@ -19748,7 +19776,7 @@ msgstr "Tu en deviens le propriétaire. {formerOwner} peut le récupérer jusqu�
 msgid "You bought a coffee for the dev <3"
 msgstr "Tu as offert un café au dév <3"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:801
+#: src/components/_user/notification/notification.frontConfig.tsx:805
 msgid "You bought items."
 msgstr "Tu as acheté des objets."
 
@@ -19822,23 +19850,23 @@ msgstr "Tu n'as pas la permission de voir les candidatures."
 msgid "You drop to <0>level {newLevel}</0> and lose <1>{xpPenalty}</1>. Your total XP is kept."
 msgstr "Tu descends au <0>niveau {newLevel}</0> et tu perds <1>{xpPenalty}</1>. Ton total d'XP est conservé."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1819
+#: src/components/_user/notification/notification.frontConfig.tsx:1854
 msgid "You earned gems from a banner sale!"
 msgstr "Tu as gagné des gemmes lors d'une vente sur bannière !"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2235
+#: src/components/_user/notification/notification.frontConfig.tsx:2270
 msgid "You earned gems from a sale of \"{skinTitle}\"!"
 msgstr "Tu as gagné des gemmes grâce à une vente de \"{skinTitle}\"!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2237
+#: src/components/_user/notification/notification.frontConfig.tsx:2272
 msgid "You earned gems from a skin pack sale!"
 msgstr "Tu as gagné des gemmes grâce à une vente d'un pack de skins!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:937
+#: src/components/_user/notification/notification.frontConfig.tsx:941
 msgid "You feel healthy, the debuff effect no longer affects you."
 msgstr "Tu te sens en bonne santé, l'effet de malus ne t'affecte plus."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2019
+#: src/components/_user/notification/notification.frontConfig.tsx:2054
 msgid "You finished #{rank} in your weekly league."
 msgstr "Tu as fini #{rank} dans ta ligue hebdomadaire."
 
@@ -19862,28 +19890,28 @@ msgstr "Tu seras automatiquement accepté, car la population de ce pays est inf�
 msgid "You have a case!"
 msgstr "Tu as une caisse!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1400
+#: src/components/_user/notification/notification.frontConfig.tsx:1435
 msgid "You have been demoted from commander in <0/> by <1/>"
 msgstr "Tu as été rétrogradé de commandant dans <0/> par <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:358
+#: src/components/_user/notification/notification.frontConfig.tsx:362
 msgid "You have been elected as the new leader of <0/>"
 msgstr "Tu as été élu(e) nouveau chef de <0/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1386
+#: src/components/_user/notification/notification.frontConfig.tsx:1421
 msgid "You have been promoted to commander in <0/> by <1/>"
 msgstr "Tu as été promu commandant dans <0/> par <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1372
+#: src/components/_user/notification/notification.frontConfig.tsx:1407
 msgid "You have been removed from <0/> by <1/>"
 msgstr "Tu as été retiré de <0/> par <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:650
+#: src/components/_user/notification/notification.frontConfig.tsx:654
 msgid "You have been transferred from <0/> to <1/>"
 msgstr "Tu as été transféré de <0/> à <1/>"
 
 #. placeholder {0}: 1
-#: src/components/_user/notification/notification.frontConfig.tsx:891
+#: src/components/_user/notification/notification.frontConfig.tsx:895
 msgid "You have consumed <0>{0}</0>, it's effect starts now and ends in <1>{buffDuration}h</1>."
 msgstr "Tu as consommé <0>{0}</0>, son effet commence maintenant et se termine dans <1>{buffDuration}h</1>."
 
@@ -19904,7 +19932,7 @@ msgstr "Tu n'as pas d'autre entreprise où les transférer"
 msgid "You have nothing on sale"
 msgstr "Tu n’as aucun article en vente"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2057
+#: src/components/_user/notification/notification.frontConfig.tsx:2092
 msgid "You have prestiged! Enjoy your permanent XP bonus and prestige point."
 msgstr "Tu as atteins le prestige! Profites de ton bonus d'EXP et de ton point de prestige permanant."
 
@@ -19944,7 +19972,7 @@ msgstr "Tu as aidé à traduire le jeu dans une autre langue"
 msgid "You invited a friend or spammed forum posts. After they reach level {0}, you will get the badge + {1}% of all your referrals' badge rewards"
 msgstr "Tu as invité un ami ou spammé les forums. Lorsqu'ils atteindront le niveau {0}, tu reecevras le badge + {1} % de toutes les récompenses de badge de tes filleuls"
 
-#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:250
+#: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:271
 msgid "You joined, good luck"
 msgstr "Tu as rejoint, bonne chance"
 
@@ -19982,7 +20010,7 @@ msgstr "Tu as besoin d'être niveau {minLevel} pour acheter de l'équipement."
 msgid "You need to be level {minLevel} to sell equipment"
 msgstr "Tu dois être de niveau {minLevel} pour vendre de l'équipement."
 
-#: src/components/_social/poll/PollCard.tsx:230
+#: src/components/_social/poll/PollCard.tsx:347
 msgid "You need to be level {minLevel} to vote."
 msgstr "Tu as besoin d'être niveau {minLevel} pour pouvoir voter."
 
@@ -20006,7 +20034,7 @@ msgstr "Tu paies"
 msgid "You pay, tax included"
 msgstr "Tu paies, taxes incluses"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1316
+#: src/components/_user/notification/notification.frontConfig.tsx:1351
 msgid "You premium gift from <0/> has expired! Would you consider subscribing and supporting the game? 👉👈"
 msgstr "Ton cadeau premium de <0/> a expiré ! Voudrais-tu t'abonner et soutenir le jeu ? 👉👈"
 
@@ -20024,38 +20052,38 @@ msgid "You receive {value}"
 msgstr "Tu reçois {value}"
 
 #. placeholder {0}: data.rank
-#: src/components/_user/notification/notification.frontConfig.tsx:1548
+#: src/components/_user/notification/notification.frontConfig.tsx:1583
 msgid "You received a loot item for rank <0>#{0}</0> in <1/>"
 msgstr "Tu as reçu un objet de butin pour le rang <0>#{0}</0> dans <1/>"
 
 #. placeholder {0}: data.muId ? ( <MuName muId={data.muId} /> ) : data.countryId ? ( <CountryName countryId={data.countryId} /> ) : ( 'your' )
 #. placeholder {1}: data.rank && ( <> position{' '} <Typo fw='bold' color='text1'> #{data.rank} </Typo> </> )
-#: src/components/_user/notification/notification.frontConfig.tsx:1687
+#: src/components/_user/notification/notification.frontConfig.tsx:1722
 msgid "You received a reward for {0} {1} in<0/> tier in the ranking <1/>"
 msgstr "Tu as reçu une récompense pour {0} {1} dans le palier <0/> du classement <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2255
+#: src/components/_user/notification/notification.frontConfig.tsx:2290
 msgid "You received the skin \"{skinTitle}\"!"
 msgstr "Tu as reçu le skin « {skinTitle} »!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:803
+#: src/components/_user/notification/notification.frontConfig.tsx:807
 msgid "You sold items."
 msgstr "Tu as vendu des objets."
 
 #. placeholder {0}: data.bannerTitle
-#: src/components/_user/notification/notification.frontConfig.tsx:1742
+#: src/components/_user/notification/notification.frontConfig.tsx:1777
 msgid "You successfully gifted \"{0}\" to <0/>!"
 msgstr "Tu as offert \"{0}\" à <0/> avec succès!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2072
+#: src/components/_user/notification/notification.frontConfig.tsx:2107
 msgid "You successfully gifted \"{skinTitle}\" to <0/>!"
 msgstr "Tu as offert \"{skinTitle}\" à <0/> avec succès!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1220
+#: src/components/_user/notification/notification.frontConfig.tsx:1224
 msgid "You successfully gifted a premium subscription to <0/>!"
 msgstr "Tu as offert un abonnement premium à <0/> avec succès!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2140
+#: src/components/_user/notification/notification.frontConfig.tsx:2175
 msgid "You successfully gifted the skin pack \"{skinPackTitle}\" to <0/>!"
 msgstr "Tu as offert avec succès le pack de skins « {skinPackTitle} » à <0/>!"
 
@@ -20079,7 +20107,7 @@ msgstr "Tu as voté pour ce parti"
 msgid "You voted in a major election"
 msgstr "Tu as participé à une élection majeure"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:746
+#: src/components/_user/notification/notification.frontConfig.tsx:750
 msgid "You was fired from the government by <0/>"
 msgstr "Tu as été renvoyé du gouvernement par <0/>"
 
@@ -20087,8 +20115,8 @@ msgstr "Tu as été renvoyé du gouvernement par <0/>"
 msgid "You were an alpha tester (user before 20 march 2025)"
 msgstr "Tu as été testeur alpha (inscrit avant le 20 mars 2025)"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2369
-#: src/components/_user/notification/notification.frontConfig.tsx:2386
+#: src/components/_user/notification/notification.frontConfig.tsx:2404
+#: src/components/_user/notification/notification.frontConfig.tsx:2421
 msgid "You were elected"
 msgstr "Tu as été élu"
 
@@ -20135,7 +20163,7 @@ msgid "You win the regional title, and the prize money. The trophy goes on the m
 msgstr "Tu remportes le titre régional, ainsi que la somme prévue en guise de récompense. Le trophée est placé sur la machine."
 
 #. placeholder {0}: data.gems
-#: src/components/_user/notification/notification.frontConfig.tsx:1255
+#: src/components/_user/notification/notification.frontConfig.tsx:1259
 msgid "You won <0>{0}</0> in <1/>'s giveaway"
 msgstr "Tu as gagné <0>{0}</0> lors du tirage de sort de <1/>"
 
@@ -20211,8 +20239,8 @@ msgstr "Ton annonce au pays..."
 msgid "Your announcement to the unit..."
 msgstr "Ton annonce à l'unité..."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:402
-#: src/components/_user/notification/notification.frontConfig.tsx:1331
+#: src/components/_user/notification/notification.frontConfig.tsx:406
+#: src/components/_user/notification/notification.frontConfig.tsx:1366
 msgid "Your application to <0/> has been rejected"
 msgstr "Ta candidature à <0/> a été rejetée"
 
@@ -20221,7 +20249,7 @@ msgid "Your article reached 2% of the active population in score (min 10)"
 msgstr "Ton article a atteint un score de 2% de la population active (min. 10)"
 
 #. placeholder {0}: data.bannerTitle
-#: src/components/_user/notification/notification.frontConfig.tsx:1833
+#: src/components/_user/notification/notification.frontConfig.tsx:1868
 msgid "Your banner \"{0}\" has been accepted and is now available in the shop! It has been automatically unlocked for you."
 msgstr "Ta bannière \"{0}\" a été acceptée et est maintenant disponible dans la boutique ! Elle a été automatiquement débloquée pour toi."
 
@@ -20229,7 +20257,7 @@ msgstr "Ta bannière \"{0}\" a été acceptée et est maintenant disponible dans
 msgid "Your bars"
 msgstr "Tes barres"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:906
+#: src/components/_user/notification/notification.frontConfig.tsx:910
 msgid "Your buff(s) will expire in less than 1 hour. The debuff phase will begin soon."
 msgstr "Ton/tes bonus sera/seront expiré(s) dans moins d'une heure. La phase de malus va commencer bientôt."
 
@@ -20242,8 +20270,8 @@ msgid "Your citizenship is going to change"
 msgstr "Ta citoyenneté est sur le point de changer"
 
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:178
-msgid "Your country"
-msgstr "Ton pays"
+#~ msgid "Your country"
+#~ msgstr "Ton pays"
 
 #: src/components/_political/region/SetResistanceFocusModal.tsx:114
 msgid "Your country already focuses <0/>. Setting this one releases it."
@@ -20273,11 +20301,11 @@ msgstr "Ton pays est enregistré"
 msgid "Your country is registered for this tournament"
 msgstr "Ton pays est enregistré pour ce tournoi"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2410
+#: src/components/_user/notification/notification.frontConfig.tsx:2445
 msgid "Your country is under attack!"
 msgstr "Ton pays est sous attaque!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2413
+#: src/components/_user/notification/notification.frontConfig.tsx:2448
 msgid "Your country launched an attack!"
 msgstr "Ton pays a lancé une attaque!"
 
@@ -20285,11 +20313,11 @@ msgstr "Ton pays a lancé une attaque!"
 msgid "Your country sponsors no unit yet. A Sponsor MU law offers State Army status to a Paramilitary unit of your nationality"
 msgstr "Ton pays ne parraine encore aucune unité. Une loi sur le parrainage d'UM permet d’accorder le statut d’armée d’État à une unité paramilitaire de ta nationalité."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1140
+#: src/components/_user/notification/notification.frontConfig.tsx:1144
 msgid "Your country started a revolt in <0/> against <1/>"
 msgstr "Ton pays a commencé une révolte dans <0/> contre <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2359
+#: src/components/_user/notification/notification.frontConfig.tsx:2394
 msgid "Your country's article"
 msgstr "L'article de ton pays"
 
@@ -20309,7 +20337,7 @@ msgstr "Ton ordre actuel"
 msgid "Your current position"
 msgstr "Ton poste actuel"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1982
+#: src/components/_user/notification/notification.frontConfig.tsx:2017
 msgid "Your daily missions have been reset! Complete them to earn rewards."
 msgstr "Tes missions quotidiennes ont été réinitialisées! Compléte-les pour gagner des récompenses."
 
@@ -20339,7 +20367,7 @@ msgstr "Ton employeur a réduit ton salaire à"
 
 #. placeholder {0}: data.oldWage
 #. placeholder {1}: data.newWage
-#: src/components/_user/notification/notification.frontConfig.tsx:680
+#: src/components/_user/notification/notification.frontConfig.tsx:684
 msgid "Your employer wants to reduce your wage in <0/> from <1>{0}</1> to <2>{1}</2>. Accept or reject this change."
 msgstr "Ton employeur souhaite réduire ton salaire dans <0/> de <1>{0}</1> à <2>{1}</2>. Accepte ou refuse ce changement."
 
@@ -20362,6 +20390,24 @@ msgstr "Vos soirées passées ensemble portent leurs fruits: une réelle amélio
 #: src/components/_other/tour/tuto.frontConfig.tsx:522
 msgid "Your gear boosts them all."
 msgstr "Ton équipement les renforce tous."
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1274
+msgid "Your giveaway ended with no winners"
+msgstr ""
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1286
+msgid "Your giveaway ended: {winnersCount, plural, one {# Supporter Plan gift} other {# Supporter Plan gifts}} won by <0/>"
+msgstr ""
+
+#. placeholder {0}: data.count
+#: src/components/_user/notification/notification.frontConfig.tsx:1301
+msgid "Your giveaway ended: {winnersCount} of {0, plural, one {# Supporter Plan gift} other {# Supporter Plan gifts}} won by <0/>"
+msgstr ""
+
+#. placeholder {0}: data.gemsPerWinner ?? 0
+#: src/components/_user/notification/notification.frontConfig.tsx:1276
+msgid "Your giveaway ended: <0>{0}</0> each won by <1/>"
+msgstr ""
 
 #: src/components/_user/auth/WelcomeModal.tsx:90
 msgid "Your infos have been saved."
@@ -20403,11 +20449,11 @@ msgstr "Tes compétences militaires"
 msgid "Your military unit name"
 msgstr "Le nom de ton unité militaire"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2006
+#: src/components/_user/notification/notification.frontConfig.tsx:2041
 msgid "Your monthly missions have been reset! Complete them to earn rewards."
 msgstr "Tes missions mensuelles ont été réinitialisées ! Termines-les pour obtenir des récompenses."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2038
+#: src/components/_user/notification/notification.frontConfig.tsx:2073
 msgid "Your MU finished #{rank} in its weekly league."
 msgstr "Ta UM a finie #{rank} de sa ligue hebdomadaire."
 
@@ -20435,7 +20481,7 @@ msgstr "Votre UM doit disposer de suffisamment d'argent pour couvrir les frais d
 msgid "Your next unlock"
 msgstr "Ton prochain déblocage"
 
-#: src/components/_economy/itemOffer/CreateItemOffersModal.tsx:341
+#: src/components/_economy/itemOffer/CreateItemOffersModal.tsx:347
 msgid "Your offer <0>{price}</0>"
 msgstr "Ton offre <0>{price}</0>"
 
@@ -20457,7 +20503,7 @@ msgstr "Nom de ton parti"
 
 #. placeholder {0}: data.oldWage
 #. placeholder {1}: data.newWage
-#: src/components/_user/notification/notification.frontConfig.tsx:507
+#: src/components/_user/notification/notification.frontConfig.tsx:511
 msgid "Your pay at <0/> went from <1>{0}</1> to <2>{1}</2> per hour"
 msgstr "Ta rémunération chez <0/> est passée de <1>{0}</1> à <2>{1}</2> par heure"
 
@@ -20469,11 +20515,11 @@ msgstr "Ta blague va trop loin. Le travail tourne au ralenti pendant que tout le
 msgid "Your prank is the best yet. The whole workshop is in stitches."
 msgstr "Ta blague est la meilleure jusqu’ici. Tout l’atelier est plié en deux."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1202
+#: src/components/_user/notification/notification.frontConfig.tsx:1206
 msgid "Your premium subscription has been activated!"
 msgstr "Ton abonnement premium a été activé!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1211
+#: src/components/_user/notification/notification.frontConfig.tsx:1215
 msgid "Your premium subscription has expired!"
 msgstr "Ton abonnement premium a expiré!"
 
@@ -20501,11 +20547,11 @@ msgstr "Ton lien de parrainage"
 msgid "Your reward"
 msgstr "Ta récompense"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1666
+#: src/components/_user/notification/notification.frontConfig.tsx:1701
 msgid "Your team <0/> has been eliminated from the <1/>"
 msgstr "Ton équipe <0/> a été éliminée du <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1564
+#: src/components/_user/notification/notification.frontConfig.tsx:1599
 msgid "Your team <0/> won a round in <1/>!"
 msgstr "Ton équipe <0/> a gagné une manche dans <1/> !"
 
@@ -20552,11 +20598,11 @@ msgstr "Ton vote"
 
 #. placeholder {0}: data.oldWage
 #. placeholder {1}: data.newWage
-#: src/components/_user/notification/notification.frontConfig.tsx:665
+#: src/components/_user/notification/notification.frontConfig.tsx:669
 msgid "Your wage in <0/> changed from <1>{0}</1> to <2>{1}</2>"
 msgstr "Ton salaire dans <0/> est passé de <1>{0}</1> à <2>{1}</2>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1994
+#: src/components/_user/notification/notification.frontConfig.tsx:2029
 msgid "Your weekly missions have been reset! Complete them to earn rewards."
 msgstr "Tes missions hebdomadaires ont été réinitialisées ! Complétez-les pour gagner des récompenses."
 
@@ -20568,7 +20614,7 @@ msgstr "Ta force de travail"
 msgid "your@email.com"
 msgstr "ton@email.com"
 
-#: src/components/_economy/itemOffer/ItemOfferCard.tsx:52
+#: src/components/_economy/itemOffer/ItemOfferCard.tsx:58
 #: src/components/_social/ArticleList.tsx:232
 msgid "Yours"
 msgstr "Les tiens"
