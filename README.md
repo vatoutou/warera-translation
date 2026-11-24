@@ -98,9 +98,19 @@ A translation can sound correct while still breaking the game if its placeholder
 
 ### 3. Handle Plural Entries Correctly
 
-Plural entries must retain their original structure and use the correct plural forms for the target language.
+Some strings use ICU plural syntax to display different text depending on a number. Translate the text inside each plural branch while preserving the plural expression, placeholders, and required structure.
 
-Do not replace plural entries with a single translation or remove required plural branches. The number and meaning of plural forms depend on the language and the entry's format.
+For example, English to Spanish:
+
+```po
+msgid "{count, plural, one {You have # message} other {You have # messages}}"
+msgstr "{count, plural, one {Tienes # mensaje} other {Tienes # mensajes}}"
+```
+
+- Preserve the variables and the `#` symbol, which represents the number or placeholder.
+- Keep the plural expression and its required branches.
+- Use the plural categories that may be required by your  language if ever in need. Some languages may require additional categories, such as `zero`, `two`, `few`, or `many`.
+
 
 ### 4. Translate Naturally and Accurately
 
