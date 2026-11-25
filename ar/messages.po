@@ -116,7 +116,7 @@ msgstr "{0, plural, one {صوت واحد} two {صوتين} few {# أصوات} ma
 #. placeholder {0}: counts.get(division) ?? 0
 #: src/components/_military/muLeague/MuLeagueWinDivisions.tsx:33
 msgid "{0, plural, one {# win} other {# wins}}"
-msgstr ""
+msgstr "{0, plural, one {فوز واحد} two {فوزان} few {# انتصارات} many {# فوزًا} other {# فوز}}"
 
 #. placeholder {0}: data.count
 #. placeholder {0}: giveaway.count
@@ -174,7 +174,7 @@ msgid "{0} alliance bonus when fighting for an ally"
 msgstr "مكافأة تحالف {0} عند القتال من أجل حليف"
 
 #. placeholder {0}: data.userId && ( <UserUsername userId={data.userId} withAvatar withFlag /> )
-#: src/components/_user/notification/notification.frontConfig.tsx:699
+#: src/components/_user/notification/notification.frontConfig.tsx:697
 msgid "{0} bought your item offer"
 msgstr "اشترى {0} عرض العنصر الخاص بك"
 
@@ -250,17 +250,17 @@ msgstr "{0} في انتظار قرارك"
 #. placeholder {0}: data.entrantsCount
 #: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:211
 msgid "{0} joined"
-msgstr ""
+msgstr "⁧انضم ⁦{0}⁩⁩"
 
 #. placeholder {0}: data.giftsLeftToday
 #. placeholder {1}: welcomeGiftConfig.giftsPerGiverPerDay
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:220
 msgid "{0} of {1} gifts left today"
-msgstr ""
+msgstr "⁧الهدايا المتبقية اليوم: ⁦{0}⁩ من ⁦{1}⁩⁩"
 
 #. placeholder {0}: data.outbidByMuName
 #. placeholder {1}: toPerM(data.newPerK)
-#: src/components/_user/notification/notification.frontConfig.tsx:2004
+#: src/components/_user/notification/notification.frontConfig.tsx:2002
 msgid "{0} outbid you at ${1}/M"
 msgstr "⁧زاود عليك ⁨{0}⁩ بسعر ⁦${1}/مليون⁩⁩"
 
@@ -270,7 +270,7 @@ msgid "{0} payroll and manager tax income"
 msgstr "دخل {0} من الرواتب وضريبة المدراء"
 
 #. placeholder {0}: data.userId && ( <UserUsername userId={data.userId} withAvatar withFlag /> )
-#: src/components/_user/notification/notification.frontConfig.tsx:722
+#: src/components/_user/notification/notification.frontConfig.tsx:720
 msgid "{0} proposed a new law <0/>"
 msgstr "اقترح {0} قانوناً جديداً <0/>"
 
@@ -309,7 +309,7 @@ msgstr "{0}/{1} نشط"
 #. placeholder {1}: welcomeGiftConfig.giftsPerGiverPerDay
 #: src/components/_user/welcomeGift/WelcomeGiftModal.tsx:130
 msgid "{0}/{1} left today"
-msgstr ""
+msgstr "⁧⁦{0}/{1}⁩ متبقية اليوم⁩"
 
 #. placeholder {0}: gameConfig.company.destructionValuePercent
 #: src/components/_economy/company/CompanyDropdown.tsx:525
@@ -327,9 +327,17 @@ msgstr "أيام العمل {0}: <0>{1}</0>"
 msgid "{0}h unpaid"
 msgstr "{0}س بدون أجر"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{amount, plural, one {Received # gem for \"{title}\"} other {Received # gems for \"{title}\"}}"
+msgstr "{amount, plural,  one {استلمت جوهرة واحدة مقابل \"{title}\"} two {استلمت جوهرتين مقابل \"{title}\"} few {استلمت # جواهر مقابل \"{title}\"} many {استلمت # جوهرة مقابل \"{title}\"} other {استلمت # جوهرة مقابل \"{title}\"}}"
+
 #: src/components/_economy/employeeEvent/EmployeeEventCatalog.tsx:912
 msgid "{answerWithin} to answer"
-msgstr "{answerWithin} للإجابة"
+msgstr "⁧⁨{answerWithin}⁩ للإجابة⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{attacker} attacked {defender} in {region}"
+msgstr "⁧هاجم ⁨{attacker}⁩ ⁨{defender}⁩ في ⁨{region}⁩⁩"
 
 #: src/components/_economy/employee/TrainingCard.tsx:386
 msgid "{badTraitPercent}% chance of a bad trait"
@@ -339,10 +347,26 @@ msgstr "احتمال اكتساب خصائص سلبية بنسبة {badTraitPerc
 msgid "{BASE_RARE_DRAW_PCT}% without Luck"
 msgstr "{BASE_RARE_DRAW_PCT}% دون احتساب الحظ"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{cases, plural, one {Your team won a tournament round and received # case!} other {Your team won a tournament round and received # cases!}}"
+msgstr "{cases, plural, one {فاز فريقك بجولة في البطولة وحصل على صندوق واحد!} two {فاز فريقك بجولة في البطولة وحصل على صندوقين!} few {فاز فريقك بجولة في البطولة وحصل على # صناديق!} many {فاز فريقك بجولة في البطولة وحصل على # صندوقًا!} other {فاز فريقك بجولة في البطولة وحصل على # صندوق!}}"
+
 #. placeholder {0}: states.length
 #: src/components/_other/tour/TutorialChapterEndModal.tsx:242
 msgid "{chaptersDone} of {0} guides done"
-msgstr "تم إنجاز {chaptersDone} من {0} أدلة"
+msgstr "⁧تم إنجاز ⁦{chaptersDone}⁩ من أصل ⁦{0}⁩ من الشروحات⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{company} could not pay you this hour."
+msgstr "⁧تعذّر على ⁨{company}⁩ دفع راتبك هذه الساعة.⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{company} cut your pay. Accept it or resign."
+msgstr "⁧خفّض ⁨{company}⁩ راتبك. اقبل العرض أو استقل.⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{company}'s production bar is full"
+msgstr "اكتمل انتاج الشركة لدى {company}"
 
 #: src/components/_user/badgeCollection/Badge.tsx:87
 msgid "{cooldownDays} days"
@@ -464,9 +488,37 @@ msgstr "{count, plural, zero {لا توجد عناصر خرافية لتفكيك
 msgid "{count, plural, one {You are about to dismantle # RARE item} other {You are about to dismantle # RARE items}}"
 msgstr "{count, plural, zero {لا توجد عناصر نادرة لتفكيكها} one {أنت على وشك تفكيك عنصر نادر واحد} two {أنت على وشك تفكيك عنصرين نادرين} few {أنت على وشك تفكيك # عناصر نادرة} many {أنت على وشك تفكيك # عنصرًا نادرًا} other {أنت على وشك تفكيك # عنصر نادر}}"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{count, plural, one {Your buff has expired} other {Your buffs have expired}}"
+msgstr "{count, plural, one {انتهى تأثير التعزيز الخاص بك} two {انتهى تأثيرا التعزيز الخاصان بك} few {انتهت تأثيرات التعزيز الخاصة بك} many {انتهت تأثيرات التعزيز الخاصة بك} other {انتهت تأثيرات التعزيز الخاصة بك}}"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{count, plural, one {Your buff will expire in less than 1 hour} other {Your buffs will expire in less than 1 hour}}"
+msgstr "{count, plural, one {سينتهي تأثير التعزيز الخاص بك خلال أقل من ساعة} two {سينتهي تأثيرا التعزيز الخاصان بك خلال أقل من ساعة} few {ستنتهي تأثيرات التعزيز الخاصة بك خلال أقل من ساعة} many {ستنتهي تأثيرات التعزيز الخاصة بك خلال أقل من ساعة} other {ستنتهي تأثيرات التعزيز الخاصة بك خلال أقل من ساعة}}"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{count, plural, one {Your debuff has expired} other {Your debuffs have expired}}"
+msgstr "{count, plural, one {انتهى تأثير الضعف الخاص بك} two {انتهى تأثيرا الضعف الخاصان بك} few {انتهت تأثيرات الضعف الخاصة بك} many {انتهت تأثيرات الضعف الخاصة بك} other {انتهت تأثيرات الضعف الخاصة بك}}"
+
 #: src/components/_common/OverflowCount.tsx:64
 msgid "{count} more"
 msgstr "المزيد: {count}"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{country} cancelled the contract. You earned {money} CC for your contribution."
+msgstr "⁧ألغت ⁨{country}⁩ العقد. حصلت على ⁦{money}⁩ مقابل مساهمتك.⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{country} cancelled the mercenary contract for {mu}. Partial payout and penalty paid to MU."
+msgstr "⁧ألغت ⁨{country}⁩ عقد المرتزقة مع ⁨{mu}⁩. تم دفع مبلغ جزئي وغرامة للوحدة العسكرية.⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{country} is attacking {region}"
+msgstr "⁧تهاجم ⁨{country}⁩ ⁨{region}⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{country} is attacking!"
+msgstr "⁧تهاجم ⁨{country}⁩!⁩"
 
 #: src/components/_economy/employeeEvent/EmployeeEventEffects.tsx:171
 msgid "{days, plural, one {# day of their wage} other {# days of their wage}}"
@@ -480,25 +532,33 @@ msgstr "{daysAgo, plural, one {منذ يوم واحد} two {منذ يومين} f
 msgid "{delay} after you pick {answer} in {source}."
 msgstr "{delay} بعد اختيارك {answer} في {source}."
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{employee} and others are waiting for your decision."
+msgstr "⁧⁨{employee}⁩ وآخرون ينتظرون قرارك.⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{employee} is waiting for your decision."
+msgstr "⁧⁨{employee}⁩ ينتظر قرارك.⁩"
+
 #: src/components/_user/subGiftDrop/GiveawayEntrantsModal.tsx:36
 msgid "{entrantsCount} joined"
-msgstr ""
+msgstr "⁧انضم ⁦{entrantsCount}⁩⁩"
 
 #: src/components/_economy/inventory/DismantleModal.tsx:262
 msgid "{equippedCount, plural, one {# of them is equipped} other {# of them are equipped}}"
 msgstr "{equippedCount, plural, one {# منها مجهز} other {# منها مجهزة}}"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:609
+#: src/components/_user/notification/notification.frontConfig.tsx:607
 msgid "{finder} and others found {toolboxes} for you to claim."
 msgstr "⁧⁨{finder}⁩ وآخرون وجدوا ⁨{toolboxes}⁩ لتستلمها.⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:613
+#: src/components/_user/notification/notification.frontConfig.tsx:611
 msgid "{finder} found {toolboxes} for you to claim."
 msgstr "⁧⁨{finder}⁩ وجد ⁨{toolboxes}⁩ لتستلمها.⁩"
 
 #: src/components/_military/mu/MuTakeoverAlert.tsx:121
 msgid "{formerOwner} can reclaim it until {reclaimUntil}."
-msgstr ""
+msgstr "⁧يمكن لـ ⁨{formerOwner}⁩ استعادتها حتى ⁨{reclaimUntil}⁩.⁩"
 
 #: src/components/_economy/company/CompanyDropdown.tsx:323
 #: src/components/_economy/company/MoveCompanyForm.tsx:105
@@ -512,6 +572,22 @@ msgstr "{gain} كل {perDays} أيام في الشركة نفسها"
 #: src/components/_economy/employee/EmployeeTraitArg.tsx:51
 msgid "{gain} every {perDays} days at the same company, up to {cap}"
 msgstr "{gain} كل {perDays} أيام في الشركة نفسها، بحد أقصى {cap}"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{gems, plural, one {# gem refunded.} other {# gems refunded.}}"
+msgstr "{gems, plural, one {تم استرداد جوهرة واحدة.} two {تم استرداد جوهرتين.} few {تم استرداد # جواهر.} many {تم استرداد # جوهرة.} other {تم استرداد # جوهرة.}}"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{gems, plural, one {You earned # gem from a banner sale!} other {You earned # gems from a banner sale!}}"
+msgstr "{gems, plural, one {ربحت جوهرة واحدة من بيع بانر!} two {ربحت جوهرتين من بيع بانر!} few {ربحت # جواهر من بيع بانر!} many {ربحت # جوهرة من بيع بانر!} other {ربحت # جوهرة من بيع بانر!}}"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{gems, plural, one {You earned # gem from a skin pack sale!} other {You earned # gems from a skin pack sale!}}"
+msgstr "{gems, plural, one {ربحت جوهرة واحدة من بيع حزمة سكنات!} two {ربحت جوهرتين من بيع حزمة سكنات!} few {ربحت # جواهر من بيع حزمة سكنات!} many {ربحت # جوهرة من بيع حزمة سكنات!} other {ربحت # جوهرة من بيع حزمة سكنات!}}"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{gems, plural, one {You earned # gem from a skin sale!} other {You earned # gems from a skin sale!}}"
+msgstr "{gems, plural, one {ربحت جوهرة واحدة من بيع سكن!} two {ربحت جوهرتين من بيع سكن!} few {ربحت # جواهر من بيع سكن!} many {ربحت # جوهرة من بيع سكن!} other {ربحت # جوهرة من بيع سكن!}}"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1167
 msgid "{gender, select, male {{name} accepts mixed grapes, under protest.} female {{name} accepts mixed grapes, under protest.} other {{name} accepts mixed grapes, under protest.}}"
@@ -1640,7 +1716,7 @@ msgstr "{gender, select, male {أخبرت {name} أنه قام بعمل جيد. 
 #. placeholder {0}: welcomeGiftConfig.maxGiftsPerNewcomer
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:109
 msgid "{gifts} of {0} received, gifts waiting to be claimed included."
-msgstr ""
+msgstr "⁧تم استلام ⁦{gifts}⁩ من أصل ⁦{0}⁩، بما في ذلك الهدايا التي تنتظر الاستلام.⁩"
 
 #. placeholder {0}: ts.grain
 #. placeholder {1}: ts.bread
@@ -1662,7 +1738,7 @@ msgstr "{hours, plural, one {ساعة واحدة} two {ساعتين} few {# سا
 
 #: src/components/_common/useHoursLabel.ts:20
 msgid "{hours} hours"
-msgstr ""
+msgstr "⁧⁦{hours}⁩ ساعة⁩"
 
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:109
 msgid "{input} days in the company"
@@ -1680,11 +1756,11 @@ msgstr "{itemCount, plural, one {عنصر معروض للبيع} two {عنصرا
 msgid "{label} of <0/>"
 msgstr "⁧⁨{label}⁩ من ⁨<0/>⁩⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:560
+#: src/components/_user/notification/notification.frontConfig.tsx:558
 msgid "{lead} and others are waiting for your decision."
 msgstr "{lead} وآخرون ينتظرون قرارك."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:562
+#: src/components/_user/notification/notification.frontConfig.tsx:560
 msgid "{lead} is waiting for your decision."
 msgstr "{lead} ينتظر قرارك."
 
@@ -1695,6 +1771,22 @@ msgstr "متبقي {left} من أصل {perDay} تدريب لليوم"
 #: src/components/_economy/manager/ManagerOfferRow.tsx:162
 msgid "{managerTax}% manager tax is withheld when you collect your pay in this country."
 msgstr "تُخصم ضريبة المدير {managerTax}% عند استلام أجرك في هذه الدولة."
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{mu} completed a mercenary contract! You earned {money} CC"
+msgstr "⁧أكملت ⁨{mu}⁩ عقد مرتزقة! حصلت على ⁦{money}⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{mu} is Paramilitary again"
+msgstr "⁧أصبحت ⁨{mu}⁩ شبه عسكرية مجددًا⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{mu} leveled up!"
+msgstr "⁧ارتفع مستوى ⁨{mu}⁩!⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{mu} outbid you at ${price}/K"
+msgstr "⁧زاود عليك ⁨{mu}⁩ بسعر ⁦${price}/ألف⁩⁩"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:3827
 msgid "{name} accuses {partnerName} of eating a labeled lunch. The note on the fridge gets more threatening every day."
@@ -1787,12 +1879,12 @@ msgstr "{otherPct} في الاختبارات الأخرى"
 #. placeholder {0}: data.awayDays
 #: src/components/_military/mu/MuTakeoverAlert.tsx:110
 msgid "{owner} hasn't been seen for {0} days. As a commander, you can take over the unit."
-msgstr ""
+msgstr "⁧لم يفتح اللعبة ⁨{owner}⁩ منذ ⁦{0}⁩ أيام. بصفتك قائدًا، يمكنك تولّي قيادة الوحدة.⁩"
 
 #. placeholder {0}: data.awayDays
 #: src/components/_military/mu/MuTakeoverAlert.tsx:115
 msgid "{owner} hasn't been seen for {0} days. As a member, you can take over the unit."
-msgstr ""
+msgstr "⁧لم يفتح اللعبة ⁨{owner}⁩ منذ ⁦{0}⁩ أيام. بصفتك عضوًا، يمكنك تولّي قيادة الوحدة.⁩"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1889
 msgid "{partnerName} backs off. The fort stands."
@@ -1822,9 +1914,17 @@ msgstr "{partnerName} يتعلم بسرعة، ويريد أن يتعلم أكث�
 msgid "{partnerName} learns fast."
 msgstr "{partnerName} يتعلم بسرعة."
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{party} started a revolution in {country}"
+msgstr "⁧بدأ ⁨{party}⁩ ثورة في ⁨{country}⁩⁩"
+
 #: src/components/_user/premium/UserHeaderFakeContent.tsx:151
 msgid "{premiumMonthsCount, plural, one {# month} other {# months}}"
 msgstr "{premiumMonthsCount, plural, one {شهر واحد} two {شهرين} few {# أشهر} many {# شهرًا} other {# شهر}}"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{prize, plural, one {Congratulations! You won # case in the giveaway!} other {Congratulations! You won # cases in the giveaway!}}"
+msgstr "{prize, plural, one {مبروك! ربحت صندوقًا واحدًا في المسابقة!} two {مبروك! ربحت صندوقين في المسابقة!} few {مبروك! ربحت # صناديق في المسابقة!} many {مبروك! ربحت # صندوقًا في المسابقة!} other {مبروك! ربحت # صندوق في المسابقة!}}"
 
 #: src/components/_economy/employee/EmployeeTraitArg.tsx:115
 msgid "{production} alongside {partner}"
@@ -1836,11 +1936,23 @@ msgstr "{production} و{mood} أثناء إنتاج {good}"
 
 #: src/components/_economy/employee/EmployeeTooltip.tsx:198
 msgid "{profit} / day"
-msgstr ""
+msgstr "⁧⁦{profit}⁩ / يوم⁩"
 
 #: src/components/_political/map/MapMenu.tsx:184
 msgid "{quantity, plural, =1 {Wooden case collected!} one {# wooden case collected!} other {# wooden cases collected!}}"
 msgstr "{quantity, plural, =1 {تم جمع صندوق خشبي!} one {تم جمع صندوق خشبي واحد!} two {تم جمع صندوقين خشبيين!} few {تم جمع # صناديق خشبية!} many {تم جمع # صندوقًا خشبيًا!} other {تم جمع # صندوق خشبي!}}"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{rebels} is revolting in {region} against {country}"
+msgstr "⁧يثور ⁨{rebels}⁩ في ⁨{region}⁩ ضد ⁨{country}⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{rebels} started a revolt in {region}"
+msgstr "⁧بدأ ⁨{rebels}⁩ تمردًا في ⁨{region}⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{region} is revolting!"
+msgstr "⁧تثور ⁨{region}⁩!⁩"
 
 #: src/components/_political/map/MapMenu.tsx:641
 msgid "{regionLootCount, plural, =1 {Collect the wooden case lying on this region} one {Collect the # wooden case lying on this region} other {Collect the # wooden cases lying on this region}}"
@@ -1901,6 +2013,90 @@ msgstr "{trainable} للتدريب"
 #: src/components/_economy/employee/EmployeeResumeRow.tsx:412
 msgid "{trainingsLeft} training sessions left ({0}/{1} used)."
 msgstr "تبقّى {trainingsLeft} جلسات تدريب (استُخدم {0}/{1})."
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} applied to join {mu}"
+msgstr "⁧تقدّم ⁨{username}⁩ للانضمام إلى ⁨{mu}⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} applied to join {party}"
+msgstr "⁧تقدّم ⁨{username}⁩ للانضمام إلى ⁨{party}⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} bought your item for {money}"
+msgstr "⁧اشترى ⁨{username}⁩ عنصرك بسعر ⁦{money}⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} commented on \"{title}\""
+msgstr "⁧علّق ⁨{username}⁩ على \"⁨{title}⁩\"⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} gifted you a banner!"
+msgstr "⁧أهداك ⁨{username}⁩ بانرًا!⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} gifted you a skin pack!"
+msgstr "⁧أهداك ⁨{username}⁩ حزمة سكنات!⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} gifted you a skin!"
+msgstr "⁧أهداك ⁨{username}⁩ سكنًا!⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} gifted you a supporter subscription!"
+msgstr "⁧أهداك ⁨{username}⁩ اشتراك داعم!⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} has been elected as the new president of {country}"
+msgstr "⁧تم انتخاب ⁨{username}⁩ رئيسًا جديدًا لدولة ⁨{country}⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} joined using your referral link, send them a message!"
+msgstr "⁧انضم ⁨{username}⁩ عبر رابط الإحالة الخاص بك، أرسل له رسالة!⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} just proposed a new law"
+msgstr "⁧اقترح ⁨{username}⁩ قانونًا جديدًا للتو⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} left {company}."
+msgstr "⁧غادر ⁨{username}⁩ ⁨{company}⁩.⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} mentioned you in a message"
+msgstr "⁧ذكرك ⁨{username}⁩ في رسالة⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} responded to your message"
+msgstr "⁧ردّ ⁨{username}⁩ على رسالتك⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} sent you a message"
+msgstr "⁧أرسل لك ⁨{username}⁩ رسالة⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} sent you a welcome gift"
+msgstr "⁧أرسل لك ⁨{username}⁩ هدية ترحيب⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} tipped your article"
+msgstr "⁧أرسل ⁨{username}⁩ إكرامية على مقالك⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} tipped your article with gems"
+msgstr "⁧أرسل ⁨{username}⁩ إكرامية بالجواهر على مقالك⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} took the manager position at {company}."
+msgstr "⁧تولّى ⁨{username}⁩ منصب المدير في ⁨{company}⁩.⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} won the auction on a mercenary contract from {country} for {mu}"
+msgstr "⁧فاز ⁨{username}⁩ بمزاد عقد المرتزقة من ⁨{country}⁩ لصالح ⁨{mu}⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{username} won the primary election in {party} and can now run for president!"
+msgstr "⁧فاز ⁨{username}⁩ بالانتخابات التمهيدية في ⁨{party}⁩ ويمكنه الآن الترشح للرئاسة!⁩"
 
 #: src/components/_economy/employeeEvent/EmployeeEventEffects.tsx:482
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:114
@@ -2019,6 +2215,18 @@ msgstr "{who}: يطلب الآن {value} فوق سعر السوق"
 msgid "{who}: training potential now {value}"
 msgstr "{who}: {value} إمكانات التدريب الآن"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{won, plural, one {# player won {gems} gems each.} other {# players won {gems} gems each.}}"
+msgstr "{won, plural,  one {فاز لاعب واحد بمقدار {gems} من الجواهر.} two {فاز لاعبان بمقدار {gems} من الجواهر لكل منهما.} few {فاز # لاعبين بمقدار {gems} من الجواهر لكل منهم.} many {فاز # لاعبًا بمقدار {gems} من الجواهر لكل منهم.} other {فاز # لاعب بمقدار {gems} من الجواهر لكل منهم.}}"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{won, plural, one {# Supporter Plan gift won.} other {# Supporter Plan gifts won.}}"
+msgstr "{won, plural,  one {تم ربح هدية واحدة من خطة الداعم.} two {تم ربح هديتين من خطة الداعم.} few {تم ربح # هدايا من خطة الداعم.} many {تم ربح # هدية من خطة الداعم.} other {تم ربح # هدية من خطة الداعم.}}"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "{won} of {count} Supporter Plan gifts won."
+msgstr "⁧تم ربح ⁦{won}⁩ من أصل ⁦{count}⁩ من هدايا خطة الداعم.⁩"
+
 #: src/components/_common/GameRules.tsx:199
 msgid "* A gear merging scheme consists of buying items with very low durability at a relatively high price, merging them, and then reselling the result at a low price."
 msgstr "* يتكون من دمج العتاد من شراء عناصر ذات استخدام متبقي منخفض جداً وبسعر مرتفع نسبياً، ودمجها، ثم إعادة بيع النتيجة بسعر منخفض"
@@ -2134,8 +2342,8 @@ msgstr "<0/> و <1/>"
 msgid "<0/> and <1/>"
 msgstr "<0/> و<1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:419
-#: src/components/_user/notification/notification.frontConfig.tsx:1393
+#: src/components/_user/notification/notification.frontConfig.tsx:417
+#: src/components/_user/notification/notification.frontConfig.tsx:1391
 msgid "<0/> applied to join <1/>"
 msgstr "طلب <0/> الانضمام إلى <1/>"
 
@@ -2149,21 +2357,21 @@ msgstr "<0/> عند <1>{0}</1> /س.{1}"
 msgid "<0/> banned <1/> from the conversation"
 msgstr "قام <0/> بحظر <1/> من الدردشة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2257
+#: src/components/_user/notification/notification.frontConfig.tsx:2255
 msgid "<0/> bought your {assetLabel} as a gift for <1/>!"
 msgstr "اشترى <0/> {assetLabel} الخاص بك كهدية لـ <1/>!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2264
+#: src/components/_user/notification/notification.frontConfig.tsx:2262
 msgid "<0/> bought your {assetLabel}!"
 msgstr "اشترى <0/> {assetLabel} الخاص بك!"
 
 #. placeholder {0}: data.bannerTitle ? ` "${data.bannerTitle}"` : ''
-#: src/components/_user/notification/notification.frontConfig.tsx:1839
+#: src/components/_user/notification/notification.frontConfig.tsx:1837
 msgid "<0/> bought your banner{0} as a gift for <1/>!"
 msgstr "اشترى <0/> لافتتك{0} كهدية لـ <1/>!"
 
 #. placeholder {0}: data.bannerTitle ? ` "${data.bannerTitle}"` : ''
-#: src/components/_user/notification/notification.frontConfig.tsx:1847
+#: src/components/_user/notification/notification.frontConfig.tsx:1845
 msgid "<0/> bought your banner{0}!"
 msgstr "اشترى <0/> لافتتك{0}!"
 
@@ -2177,27 +2385,27 @@ msgstr "⁧اشترت ⁨<0/>⁩ منطقة ⁨<1/>⁩ بـ <2>⁦{0}⁩</2>⁩"
 msgid "<0/> buys your region <1/> for <2>{0}</2>"
 msgstr "<0/> يشتري منطقتك <1/> مقابل <2>{0}</2>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1924
+#: src/components/_user/notification/notification.frontConfig.tsx:1922
 msgid "<0/> cancelled the contract."
 msgstr "<0/> ألغى العقد."
 
 #: src/components/_political/message/systemMessage.frontConfig.tsx:291
 msgid "<0/> claimed the welcome gift"
-msgstr ""
+msgstr "⁧استلم ⁨<0/>⁩ هدية الترحيب⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:985
+#: src/components/_user/notification/notification.frontConfig.tsx:983
 msgid "<0/> commented on your article <1/>"
 msgstr "علق <0/> على مقالك <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1899
+#: src/components/_user/notification/notification.frontConfig.tsx:1897
 msgid "<0/> completed a contract, you earned <1/>"
 msgstr "أكمل <0/> عقداً، لقد ربحت <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:878
+#: src/components/_user/notification/notification.frontConfig.tsx:876
 msgid "<0/> conquered the region in <1/>"
 msgstr "احتل <0/> المنطقة في <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:539
+#: src/components/_user/notification/notification.frontConfig.tsx:537
 msgid "<0/> could not pay you this hour, so your bonus did not apply either. Nothing is owed for it."
 msgstr "لم يستطع <0/> دفع أجرك هذه الساعة، لذلك لم تُطبّق مكافأتك أيضًا. لا شيء مستحق عنها."
 
@@ -2207,7 +2415,7 @@ msgstr "قام <0/> بإنشاء المحادثة"
 
 #. placeholder {0}: data.oldWage
 #. placeholder {1}: data.newWage
-#: src/components/_user/notification/notification.frontConfig.tsx:525
+#: src/components/_user/notification/notification.frontConfig.tsx:523
 msgid "<0/> cut your pay from <1>{0}</1> to <2>{1}</2> per hour. Accept it or resign."
 msgstr "خفّض <0/> أجرك من <1>{0}</1> إلى <2>{1}</2> في الساعة. اقبله أو استقل."
 
@@ -2215,12 +2423,12 @@ msgstr "خفّض <0/> أجرك من <1>{0}</1> إلى <2>{1}</2> في الساع
 msgid "<0/> declared war on <1/>"
 msgstr "⁧أعلن ⁨<0/>⁩ الحرب على ⁨<1/>⁩⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:873
+#: src/components/_user/notification/notification.frontConfig.tsx:871
 msgid "<0/> defended in <1/>"
 msgstr "دافع <0/> في <1/>"
 
 #. placeholder {0}: data.amount
-#: src/components/_user/notification/notification.frontConfig.tsx:1495
+#: src/components/_user/notification/notification.frontConfig.tsx:1493
 msgid "<0/> donated <1>{0}</1> to <2/>"
 msgstr "⁧تبرع ⁨<0/>⁩ بـ <1>⁦{0}⁩</1> إلى ⁨<2/>⁩⁩"
 
@@ -2249,20 +2457,20 @@ msgstr "موّل <0/> تمردًا في <1/> لصالح <2/> ضد <3/>"
 msgid "<0/> gifted a sub to <1/>"
 msgstr "أهدى <0/> اشتراكاً لـ <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1238
+#: src/components/_user/notification/notification.frontConfig.tsx:1236
 msgid "<0/> gifted you a premium subscription!"
 msgstr "أهداك <0/> اشتراكًا مميزًا!"
 
 #. placeholder {0}: data.bannerTitle
-#: src/components/_user/notification/notification.frontConfig.tsx:1808
+#: src/components/_user/notification/notification.frontConfig.tsx:1806
 msgid "<0/> gifted you the banner \"{0}\"!"
 msgstr "أهداك <0/> اللافتة \"{0}\"!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2139
+#: src/components/_user/notification/notification.frontConfig.tsx:2137
 msgid "<0/> gifted you the skin \"{skinTitle}\"!"
 msgstr "أهداك <0/> المظهر \"{skinTitle}\"!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2210
+#: src/components/_user/notification/notification.frontConfig.tsx:2208
 msgid "<0/> gifted you the skin pack \"{skinPackTitle}\"!"
 msgstr "<0/> أهداك حزمة المظهر \"{skinPackTitle}\"!"
 
@@ -2275,11 +2483,11 @@ msgstr "يعود <0/> إلى القوات شبه العسكرية ويبقى ف�
 msgid "<0/> got fee back"
 msgstr "استعاد <0/> الرسوم"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1648
+#: src/components/_user/notification/notification.frontConfig.tsx:1646
 msgid "<0/> has been created, it gonna start soon!"
 msgstr "تم إنشاء <0/>، وسوف تبدأ قريباً!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:252
+#: src/components/_user/notification/notification.frontConfig.tsx:250
 msgid "<0/> has been elected president of <1/>"
 msgstr "تم انتخاب <0/> رئيساً لـ <1/>"
 
@@ -2340,11 +2548,11 @@ msgstr "⁧حرر ⁨<0/>⁩ ⁨<1/>⁩ وأعادها إلى ⁨<2/>⁩⁩"
 msgid "<0/> has signed a defensive pact with <1/>"
 msgstr "⁧وقع ⁨<0/>⁩ ميثاق دفاع مع ⁨<1/>⁩⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1159
+#: src/components/_user/notification/notification.frontConfig.tsx:1157
 msgid "<0/> has started a revolution in <1/>"
 msgstr "⁧بدأ ⁨<0/>⁩ ثورة في ⁨<1/>⁩⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1661
+#: src/components/_user/notification/notification.frontConfig.tsx:1659
 msgid "<0/> has started! Let the battles begin!"
 msgstr "⁧بدأت ⁨<0/>⁩! لتبدأ المعارك!⁩"
 
@@ -2361,7 +2569,7 @@ msgstr "⁧حوّل ⁨<0/>⁩ <1>⁦{0}⁩</1> إلى ⁨<2/>⁩⁩"
 msgid "<0/> holds regions of <1/>"
 msgstr "<يسيطر <0/> على أقاليم <1"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1115
+#: src/components/_user/notification/notification.frontConfig.tsx:1113
 msgid "<0/> is attacking <1/> in <2/>"
 msgstr "يهاجم <0/> <1/> في <2/>"
 
@@ -2369,7 +2577,7 @@ msgstr "يهاجم <0/> <1/> في <2/>"
 msgid "<0/> is attacking in <1/>"
 msgstr "⁧⁨<0/>⁩ يهاجم في ⁨<1/>⁩⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1101
+#: src/components/_user/notification/notification.frontConfig.tsx:1099
 msgid "<0/> is attacking your country in <1/>"
 msgstr "يهاجم <0/> بلدك في <1/>"
 
@@ -2381,11 +2589,11 @@ msgstr "<0/> رحل"
 msgid "<0/> is in bankruptcy. Removing all alliances and disabling every region upgrades."
 msgstr "⁧⁨<0/>⁩ في حالة إفلاس. سيتم إلغاء كافة التحالفات وتعطيل جميع تطويرات المناطق.⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1481
+#: src/components/_user/notification/notification.frontConfig.tsx:1479
 msgid "<0/> is no longer a State Army of <1/>. It stays Paramilitary for at least 7 days."
 msgstr "لم يعد <0/> جيشًا نظاميًا تابعًا لـ <1/>. وسيبقى ضمن القوات شبه العسكرية لمدة لا تقل عن 7 أيام"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:474
+#: src/components/_user/notification/notification.frontConfig.tsx:472
 msgid "<0/> is now the manager of <1/>"
 msgstr "<0/> هو الآن مدير <1/>"
 
@@ -2393,7 +2601,7 @@ msgstr "<0/> هو الآن مدير <1/>"
 msgid "<0/> is revolting in <1/>"
 msgstr "⁧⁨<0/>⁩ يثور في ⁨<1/>⁩⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1130
+#: src/components/_user/notification/notification.frontConfig.tsx:1128
 msgid "<0/> is revolting in <1/> against your country"
 msgstr "يتمرد <0/> في <1/> ضد بلدك"
 
@@ -2401,12 +2609,12 @@ msgstr "يتمرد <0/> في <1/> ضد بلدك"
 msgid "<0/> joined the conversation"
 msgstr "انضم <0/> إلى المحادثة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:761
+#: src/components/_user/notification/notification.frontConfig.tsx:759
 msgid "<0/> joined the game with your referral link!"
 msgstr "انضم <0/> إلى اللعبة عبر رابط الإحالة الخاص بك!"
 
 #. placeholder {0}: data.wage
-#: src/components/_user/notification/notification.frontConfig.tsx:458
+#: src/components/_user/notification/notification.frontConfig.tsx:456
 msgid "<0/> joined your company <1/> for <2>{0}</2> wage"
 msgstr "انضم <0/> إلى شركتك <1/> بأجر <2>{0}</2>"
 
@@ -2421,7 +2629,7 @@ msgid "<0/> left"
 msgstr "<0/> غادر"
 
 #. placeholder {0}: data.company && <CompanyNameById companyId={data.company} />
-#: src/components/_user/notification/notification.frontConfig.tsx:639
+#: src/components/_user/notification/notification.frontConfig.tsx:637
 msgid "<0/> left his job in your company {0}"
 msgstr "ترك <0/> وظيفته في شركتك {0}"
 
@@ -2429,15 +2637,15 @@ msgstr "ترك <0/> وظيفته في شركتك {0}"
 msgid "<0/> left the conversation"
 msgstr "غادر <0/> المحادثة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:970
+#: src/components/_user/notification/notification.frontConfig.tsx:968
 msgid "<0/> liked your article <1/>"
 msgstr "أعجب <0/> بمقالك <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1057
+#: src/components/_user/notification/notification.frontConfig.tsx:1055
 msgid "<0/> liked your message <1/>"
 msgstr "أعجب <0/> برسالتك <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1048
+#: src/components/_user/notification/notification.frontConfig.tsx:1046
 msgid "<0/> liked your message in <1/><2/>"
 msgstr "أعجب <0/> برسالتك في <1/><2/>"
 
@@ -2449,15 +2657,15 @@ msgstr "خسر <0/> إقليم {regionName}"
 msgid "<0/> made peace with <1/>"
 msgstr "⁧عقد ⁨<0/>⁩ صلحاً مع ⁨<1/>⁩⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1546
+#: src/components/_user/notification/notification.frontConfig.tsx:1544
 msgid "<0/> mentioned you <1/>"
 msgstr "<0/> أشار إليك <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1537
+#: src/components/_user/notification/notification.frontConfig.tsx:1535
 msgid "<0/> mentioned you in <1/><2/>"
 msgstr "أشار إليك <0/> في <1/><2/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1467
+#: src/components/_user/notification/notification.frontConfig.tsx:1465
 msgid "<0/> offers to sponsor <1/> as a State Army. Answer it from the unit settings."
 msgstr ".يعرض <0/> رعاية <1/> ليصبح جيشًا نظاميًا. أجب عن العرض من إعدادات الوحدة"
 
@@ -2477,7 +2685,7 @@ msgstr "⁧⁨<0/>⁩ لاعب⁩"
 #. placeholder {0}: data.question
 #: src/components/_political/message/systemMessage.frontConfig.tsx:319
 msgid "<0/> posted a poll: {0}"
-msgstr ""
+msgstr "⁧نشر ⁨<0/>⁩ استطلاعًا: ⁨{0}⁩⁩"
 
 #: src/components/_military/war/WarItem.tsx:115
 msgid "<0/> Priority ends in <1/>"
@@ -2495,55 +2703,55 @@ msgstr "اقترح <0/> قانونًا جديدًا للتحالف: <1/>"
 msgid "<0/> proposed a new law: <1/>"
 msgstr "<0/> اقترح قانونا جديداً: <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:954
+#: src/components/_user/notification/notification.frontConfig.tsx:952
 msgid "<0/> published a new article"
 msgstr "نشر <0/> مقالاً جديداً"
 
 #. placeholder {0}: data.level
-#: src/components/_user/notification/notification.frontConfig.tsx:1522
+#: src/components/_user/notification/notification.frontConfig.tsx:1520
 msgid "<0/> reached level {0}!"
 msgstr "وصل <0/> إلى المستوى {0}!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:772
+#: src/components/_user/notification/notification.frontConfig.tsx:770
 msgid "<0/> referred you to the game."
 msgstr "قام <0/> بإحالتك إلى اللعبة."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:626
+#: src/components/_user/notification/notification.frontConfig.tsx:624
 msgid "<0/> resigned as manager of <1/>"
 msgstr "استقال <0/> من إدارة <1/>"
 
 #. placeholder {0}: data.messageId && <MessageItemById messageId={data.messageId} />
-#: src/components/_user/notification/notification.frontConfig.tsx:1083
+#: src/components/_user/notification/notification.frontConfig.tsx:1081
 msgid "<0/> responded to your message {0}"
 msgstr "رد <0/> على رسالتك {0}"
 
 #. placeholder {0}: data.messageId && <MessageItemById messageId={data.messageId} />
-#: src/components/_user/notification/notification.frontConfig.tsx:1074
+#: src/components/_user/notification/notification.frontConfig.tsx:1072
 msgid "<0/> responded to your message in <1/>{0}"
 msgstr "ردّ <0/> على رسالتك في <1/>{0}"
 
 #: src/components/_political/message/systemMessage.frontConfig.tsx:277
 msgid "<0/> sent a welcome gift"
-msgstr ""
+msgstr "⁧أرسل ⁨<0/>⁩ هدية ترحيب⁩"
 
 #. placeholder {0}: data.amount
-#: src/components/_user/notification/notification.frontConfig.tsx:1337
+#: src/components/_user/notification/notification.frontConfig.tsx:1335
 msgid "<0/> sent you a welcome gift of <1>{0}</1>, claim it in your messages"
-msgstr ""
+msgstr "⁧أرسل لك ⁨<0/>⁩ هدية ترحيب بقيمة <1>⁦{0}⁩</1>، استلمها من رسائلك⁩"
 
 #: src/components/_political/message/systemMessage.frontConfig.tsx:305
 msgid "<0/> started a giveaway"
-msgstr ""
+msgstr "⁧بدأ ⁨<0/>⁩ مسابقة⁩"
 
 #: src/components/_political/message/systemMessage.frontConfig.tsx:248
 msgid "<0/> started, vote for your favorite candidate"
 msgstr "<0/> بدأت, صوت لمرشحك المفضل"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1034
+#: src/components/_user/notification/notification.frontConfig.tsx:1032
 msgid "<0/> subscribed to you on your article <1/>"
 msgstr "تابعك <0/> عبر مقالك <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1000
+#: src/components/_user/notification/notification.frontConfig.tsx:998
 msgid "<0/> tipped your article <1/>"
 msgstr "أرسل <0/> إكرامية لمقالك <1/>"
 
@@ -2553,7 +2761,7 @@ msgstr "⁧سيطر ⁨<0/>⁩ على ⁨<1/>⁩⁩"
 
 #: src/components/_military/mu/MuTakeoverAlert.tsx:69
 msgid "<0/> took over the unit while you were away. You can reclaim it until <1/>."
-msgstr ""
+msgstr "⁧تولّى ⁨<0/>⁩ قيادة الوحدة أثناء غيابك. يمكنك استعادتها حتى ⁨<1/>⁩.⁩"
 
 #: src/components/_military/war/WarHeader.tsx:29
 msgid "<0/> vs <1/> war"
@@ -2567,7 +2775,7 @@ msgstr "تريد <0/> السلام"
 msgid "<0/> wants to make peace with your country"
 msgstr "يريد <0/> عقد سلام مع بلدك"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1688
+#: src/components/_user/notification/notification.frontConfig.tsx:1686
 msgid "<0/> was cancelled: not enough participants registered."
 msgstr "تم إلغاء <0/>: عدد المشاركين المسجلين غير كافي"
 
@@ -2576,7 +2784,7 @@ msgid "<0/> was elected president of <1/>"
 msgstr "⁧انتُخب ⁨<0/>⁩ رئيساً لـ ⁨<1/>⁩⁩"
 
 #. placeholder {0}: ts[data.governmentRole]
-#: src/components/_user/notification/notification.frontConfig.tsx:738
+#: src/components/_user/notification/notification.frontConfig.tsx:736
 msgid "<0/> was nominated as <1>{0}</1>"
 msgstr "تم ترشيح <0/> كـ <1>{0}</1>"
 
@@ -2585,7 +2793,7 @@ msgstr "تم ترشيح <0/> كـ <1>{0}</1>"
 msgid "<0/> won round {0}"
 msgstr "فاز <0/> بالجولة {0}"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1882
+#: src/components/_user/notification/notification.frontConfig.tsx:1880
 msgid "<0/> won the auction on a contract with <1/>"
 msgstr "فاز <0/> بالمزاد على عقد مع <1/>"
 
@@ -2595,17 +2803,17 @@ msgstr "فاز <0/> بالمزاد على عقد مع <1/>"
 msgid "<0/> won the battle ({0}-{1})"
 msgstr "<0/> فاز بالمعركة ({0}-{1})"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:376
+#: src/components/_user/notification/notification.frontConfig.tsx:374
 msgid "<0/> won the primary election in <1/> and can now run for president!"
 msgstr "فاز <0/> في الانتخابات التمهيدية في <1/> ويمكنه الآن الترشح للرئاسة!"
 
 #. placeholder {0}: data.roundNumber
-#: src/components/_user/notification/notification.frontConfig.tsx:837
+#: src/components/_user/notification/notification.frontConfig.tsx:835
 msgid "<0/> won the round <1>#{0}</1> in <2/>"
 msgstr "فاز <0/> بالجولة <1>#{0}</1> في <2/>"
 
 #. placeholder {0}: data.roundNumber
-#: src/components/_user/notification/notification.frontConfig.tsx:843
+#: src/components/_user/notification/notification.frontConfig.tsx:841
 msgid "<0/> won the round <1>#{0}</1> in <2/>!"
 msgstr "فاز <0/> بالجولة <1>#{0}</1> في <2/>!"
 
@@ -2616,17 +2824,17 @@ msgstr "<0/>: يكلّف هذا الأمر ×{orderCostMult} <1>{0}</1> ويمن
 
 #: src/components/_political/message/systemMessage.frontConfig.tsx:333
 msgid "<0/>'s giveaway ended with no winners"
-msgstr ""
+msgstr "⁧انتهت مسابقة ⁨<0/>⁩ دون فائزين⁩"
 
 #. placeholder {0}: data.winnerUserIds.length
 #: src/components/_political/message/systemMessage.frontConfig.tsx:359
 msgid "<0/>'s giveaway ended: {0, plural, one {# Supporter Plan gift} other {# Supporter Plan gifts}} won by <1/>"
-msgstr ""
+msgstr "انتهت مسابقة <0/>: {0, plural, zero {تم ربح # هدية من خطة الداعم} one {تم ربح هدية واحدة من خطة الداعم} two {تم ربح هديتين من خطة الداعم} few {تم ربح # هدايا من خطة الداعم} many {تم ربح # هدية من خطة الداعم} other {تم ربح # هدية من خطة الداعم}} من قبل <1/>"
 
 #. placeholder {0}: data.gemsPerWinner ?? 0
 #: src/components/_political/message/systemMessage.frontConfig.tsx:343
 msgid "<0/>'s giveaway ended: <1>{0}</1> each won by <2/>"
-msgstr ""
+msgstr "⁧انتهت مسابقة ⁨<0/>⁩: فاز ⁨<2/>⁩ بمقدار <1>⁦{0}⁩</1> لكل منهم⁩"
 
 #: src/pages/war/[warId]/index.tsx:54
 msgid "<0/>Priority ends in <1/>"
@@ -2704,7 +2912,7 @@ msgid "<0>{0}</0> Defense bonus when defending this region.<1/>Citizens get the 
 msgstr "<0>{0}</0>  مكافأة دفاع عند الدفاع عن هذه المنطقة.<1/>يحصل المواطنون على المكافأة الكاملة، وتحصل الدول الحليفة على النصف. ولا يستفيد شركاء الدفاع المشترك."
 
 #. placeholder {0}: data.acceptanceFeeReturned
-#: src/components/_user/notification/notification.frontConfig.tsx:1945
+#: src/components/_user/notification/notification.frontConfig.tsx:1943
 msgid "<0>{0}</0> fee returned to MU."
 msgstr "تمت إعادة رسوم <0>{0}</0> إلى الوحدة العسكرية."
 
@@ -2774,17 +2982,17 @@ msgid "<0>{0}</0> prestige point to spend on a skill."
 msgstr "<0>{0}</0> نقطة هيبة للإنفاق على مهارة."
 
 #. placeholder {0}: data.refundedGems
-#: src/components/_user/notification/notification.frontConfig.tsx:1317
+#: src/components/_user/notification/notification.frontConfig.tsx:1315
 msgid "<0>{0}</0> refunded"
-msgstr ""
+msgstr "⁧تم استرداد <0>⁦{0}⁩</0>⁩"
 
 #. placeholder {0}: data.refundedGems
 #: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:223
 msgid "<0>{0}</0> returned to <1/>"
-msgstr ""
+msgstr "⁧تمت إعادة <0>⁦{0}⁩</0> إلى ⁨<1/>⁩⁩"
 
 #. placeholder {0}: data.refund
-#: src/components/_user/notification/notification.frontConfig.tsx:1937
+#: src/components/_user/notification/notification.frontConfig.tsx:1935
 msgid "<0>{0}</0> returned to <1/>."
 msgstr "تمت إعادة <0>{0}</0> إلى <1/>."
 
@@ -3006,11 +3214,11 @@ msgstr "حصلت على 1 أسطوري، يتبقى 5 للحصول على عتا
 
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:121
 msgid "1 month of Supporter Plan each."
-msgstr ""
+msgstr "⁧شهر واحد من خطة الداعم لكل منهم.⁩"
 
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:122
 msgid "1 month of Supporter Plan each. Gems prizes: global and country chats only."
-msgstr ""
+msgstr "⁧شهر واحد من خطة الداعم لكل منهم. جوائز الجواهر: في الدردشة العامة ودردشات الدول فقط.⁩"
 
 #: src/components/_political/country/CountryDiplomacyGrid.tsx:197
 msgid "1 per 10 development"
@@ -3154,7 +3362,7 @@ msgstr "سنة"
 
 #: src/components/_common/useHoursLabel.ts:16
 msgid "2 days"
-msgstr ""
+msgstr "يومان"
 
 #: src/components/_common/useHoursLabel.ts:11
 msgid "2 hours"
@@ -3688,7 +3896,7 @@ msgstr "شجار على لا شيء. {name} و{partnerName} لم يعودا يط
 
 #: src/components/_user/acquisition/HeardFromModal.tsx:71
 msgid "A friend"
-msgstr ""
+msgstr "صديق"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:843
 msgid "A friendship blooming"
@@ -3736,9 +3944,13 @@ msgstr "مسمى وظيفي جديد"
 msgid "A new tool: {value}"
 msgstr "أداة جديدة: {value}"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "A new tournament has been created and will start soon!"
+msgstr "⁧تم إنشاء بطولة جديدة وستبدأ قريبًا!⁩"
+
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:167
 msgid "A newcomer claimed your welcome gift"
-msgstr ""
+msgstr "⁧استلم لاعب جديد هدية الترحيب الخاصة بك⁩"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1361
 msgid "A party of one"
@@ -4028,7 +4240,7 @@ msgstr "النشاط"
 
 #: src/components/_social/Tiptap.tsx:943
 msgid "Add a giveaway"
-msgstr ""
+msgstr "إضافة مسابقة"
 
 #: src/components/_social/Tiptap.tsx:936
 msgid "Add a poll"
@@ -4040,7 +4252,7 @@ msgstr "إضافة إجابة"
 
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:200
 msgid "Add giveaway"
-msgstr ""
+msgstr "إضافة مسابقة"
 
 #: src/components/_political/party/PartyCongressListModal.tsx:178
 msgid "Add party members to the list"
@@ -4067,7 +4279,7 @@ msgstr "تكلفة إضافية"
 msgid "Admin"
 msgstr "مسؤول"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2539
+#: src/components/_user/notification/notification.frontConfig.tsx:2537
 msgid "Admin notification"
 msgstr "إشعار إداري"
 
@@ -4133,7 +4345,7 @@ msgstr "بعد خصم الضرائب"
 
 #: src/components/_economy/transaction/TransactionItem.tsx:237
 msgid "Against the 7-day market average when it sold"
-msgstr ""
+msgstr "⁧مقارنة بمتوسط سعر السوق خلال ⁦7⁩ أيام وقت البيع⁩"
 
 #: src/components/_economy/employee/EmployeeTooltip.tsx:109
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:163
@@ -4166,7 +4378,7 @@ msgstr "الشيخوخة"
 
 #: src/components/_user/acquisition/HeardFromModal.tsx:113
 msgid "AI chat"
-msgstr ""
+msgstr "دردشة الذكاء الاصطناعي"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:2447
 msgid "Air raid"
@@ -4371,9 +4583,13 @@ msgid "Amount of companies you can own"
 msgstr "عدد الشركات التي يمكنك امتلاكها"
 
 #. placeholder {0}: data.refund
-#: src/components/_user/notification/notification.frontConfig.tsx:1917
+#: src/components/_user/notification/notification.frontConfig.tsx:1915
 msgid "An admin cancelled the contract. <0>{0}</0> returned to <1/>."
 msgstr "قام المسؤول بإلغاء العقد, تمت إعادة <0>{0}</0> إلى <1/>."
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "An admin cancelled the mercenary contract for {mu}. Remaining budget returned to country."
+msgstr "⁧ألغى المشرف عقد المرتزقة مع ⁨{mu}⁩. أُعيدت الميزانية المتبقية إلى الدولة.⁩"
 
 #: src/components/_political/event/event.frontConfig.tsx:337
 msgid "An alliance has been broken"
@@ -4391,7 +4607,7 @@ msgstr "قام أحد التحالفات بدعوة دولتك للانضمام"
 msgid "An email with the verification code has been sent to {email}"
 msgstr "تم إرسال بريد إلكتروني يحتوي على رمز التحقق إلى {email}"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:585
+#: src/components/_user/notification/notification.frontConfig.tsx:583
 msgid "An event about {lead} was decided while you were away."
 msgstr "تم حسم حدث يخص {lead} أثناء غيابك."
 
@@ -4598,7 +4814,7 @@ msgstr "درع"
 msgid "Article ID"
 msgstr "معرف المقال"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2388
+#: src/components/_user/notification/notification.frontConfig.tsx:2386
 msgid "Article liked"
 msgstr "تم الإعجاب بالمقال"
 
@@ -4606,8 +4822,8 @@ msgstr "تم الإعجاب بالمقال"
 msgid "Article Tip"
 msgstr "إكرامية المقال"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2390
-#: src/components/_user/notification/notification.frontConfig.tsx:2391
+#: src/components/_user/notification/notification.frontConfig.tsx:2388
+#: src/components/_user/notification/notification.frontConfig.tsx:2389
 msgid "Article tipped"
 msgstr "تم تلقي إكرامية للمقال"
 
@@ -4754,7 +4970,8 @@ msgstr "المهاجمون"
 msgid "Auction Duration (minutes)"
 msgstr "مدة المزاد (بالدقائق)"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2523
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2521
 msgid "Auction Outbid"
 msgstr "تمت المزايدة عليك في المزاد"
 
@@ -4868,7 +5085,8 @@ msgstr "نمط الخلفية"
 msgid "Badge won"
 msgstr "شارة مُكتسبة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2323
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2321
 msgid "Badge Won"
 msgstr "شارة مُكتسبة"
 
@@ -4921,15 +5139,17 @@ msgstr "إفلاس"
 msgid "Banned"
 msgstr "محظور"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2344
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2342
 msgid "Banner Accepted!"
 msgstr "تم قبول الشعار!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2341
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2339
 msgid "Banner gift received"
 msgstr "تم استلام هدية الشعار"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2339
+#: src/components/_user/notification/notification.frontConfig.tsx:2337
 msgid "Banner gift sent"
 msgstr "تم إرسال هدية الشعار"
 
@@ -5001,10 +5221,15 @@ msgstr "معركة تلو الأخرى"
 msgid "Battle damage bonus"
 msgstr "الاضرار الاضافية للمعركة"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
 #: src/components/_political/event/EventList.tsx:108
-#: src/components/_user/notification/notification.frontConfig.tsx:2439
+#: src/components/_user/notification/notification.frontConfig.tsx:2437
 msgid "Battle ended"
 msgstr "انتهت المعركة"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Battle for {region} ended. {winner} is victorious!"
+msgstr "⁧انتهت المعركة على ⁨{region}⁩. ⁨{winner}⁩ هو المنتصر!⁩"
 
 #: src/components/_military/battle/BattleName.tsx:150
 msgid "Battle for {regionName} {score}"
@@ -5227,7 +5452,11 @@ msgstr "مجموع الطرفين"
 
 #: src/components/_user/userReports/userReports.hooks.ts:31
 msgid "Bots or exploits"
-msgstr ""
+msgstr "بوتات أو استغلال ثغرات"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Bought {quantity} {item} for {price}"
+msgstr "⁧تم شراء ⁦{quantity}⁩ ⁨{item}⁩ بسعر ⁦{price}⁩⁩"
 
 #: src/components/_military/battle/ActiveBattlesList.tsx:166
 #: src/components/_military/battle/LootSummaryRow.tsx:117
@@ -5239,7 +5468,7 @@ msgstr "مكافاة"
 msgid "Bounty cooldown"
 msgstr "فترة انتظار المكافأة"
 
-#: src/components/_user/user/UserRankingsPanel.tsx:113
+#: src/components/_user/user/UserRankingsPanel.tsx:120
 msgid "Bounty earned"
 msgstr "المكافآت المكتسبة"
 
@@ -5292,13 +5521,14 @@ msgstr "معطّل: لم يعد يعزّز الإنتاج"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:259
 msgid "Bronze MU League Champion"
-msgstr ""
+msgstr "بطل دوري الوحدات العسكرية البرونزي"
 
 #: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:169
 msgid "Budget"
 msgstr "الميزانية"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2528
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2526
 msgid "Buff ended"
 msgstr "انتهى تأثير التعزيز"
 
@@ -5307,11 +5537,12 @@ msgstr "انتهى تأثير التعزيز"
 msgid "Buff ends"
 msgstr "ينتهي التعزيز"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2526
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2524
 msgid "Buff expiring soon"
 msgstr "سوف ينتهي التعزيز قريبا"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2524
+#: src/components/_user/notification/notification.frontConfig.tsx:2522
 msgid "Buff started"
 msgstr "بدأ تأثير التعزيز"
 
@@ -5493,10 +5724,6 @@ msgstr "رابط مقال الحملة (اختياري)"
 msgid "Can happen to anyone."
 msgstr "قد يحدث لأي شخص."
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:113
-msgid "Can I join your Military Unit?"
-msgstr ""
-
 #: src/components/_military/mu/muType.frontConfig.tsx:141
 msgid "Can take any contract"
 msgstr "يمكنه قبول أي عقد"
@@ -5572,6 +5799,10 @@ msgstr "مرشح"
 msgid "Candidate phase"
 msgstr "مرحلة الترشيح"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Candidate registration open in {party}"
+msgstr "⁧التسجيل للترشح مفتوح في ⁨{party}⁩⁩"
+
 #: src/components/_economy/employee/RecruitModal.tsx:288
 #: src/components/_political/election/Election.tsx:150
 #: src/components/_political/election/Election.tsx:222
@@ -5610,7 +5841,7 @@ msgstr "رعاية من المدير"
 msgid "Case"
 msgstr "صندوق"
 
-#: src/components/_user/user/UserRankingsPanel.tsx:101
+#: src/components/_user/user/UserRankingsPanel.tsx:108
 msgid "Cases opened"
 msgstr "الصناديق المفتوحة"
 
@@ -5628,7 +5859,7 @@ msgstr "منجنيق"
 
 #: src/components/_user/userReports/ReportFormModal.tsx:175
 msgid "Category"
-msgstr ""
+msgstr "الفئة"
 
 #: src/components/_other/shop/skin.frontConfig.tsx:269
 msgid "Cave Bear Headdress"
@@ -5775,6 +6006,14 @@ msgstr "الأرخص"
 msgid "Check the numbers first"
 msgstr "التحقق من الأرقام أولًا"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Check the results in {party}!"
+msgstr "⁧اطّلع على النتائج في ⁨{party}⁩!⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Check the results!"
+msgstr "⁧اطّلع على النتائج!⁩"
+
 #: src/components/_other/tour/tuto.frontConfig.tsx:194
 msgid "Check your loot!"
 msgstr "تحقق من غنيمتك!"
@@ -5885,23 +6124,27 @@ msgstr "حرب أهلية"
 msgid "Claim"
 msgstr "استلام"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Claim {amount} in your messages"
+msgstr "⁧استلم ⁦{amount}⁩ من رسائلك⁩"
+
 #. placeholder {0}: gift.amount
 #: src/components/_user/user/EnergyGiftAlert.tsx:46
 msgid "Claim +{0}"
-msgstr "إستلام +{0}"
+msgstr "⁧استلام ⁦+{0}⁩⁩"
 
 #: src/components/_economy/employee/EmployeeFoundToolboxes.tsx:168
 #: src/components/_economy/employee/EmployeeFoundToolboxes.tsx:236
 msgid "Claim <0/>"
-msgstr ""
+msgstr "⁧استلام ⁨<0/>⁩⁩"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:601
 msgid "Claim a mission to claim this reward."
-msgstr ""
+msgstr "⁧استلم مهمة لتتمكن من استلام هذه المكافأة.⁩"
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:189
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:185
 msgid "Claim gift"
-msgstr ""
+msgstr "استلام الهدية"
 
 #: src/components/_other/tour/TutorialChapterEndModal.tsx:363
 msgid "Claim reward"
@@ -5915,7 +6158,7 @@ msgstr "استلم مهامك!"
 #: src/components/_user/mission/MissionItem.tsx:223
 #: src/components/_user/mission/MissionItem.tsx:272
 #: src/components/_user/mission/MissionsFinishedProgress.tsx:118
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:154
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:150
 msgid "Claimed"
 msgstr "تمت المطالبة"
 
@@ -6050,7 +6293,7 @@ msgstr "وضع عمى الالوان"
 
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:146
 msgid "Comes back to you if not claimed in time."
-msgstr ""
+msgstr "⁧تعود إليك إذا لم تُستلم في الوقت المحدد.⁩"
 
 #: src/components/_economy/employee/employee.traitMeta.ts:98
 msgid "Comic"
@@ -6070,8 +6313,10 @@ msgstr "قادة"
 msgid "Commission a better one"
 msgstr "طلب واحدة أفضل"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2347
-#: src/components/_user/notification/notification.frontConfig.tsx:2360
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2345
+#: src/components/_user/notification/notification.frontConfig.tsx:2358
 msgid "Commission earned"
 msgstr "تم كسب عمولة"
 
@@ -6169,62 +6414,106 @@ msgid "Congrats"
 msgstr "مبروك"
 
 #. placeholder {0}: data.level
-#: src/components/_user/notification/notification.frontConfig.tsx:440
+#: src/components/_user/notification/notification.frontConfig.tsx:438
 msgid "Congratulations, you leveled up to level {0}!"
 msgstr "تهانينا، لقد ارتقيت إلى المستوى {0}!"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Congratulations! You have been elected as a new congress member of {country}"
+msgstr "⁧مبروك! تم انتخابك عضوًا جديدًا في البرلمان ⁨{country}⁩⁩"
+
 #. placeholder {0}: data.countryName
-#: src/components/_user/notification/notification.frontConfig.tsx:239
+#: src/components/_user/notification/notification.frontConfig.tsx:237
 msgid "Congratulations! You have been elected as the new congress member of {0}"
 msgstr "تهانينا! تم انتخابك عضواً جديداً في كونغرس {0}"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:343
+#: src/components/_user/notification/notification.frontConfig.tsx:341
 msgid "Congratulations! You have been elected as the new leader of <0/>"
 msgstr "تهانينا! تم انتخابك قائداً جديداً لـ <0/>"
 
 #. placeholder {0}: data.countryName
-#: src/components/_user/notification/notification.frontConfig.tsx:234
+#: src/components/_user/notification/notification.frontConfig.tsx:232
 msgid "Congratulations! You have been elected as the new president of {0}"
 msgstr "تهانينا! تم انتخابك رئيساً جديداً لـ {0}"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:348
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Congratulations! You have been elected as the new president of {country}"
+msgstr "⁧تهانينا! تم انتخابك رئيسًا جديدًا لدولة ⁨{country}⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Congratulations! You have been elected party leader of {party}"
+msgstr "⁧تهانينا! تم انتخابك زعيمًا لحزب ⁨{party}⁩⁩"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:346
 msgid "Congratulations! You have been elected to the council of <0/>"
-msgstr "تهانينا! تم انتخابك لمجلس <0/>"
+msgstr "⁧تهانينا! تم انتخابك لمجلس ⁨<0/>⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Congratulations! You have been elected to the party council of {party}"
+msgstr "⁧تهانينا! تم انتخابك لمجلس حزب ⁨{party}⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Congratulations! You have been promoted"
+msgstr "⁧تهانينا! تمت ترقيتك⁩"
 
 #. placeholder {0}: militaryRankingConfig[data.rank].percentDamages
-#: src/components/_user/notification/notification.frontConfig.tsx:1561
+#: src/components/_user/notification/notification.frontConfig.tsx:1559
 msgid "Congratulations! You have been promoted to <0/> with an attack bonus of <1>{0}</1>"
 msgstr "تهانينا! تمت ترقيتك إلى <0/> مع مكافأة هجوم قدرها <1>{0}</1>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1763
+#: src/components/_user/notification/notification.frontConfig.tsx:1761
 msgid "Congratulations! You won the giveaway and received cases!"
 msgstr "تهانينا! لقد فزت بالسحب وحصلت على صناديق!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:392
-#: src/components/_user/notification/notification.frontConfig.tsx:1379
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Congratulations! Your application to {mu} has been accepted"
+msgstr "⁧تهانينا! تم قبول طلب انضمامك إلى ⁨{mu}⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Congratulations! Your application to {party} has been accepted"
+msgstr "⁧تهانينا! تم قبول طلب انضمامك إلى ⁨{party}⁩⁩"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:390
+#: src/components/_user/notification/notification.frontConfig.tsx:1377
 msgid "Congratulations! Your application to <0/> has been accepted"
 msgstr "تهانينا! لقد تم قبول طلبك للانضمام إلى <0/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1629
+#: src/components/_user/notification/notification.frontConfig.tsx:1627
 msgid "Congratulations! Your team <0/> won the tournament <1/>!"
 msgstr "تهانينا! لقد فاز فريقك <0/> بالبطولة <1/>!"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Congratulations! Your team won the tournament!"
+msgstr "⁧تهانينا! فاز فريقك بالبطولة!⁩"
 
 #: src/components/_political/election/election.frontConfig.tsx:28
 #: src/components/_political/election/election.frontConfig.tsx:33
 msgid "Congress election"
 msgstr "انتخابات الكونغرس"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:179
+#: src/components/_user/notification/notification.frontConfig.tsx:177
 msgid "Congress election candidacy is now open in <0/>"
-msgstr "باب الترشح لانتخابات الكونغرس مفتوح الآن في <0/>"
+msgstr "⁧باب الترشح لانتخابات الكونغرس مفتوح الآن في ⁨<0/>⁩⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:219
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Congress election ended"
+msgstr "انتهت انتخابات الكونغرس"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:217
 msgid "Congress election has ended in <0/>. Check the results!"
-msgstr "انتهت انتخابات الكونغرس في <0/>. تحقق من النتائج!"
+msgstr "⁧انتهت انتخابات الكونغرس في ⁨<0/>⁩. تحقق من النتائج!⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:199
+#: src/components/_user/notification/notification.frontConfig.tsx:197
 msgid "Congress election voting is now open in <0/>"
-msgstr "التصويت في انتخابات الكونغرس مفتوح الآن في <0/>"
+msgstr "⁧التصويت في انتخابات الكونغرس مفتوح الآن في ⁨<0/>⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Congress election: candidacies open"
+msgstr "⁧انتخابات الكونغرس: باب الترشح مفتوح⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Congress election: vote open"
+msgstr "⁧انتخابات الكونغرس: التصويت مفتوح⁩"
 
 #: src/pages/country/[countryId]/elections.tsx:65
 msgid "Congress elections"
@@ -6322,16 +6611,19 @@ msgstr "تسجيل من خلال ابل"
 msgid "Contract"
 msgstr "عقد"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2515
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2513
 msgid "Contract cancelled"
 msgstr "تم إلغاء العقد"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
 #: src/components/_military/mercenaryContract/MercenaryReputationTooltip.tsx:32
-#: src/components/_user/notification/notification.frontConfig.tsx:2512
+#: src/components/_user/notification/notification.frontConfig.tsx:2510
 msgid "Contract completed"
 msgstr "اكتمل العقد"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2518
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2516
 msgid "Contract expired"
 msgstr "انتهت صلاحية العقد"
 
@@ -6339,7 +6631,8 @@ msgstr "انتهت صلاحية العقد"
 msgid "Contract failed"
 msgstr "فشل العقد"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2521
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2519
 msgid "Contract rolled back"
 msgstr "تم استرجاع العقد"
 
@@ -6376,7 +6669,7 @@ msgstr "إقناعهم بالبقاء {retirementStayYears, plural, zero {# سن
 
 #: src/components/_political/chat/ChatConversationsMenu.tsx:170
 msgid "Convs"
-msgstr ""
+msgstr "المحادثات"
 
 #: src/utils/translations.tsx:40
 msgid "Cooked Fish"
@@ -6527,7 +6820,7 @@ msgid "Country orders give x{multiplier} bonus"
 msgstr "⁧أوامر الدولة تمنح مكافأة ⁦x{multiplier}⁩⁩"
 
 #. placeholder {0}: data.partialPayout
-#: src/components/_user/notification/notification.frontConfig.tsx:1931
+#: src/components/_user/notification/notification.frontConfig.tsx:1929
 msgid "Country paid <0>{0}</0> for damages done."
 msgstr "دفعت الدولة <0>{0}</0> مقابل الأضرار الملحقة"
 
@@ -6790,7 +7083,8 @@ msgstr "الدخل اليومي"
 msgid "Daily maintenance"
 msgstr "الصيانة اليومية"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2543
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2541
 msgid "Daily Missions Reset"
 msgstr "إعادة تعيين المهام اليومية"
 
@@ -6888,15 +7182,15 @@ msgstr "وضع الخريطة الداكنة"
 
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:90
 msgid "Day {day}"
-msgstr ""
+msgstr "⁧اليوم ⁦{day}⁩⁩"
 
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:206
 msgid "Days of experience with the event's good."
-msgstr ".عدد أيام الخبرة في استخدام سلعة الحدث"
+msgstr "⁧عدد أيام الخبرة في استخدام سلعة الحدث.⁩"
 
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:87
 msgid "Days since they joined the game."
-msgstr ""
+msgstr "⁧عدد الأيام منذ انضمامهم إلى اللعبة.⁩"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:209
 msgid "Deal <0/> for allies or your country"
@@ -6958,7 +7252,8 @@ msgstr "تسبب أضراراً أكثر"
 msgid "Deals some damages"
 msgstr "يسبب بعض الأضرار"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2529
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2527
 msgid "Debuff ended"
 msgstr "انتهى تأثير الضعف"
 
@@ -7021,11 +7316,11 @@ msgstr "خيبة أمل كبيرة، لكنه ما زال هنا."
 #: src/components/_other/shop/SkinCollectionModal.tsx:358
 #: src/components/_other/shop/SkinCollectionModal.tsx:375
 msgid "Default"
-msgstr ""
+msgstr "الافتراضي"
 
 #: src/components/_other/shop/SkinCollectionModal.tsx:213
 msgid "Default skins equipped!"
-msgstr ""
+msgstr "⁧تم تجهيز السكنات الافتراضية!⁩"
 
 #: src/components/_military/hit/HitButton.tsx:507
 msgid "Defend"
@@ -7120,7 +7415,8 @@ msgstr "تنزيل رتبة القائد"
 msgid "Demote from Commander"
 msgstr "تنزيل من القائد"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2494
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2492
 msgid "Demoted from Commander"
 msgstr "تم تخفيض الرتبة من قائد"
 
@@ -7152,7 +7448,7 @@ msgstr "موارد الرواسب"
 
 #: src/components/_user/userReports/ReportFormModal.tsx:102
 msgid "Describe the problem"
-msgstr ""
+msgstr "صف المشكلة"
 
 #: src/components/_economy/manager/ManagerOfferFormModal.tsx:182
 msgid "Describe the role, what you expect, what you offer..."
@@ -7184,7 +7480,7 @@ msgstr "تدمير"
 
 #: src/components/_user/userReports/ReportFormModal.tsx:197
 msgid "Details"
-msgstr ""
+msgstr "تفاصيل"
 
 #: src/components/_layout/map.frontConfig.tsx:45
 #: src/components/_political/country/CountryHeader.tsx:260
@@ -7222,7 +7518,7 @@ msgstr "ماسة خام"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:235
 msgid "Diamond MU League Champion"
-msgstr ""
+msgstr "بطل دوري الوحدات العسكرية الالماسي"
 
 #: src/components/_economy/strategicResource/strategicResource.frontConfig.ts:33
 msgid "Diamonds"
@@ -7453,11 +7749,11 @@ msgstr "تنين"
 
 #: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:142
 msgid "Draw"
-msgstr ""
+msgstr "السحب"
 
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:170
 msgid "Draw in"
-msgstr ""
+msgstr "السحب بعد"
 
 #: src/components/_economy/employee/TrainingCardList.tsx:122
 msgid "Draw odds"
@@ -7465,11 +7761,11 @@ msgstr "احتمالات السحب"
 
 #: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:154
 msgid "Drawing"
-msgstr ""
+msgstr "جارٍ السحب"
 
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:174
 msgid "Drawn at random among the players who joined."
-msgstr ""
+msgstr "⁧يتم السحب عشوائيًا بين اللاعبين المنضمين.⁩"
 
 #: src/components/_other/shop/skinPack.frontConfig.tsx:61
 msgid "Dressed to kill"
@@ -7697,15 +7993,15 @@ msgstr "منتخب"
 msgid "Election"
 msgstr "الانتخابات"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2398
+#: src/components/_user/notification/notification.frontConfig.tsx:2396
 msgid "Election candidacy open"
 msgstr "فتح باب الترشح للانتخابات"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2403
+#: src/components/_user/notification/notification.frontConfig.tsx:2401
 msgid "Election ended"
 msgstr "انتهت الانتخابات"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2401
+#: src/components/_user/notification/notification.frontConfig.tsx:2399
 msgid "Election vote open"
 msgstr "فتح باب التصويت في الانتخابات"
 
@@ -7767,7 +8063,7 @@ msgid "Employee cared for"
 msgstr "تمت رعاية الموظف"
 
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:151
-#: src/components/_user/notification/notification.frontConfig.tsx:2370
+#: src/components/_user/notification/notification.frontConfig.tsx:2368
 msgid "Employee events"
 msgstr "أحداث الموظفين"
 
@@ -7775,7 +8071,7 @@ msgstr "أحداث الموظفين"
 msgid "Employee Events"
 msgstr "أحداث الموظفين"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2372
+#: src/components/_user/notification/notification.frontConfig.tsx:2370
 msgid "Employee events decided"
 msgstr "حُسمت أحداث الموظفين"
 
@@ -8055,7 +8351,7 @@ msgstr "اختبارات حظ الأحداث"
 msgid "Events"
 msgstr "الأحداث"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:581
+#: src/components/_user/notification/notification.frontConfig.tsx:579
 msgid "Events about {lead} and others were decided while you were away."
 msgstr "حُسمت الأحداث المتعلقة بـ{lead} وآخرين أثناء غيابك."
 
@@ -8231,8 +8527,8 @@ msgstr "الخبرة"
 
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:81
 #: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:146
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:158
 #: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:162
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:166
 #: src/utils/translations.tsx:341
 msgid "Expired"
 msgstr "منتهي"
@@ -8249,10 +8545,10 @@ msgstr "انتهت الصلاحية: لا توجد عروض"
 msgid "Expired: round ended"
 msgstr "انتهت الصلاحية: انتهت الجولة"
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:134
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:130
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:145
 msgid "Expires"
-msgstr ""
+msgstr "ينتهي"
 
 #: src/components/_social/announcement/Announcement.tsx:87
 msgid "Expires in"
@@ -8392,7 +8688,7 @@ msgstr "قاتل من أجل بلدك. اضغط على «المعارك»."
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:589
 msgid "Fight once in a battle to claim this reward."
-msgstr ""
+msgstr "⁧قاتل مرة واحدة في معركة لتستلم هذه المكافأة.⁩"
 
 #: src/components/_user/level/levelTrack.frontConfig.tsx:153
 #: src/components/_user/user/skills.frontConfig.tsx:229
@@ -8498,27 +8794,27 @@ msgstr ".يزيد فرص العثور على صناديق الأدوات وال�
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:260
 msgid "Finished 1st of a weekly MU league in Bronze"
-msgstr ""
+msgstr "المركز الأول في دوري الوحدات العسكرية الأسبوعي ضمن الدرجة البرونزية"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:236
 msgid "Finished 1st of a weekly MU league in Diamond"
-msgstr ""
+msgstr "المركز الأول في دوري الوحدات العسكرية الأسبوعي ضمن الدرجة الماسية"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:248
 msgid "Finished 1st of a weekly MU league in Gold"
-msgstr ""
+msgstr "المركز الأول في دوري الوحدات العسكرية الأسبوعي ضمن الدرجة الذهبية"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:230
 msgid "Finished 1st of a weekly MU league in Master"
-msgstr ""
+msgstr "المركز الأول في دوري الوحدات العسكرية الأسبوعي ضمن درجة الماستر"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:242
 msgid "Finished 1st of a weekly MU league in Platinum"
-msgstr ""
+msgstr "المركز الأول في دوري الوحدات العسكرية الأسبوعي ضمن الدرجة البلاتينية"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:254
 msgid "Finished 1st of a weekly MU league in Silver"
-msgstr ""
+msgstr "المركز الأول في دوري الوحدات العسكرية الأسبوعي ضمن الدرجة الفضية"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:222
 msgid "Finished missions give XP. Claim them all."
@@ -8556,7 +8852,7 @@ msgstr "طرد الوزير"
 msgid "Fire your manager?"
 msgstr "هل تريد فصل مديرك؟"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2410
+#: src/components/_user/notification/notification.frontConfig.tsx:2408
 msgid "Fired from government"
 msgstr "تم طرده من الحكومة"
 
@@ -8708,7 +9004,7 @@ msgstr "من"
 
 #: src/components/_common/DonateMoneyFormModal.tsx:131
 msgid "From"
-msgstr ""
+msgstr "من"
 
 #. placeholder {0}: range.min
 #. placeholder {1}: range.max
@@ -8832,9 +9128,9 @@ msgstr "تُستخدم الجواهر لشراء الأصول في المتجر 
 
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:156
 msgid "Gems per winner"
-msgstr ""
+msgstr "جوهرة لكل فائز"
 
-#: src/components/_user/user/UserRankingsPanel.tsx:107
+#: src/components/_user/user/UserRankingsPanel.tsx:114
 msgid "Gems purchased"
 msgstr "الجواهر المشتراة"
 
@@ -8914,7 +9210,7 @@ msgstr "يتخلص نهائيًا من سمة سيئة."
 
 #: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:66
 msgid "Gift claimed"
-msgstr ""
+msgstr "تم استلام الهدية"
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:94
 msgid "Gift from Vatou, don't tell anyone"
@@ -8922,7 +9218,7 @@ msgstr "هدية من فاتو، لا تخبر أحداً"
 
 #: src/components/_user/welcomeGift/WelcomeGiftModal.tsx:60
 msgid "Gift sent"
-msgstr ""
+msgstr "تم ارسال الهدية"
 
 #: src/components/_other/shop/SkinPackModal.tsx:98
 msgid "Gift sent! Skin pack unlocked for recipient!"
@@ -8980,9 +9276,10 @@ msgstr "أعطِ الرمز الخاص بك اسماً وصفياً لتتمكن
 msgid "Giveaway"
 msgstr "مسابقة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2332
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2330
 msgid "Giveaway ended"
-msgstr ""
+msgstr "انتهت المسابقة"
 
 #: src/components/_other/events/EventGiveaway.tsx:34
 msgid "Giveaway entered"
@@ -8990,27 +9287,29 @@ msgstr "تمت المشاركة بالمسابقة"
 
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:54
 msgid "Giveaway started"
-msgstr ""
+msgstr "بدأت المسابقة"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:206
 msgid "Giveaway Winner"
 msgstr "فائز بالمسابقة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2331
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2329
 msgid "Giveaway won"
-msgstr ""
+msgstr "فزت بالمسابقة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2541
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2539
 msgid "Giveaway Won!"
-msgstr "فزت في السحب!"
+msgstr "⁧فزت في المسابقة!⁩"
 
 #: src/components/_political/chat/ChatRunningButton.tsx:190
 msgid "Giveaways"
-msgstr ""
+msgstr "المسابقات"
 
 #: src/components/_political/chat/ChatRunningButton.tsx:175
 msgid "Giveaways and polls"
-msgstr ""
+msgstr "المسابقات والاستطلاعات"
 
 #: src/components/_economy/employee/employee.frontConfig.tsx:920
 msgid "Given at 00:00 UTC to whoever works beside them then, and kept until the next reset, even if someone changes company."
@@ -9059,9 +9358,9 @@ msgstr "الذهاب إلى المهارات"
 msgid "Go undercover yourself"
 msgstr "تسلّل بنفسك متخفيًا"
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:135
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:131
 msgid "Goes back to the veteran if not claimed in time."
-msgstr ""
+msgstr "⁧تعود إلى اللاعب المخضرم إذا لم تُستلم في الوقت المحدد.⁩"
 
 #: src/components/_military/muLeague/MuLeagueRow.tsx:62
 msgid "Goes down a division"
@@ -9078,7 +9377,7 @@ msgstr "ذهب"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:247
 msgid "Gold MU League Champion"
-msgstr ""
+msgstr "بطل دوري الوحدات العسكرية الذهبي"
 
 #: src/components/_economy/employee/EmployeeResumeRow.tsx:126
 msgid "Gone"
@@ -9112,6 +9411,10 @@ msgstr "عضو الحكومة"
 #: src/pages/index.tsx:218
 msgid "Government message"
 msgstr "رسالة حكومية"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Government nomination"
+msgstr "ترشيح للحكومة"
 
 #: src/components/_military/battle/BattleSystem.tsx:912
 msgid "Government penalty"
@@ -9229,7 +9532,7 @@ msgid "Grimdark Tank"
 msgstr "دبابة الظلام القاتم"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:315
-#: src/components/_user/user/UserRankingsPanel.tsx:40
+#: src/components/_user/user/UserRankingsPanel.tsx:41
 msgid "Ground"
 msgstr "بري"
 
@@ -9510,7 +9813,7 @@ msgstr "ساعد اللعبة على النمو"
 
 #: src/components/_political/chat/ChatTutoGreeting.tsx:21
 msgid "Hi everyone!"
-msgstr ""
+msgstr "⁧مرحبًا بالجميع!⁩"
 
 #: src/components/_layout/LayoutInfos.tsx:243
 msgid "Hide cards"
@@ -9597,11 +9900,11 @@ msgstr "ضربة"
 
 #: src/components/_other/shop/SkinSoundIcon.tsx:35
 msgid "Hit sound"
-msgstr ""
+msgstr "صوت الضربة"
 
 #: src/components/_other/shop/SkinCollectionModal.tsx:345
 msgid "Hit sounds"
-msgstr ""
+msgstr "أصوات الضربات"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:366
 msgid "Hit until your <0>Health</0> runs out again."
@@ -9677,7 +9980,7 @@ msgstr ".مدى تطوّر المنطقة. وتمنح مالكها دخلاً ي
 
 #: src/components/_user/acquisition/HeardFromModal.tsx:160
 msgid "How did you find War Era?"
-msgstr ""
+msgstr "كيف عرفت لعبة عصر الحرب؟⁩"
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:30
 msgid "How many times have you seen this message already?"
@@ -9826,19 +10129,19 @@ msgstr "({0}) غير نشط"
 
 #: src/components/_user/userReports/userReports.hooks.ts:28
 msgid "Inappropriate avatar"
-msgstr ""
+msgstr "صورة رمزية غير لائقة"
 
 #: src/components/_user/userReports/userReports.hooks.ts:29
 msgid "Inappropriate description"
-msgstr ""
+msgstr "وصف غير لائق"
 
 #: src/components/_user/userReports/userReports.hooks.ts:25
 msgid "Inappropriate image"
-msgstr ""
+msgstr "صورة غير لائقة"
 
 #: src/components/_user/userReports/userReports.hooks.ts:27
 msgid "Inappropriate name"
-msgstr ""
+msgstr "اسم غير لائق"
 
 #: src/components/_other/shop/SkinPackModal.tsx:214
 msgid "Includes a free banner"
@@ -10039,8 +10342,9 @@ msgstr "يعمل أفضل من أي وقت مضى. أصبحت نوبة العم�
 msgid "It works. Conversation resumes."
 msgstr "إنه يعمل. واستؤنف الحديث."
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
 #: src/components/_economy/itemOffer/itemOffer.hooks.ts:36
-#: src/components/_user/notification/notification.frontConfig.tsx:2380
+#: src/components/_user/notification/notification.frontConfig.tsx:2378
 msgid "Item bought"
 msgstr "تم شراء العنصر"
 
@@ -10137,7 +10441,7 @@ msgstr "انضم للديسكورد"
 
 #: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:297
 msgid "Join giveaway"
-msgstr ""
+msgstr "التسجيل بالمسابقة"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:3794
 msgid "Join in"
@@ -10184,7 +10488,7 @@ msgstr "تستطيع دخولها"
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:86
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:206
 msgid "Joined"
-msgstr ""
+msgstr "تم الانضمام"
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:22
 msgid "Just 1 more..."
@@ -10390,8 +10694,9 @@ msgstr "إطلاق الانتخابات التمهيدية"
 msgid "Law failed"
 msgstr "فشل القانون"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
 #: src/components/_political/law/LawFormModal.tsx:107
-#: src/components/_user/notification/notification.frontConfig.tsx:2396
+#: src/components/_user/notification/notification.frontConfig.tsx:2394
 msgid "Law proposed"
 msgstr "تم اقتراح القانون"
 
@@ -10606,7 +10911,7 @@ msgstr "دعهم يتطوعون"
 
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:207
 msgid "Level"
-msgstr ""
+msgstr "مستوى"
 
 #. placeholder {0}: leveling.level
 #: src/components/_user/user/Level.tsx:100
@@ -10643,7 +10948,7 @@ msgstr "المستوى {minLevel} فما فوق"
 msgid "Level too low"
 msgstr "المستوى منخفض جدًا"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2324
+#: src/components/_user/notification/notification.frontConfig.tsx:2322
 msgid "Level up!"
 msgstr "ارتفع المستوى!"
 
@@ -10777,7 +11082,7 @@ msgstr "جارِ تحميل {status}..."
 
 #: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:97
 msgid "Loading giveaway..."
-msgstr ""
+msgstr "⁧جارٍ تحميل المسابقة...⁩"
 
 #: src/components/_social/poll/PollCard.tsx:283
 msgid "Loading poll..."
@@ -10803,7 +11108,7 @@ msgstr "<0/> مقيّد بالقوات شبه العسكرية لمدة"
 
 #: src/components/_military/mu/MuTypeSettings.tsx:306
 msgid "Locked until <0/> while <1/> can reclaim the unit."
-msgstr ""
+msgstr "⁧مقفلة حتى ⁨<0/>⁩ بينما يمكن لـ⁨<1/>⁩ استعادة الوحدة.⁩"
 
 #: src/components/_social/poll/PollCard.tsx:345
 msgid "Log in to vote."
@@ -10820,7 +11125,7 @@ msgstr "تسجيل الخروج"
 #: src/components/_user/user/UserHeader.tsx:203
 #: src/components/_user/user/UserHeader.tsx:273
 msgid "Logs"
-msgstr ""
+msgstr "السجل"
 
 #: src/components/_economy/employee/employee.traitMeta.ts:96
 msgid "Loner"
@@ -10851,7 +11156,8 @@ msgstr "جمع صناديق الغنائم"
 msgid "Loot chance"
 msgstr "فرصة الغنيمة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2459
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2457
 msgid "Loot reward"
 msgstr "مكافأة الغنيمة"
 
@@ -10985,7 +11291,8 @@ msgstr "مدير"
 msgid "Manager care"
 msgstr "رعاية المدير"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2364
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2362
 msgid "Manager hired"
 msgstr "تم تعيين مدير"
 
@@ -11001,7 +11308,8 @@ msgstr "تم نقل المدير"
 msgid "Manager positions"
 msgstr "مناصب المديرين"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2366
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2364
 msgid "Manager resigned"
 msgstr "استقال المدير"
 
@@ -11066,7 +11374,7 @@ msgstr "السوق"
 
 #: src/components/_economy/transaction/TransactionItem.tsx:242
 msgid "Market average"
-msgstr ""
+msgstr "متوسط سعر السوق"
 
 #: src/components/_economy/employee/TrainingDraftModal.tsx:211
 msgid "Market rate"
@@ -11095,7 +11403,7 @@ msgstr "مشير"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:229
 msgid "Master MU League Champion"
-msgstr ""
+msgstr "بطل دوري الوحدات العسكرية درجة الماستر"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:431
 msgid "Match the offer"
@@ -11287,7 +11595,7 @@ msgstr "مذكرة"
 msgid "Men only."
 msgstr "الرجال فقط"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2536
+#: src/components/_user/notification/notification.frontConfig.tsx:2534
 msgid "Mentioned in message"
 msgstr "تمت الإشارة إليك في رسالة"
 
@@ -11302,7 +11610,7 @@ msgstr "مزادات المرتزقة"
 
 #: src/components/_military/mercenaryContract/MercenaryContractModal.tsx:38
 msgid "Mercenary Contract"
-msgstr ""
+msgstr "عقد مرتزقة"
 
 #: src/components/_political/government/government.frontConfig.ts:90
 msgid "Mercenary contracts"
@@ -11319,7 +11627,7 @@ msgid "Mercenary contracts are currently disabled."
 msgstr "عقود المرتزقة معطلة حالياً."
 
 #: src/components/_military/battle/LootSummaryRow.tsx:103
-#: src/components/_user/user/UserRankingsPanel.tsx:119
+#: src/components/_user/user/UserRankingsPanel.tsx:126
 msgid "Mercenary earnings"
 msgstr "ارباح المرتزقة"
 
@@ -11339,17 +11647,17 @@ msgstr "رسالة"
 
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:185
 msgid "Message (optional)"
-msgstr ""
+msgstr "⁧الرسالة (اختياري)⁩"
 
 #: src/components/_other/shop/SkinPackModal.tsx:263
 msgid "Message (Optional)"
-msgstr "الرسالة (اختياري)"
+msgstr "⁧الرسالة (اختياري)⁩"
 
 #: src/components/_political/message/MessagePreviewById.tsx:47
 msgid "Message deleted"
-msgstr ""
+msgstr "تم حذف الرسالة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2534
+#: src/components/_user/notification/notification.frontConfig.tsx:2532
 msgid "Message liked"
 msgstr "تم الإعجاب بالرسالة"
 
@@ -11411,7 +11719,7 @@ msgstr "أزمة منصف العمر"
 
 #: src/components/_user/mission/ProgressHeader.tsx:117
 #: src/components/_user/mission/ProgressHeader.tsx:122
-#: src/components/_user/user/UserRankingsPanel.tsx:83
+#: src/components/_user/user/UserRankingsPanel.tsx:84
 msgid "Milestone tiers"
 msgstr "فئات الإنجازات"
 
@@ -11450,7 +11758,8 @@ msgstr "الرتبة العسكرية"
 msgid "Military Rank"
 msgstr "الرتبة العسكرية"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2438
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2436
 msgid "Military Rank Up!"
 msgstr "ترقية عسكرية!"
 
@@ -11563,7 +11872,7 @@ msgstr "يجب تحصيل المهام يدويًا: افتح «التقدم» �
 
 #: src/components/_user/mission/ProgressHeader.tsx:107
 #: src/components/_user/mission/ProgressHeader.tsx:111
-#: src/components/_user/user/UserRankingsPanel.tsx:89
+#: src/components/_user/user/UserRankingsPanel.tsx:90
 msgid "Missions claimed"
 msgstr "المهام المستلمة"
 
@@ -11625,7 +11934,8 @@ msgstr "الأضرار الشهرية: <0>{monthlyDamages}</0>"
 msgid "Monthly missions are not available yet"
 msgstr "المهام الشهرية غير متوفرة حالياً"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2549
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2547
 msgid "Monthly Missions Reset"
 msgstr "إعادة ضبط المهام الشهرية"
 
@@ -11765,7 +12075,8 @@ msgstr "تم نقله مؤخرا"
 msgid "Moved to <0/>"
 msgstr "<0/> التحرك الى"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2376
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2374
 msgid "Moved to a new company"
 msgstr "انتقل إلى شركة جديدة"
 
@@ -11784,28 +12095,31 @@ msgstr "يكلف نقل منزلك إلى منطقة أخرى <0>{homeMoveConcre
 msgid "MU"
 msgstr "الوحدة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2481
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2479
 msgid "MU Application Accepted"
 msgstr "تم قبول طلب الوحدة العسكرية"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2478
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2476
 msgid "MU Application Rejected"
 msgstr "تم رفض طلب الوحدة العسكرية"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2500
+#: src/components/_user/notification/notification.frontConfig.tsx:2498
 msgid "MU Donation Received"
 msgstr "تم تلقي تبرع للوحدة العسكرية"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
 #: src/components/_layout/layoutInfos.frontConfig.tsx:60
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:118
 #: src/components/_military/muLeague/MuLeagueTopInfoCard.tsx:136
 #: src/components/_other/events/EventMuLeague.tsx:48
-#: src/components/_user/notification/notification.frontConfig.tsx:2553
+#: src/components/_user/notification/notification.frontConfig.tsx:2551
 #: src/pages/mu/[muId]/league.tsx:19
 msgid "MU league"
 msgstr "دوري الوحدات العسكرية"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2486
+#: src/components/_user/notification/notification.frontConfig.tsx:2484
 msgid "MU Level Up!"
 msgstr "ارتفع مستوى الوحدة العسكرية!"
 
@@ -11829,7 +12143,8 @@ msgstr "x{multiplier} تستهلك أوامر الوحدة العسكرية ور
 msgid "MU orders up to {muOrderMax}%"
 msgstr "{muOrderMax}% تصل أوامر الوحدة العسكرية إلى"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2497
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2495
 msgid "MU Ownership Transferred"
 msgstr "تم نقل ملكية الوحدة العسكرية"
 
@@ -11848,7 +12163,7 @@ msgstr "فائز في بطولة الوحدات العسكرية"
 
 #: src/components/_user/userReports/userReports.hooks.ts:30
 msgid "Multiple accounts"
-msgstr ""
+msgstr "حسابات متعددة"
 
 #: src/components/_social/PinArticleModal.tsx:50
 msgid "Must be a whole number of hours"
@@ -12032,19 +12347,24 @@ msgstr "اسم التحالف الجديد"
 msgid "New API Token Created"
 msgstr "تم إنشاء رمز API جديد"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2387
+#: src/components/_user/notification/notification.frontConfig.tsx:2385
 msgid "New article"
 msgstr "مقال جديد"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "New article from {username}"
+msgstr "⁧مقال جديد من ⁨{username}⁩⁩"
 
 #: src/components/_economy/employee/RecruitModal.tsx:196
 msgid "New candidates"
 msgstr "مرشحون جدد"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2389
+#: src/components/_user/notification/notification.frontConfig.tsx:2387
 msgid "New comment"
 msgstr "تعليق جديد"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2509
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2507
 msgid "New contract accepted"
 msgstr "تم قبول عقد جديد"
 
@@ -12076,7 +12396,7 @@ msgstr "مواد جديدة ومناشف جديدة ونوبة عمل أكثر �
 msgid "New Mercenary Auction"
 msgstr "مزاد مرتزقة جديد"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2530
+#: src/components/_user/notification/notification.frontConfig.tsx:2528
 msgid "New message"
 msgstr "رسالة جديدة"
 
@@ -12088,7 +12408,8 @@ msgstr "وحدة عسكرية جديدة"
 msgid "New missions all the time"
 msgstr "مهام جديدة باستمرار"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2484
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2482
 msgid "New MU Application"
 msgstr "طلب انضمام جديد للوحدة العسكرية"
 
@@ -12105,11 +12426,13 @@ msgstr "الجنسية الجديدة"
 msgid "New order"
 msgstr "أمر جديد"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2433
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2431
 msgid "New Party Application"
 msgstr "طلب انضمام جديد للحزب"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2422
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2420
 msgid "New Party Leader"
 msgstr "قائد حزب جديد"
 
@@ -12121,20 +12444,25 @@ msgstr "استطلاع رأي جديد"
 msgid "New preset"
 msgstr "إعداد مسبق جديد"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
 #: src/components/_political/event/EventList.tsx:109
-#: src/components/_user/notification/notification.frontConfig.tsx:2405
+#: src/components/_user/notification/notification.frontConfig.tsx:2403
 msgid "New president"
 msgstr "رئيس جديد"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2436
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "New referral"
+msgstr "إحالة جديدة"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:2434
 msgid "New referred user"
 msgstr "مستخدم محال جديد"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2437
+#: src/components/_user/notification/notification.frontConfig.tsx:2435
 msgid "New referrer"
 msgstr "مُحيل جديد"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2392
+#: src/components/_user/notification/notification.frontConfig.tsx:2390
 msgid "New subscriber"
 msgstr "مشترك جديد"
 
@@ -12146,13 +12474,13 @@ msgstr "داعمون جدد"
 msgid "New type"
 msgstr "نوع جديد"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2362
+#: src/components/_user/notification/notification.frontConfig.tsx:2360
 msgid "New worker"
 msgstr "عامل جديد"
 
 #: src/components/_political/chat/ChatConversationsMenu.tsx:175
 msgid "Newcomers"
-msgstr ""
+msgstr "اللاعبون الجدد"
 
 #: src/components/_user/referral/ReferralList.tsx:72
 msgid "Newest"
@@ -12473,7 +12801,7 @@ msgstr ".لا توجد مكافآت مهارات من الجنسية أو الت
 
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:270
 msgid "No newcomers to welcome right now"
-msgstr ""
+msgstr "لا يوجد لاعبون جدد للترحيب بهم حاليًا"
 
 #: src/components/_political/government/Government.tsx:265
 msgid "No one nominated yet"
@@ -12599,11 +12927,15 @@ msgstr "لا يوجد اسلحة او عتاد لتفكيكهم"
 #: src/components/_user/welcomeGift/WelcomeGiftButton.tsx:44
 #: src/components/_user/welcomeGift/WelcomeGiftModal.tsx:49
 msgid "No welcome gifts left today"
-msgstr ""
+msgstr "لا توجد هدايا ترحيب متبقية اليوم"
 
 #: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:198
 msgid "No winners"
-msgstr ""
+msgstr "لا يوجد فائزون"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "No winners."
+msgstr "⁧لا يوجد فائزون.⁩"
 
 #: src/components/_economy/employee/EmployeeTooltip.tsx:147
 msgid "No work and no wage"
@@ -12627,7 +12959,7 @@ msgstr "لا أحد سعيد بهذا الأمر."
 
 #: src/components/_user/subGiftDrop/GiveawayEntrantsModal.tsx:43
 msgid "Nobody joined yet"
-msgstr ""
+msgstr "لم ينضم أحد بعد"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:3584
 msgid "Nobody knows who the party is for. It is a great party."
@@ -12693,7 +13025,7 @@ msgstr "تعيين وزير"
 msgid "Nominate leader"
 msgstr "ترشيح قائد"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2407
+#: src/components/_user/notification/notification.frontConfig.tsx:2405
 msgid "Nominated at government"
 msgstr "تم ترشيحه في الحكومة"
 
@@ -12731,7 +13063,7 @@ msgstr "في حال عدم تسجيل الدخول لعدة أيام: لا مك�
 
 #: src/components/_user/userReports/userReports.hooks.ts:21
 msgid "Not English in global chat"
-msgstr ""
+msgstr "عدم استخدام الإنجليزية في الدردشة العامة"
 
 #: src/components/_political/alliance/AllianceMemberRow.tsx:51
 msgid "Not enough paper for the daily maintenance: alliance damage bonuses are off until it pays."
@@ -12771,9 +13103,13 @@ msgstr "ليس الآن"
 msgid "Not now, ask again in {retirementStayYears, plural, one {# year} other {# years}}"
 msgstr "ليس الآن، اطلب ذلك مجددًا بعد {retirementStayYears, plural, one {سنة واحدة} two {سنتين} few {# سنوات} many {# سنة} other {# سنة}}"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2369
+#: src/components/_user/notification/notification.frontConfig.tsx:2367
 msgid "Not paid"
 msgstr "غير مدفوع"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Not paid this hour"
+msgstr "لم يُدفع راتبك هذه الساعة"
 
 #: src/components/_other/tour/TutorialGuidesList.tsx:54
 #: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:134
@@ -12918,7 +13254,7 @@ msgstr "⁧متوقف لمدة ⁦{0}⁩ ساعة⁩"
 
 #: src/components/_user/userReports/userReports.hooks.ts:26
 msgid "Offensive content"
-msgstr ""
+msgstr "⁧محتوى مسيء⁩"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1800
 msgid "Offer “Senior Worker” instead"
@@ -13018,7 +13354,7 @@ msgstr "حساب واحد لكل لاعب. قد يؤدي استخدام عدة �
 
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:119
 msgid "One gems giveaway per day."
-msgstr ""
+msgstr "⁧سحب واحد على الجواهر في اليوم.⁩"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:3817
 msgid "One prank goes too far. {name} and {partnerName} are sworn enemies now."
@@ -13034,7 +13370,7 @@ msgstr "خطوة واحدة عن الأسطوري..."
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:412
 msgid "One tap on the greeting is enough. Or just read, then Next."
-msgstr ""
+msgstr "⁧يكفي نقرة واحدة على التحية. أو اقرأ فقط، ثم اضغط التالي.⁩"
 
 #: src/components/_military/battle/MyBattlesRecapCard.tsx:175
 #: src/components/_military/battle/MyBattlesRecapCard.tsx:181
@@ -13216,7 +13552,7 @@ msgstr "عميل"
 
 #: src/components/_user/userReports/ReportFormModal.tsx:199
 msgid "Optional"
-msgstr ""
+msgstr "اختياري"
 
 #: src/components/_political/unrest/UnrestBar.tsx:40
 #: src/components/_user/auth/ConnectFromModal.tsx:447
@@ -13341,7 +13677,11 @@ msgstr "مالك هذه المحادثة."
 msgid "Owner's country or alliance"
 msgstr "دولة المالك أو تحالفه"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1449
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Ownership of {mu} has been transferred to {username}"
+msgstr "⁧تم نقل ملكية ⁨{mu}⁩ إلى ⁨{username}⁩⁩"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1447
 msgid "Ownership of <0/> has been transferred from <1/> to <2/>"
 msgstr "تم نقل ملكية <0/> من <1/> إلى <2/>"
 
@@ -13369,7 +13709,7 @@ msgstr "تكلفة صيانة الاتفاقية {0}"
 
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:173
 msgid "Paid and started once the article is live."
-msgstr ""
+msgstr "⁧يتم الدفع والبدء بمجرد نشر المقال.⁩"
 
 #: src/components/_economy/employeeEvent/EmployeeEventEffects.tsx:499
 msgid "Paid back in full"
@@ -13434,27 +13774,37 @@ msgstr "لم تعد الأحزاب قادرة على بدء المقاومة"
 msgid "Party"
 msgstr "الحزب"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2427
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2425
 msgid "Party Application Accepted"
 msgstr "تم قبول طلب الانضمام للحزب"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2430
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2428
 msgid "Party Application Rejected"
 msgstr "تم رفض طلب الانضمام للحزب"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Party council election"
+msgstr "⁧انتخابات مجلس الحزب⁩"
+
 #: src/components/_political/election/election.frontConfig.tsx:43
 msgid "Party Council election"
-msgstr "انتخابات مجلس الحزب"
+msgstr "⁧انتخابات مجلس الحزب⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:278
+#: src/components/_user/notification/notification.frontConfig.tsx:276
 msgid "Party Council election candidacy is now open in <0/>"
-msgstr "باب الترشح لانتخابات مجلس الحزب مفتوح الآن في <0/>"
+msgstr "⁧باب الترشح لانتخابات مجلس الحزب مفتوح الآن في ⁨<0/>⁩⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:328
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Party council election ended"
+msgstr "⁧انتهت انتخابات مجلس الحزب⁩"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:326
 msgid "Party Council election has ended in <0/>. Check the results!"
 msgstr "انتهت انتخابات مجلس الحزب في <0/>. تحقق من النتائج!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:303
+#: src/components/_user/notification/notification.frontConfig.tsx:301
 msgid "Party Council election voting is now open in <0/>"
 msgstr "التصويت في انتخابات مجلس الحزب مفتوح الآن في <0/>"
 
@@ -13462,15 +13812,15 @@ msgstr "التصويت في انتخابات مجلس الحزب مفتوح ال
 msgid "Party created"
 msgstr "تم إنشاء الحزب"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2413
+#: src/components/_user/notification/notification.frontConfig.tsx:2411
 msgid "Party election candidacy open"
 msgstr "فتح باب الترشح لانتخابات الحزب"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2419
+#: src/components/_user/notification/notification.frontConfig.tsx:2417
 msgid "Party election ended"
 msgstr "انتهت انتخابات الحزب"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2416
+#: src/components/_user/notification/notification.frontConfig.tsx:2414
 msgid "Party election vote open"
 msgstr "فتح باب التصويت في انتخابات الحزب"
 
@@ -13478,19 +13828,27 @@ msgstr "فتح باب التصويت في انتخابات الحزب"
 msgid "Party ethics were replaced by government types"
 msgstr "استُبدلت أخلاقيات الأحزاب بأنواع الحكومات"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Party leader election"
+msgstr "⁧انتخابات قائد الحزب⁩"
+
 #: src/components/_political/election/election.frontConfig.tsx:38
 msgid "Party Leader election"
-msgstr "انتخابات رئيس الحزب"
+msgstr "⁧انتخابات قائد الحزب⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:268
+#: src/components/_user/notification/notification.frontConfig.tsx:266
 msgid "Party Leader election candidacy is now open in <0/>"
-msgstr "باب الترشح لانتخابات رئيس الحزب مفتوح الآن في <0/>"
+msgstr "⁧باب الترشح لانتخابات رئيس الحزب مفتوح الآن في ⁨<0/>⁩⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:318
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Party leader election ended"
+msgstr "⁧انتهت انتخابات قائد الحزب⁩"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:316
 msgid "Party Leader election has ended in <0/>. Check the results!"
 msgstr "انتهت انتخابات رئيس الحزب في <0/>. تحقق من النتائج!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:293
+#: src/components/_user/notification/notification.frontConfig.tsx:291
 msgid "Party Leader election voting is now open in <0/>"
 msgstr "التصويت في انتخابات رئيس الحزب مفتوح الآن في <0/>"
 
@@ -13506,15 +13864,23 @@ msgstr "القوائم الحزبية"
 msgid "Party members"
 msgstr "أعضاء الحزب"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:273
-msgid "Party Primary election candidacy is now open in <0/>"
-msgstr "الترشح للانتخابات التمهيدية للحزب مفتوح الآن في <0/>"
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Party primary election"
+msgstr "⁧الانتخابات التمهيدية للحزب⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:323
+#: src/components/_user/notification/notification.frontConfig.tsx:271
+msgid "Party Primary election candidacy is now open in <0/>"
+msgstr "⁧الترشح للانتخابات التمهيدية للحزب مفتوح الآن في ⁨<0/>⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Party primary election ended"
+msgstr "⁧انتهت الانتخابات التمهيدية للحزب⁩"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:321
 msgid "Party Primary election has ended in <0/>. Check the results!"
 msgstr "انتهت الانتخابات التمهيدية للحزب في <0/>. تحقق من النتائج!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:298
+#: src/components/_user/notification/notification.frontConfig.tsx:296
 msgid "Party Primary election voting is now open in <0/>"
 msgstr "التصويت في الانتخابات التمهيدية للحزب مفتوح الآن في <0/>"
 
@@ -13567,8 +13933,9 @@ msgstr "متوقف مؤقتًا: لا أحد يعمل، أو يتقدم في ا�
 msgid "Pay"
 msgstr "الأجر"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
 #: src/components/_economy/manager/ManagerRateReductionAlert.tsx:39
-#: src/components/_user/notification/notification.frontConfig.tsx:2368
+#: src/components/_user/notification/notification.frontConfig.tsx:2366
 msgid "Pay cut"
 msgstr "خفض الأجر"
 
@@ -13609,7 +13976,8 @@ msgstr "ادفع أقل لتحقيق ربح"
 msgid "Pay per Management point"
 msgstr "الأجر لكل نقطة إدارة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2367
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2365
 msgid "Pay raised"
 msgstr "زِيد الأجر"
 
@@ -13649,7 +14017,7 @@ msgstr "قيد الانتظار"
 
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:99
 msgid "Pending gifts"
-msgstr ""
+msgstr "⁧الهدايا المعلّقة⁩"
 
 #: src/components/_political/stateArmy/StateArmyList.tsx:106
 msgid "Pending offers"
@@ -13778,7 +14146,7 @@ msgstr "!اختر بطاقة"
 
 #: src/components/_user/userReports/ReportFormModal.tsx:93
 msgid "Pick a category"
-msgstr ""
+msgstr "⁧اختر فئة⁩"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:301
 msgid "Pick a fight!"
@@ -13794,7 +14162,7 @@ msgstr "اختر خيارًا"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:426
 msgid "Pick any article"
-msgstr ""
+msgstr "⁧اختر أي مقال⁩"
 
 #: src/components/_economy/employee/TrainingDraftModal.tsx:429
 msgid "Pick one, the others are lost."
@@ -13859,11 +14227,11 @@ msgstr "ازرع شجرة في مركز البيانات"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:241
 msgid "Platinum MU League Champion"
-msgstr ""
+msgstr "⁧بطل دوري الوحدات العسكرية البلاتيني⁩"
 
 #: src/components/_other/shop/SkinSoundIcon.tsx:39
 msgid "Play hit sound"
-msgstr ""
+msgstr "⁧تشغيل صوت الضربة⁩"
 
 #: src/components/_political/chat/ChatRunningButton.tsx:226
 #: src/components/_user/milestone/MilestoneItem.tsx:262
@@ -13896,7 +14264,7 @@ msgstr ".يلعبون في هذا القسم هذا الأسبوع"
 
 #: src/components/_other/shop/SkinSoundIcon.tsx:36
 msgid "Plays when you fight with this skin."
-msgstr ""
+msgstr "⁧يُشغَّل عند القتال بهذا المظهر.⁩"
 
 #: src/components/_user/auth/ConnectFromModal.tsx:114
 #: src/components/_user/auth/ConnectFromModal.tsx:178
@@ -13953,11 +14321,11 @@ msgstr "السياسة والحكومة"
 
 #: src/components/_political/chat/ConversationDropdown.tsx:214
 msgid "Poll"
-msgstr ""
+msgstr "استطلاع"
 
 #: src/components/_social/poll/ChatPollMessageItem.tsx:59
 msgid "Poll deleted"
-msgstr ""
+msgstr "استطلاع محذوف"
 
 #: src/components/_social/poll/PollCard.tsx:272
 #: src/components/_social/poll/PollCard.tsx:338
@@ -13966,11 +14334,11 @@ msgstr "انتهى الاستطلاع"
 
 #: src/components/_social/poll/PollEditorModal.tsx:110
 msgid "Poll posted"
-msgstr ""
+msgstr "تم نشر استطلاع"
 
 #: src/components/_political/chat/ChatRunningButton.tsx:246
 msgid "Polls"
-msgstr ""
+msgstr "الاستطلاعات"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1682
 msgid "Pop the champagne"
@@ -13987,7 +14355,8 @@ msgstr "مقال شائع"
 msgid "Population"
 msgstr "تعداد السكان"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2365
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2363
 msgid "Position ended"
 msgstr "انتهى المنصب"
 
@@ -14006,7 +14375,7 @@ msgstr "نشر إعلان"
 
 #: src/components/_social/poll/PollEditorModal.tsx:307
 msgid "Post poll"
-msgstr ""
+msgstr "نشر استطلاع"
 
 #: src/components/_user/user/skills.frontConfig.tsx:152
 #: src/components/_user/user/skills.frontConfig.tsx:153
@@ -14029,23 +14398,23 @@ msgstr "بريميوم"
 msgid "Premium & Gifts"
 msgstr "العضوية المميزة والهدايا"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2325
+#: src/components/_user/notification/notification.frontConfig.tsx:2323
 msgid "Premium activated"
 msgstr "تم تفعيل البريميوم"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2326
+#: src/components/_user/notification/notification.frontConfig.tsx:2324
 msgid "Premium expired"
 msgstr "انتهى البريميوم"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2334
+#: src/components/_user/notification/notification.frontConfig.tsx:2332
 msgid "Premium gift expired"
 msgstr "انتهت هدية البريميوم"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2329
+#: src/components/_user/notification/notification.frontConfig.tsx:2327
 msgid "Premium gift received"
 msgstr "تم استلام هدية بريميوم"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2327
+#: src/components/_user/notification/notification.frontConfig.tsx:2325
 msgid "Premium gift sent"
 msgstr "تم إرسال هدية بريميوم"
 
@@ -14086,17 +14455,29 @@ msgstr "رئيس <0/>"
 msgid "Presidential election"
 msgstr "الانتخابات الرئاسية"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:169
+#: src/components/_user/notification/notification.frontConfig.tsx:167
 msgid "Presidential election candidacy is now open in <0/>"
 msgstr "باب الترشح للانتخابات الرئاسية مفتوح الآن في <0/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:214
-msgid "Presidential election has ended in <0/>. Check the results!"
-msgstr "انتهت الانتخابات الرئاسية في <0/>. تحقق من النتائج!"
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Presidential election ended"
+msgstr "⁧انتهت الانتخابات الرئاسية⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:194
+#: src/components/_user/notification/notification.frontConfig.tsx:212
+msgid "Presidential election has ended in <0/>. Check the results!"
+msgstr "⁧انتهت الانتخابات الرئاسية في ⁨<0/>⁩. تحقق من النتائج!⁩"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:192
 msgid "Presidential election voting is now open in <0/>"
-msgstr "التصويت في الانتخابات الرئاسية مفتوح الآن في <0/>"
+msgstr "⁧التصويت في الانتخابات الرئاسية مفتوح الآن في ⁨<0/>⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Presidential election: candidacies open"
+msgstr "⁧الانتخابات الرئاسية: باب الترشح مفتوح⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Presidential election: vote open"
+msgstr "⁧الانتخابات الرئاسية: التصويت مفتوح⁩"
 
 #: src/pages/country/[countryId]/elections.tsx:56
 msgid "Presidential elections"
@@ -14117,7 +14498,8 @@ msgstr "الهيبة"
 msgid "Prestige to drop levels and re-activate your XP bonus."
 msgstr "نفّذ الهيبة لإنقاص مستواك وإعادة تفعيل مكافأة الخبرة 50%"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2551
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2549
 msgid "Prestige!"
 msgstr "هيبة!"
 
@@ -14157,7 +14539,7 @@ msgstr "السعر بالنسبة إليك، شاملًا الضريبة"
 
 #: src/components/_economy/transaction/TransactionItem.tsx:235
 msgid "Price vs average"
-msgstr ""
+msgstr "⁧السعر مقابل المتوسط⁩"
 
 #: src/pages/market/equipments.tsx:94
 msgid "Prices include your tax"
@@ -14171,7 +14553,8 @@ msgstr "نجمة مدللة"
 msgid "Primary election"
 msgstr "الانتخابات التمهيدية"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2424
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2422
 msgid "Primary Election Ended"
 msgstr "انتهت الانتخابات التمهيدية"
 
@@ -14199,11 +14582,11 @@ msgstr "الحد الأقصى للمرتزقة الخواص"
 
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:116
 msgid "Prize"
-msgstr ""
+msgstr "جائزة"
 
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:150
 msgid "Prizes nobody wins go back to you."
-msgstr ""
+msgstr "⁧الجوائز التي لا يفوز بها أحد تعود إليك.⁩"
 
 #: src/components/_military/muLeague/MuLeagueBoard.tsx:94
 msgid "Prizes of this MU's division."
@@ -14274,11 +14657,12 @@ msgstr "10الإنتاج عند 0"
 msgid "Production bonus"
 msgstr "مكافأة الإنتاج"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:789
+#: src/components/_user/notification/notification.frontConfig.tsx:787
 msgid "Production in<0/> is full, you should start production!"
 msgstr "الإنتاج في <0/> ممتلئ، يجب أن تبدأ الإنتاج!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2382
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2380
 msgid "Production is full"
 msgstr "الإنتاج ممتلئ"
 
@@ -14337,7 +14721,8 @@ msgstr "عِد برحلة في وقت لاحق"
 msgid "Promote to Commander"
 msgstr "ترقية إلى قائد"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2491
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2489
 msgid "Promoted to Commander"
 msgstr "تمت الترقية إلى قائد"
 
@@ -14540,7 +14925,8 @@ msgstr "الرتبة"
 msgid "Ranking"
 msgstr "ترتيب"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2435
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2433
 msgid "Ranking reward"
 msgstr "مكافأة التصنيف"
 
@@ -14615,12 +15001,12 @@ msgstr "بلوغ مستوى واجمع نقاط خبرته."
 #. placeholder {0}: subGiftDropConfig.entrantMinLevel
 #: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:285
 msgid "Reach level {0} to join"
-msgstr ""
+msgstr "⁧اصل إلى المستوى ⁨{0}⁩ للانضمام⁩"
 
 #. placeholder {0}: welcomeGiftConfig.giverMinLevel
 #: src/components/_user/welcomeGift/WelcomeGiftModal.tsx:45
 msgid "Reach level {0} to send welcome gifts"
-msgstr ""
+msgstr "⁧اصل إلى المستوى ⁨{0}⁩ لإرسال هدايا الترحيب⁩"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:600
 msgid "Reach level 10"
@@ -14722,7 +15108,7 @@ msgstr "وصل إليها {0}% (<0/>)"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:595
 msgid "Read an article to claim this reward."
-msgstr ""
+msgstr "⁧اقرأ مقالًا للحصول على هذه المكافأة.⁩"
 
 #: src/components/_user/mission/mission.frontConfig.tsx:527
 msgid "Read Article"
@@ -14759,6 +15145,10 @@ msgstr "لواء بحري"
 msgid "Reason"
 msgstr "السبب"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Received {amount} for \"{title}\""
+msgstr "⁧تم استلام ⁨{amount}⁩ مقابل \"⁨{title}⁩\"⁩"
+
 #: src/pages/party/[partyId]/index.tsx:73
 msgid "Recent Applications"
 msgstr "الطلبات الأخيرة"
@@ -14781,12 +15171,12 @@ msgstr "المستلم"
 
 #: src/components/_military/mu/MuTakeoverAlert.tsx:83
 msgid "Reclaim the unit?"
-msgstr ""
+msgstr "⁧هل تريد استعادة الوحدة؟⁩"
 
 #: src/components/_military/mu/MuTakeoverAlert.tsx:67
 #: src/components/_military/mu/MuTakeoverAlert.tsx:88
 msgid "Reclaim unit"
-msgstr ""
+msgstr "⁧استعادة الوحدة⁩"
 
 #: src/components/_economy/company/RecommendedCompanyRegions.tsx:132
 msgid "Recommended regions"
@@ -14823,7 +15213,7 @@ msgid "Referral link copied to clipboard"
 msgstr "تم نسخ رابط الإحالة إلى الحافظة"
 
 #: src/components/_user/user/UserHeader.tsx:258
-#: src/components/_user/user/UserRankingsPanel.tsx:57
+#: src/components/_user/user/UserRankingsPanel.tsx:58
 #: src/pages/user/[userId]/index.tsx:235
 #: src/pages/user/[userId]/referrals.tsx:67
 msgid "Referrals"
@@ -14884,7 +15274,7 @@ msgstr "منطقة"
 msgid "Region buy offer"
 msgstr "عرض شراء منطقة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2451
+#: src/components/_user/notification/notification.frontConfig.tsx:2449
 msgid "Region is revolting!"
 msgstr "المنطقة تثور!"
 
@@ -14935,7 +15325,7 @@ msgstr "تسجيل وحدتي العسكرية"
 msgid "Register my party"
 msgstr "تسجيل حزبي"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:174
+#: src/components/_user/notification/notification.frontConfig.tsx:172
 msgid "Register your party for the congress election in <0/>"
 msgstr "<0/> سجّل حزبك لانتخابات الكونغرس في"
 
@@ -15088,7 +15478,12 @@ msgstr "إزالة التصويت"
 msgid "Removed"
 msgstr "تمت الإزالة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2488
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Removed from government"
+msgstr "⁧تمت الإزالة من الحكومة⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2486
 msgid "Removed from Military Unit"
 msgstr "تمت الإزالة من الوحدة العسكرية"
 
@@ -15164,27 +15559,27 @@ msgstr "إبلاغ"
 
 #: src/components/_user/userReports/ReportFormModal.tsx:136
 msgid "Report article"
-msgstr ""
+msgstr "الإبلاغ عن مقال"
 
 #: src/components/_user/userReports/ReportFormModal.tsx:138
 msgid "Report asset proposition"
-msgstr ""
+msgstr "الإبلاغ عن عرض"
 
 #: src/components/_user/userReports/ReportFormModal.tsx:139
 msgid "Report contract"
-msgstr ""
+msgstr "الإبلاغ عن عقد"
 
 #: src/components/_user/userReports/ReportFormModal.tsx:140
 msgid "Report employee name"
-msgstr ""
+msgstr "الإبلاغ عن اسم موظف"
 
 #: src/components/_user/userReports/ReportFormModal.tsx:142
 msgid "Report giveaway"
-msgstr ""
+msgstr "الإبلاغ عن مسابقة"
 
 #: src/components/_user/userReports/ReportFormModal.tsx:135
 msgid "Report message"
-msgstr ""
+msgstr "الإبلاغ عن رسالة"
 
 #: src/components/_economy/employee/EmployeeModal.tsx:542
 msgid "Report name"
@@ -15192,7 +15587,7 @@ msgstr "الإبلاغ عن الاسم"
 
 #: src/components/_user/userReports/ReportFormModal.tsx:141
 msgid "Report poll"
-msgstr ""
+msgstr "الإبلاغ عن استطلاع"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:2703
 msgid "Report the leak to the rival"
@@ -15200,7 +15595,7 @@ msgstr "أبلغ الشركة المنافسة عن التسريب"
 
 #: src/components/_user/userReports/ReportFormModal.tsx:137
 msgid "Report transaction"
-msgstr ""
+msgstr "الإبلاغ عن معاملة"
 
 #: src/components/_user/user/UserDropdown.tsx:275
 #: src/components/_user/userReports/ReportFormModal.tsx:134
@@ -15209,7 +15604,7 @@ msgstr "الإبلاغ عن مستخدم"
 
 #: src/components/_user/userReports/ReportFormModal.tsx:159
 msgid "Reporting disabled"
-msgstr ""
+msgstr "⁧الإبلاغ معطّل⁩"
 
 #: src/components/_political/govType/govType.frontConfig.tsx:44
 msgid "Republic"
@@ -15348,7 +15743,7 @@ msgstr "الموارد"
 msgid "Resources reshuffled"
 msgstr "إعادة توزيع الموارد الاستراتيجية"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2532
+#: src/components/_user/notification/notification.frontConfig.tsx:2530
 msgid "Response to message"
 msgstr "رد على رسالة"
 
@@ -15417,7 +15812,8 @@ msgstr "<0/> إلغاء رعاية"
 msgid "Revolt"
 msgstr "ثورة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2454
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2452
 msgid "Revolt started!"
 msgstr "بدأ التمرد!"
 
@@ -15433,7 +15829,8 @@ msgstr "انتهاء ثورة"
 msgid "Revolution started"
 msgstr "بدء ثورة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2457
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2455
 msgid "Revolution started!"
 msgstr "بدأت الثورة!"
 
@@ -15511,6 +15908,18 @@ msgstr "جولة"
 msgid "Round {0}"
 msgstr "الجولة {0}"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Round {round} ended"
+msgstr "⁧انتهت الجولة ⁨{round}⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Round {round} in {region} ended"
+msgstr "⁧انتهت الجولة ⁨{round}⁩ في ⁨{region}⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Round {round} in {region} is about to end"
+msgstr "⁧توشك الجولة ⁨{round}⁩ في ⁨{region}⁩ على الانتهاء⁩"
+
 #: src/components/_military/damageRanking/BattleLoot.tsx:63
 msgid "Round {roundNumber} loot pool"
 msgstr "{roundNumber} مجموعة غنائم الجولة"
@@ -15521,15 +15930,17 @@ msgid "Round #{0}"
 msgstr "جولة #{0}"
 
 #. placeholder {0}: data.roundNumber
-#: src/components/_user/notification/notification.frontConfig.tsx:858
+#: src/components/_user/notification/notification.frontConfig.tsx:856
 msgid "Round <0>#{0}</0> in <1/> is about to end!"
 msgstr "الجولة <0>#{0}</0> في <1/> على وشك الانتهاء!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2442
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2440
 msgid "Round about to end"
 msgstr "الجولة على وشك الانتهاء"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2440
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2438
 msgid "Round ended"
 msgstr "انتهت الجولة"
 
@@ -15617,15 +16028,15 @@ msgstr "تم الحفظ"
 
 #: src/components/_user/welcomeGift/WelcomeGiftModal.tsx:152
 msgid "Say hi and offer your help"
-msgstr ""
+msgstr "⁧ألقِ التحية واعرض مساعدتك⁩"
 
 #: src/components/_user/welcomeGift/WelcomeGiftModal.tsx:90
 msgid "Say hi to the newcomer"
-msgstr ""
+msgstr "⁧ألقِ التحية على الاعب الجديد⁩"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:410
 msgid "Say hi, if you like"
-msgstr ""
+msgstr "⁧ألقِ التحية إن أردت⁩"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1247
 msgid "Say it again, slowly"
@@ -15730,7 +16141,7 @@ msgstr "اطّلع على جميع إحصائيات موظفيك وشركاتك"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:398
 msgid "See who's around. Tap the chat."
-msgstr ""
+msgstr "⁧اطّلع على من حولك. اضغط على الدردشة.⁩"
 
 #: src/components/_user/premium/PremiumFeatureList.tsx:137
 msgid "See your spending and income breakdown"
@@ -15863,15 +16274,15 @@ msgstr "أرسل رسالة"
 
 #: src/components/_user/welcomeGift/WelcomeGiftButton.tsx:47
 msgid "Send a welcome gift"
-msgstr ""
+msgstr "⁧أرسل هدية ترحيب⁩"
 
 #: src/components/_user/modals/PhoneVerificationModal.tsx:140
 msgid "Send Code"
-msgstr "إرسال الرمز"
+msgstr "⁧إرسال الرمز⁩"
 
 #: src/components/_user/welcomeGift/WelcomeGiftModal.tsx:173
 msgid "Send gift"
-msgstr ""
+msgstr "⁧إرسال الهدية⁩"
 
 #: src/components/_other/shop/SkinPackModal.tsx:311
 msgid "Send Gift"
@@ -16129,7 +16540,7 @@ msgstr "توقيع"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:253
 msgid "Silver MU League Champion"
-msgstr ""
+msgstr "⁧بطل دوري الوحدات العسكرية الفضي⁩"
 
 #: src/components/_other/shop/skinPack.frontConfig.tsx:65
 msgid "Silver not included"
@@ -16183,13 +16594,14 @@ msgstr "تم حفظ المهارات!"
 
 #: src/components/_other/shop/SkinCollectionModal.tsx:352
 msgid "Skin"
-msgstr ""
+msgstr "مظهر"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2351
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2349
 msgid "Skin gift received"
 msgstr "تم استلام هدية المظهر"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2349
+#: src/components/_user/notification/notification.frontConfig.tsx:2347
 msgid "Skin gift sent"
 msgstr "تم إرسال هدية المظهر"
 
@@ -16197,7 +16609,11 @@ msgstr "تم إرسال هدية المظهر"
 msgid "Skin pack equipped!"
 msgstr "تم تجهيز حزمة المظاهر!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2354
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Skin pack gift received"
+msgstr "⁧تم استلام هدية حزمة المظاهر⁩"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:2352
 msgid "Skin pack gift sent"
 msgstr "تم إرسال هدية حزمة المظاهر"
 
@@ -16209,13 +16625,14 @@ msgstr "تم فتح حزمة المظاهر! تم تجهيز جميع المظا
 msgid "Skin Packs"
 msgstr "حزم المظاهر"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2554
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2552
 msgid "Skin Reward"
 msgstr "مكافأة المظهر"
 
 #: src/components/_layout/LayoutOptions.tsx:538
 msgid "Skin sounds"
-msgstr ""
+msgstr "اصوات المظاهر"
 
 #: src/components/_other/shop/ShopHeader.tsx:23
 #: src/pages/shop/index.tsx:200
@@ -16227,13 +16644,13 @@ msgstr "المظاهر"
 msgid "Skins in this pack"
 msgstr "المظاهر في هذه الحزمة"
 
-#: src/components/_user/user/UserRankingsPanel.tsx:95
+#: src/components/_user/user/UserRankingsPanel.tsx:102
 msgid "Skins owned"
 msgstr "المظاهر الممتلكة"
 
 #: src/components/_user/acquisition/HeardFromModal.tsx:181
 msgid "Skip"
-msgstr ""
+msgstr "تخطي"
 
 #: src/components/_other/tour/TutorialStep.tsx:604
 msgid "Skip guide"
@@ -16282,6 +16699,10 @@ msgstr "إجتماعي"
 #: src/components/_user/notification/notificationPrefs.categories.ts:173
 msgid "Social & Messages"
 msgstr "التواصل والرسائل"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Sold {quantity} {item} for {price}"
+msgstr "⁧تم بيع ⁨{quantity}⁩ ⁨{item}⁩ مقابل ⁨{price}⁩⁩"
 
 #: src/components/_economy/itemOffer/ItemOfferModal.tsx:147
 msgid "Sold by"
@@ -16338,7 +16759,7 @@ msgstr "الحساء عبارة عن أكل"
 
 #: src/components/_user/userReports/userReports.hooks.ts:24
 msgid "Spam or ads"
-msgstr ""
+msgstr "⁧سبام  أو إعلانات⁩"
 
 #: src/components/_economy/employee/employee.traitMeta.ts:113
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:41
@@ -16463,11 +16884,11 @@ msgstr "بدء انتخابات الكونغرس"
 
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:202
 msgid "Start giveaway"
-msgstr ""
+msgstr "⁧بدء مسابقة⁩"
 
 #: src/components/_user/level/levelTrack.frontConfig.tsx:57
 msgid "Start giveaways"
-msgstr ""
+msgstr "⁧بدء مسابقات⁩"
 
 #: src/components/_political/law/law.frontConfig.tsx:203
 #: src/components/_political/law/lawNames.tsx:17
@@ -16505,7 +16926,7 @@ msgstr "تبدا"
 
 #: src/components/_social/poll/PollEditorModal.tsx:259
 msgid "Starts as soon as it is posted."
-msgstr ""
+msgstr "⁧يبدأ فور نشره.⁩"
 
 #. placeholder {0}: gameConfig?.battle.enemyDamagesBonusPercent
 #: src/components/_political/law/law.frontConfig.tsx:290
@@ -16526,12 +16947,14 @@ msgstr "جيوش الدولة"
 msgid "State Army"
 msgstr "جيش الدولة"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
 #: src/components/_military/mu/MuTypeSettings.tsx:230
-#: src/components/_user/notification/notification.frontConfig.tsx:2503
+#: src/components/_user/notification/notification.frontConfig.tsx:2501
 msgid "State Army offer"
 msgstr "عرض جيش الدولة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2506
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2504
 msgid "State Army sponsorship ended"
 msgstr "انتهت رعاية جيش الدولة"
 
@@ -16655,7 +17078,7 @@ msgstr "عالق في المصعد"
 #: src/components/_user/userReports/ReportFormModal.tsx:143
 #: src/components/_user/userReports/ReportFormModal.tsx:212
 msgid "Submit report"
-msgstr ""
+msgstr "⁧إرسال البلاغ⁩"
 
 #: src/components/_social/ArticleList.tsx:226
 msgid "Subscribed"
@@ -16665,7 +17088,7 @@ msgstr "مشترك"
 msgid "Subscribed and supported the game <3"
 msgstr "اشترك ودعم اللعبة <3"
 
-#: src/components/_user/user/UserRankingsPanel.tsx:63
+#: src/components/_user/user/UserRankingsPanel.tsx:64
 msgid "Subscribers"
 msgstr "المشتركون"
 
@@ -16718,11 +17141,19 @@ msgstr "ميزة الداعم"
 msgid "Supporter Gift"
 msgstr "هدية الداعم"
 
-#: src/components/_user/user/UserRankingsPanel.tsx:75
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Supporter Gift Expired"
+msgstr "⁧انتهت هدية الداعم⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Supporter Gift Received"
+msgstr "⁧تم استلام هدية الداعم⁩"
+
+#: src/components/_user/user/UserRankingsPanel.tsx:76
 msgid "Supporter gifts"
 msgstr "هدايا الداعم"
 
-#: src/components/_user/user/UserRankingsPanel.tsx:69
+#: src/components/_user/user/UserRankingsPanel.tsx:70
 msgid "Supporter months"
 msgstr "أشهر الدعم"
 
@@ -16742,6 +17173,14 @@ msgstr "خطة الدعم"
 #: src/pages/user/[userId]/settings.tsx:161
 msgid "Supporter Plan"
 msgstr "خطة الدعم"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Supporter Plan Activated"
+msgstr "⁧تم تفعيل خطة الداعم⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Supporter Plan Expired"
+msgstr "⁧انتهت خطة الداعم⁩"
 
 #: src/components/_user/kits/KitsPopover.tsx:216
 msgid "Supporter Plan: up to {premiumMax} kits"
@@ -16842,11 +17281,11 @@ msgstr "استعده"
 #: src/components/_military/mu/MuTakeoverAlert.tsx:107
 #: src/components/_military/mu/MuTakeoverAlert.tsx:141
 msgid "Take over"
-msgstr ""
+msgstr "⁧الاستيلاء⁩"
 
 #: src/components/_military/mu/MuTakeoverAlert.tsx:133
 msgid "Take over the unit?"
-msgstr ""
+msgstr "⁧هل تريد الاستيلاء على الوحدة؟⁩"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:3541
 msgid "Take them down"
@@ -16935,7 +17374,7 @@ msgstr "إضغط لرؤية ما بالداخل"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:176
 msgid "Tap Work. It costs <0>Energy</0>."
-msgstr ""
+msgstr "⁧اضغط على عمل. يكلّف ⁨<0>الطاقة</0>⁩.⁩"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:405
 msgid "Tap your country's conversation."
@@ -17036,15 +17475,15 @@ msgstr "نقش"
 
 #: src/components/_user/acquisition/HeardFromModal.tsx:151
 msgid "Thank you"
-msgstr ""
+msgstr "⁧شكرًا لك⁩"
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:111
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:110
 msgid "Thanks a lot!"
-msgstr ""
+msgstr "⁧شكرًا جزيلًا!⁩"
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:112
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:110
 msgid "Thanks! Any tips to start?"
-msgstr ""
+msgstr "⁧شكرًا! هل من نصائح للبداية؟⁩"
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:76
 msgid "That dopamine hit is free"
@@ -17151,13 +17590,17 @@ msgstr "منطقة الشركة تحت الهجوم. يتضاعف الاحتما
 msgid "The compliment"
 msgstr "اطراء"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "The contract for {mu} has been rolled back. All money sent back to {country}"
+msgstr "⁧تم التراجع عن العقد الخاص بـ ⁨{mu}⁩. أُعيد كامل المبلغ إلى ⁨{country}⁩⁩"
+
 #. placeholder {0}: data.refund
-#: src/components/_user/notification/notification.frontConfig.tsx:1969
+#: src/components/_user/notification/notification.frontConfig.tsx:1967
 msgid "The contract for <0/> has expired. <1>{0}</1> returned to <2/>."
 msgstr "انتهت صلاحية العقد الخاص بـ <0/>, تمت إعادة <1>{0}</1> إلى <2/>."
 
 #. placeholder {0}: data.moneyRolledBack
-#: src/components/_user/notification/notification.frontConfig.tsx:1987
+#: src/components/_user/notification/notification.frontConfig.tsx:1985
 msgid "The contract has been rolled back. <0>{0}</0> sent back to <1/>."
 msgstr "تم التراجع عن العقد, تمت إعادة <0>{0}</0> إلى <1/>."
 
@@ -17245,7 +17688,7 @@ msgstr "البط المطاطي"
 msgid "The ducks go back. One of them is missing."
 msgstr "تعود البطّات. لكن إحداها مفقودة."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:927
+#: src/components/_user/notification/notification.frontConfig.tsx:925
 msgid "The effect of your consumed buffs has ended. The debuff phase has begun and will last <0>{debuffDuration}h</0>."
 msgstr "انتهى تأثير المعززات التي استهلكتها. بدأت مرحلة الضعف وستستمر لمدة <0>{debuffDuration} ساعة</0>."
 
@@ -17406,13 +17849,17 @@ msgstr "أصبحت رائحة الآلة تشبه رائحة التونة الق
 msgid "The map needs WebGL2, which your browser or device doesn't support. Everything else in the game works normally."
 msgstr "تتطلب الخريطة WebGL2 الذي لا يدعمه متصفحك أو جهازك. كل شيء آخر في اللعبة يعمل بشكل طبيعي."
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "The mercenary contract for {mu} has expired. Budget returned to country."
+msgstr "⁧انتهى عقد المرتزقة الخاص بـ ⁨{mu}⁩. أُعيدت الميزانية إلى البلد.⁩"
+
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:588
 msgid "The money is gone for good, but the gratitude is real."
-msgstr "ضاعت الأموال إلى الأبد، لكن الامتنان حقيقي."
+msgstr "⁧ضاعت الأموال إلى الأبد، لكن الامتنان حقيقي.⁩"
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:163
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:159
 msgid "The money went back to the veteran."
-msgstr ""
+msgstr "تمت اعادة الاموال⁩"
 
 #. placeholder {0}: Math.round(contract.moneyPool * 10) / 100
 #: src/components/_military/mercenaryContract/MercenaryContractActions.tsx:84
@@ -17441,7 +17888,7 @@ msgstr "أصبحت الشخصية الجديدة أفضل، وتخلّص من ع
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:420
 msgid "The news"
-msgstr ""
+msgstr "الاخبار"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:285
 msgid "The next tier opens right away."
@@ -17637,9 +18084,21 @@ msgstr "أُعيد صندوق الأدوات إلى المخزن. هم من عث
 msgid "The toolbox helped only halfway: the tool is better, not new."
 msgstr "لم يساعد صندوق الأدوات إلا جزئيًا: أصبحت الأداة أفضل، لكنها لم تعد جديدة."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1674
+#: src/components/_user/notification/notification.frontConfig.tsx:1672
 msgid "The tournament has ended for your team <0/>. Check the results!"
 msgstr "انتهت البطولة لفريقك <0/>. تحقق من النتائج!"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "The tournament has ended. Check the results!"
+msgstr "⁧انتهت البطولة. تحقق من النتائج!⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "The tournament has started! Let the battles begin!"
+msgstr "⁧بدأت البطولة! فلتبدأ المعارك!⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "The tournament was cancelled: not enough participants registered."
+msgstr "⁧تم إلغاء البطولة: لم يسجّل عدد كافٍ من المشاركين.⁩"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:2693
 msgid "The trick works for everyone. The whole shift runs faster."
@@ -17703,11 +18162,11 @@ msgstr ".لا يُحسب ضررهم لصالح أي دولة"
 
 #: src/components/_military/damageRanking/DamageRankingList.tsx:114
 msgid "Their earnings count for no country."
-msgstr ""
+msgstr "⁧أرباحهم لا تُحتسب لأي بلد.⁩"
 
 #: src/components/_military/damageRanking/DamageRankingList.tsx:116
 msgid "Their ground points count for no country."
-msgstr ""
+msgstr "⁧نقاطهم البرية لا تُحتسب لأي بلد.⁩"
 
 #: src/components/_economy/employee/TrainingDrawOdds.tsx:199
 msgid "Their Luck"
@@ -17739,7 +18198,7 @@ msgstr "يتقاضون أجرًا من <0>أموالك</0>."
 
 #: src/components/_user/welcomeGift/WelcomeGiftModal.tsx:154
 msgid "They get <0>{amount}</0> from you and <1>{xp}</1> from the game"
-msgstr ""
+msgstr "⁧يحصلون على ⁨<0>{amount}</0>⁩ منك و⁨<1>{xp}</1>⁩ من اللعبة⁩"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:550
 msgid "They get through it somehow, and nobody mentions it again."
@@ -17877,7 +18336,7 @@ msgstr "شعور جيد، هاه؟"
 
 #: src/components/_user/subGiftDrop/ArticleGiveawayCard.tsx:99
 msgid "This giveaway is not available."
-msgstr ""
+msgstr "⁧هذه المسابقة غير متاحة.⁩"
 
 #: src/components/_economy/employeeEvent/EmployeeEventEffects.tsx:217
 msgid "this good"
@@ -17953,27 +18412,27 @@ msgstr "لم يعد هذا الأمر ساريًا: الشخص المعني به
 #: src/components/_user/welcomeGift/WelcomeGiftButton.tsx:46
 #: src/components/_user/welcomeGift/WelcomeGiftModal.tsx:48
 msgid "This player already received {0} welcome gifts"
-msgstr ""
+msgstr "⁧سبق أن تلقى هذا اللاعب ⁨{0}⁩ من هدايا الترحيب⁩"
 
 #: src/components/_user/welcomeGift/WelcomeGiftModal.tsx:50
 msgid "This player blocked you"
-msgstr ""
+msgstr "⁧هذا اللاعب قام بحظرك⁩"
 
 #: src/components/_user/league/LeagueBoard.tsx:58
 msgid "This player has no league this week."
-msgstr ".ليس لدى هذا اللاعب دوري هذا الأسبوع"
+msgstr "⁧ليس لدى هذا اللاعب دوري هذا الأسبوع.⁩"
 
 #: src/components/_user/welcomeGift/WelcomeGiftModal.tsx:46
 msgid "This player is no longer a newcomer"
-msgstr ""
+msgstr "⁧هذا اللاعب لم يعد لاعباً جديدًا⁩"
 
 #: src/components/_social/poll/PollCard.tsx:285
 msgid "This poll is not available."
-msgstr "هذا الاستطلاع غير متاح."
+msgstr "⁧هذا الاستطلاع غير متاح.⁩"
 
 #: src/components/_social/poll/PollCard.tsx:373
 msgid "This poll was removed by a moderator."
-msgstr ""
+msgstr "⁧تمت إزالة هذا الاستطلاع بواسطة أحد المشرفين.⁩"
 
 #: src/components/_military/mercenaryContract/CreateAuctionModal.tsx:238
 msgid "This round only"
@@ -18042,7 +18501,7 @@ msgstr "الوقت في الشركة"
 
 #: src/components/_political/chat/ChatRunningButton.tsx:379
 msgid "Time left"
-msgstr ""
+msgstr "الوقت المتبقي"
 
 #: src/components/_economy/transaction/TransactionItem.tsx:295
 msgid "Time on market"
@@ -18208,7 +18667,7 @@ msgstr "صندوق الأدوات"
 msgid "Toolbox Finds"
 msgstr "العثور على صناديق الأدوات"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2374
+#: src/components/_user/notification/notification.frontConfig.tsx:2372
 msgid "Toolbox found"
 msgstr "تم العثور على صندوق الأدوات"
 
@@ -18329,7 +18788,7 @@ msgstr "التكلفة الإجمالية"
 msgid "Total damage"
 msgstr "الدمج/الضرر الاجمالي"
 
-#: src/components/_user/user/UserRankingsPanel.tsx:34
+#: src/components/_user/user/UserRankingsPanel.tsx:35
 msgid "Total damages"
 msgstr "إجمالي الأضرار"
 
@@ -18372,19 +18831,23 @@ msgstr "البطولة"
 msgid "Tournament battle for {tournamentName} {score}"
 msgstr "معركة بطولة لـ {tournamentName} {score}"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2475
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2473
 msgid "Tournament Cancelled"
 msgstr "تم الغاء البطولة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2465
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2463
 msgid "Tournament Created"
 msgstr "تم إنشاء البطولة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2472
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2470
 msgid "Tournament Eliminated"
 msgstr "تم الإقصاء من البطولة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2470
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2468
 msgid "Tournament Ended"
 msgstr "انتهت البطولة"
 
@@ -18392,11 +18855,13 @@ msgstr "انتهت البطولة"
 msgid "Tournament reward"
 msgstr "جائزة البطولة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2461
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2459
 msgid "Tournament round won!"
 msgstr "تم الفوز بجولة البطولة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2468
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2466
 msgid "Tournament Started"
 msgstr "بدأت البطولة"
 
@@ -18404,7 +18869,8 @@ msgstr "بدأت البطولة"
 msgid "Tournament Winner"
 msgstr "الفائز بالبطولة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2463
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2461
 msgid "Tournament Won!"
 msgstr "تم الفوز بالبطولة!"
 
@@ -18429,7 +18895,8 @@ msgstr "هل تريد تبادل المكان بين <0/> و<1/>؟ سيحتفظ 
 msgid "Trading"
 msgstr "تداول"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2385
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2383
 msgid "Trading transaction"
 msgstr "عملية تداول"
 
@@ -18637,11 +19104,11 @@ msgstr "إزالة كل التجهيزات"
 
 #: src/components/_military/mu/MuTakeoverAlert.tsx:47
 msgid "Unit reclaimed"
-msgstr ""
+msgstr "⁧تمت استعادة الوحدة⁩"
 
 #: src/components/_military/mu/MuTakeoverAlert.tsx:41
 msgid "Unit taken over"
-msgstr ""
+msgstr "⁧تم الاستيلاء على الوحدة⁩"
 
 #: src/pages/mu/[muId]/settings.tsx:28
 msgid "Unit type"
@@ -18687,7 +19154,7 @@ msgstr "افتح هذا الجانب؟"
 msgid "Unlocked"
 msgstr "مفتوح"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2357
+#: src/components/_user/notification/notification.frontConfig.tsx:2355
 msgid "Unlocked pack"
 msgstr "حزمة مفتوحة"
 
@@ -19194,9 +19661,17 @@ msgstr "صوت في انتخابات"
 msgid "Vote in elections"
 msgstr "التصويت في الإنتخابات"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Vote now for your favorite candidate!"
+msgstr "⁧صوّت الآن لمرشحك المفضل!⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Vote now in {party}!"
+msgstr "⁧صوّت الآن في ⁨{party}⁩!⁩"
+
 #: src/components/_political/chat/ChatRunningButton.tsx:269
 msgid "Voted"
-msgstr ""
+msgstr "⁧تم التصويت⁩"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:104
 msgid "Voter"
@@ -19204,7 +19679,7 @@ msgstr "ناخب"
 
 #: src/components/_political/chat/ChatRunningButton.tsx:271
 msgid "Voters"
-msgstr ""
+msgstr "⁧الناخبون⁩"
 
 #: src/components/_political/election/CongressListElection.tsx:155
 #: src/components/_political/election/CongressListElection.tsx:371
@@ -19231,7 +19706,8 @@ msgstr "ضد"
 msgid "Wage"
 msgstr "أجور العمل"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2378
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2376
 msgid "Wage changed"
 msgstr "تغير الأجر"
 
@@ -19239,7 +19715,8 @@ msgstr "تغير الأجر"
 msgid "Wage expectation"
 msgstr "الأجر المتوقع"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2379
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2377
 msgid "Wage reduction proposed"
 msgstr "تم اقتراح تخفيض الأجر"
 
@@ -19256,9 +19733,9 @@ msgstr "انتظره للإعادة"
 msgid "Wait it out"
 msgstr "انتظر حتى يمر الأمر"
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:194
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:190
 msgid "Waiting for <0/>"
-msgstr ""
+msgstr "⁧في انتظار ⁨<0/>⁩⁩"
 
 #. placeholder {0}: gameConfig?.referral.levelNeededForBadge
 #: src/components/_user/referral/ReferralList.tsx:112
@@ -19309,7 +19786,7 @@ msgstr "حروب"
 msgid "We picked Steel: it's made from your Iron. Tap to build."
 msgstr "اخترنا الفولاذ: فهو مصنوع من الحديد الذي تملكه. اضغط للبناء."
 
-#: src/components/_user/user/UserRankingsPanel.tsx:45
+#: src/components/_user/user/UserRankingsPanel.tsx:46
 #: src/pages/user/[userId]/index.tsx:142
 msgid "Wealth"
 msgstr "الثروة"
@@ -19337,11 +19814,11 @@ msgstr "لا يمكن استخدام الأسلحة والذخيرة والعت�
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:582
 msgid "Wear a weapon or a piece of armor to claim this reward."
-msgstr ""
+msgstr "⁧استخدم سلاحًا أو قطعة درع للحصول على هذه المكافأة.⁩"
 
 #: src/components/_user/acquisition/HeardFromModal.tsx:119
 msgid "Web search"
-msgstr ""
+msgstr "⁧بحث على الويب⁩"
 
 #: src/components/_military/mu/MuMemberList.tsx:73
 #: src/components/_military/mu/MuMemberList.tsx:446
@@ -19353,7 +19830,7 @@ msgstr "أسبوعي"
 msgid "Weekly balance"
 msgstr "الرصيد الأسبوعي"
 
-#: src/components/_user/user/UserRankingsPanel.tsx:28
+#: src/components/_user/user/UserRankingsPanel.tsx:29
 msgid "Weekly damages"
 msgstr "الضرر الأسبوعي"
 
@@ -19361,19 +19838,21 @@ msgstr "الضرر الأسبوعي"
 msgid "Weekly decay"
 msgstr "التدهور الأسبوعي"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
 #: src/components/_user/league/LeagueTopInfoCard.tsx:87
-#: src/components/_user/notification/notification.frontConfig.tsx:2552
+#: src/components/_user/notification/notification.frontConfig.tsx:2550
 #: src/pages/user/[userId]/league.tsx:20
 msgid "Weekly league"
 msgstr "الدوري الأسبوعي"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2546
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2544
 msgid "Weekly Missions Reset"
 msgstr "إعادة تعيين المهام الأسبوعية"
 
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:163
 msgid "Welcome"
-msgstr ""
+msgstr "⁧رحّب⁩"
 
 #: src/components/_user/auth/LoginFormModal.tsx:62
 msgid "Welcome back {username}!"
@@ -19383,32 +19862,33 @@ msgstr "أهلاً بعودتك {username}!"
 msgid "Welcome back, <0/>"
 msgstr "مرحبا بعودتك, <0/>"
 
-#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:125
+#: src/components/_user/welcomeGift/WelcomeGiftCard.tsx:121
 #: src/components/_user/welcomeGift/WelcomeGiftModal.tsx:119
 msgid "Welcome gift"
-msgstr ""
+msgstr "⁧هدية ترحيب⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2337
+#: src/components/_user/notification/notification.frontConfig.tsx:2335
 msgid "Welcome gift received"
-msgstr ""
+msgstr "⁧تم استلام هدية الترحيب⁩"
 
+#: src/components/_user/user/UserRankingsPanel.tsx:96
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:108
 msgid "Welcome gifts"
-msgstr ""
+msgstr "⁧هدايا الترحيب⁩"
 
 #: src/components/_user/welcomeGift/WelcomeGiftModal.tsx:43
 msgid "Welcome gifts are turned off"
-msgstr ""
+msgstr "⁧هدايا الترحيب متوقفة⁩"
 
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:100
 msgid "Welcome gifts waiting to be claimed."
-msgstr ""
+msgstr "⁧هدايا ترحيب بانتظار أن يتم استلامها.⁩"
 
 #: src/components/_user/welcomeGift/WelcomeNewcomerList.tsx:216
 msgid "Welcome new players with a money gift in a DM"
-msgstr ""
+msgstr "⁧رحّب باللاعبين الجدد بهدية مالية في رسالة خاصة⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1019
+#: src/components/_user/notification/notification.frontConfig.tsx:1017
 msgid "Welcome to <0/>! Read its article when you have a moment: <1/>"
 msgstr "مرحبًا بك في <0/>! اقرأ مقالها عندما يتوفر لديك بعض الوقت: <1/>"
 
@@ -19422,7 +19902,7 @@ msgstr "أهلاً بك في اقتصادك!"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:166
 msgid "Welcomer"
-msgstr ""
+msgstr "⁧المرحب⁩"
 
 #: src/components/_other/tour/TutorialChapterEndModal.tsx:213
 msgid "Well done! Here is your reward."
@@ -19442,7 +19922,7 @@ msgstr "ما يفتحه كل مستوى"
 
 #: src/components/_user/userReports/ReportFormModal.tsx:200
 msgid "What is wrong with it?"
-msgstr ""
+msgstr "⁧ما المشكلة به؟⁩"
 
 #: src/components/_economy/employee/EstimatedProfit.tsx:337
 msgid "What this card changes in a day of their production at market value, minus a day of their wage. Higher production also raises the wage they ask."
@@ -19487,11 +19967,11 @@ msgstr "الفائز"
 
 #: src/components/_user/subGiftDrop/DropSubGiftsModal.tsx:146
 msgid "Winners"
-msgstr ""
+msgstr "⁧الفائزون⁩"
 
 #: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:143
 msgid "Winners are drawn at random among the players who joined."
-msgstr ""
+msgstr "⁧يتم اختيار الفائزين عشوائيًا من بين اللاعبين الذين انضموا.⁩"
 
 #: src/components/_other/shop/skinPack.frontConfig.tsx:36
 msgid "Winter Soldier Pack"
@@ -19598,9 +20078,9 @@ msgstr "ذكرى العمل"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:575
 msgid "Work once to claim this reward."
-msgstr ""
+msgstr "⁧اعمل مرة واحدة للحصول على هذه المكافأة.⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2363
+#: src/components/_user/notification/notification.frontConfig.tsx:2361
 msgid "Worker left"
 msgstr "غادر العامل"
 
@@ -19676,11 +20156,11 @@ msgstr "يكتبها اللاعبون. اضغط على «الأخبار»."
 
 #: src/components/_user/userReports/userReports.hooks.ts:23
 msgid "Wrong category"
-msgstr ""
+msgstr "⁧فئة خاطئة⁩"
 
 #: src/components/_user/userReports/userReports.hooks.ts:22
 msgid "Wrong language"
-msgstr ""
+msgstr "⁧لغة خاطئة⁩"
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:65
 msgid "Wtf"
@@ -19698,7 +20178,7 @@ msgstr ": العقوبات والاستئنافات"
 msgid "Xenophobe"
 msgstr "معاد للأجانب"
 
-#: src/components/_user/user/UserRankingsPanel.tsx:51
+#: src/components/_user/user/UserRankingsPanel.tsx:52
 msgid "XP"
 msgstr "نقاط خبرة"
 
@@ -19730,11 +20210,11 @@ msgstr "لديك بالفعل {0} شركات نشطة. قم بتعطيل واح�
 
 #: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:278
 msgid "You already have the Supporter Plan"
-msgstr ""
+msgstr "⁧لديك بالفعل خطة الداعم⁩"
 
 #: src/components/_user/welcomeGift/WelcomeGiftModal.tsx:47
 msgid "You already welcomed this player"
-msgstr ""
+msgstr "⁧لقد رحّبت بهذا اللاعب بالفعل⁩"
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:25
 msgid "You are a beautiful person"
@@ -19766,12 +20246,20 @@ msgstr "أنت هنا"
 msgid "You are jobless"
 msgstr "أنت عاطل عن العمل"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:498
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You are no longer the manager of {company}."
+msgstr "⁧لم تعد مدير ⁨{company}⁩.⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You are no longer the manager of {company}. Your remaining pay was collected."
+msgstr "⁧لم تعد مدير ⁨{company}⁩. تم تحصيل أجرك المتبقي.⁩"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:496
 msgid "You are no longer the manager of <0/>"
 msgstr "لم تعد مديرًا لـ<0/>"
 
 #. placeholder {0}: data.paidOut
-#: src/components/_user/notification/notification.frontConfig.tsx:489
+#: src/components/_user/notification/notification.frontConfig.tsx:487
 msgid "You are no longer the manager of <0/>. Your remaining <1>{0}</1> was collected for you"
 msgstr "لم تعد مديرًا لـ<0/>. وقد جُمِع لك المتبقي من <1>{0}</1>"
 
@@ -19801,17 +20289,17 @@ msgstr "أنت جزء (حالي أو سابق) من فريق العمل وساع
 
 #: src/components/_military/mu/MuTakeoverAlert.tsx:84
 msgid "You become the owner again."
-msgstr ""
+msgstr "⁧ستصبح المالك مرة أخرى.⁩"
 
 #: src/components/_military/mu/MuTakeoverAlert.tsx:134
 msgid "You become the owner. {formerOwner} can reclaim it until {reclaimUntil}."
-msgstr ""
+msgstr "⁧ستصبح المالك. يمكن لـ ⁨{formerOwner}⁩ استعادتها حتى ⁨{reclaimUntil}⁩.⁩"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:111
 msgid "You bought a coffee for the dev <3"
 msgstr "لقد اشتريت قهوة للمطور <3"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:805
+#: src/components/_user/notification/notification.frontConfig.tsx:803
 msgid "You bought items."
 msgstr "قمت بشراء عناصر."
 
@@ -19832,17 +20320,21 @@ msgstr "يمكنك تغيير ذلك لاحقاً."
 msgid "You can dismantle items from your inventory by selecting an item."
 msgstr "يمكنك تفكيك العناصر من مخزونك عن طريق تحديد عنصر."
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You can now run as a candidate"
+msgstr "⁧يمكنك الآن الترشح⁩"
+
 #: src/components/_military/mu/MuTypeLockAlert.tsx:21
 msgid "You can only join {typeName} or Paramilitary Military Units for the next <0/>."
 msgstr "⁧لا يمكنك الانضمام إلا إلى ⁨{typeName}⁩ أو الوحدات شبه العسكرية خلال الفترة القادمة: ⁨<0/>⁩.⁩"
 
 #: src/components/_political/election/CandidateFormModal.tsx:62
 msgid "You can optionally link a campaign article to your candidacy."
-msgstr "يمكنك اختيارياً ربط مقال حملة انتخابية بترشيحك."
+msgstr "⁧يمكنك اختيارياً ربط مقال حملة انتخابية بترشيحك.⁩"
 
 #: src/components/_user/userReports/ReportFormModal.tsx:161
 msgid "You can report again <0/>."
-msgstr ""
+msgstr "⁧يمكنك الإبلاغ مرة أخرى ⁨<0/>⁩.⁩"
 
 #. placeholder {0}: getTimeAgo(managerLockedUntil, 'fromNow')
 #: src/components/_economy/company/CompanyDropdown.tsx:506
@@ -19858,15 +20350,15 @@ msgstr "يمكنك التصويت بعد مرور {0} من الأيام على �
 #. placeholder {0}: staticGameConfig.mu.maxOwnedMus
 #: src/components/_military/mu/MuTakeoverAlert.tsx:57
 msgid "You can't own more than {0} Military Units."
-msgstr ""
+msgstr "⁧لا يمكنك امتلاك أكثر من ⁨{0}⁩ وحدة عسكرية.⁩"
 
 #: src/pages/country/[countryId]/citizenship.tsx:83
 msgid "You cannot apply for citizenship if you have a government/congress role"
-msgstr "لا يمكنك التقدم بطلب للحصول على الجنسية إذا كان لديك منصب حكومي/برلماني"
+msgstr "⁧لا يمكنك التقدم بطلب للحصول على الجنسية إذا كان لديك منصب حكومي/برلماني⁩"
 
 #: src/components/_user/welcomeGift/WelcomeGiftModal.tsx:44
 msgid "You cannot welcome yourself"
-msgstr ""
+msgstr "⁧لا يمكنك الترحيب بنفسك⁩"
 
 #: src/components/_economy/employeeEvent/EmployeeEventHistory.tsx:78
 #: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:492
@@ -19885,25 +20377,33 @@ msgstr "ليس لديك إذن لعرض الطلبات."
 msgid "You drop to <0>level {newLevel}</0> and lose <1>{xpPenalty}</1>. Your total XP is kept."
 msgstr "ينخفض مستواك إلى <0>{newLevel}</0> وتخسر <1>{xpPenalty}</1>. لكن إجمالي نقاط خبرتك يبقى كما هو."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1854
+#: src/components/_user/notification/notification.frontConfig.tsx:1852
 msgid "You earned gems from a banner sale!"
 msgstr "لقد كسبت جواهر من بيع لافتة!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2270
+#: src/components/_user/notification/notification.frontConfig.tsx:2268
 msgid "You earned gems from a sale of \"{skinTitle}\"!"
 msgstr "لقد كسبت جواهر من بيع \"{skinTitle}\"!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2272
+#: src/components/_user/notification/notification.frontConfig.tsx:2270
 msgid "You earned gems from a skin pack sale!"
 msgstr "لقد كسبت جواهر من بيع حزمة مظاهر!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:941
-msgid "You feel healthy, the debuff effect no longer affects you."
-msgstr "تشعر بصحة جيدة، لم يعد تأثير الضعف يؤثر عليك."
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You earned the {badge} badge"
+msgstr "⁧لقد حصلت على شارة ⁨{badge}⁩⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2054
+#: src/components/_user/notification/notification.frontConfig.tsx:939
+msgid "You feel healthy, the debuff effect no longer affects you."
+msgstr "⁧تشعر بصحة جيدة، لم يعد تأثير الضعف يؤثر عليك.⁩"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:2052
 msgid "You finished #{rank} in your weekly league."
 msgstr "⁧لقد أنهيت في المركز ⁦#{rank}⁩ في دوريك الأسبوعي.⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You finished #{rank}! Your prize is in your inventory."
+msgstr "⁧لقد أنهيت في المركز ⁦#{rank}⁩! جائزتك في مخزونك.⁩"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:223
 msgid "You finished 1st of your weekly league"
@@ -19925,28 +20425,48 @@ msgstr "سيتم قبولك تلقائياً لأن عدد سكان الدولة
 msgid "You have a case!"
 msgstr "لديك صندوق!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1435
-msgid "You have been demoted from commander in <0/> by <1/>"
-msgstr "تم خفض رتبتك من قائد في <0/> بواسطة <1/>"
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You have been demoted from commander in {mu} by {username}"
+msgstr "⁧تم خفض رتبتك من قائد في ⁨{mu}⁩ بواسطة ⁨{username}⁩⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:362
+#: src/components/_user/notification/notification.frontConfig.tsx:1433
+msgid "You have been demoted from commander in <0/> by <1/>"
+msgstr "⁧تم خفض رتبتك من قائد في ⁨<0/>⁩ بواسطة ⁨<1/>⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You have been elected as the new leader of {party}"
+msgstr "⁧تم انتخابك كقائد جديد لـ ⁨{party}⁩⁩"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:360
 msgid "You have been elected as the new leader of <0/>"
 msgstr "تم انتخابك كقائد جديد لـ <0/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1421
-msgid "You have been promoted to commander in <0/> by <1/>"
-msgstr "تمت ترقيتك إلى قائد في <0/> بواسطة <1/>"
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You have been promoted to commander in {mu} by {username}"
+msgstr "⁧تمت ترقيتك إلى قائد في ⁨{mu}⁩ بواسطة ⁨{username}⁩⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1407
+#: src/components/_user/notification/notification.frontConfig.tsx:1419
+msgid "You have been promoted to commander in <0/> by <1/>"
+msgstr "⁧تمت ترقيتك إلى قائد في ⁨<0/>⁩ بواسطة ⁨<1/>⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You have been removed from {mu} by {username}"
+msgstr "⁧تمت إزالتك من ⁨{mu}⁩ بواسطة ⁨{username}⁩⁩"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1405
 msgid "You have been removed from <0/> by <1/>"
 msgstr "تمت إزالتك من <0/> بواسطة <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:654
+#: src/components/_user/notification/notification.frontConfig.tsx:652
 msgid "You have been transferred from <0/> to <1/>"
 msgstr "تم نقلك من <0/> إلى <1/>"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You have been transferred to {company}"
+msgstr "⁧تم نقلك إلى ⁨{company}⁩⁩"
+
 #. placeholder {0}: 1
-#: src/components/_user/notification/notification.frontConfig.tsx:895
+#: src/components/_user/notification/notification.frontConfig.tsx:893
 msgid "You have consumed <0>{0}</0>, it's effect starts now and ends in <1>{buffDuration}h</1>."
 msgstr "لقد استهلكت <0>{0}</0>، يبدأ تأثيره الآن وينتهي خلال <1>{buffDuration} ساعة</1>."
 
@@ -19967,7 +20487,8 @@ msgstr "ليس لديك شركة أخرى لنقلهم إليها"
 msgid "You have nothing on sale"
 msgstr "ليس لديك شيئ معروض للبيع"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2092
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2090
 msgid "You have prestiged! Enjoy your permanent XP bonus and prestige point."
 msgstr "لقد نفّذت الهيبة بنجاح! استمتع بمكافأة الخبرة الدائمة ونقطة الهيبة."
 
@@ -20009,7 +20530,15 @@ msgstr "لقد قمت بدعوة صديق أو نشرت مشاركات مكثف�
 
 #: src/components/_user/subGiftDrop/SubGiftDropCard.tsx:271
 msgid "You joined, good luck"
-msgstr ""
+msgstr "⁧لقد انضممت، حظًا موفقًا⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You looted {item} for rank #{rank} in battle!"
+msgstr "⁧لقد نهبت ⁨{item}⁩ مقابل المركز ⁦#{rank}⁩ في المعركة!⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You looted an item for rank #{rank} in battle!"
+msgstr "⁧لقد نهبت غرضًا مقابل المركز ⁦#{rank}⁩ في المعركة!⁩"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1381
 msgid "You lose the election 1 to 0."
@@ -20069,7 +20598,7 @@ msgstr "ستدفع"
 msgid "You pay, tax included"
 msgstr " ستدفع، مع احتساب الضرائب"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1351
+#: src/components/_user/notification/notification.frontConfig.tsx:1349
 msgid "You premium gift from <0/> has expired! Would you consider subscribing and supporting the game? 👉👈"
 msgstr "هديتك المميزة من <0/> قد انتهت! هل تفكر في الاشتراك ودعم اللعبة؟ 👉👈"
 
@@ -20087,38 +20616,50 @@ msgid "You receive {value}"
 msgstr "{value} لقد تحصلت على"
 
 #. placeholder {0}: data.rank
-#: src/components/_user/notification/notification.frontConfig.tsx:1583
+#: src/components/_user/notification/notification.frontConfig.tsx:1581
 msgid "You received a loot item for rank <0>#{0}</0> in <1/>"
 msgstr "لقد تلقيت عنصر غنيمة للمركز <0>#{0}</0> في <1/>"
 
 #. placeholder {0}: data.muId ? ( <MuName muId={data.muId} /> ) : data.countryId ? ( <CountryName countryId={data.countryId} /> ) : ( 'your' )
 #. placeholder {1}: data.rank && ( <> position{' '} <Typo fw='bold' color='text1'> #{data.rank} </Typo> </> )
-#: src/components/_user/notification/notification.frontConfig.tsx:1722
+#: src/components/_user/notification/notification.frontConfig.tsx:1720
 msgid "You received a reward for {0} {1} in<0/> tier in the ranking <1/>"
 msgstr "تلقيت مكافأة لـ {0} {1} في فئة <0/> في التصنيف <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2290
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You received a reward for your ranking performance"
+msgstr "⁧لقد تلقيت مكافأة على أدائك في التصنيف⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You received a reward for your ranking performance (rank #{rank})"
+msgstr "⁧لقد تلقيت مكافأة على أدائك في التصنيف (المركز ⁦#{rank}⁩)⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You received an exclusive skin!"
+msgstr "⁧لقد تلقيت سكن حصري!⁩"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:2288
 msgid "You received the skin \"{skinTitle}\"!"
 msgstr "لقد حصلت على المظهر \"{skinTitle}\"!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:807
+#: src/components/_user/notification/notification.frontConfig.tsx:805
 msgid "You sold items."
 msgstr "قمت ببيع عناصر."
 
 #. placeholder {0}: data.bannerTitle
-#: src/components/_user/notification/notification.frontConfig.tsx:1777
+#: src/components/_user/notification/notification.frontConfig.tsx:1775
 msgid "You successfully gifted \"{0}\" to <0/>!"
 msgstr "لقد أهديت \"{0}\" بنجاح إلى <0/>!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2107
+#: src/components/_user/notification/notification.frontConfig.tsx:2105
 msgid "You successfully gifted \"{skinTitle}\" to <0/>!"
 msgstr "لقد أهديت \"{skinTitle}\" بنجاح إلى <0/>!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1224
+#: src/components/_user/notification/notification.frontConfig.tsx:1222
 msgid "You successfully gifted a premium subscription to <0/>!"
 msgstr "لقد أهديت اشتراكاً مميزاً بنجاح إلى <0/>!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2175
+#: src/components/_user/notification/notification.frontConfig.tsx:2173
 msgid "You successfully gifted the skin pack \"{skinPackTitle}\" to <0/>!"
 msgstr "لقد قمت بإهداء حزمة المظهر \"{skinPackTitle}\" بنجاح إلى <0/>!"
 
@@ -20142,7 +20683,7 @@ msgstr "لقد صوتت لهذا الحزب"
 msgid "You voted in a major election"
 msgstr "لقد شاركت في التصويت في انتخابات كبرى"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:750
+#: src/components/_user/notification/notification.frontConfig.tsx:748
 msgid "You was fired from the government by <0/>"
 msgstr "تم طردك من الحكومة بواسطة <0/>"
 
@@ -20150,8 +20691,10 @@ msgstr "تم طردك من الحكومة بواسطة <0/>"
 msgid "You were an alpha tester (user before 20 march 2025)"
 msgstr "لقد كنت مختبراً لنسخة الألفا (مستخدم قبل 20 مارس 2025)"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2404
-#: src/components/_user/notification/notification.frontConfig.tsx:2421
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2402
+#: src/components/_user/notification/notification.frontConfig.tsx:2419
 msgid "You were elected"
 msgstr "تم انتخابك"
 
@@ -20175,9 +20718,17 @@ msgstr "تم ترشيحك كعضو حكومي في دولة"
 msgid "You were nominated as vice president of your country"
 msgstr "لقد تم تعيينك نائباً لرئيس دولتك"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You were nominated in the government"
+msgstr "⁧تم ترشيحك في الحكومة⁩"
+
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1654
 msgid "You were recognized at the door. So was the mustache."
-msgstr "تعرّفوا عليك عند الباب. وكذلك الشارب المستعار."
+msgstr "⁧تعرّفوا عليك عند الباب. وكذلك الشارب المستعار.⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You were removed from the government"
+msgstr "⁧تمت إزالتك من الحكومة⁩"
 
 #: src/components/_economy/inventory/case/cases.frontConfig.tsx:21
 msgid "You were so close"
@@ -20197,10 +20748,14 @@ msgstr "تكسب مالاً للشارة + {0}% من دخل الشارة لجم�
 msgid "You win the regional title, and the prize money. The trophy goes on the machine."
 msgstr "فزت بلقب المنطقة وبالجائزة المالية. علّق الكأس على الآلة."
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "You won {gems, plural, one {# gem} other {# gems}} in {username}'s giveaway!"
+msgstr "لقد ربحت {gems, plural, one {جوهرة واحدة} two {جوهرتين} few {# جواهر} many {# جوهرة} other {# جوهرة}} في سحب {username}!"
+
 #. placeholder {0}: data.gems
-#: src/components/_user/notification/notification.frontConfig.tsx:1259
+#: src/components/_user/notification/notification.frontConfig.tsx:1257
 msgid "You won <0>{0}</0> in <1/>'s giveaway"
-msgstr ""
+msgstr "⁧لقد ربحت ⁨<0>{0}</0>⁩ في سحب ⁨<1/>⁩⁩"
 
 #: src/components/_user/badgeCollection/badgeCollection.frontConfig.tsx:195
 msgid "You won a country tournament"
@@ -20274,8 +20829,16 @@ msgstr "إعلانك إلى الدولة."
 msgid "Your announcement to the unit..."
 msgstr "إعلانك للوحدة..."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:406
-#: src/components/_user/notification/notification.frontConfig.tsx:1366
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Your application to {mu} has been rejected"
+msgstr "⁧تم رفض طلبك للانضمام إلى ⁨{mu}⁩⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Your application to {party} has been rejected"
+msgstr "⁧تم رفض طلبك للانضمام إلى ⁨{party}⁩⁩"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:404
+#: src/components/_user/notification/notification.frontConfig.tsx:1364
 msgid "Your application to <0/> has been rejected"
 msgstr "تم رفض طلبك للانضمام إلى <0/>"
 
@@ -20284,15 +20847,19 @@ msgid "Your article reached 2% of the active population in score (min 10)"
 msgstr "وصلت اعجابات مقالتك إلى 2% من عدد اللاعبين المجمل في اللعبة"
 
 #. placeholder {0}: data.bannerTitle
-#: src/components/_user/notification/notification.frontConfig.tsx:1868
+#: src/components/_user/notification/notification.frontConfig.tsx:1866
 msgid "Your banner \"{0}\" has been accepted and is now available in the shop! It has been automatically unlocked for you."
 msgstr "تم قبول رايتك \"{0}\" وهي متاحة الآن في المتجر! تم فتحها لك تلقائياً."
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Your banner \"{banner}\" has been accepted and is now available in the shop!"
+msgstr "⁧تم قبول لافتتك \"⁨{banner}⁩\" وهي متاحة الآن في المتجر!⁩"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:376
 msgid "Your bars"
 msgstr "أشرطة المؤشرات لديك"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:910
+#: src/components/_user/notification/notification.frontConfig.tsx:908
 msgid "Your buff(s) will expire in less than 1 hour. The debuff phase will begin soon."
 msgstr "ستنتهي صلاحية تعزيزاتك في خلال أقل من ساعة. ستبدأ مرحلة التأثيرات السلبية قريباً"
 
@@ -20310,7 +20877,7 @@ msgstr "بلدك يركز بالفعل على <0/>. وتحديد هذه المن
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:404
 msgid "Your country chat"
-msgstr ""
+msgstr "⁧دردشة بلدك⁩"
 
 #: src/components/_other/tour/TutorialChapterEndModal.tsx:315
 msgid "Your country has its own Discord. Join your fellow citizens there."
@@ -20332,29 +20899,37 @@ msgstr "دولتك مسجلة"
 msgid "Your country is registered for this tournament"
 msgstr "دولتك مسجلة في هذه البطولة"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2445
+#: src/components/_user/notification/notification.frontConfig.tsx:2443
 msgid "Your country is under attack!"
 msgstr "دولتك تتعرض للهجوم!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2448
+#: src/components/_user/notification/notification.frontConfig.tsx:2446
 msgid "Your country launched an attack!"
 msgstr "شنت دولتك هجوماً!"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Your country needs your help!"
+msgstr "⁧بلدك بحاجة إلى مساعدتك!⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Your country offers to sponsor {mu} as a State Army"
+msgstr "⁧بلدك يعرض رعاية ⁨{mu}⁩ كجيش للدولة⁩"
 
 #: src/components/_political/stateArmy/StateArmyList.tsx:54
 msgid "Your country sponsors no unit yet. A Sponsor MU law offers State Army status to a Paramilitary unit of your nationality"
 msgstr "لا ترعى دولتك أي وحدة بعد. يمنح قانون «رعاية وحدة عسكرية» صفة «جيش الدولة» لوحدة شبه عسكرية تحمل جنسيتك."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1144
+#: src/components/_user/notification/notification.frontConfig.tsx:1142
 msgid "Your country started a revolt in <0/> against <1/>"
 msgstr "بدأت دولتك ثورة في <0/> ضد <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2394
+#: src/components/_user/notification/notification.frontConfig.tsx:2392
 msgid "Your country's article"
 msgstr "مقال بلدك"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:397
 msgid "Your country's chat"
-msgstr ""
+msgstr "⁧دردشة بلدك⁩"
 
 #: src/components/_military/battle/BattleDamageBonuses.tsx:103
 msgid "Your country's maintenance is unpaid"
@@ -20368,7 +20943,8 @@ msgstr "طلبك الحالي"
 msgid "Your current position"
 msgstr "منصبك الحالي"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2017
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2015
 msgid "Your daily missions have been reset! Complete them to earn rewards."
 msgstr "تم إعادة تعيين مهامك اليومية! أكملها لكسب المكافآت."
 
@@ -20384,13 +20960,21 @@ msgstr "خصائص عمالك"
 msgid "Your employee's traits"
 msgstr "خصائص موظفك"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Your employees need you"
+msgstr "⁧موظفوك بحاجة إليك⁩"
+
 #: src/components/_economy/manager/ManagerProfitEstimate.tsx:66
 msgid "Your employees produce nothing right now, so a manager would add nothing."
-msgstr "لا ينتج موظفوك شيئًا في الوقت الحالي، لذا لن يضيف المدير أي شيء."
+msgstr "⁧لا ينتج موظفوك شيئًا في الوقت الحالي، لذا لن يضيف المدير أي شيء.⁩"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:499
 msgid "Your employees' estimated daily profit, at market prices."
-msgstr "الربح اليومي المقدّر لموظفيك، وفق أسعار السوق."
+msgstr "⁧الربح اليومي المقدّر لموظفيك، وفق أسعار السوق.⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Your employer at {company} wants to reduce your wage from {oldWage} to {newWage}. Accept or reject this change."
+msgstr "⁧يريد صاحب عملك في ⁨{company}⁩ خفض أجرك من ⁨{oldWage}⁩ إلى ⁨{newWage}⁩. اقبل هذا التغيير أو ارفضه.⁩"
 
 #: src/components/_economy/manager/ManagerRateReductionAlert.tsx:43
 msgid "Your employer cut your pay to"
@@ -20398,7 +20982,7 @@ msgstr "خفض صاحب عملك أجرك إلى"
 
 #. placeholder {0}: data.oldWage
 #. placeholder {1}: data.newWage
-#: src/components/_user/notification/notification.frontConfig.tsx:684
+#: src/components/_user/notification/notification.frontConfig.tsx:682
 msgid "Your employer wants to reduce your wage in <0/> from <1>{0}</1> to <2>{1}</2>. Accept or reject this change."
 msgstr "يريد صاحب العمل تخفيض أجرك في <0/> من <1>{0}</1> إلى <2>{1}</2>. اقبل أو ارفض هذا التغيير."
 
@@ -20422,23 +21006,27 @@ msgstr "تؤتي أمسياتكما معًا ثمارها: تحسّن حقيقي
 msgid "Your gear boosts them all."
 msgstr "تعزّز معداتك جميعهم."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1274
-msgid "Your giveaway ended with no winners"
-msgstr ""
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Your gifted supporter subscription from {username} has expired."
+msgstr "⁧انتهى اشتراك الداعم الذي أهداك إياه ⁨{username}⁩.⁩"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1286
+#: src/components/_user/notification/notification.frontConfig.tsx:1272
+msgid "Your giveaway ended with no winners"
+msgstr "⁧انتهى سحبك بدون فائزين⁩"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1284
 msgid "Your giveaway ended: {winnersCount, plural, one {# Supporter Plan gift} other {# Supporter Plan gifts}} won by <0/>"
-msgstr ""
+msgstr "انتهى سحبك: {winnersCount, plural, one {فاز بهدية خطة الداعم <0/>} two {فاز بهديتي خطة الداعم <0/>} few {فاز بـ # هدايا من خطة الداعم <0/>} many {فاز بـ # هدية من خطة الداعم <0/>} other {فاز بـ # هدية من خطة الداعم <0/>}}"
 
 #. placeholder {0}: data.count
-#: src/components/_user/notification/notification.frontConfig.tsx:1301
+#: src/components/_user/notification/notification.frontConfig.tsx:1299
 msgid "Your giveaway ended: {winnersCount} of {0, plural, one {# Supporter Plan gift} other {# Supporter Plan gifts}} won by <0/>"
-msgstr ""
+msgstr "انتهى سحبك: فاز <0/> بـ {winnersCount} من أصل {0, plural, one {هدية واحدة من خطة الداعم} two {هديتين من خطة الداعم} few {# هدايا من خطة الداعم} many {# هدية من خطة الداعم} other {# هدية من خطة الداعم}}"
 
 #. placeholder {0}: data.gemsPerWinner ?? 0
-#: src/components/_user/notification/notification.frontConfig.tsx:1276
+#: src/components/_user/notification/notification.frontConfig.tsx:1274
 msgid "Your giveaway ended: <0>{0}</0> each won by <1/>"
-msgstr ""
+msgstr "⁧انتهى سحبك: فاز ⁨<1/>⁩ بـ ⁨<0>{0}</0>⁩ لكل منهم⁩"
 
 #: src/components/_user/auth/WelcomeModal.tsx:90
 msgid "Your infos have been saved."
@@ -20468,6 +21056,10 @@ msgstr "إدارتك"
 msgid "Your Management {value}"
 msgstr "إدارتك {value}"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Your manager left {company}."
+msgstr "⁧غادر مديرك ⁨{company}⁩.⁩"
+
 #: src/components/_other/tour/tuto.frontConfig.tsx:281
 msgid "Your milestones"
 msgstr "معالمك"
@@ -20480,13 +21072,18 @@ msgstr "مهاراتك العسكرية"
 msgid "Your military unit name"
 msgstr "اسم وحدتك العسكرية"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2041
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2039
 msgid "Your monthly missions have been reset! Complete them to earn rewards."
 msgstr "تمت إعادة ضبط مهامك الشهرية! أكملها للحصول على المكافآت."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2073
+#: src/components/_user/notification/notification.frontConfig.tsx:2071
 msgid "Your MU finished #{rank} in its weekly league."
 msgstr "⁧أنهت وحدتك العسكرية في المركز ⁦#{rank}⁩ في دوريها الأسبوعي.⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Your MU finished #{rank}! Your share is in your inventory."
+msgstr "⁧أنهت وحدتك العسكرية في المركز ⁦#{rank}⁩! حصتك في مخزونك.⁩"
 
 #: src/components/_military/mercenaryContract/BuyMercenaryReputationButton.tsx:49
 msgid "Your MU has <0/> reputation and cannot bid on mercenary contracts. Pay to buy back reputation (once per day)."
@@ -20507,6 +21104,10 @@ msgstr "وحدتك العسكرية مسجلة في هذه البطولة"
 #: src/components/_military/mercenaryContract/MercenaryAuctionItem.tsx:241
 msgid "Your MU must have enough money to cover the acceptance fee to bid. Payment is only deducted if you win, and refunded on contract completion."
 msgstr "يجب أن تمتلك وحدتك العسكرية أموالاً كافية لتغطية رسوم القبول لتقديم مزايدة, يتم خصم المبلغ فقط في حال فوزك، ويتم استرداده عند إتمام العقد."
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Your MU reached level {level}!"
+msgstr "⁧وصلت وحدتك العسكرية إلى المستوى ⁨{level}⁩!⁩"
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:245
 msgid "Your next unlock"
@@ -20532,9 +21133,13 @@ msgstr "سيظهر حزبك في الاقتراع مع قائمته للبرلم
 msgid "Your party name"
 msgstr "اسم حزبك"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Your pay at {company} went up."
+msgstr "⁧ارتفع أجرك في ⁨{company}⁩.⁩"
+
 #. placeholder {0}: data.oldWage
 #. placeholder {1}: data.newWage
-#: src/components/_user/notification/notification.frontConfig.tsx:511
+#: src/components/_user/notification/notification.frontConfig.tsx:509
 msgid "Your pay at <0/> went from <1>{0}</1> to <2>{1}</2> per hour"
 msgstr "تغيّر أجرك في <0/> من <1>{0}</1> إلى <2>{1}</2> في الساعة"
 
@@ -20546,11 +21151,11 @@ msgstr "تجاوز مقلبك الحدود. تباطأ العمل إلى حد ك
 msgid "Your prank is the best yet. The whole workshop is in stitches."
 msgstr "مقلبك هو الأفضل على الإطلاق. تضحك الورشة كلها حتى البكاء."
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1206
+#: src/components/_user/notification/notification.frontConfig.tsx:1204
 msgid "Your premium subscription has been activated!"
 msgstr "تم تفعيل اشتراكك المميز!"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1215
+#: src/components/_user/notification/notification.frontConfig.tsx:1213
 msgid "Your premium subscription has expired!"
 msgstr "انتهى اشتراكك المميز!"
 
@@ -20578,13 +21183,25 @@ msgstr "رابط الإحالة الخاص بك"
 msgid "Your reward"
 msgstr "جائزتك"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1701
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Your supporter plan subscription has been activated. Enjoy your supporter benefits!"
+msgstr "⁧تم تفعيل اشتراك خطة الداعم الخاص بك. استمتع بمزايا الداعم!⁩"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Your supporter plan subscription has expired. Renew to continue enjoying supporter benefits."
+msgstr "⁧انتهى اشتراك خطة الداعم الخاص بك. جدّد اشتراكك لمواصلة الاستمتاع بمزايا الداعم.⁩"
+
+#: src/components/_user/notification/notification.frontConfig.tsx:1699
 msgid "Your team <0/> has been eliminated from the <1/>"
 msgstr "تم إقصاء فريقك <0/> من <1/>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:1599
+#: src/components/_user/notification/notification.frontConfig.tsx:1597
 msgid "Your team <0/> won a round in <1/>!"
 msgstr "فاز فريقك <0/> بجولة في <1/>!"
+
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Your team has been eliminated from the tournament."
+msgstr "⁧تم إقصاء فريقك من البطولة.⁩"
 
 #: src/components/_other/events/EventTournament.tsx:85
 msgid "Your team:"
@@ -20627,13 +21244,18 @@ msgstr "⁧ستُزال أوامر وحدتك خارج البطولات.⁩"
 msgid "Your vote"
 msgstr "تصويتك"
 
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+msgid "Your wage in {company} changed from {oldWage} to {newWage}"
+msgstr "⁧تغيّر أجرك في ⁨{company}⁩ من ⁨{oldWage}⁩ إلى ⁨{newWage}⁩⁩"
+
 #. placeholder {0}: data.oldWage
 #. placeholder {1}: data.newWage
-#: src/components/_user/notification/notification.frontConfig.tsx:669
+#: src/components/_user/notification/notification.frontConfig.tsx:667
 msgid "Your wage in <0/> changed from <1>{0}</1> to <2>{1}</2>"
 msgstr "تغير أجرك في <0/> من <1>{0}</1> إلى <2>{1}</2>"
 
-#: src/components/_user/notification/notification.frontConfig.tsx:2029
+#. Also sent as a push notification: keep it short, no links, keep every {placeholder}.
+#: src/components/_user/notification/notification.frontConfig.tsx:2027
 msgid "Your weekly missions have been reset! Complete them to earn rewards."
 msgstr "تم إعادة تعيين مهامك الأسبوعية! أكملها لكسب المكافآت."
 
