@@ -94,12 +94,12 @@ msgid "{0, plural, one {# employee changes company.} other {# employees change c
 msgstr "{0, plural, one {# empleado cambia de empresa.} other {# empleados cambian de empresa.}} Su tiempo en la empresa se reinicia."
 
 #. placeholder {0}: data.employeeCount
-#: src/components/_economy/employee/WorkforceSummary.tsx:536
+#: src/components/_economy/employee/WorkforceSummary.tsx:633
 msgid "{0, plural, one {# employee} other {# employees}}"
 msgstr "{0, plural, one {# empleado} other {# empleados}}"
 
 #. placeholder {0}: data.managerCount
-#: src/components/_economy/employee/WorkforceSummary.tsx:555
+#: src/components/_economy/employee/WorkforceSummary.tsx:652
 msgid "{0, plural, one {# manager} other {# managers}}"
 msgstr "{0, plural, one {# gerente} other {# gerentes}}"
 
@@ -243,7 +243,7 @@ msgid "{0} is disabled: {who} will not work, age or train there."
 msgstr "{0} está desactivada: {who} no podrá trabajar, envejecer o entrenarse aquí."
 
 #. placeholder {0}: employee.name
-#: src/components/_economy/employee/EmployeeNameTags.tsx:58
+#: src/components/_economy/employee/EmployeeNameTags.tsx:80
 msgid "{0} is waiting for your decision."
 msgstr "{0} está esperando tu desición"
 
@@ -301,7 +301,7 @@ msgstr "Empresas de {0}"
 
 #. placeholder {0}: activeCompaniesCount.data ?? 0
 #. placeholder {1}: companiesLimit ?? 1
-#: src/components/_economy/company/CompanyDropdown.tsx:452
+#: src/components/_economy/company/CompanyDropdown.tsx:475
 msgid "{0}/{1} active"
 msgstr "{0}/{1} activas"
 
@@ -312,7 +312,7 @@ msgid "{0}/{1} left today"
 msgstr ""
 
 #. placeholder {0}: gameConfig.company.destructionValuePercent
-#: src/components/_economy/company/CompanyDropdown.tsx:525
+#: src/components/_economy/company/CompanyDropdown.tsx:548
 msgid "{0}% of invested"
 msgstr "{0}% de lo invertido"
 
@@ -524,6 +524,10 @@ msgstr ""
 msgid "{days, plural, one {# day of their wage} other {# days of their wage}}"
 msgstr "{days, plural, one {# día de su salario} other {# días de su salario}}"
 
+#: src/components/_economy/employee/WorkforceSummary.tsx:515
+msgid "{days, plural, one {# day} other {# days}}"
+msgstr ""
+
 #: src/components/_user/notification/NotificationList.tsx:92
 msgid "{daysAgo, plural, one {# day ago} other {# days ago}}"
 msgstr "{daysAgo, plural, one {# día atrás} other {# días atrás}}"
@@ -560,7 +564,7 @@ msgstr "{finder} encontró {toolboxes} para que reclames."
 msgid "{formerOwner} can reclaim it until {reclaimUntil}."
 msgstr ""
 
-#: src/components/_economy/company/CompanyDropdown.tsx:323
+#: src/components/_economy/company/CompanyDropdown.tsx:335
 #: src/components/_economy/company/MoveCompanyForm.tsx:105
 msgid "{freeMoves} free"
 msgstr "{freeMoves} gratis"
@@ -1728,10 +1732,11 @@ msgstr ""
 msgid "{grainPerBread} <0>{0}</0> make one <1>{1}</1>, {ironPerSteel} <2>{2}</2> one <3>{3}</3> and {limestonePerConcrete} <4>{4}</4> one <5>{5}</5>."
 msgstr "{grainPerBread} <0>{0}</0> hacen un <1>{1}</1>, {ironPerSteel} <2>{2}</2> hacen un <3>{3}</3> y {limestonePerConcrete} <4>{4}</4> hacen un <5>{5}</5>."
 
-#: src/components/_economy/employee/TrainingDraftModal.tsx:427
+#: src/components/_economy/employee/TrainingDraftModal.tsx:562
 msgid "{handRarityName} hand."
 msgstr "{handRarityName} mano."
 
+#: src/components/_economy/employee/WorkforceSummary.tsx:513
 #: src/components/_economy/employeeEvent/EmployeeEventEffects.tsx:62
 msgid "{hours, plural, one {# hour} other {# hours}}"
 msgstr "{hours, plural, one {# hora} other {# horas}}"
@@ -2003,14 +2008,13 @@ msgstr "{toolsReturned, plural, one {# la herramienta no encaja en la nueva empr
 msgid "{total} seats"
 msgstr ""
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:325
-#: src/components/_economy/employee/WorkforceSummary.tsx:511
+#: src/components/_economy/employee/WorkforceSummary.tsx:329
 msgid "{trainable} to train"
 msgstr "{trainable} por entrenar"
 
 #. placeholder {0}: employee.potential
 #. placeholder {1}: employee.potentialMax
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:412
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:82
 msgid "{trainingsLeft} training sessions left ({0}/{1} used)."
 msgstr "{trainingsLeft} sesiones de entrenamiento restantes ({0}/{1} usadas)."
 
@@ -2243,13 +2247,14 @@ msgstr "*Puede arder"
 msgid "/{max, plural, one {# slot} other {# slots}}"
 msgstr "/{max, plural, one {# espacio} other {# espacios}}"
 
-#: src/components/_economy/employee/EmployeeList.tsx:234
-#: src/components/_economy/employee/EmployeeList.tsx:240
+#: src/components/_economy/employee/EmployeeList.tsx:271
+#: src/components/_economy/employee/EmployeeList.tsx:277
 #: src/components/_economy/employee/EstimatedProfit.tsx:203
 #: src/components/_economy/employee/EstimatedProfit.tsx:387
 #: src/components/_economy/employee/EstimatedProfit.tsx:417
-#: src/components/_economy/employee/WorkforceSummary.tsx:603
-#: src/components/_economy/employee/WorkforceSummary.tsx:629
+#: src/components/_economy/employee/WorkforceSummary.tsx:706
+#: src/components/_economy/employee/WorkforceSummary.tsx:732
+#: src/components/_economy/employeeEvent/EventImpact.tsx:66
 #: src/components/_economy/manager/ManagerProfitEstimate.tsx:95
 #: src/components/_political/government/Government.tsx:305
 #: src/components/_political/stateArmy/StateArmyList.tsx:88
@@ -2283,6 +2288,10 @@ msgstr ""
 #: src/components/_military/battle/MyBattlesRecapCard.tsx:208
 msgid "+{hiddenBattles} more battles"
 msgstr "+{hiddenBattles} batallas más"
+
+#: src/components/_economy/employee/TrainingTiles.tsx:171
+#~ msgid "+{more} more ready"
+#~ msgstr ""
 
 #: src/components/_military/mu/muType.frontConfig.tsx:136
 msgid "+{percent}% for the side that hired it"
@@ -2581,7 +2590,7 @@ msgstr "<0/> está atacando en <1/>"
 msgid "<0/> is attacking your country in <1/>"
 msgstr "<0/> está atacando tu país en <1/>"
 
-#: src/components/_economy/employee/TrainingDraftModal.tsx:251
+#: src/components/_economy/employee/TrainingDraftModal.tsx:359
 msgid "<0/> is gone"
 msgstr "<0/> se fue"
 
@@ -3841,7 +3850,7 @@ msgstr "Un día de la producción que este gerente suma a tus empleados al valor
 msgid "A day of their production at market value, minus a day of their wage."
 msgstr "Un día de su producción al valor del mercado, menos un día de su salario."
 
-#: src/components/_economy/employee/EmployeeList.tsx:142
+#: src/components/_economy/employee/EmployeeList.tsx:179
 msgid "A day of this company's production at market value, minus the day's payroll."
 msgstr "Un día de la producción de esta empresa al valor del mercado, menos los sueldos del día."
 
@@ -4056,13 +4065,21 @@ msgstr "Una oferta tentadora"
 msgid "A tool only boosts an employee in a company producing one of the goods listed under it."
 msgstr "Una herramienta solo beneficia a un empleado de una empresa que produce uno de los productos que figuran en ella."
 
-#: src/components/_economy/employee/EmployeeNameTags.tsx:44
+#: src/components/_economy/employee/EmployeeNameTags.tsx:57
 msgid "A training draw is ready."
 msgstr "Un entrenamieto está disponible."
 
-#: src/components/_economy/employee/EmployeeNameTags.tsx:42
+#: src/components/_economy/employee/EmployeeNameTags.tsx:52
+msgid "A training draw is ready. Click to train."
+msgstr ""
+
+#: src/components/_economy/employee/EmployeeNameTags.tsx:55
 msgid "A training hand is waiting for your pick."
 msgstr "Una mano de entrenamiento está esperando tu elección."
+
+#: src/components/_economy/employee/EmployeeNameTags.tsx:50
+msgid "A training hand is waiting. Click to pick a card."
+msgstr ""
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:2055
 msgid "A union of one"
@@ -4332,6 +4349,10 @@ msgstr "Vista avanzada"
 msgid "Advisor"
 msgstr ""
 
+#: src/components/_economy/employeeEvent/EventImpact.tsx:234
+msgid "Affected employees"
+msgstr ""
+
 #: src/components/_economy/employee/WorkforceReorganize.tsx:399
 msgid "After /day"
 msgstr "Después /día"
@@ -4377,7 +4398,7 @@ msgstr "Edad 40 o menos, con potencial de entrenamiento disponible."
 msgid "Aged 45 to 55."
 msgstr "Edad entre 45 y 55"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:160
+#: src/components/_economy/employee/WorkforceSummary.tsx:164
 msgid "Aging"
 msgstr ""
 
@@ -5066,7 +5087,7 @@ msgstr ""
 msgid "Away"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:275
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:306
 msgid "Away for <0/>: no work, no wage."
 msgstr "Ausente por <0/>: no trabaja, no cobra."
 
@@ -5107,6 +5128,10 @@ msgstr "Insignia ganada"
 #: src/pages/user/[userId]/index.tsx:148
 msgid "Badges"
 msgstr "Insignias"
+
+#: src/components/_economy/employee/WorkforceSummary.tsx:505
+msgid "Balance"
+msgstr ""
 
 #: src/components/_other/shop/skin.frontConfig.tsx:359
 msgid "Ball"
@@ -5523,7 +5548,7 @@ msgstr "Bro, él ganó el último torneo"
 msgid "broken"
 msgstr "roto"
 
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:467
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:486
 #: src/components/_economy/inventory/Inventory.tsx:805
 msgid "Broken"
 msgstr "Roto"
@@ -5670,7 +5695,7 @@ msgstr "Comprar este objeto por {total}?"
 msgid "Buyers from your country see <0>{buyerTotal}</0>"
 msgstr "Compradores de tu país ven <0>{buyerTotal}</0>"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:348
+#: src/components/_economy/employee/WorkforceSummary.tsx:352
 msgid "By Company"
 msgstr "Por Empresa"
 
@@ -5882,12 +5907,12 @@ msgstr "Tocado de oso cavernario"
 msgid "Certain"
 msgstr ""
 
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:119
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:120
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:302
 msgid "Chance"
 msgstr "Probabilidad"
 
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:91
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:92
 msgid "Chance of success"
 msgstr "Probabilidad de éxito"
 
@@ -5955,7 +5980,7 @@ msgstr "Cambiar salario"
 msgid "Change produced item"
 msgstr "Cambiar el objeto producido"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:333
+#: src/components/_economy/company/CompanyDropdown.tsx:345
 msgid "Change production"
 msgstr "Cambiar producción"
 
@@ -6065,7 +6090,7 @@ msgstr ""
 msgid "Chipped Pickaxe"
 msgstr "Pico Astillado"
 
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:680
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:682
 msgid "Choose"
 msgstr "Elige"
 
@@ -6361,7 +6386,7 @@ msgstr "Comunidad"
 #: src/components/_user/user/MyAvatar.tsx:47
 #: src/components/_user/user/UserHeader.tsx:244
 #: src/components/_user/user/WealthPanel.tsx:42
-#: src/pages/companies.tsx:147
+#: src/pages/companies.tsx:152
 msgid "Companies"
 msgstr "Empresas"
 
@@ -6379,8 +6404,8 @@ msgid "Company destroyed!"
 msgstr "¡Empresa destruida!"
 
 #: src/components/_economy/company/CompanyTags.tsx:63
-#: src/components/_economy/employee/EmployeeModal.tsx:386
-#: src/components/_economy/employee/WorkforceSummary.tsx:144
+#: src/components/_economy/employee/EmployeeModal.tsx:397
+#: src/components/_economy/employee/WorkforceSummary.tsx:148
 #: src/components/_economy/manager/ManagerOfferRow.tsx:177
 msgid "Company disabled"
 msgstr "Empresa desactivada"
@@ -6401,7 +6426,7 @@ msgstr "Empresa trasladada"
 msgid "Company renamed!"
 msgstr "¡Empresa renombrada!"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:185
+#: src/components/_economy/company/CompanyDropdown.tsx:196
 msgid "Company upgraded!"
 msgstr "¡Empresa actualizada!"
 
@@ -6613,8 +6638,8 @@ msgstr "Moderador de Contenido"
 msgid "Contextual borders"
 msgstr "Fronteras contextuales"
 
-#: src/components/_economy/employee/TrainingDraftModal.tsx:494
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:692
+#: src/components/_economy/employee/TrainingDraftModal.tsx:633
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:694
 msgid "Continue"
 msgstr "Continuar"
 
@@ -6758,7 +6783,7 @@ msgid "Cosmopolitan"
 msgstr "Cosmopolita"
 
 #: src/components/_economy/employeeEvent/EmployeeEventCatalog.tsx:688
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:187
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:188
 #: src/components/_political/unrest/UnrestBar.tsx:35
 #: src/components/_political/unrest/UnrestBar.tsx:65
 #: src/components/_user/user/SkillUpgrade.tsx:529
@@ -6869,7 +6894,8 @@ msgstr "Guerras del país"
 msgid "Counts when anyone in the event has it."
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:187
+#: src/components/_economy/employee/EmployeeModal.tsx:198
+#: src/components/_economy/employee/EmployeeModal.tsx:871
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:45
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:142
 msgid "Coworkers"
@@ -7111,7 +7137,7 @@ msgstr "Mantenimiento diario"
 msgid "Daily Missions Reset"
 msgstr "Reinicio de Misiones Diarias"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:821
+#: src/components/_economy/employee/EmployeeModal.tsx:824
 msgid "Daily output"
 msgstr ""
 
@@ -7119,7 +7145,11 @@ msgstr ""
 msgid "Daily pay"
 msgstr "Pago diario"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:141
+#: src/components/_economy/employee/WorkforceSummary.tsx:474
+msgid "Daily payroll"
+msgstr ""
+
+#: src/components/_economy/employee/EmployeeModal.tsx:152
 msgid "Daily production"
 msgstr "Producción diaria"
 
@@ -7131,7 +7161,7 @@ msgstr "Ganancia diaria"
 msgid "Daily reward"
 msgstr "Recompensa diaria"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:830
+#: src/components/_economy/employee/EmployeeModal.tsx:833
 #: src/components/_political/government/Government.tsx:299
 msgid "Daily wage"
 msgstr "Salario diario"
@@ -7289,7 +7319,7 @@ msgstr "Debuff acaba"
 msgid "Debuffs"
 msgstr "Debuffs"
 
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:444
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:445
 msgid "Decides on its own in <0/>"
 msgstr "Decide por su cuenta en <0/>"
 
@@ -7498,7 +7528,7 @@ msgstr "Descripción (Opcional)"
 msgid "Description updated!"
 msgstr "¡Descripción actualizada!"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:515
+#: src/components/_economy/company/CompanyDropdown.tsx:538
 msgid "Destruct"
 msgstr "Demoler"
 
@@ -7621,7 +7651,7 @@ msgstr "Diplomacia"
 msgid "Disable"
 msgstr "Desactivar"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:459
+#: src/components/_economy/company/CompanyDropdown.tsx:482
 msgid "Disable company"
 msgstr "Desactivar empresa"
 
@@ -7631,7 +7661,7 @@ msgstr "Desactivar Orden"
 
 #: src/components/_economy/company/CompanyTags.tsx:82
 #: src/components/_economy/employee/WorkforceReorganize.tsx:272
-#: src/components/_economy/employee/WorkforceSummary.tsx:170
+#: src/components/_economy/employee/WorkforceSummary.tsx:174
 #: src/components/_economy/manager/ManagerOfferRow.tsx:181
 msgid "Disabled"
 msgstr "Desactivada"
@@ -8079,10 +8109,10 @@ msgid "Embrace the curse"
 msgstr ""
 
 #: src/components/_economy/employee/EmployeeHeader.tsx:63
-#: src/components/_economy/employee/EmployeeModal.tsx:684
+#: src/components/_economy/employee/EmployeeModal.tsx:687
 #: src/components/_economy/employee/EmployeeName.tsx:78
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:220
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:331
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:254
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:362
 #: src/components/_economy/employee/MoveEmployeeModal.tsx:81
 msgid "Employee"
 msgstr "Empleado"
@@ -8112,7 +8142,7 @@ msgstr "Empleado movido"
 msgid "Employee Production"
 msgstr "Producción de Empleados"
 
-#: src/components/_economy/employee/employee.hooks.ts:138
+#: src/components/_economy/employee/employee.hooks.ts:321
 msgid "Employee removed from the roster"
 msgstr "Empleado removido de la plantilla"
 
@@ -8131,14 +8161,15 @@ msgid "Employee tax"
 msgstr "Impuesto del empleado"
 
 #: src/components/_economy/company/CompanyTags.tsx:72
-#: src/components/_economy/employee/WorkforceSummary.tsx:339
+#: src/components/_economy/employee/WorkforceSummary.tsx:343
+#: src/components/_economy/employee/WorkforceSummary.tsx:483
 #: src/components/_economy/work/WorkChart.tsx:252
 #: src/components/_layout/map.frontConfig.tsx:69
 #: src/components/_political/map/MapMenu.tsx:536
 #: src/components/_political/region/RegionHeader.tsx:132
 #: src/components/_political/region/RegionHeader.tsx:135
 #: src/components/_political/region/RegionTooltip.tsx:138
-#: src/pages/company/[companyId]/index.tsx:49
+#: src/pages/company/[companyId]/index.tsx:50
 msgid "Employees"
 msgstr "Empleados"
 
@@ -8171,7 +8202,7 @@ msgstr "Vacío"
 msgid "Empty build"
 msgstr ""
 
-#: src/components/_economy/company/CompanyDropdown.tsx:449
+#: src/components/_economy/company/CompanyDropdown.tsx:472
 msgid "Enable company"
 msgstr "Activar empresa"
 
@@ -8250,6 +8281,10 @@ msgstr "¡Energía de regalo reclamada!"
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:1726
 msgid "Enlist it"
+msgstr ""
+
+#: src/components/_economy/employee/WorkforceSummary.tsx:510
+msgid "Enough for"
 msgstr ""
 
 #: src/components/_user/user/militaryRankings.frontConfig.tsx:81
@@ -8338,7 +8373,7 @@ msgstr ""
 msgid "Estimated daily income"
 msgstr "Ingreso diario estimado"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:619
+#: src/components/_economy/employee/WorkforceSummary.tsx:722
 msgid "Estimated from your employees' Luck, on hours that bank production."
 msgstr ""
 
@@ -8510,7 +8545,7 @@ msgstr "Todos quieren uno. No había suficientes gatitos."
 msgid "Everyone who changes company can resign straight afterwards"
 msgstr "Cualquiera que cambie de empresa puede renunciar justo después"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:499
+#: src/components/_economy/company/CompanyDropdown.tsx:522
 #: src/components/_economy/manager/ManagerRateReductionAlert.tsx:72
 msgid "Everything you earned is paid out now."
 msgstr "Todo lo que ganaste se paga ahora."
@@ -8528,7 +8563,7 @@ msgid "Expected loot"
 msgstr "Botín esperado"
 
 #: src/components/_economy/employee/TrainingCard.tsx:406
-#: src/components/_economy/employee/TrainingDraftModal.tsx:260
+#: src/components/_economy/employee/TrainingDraftModal.tsx:368
 #: src/components/_economy/employee/TrainingHistory.tsx:168
 msgid "Expected wage"
 msgstr "Sueldo esperado"
@@ -8793,7 +8828,7 @@ msgstr "Financiar la resistencia en <0/>"
 msgid "Find a better horoscope"
 msgstr "Encuentra un horóscopo mejor"
 
-#: src/pages/companies.tsx:85
+#: src/pages/companies.tsx:87
 msgid "Find a job"
 msgstr "Buscar trabajo"
 
@@ -8853,7 +8888,7 @@ msgstr "Las misiones completadas dan XP. Recógelas todas."
 msgid "Finished: your reward is waiting"
 msgstr "Terminado: tu recompensa te está esperando"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:417
+#: src/components/_economy/employee/EmployeeModal.tsx:428
 #: src/components/_economy/manager/CompanyManagerSlot.tsx:287
 #: src/components/_political/government/Government.tsx:211
 #: src/components/_political/government/Ministers.tsx:147
@@ -9409,7 +9444,7 @@ msgstr "Oro"
 msgid "Gold MU League Champion"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:126
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:155
 msgid "Gone"
 msgstr ""
 
@@ -9694,7 +9729,7 @@ msgstr "Ánimo, tú puedes"
 #: src/components/_economy/employee/employeeStats.tsx:880
 #: src/components/_economy/employee/EmployeeTooltip.tsx:114
 #: src/components/_economy/employee/TrainingCard.tsx:77
-#: src/components/_economy/employee/WorkforceSummary.tsx:369
+#: src/components/_economy/employee/WorkforceSummary.tsx:373
 #: src/components/_economy/employeeEvent/EventOddsFactors.tsx:151
 msgid "Happiness"
 msgstr "Felicidad"
@@ -9874,7 +9909,7 @@ msgstr ""
 msgid "Hire {name}"
 msgstr "Contratar {name}"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:307
+#: src/components/_economy/company/CompanyDropdown.tsx:319
 #: src/components/_economy/manager/CompanyManagerSlot.tsx:151
 msgid "Hire a manager"
 msgstr "Contrata un gerente"
@@ -9923,6 +9958,7 @@ msgstr "Contratar un empleado cuesta <0>{hireEnergyCost}</0> y no requeire diner
 msgid "Hiring costs <0>Energy</0>."
 msgstr "Costo de contratación <0>Energía</0>."
 
+#: src/components/_economy/employee/EmployeeModal.tsx:879
 #: src/components/_military/battle/BattlesHeader.tsx:33
 msgid "History"
 msgstr "Historial"
@@ -10065,8 +10101,8 @@ msgstr "Estoy orgulloso de ti"
 msgid "ID No."
 msgstr "ID No."
 
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:163
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:172
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:164
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:173
 msgid "If ignored"
 msgstr ""
 
@@ -10242,7 +10278,7 @@ msgstr "Entrevistarlo"
 #: src/components/_layout/LayoutUserMenu.tsx:178
 #: src/components/_user/user/MyAvatar.tsx:35
 #: src/components/_user/user/UserHeader.tsx:171
-#: src/pages/companies.tsx:132
+#: src/pages/companies.tsx:137
 #: src/pages/country/[countryId]/account.tsx:25
 #: src/pages/market/index.tsx:55
 #: src/pages/user/[userId]/account.tsx:20
@@ -10412,7 +10448,7 @@ msgstr ""
 msgid "Its damage counts for no country"
 msgstr ""
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:146
+#: src/components/_economy/employee/WorkforceSummary.tsx:150
 msgid "Its employees are paused until it is enabled again."
 msgstr ""
 
@@ -10432,11 +10468,11 @@ msgstr "Camiseta Jack-in-the-Box"
 msgid "Jinx"
 msgstr "Gafe"
 
-#: src/pages/companies.tsx:66
+#: src/pages/companies.tsx:68
 msgid "Job"
 msgstr "Trabajo"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:480
+#: src/components/_economy/company/CompanyDropdown.tsx:503
 msgid "Job market"
 msgstr "Mercado laboral"
 
@@ -10588,7 +10624,7 @@ msgstr "Sigue entrenandolos para incrementar tus ganancias."
 msgid "Keep working"
 msgstr "Sigue trabajando"
 
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:93
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:94
 msgid "Kept between {minChance}% and {maxChance}%, fixed when the event appeared."
 msgstr ""
 
@@ -10707,7 +10743,7 @@ msgstr "Último uso"
 msgid "Last used:"
 msgstr "Último uso:"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:160
+#: src/components/_economy/employee/EmployeeModal.tsx:171
 msgid "Last works"
 msgstr ""
 
@@ -10795,7 +10831,7 @@ msgstr ""
 msgid "Leather Sling"
 msgstr "Correa de Cuero"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:492
+#: src/components/_economy/company/CompanyDropdown.tsx:515
 msgid "Leave"
 msgstr "Renunciar"
 
@@ -10846,11 +10882,15 @@ msgstr "Abandona la alianza a la que pertenece tu país"
 msgid "Ledger"
 msgstr ""
 
+#: src/components/_economy/employeeEvent/EventImpact.tsx:256
+msgid "Left"
+msgstr ""
+
 #: src/components/_military/muLeague/MuLeagueShareList.tsx:74
 msgid "Left the MU"
 msgstr "Abandonó la UM"
 
-#: src/components/_economy/employeeEvent/EmployeeEventHistory.tsx:76
+#: src/components/_economy/employeeEvent/EmployeeEventHistory.tsx:89
 msgid "Left to decide: {picked}"
 msgstr ""
 
@@ -11334,7 +11374,7 @@ msgstr "Gestión"
 #: src/components/_economy/employee/employeeStats.tsx:514
 #: src/components/_economy/manager/CompanyManagerSlot.tsx:309
 #: src/components/_economy/manager/CompanyManagerSlot.tsx:531
-#: src/pages/company/[companyId]/index.tsx:57
+#: src/pages/company/[companyId]/index.tsx:61
 msgid "Manager"
 msgstr "Gerente"
 
@@ -11379,6 +11419,10 @@ msgstr "Impuesto de gerente"
 #: src/components/_economy/manager/CompanyManagerSlot.tsx:408
 msgid "Manager wanted"
 msgstr "Se busca gerente"
+
+#: src/components/_economy/employee/WorkforceSummary.tsx:488
+msgid "Managers"
+msgstr ""
 
 #: src/components/_economy/employee/EstimatedProfit.tsx:106
 msgid "Manufactured goods are valued minus the raws they use. Below zero, selling the raws would earn more."
@@ -11427,7 +11471,7 @@ msgstr "Mercado"
 msgid "Market average"
 msgstr ""
 
-#: src/components/_economy/employee/TrainingDraftModal.tsx:211
+#: src/components/_economy/employee/TrainingDraftModal.tsx:319
 msgid "Market rate"
 msgstr "Tarifa de mercado"
 
@@ -11489,13 +11533,13 @@ msgstr "Rango más alcanzado"
 msgid "Max rarity"
 msgstr "Rareza máxima"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:392
+#: src/components/_economy/employee/EmployeeModal.tsx:403
 msgid "Maxed"
 msgstr "Al máximo"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:362
-#: src/components/_economy/company/CompanyDropdown.tsx:384
-#: src/components/_economy/company/CompanyDropdown.tsx:430
+#: src/components/_economy/company/CompanyDropdown.tsx:377
+#: src/components/_economy/company/CompanyDropdown.tsx:401
+#: src/components/_economy/company/CompanyDropdown.tsx:453
 msgid "Maxed!"
 msgstr "¡Al máximo!"
 
@@ -12061,7 +12105,7 @@ msgstr "Moción propuesta"
 msgid "Motions"
 msgstr "Mociones"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:411
+#: src/components/_economy/employee/EmployeeModal.tsx:422
 #: src/components/_economy/manager/CompanyManagerSlot.tsx:278
 msgid "Move"
 msgstr "Mover"
@@ -12080,7 +12124,7 @@ msgstr "¿Mover a <0/> a {0}? Conservan su sueldo y lo que han ganado, y pueden 
 msgid "Move a company to another region"
 msgstr "Mueve una empresa a otra región"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:319
+#: src/components/_economy/company/CompanyDropdown.tsx:331
 #: src/components/_economy/company/MoveCompanyForm.tsx:70
 msgid "Move company"
 msgstr "Mover empresa"
@@ -12114,7 +12158,7 @@ msgstr "Mover la empresa"
 msgid "Move to"
 msgstr "Mover a"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:439
+#: src/components/_economy/company/CompanyDropdown.tsx:462
 msgid "Move to top"
 msgstr "Mover al principio"
 
@@ -12245,7 +12289,7 @@ msgstr ""
 msgid "My tier {0}"
 msgstr "Mi nivel {0}"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:296
+#: src/components/_economy/employee/WorkforceSummary.tsx:300
 msgid "My workforce"
 msgstr "Mi personal"
 
@@ -12282,7 +12326,7 @@ msgstr "¿¡Mítico?! Tu cuenta está bendecida"
 msgid "Name"
 msgstr "Nombre"
 
-#: src/components/_economy/employee/employee.hooks.ts:160
+#: src/components/_economy/employee/employee.hooks.ts:343
 msgid "Name reset"
 msgstr "Nombre restablecido"
 
@@ -12325,16 +12369,16 @@ msgstr "Nacionalidad actualizada"
 msgid "Needed to produce"
 msgstr ""
 
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:556
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:558
 msgid "Needed under {chance}"
 msgstr "Requiere menos de {chance}"
 
 #. placeholder {0}: optionDef.requires?.traitsAny?.map((code, k) => ( <Fragment key={code}> {k > 0 && ' / '} <TraitName code={code} /> </Fragment> ))
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:145
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:146
 msgid "Needs {0}"
 msgstr "Necesita {0}"
 
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:143
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:144
 msgid "Needs a tool"
 msgstr "Necesita una herramienta"
 
@@ -12551,7 +12595,7 @@ msgstr "Noticias"
 msgid "Next"
 msgstr "Siguiente"
 
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:688
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:690
 msgid "Next event ({nextCount} left)"
 msgstr "Siguiente evento ({nextCount} restantes)"
 
@@ -12586,7 +12630,7 @@ msgstr "Siguiente tic"
 msgid "Next tier {currentTier}"
 msgstr "Nivel siguiente {currentTier}"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:441
+#: src/components/_economy/employee/EmployeeModal.tsx:452
 msgid "Next to train"
 msgstr ""
 
@@ -12711,7 +12755,7 @@ msgstr "Sin pacto defensivo"
 msgid "No donations yet"
 msgstr "Aún no hay donaciones"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:777
+#: src/components/_economy/employee/EmployeeModal.tsx:780
 #: src/components/_economy/employee/EmployeeTraitBadge.tsx:256
 msgid "No effect now"
 msgstr "Sin efecto ahora"
@@ -12720,7 +12764,7 @@ msgstr "Sin efecto ahora"
 msgid "No effects"
 msgstr "Sin efectos"
 
-#: src/components/_economy/employee/EmployeeList.tsx:358
+#: src/components/_economy/employee/EmployeeList.tsx:401
 msgid "No employees"
 msgstr "Sin empleados"
 
@@ -12890,7 +12934,7 @@ msgstr "Aún no hay sets guardadas."
 msgid "No prize, but the whole company sang together. Spirits are high."
 msgstr "No hay premio, pero toda la empresa cantó junta. El ánimo está alto."
 
-#: src/components/_economy/employee/EmployeeModal.tsx:151
+#: src/components/_economy/employee/EmployeeModal.tsx:162
 msgid "No production yet"
 msgstr "Sin producción aún"
 
@@ -12951,7 +12995,7 @@ msgstr "Sin herramientas"
 msgid "No trading orders"
 msgstr "Sin órdenes de intercambio"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:806
+#: src/components/_economy/employee/EmployeeModal.tsx:809
 msgid "No traits"
 msgstr "Sin rasgos"
 
@@ -13092,7 +13136,7 @@ msgstr "Ninguno"
 msgid "Normal"
 msgstr "Neutra"
 
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:294
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:325
 msgid "Not aging: no work or training today. Resting in the cryogenic chamber until there is something to do."
 msgstr ""
 
@@ -13188,7 +13232,7 @@ msgid "Notes on an arm"
 msgstr "Notas en un brazo"
 
 #: src/components/_economy/employeeEvent/EmployeeEventCatalog.tsx:747
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:223
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:224
 msgid "Nothing happens"
 msgstr "No pasa nada"
 
@@ -13339,11 +13383,11 @@ msgstr "Combustible"
 msgid "Oil the hinge"
 msgstr "Engrasar la bisagra"
 
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:247
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:281
 msgid "OK"
 msgstr "OK"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:506
+#: src/components/_economy/employee/EmployeeModal.tsx:501
 msgid "OK, remove them"
 msgstr "OK, eliminarlos"
 
@@ -13965,9 +14009,9 @@ msgstr "Patriotica"
 msgid "Patriotic bonus {0} → {1}"
 msgstr "Bonus patriota {0} → {1}"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:154
-#: src/components/_economy/employee/WorkforceSummary.tsx:157
-#: src/components/_economy/employee/WorkforceSummary.tsx:163
+#: src/components/_economy/employee/WorkforceSummary.tsx:158
+#: src/components/_economy/employee/WorkforceSummary.tsx:161
+#: src/components/_economy/employee/WorkforceSummary.tsx:167
 #: src/components/_other/tour/TutorialGuidesList.tsx:51
 #: src/components/_user/user/Level.tsx:189
 msgid "Paused"
@@ -14057,7 +14101,7 @@ msgstr "Pago"
 msgid "Payroll"
 msgstr "Nómina de pago"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:584
+#: src/components/_economy/employee/WorkforceSummary.tsx:683
 msgid "Payroll of all your companies, employees and managers, divided by the production it banks."
 msgstr ""
 
@@ -14180,7 +14224,7 @@ msgstr "Verificación del número de teléfono solicitada"
 msgid "Phone verification required"
 msgstr "Verificación del número de teléfono requerida"
 
-#: src/components/_economy/employee/TrainingDraftModal.tsx:513
+#: src/components/_economy/employee/TrainingDraftModal.tsx:652
 msgid "Pick {cardTitle}"
 msgstr "Elegir {cardTitle}"
 
@@ -14194,8 +14238,9 @@ msgstr "Elige un candidato"
 msgid "Pick a candidate!"
 msgstr "¡Elige un candidato!"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:388
-#: src/components/_economy/employee/TrainingDraftModal.tsx:515
+#: src/components/_economy/employee/EmployeeModal.tsx:399
+#: src/components/_economy/employee/TrainingDraftModal.tsx:654
+#: src/components/_economy/employee/TrainingTiles.tsx:111
 msgid "Pick a card"
 msgstr "¡Elige una carta!"
 
@@ -14219,7 +14264,7 @@ msgstr ""
 msgid "Pick a side and hit until your <0>Health</0> runs out."
 msgstr "Elije un bando hasta que tu <0>Health</0> se acabe"
 
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:682
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:684
 msgid "Pick an option"
 msgstr "Elige una opción"
 
@@ -14227,7 +14272,7 @@ msgstr "Elige una opción"
 msgid "Pick any article"
 msgstr ""
 
-#: src/components/_economy/employee/TrainingDraftModal.tsx:429
+#: src/components/_economy/employee/TrainingDraftModal.tsx:564
 msgid "Pick one, the others are lost."
 msgstr "Elige una, las demás se pierden."
 
@@ -14243,7 +14288,7 @@ msgstr "Pico"
 msgid "Picked"
 msgstr ""
 
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:164
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:165
 msgid "Picked for you if you do not answer in time."
 msgstr "Se elegirá por ti si no respondes a tiempo."
 
@@ -14690,17 +14735,18 @@ msgstr "¡Objeto producido cambiado!"
 
 #: src/components/_economy/company/CompanyTags.tsx:68
 #: src/components/_economy/employee/employee.frontConfig.tsx:131
+#: src/components/_economy/employee/EmployeeModal.tsx:863
 #: src/components/_economy/employee/employeeStats.tsx:247
 #: src/components/_economy/employee/employeeStats.tsx:264
 #: src/components/_economy/employee/employeeStats.tsx:455
 #: src/components/_economy/employee/employeeStats.tsx:765
 #: src/components/_economy/employee/TrainingCard.tsx:75
-#: src/components/_economy/employee/WorkforceSummary.tsx:355
+#: src/components/_economy/employee/WorkforceSummary.tsx:359
 #: src/components/_economy/strategicResource/StrategicResourceEffect.tsx:51
 #: src/components/_economy/work/WorkChart.tsx:232
 #: src/components/_user/user/skills.frontConfig.tsx:125
 #: src/components/_user/user/skills.frontConfig.tsx:126
-#: src/pages/company/[companyId]/index.tsx:42
+#: src/pages/company/[companyId]/index.tsx:43
 msgid "Production"
 msgstr "Producción"
 
@@ -14760,7 +14806,7 @@ msgstr "Perfil"
 
 #: src/components/_economy/employee/EstimatedProfit.tsx:167
 #: src/components/_economy/employee/EstimatedProfit.tsx:359
-#: src/components/_economy/employee/WorkforceSummary.tsx:362
+#: src/components/_economy/employee/WorkforceSummary.tsx:366
 msgid "Profit"
 msgstr "Ganancia"
 
@@ -15228,7 +15274,7 @@ msgstr "Cambio reciente de nacionalidad"
 msgid "Recent sales"
 msgstr "Ventas recientes"
 
-#: src/pages/company/[companyId]/index.tsx:82
+#: src/pages/company/[companyId]/index.tsx:86
 msgid "Recipe"
 msgstr "Receta"
 
@@ -15253,7 +15299,7 @@ msgstr "Regiones recomendadas"
 msgid "Recruit"
 msgstr "Recluta"
 
-#: src/components/_economy/employee/EmployeeList.tsx:381
+#: src/components/_economy/employee/EmployeeList.tsx:424
 #: src/components/_economy/employee/RecruitModal.tsx:390
 msgctxt "verb: hire employees"
 msgid "Recruit"
@@ -15562,8 +15608,8 @@ msgstr "Eliminado de la Unidad Militar"
 msgid "Removed from saved"
 msgstr "Eliminado de guardados"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:474
-#: src/components/_economy/employee/EmployeeModal.tsx:404
+#: src/components/_economy/company/CompanyDropdown.tsx:497
+#: src/components/_economy/employee/EmployeeModal.tsx:415
 #: src/components/_economy/employee/EmployeeRenameModal.tsx:83
 #: src/components/_political/government/Government.tsx:193
 #: src/components/_user/user/SkillPresetsModal.tsx:228
@@ -15599,11 +15645,11 @@ msgstr "Renombrar empleado"
 msgid "Rename the alliance to \"{0}\" immediately on acceptance."
 msgstr "Cambie el nombre de la alianza a \"{0}\" inmediatamente después de su aceptación."
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:407
+#: src/components/_economy/employee/WorkforceSummary.tsx:411
 msgid "Reorganize"
 msgstr "Reorganizar"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:285
+#: src/components/_economy/employee/WorkforceSummary.tsx:289
 msgid "Reorganize workforce"
 msgstr "Reorganizar personal"
 
@@ -15652,7 +15698,7 @@ msgstr ""
 msgid "Report message"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:542
+#: src/components/_economy/employee/EmployeeModal.tsx:537
 msgid "Report name"
 msgstr "Reportar nombre"
 
@@ -15693,7 +15739,7 @@ msgstr "Solicitar verificación del número de teléfono"
 msgid "Requests:"
 msgstr "Solicitudes:"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:314
+#: src/components/_economy/employee/WorkforceSummary.tsx:318
 msgid "Require attention"
 msgstr "Requiere atención"
 
@@ -15722,11 +15768,11 @@ msgstr "Cambiar misión"
 msgid "Reset"
 msgstr "Restablecer"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:549
+#: src/components/_economy/employee/EmployeeModal.tsx:544
 msgid "Reset name"
 msgstr "Restablecer nombre"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:555
+#: src/components/_economy/employee/EmployeeModal.tsx:550
 msgid "Reset Name"
 msgstr "Restablecer Nombre"
 
@@ -15760,7 +15806,7 @@ msgstr "Redistribución en"
 msgid "Residents"
 msgstr "Residentes"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:498
+#: src/components/_economy/company/CompanyDropdown.tsx:521
 msgid "Resign from this position?"
 msgstr "¿Renunciar a este puesto?"
 
@@ -15944,7 +15990,7 @@ msgstr "Rival"
 msgid "Rollback money (take back all payments from MU/users and refund full pool to country)"
 msgstr "Revertir dinero (recuperar todos los pagos de MU/usuarios y devolver todo el fondo al país)"
 
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:553
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:555
 msgid "Rolled {rolled}"
 msgstr "Resultado {rolled}"
 
@@ -16298,7 +16344,7 @@ msgstr "Trabajo propio"
 msgid "Sell an item"
 msgstr "Vender un artículo"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:535
+#: src/components/_economy/company/CompanyDropdown.tsx:558
 msgid "Sell company? Its employees will be let go and their tools returned to your inventory."
 msgstr "¿Vender empresa? Todos tus empleados serán despedidos y sus herramientas volverán a tu inventario."
 
@@ -17041,9 +17087,9 @@ msgstr "Estadísticamente imposible tener tan mala suerte"
 msgid "Statistically rigged"
 msgstr "Estadísticamente manipulado"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:818
+#: src/components/_economy/employee/EmployeeModal.tsx:821
 #: src/components/_economy/employee/EmployeeTooltip.tsx:120
-#: src/pages/company/[companyId]/index.tsx:69
+#: src/pages/company/[companyId]/index.tsx:73
 #: src/pages/war/[warId]/index.tsx:64
 msgid "Stats"
 msgstr "Estadísticas"
@@ -17112,7 +17158,7 @@ msgstr "Almacenamiento"
 msgid "Storage full"
 msgstr "Almacenamiento lleno"
 
-#: src/components/_economy/employeeEvent/EmployeeEventHistory.tsx:36
+#: src/components/_economy/employeeEvent/EmployeeEventHistory.tsx:41
 msgid "Story"
 msgstr "Historia"
 
@@ -17199,7 +17245,7 @@ msgstr "Apóyanos"
 msgid "Supporter"
 msgstr "Supporter"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:406
+#: src/components/_economy/employee/EmployeeModal.tsx:417
 #: src/components/_economy/inventoryAccount/InventoryAccount.tsx:52
 #: src/components/_user/user/UserDropdown.tsx:210
 #: src/components/_user/user/UserDropdown.tsx:219
@@ -17394,7 +17440,7 @@ msgstr "Tanque"
 msgid "Tap a battle to join it."
 msgstr "Toca una batalla para unirte."
 
-#: src/components/_economy/employee/TrainingDraftModal.tsx:484
+#: src/components/_economy/employee/TrainingDraftModal.tsx:619
 msgid "Tap a card to look at it."
 msgstr "Toca una carta para verla."
 
@@ -18288,11 +18334,11 @@ msgstr "Se quedan con lo que ganaron."
 msgid "They laugh too. {name} and {partnerName} are old friends now, and share a barber."
 msgstr "Ellos también se ríen. {name} y {partnerName} ahora son viejos amigos, y comparten barbero."
 
-#: src/components/_economy/employee/EmployeeModal.tsx:697
+#: src/components/_economy/employee/EmployeeModal.tsx:700
 msgid "They left the company"
 msgstr "Ellos dejaron la empresa"
 
-#: src/components/_economy/employee/EmployeeResumeRow.tsx:129
+#: src/components/_economy/employee/EmployeeResumeRow.tsx:158
 msgid "They left the company."
 msgstr "Ellos dejaron la empresa."
 
@@ -18353,7 +18399,7 @@ msgstr "Esta acción enviará la oferta de tu UM para este contrato."
 msgid "This bounty is reserved for nationals only."
 msgstr "Esta recompensa está reservada solo para ciudadanos nacionales."
 
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:386
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:387
 msgid "This can end with someone leaving your company for good."
 msgstr "Esto puede terminar con alguien abandonando tu empresa para siempre."
 
@@ -18361,7 +18407,7 @@ msgstr "Esto puede terminar con alguien abandonando tu empresa para siempre."
 msgid "This company has no employees"
 msgstr "Esta empresa no tiene empleados"
 
-#: src/components/_economy/employee/EmployeeList.tsx:208
+#: src/components/_economy/employee/EmployeeList.tsx:245
 msgid "This company is disabled and earns nothing. Once re-enabled, it would earn this much a day."
 msgstr "Esta empresa está deshabilitada y no gana nada. Una vez reactivada, ganaría esta cantidad al día."
 
@@ -18480,7 +18526,7 @@ msgstr "Esta es la división de la UM. En este grupo, los {demoteCount} últimos
 msgid "This MU's division. In this group the top {promoteCount} go up a division and the bottom {demoteCount} go down."
 msgstr "Esta es la división de la UM. En este grupo, los {promoteCount} primeros suben de división y los {demoteCount} últimos descienden."
 
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:624
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:626
 msgid "This no longer applies: someone it was about is gone."
 msgstr "Esto ya no aplica: alguien de quien se trataba ya no está."
 
@@ -18760,7 +18806,7 @@ msgstr "Caja de herramientas encontrada"
 msgid "Toolbox per hour"
 msgstr "Cajas de herramientas por hora"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:617
+#: src/components/_economy/employee/WorkforceSummary.tsx:720
 msgid "Toolboxes per day"
 msgstr "Cajas de herramientas por día"
 
@@ -18838,6 +18884,7 @@ msgstr "En la cima de la colina"
 #: src/components/_economy/employee/employeeStats.tsx:577
 #: src/components/_economy/employee/employeeStats.tsx:759
 #: src/components/_economy/employee/employeeTags.tsx:216
+#: src/components/_economy/employee/WorkforceSummary.tsx:495
 #: src/components/_economy/inventoryAccount/InventoryAccount.tsx:120
 #: src/components/_economy/itemTrading/TradingOrders.tsx:55
 #: src/components/_economy/itemTrading/TradingOrders.tsx:86
@@ -18985,8 +19032,9 @@ msgstr "Comercio"
 msgid "Trading transaction"
 msgstr "Transacción de comercio"
 
-#: src/components/_economy/employee/EmployeeModal.tsx:390
-#: src/components/_economy/employee/TrainingDraftModal.tsx:400
+#: src/components/_economy/employee/EmployeeModal.tsx:401
+#: src/components/_economy/employee/TrainingDraftModal.tsx:535
+#: src/components/_economy/employee/TrainingTiles.tsx:111
 msgid "Train"
 msgstr "Entrenar"
 
@@ -18997,6 +19045,10 @@ msgstr "Entrena a cada empleado una vez al día, reiniciándose a las 00:00 UTC:
 #: src/components/_user/mission/mission.frontConfig.tsx:776
 msgid "Train Employees"
 msgstr "Entrenar Empleados"
+
+#: src/components/_economy/employee/TrainingDraftModal.tsx:283
+msgid "Train next"
+msgstr ""
 
 #: src/components/_other/tour/tuto.frontConfig.tsx:152
 msgid "Train your employee!"
@@ -19023,7 +19075,7 @@ msgstr "El entrenamiento puede enseñarles nuevas habilidades "
 msgid "Training cards"
 msgstr "Tarjetas de entrenamiento"
 
-#: src/components/_economy/employee/TrainingDraftModal.tsx:423
+#: src/components/_economy/employee/TrainingDraftModal.tsx:558
 msgid "Training complete."
 msgstr "Entrenamiento completado."
 
@@ -19042,7 +19094,7 @@ msgstr "Historial de entrenamiento"
 #: src/components/_economy/employee/employeeTags.tsx:56
 #: src/components/_economy/employee/EmployeeTooltip.tsx:139
 #: src/components/_economy/employee/TrainingCard.tsx:431
-#: src/components/_economy/employee/TrainingDraftModal.tsx:272
+#: src/components/_economy/employee/TrainingDraftModal.tsx:380
 msgid "Training potential"
 msgstr "Entrenamiento potencial"
 
@@ -19054,11 +19106,11 @@ msgstr "Potencial de entrenamiento restante"
 msgid "Training raises them all."
 msgstr "El entrenamiento los mejora a todos."
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:161
+#: src/components/_economy/employee/WorkforceSummary.tsx:165
 msgid "Training still ages them"
 msgstr ""
 
-#: src/components/_economy/employee/EmployeeModal.tsx:749
+#: src/components/_economy/employee/EmployeeModal.tsx:752
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:171
 msgid "Traits"
 msgstr "Rasgos"
@@ -19314,11 +19366,11 @@ msgstr "Actualizar fijado"
 msgid "Upgrade a company"
 msgstr "Mejora una empresa"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:344
+#: src/components/_economy/company/CompanyDropdown.tsx:356
 msgid "Upgrade automated engine"
 msgstr "Mejora el motor automatizado"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:388
+#: src/components/_economy/company/CompanyDropdown.tsx:405
 msgid "Upgrade break room"
 msgstr "Mejorar habitación de descanso"
 
@@ -19334,7 +19386,7 @@ msgstr "Costo de la mejora"
 msgid "Upgrade Skills"
 msgstr "Mejorar habilidades"
 
-#: src/components/_economy/company/CompanyDropdown.tsx:366
+#: src/components/_economy/company/CompanyDropdown.tsx:381
 msgid "Upgrade storage"
 msgstr "Actualizar el almacenamiento"
 
@@ -19354,7 +19406,7 @@ msgstr "¡Mejora tus habilidades!"
 #: src/components/_economy/company/CompanyTooltip.tsx:79
 #: src/components/_military/mu/MuTooltip.tsx:139
 #: src/components/_political/region/RegionTooltip.tsx:178
-#: src/pages/company/[companyId]/index.tsx:75
+#: src/pages/company/[companyId]/index.tsx:79
 #: src/pages/region/[regionId]/index.tsx:129
 msgid "Upgrades"
 msgstr "Mejoras"
@@ -19810,9 +19862,13 @@ msgid "Wage reduction proposed"
 msgstr "Reducción salarial propuesta"
 
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:61
-#: src/components/_economy/employee/WorkforceSummary.tsx:156
+#: src/components/_economy/employee/WorkforceSummary.tsx:160
 msgid "Wages"
 msgstr "Salarios"
+
+#: src/components/_economy/employee/WorkforceSummary.tsx:476
+msgid "Wages and manager salaries of your active companies."
+msgstr ""
 
 #: src/components/_economy/employeeEvent/employeeEvent.frontConfig.tsx:3160
 msgid "Wait for it to restart"
@@ -20160,7 +20216,7 @@ msgstr "Mamut lanudo"
 
 #: src/components/_economy/company/WorkButton.tsx:174
 #: src/components/_economy/employee/EmployeeTraitsModal.tsx:48
-#: src/components/_economy/employee/WorkforceSummary.tsx:153
+#: src/components/_economy/employee/WorkforceSummary.tsx:157
 #: src/components/_user/mission/mission.frontConfig.tsx:133
 msgid "Work"
 msgstr "Trabajar"
@@ -20181,7 +20237,7 @@ msgstr "Trabajador se fue"
 msgid "Workers"
 msgstr "Trabajadores"
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:445
+#: src/components/_economy/employee/WorkforceSummary.tsx:550
 msgid "Workforce"
 msgstr "Personal"
 
@@ -20205,7 +20261,7 @@ msgstr "Trabajar en el extranjero, con una felicidad de {mood} o menos. Siempre 
 msgid "Working in your own company costs <0>{energyCostPerAction}</0> and adds your <1>Production</1> to its storage."
 msgstr "Trabajar en tu propia empresa cuesta <0>{energyCostPerAction}</0> y añade tu <1>Producción</1> a su almacenamiento."
 
-#: src/components/_economy/employee/EmployeeModal.tsx:194
+#: src/components/_economy/employee/EmployeeModal.tsx:205
 msgid "Works alone"
 msgstr "Trabaja solo"
 
@@ -20297,7 +20353,7 @@ msgid "You already got its reward."
 msgstr "Ya recibiste está recompensa."
 
 #. placeholder {0}: companiesLimit ?? 1
-#: src/components/_economy/company/CompanyDropdown.tsx:468
+#: src/components/_economy/company/CompanyDropdown.tsx:491
 msgid "You already have {0} active companies. Disable one first."
 msgstr "Ya tienes {0} empresas activas. Desactiva una primero."
 
@@ -20335,7 +20391,7 @@ msgstr "Ya eres vicepresidente de otro país. Dimite primero."
 msgid "You are here"
 msgstr "Estás aquí"
 
-#: src/pages/companies.tsx:81
+#: src/pages/companies.tsx:83
 msgid "You are jobless"
 msgstr "Estás desempleado"
 
@@ -20430,7 +20486,7 @@ msgid "You can report again <0/>."
 msgstr ""
 
 #. placeholder {0}: getTimeAgo(managerLockedUntil, 'fromNow')
-#: src/components/_economy/company/CompanyDropdown.tsx:506
+#: src/components/_economy/company/CompanyDropdown.tsx:529
 msgid "You can resign {0}"
 msgstr "Puedes renunciar {0}"
 
@@ -20453,12 +20509,12 @@ msgstr "No puedes cambiar de ciudadanía si eres miembro del gobierno o del parl
 msgid "You cannot welcome yourself"
 msgstr ""
 
-#: src/components/_economy/employeeEvent/EmployeeEventHistory.tsx:78
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:492
+#: src/components/_economy/employeeEvent/EmployeeEventHistory.tsx:91
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:493
 msgid "You chose: {picked}"
 msgstr "Elegiste: {picked}"
 
-#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:488
+#: src/components/_economy/employeeEvent/EmployeeEventModal.tsx:489
 msgid "You did not answer in time, so this was decided: {picked}."
 msgstr "No respondiste a tiempo, así que se decidió esto: {picked}."
 
@@ -20567,7 +20623,7 @@ msgstr "Has consumido <0>{0}</0>, su efecto empieza ahora y termina en <1>{buffD
 msgid "You have enough Concrete for one."
 msgstr "Tienes suficiente Concreto para uno."
 
-#: src/components/_economy/employee/WorkforceSummary.tsx:307
+#: src/components/_economy/employee/WorkforceSummary.tsx:311
 msgid "You have no employees yet"
 msgstr "Aún no tienes empleados"
 
